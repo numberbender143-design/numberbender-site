@@ -57,7 +57,7 @@
   <!-- ===== Worksheets hub landing page (printable worksheet library) ===== -->
   <url>
     <loc>https://numberbender.com/math-worksheets</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -124,6 +124,18 @@
     <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://numberbender.com/courses/algebra/elementary-algebra/worksheets/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://numberbender.com/courses/algebra/intermediate-algebra/worksheets/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <!-- ===== Worksheet pages — Statistics (populated) ===== -->
@@ -227,13 +239,13 @@
   </url>
   <url>
     <loc>https://numberbender.com/courses/logarithms/logarithms-english/worksheets/</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-05-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://numberbender.com/courses/logarithms/logarithms-filipino/worksheets/</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-05-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
