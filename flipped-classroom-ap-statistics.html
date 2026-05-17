@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P1M2WZD840"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-P1M2WZD840');
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AP Statistics Flipped Classroom Guide | Numberbender</title>
+  <meta name="description" content="AP Statistics study guide for flipped classroom teachers — which units to flip first, how to handle FRQs, and what the data says. From a stats teacher since 2012." />
+  <meta name="author" content="Dr. Peter Esperanza" />
+  <link rel="canonical" href="https://numberbender.com/flipped-classroom-ap-statistics" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Flipped Classroom AP Statistics: What Actually Works (From a Stats Teacher Who Did It)" />
+  <meta property="og:description" content="Dr. Peter Esperanza has taught AP Statistics at Barstow for over a decade and flipped it in 2012. Here's how to flip AP Stats: which units to flip first, how to handle FRQs, and why the data says it works." />
+  <meta property="og:url" content="https://numberbender.com/flipped-classroom-ap-statistics" />
+  <meta property="og:site_name" content="Numberbender" />
+  <meta property="og:image" content="https://numberbender.com/images/dr-e-hero.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@numberbender" />
+  <meta name="twitter:title" content="Flipped Classroom AP Statistics: What Actually Works (From a Stats Teacher Who Did It)" />
+  <meta name="twitter:description" content="Dr. Peter Esperanza has taught AP Statistics at Barstow for over a decade and flipped it in 2012. Here's how to flip AP Stats: which units to flip first, how to handle FRQs, and why the data says it works." />
+  <meta name="twitter:image" content="https://numberbender.com/images/dr-e-hero.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/exports/numberbender-favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/exports/png/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="180x180" href="images/exports/png/favicon-180.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/exports/png/favicon-180.png">
+  <meta name="theme-color" content="#1F6F6B">
+
+  <!-- JSON-LD: Article + Person + FAQPage + BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://numberbender.com/flipped-classroom-ap-statistics.html#article",
+        "headline": "Flipped Classroom AP Statistics: What Actually Works (From a Stats Teacher Who Did It)",
+        "description": "Dr. Peter Esperanza has taught AP Statistics at Barstow for over a decade and flipped it in 2012. Here's how to flip AP Stats: which units to flip first, how to handle the FRQs, and why the data says it works.",
+        "inLanguage": "en-US",
+        "datePublished": "2026-05-07",
+        "dateModified": "2026-05-07",
+        "author": { "@id": "https://numberbender.com/about.html#dr-e" },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Numberbender",
+          "url": "https://numberbender.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://numberbender.com/images/numberbender_banner_only.svg"
+          }
+        },
+        "image": "https://numberbender.com/images/dr-e-hero.jpg",
+        "mainEntityOfPage": "https://numberbender.com/flipped-classroom-ap-statistics.html",
+        "about": [
+          { "@type": "Thing", "name": "Flipped classroom" },
+          { "@type": "Thing", "name": "AP Statistics" },
+          { "@type": "Thing", "name": "Statistics education" }
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://numberbender.com/about.html#dr-e",
+        "name": "Dr. Peter Esperanza",
+        "alternateName": "Dr. E",
+        "jobTitle": "Math Professor & AP Statistics Teacher",
+        "url": "https://numberbender.com/about.html",
+        "image": "https://numberbender.com/images/dr-e-headshot.jpg",
+        "sameAs": [
+          "https://www.youtube.com/@numberbender",
+          "https://www.linkedin.com/in/numberbender/"
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Numberbender", "item": "https://numberbender.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Flipped Classroom", "item": "https://numberbender.com/flipped-classroom-math.html" },
+          { "@type": "ListItem", "position": 3, "name": "AP Statistics", "item": "https://numberbender.com/flipped-classroom-ap-statistics.html" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Does the flipped classroom work for AP Statistics?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes — and the evidence is strong. Dr. Peter Esperanza's peer-reviewed randomized controlled trial found statistically significant gains in both performance and attitudes when students received flipped instruction compared to a traditional classroom. AP Statistics is particularly well-suited to flipping because its conceptual vocabulary (p-values, confidence intervals, sampling distributions) benefits from pause-rewind-rewatch video, and class time can then be spent on the statistical reasoning and writing skills the AP exam actually tests."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which AP Statistics units should I flip first?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Start with Unit 1 (Exploring One-Variable Data) and Unit 3 (Collecting Data). These units are vocabulary-heavy and conceptual — perfect for pre-class video. Avoid flipping Unit 6 (Inference for Categorical Data) first; inference requires substantial guided practice and is better introduced with teacher-led class time until students have a strong foundation."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long should AP Statistics flip videos be?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "8–12 minutes is the sweet spot for AP Statistics. Each video should cover one testable concept — for example, 'interpreting a confidence interval' or 'conditions for a two-sample t-test.' Longer videos lead to passive watching. Shorter videos may not give enough context for the statistical reasoning AP Statistics demands."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I use class time for FRQ prep in a flipped AP Stats classroom?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Use your freed class time for structured FRQ workshops: give students a released AP FRQ, have them write a full response independently, then score it using the AP scoring guidelines in pairs before a class-wide debrief. This mirrors the actual AP exam experience and builds the 'communicate your reasoning in complete sentences' skill that most students underperform on."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What technology do I need to flip an AP Statistics class?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Very little. Dr. E started with a $200 Wacom tablet, free Screencast-O-Matic software, and YouTube. You need a way to write math on screen (tablet or document camera), a microphone, and a place to host the videos. YouTube is free, searchable, and your students already use it daily."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root{
+      --navy:#0F172A;
+      --blue:#2563EB;
+      --yellow:#FACC15;
+      --cyan:#06B6D4;
+      --green:#22C55E;
+      --bg:#F8FAFC;
+      --surface:#FFFFFF;
+      --muted:#64748B;
+      --border:#E2E8F0;
+      --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+      --shadow-lg: 0 20px 50px rgba(15, 23, 42, 0.12);
+      --radius: 16px;
+    }
+
+    *{ box-sizing: border-box; margin:0; padding:0; }
+    html{ scroll-behavior:smooth; }
+    body{
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: var(--navy); background: var(--bg); line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    a{ color: var(--blue); text-decoration:none; }
+    a:hover{ text-decoration: underline; }
+    img{ max-width:100%; display:block; }
+    .container{ width: min(1100px, 92%); margin-inline: auto; }
+    .container-narrow{ width: min(760px, 92%); margin-inline: auto; }
+
+    /* ========== NAV ========== */
+    .nav{
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: saturate(180%) blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner{
+      display:flex; align-items:center; justify-content:space-between;
+      padding: 14px 0;
+    }
+    .logo-lockup .lockup-img{ height: 100px; width: auto; max-width: 360px; }
+    .nav-links{ display:flex; gap: 22px; align-items:center; }
+    .nav-links a{ color: var(--navy); font-weight: 500; font-size: 0.95rem; }
+    .nav-links a:hover{ color: var(--blue); text-decoration: none; }
+    .nav-cta{
+      background: var(--navy); color: white !important;
+      padding: 9px 16px; border-radius: 10px; font-weight: 600;
+    }
+    .nav-cta:hover{ background: var(--blue); text-decoration: none; }
+    .menu-toggle{ display:none; background:none; border:none; cursor:pointer; font-size: 1.4rem; color: var(--navy); }
+    .nav-links{ flex-wrap: nowrap; }
+    .nav-links a, .nav-links .dropdown-trigger{ white-space: nowrap; }
+    .nav-dropdown{ position: relative; }
+    .nav-dropdown .dropdown-trigger{
+      background: none; border: none; padding: 0; margin: 0;
+      font: inherit; color: var(--navy); font-weight: 500; font-size: 0.95rem;
+      cursor: pointer; display: inline-flex; align-items: center; gap: 4px;
+      transition: color .15s ease;
+    }
+    .nav-dropdown .dropdown-trigger:hover{ color: var(--blue); }
+    .nav-dropdown .caret{ font-size: 0.75em; display: inline-block; transition: transform .2s ease; }
+    .nav-dropdown:hover .caret,
+    .nav-dropdown .dropdown-trigger[aria-expanded="true"] .caret{ transform: rotate(180deg); }
+    .nav-dropdown .dropdown-menu{
+      position: absolute; top: 100%; left: 0;
+      margin-top: 10px;
+      background: white;
+      border: 1px solid var(--border); border-radius: 14px;
+      padding: 6px;
+      box-shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
+      min-width: 240px;
+      opacity: 0; visibility: hidden;
+      transform: translateY(-6px);
+      transition: opacity .15s ease, transform .15s ease, visibility .15s ease;
+      z-index: 100;
+    }
+    .nav-dropdown:hover .dropdown-menu,
+    .nav-dropdown .dropdown-menu.open{ opacity: 1; visibility: visible; transform: translateY(0); }
+    .nav-dropdown .dropdown-menu a{
+      display: block; padding: 10px 14px; border-radius: 8px;
+      color: var(--navy); font-weight: 500; font-size: 0.95rem;
+    }
+    .nav-dropdown .dropdown-menu a:hover{
+      background: rgba(37,99,235,.08); color: var(--blue); text-decoration: none;
+    }
+
+    /* ========== PAGE HEAD ========== */
+    .page-head{
+      padding: 64px 0 32px;
+      background:
+        radial-gradient(900px 400px at 90% -10%, rgba(6,182,212,.18), transparent 60%),
+        radial-gradient(700px 400px at -10% 10%, rgba(37,99,235,.15), transparent 60%),
+        linear-gradient(180deg, #ffffff 0%, var(--bg) 100%);
+    }
+    .breadcrumb{
+      font-size: 0.85rem; color: var(--muted);
+      margin-bottom: 18px;
+    }
+    .breadcrumb a{ color: var(--muted); }
+    .breadcrumb a:hover{ color: var(--blue); }
+    .breadcrumb .sep{ margin: 0 6px; opacity: .5; }
+    .eyebrow{
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(34,197,94,.14); color: #15803d;
+      padding: 6px 14px; border-radius: 999px;
+      font-size: 0.85rem; font-weight: 600; margin-bottom: 18px;
+    }
+    .page-head h1{
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      line-height: 1.12; letter-spacing: -0.02em;
+      font-weight: 800; margin-bottom: 18px;
+      color: var(--navy);
+    }
+    .page-head h1 .accent{ color: var(--blue); }
+    .byline{
+      color: var(--muted);
+      font-size: 0.98rem;
+      line-height: 1.6;
+      border-left: 3px solid var(--blue);
+      padding-left: 14px;
+      margin: 18px 0 0;
+    }
+    .byline strong{ color: var(--navy); font-weight: 700; }
+
+    /* ========== ARTICLE BODY ========== */
+    .article{ padding: 48px 0 24px; background: var(--bg); }
+    .article section{ padding: 28px 0 20px; border-bottom: 1px solid var(--border); }
+    .article section:last-of-type{ border-bottom: none; }
+    .article h2{
+      font-size: clamp(1.5rem, 2.6vw, 1.95rem);
+      line-height: 1.2; letter-spacing: -0.015em;
+      font-weight: 800; color: var(--navy);
+      margin: 8px 0 18px; scroll-margin-top: 100px;
+    }
+    .article h2 .num{
+      display: inline-block; color: var(--blue); font-weight: 700;
+      font-size: 0.92em; margin-right: 10px; opacity: .8;
+    }
+    .article h3{ font-size: 1.2rem; line-height: 1.3; font-weight: 700; margin: 22px 0 10px; color: var(--navy); }
+    .article p{ font-size: 1.08rem; line-height: 1.75; margin-bottom: 18px; color: #1f2937; }
+    .article p:last-child{ margin-bottom: 0; }
+    .article a{ color: var(--blue); text-decoration: underline; text-underline-offset: 2px; }
+    .article a:hover{ color: #1d4ed8; }
+    .article em{ font-style: italic; }
+    .article strong{ font-weight: 700; color: var(--navy); }
+
+    /* TOC */
+    .toc{
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 22px 24px;
+      margin: 24px 0 8px; box-shadow: var(--shadow);
+    }
+    .toc h2{
+      font-size: 1rem !important; margin: 0 0 12px !important;
+      text-transform: uppercase; letter-spacing: 0.06em;
+      color: var(--muted); font-weight: 700;
+    }
+    .toc ol{
+      list-style: none; padding: 0; margin: 0;
+      display: grid; grid-template-columns: repeat(2, 1fr);
+      gap: 6px 24px; counter-reset: toc;
+    }
+    .toc ol li{ counter-increment: toc; font-size: 0.96rem; }
+    .toc ol li::before{ content: counter(toc) "."; color: var(--blue); font-weight: 700; margin-right: 8px; }
+    .toc ol li a{ color: var(--navy); text-decoration: none; }
+    .toc ol li a:hover{ color: var(--blue); text-decoration: underline; }
+
+    /* Key finding / pull quote */
+    .key-finding{
+      background: linear-gradient(135deg, rgba(37,99,235,.06), rgba(6,182,212,.08));
+      border-left: 4px solid var(--blue); border-radius: 12px;
+      padding: 22px 26px; margin: 24px 0;
+    }
+    .key-finding .label{
+      display: inline-block; font-size: 0.78rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--blue); margin-bottom: 10px;
+    }
+    .key-finding p{ font-size: 1.1rem !important; line-height: 1.6 !important; margin: 0 !important; color: var(--navy); }
+    .key-finding cite{ display: block; margin-top: 12px; font-size: 0.88rem; font-style: normal; color: var(--muted); }
+
+    /* Unit card grid */
+    .unit-grid{
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+      margin: 24px 0;
+    }
+    .unit-card{
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+    .unit-card .unit-badge{
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 0.78rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.06em;
+      padding: 4px 10px; border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    .badge-go{ background: rgba(34,197,94,.15); color: #15803d; }
+    .badge-hold{ background: rgba(250,204,21,.2); color: #92400e; }
+    .badge-last{ background: rgba(239,68,68,.12); color: #991b1b; }
+    .unit-card h3{ font-size: 1rem !important; margin: 0 0 8px !important; }
+    .unit-card p{ font-size: 0.95rem !important; margin: 0 !important; color: var(--muted); line-height: 1.55; }
+
+    /* Checklist */
+    .checklist{ list-style: none; padding: 0; margin: 16px 0; }
+    .checklist li{
+      display: flex; align-items: flex-start; gap: 12px;
+      padding: 10px 0; border-bottom: 1px solid var(--border);
+      font-size: 1.04rem; color: #1f2937; line-height: 1.55;
+    }
+    .checklist li:last-child{ border-bottom: none; }
+    .checklist li .icon{
+      flex-shrink: 0; width: 26px; height: 26px;
+      border-radius: 50%; background: rgba(34,197,94,.15);
+      color: #15803d; display: grid; place-items: center;
+      font-size: 0.85rem; margin-top: 1px;
+    }
+
+    /* CTA card */
+    .cta-card{
+      background: linear-gradient(135deg, var(--blue), #0ea5e9);
+      border-radius: var(--radius); padding: 36px 40px;
+      color: white; text-align: center; margin: 32px 0;
+    }
+    .cta-card h3{ font-size: 1.5rem; color: white; margin-bottom: 10px; }
+    .cta-card p{ color: rgba(255,255,255,.85); margin-bottom: 22px; font-size: 1.05rem; }
+    .cta-card .btn-white{
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 13px 24px; border-radius: 12px;
+      background: white; color: var(--blue) !important;
+      font-weight: 700; font-size: 1rem;
+      text-decoration: none !important;
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+    .cta-card .btn-white:hover{ transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.2); }
+
+    /* FAQ */
+    .faq{ margin: 16px 0 0; }
+    details.faq-item{
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; margin-bottom: 10px; overflow: hidden;
+      transition: box-shadow .2s ease;
+    }
+    details.faq-item[open]{ box-shadow: var(--shadow); }
+    details.faq-item summary{
+      cursor: pointer; padding: 18px 22px; font-weight: 700;
+      color: var(--navy); list-style: none; user-select: none;
+      font-size: 1.02rem; display: flex; align-items: center; gap: 12px;
+    }
+    details.faq-item summary::-webkit-details-marker{ display: none; }
+    details.faq-item summary::before{
+      content: "+"; display: inline-grid; place-items: center;
+      width: 26px; height: 26px; border-radius: 50%;
+      background: rgba(37,99,235,.12); color: var(--blue);
+      font-weight: 800; font-size: 1.1rem; flex-shrink: 0;
+      transition: transform .2s ease, background .2s ease;
+    }
+    details.faq-item[open] summary::before{ content: "−"; background: var(--blue); color: white; }
+    details.faq-item .faq-body{ padding: 0 22px 22px 60px; color: #1f2937; font-size: 1rem; line-height: 1.7; }
+    details.faq-item .faq-body p{ font-size: 1rem !important; line-height: 1.7 !important; margin-bottom: 0 !important; }
+
+    /* Video embed */
+    .video-block{ margin: 24px 0; }
+    .video-wrap{
+      border-radius: 14px; overflow: hidden;
+      aspect-ratio: 16/9; background: #000;
+      box-shadow: var(--shadow-lg);
+    }
+    .yt-facade{ cursor: pointer; display: block; width: 100%; height: 100%; position: relative; }
+    .yt-facade .yt-thumb{ width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .3s ease, filter .3s ease; }
+    .yt-facade:hover .yt-thumb,
+    .yt-facade:focus-visible .yt-thumb{ transform: scale(1.02); filter: brightness(.9); }
+    .yt-facade .yt-play{ position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); transition: transform .2s ease; filter: drop-shadow(0 4px 12px rgba(0,0,0,.5)); }
+    .yt-facade:hover .yt-play,
+    .yt-facade:focus-visible .yt-play{ transform: translate(-50%, -50%) scale(1.08); }
+    .yt-facade:focus{ outline: none; }
+    .yt-facade:focus-visible{ outline: 3px solid var(--blue); outline-offset: 2px; }
+    .yt-facade iframe{ width: 100%; height: 100%; border: 0; display: block; }
+    .video-caption{ margin-top: 10px; font-size: 0.92rem; color: var(--muted); line-height: 1.5; }
+    .video-caption strong{ color: var(--navy); }
+
+    /* References */
+    .references{
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 28px 30px; margin: 32px 0 0;
+    }
+    .references h2{ font-size: 1.15rem !important; margin: 0 0 14px !important; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+    .references ol{ padding-left: 22px; margin: 0; }
+    .references li{ font-size: 0.92rem; color: #334155; margin-bottom: 10px; line-height: 1.55; }
+    .references li:last-child{ margin-bottom: 0; }
+
+    /* Next CTA */
+    .next-cta{
+      background: linear-gradient(135deg, var(--navy) 0%, #1e293b 100%);
+      color: white; padding: 70px 0; text-align: center; margin-top: 30px;
+    }
+    .next-cta h2{ font-size: clamp(1.7rem, 3vw, 2.2rem); margin-bottom: 14px; color: white; }
+    .next-cta p{ color: #cbd5e1; max-width: 640px; margin: 0 auto 28px; font-size: 1.08rem; }
+    .cta-row{ display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:8px;
+      padding: 13px 22px; border-radius: 12px;
+      font-weight: 600; font-size: 1rem; cursor: pointer;
+      border: 2px solid transparent;
+      transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+      text-decoration: none !important;
+    }
+    .btn:hover{ transform: translateY(-2px); box-shadow: var(--shadow); }
+    .btn-yellow{ background: var(--yellow); color: var(--navy); }
+    .btn-yellow:hover{ background: #eab308; }
+    .btn-outline{ background: transparent; color: white; border: 2px solid rgba(255,255,255,.3); }
+    .btn-outline:hover{ border-color: white; }
+
+    /* ========== FOOTER ========== */
+    footer{ background: #0b1220; color: #94a3b8; padding: 60px 0 24px; font-size: 0.92rem; }
+    .foot-grid{ display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 40px; }
+    .foot h4{ color: white; font-size: 0.95rem; margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.06em; }
+    .foot a{ color: #cbd5e1; display: block; padding: 4px 0; }
+    .foot a:hover{ color: white; }
+    .foot-brand .logo{ display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.15rem; color: white; margin-bottom: 12px; }
+    .foot-brand .logo-mark{ width: 56px; height: 56px; border-radius: 12px; overflow: hidden; background: transparent; }
+    .foot-brand p{ margin-bottom: 10px; line-height: 1.55; color: #94a3b8; }
+    .footer-tagline{ font-style: italic; color: #cbd5e1; }
+    .socials{ display: flex; gap: 12px; margin-top: 14px; }
+    .socials a{
+      width: 36px; height: 36px; border-radius: 50%;
+      background: rgba(255,255,255,.06); display: grid; place-items: center;
+      color: #cbd5e1; transition: background .15s ease, color .15s ease; padding: 0;
+    }
+    .socials a:hover{ background: var(--blue); color: white; }
+    .foot-signup-block{ margin-top: 18px; }
+    .foot-signup-block label{ display: block; font-size: 0.9rem; color: white; margin-bottom: 8px; font-weight: 600; }
+    .foot-signup-form{ display: flex; gap: 8px; position: relative; }
+    .foot-signup-form input[type="email"]{
+      flex: 1; padding: 10px 14px; border-radius: 10px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.06); color: white; font-size: 0.92rem; font-family: inherit;
+    }
+    .foot-signup-form input[type="email"]::placeholder{ color: #94a3b8; }
+    .foot-signup-form input[type="email"]:focus{ outline: none; border-color: var(--cyan); background: rgba(255,255,255,.08); }
+    .foot-signup-form button{
+      padding: 10px 18px; border-radius: 10px; border: none;
+      background: var(--blue); color: white; font-weight: 600; cursor: pointer; font-size: 0.92rem;
+      transition: background .15s ease;
+    }
+    .foot-signup-form button:hover{ background: #1d4ed8; }
+    .foot-bottom{ margin-top: 36px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.08); text-align: center; color: #94a3b8; font-size: 0.85rem; line-height: 1.6; }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 900px){
+      .article p{ font-size: 1.04rem; line-height: 1.72; }
+      .toc ol{ grid-template-columns: 1fr; }
+      .foot-grid{ grid-template-columns: 1fr 1fr; gap: 32px; }
+      .foot-brand{ grid-column: 1 / -1; }
+      .nav-dropdown{ width: 100%; }
+      .nav-dropdown .dropdown-trigger{ width: 100%; justify-content: space-between; padding: 6px 0; }
+      .nav-dropdown .dropdown-menu{
+        position: static; box-shadow: none; border: none; padding: 0 0 4px 14px;
+        margin-top: 0; min-width: 0; opacity: 1; visibility: visible; transform: none;
+        display: none; background: transparent;
+      }
+      .nav-dropdown:hover .dropdown-menu{ display: none; }
+      .nav-dropdown .dropdown-menu.open{ display: block; }
+    }
+    @media (max-width: 600px){
+      .nav-links{
+        display: none; position: absolute; top: 100%; left: 0; right: 0;
+        background: white; flex-direction: column; padding: 18px;
+        border-bottom: 1px solid var(--border); gap: 14px;
+      }
+      .nav-links.open{ display: flex; }
+      .menu-toggle{ display: block; }
+      .logo-lockup .lockup-img{ height: 70px; }
+      .article p{ font-size: 1rem; line-height: 1.68; }
+      .article h2{ font-size: 1.45rem; }
+      .cta-card{ padding: 28px 22px; }
+      .unit-grid{ grid-template-columns: 1fr; }
+      .foot-grid{ grid-template-columns: 1fr; gap: 28px; }
+    }
+  </style>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wnr3kox01b");
+  </script>
+</head>
+<body>
+
+<!-- ========== NAVIGATION ========== -->
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="/" class="logo-lockup" aria-label="Numberbender — Home">
+      <img src="images/numberbender_banner_only.svg" alt="Numberbender" class="lockup-img">
+    </a>
+    <button class="menu-toggle" aria-label="Toggle menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
+    <nav class="nav-links" id="navlinks">
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">For Students <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="start-here.html">🎁 Free Starter Lesson</a>
+          <a href="find-your-course.html">🧭 Find My Course</a>
+          <a href="courses.html">📚 All Courses</a>
+          <a href="math-worksheets.html">📝 Free Worksheets</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">For Educators <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="for-teachers.html">🏫 For Teachers Hub</a>
+          <a href="teach-it-like-you-stream-it.html">🎬 Teach It Like You Stream It</a>
+          <a href="teacher-resources.html">📦 Teacher Resources</a>
+          <a href="flipped-classroom-math.html">🔄 Flipped Classroom Guide</a>
+        </div>
+      </div>
+      <a href="about.html">About Dr. E</a>
+      <a href="speaking.html">Speaking</a>
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Blog <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="blog.html">✍️ Blog Posts</a>
+          <a href="speaking-archive.html">🎤 Past Engagements</a>
+        </div>
+      </div>
+      <a href="contact.html" class="nav-cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ========== PAGE HEADER ========== -->
+<div class="page-head">
+  <div class="container-narrow">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Numberbender</a>
+      <span class="sep">›</span>
+      <a href="flipped-classroom-math.html">Flipped Classroom</a>
+      <span class="sep">›</span>
+      <span>AP Statistics</span>
+    </nav>
+    <div class="eyebrow">📊 For AP Statistics Teachers</div>
+    <h1>Flipped Classroom <span class="accent">AP Statistics</span>: What Actually Works</h1>
+    <p style="font-size:1.12rem; color:#374151; margin-top:16px; line-height:1.7;">
+      I've taught AP Statistics at Barstow High School since 2009. I started flipping it in 2012 — the same year I flipped my Algebra class, the same year I started recording on YouTube, and the year everything changed about how I teach. When I first launched the flipped AP Stats class, I had about 20 students. By the time I left BHS in 2018 to become a full-time math professor at Barstow Community College, the course had grown to three sections of 30 students each. That growth didn't come from a marketing push — it came from word of mouth. Students who went through the flipped classroom told their friends. It became a thing at the high school. Students actually wanted to be in that class because of the experience they heard about from each other. Here's what I learned about flipping AP Stats specifically: which units to flip first, how to run class time once the lecture is gone, and how to use that recovered time to actually prepare students for the FRQ section of the exam.
+    </p>
+    <div class="byline">
+      <strong>By Dr. Peter Esperanza</strong> · Math Professor, AP Statistics Teacher, Founder of Numberbender ·
+      Published May 2026
+    </div>
+  </div>
+</div>
+
+<!-- ========== TABLE OF CONTENTS ========== -->
+<div class="article">
+  <div class="container-narrow">
+    <div class="toc">
+      <h2>What's in this guide</h2>
+      <ol>
+        <li><a href="#why-stats">Why AP Statistics is ideal for flipping</a></li>
+        <li><a href="#which-units">Which units to flip first</a></li>
+        <li><a href="#video-length">How long the videos should be</a></li>
+        <li><a href="#class-time">What to do with class time</a></li>
+        <li><a href="#frq">Using freed time for FRQ prep</a></li>
+        <li><a href="#research">What the research says</a></li>
+        <li><a href="#getting-started">How to get started in 7 days</a></li>
+        <li><a href="#faq">Frequently asked questions</a></li>
+      </ol>
+    </div>
+
+    <!-- ========== SECTION 1 ========== -->
+    <section id="why-stats">
+      <h2><span class="num">§1</span>Why AP Statistics is ideal for flipping</h2>
+      <p>
+        Most teachers who flip start with a procedural subject — Algebra, Calculus, a lab science — because it's easy to imagine "watching the demo at home, doing the practice in class." AP Statistics is different, and that difference actually makes it <em>better</em> suited to the flipped model than almost any other high school course.
+      </p>
+      <p>
+        AP Statistics is a course built on vocabulary and statistical reasoning. Terms like <strong>sampling distribution</strong>, <strong>p-value</strong>, <strong>confidence interval</strong>, and <strong>Type I error</strong> don't just need to be defined — they need to be encountered, confused about, re-watched, and finally understood. That re-watching is something only video makes possible. A lecture you can pause, rewind, and replay is perfectly suited to the slow-burn conceptual work AP Stats demands.
+      </p>
+      <p>
+        Second: the AP exam rewards written statistical reasoning. Students don't just need to get the right answer — they need to <em>communicate</em> their reasoning in complete sentences, in a structure the College Board's scoring guidelines reward. That kind of writing practice can't happen during a 50-minute lecture. It can only happen when class time is free.
+      </p>
+      <div class="key-finding">
+        <span class="label">The Core Idea</span>
+        <p>Flip AP Statistics so students encounter the vocabulary and concepts on video — then use every minute of class time for the statistical writing and reasoning the AP exam actually tests.</p>
+      </div>
+    </section>
+
+    <!-- ========== SECTION 2 ========== -->
+    <section id="which-units">
+      <h2><span class="num">§2</span>Which units to flip first — and which to hold</h2>
+      <p>
+        Not every AP Statistics unit is equally ready to flip. Here's how I categorize them after 10+ years of running this course both ways:
+      </p>
+      <div class="unit-grid">
+        <div class="unit-card">
+          <span class="unit-badge badge-go">✅ Flip First</span>
+          <h3><a href="https://youtube.com/playlist?list=PLIQh59u-CUoutrt9xyl8-FdLRwBDlVQYd&si=znc5kMp3ZZF93_en" target="_blank" rel="noopener">Unit 1 — Exploring One-Variable Data</a></h3>
+          <p>Heavy on vocabulary (shape, center, spread, outliers). Video is perfect for introducing these terms with visual examples students can pause and re-examine.</p>
+        </div>
+        <div class="unit-card">
+          <span class="unit-badge badge-go">✅ Flip First</span>
+          <h3><a href="https://www.youtube.com/playlist?list=PLmnIr_qavptRAFQc4Ti0J3MH4O1kU3ICa" target="_blank" rel="noopener">Unit 3 — Collecting Data</a></h3>
+          <p>Observational study vs. experiment, sampling methods, bias. Conceptually dense, procedurally light — ideal pre-class video material.</p>
+        </div>
+        <div class="unit-card">
+          <span class="unit-badge badge-go">✅ Flip Well</span>
+          <h3><a href="https://www.youtube.com/watch?v=dblfS2r546U&list=PLmnIr_qavptSxrZGt9VoFMFUJTExKI_ET" target="_blank" rel="noopener">Unit 2 — Exploring Two-Variable Data</a></h3>
+          <p>Scatterplots, correlation, LSRL, residuals. Students can watch the graph-reading process at their own pace and arrive ready to interpret real data sets.</p>
+        </div>
+        <div class="unit-card">
+          <span class="unit-badge badge-hold">⚠️ Flip Carefully</span>
+          <h3><a href="https://www.youtube.com/watch?v=chjuz7CJpWY&list=PLmnIr_qavptSZZQnlmZmVBQPcfBmfxpr5" target="_blank" rel="noopener">Unit 4 — Probability</a></h3>
+          <p>Probability rules require careful reasoning. Flip the definitions and basic rules; leave conditional probability and tree diagrams for guided class discussion.</p>
+        </div>
+        <div class="unit-card">
+          <span class="unit-badge badge-hold">⚠️ Flip Carefully</span>
+          <h3><a href="https://www.youtube.com/playlist?list=PLmnIr_qavptQ0KQnDfSY7PlC0BpNpwwUt" target="_blank" rel="noopener">Unit 5 — Sampling Distributions</a></h3>
+          <p>This unit's conceptual difficulty is high. Flip the Central Limit Theorem introduction, but keep sampling distribution simulations and interpretation in class.</p>
+        </div>
+        <div class="unit-card">
+          <span class="unit-badge badge-last">🚫 Flip Last</span>
+          <h3><a href="https://www.youtube.com/playlist?list=PLmnIr_qavptRVGGLGaNUjjem-UxzASw-O" target="_blank" rel="noopener">Units 6–9 — Inference</a></h3>
+          <p>Conditions, test statistics, p-values, and conclusions are the heart of the exam. Students need guided practice here, not solo video first. Flip only after strong foundation is built.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SECTION 3 ========== -->
+    <section id="video-length">
+      <h2><span class="num">§3</span>How long AP Statistics flip videos should be</h2>
+      <p>
+        The temptation when you start recording is to recreate a full lecture on video. Resist it. An 8–12 minute video covering <em>one concept</em> is far more effective than a 45-minute recording of your whole lesson.
+      </p>
+      <p>
+        For AP Statistics specifically, each video should correspond to one testable concept:
+      </p>
+      <ul class="checklist">
+        <li><span class="icon">✓</span><span><strong>One video per concept.</strong> "Interpreting a confidence interval" gets its own video. "Constructing a confidence interval" gets a separate one. Students who understand interpretation but struggle with construction can re-watch only what they need.</span></li>
+        <li><span class="icon">✓</span><span><strong>Include one worked example per video.</strong> Walk through a real AP FRQ or AP practice problem. Show your work on screen. Talk through your reasoning out loud — this models the written explanation the exam requires.</span></li>
+        <li><span class="icon">✓</span><span><strong>End with a question, not a summary.</strong> Close each video with one question students must answer before class. This "exit ticket" becomes your entry ticket — you'll see immediately who watched and who understood.</span></li>
+        <li><span class="icon">✓</span><span><strong>8–12 minutes is the ceiling.</strong> If you're going over 12 minutes, split the video. Students watch on phones, at 1.5×, between other tasks. Respect that reality.</span></li>
+      </ul>
+      <div class="key-finding">
+        <span class="label">From the classroom</span>
+        <p>I still use my $50 whiteboard marker setup from Home Depot. It's quick, it's easy, and the handwritten slides make math less intimidating and more familiar to students. The technology doesn't matter nearly as much as the clarity of your explanation and the specificity of the concept you're covering.</p>
+      </div>
+    </section>
+
+    <!-- ========== SECTION 4 ========== -->
+    <section id="class-time">
+      <h2><span class="num">§4</span>What to do with class time once the lecture is gone</h2>
+      <p>
+        This is the question every new flipper asks — and it's the right question. The flip only works if you fill the recovered class time with something better than what a lecture would have provided.
+      </p>
+      <p>
+        For AP Statistics, I use a three-part class structure that I've refined over years:
+      </p>
+      <h3>Part 1: Entry Ticket Review (5–8 min)</h3>
+      <p>
+        Students arrive having answered the video's closing question. I display the most common answers — both correct and incorrect — and we discuss them as a class. This surfaces misconceptions immediately, before they compound. It also signals to students that watching the video actually matters.
+      </p>
+      <h3>Part 2: Active Practice (25–30 min)</h3>
+      <p>
+        The bulk of class is structured practice — real AP problems, worked in pairs or small groups, with me circulating and coaching rather than lecturing. This is where learning actually happens. Students who are confused ask; students who understand teach. Both groups benefit.
+      </p>
+      <h3>Part 3: Statistical Writing (10–15 min)</h3>
+      <p>
+        Students write a short response to one AP-style question — typically a Part (b) of an FRQ that requires a written statistical interpretation. I collect these, score them using the AP rubric, and return them with feedback. Over the course of the year, students' written statistical reasoning improves dramatically. This improvement shows up on the exam.
+      </p>
+    </section>
+
+    <!-- ========== SECTION 5 ========== -->
+    <section id="frq">
+      <h2><span class="num">§5</span>Using freed class time for FRQ prep — the method that moves scores</h2>
+      <p>
+        The AP Statistics exam is split into two sections of equal weight. Section I is 40 Multiple-Choice Questions completed in 1 hour and 30 minutes, worth 50% of the exam score. Section II is 6 Free-Response Questions also completed in 1 hour and 30 minutes, worth the other 50%. Of those six FRQs, the first five are standard questions and the sixth is the Investigative Task — multi-part, open-ended, and designed to test exactly the kind of flexible statistical thinking that traditional AP Stats instruction rarely builds time for.
+      </p>
+      <p>
+        The flipped classroom creates that time. Here's the FRQ practice structure I use in the final eight weeks before the exam:
+      </p>
+      <ul class="checklist">
+        <li><span class="icon">1</span><span><strong>One full released FRQ per week.</strong> Students write a complete response independently — no notes, timed — as if it were the real exam. The point is not to grade it yet. The point is to commit to an answer.</span></li>
+        <li><span class="icon">2</span><span><strong>Peer scoring with the AP rubric.</strong> Students swap papers and score each other using the actual College Board scoring guidelines. This is the most powerful step — students see exactly how the AP readers will evaluate their written reasoning.</span></li>
+        <li><span class="icon">3</span><span><strong>Class debrief on common errors.</strong> I identify the two or three most common errors from the peer scoring and we discuss them as a class. This targeted correction is far more efficient than re-teaching the whole concept.</span></li>
+        <li><span class="icon">4</span><span><strong>Re-write the weakest section.</strong> Students revise the portion of their response they scored lowest on. Writing the same idea better, after seeing the rubric, builds the muscle memory for exam day.</span></li>
+      </ul>
+      <p>
+        This method takes roughly 25 minutes of class time per week in the final stretch. It's the single biggest driver of score improvement I've seen in 10+ years of AP Statistics teaching.
+      </p>
+    </section>
+
+    <!-- ========== SECTION 6 ========== -->
+    <section id="research">
+      <h2><span class="num">§6</span>What the research says about flipping statistics courses</h2>
+      <div class="key-finding">
+        <span class="label">Peer-Reviewed Finding</span>
+        <p>My 2016 randomized controlled trial found statistically significant improvements in both academic performance and student attitudes toward math in the flipped classroom condition compared to the traditional control group.</p>
+        <cite>Esperanza, P., Fabian, K., & Toto, C. (2016). Flipped Classroom Model: Effects on Performance, Attitudes and Perceptions in High School Algebra. <em>Lecture Notes in Computer Science</em>, Vol. 9891. Springer. doi:10.1007/978-3-319-45153-4_7</cite>
+      </div>
+      <p>
+        While that RCT focused on Algebra, the mechanisms driving the result — vocabulary exposure before class, more guided practice time, reduced passive lecture — apply just as directly to AP Statistics. The subject matter changes; the structural advantage of the flip remains.
+      </p>
+      <p>
+        A 2021 follow-up study I co-authored confirmed these findings in secondary mathematics broadly, noting that the flip's biggest gains came specifically in conceptually heavy units — exactly the territory AP Statistics occupies. See <a href="flipped-classroom-research.html">the full research page</a> for citations and summaries.
+      </p>
+
+      <div class="video-block">
+        <div class="video-wrap">
+          <div class="yt-facade" role="button" tabindex="0" data-video-id="GvvCp9q3_jQ"
+               aria-label="Play video: Effectiveness and Success of Peter Esperanza's Flipped Classroom Model (Part 4 of 4)"
+               onclick="loadYT(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();loadYT(this);}">
+            <img class="yt-thumb" src="https://i.ytimg.com/vi/GvvCp9q3_jQ/hqdefault.jpg"
+                 alt="Video thumbnail: Effectiveness &amp; Success of Peter Esperanza's Flipped Classroom Model (Part 4 of 4)"
+                 loading="lazy" width="1280" height="720">
+            <svg class="yt-play" width="80" height="80" viewBox="0 0 68 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path fill="#FF0000" d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z"/>
+              <path fill="#FFFFFF" d="M45 24L27 14v20"/>
+            </svg>
+          </div>
+        </div>
+        <p class="video-caption"><strong>Effectiveness &amp; Success of Peter Esperanza's Flipped Classroom Model (Part 4 of 4)</strong> · the press feature most useful for showing colleagues what the model looks like from the outside</p>
+      </div>
+    </section>
+
+    <!-- ========== SECTION 7 ========== -->
+    <section id="getting-started">
+      <h2><span class="num">§7</span>How to get started in 7 days</h2>
+      <p>
+        You don't need to flip the entire course before September. Start with one unit. Here's a realistic 7-day launch plan:
+      </p>
+      <ul class="checklist">
+        <li><span class="icon">1</span><span><strong>Day 1:</strong> Pick your first unit to flip. I recommend Unit 1 (Exploring One-Variable Data). List the 8–10 concepts students need to understand before class discussions can be productive.</span></li>
+        <li><span class="icon">2</span><span><strong>Days 2–3:</strong> Record your first three videos using a tablet or document camera + free screen recording software. Each video: one concept, one example, one closing question. Don't edit heavily. Authenticity beats polish.</span></li>
+        <li><span class="icon">3</span><span><strong>Day 4:</strong> Upload to YouTube (unlisted is fine to start). Create a simple Google Form for students to submit their closing question answers before class.</span></li>
+        <li><span class="icon">4</span><span><strong>Day 5:</strong> Run your first flipped class. Review the Google Form responses, spend 5 minutes on common misconceptions, then give students 30 minutes of active practice you never previously had time for.</span></li>
+        <li><span class="icon">5</span><span><strong>Days 6–7:</strong> Collect feedback from students. Adjust video length or entry ticket format based on what you hear. Record the next set of videos.</span></li>
+      </ul>
+      <p>
+        The full quickstart framework — including the templates I use for entry tickets, class structures, and parent communication — is available as a free download on the <a href="teacher-resources.html">Teacher Resource Library</a> page.
+      </p>
+
+      <div class="cta-card">
+        <h3>Ready to flip your AP Statistics class?</h3>
+        <p>Get Dr. E's free Flipped Classroom Quickstart Guide — the 7-day framework that gets you from zero to your first flipped lesson, with templates included.</p>
+        <a href="flipped-classroom-quickstart.html" class="btn-white">📄 Get the Quickstart Guide →</a>
+      </div>
+
+      <div class="video-block">
+        <div class="video-wrap">
+          <div class="yt-facade" role="button" tabindex="0" data-video-id="9ApzbjXgiEQ"
+               aria-label="Play video: Benefits of a Flipped Classroom — AP Calculus Students Share Their Experience"
+               onclick="loadYT(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();loadYT(this);}">
+            <img class="yt-thumb" src="https://i.ytimg.com/vi/9ApzbjXgiEQ/hqdefault.jpg"
+                 alt="Video thumbnail: Benefits of a Flipped Classroom — AP Calculus Students Share Their Experience"
+                 loading="lazy" width="1280" height="720">
+            <svg class="yt-play" width="80" height="80" viewBox="0 0 68 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path fill="#FF0000" d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z"/>
+              <path fill="#FFFFFF" d="M45 24L27 14v20"/>
+            </svg>
+          </div>
+        </div>
+        <p class="video-caption"><strong>Benefits of a Flipped Classroom — AP Calculus Students Share Their Experience</strong> · Numberbender · what students get out of the model, in their own words</p>
+      </div>
+    </section>
+
+    <!-- ========== FAQ ========== -->
+    <section id="faq">
+      <h2>Frequently asked questions</h2>
+      <div class="faq">
+        <details class="faq-item">
+          <summary>Does the flipped classroom actually work for AP Statistics?</summary>
+          <div class="faq-body"><p>Yes — and the evidence is strong. My peer-reviewed randomized controlled trial found statistically significant gains in both performance and student attitudes in the flipped condition. AP Statistics is especially well-suited because its conceptual vocabulary (p-values, confidence intervals, sampling distributions) benefits from the pause-rewind-rewatch capability of video, while class time can then focus on the statistical reasoning and writing skills the AP exam actually tests.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Which AP Statistics units should I flip first?</summary>
+          <div class="faq-body"><p>Start with Unit 1 (Exploring One-Variable Data) and Unit 3 (Collecting Data). These units are vocabulary-heavy and conceptual — perfect for pre-class video. Avoid flipping the inference units (6–9) first; they require substantial guided practice and are better introduced with significant teacher support until students have a strong foundation.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>How long should AP Statistics flip videos be?</summary>
+          <div class="faq-body"><p>8–12 minutes is the sweet spot. Each video should cover one testable concept — for example, "interpreting a confidence interval" or "conditions for a two-sample t-test." Longer videos lead to passive watching. Shorter videos may not give enough context for the statistical reasoning AP Statistics demands.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>How do I use class time for FRQ prep in a flipped AP Stats classroom?</summary>
+          <div class="faq-body"><p>Use your freed class time for structured FRQ workshops: give students a released AP FRQ, have them write a full response independently, then score it using the AP scoring guidelines in pairs before a class-wide debrief. This mirrors the actual AP exam experience and builds the "communicate your reasoning in complete sentences" skill that most students underperform on.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>What technology do I need to flip an AP Statistics class?</summary>
+          <div class="faq-body"><p>Very little. I started with a $200 Wacom tablet, free Screencast-O-Matic software, and YouTube. You need a way to write math on screen (tablet or document camera), a microphone, and a place to host the videos. YouTube is free, searchable, and your students already use it every day.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>What do I do when students don't watch the video before class?</summary>
+          <div class="faq-body"><p>This is the most common concern — and the most solvable. The entry ticket (a short question submitted via Google Form before class) creates accountability without punishment. Students quickly learn that not watching means struggling in class, which is a natural consequence that works far better than a grade penalty. I also give students 5 minutes at the start of class to read a one-page summary of the video if they didn't watch — this keeps the class moving while removing the excuse of "I didn't have time."</p></div>
+        </details>
+      </div>
+    </section>
+
+    <!-- ========== REFERENCES ========== -->
+    <div class="references">
+      <h2>References</h2>
+      <ol>
+        <li>Esperanza, P., Fabian, K., & Toto, C. (2016). Flipped Classroom Model: Effects on Performance, Attitudes and Perceptions in High School Algebra. <em>Lecture Notes in Computer Science</em>, Vol. 9891, pp. 47–59. Springer. doi:10.1007/978-3-319-45153-4_7</li>
+        <li>Esperanza, P. J., Himang, C., Bongo, M., Selerio Jr., E., & Ocampo, L. (2021). The utility of a flipped classroom in secondary Mathematics education. <em>International Journal of Mathematical Education in Science and Technology</em>.</li>
+        <li>College Board. (2025). <em>AP Statistics Course and Exam Description</em>. College Board.</li>
+        <li>Lo, C. K., & Hew, K. F. (2017). A critical review of flipped classroom challenges in K-12 education: Possible solutions and recommendations for future research. <em>Research and Practice in Technology Enhanced Learning</em>, 12(1), 4.</li>
+      </ol>
+    </div>
+
+  </div><!-- /container-narrow -->
+</div><!-- /article -->
+
+<!-- ========== BOTTOM CTA ========== -->
+<section class="next-cta">
+  <div class="container">
+    <h2>Go deeper on the flipped classroom</h2>
+    <p>The full guide — 15 years of lessons from my math classroom, distilled into one long-form resource you can read in an afternoon.</p>
+    <div class="cta-row">
+      <a href="flipped-classroom-math.html" class="btn btn-yellow">📖 Read the Full Flipped Classroom Guide</a>
+      <a href="teacher-resources.html" class="btn btn-outline">📦 Free Teacher Downloads</a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot foot-brand">
+        <div class="logo">
+          <div class="logo-mark">
+            <img src="images/numberbender_mark_teal_transparent.svg" alt="Numberbender" style="width:100%;height:100%;object-fit:contain;display:block;">
+          </div>
+          <span>Numberbender</span>
+        </div>
+        <p>Helping students learn math with confidence and helping educators teach online with energy, clarity, and impact.</p>
+        <p class="footer-tagline">Math is hard. So we made it human.</p>
+        <div class="socials">
+          <a href="https://www.youtube.com/@numberbender" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a2.997 2.997 0 0 0-2.108-2.119C19.42 3.5 12 3.5 12 3.5s-7.42 0-9.39.567A2.997 2.997 0 0 0 .502 6.186C0 8.176 0 12 0 12s0 3.824.502 5.814a2.997 2.997 0 0 0 2.108 2.119C4.58 20.5 12 20.5 12 20.5s7.42 0 9.39-.567a2.997 2.997 0 0 0 2.108-2.119C24 15.824 24 12 24 12s0-3.824-.502-5.814zM9.6 15.572V8.428L15.818 12 9.6 15.572z"/></svg></a>
+          <a href="https://www.tiktok.com/@numberbender" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.74a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.17z"/></svg></a>
+          <a href="https://www.facebook.com/thenumberbender" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"/></svg></a>
+          <a href="https://www.linkedin.com/in/numberbender/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.063 2.063 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        </div>
+        <div class="foot-signup-block">
+          <label for="foot-email">📬 Join the movement — 1,000+ students and teachers already in</label>
+          <form class="foot-signup-form" action="https://numberbender.us17.list-manage.com/subscribe/post?u=65e30fe527dde6fb604f6760a&amp;id=ad0977e0cc&amp;f_id=003058e0f0" method="post" target="_blank">
+            <input id="foot-email" type="email" name="EMAIL" placeholder="your@email.com" required aria-label="Your email address">
+            <div style="position:absolute; left:-5000px;" aria-hidden="true"><input type="text" name="b_65e30fe527dde6fb604f6760a_ad0977e0cc" tabindex="-1" value=""></div>
+            <button type="submit">Join</button>
+          </form>
+        </div>
+      </div>
+      <div class="foot">
+        <h4>Students</h4>
+        <a href="courses.html">All Courses</a>
+        <a href="courses.html#algebra-card">Algebra</a>
+        <a href="courses.html#statistics-card">Statistics</a>
+        <a href="courses.html">Calculus</a>
+      </div>
+      <div class="foot">
+        <h4>Educators</h4>
+        <a href="teach-it-like-you-stream-it.html">Teach It Like You Stream It</a>
+        <a href="teacher-resources.html">Teacher Resources</a>
+        <a href="speaking.html">Workshops</a>
+        <a href="flipped-classroom-math.html">Flipped Learning</a>
+        <a href="flipped-classroom-ap-statistics.html">Flip AP Statistics</a>
+      </div>
+      <div class="foot">
+        <h4>Connect</h4>
+        <a href="about.html">About Dr. E</a>
+        <a href="speaking.html">Speaking</a>
+        <a href="speaking-archive.html">Speaking Archive</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://www.youtube.com/@numberbender" target="_blank" rel="noopener">YouTube Channel</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      © 2026 Numberbender · Founded by Dr. Peter Esperanza · Numberbender Inc. is a 501(c)(3) nonprofit organization · EIN: 86-2952520 · Made with care for learners and educators everywhere. · <a href="privacy.html" style="color:#94a3b8;">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function loadYT(el){
+    var id = el.getAttribute('data-video-id');
+    if(!id) return;
+    var iframe = document.createElement('iframe');
+    iframe.src = 'https://www.youtube-nocookie.com/embed/' + id + '?rel=0&modestbranding=1&playsinline=1';
+    iframe.title = el.getAttribute('aria-label') || 'YouTube video';
+    iframe.setAttribute('frameborder', '0');
+    iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+    iframe.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+    iframe.setAttribute('allowfullscreen', '');
+    el.innerHTML = '';
+    el.appendChild(iframe);
+    el.removeAttribute('role');
+    el.removeAttribute('tabindex');
+    el.onclick = null;
+  }
+  function toggleDD(btn){
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    document.querySelectorAll('.dropdown-trigger').forEach(b => {
+      b.setAttribute('aria-expanded', 'false');
+      const menu = b.parentElement.querySelector('.dropdown-menu');
+      if(menu) menu.classList.remove('open');
+    });
+    if(!expanded){
+      btn.setAttribute('aria-expanded', 'true');
+      const menu = btn.parentElement.querySelector('.dropdown-menu');
+      if(menu) menu.classList.add('open');
+    }
+  }
+  document.addEventListener('click', function(e){
+    if(!e.target.closest('.nav-dropdown')){
+      document.querySelectorAll('.dropdown-trigger').forEach(b => {
+        b.setAttribute('aria-expanded','false');
+        const menu = b.parentElement.querySelector('.dropdown-menu');
+        if(menu) menu.classList.remove('open');
+      });
+    }
+  });
+</script>
+
+<script>
+  // GA4 event tracking: email signups + outbound clicks
+  document.querySelectorAll('form').forEach(function(form) {
+    if (form.querySelector('input[type="email"]')) {
+      form.addEventListener('submit', function() {
+        gtag('event', 'email_signup', { event_category: 'engagement', event_label: window.location.pathname });
+      });
+    }
+  });
+  document.querySelectorAll('a[target="_blank"]').forEach(function(link) {
+    link.addEventListener('click', function() {
+      gtag('event', 'outbound_click', { event_category: 'outbound', link_url: link.href });
+    });
+  });
+</script>
+
+</body>
+</html>

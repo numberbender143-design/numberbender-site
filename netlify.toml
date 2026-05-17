@@ -1,0 +1,228 @@
+# ============================================================
+#  Numberbender — netlify.toml
+#  SEO-optimized build config, redirects, cache & security
+# ============================================================
+
+# --------------- Build settings ---------------
+[build]
+  publish = "."          # Root is the site (no build step)
+
+# --------------- Redirects ---------------
+# Pretty-URL rewrites: strip .html so canonical URLs are clean
+# Google prefers one canonical form; these ensure the .html version
+# redirects to the extensionless version with a 301 (permanent).
+
+[[redirects]]
+  from = "/about.html"
+  to   = "/about"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/courses.html"
+  to   = "/courses"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/contact.html"
+  to   = "/contact"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/speaking.html"
+  to   = "/speaking"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/speaking-archive.html"
+  to   = "/speaking-archive"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/teacher-resources.html"
+  to   = "/teacher-resources"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/teach-it-like-you-stream-it.html"
+  to   = "/teach-it-like-you-stream-it"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/start-here.html"
+  to   = "/start-here"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/find-your-course.html"
+  to   = "/find-your-course"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/flipped-classroom-math.html"
+  to   = "/flipped-classroom-math"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/flipped-classroom-research.html"
+  to   = "/flipped-classroom-research"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/flipped-classroom-videos.html"
+  to   = "/flipped-classroom-videos"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/flipped-classroom-books.html"
+  to   = "/flipped-classroom-books"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/flipped-classroom-distance-learning.html"
+  to   = "/flipped-classroom-distance-learning"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/flipped-classroom-higher-ed.html"
+  to   = "/flipped-classroom-higher-ed"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/flipped-classroom-mistakes.html"
+  to   = "/flipped-classroom-mistakes"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/flipped-classroom-quickstart.html"
+  to   = "/flipped-classroom-quickstart"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/ap-calculus-frq-books.html"
+  to   = "/ap-calculus-frq-books"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/privacy.html"
+  to   = "/privacy"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/flipped-classroom-ap-statistics.html"
+  to   = "/flipped-classroom-ap-statistics"
+  status = 301
+  force  = true
+
+# Speaking sub-pages
+[[redirects]]
+  from = "/speaking-2025-06-otc.html"
+  to   = "/speaking-2025-06-otc"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/speaking-2025-07-luisiana.html"
+  to   = "/speaking-2025-07-luisiana"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/speaking-2025-08-seameo-indonesia.html"
+  to   = "/speaking-2025-08-seameo-indonesia"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/speaking-2026-03-site-philadelphia.html"
+  to   = "/speaking-2026-03-site-philadelphia"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/speaking-2026-04-actla-51.html"
+  to   = "/speaking-2026-04-actla-51"
+  status = 301
+  force  = true
+
+# 404 catch-all (must be last)
+[[redirects]]
+  from   = "/*"
+  to     = "/index.html"
+  status = 404
+
+# --------------- Cache Headers ---------------
+# Static assets: long TTL (1 year) to maximize repeat-visitor speed
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.mp4"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.pdf"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+# ZIP bundles: force download instead of opening in browser
+[[headers]]
+  for = "/bundles/*"
+  [headers.values]
+    Content-Disposition = "attachment"
+    Cache-Control = "public, max-age=2592000"
+
+# HTML pages: short cache + revalidate (content changes)
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# --------------- Security Headers ---------------
+# Applied to all pages — improves Google's E-E-A-T trust signals
+# and prevents click-jacking / MIME sniffing penalties
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    X-XSS-Protection = "1; mode=block"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"

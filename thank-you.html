@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P1M2WZD840"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-P1M2WZD840');
+</script>
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>You're In — Download Your Free Guide | Numberbender</title>
+<meta name="description" content="Thank you for subscribing. Download your free Flipped Classroom Quick-Start Guide from Dr. Peter Esperanza." />
+<link rel="canonical" href="https://numberbender.com/thank-you" />
+<!-- No index — this is a post-signup confirmation page -->
+<meta name="robots" content="noindex, nofollow" />
+
+<meta name="theme-color" content="#1F6F6B">
+
+<style>
+  :root{
+    --navy:#0F172A; --blue:#2563EB; --yellow:#FACC15; --cyan:#06B6D4; --green:#22C55E;
+    --bg:#F8FAFC; --surface:#FFFFFF; --muted:#64748B; --border:#E2E8F0;
+    --shadow: 0 10px 30px rgba(15,23,42,.08);
+    --shadow-lg: 0 20px 50px rgba(15,23,42,.12);
+    --radius: 16px;
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; }
+  body{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color:var(--navy); background:var(--bg); line-height:1.7;
+    -webkit-font-smoothing:antialiased; min-height:100vh;
+    display:flex; flex-direction:column;
+  }
+  a{ color:var(--blue); text-decoration:none; }
+  a:hover{ text-decoration:underline; }
+  .container{ width:min(1100px,92%); margin-inline:auto; }
+  .container-narrow{ width:min(600px,92%); margin-inline:auto; }
+
+  /* NAV */
+  .nav{
+    background:rgba(255,255,255,.95);
+    border-bottom:1px solid var(--border);
+    padding:14px 0;
+  }
+  .nav-inner{ display:flex; align-items:center; justify-content:space-between; }
+  .logo-lockup .lockup-img{ height:64px; width:auto; }
+  .nav-home{ color:var(--muted); font-size:.9rem; }
+
+  /* HERO */
+  .hero{
+    flex:1; padding:80px 0 60px;
+    background:
+      radial-gradient(700px 500px at 80% 0%, rgba(34,197,94,.1), transparent 60%),
+      radial-gradient(600px 400px at 0% 100%, rgba(37,99,235,.08), transparent 60%),
+      linear-gradient(180deg,#fff 0%,var(--bg) 100%);
+    text-align:center;
+  }
+
+  /* Checkmark animation */
+  .success-icon{
+    width:80px; height:80px; border-radius:50%;
+    background:linear-gradient(135deg,var(--green),#16a34a);
+    display:inline-flex; align-items:center; justify-content:center;
+    margin-bottom:24px;
+    box-shadow:0 0 0 12px rgba(34,197,94,.12), 0 0 0 24px rgba(34,197,94,.06);
+    animation: pop .4s cubic-bezier(.175,.885,.32,1.275) both;
+  }
+  @keyframes pop{
+    0%{ transform:scale(0); opacity:0; }
+    100%{ transform:scale(1); opacity:1; }
+  }
+  .success-icon svg{ width:36px; height:36px; }
+
+  .hero h1{
+    font-size:clamp(2rem,4.5vw,3rem); font-weight:900;
+    line-height:1.1; letter-spacing:-.02em;
+    color:var(--navy); margin-bottom:14px;
+  }
+  .hero h1 .accent{ color:var(--green); }
+  .hero p.lead{
+    font-size:1.1rem; color:#334155; max-width:480px;
+    margin:0 auto 36px; line-height:1.7;
+  }
+
+  /* DOWNLOAD CARD */
+  .download-card{
+    background:var(--surface); border:1px solid var(--border);
+    border-radius:24px; padding:36px 40px;
+    box-shadow:var(--shadow-lg);
+    margin-bottom:32px;
+    position:relative; overflow:hidden;
+  }
+  .download-card::before{
+    content:''; position:absolute; top:0; left:0; right:0; height:4px;
+    background:linear-gradient(90deg,var(--green),var(--cyan));
+  }
+  .download-card h2{ font-size:1.3rem; font-weight:800; margin-bottom:8px; }
+  .download-card p{ color:var(--muted); font-size:.95rem; margin-bottom:24px; line-height:1.6; }
+
+  .btn-download{
+    display:inline-flex; align-items:center; gap:10px;
+    background:var(--navy); color:white;
+    padding:16px 28px; border-radius:14px;
+    font-weight:700; font-size:1.05rem;
+    transition:background .15s ease, transform .15s ease, box-shadow .15s ease;
+    text-decoration:none !important;
+  }
+  .btn-download:hover{
+    background:var(--blue); transform:translateY(-2px);
+    box-shadow:0 12px 30px rgba(37,99,235,.3);
+  }
+  .btn-download svg{ flex-shrink:0; }
+  .file-meta{ font-size:.8rem; color:var(--muted); margin-top:12px; }
+
+  /* NEXT STEPS */
+  .next-steps{ padding:0 0 72px; }
+  .next-steps h2{
+    font-size:1.35rem; font-weight:800; text-align:center;
+    margin-bottom:24px; color:var(--navy);
+  }
+  .steps-grid{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:14px;
+  }
+  .step-card{
+    background:var(--surface); border:1px solid var(--border);
+    border-radius:var(--radius); padding:20px 18px;
+    box-shadow:var(--shadow); transition:transform .15s ease;
+  }
+  .step-card:hover{ transform:translateY(-3px); }
+  .step-card .icon{ font-size:1.5rem; margin-bottom:8px; }
+  .step-card h3{ font-size:.98rem; font-weight:700; margin-bottom:6px; color:var(--navy); }
+  .step-card p{ font-size:.85rem; color:var(--muted); line-height:1.55; }
+  .step-card a{ color:var(--blue); font-weight:600; font-size:.85rem; }
+
+  /* FOOTER */
+  footer{
+    background:#0b1220; color:#94a3b8;
+    padding:30px 0; font-size:.85rem; text-align:center;
+  }
+  footer a{ color:#cbd5e1; }
+  footer a:hover{ color:white; }
+
+  @media(max-width:600px){
+    .download-card{ padding:26px 20px; }
+    .steps-grid{ grid-template-columns:1fr; }
+    .hero{ padding:60px 0 40px; }
+  }
+</style>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wnr3kox01b");
+  </script>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="/" class="logo-lockup">
+      <img src="images/numberbender_banner_only.svg" alt="Numberbender" class="lockup-img">
+    </a>
+    <a href="/" class="nav-home">← Back to Numberbender</a>
+  </div>
+</header>
+
+<!-- HERO + DOWNLOAD -->
+<main class="hero">
+  <div class="container-narrow">
+
+    <div class="success-icon" aria-hidden="true">
+      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8 18l7 7 13-13" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <h1>You're in. <span class="accent">Here's your guide.</span></h1>
+    <p class="lead">Check your inbox for a confirmation — then download your Quick-Start Guide below. It's a one-page PDF, ready to print or keep on your desktop.</p>
+
+    <div class="download-card">
+      <h2>📄 Flipped Classroom Quick-Start Guide</h2>
+      <p>The 7-day starter plan, video length rules, 5 mistakes to avoid, and which unit to flip first — all on one page. By Dr. Peter Esperanza.</p>
+
+      <a href="flipped-classroom-quickstart.pdf" download="Flipped-Classroom-Quickstart-Guide-Numberbender.pdf" class="btn-download">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+          <polyline points="7 10 12 15 17 10"/>
+          <line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+        Download the PDF — Free
+      </a>
+      <p class="file-meta">PDF · 1 page · Print-ready · Free to share with colleagues</p>
+    </div>
+
+  </div>
+</main>
+
+<!-- NEXT STEPS -->
+<section class="next-steps">
+  <div class="container-narrow">
+    <h2>While you're here — explore the full guide</h2>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="icon">📖</div>
+        <h3>Read the full pillar guide</h3>
+        <p>15 years of lessons, the 7-day plan in full detail, video rules, and the research behind the model.</p>
+        <a href="flipped-classroom-math.html">Read the guide →</a>
+      </div>
+      <div class="step-card">
+        <div class="icon">🔬</div>
+        <h3>See the research</h3>
+        <p>The 2016 Springer RCT, the 2021 IJMEST paper, and the in-progress community college study.</p>
+        <a href="flipped-classroom-research.html">See the research →</a>
+      </div>
+      <div class="step-card">
+        <div class="icon">⚠️</div>
+        <h3>The 5 mistakes in detail</h3>
+        <p>The full story behind each mistake — and the concrete fix — in Dr. E's own voice.</p>
+        <a href="flipped-classroom-mistakes.html">Read the mistakes →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <p>
+      <a href="/">Home</a> ·
+      <a href="flipped-classroom-math.html">Flipped Classroom</a> ·
+      <a href="teacher-resources.html">Teacher Resources</a> ·
+      <a href="contact.html">Contact</a> ·
+      <a href="privacy.html">Privacy Policy</a>
+    </p>
+    <p style="margin-top:10px;color:#475569;">© 2026 Numberbender · Founded by Dr. Peter Esperanza</p>
+  </div>
+</footer>
+
+</body>
+</html>

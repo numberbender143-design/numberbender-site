@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P1M2WZD840"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P1M2WZD840');
+</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Blog — Flipped Classroom & EduTuber Tips | Numberbender</title>
+<meta name="description" content="Articles by Dr. Peter Esperanza on flipped classroom teaching, online math education, becoming an EduTuber, and professional development for teachers." />
+<link rel="canonical" href="https://numberbender.com/blog" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Blog — Flipped Classroom, Online Teaching & EduTuber Tips | Numberbender" />
+<meta property="og:description" content="Articles by Dr. Peter Esperanza on flipped classroom teaching, online math education, becoming an EduTuber, and professional development for teachers." />
+<meta property="og:url" content="https://numberbender.com/blog" />
+<meta property="og:site_name" content="Numberbender" />
+<meta property="og:image" content="https://numberbender.com/images/dr-e-hero.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@numberbender" />
+<meta name="twitter:title" content="Blog — Flipped Classroom & EduTuber Tips | Numberbender" />
+<meta name="twitter:description" content="Articles by Dr. Peter Esperanza on flipped classroom teaching, online math, and becoming an EduTuber." />
+<meta name="twitter:image" content="https://numberbender.com/images/dr-e-hero.jpg" />
+<link rel="icon" type="image/svg+xml" href="images/exports/numberbender-favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="images/exports/png/favicon-32.png">
+<meta name="theme-color" content="#1F6F6B">
+
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "wnr3kox01b");
+</script>
+
+<!-- Schema.org Blog structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Numberbender Blog",
+  "description": "Articles on flipped classroom teaching, online math education, and EduTuber professional development by Dr. Peter Esperanza.",
+  "url": "https://numberbender.com/blog",
+  "author": {
+    "@type": "Person",
+    "name": "Dr. Peter Esperanza",
+    "url": "https://numberbender.com/about",
+    "jobTitle": "Math Professor & EduTuber",
+    "affiliation": { "@type": "Organization", "name": "Numberbender Inc." }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Numberbender Inc.",
+    "url": "https://numberbender.com",
+    "logo": { "@type": "ImageObject", "url": "https://numberbender.com/images/numberbender_banner_only.svg" }
+  }
+}
+</script>
+
+<style>
+  :root{
+    --navy:#0F172A;
+    --blue:#2563EB;
+    --cyan:#06B6D4;
+    --yellow:#FACC15;
+    --green:#22C55E;
+    --bg:#F8FAFC;
+    --surface:#FFFFFF;
+    --muted:#64748B;
+    --border:#E2E8F0;
+    --shadow: 0 4px 20px rgba(15,23,42,0.07);
+    --radius: 14px;
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; }
+  body{ font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Inter",Roboto,"Helvetica Neue",Arial,sans-serif; color:var(--navy); background:var(--bg); line-height:1.6; }
+  a{ text-decoration:none; color:inherit; }
+  img{ max-width:100%; display:block; }
+  .container{ max-width:1100px; margin:0 auto; padding:0 24px; }
+
+  /* ── NAV ── */
+  header{ background:#fff; border-bottom:1px solid var(--border); position:sticky; top:0; z-index:100; }
+  .nav-inner{ display:flex; align-items:center; justify-content:space-between; height:64px; }
+  .lockup-img{ height:32px; width:auto; }
+  .nav-links{ display:flex; align-items:center; gap:8px; }
+  .nav-links a{ padding:8px 14px; border-radius:8px; font-size:0.9rem; font-weight:500; color:var(--navy); transition:background .15s; }
+  .nav-links a:hover{ background:var(--bg); color:var(--blue); }
+  .nav-cta{ background:var(--blue)!important; color:#fff!important; }
+  .nav-cta:hover{ background:#1d4ed8!important; }
+  .menu-toggle{ display:none; background:none; border:none; font-size:1.4rem; cursor:pointer; padding:8px; }
+  .nav-dropdown{ position:relative; }
+  .nav-dropdown .dropdown-trigger{ background:none; border:none; padding:8px 14px; border-radius:8px; font-size:0.9rem; font-weight:500; color:var(--navy); cursor:pointer; display:flex; align-items:center; gap:4px; transition:background .15s; font-family:inherit; }
+  .nav-dropdown .dropdown-trigger:hover{ background:var(--bg); color:var(--blue); }
+  .nav-dropdown .caret{ font-size:0.75em; display:inline-block; transition:transform .2s ease; }
+  .nav-dropdown:hover .caret,.nav-dropdown .dropdown-trigger[aria-expanded="true"] .caret{ transform:rotate(180deg); }
+  .nav-dropdown .dropdown-menu{ position:absolute; top:calc(100% + 4px); left:0; background:#fff; border:1px solid var(--border); border-radius:10px; padding:6px; min-width:220px; box-shadow:var(--shadow); opacity:0; visibility:hidden; transform:translateY(-4px); transition:all .15s; z-index:200; }
+  .nav-dropdown:hover .dropdown-menu,.nav-dropdown .dropdown-menu.open{ opacity:1; visibility:visible; transform:translateY(0); }
+  .nav-dropdown .dropdown-menu a{ display:block; padding:8px 12px; border-radius:6px; font-size:0.875rem; color:var(--navy); }
+  .nav-dropdown .dropdown-menu a:hover{ background:var(--bg); color:var(--blue); }
+  @media(max-width:768px){
+    .menu-toggle{ display:block; }
+    .nav-links{ display:none; position:absolute; top:64px; left:0; right:0; background:#fff; border-bottom:1px solid var(--border); padding:12px 24px 20px; flex-direction:column; align-items:flex-start; gap:4px; }
+    .nav-links.open{ display:flex; }
+    .nav-dropdown{ width:100%; }
+    .nav-dropdown .dropdown-trigger{ width:100%; justify-content:space-between; padding:6px 0; }
+    .nav-dropdown .dropdown-menu{ position:static; box-shadow:none; border:none; padding:0 0 0 16px; opacity:1; visibility:visible; transform:none; display:none; }
+    .nav-dropdown:hover .dropdown-menu{ display:none; }
+    .nav-dropdown .dropdown-menu.open{ display:block; }
+  }
+
+  /* ── BUTTONS ── */
+  .btn{ display:inline-block; padding:12px 24px; border-radius:10px; font-weight:600; font-size:0.95rem; cursor:pointer; transition:all .2s; border:none; }
+  .btn-primary{ background:var(--blue); color:#fff; }
+  .btn-primary:hover{ background:#1d4ed8; }
+  .btn-cyan{ background:var(--cyan); color:#fff; }
+  .btn-cyan:hover{ background:#0891b2; }
+  .btn-outline{ background:transparent; color:var(--navy); border:2px solid var(--border); }
+  .btn-outline:hover{ border-color:var(--blue); color:var(--blue); }
+  .btn-gold{ background:#F5A623; color:#1B2B5E; font-weight:700; }
+  .btn-gold:hover{ background:#e09510; }
+
+  /* ── PAGE HERO ── */
+  .page-hero{ background:linear-gradient(135deg, var(--navy) 0%, #1e3a6e 100%); color:#fff; padding:64px 0 56px; }
+  .page-hero .eyebrow{ font-size:0.8rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--cyan); margin-bottom:12px; }
+  .page-hero h1{ font-size:clamp(2rem,4vw,2.8rem); font-weight:800; line-height:1.15; margin-bottom:16px; }
+  .page-hero h1 .accent{ color:var(--cyan); }
+  .page-hero p.lead{ font-size:1.05rem; color:rgba(255,255,255,0.8); max-width:560px; line-height:1.7; margin-bottom:24px; }
+  .hero-tags{ display:flex; flex-wrap:wrap; gap:8px; }
+  .hero-tag{ background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.2); border-radius:20px; padding:4px 14px; font-size:0.8rem; font-weight:500; color:rgba(255,255,255,0.85); }
+
+  /* ── BLOG GRID ── */
+  .blog-section{ padding:64px 0; }
+  .section-label{ font-size:0.75rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--blue); margin-bottom:8px; }
+  .section-title{ font-size:clamp(1.5rem,3vw,2rem); font-weight:800; color:var(--navy); margin-bottom:8px; }
+  .section-sub{ font-size:1rem; color:var(--muted); margin-bottom:40px; max-width:540px; }
+
+  .blog-grid{ display:grid; grid-template-columns:repeat(auto-fill, minmax(320px,1fr)); gap:28px; }
+
+  .post-card{ background:#fff; border-radius:var(--radius); border:1px solid var(--border); overflow:hidden; transition:box-shadow .2s, transform .2s; display:flex; flex-direction:column; }
+  .post-card:hover{ box-shadow:var(--shadow); transform:translateY(-3px); }
+
+  .post-thumb{ height:160px; display:flex; align-items:center; justify-content:center; font-size:3rem; position:relative; }
+  .post-thumb .coming-soon-overlay{ position:absolute; inset:0; background:rgba(255,255,255,0.55); display:flex; align-items:center; justify-content:center; }
+  .post-thumb .coming-badge{ background:#fff; border:1.5px solid var(--border); border-radius:20px; padding:4px 14px; font-size:0.75rem; font-weight:700; color:var(--muted); letter-spacing:0.05em; }
+
+  .post-body{ padding:22px; flex:1; display:flex; flex-direction:column; gap:10px; }
+  .post-meta{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+  .post-cat{ font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; padding:3px 10px; border-radius:20px; }
+  .cat-flipped{ background:#EFF6FF; color:#2563EB; }
+  .cat-edutube{ background:#F0FDF4; color:#16A34A; }
+  .cat-research{ background:#FFF7ED; color:#EA580C; }
+  .cat-math{ background:#FDF4FF; color:#9333EA; }
+  .cat-teaching{ background:#ECFDF5; color:#059669; }
+  .post-date{ font-size:0.75rem; color:var(--muted); }
+  .post-title{ font-size:1.05rem; font-weight:700; color:var(--navy); line-height:1.35; }
+  .post-excerpt{ font-size:0.875rem; color:var(--muted); line-height:1.6; flex:1; }
+  .post-placeholder-note{ font-size:0.8rem; color:#94A3B8; font-style:italic; background:#F8FAFC; border-radius:8px; padding:8px 12px; border-left:3px solid var(--border); }
+  .post-cta{ font-size:0.875rem; font-weight:600; color:var(--blue); display:inline-flex; align-items:center; gap:4px; margin-top:4px; }
+  .post-cta:hover{ color:#1d4ed8; }
+
+  /* ── FEATURED POST ── */
+  .featured-post{ background:#fff; border-radius:var(--radius); border:1px solid var(--border); overflow:hidden; margin-bottom:40px; display:grid; grid-template-columns:1fr 1fr; }
+  .featured-thumb{ background:linear-gradient(135deg,#0F172A,#1e3a6e); min-height:280px; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:12px; padding:32px; }
+  .featured-thumb .big-emoji{ font-size:4rem; }
+  .featured-thumb .feat-badge{ background:var(--cyan); color:#fff; font-size:0.72rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; padding:4px 12px; border-radius:20px; }
+  .featured-body{ padding:36px; display:flex; flex-direction:column; justify-content:center; gap:14px; }
+  .featured-body .post-cat{ align-self:flex-start; }
+  .featured-body h2{ font-size:1.5rem; font-weight:800; line-height:1.3; color:var(--navy); }
+  .featured-body p{ color:var(--muted); font-size:0.95rem; line-height:1.7; }
+  @media(max-width:680px){
+    .featured-post{ grid-template-columns:1fr; }
+    .featured-thumb{ min-height:160px; }
+  }
+
+  /* ── NEWSLETTER STRIP ── */
+  .newsletter-strip{ background:linear-gradient(135deg,#0F172A,#1e3a6e); border-radius:var(--radius); padding:48px 40px; color:#fff; text-align:center; margin:64px 0; }
+  .newsletter-strip h2{ font-size:1.6rem; font-weight:800; margin-bottom:10px; }
+  .newsletter-strip p{ color:rgba(255,255,255,0.75); margin-bottom:24px; font-size:0.95rem; }
+  .newsletter-form{ display:flex; gap:10px; max-width:420px; margin:0 auto; flex-wrap:wrap; justify-content:center; }
+  .newsletter-form input[type="email"]{ flex:1; min-width:220px; padding:12px 16px; border-radius:10px; border:none; font-size:0.95rem; outline:none; }
+  .newsletter-form button{ padding:12px 22px; background:var(--cyan); color:#fff; border:none; border-radius:10px; font-weight:700; font-size:0.95rem; cursor:pointer; }
+  .newsletter-form button:hover{ background:#0891b2; }
+
+  /* ── FOOTER ── */
+  footer{ background:var(--navy); color:rgba(255,255,255,0.7); padding:48px 0 28px; }
+  .footer-grid{ display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:40px; margin-bottom:36px; }
+  .footer-brand p{ font-size:0.875rem; line-height:1.7; margin-top:10px; color:rgba(255,255,255,0.55); }
+  .footer-col h4{ font-size:0.8rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:rgba(255,255,255,0.4); margin-bottom:12px; }
+  .footer-col a{ display:block; font-size:0.875rem; color:rgba(255,255,255,0.65); margin-bottom:6px; }
+  .footer-col a:hover{ color:#fff; }
+  .footer-bottom{ border-top:1px solid rgba(255,255,255,0.1); padding-top:20px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; font-size:0.8rem; }
+  .lockup-img-footer{ height:28px; width:auto; opacity:0.7; }
+  @media(max-width:768px){
+    .footer-grid{ grid-template-columns:1fr 1fr; }
+    .footer-bottom{ flex-direction:column; text-align:center; }
+    .blog-grid{ grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header>
+  <div class="container nav-inner">
+    <a href="/" class="brand-lockup">
+      <img src="images/numberbender_banner_only.svg" alt="Numberbender" class="lockup-img">
+    </a>
+    <button class="menu-toggle" aria-label="Toggle menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
+    <nav class="nav-links" id="navlinks">
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">For Students <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="start-here.html">🎁 Free Starter Lesson</a>
+          <a href="find-your-course.html">🧭 Find My Course</a>
+          <a href="courses.html">📚 All Courses</a>
+          <a href="math-worksheets.html">📝 Free Worksheets</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">For Educators <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="for-teachers.html">🏫 For Teachers Hub</a>
+          <a href="teach-it-like-you-stream-it.html">🎬 Teach It Like You Stream It</a>
+          <a href="teacher-resources.html">📦 Teacher Resources</a>
+          <a href="flipped-classroom-math.html">🔄 Flipped Classroom Guide</a>
+        </div>
+      </div>
+      <a href="about.html">About Dr. E</a>
+      <a href="speaking.html">Speaking</a>
+      <a href="blog.html" style="color:var(--blue);font-weight:700;">Blog</a>
+      <a href="contact.html" class="nav-cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ── HERO ── -->
+<section class="page-hero">
+  <div class="container">
+    <div class="eyebrow">✍️ Articles by Dr. Peter Esperanza</div>
+    <h1>Real Talk on<br><span class="accent">Teaching Online.</span></h1>
+    <p class="lead">
+      No fluff. No theory without practice. Just honest reflections from a math professor
+      who has been flipping classrooms, recording videos, and teaching across 10+ countries since 2012.
+    </p>
+    <div class="hero-tags">
+      <span class="hero-tag">🔄 Flipped Classroom</span>
+      <span class="hero-tag">🎬 EduTuber Tips</span>
+      <span class="hero-tag">📐 Math Education</span>
+      <span class="hero-tag">💻 Online Teaching</span>
+      <span class="hero-tag">🧑‍🏫 Teacher Growth</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── BLOG POSTS ── -->
+<section class="blog-section">
+  <div class="container">
+
+    <div class="section-label">Featured Post</div>
+    <a href="blog-flipped-first-class.html" style="text-decoration:none;color:inherit;display:block;">
+    <div class="featured-post" style="cursor:pointer;">
+      <div class="featured-thumb" style="background:none; padding:0; overflow:hidden;">
+        <picture><source srcset="images/blog_post_banner/featured_blog_real.webp" type="image/webp"><img src="images/blog_post_banner/featured_blog_real.jpg" alt="How I Flipped My First Math Class" style="width:100%;height:100%;object-fit:cover;display:block;"></picture>
+      </div>
+      <div class="featured-body">
+        <div class="post-meta">
+          <span class="post-cat cat-flipped">Flipped Classroom</span>
+          <span class="post-date"><time datetime="2026-02-02">📅 Feb 2, 2026</time></span>
+        </div>
+        <h2>How I Flipped My First Math Class — And What Almost Made Me Quit</h2>
+        <p>2009. A Canon camera. A bar stool in Room 30. And 30 minutes of staring at the lens
+           with nothing coming out of my mouth. The honest story of how I almost gave up on flipping
+           — and the one Google search that saved my career. <strong>Includes the awkward first-take video.</strong></p>
+        <span class="post-cta">Read the full story →</span>
+      </div>
+    </div>
+    </a>
+
+    <div class="section-label">All Articles · New post every month</div>
+    <div class="section-title">From the Classroom to the Camera</div>
+    <p class="section-sub">A new article on flipping, teaching, and EduTubing — published the first or second week of every month. Next post: <strong>June 2026</strong>.</p>
+
+    <div class="blog-grid">
+
+      <!-- Post 4 (newest) -->
+      <a href="blog-flipped-mistakes.html" style="text-decoration:none;color:inherit;">
+      <div class="post-card">
+        <div class="post-thumb" style="background:none; padding:0; overflow:hidden;">
+          <picture><source srcset="images/blog_post_banner/blog_1.webp" type="image/webp"><img src="images/blog_post_banner/blog_1.png" alt="5 Flipped Classroom Mistakes I Made" style="width:100%;height:100%;object-fit:cover;display:block;"></picture>
+        </div>
+        <div class="post-body">
+          <div class="post-meta">
+            <span class="post-cat cat-flipped">Flipped Classroom</span>
+            <span class="post-date"><time datetime="2026-05-05">📅 May 5, 2026</time></span>
+          </div>
+          <div class="post-title">5 Flipped Classroom Mistakes I Made (So You Don't Have To)</div>
+          <div class="post-excerpt">The 5 lies I believed in year one of flipping my math class — including the one that almost made me quit. <em>(Plus a behind-the-scenes video proving even ADEs get head-butted by their own whiteboard.)</em></div>
+          <span class="post-cta">Read the post →</span>
+        </div>
+      </div>
+      </a>
+
+      <!-- Post 3 -->
+      <a href="blog-become-edutuber.html" style="text-decoration:none;color:inherit;">
+      <div class="post-card">
+        <div class="post-thumb" style="background:none; padding:0; overflow:hidden;">
+          <picture><source srcset="images/blog_post_banner/Blog_2.webp" type="image/webp"><img src="images/blog_post_banner/Blog_2.png" alt="How to Become an EduTuber" style="width:100%;height:100%;object-fit:cover;display:block;"></picture>
+        </div>
+        <div class="post-body">
+          <div class="post-meta">
+            <span class="post-cat cat-edutube">EduTuber</span>
+            <span class="post-date"><time datetime="2026-04-10">📅 Apr 10, 2026</time></span>
+          </div>
+          <div class="post-title">How to Become an EduTuber: What I Wish I Knew Before Starting YouTube</div>
+          <div class="post-excerpt">From 9 monthly views to 340K+ subscribers. The 8 lessons I wish someone slid across the table to me before I clicked PUBLIC. <em>(Includes the video of Google flying me from Barstow to Manila for my first YouTube event.)</em></div>
+          <span class="post-cta">Read the post →</span>
+        </div>
+      </div>
+      </a>
+
+      <!-- Post 2 -->
+      <a href="blog-five-minute-rule.html" style="text-decoration:none;color:inherit;">
+      <div class="post-card">
+        <div class="post-thumb" style="background:none; padding:0; overflow:hidden;">
+          <picture><source srcset="images/blog_post_banner/Blog_3.webp" type="image/webp"><img src="images/blog_post_banner/Blog_3.png" alt="The 5-Minute Rule for Teaching Videos" style="width:100%;height:100%;object-fit:cover;display:block;"></picture>
+        </div>
+        <div class="post-body">
+          <div class="post-meta">
+            <span class="post-cat cat-flipped">Flipped Classroom</span>
+            <span class="post-date"><time datetime="2026-03-12">📅 Mar 12, 2026</time></span>
+          </div>
+          <div class="post-title">The 5-Minute Rule: Why Your Teaching Videos Should Never Be Longer</div>
+          <div class="post-excerpt">I tried recording my full 50-minute classroom lesson with no cuts. Nobody watched it. Here's why 5 minutes wins — and how I prep one in 10. <em>(Includes my whole MacBook + Home Depot whiteboard rig on video.)</em></div>
+          <span class="post-cta">Read the post →</span>
+        </div>
+      </div>
+      </a>
+
+      <!-- Post 5 -->
+      <div class="post-card">
+        <div class="post-thumb" style="background:linear-gradient(135deg,#FDF4FF,#FAE8FF);">
+          📐
+          <div class="coming-soon-overlay"><span class="coming-badge">COMING SOON</span></div>
+        </div>
+        <div class="post-body">
+          <div class="post-meta">
+            <span class="post-cat cat-math">Math Education</span>
+          </div>
+          <div class="post-title">Teaching Math Online vs. In Person: What Actually Works</div>
+          <div class="post-placeholder-note">✏️ Placeholder — Dr. E will write from personal experience</div>
+        </div>
+      </div>
+
+      <!-- Post 6 -->
+      <div class="post-card">
+        <div class="post-thumb" style="background:linear-gradient(135deg,#F0FDF4,#DCFCE7);">
+          📈
+          <div class="coming-soon-overlay"><span class="coming-badge">COMING SOON</span></div>
+        </div>
+        <div class="post-body">
+          <div class="post-meta">
+            <span class="post-cat cat-edutube">EduTuber</span>
+          </div>
+          <div class="post-title">How I Got 16 Million Views Teaching Math (Without Being a Celebrity)</div>
+          <div class="post-placeholder-note">✏️ Placeholder — Dr. E will write from personal experience</div>
+        </div>
+      </div>
+
+      <!-- Post 7 -->
+      <div class="post-card">
+        <div class="post-thumb" style="background:linear-gradient(135deg,#FFF7ED,#FFEDD5);">
+          🔬
+          <div class="coming-soon-overlay"><span class="coming-badge">COMING SOON</span></div>
+        </div>
+        <div class="post-body">
+          <div class="post-meta">
+            <span class="post-cat cat-research">Research</span>
+          </div>
+          <div class="post-title">The Truth About Flipped Classroom Research: What the Studies Actually Say</div>
+          <div class="post-placeholder-note">✏️ Placeholder — Dr. E will write from personal experience</div>
+        </div>
+      </div>
+
+      <!-- Post 8 -->
+      <div class="post-card">
+        <div class="post-thumb" style="background:linear-gradient(135deg,#EFF6FF,#DBEAFE);">
+          🎥
+          <div class="coming-soon-overlay"><span class="coming-badge">COMING SOON</span></div>
+        </div>
+        <div class="post-body">
+          <div class="post-meta">
+            <span class="post-cat cat-edutube">EduTuber</span>
+          </div>
+          <div class="post-title">How to Set Up Your First Teaching Video in One Day (No Fancy Gear Needed)</div>
+          <div class="post-placeholder-note">✏️ Placeholder — Dr. E will write from personal experience</div>
+        </div>
+      </div>
+
+      <!-- Post 9 -->
+      <div class="post-card">
+        <div class="post-thumb" style="background:linear-gradient(135deg,#ECFDF5,#D1FAE5);">
+          🏫
+          <div class="coming-soon-overlay"><span class="coming-badge">COMING SOON</span></div>
+        </div>
+        <div class="post-body">
+          <div class="post-meta">
+            <span class="post-cat cat-teaching">Online Teaching</span>
+          </div>
+          <div class="post-title">What Is a Flipped Classroom? A Real Teacher's Answer (Not a Textbook's)</div>
+          <div class="post-placeholder-note">✏️ Placeholder — Dr. E will write from personal experience</div>
+        </div>
+      </div>
+
+      <!-- Post 10 -->
+      <div class="post-card">
+        <div class="post-thumb" style="background:linear-gradient(135deg,#FDF4FF,#FAE8FF);">
+          🌏
+          <div class="coming-soon-overlay"><span class="coming-badge">COMING SOON</span></div>
+        </div>
+        <div class="post-body">
+          <div class="post-meta">
+            <span class="post-cat cat-teaching">Online Teaching</span>
+          </div>
+          <div class="post-title">Why Filipino Educators Are Quietly Leading the Global EdTech Movement</div>
+          <div class="post-placeholder-note">✏️ Placeholder — Dr. E will write from personal experience</div>
+        </div>
+      </div>
+
+    </div><!-- /blog-grid -->
+  </div>
+</section>
+
+<!-- ── NEWSLETTER ── -->
+<section style="padding:0 0 64px;">
+  <div class="container">
+    <div class="newsletter-strip">
+      <h2>Get New Articles First</h2>
+      <p>Subscribe and I'll send you each post as it goes live — plus free teaching resources you won't find anywhere else.</p>
+      <form action="https://numberbender.us17.list-manage.com/subscribe/post?u=65e30fe527dde6fb604f6760a&id=ad0977e0cc" method="post" class="newsletter-form" target="_blank">
+        <input type="email" name="EMAIL" placeholder="your@email.com" required />
+        <button type="submit">Notify Me →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/numberbender_banner_only.svg" alt="Numberbender" class="lockup-img-footer">
+        <p>Free math education and teacher professional development by Dr. Peter Esperanza — Apple Distinguished Educator, math professor, YouTube educator, and international speaker.</p>
+      </div>
+      <div class="footer-col">
+        <h4>For Educators</h4>
+        <a href="for-teachers.html">For Teachers Hub</a>
+        <a href="teach-it-like-you-stream-it.html">TILYSI</a>
+        <a href="teacher-resources.html">Teacher Resources</a>
+        <a href="flipped-classroom-math.html">Flipped Classroom</a>
+        <a href="speaking-archive.html">Past Engagements</a>
+      </div>
+      <div class="footer-col">
+        <h4>For Students</h4>
+        <a href="start-here.html">Free Starter Lesson</a>
+        <a href="find-your-course.html">Find My Course</a>
+        <a href="courses.html">All Courses</a>
+      </div>
+      <div class="footer-col">
+        <h4>Numberbender</h4>
+        <a href="about.html">About Dr. E</a>
+        <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Blog <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="blog.html">✍️ Blog Posts</a>
+          <a href="speaking-archive.html">🎤 Past Engagements</a>
+        </div>
+      </div>
+        <a href="speaking.html">Speaking</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Numberbender Inc. · 501(c)(3) Nonprofit · EIN 86-2952520</span>
+      <span>Made with ❤️ for math learners everywhere</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleDD(btn){
+    var menu = btn.nextElementSibling;
+    var willOpen = !menu.classList.contains('open');
+    document.querySelectorAll('.nav-dropdown .dropdown-menu.open').forEach(function(m){
+      m.classList.remove('open');
+      var t = m.previousElementSibling;
+      if(t) t.setAttribute('aria-expanded','false');
+    });
+    if(willOpen){
+      menu.classList.add('open');
+      btn.setAttribute('aria-expanded','true');
+    }
+  }
+  document.addEventListener('click',function(e){
+    if(!e.target.closest('.nav-dropdown')){
+      document.querySelectorAll('.nav-dropdown .dropdown-menu.open').forEach(function(m){
+        m.classList.remove('open');
+        var t = m.previousElementSibling;
+        if(t) t.setAttribute('aria-expanded','false');
+      });
+    }
+  });
+</script>
+
+<script>
+  // GA4 event tracking
+  document.querySelectorAll('form').forEach(function(form){
+    if(form.querySelector('input[type="email"]')){
+      form.addEventListener('submit',function(){
+        gtag('event','email_signup',{event_category:'engagement',event_label:window.location.pathname});
+      });
+    }
+  });
+  document.querySelectorAll('a[target="_blank"]').forEach(function(link){
+    link.addEventListener('click',function(){
+      gtag('event','outbound_click',{event_category:'outbound',link_url:link.href});
+    });
+  });
+</script>
+
+</body>
+</html>

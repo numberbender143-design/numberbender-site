@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P1M2WZD840"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-P1M2WZD840');
+</script>
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Speaking Archive — Dr. Peter Esperanza | Numberbender</title>
+<meta name="description" content="Archive of Dr. Peter Esperanza's keynotes and workshops on online teaching, AI in education, flipped learning, and the Teach It Like You Stream It movement." />
+<!-- SEO: Canonical + Open Graph + Twitter Card -->
+<link rel="canonical" href="https://numberbender.com/speaking-archive" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Speaking Archive — Past Talks by Dr. E | Numberbender" />
+<meta property="og:description" content="A record of Dr. Peter Esperanza's past conference talks and workshops on flipped learning, math education, and online teaching." />
+<meta property="og:url" content="https://numberbender.com/speaking-archive" />
+<meta property="og:site_name" content="Numberbender" />
+<meta property="og:image" content="https://numberbender.com/images/peter_presenting_in_Berlin_2.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@numberbender" />
+<meta name="twitter:title" content="Speaking Archive — Past Talks by Dr. E | Numberbender" />
+<meta name="twitter:description" content="A record of Dr. Peter Esperanza's past conference talks and workshops on flipped learning, math education, and online teaching." />
+<meta name="twitter:image" content="https://numberbender.com/images/peter_presenting_in_Berlin_2.jpg" />
+
+<link rel="icon" type="image/svg+xml" href="images/exports/numberbender-favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="images/exports/png/favicon-32.png">
+<link rel="icon" type="image/png" sizes="180x180" href="images/exports/png/favicon-180.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/exports/png/favicon-180.png">
+
+<meta name="theme-color" content="#1F6F6B">
+<style>
+  :root{
+    --navy:#0F172A; --blue:#2563EB; --yellow:#FACC15; --cyan:#06B6D4; --green:#22C55E;
+    --bg:#F8FAFC; --surface:#FFFFFF; --muted:#64748B; --border:#E2E8F0;
+    --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+    --shadow-lg: 0 20px 50px rgba(15, 23, 42, 0.12);
+  }
+  *{ box-sizing: border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; }
+  body{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--navy); background: var(--bg); line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a{ color: var(--blue); text-decoration:none; }
+  a:hover{ text-decoration: underline; }
+  img{ max-width:100%; display:block; }
+  .container{ width: min(1200px, 92%); margin-inline: auto; }
+
+  /* NAV */
+  .nav{ position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,0.92);
+    backdrop-filter: saturate(180%) blur(10px); border-bottom: 1px solid var(--border); }
+  .nav-inner{ display:flex; align-items:center; justify-content:space-between; padding: 14px 0; }
+  .logo-lockup .lockup-img{ height: 100px; max-width: 360px; }
+  .nav-links{ display:flex; gap: 22px; align-items:center; }
+  .nav-links a{ color: var(--navy); font-weight: 500; font-size: 0.95rem; }
+  .nav-links a:hover{ color: var(--blue); text-decoration: none; }
+  .nav-cta{ background: var(--navy); color: white !important; padding: 9px 16px; border-radius: 10px; font-weight: 600; }
+  .nav-cta:hover{ background: var(--blue); text-decoration: none; }
+  .menu-toggle{ display:none; background:none; border:none; cursor:pointer; font-size: 1.4rem; color: var(--navy); }
+
+  /* Dropdown nav */
+  .nav-links{ flex-wrap: nowrap; }
+  .nav-links a, .nav-links .dropdown-trigger{ white-space: nowrap; }
+  .nav-dropdown{ position: relative; }
+  .nav-dropdown .dropdown-trigger{
+    background: none; border: none; padding: 0; margin: 0;
+    font: inherit; color: var(--navy); font-weight: 500; font-size: 0.95rem;
+    cursor: pointer; display: inline-flex; align-items: center; gap: 4px;
+    transition: color .15s ease;
+  }
+  .nav-dropdown .dropdown-trigger:hover{ color: var(--blue); }
+  .nav-dropdown .caret{ font-size: 0.75em; display: inline-block; transition: transform .2s ease; }
+  .nav-dropdown:hover .caret,
+  .nav-dropdown .dropdown-trigger[aria-expanded="true"] .caret{ transform: rotate(180deg); }
+  .nav-dropdown .dropdown-menu{
+    position: absolute; top: 100%; left: 0; margin-top: 10px;
+    background: white; border: 1px solid var(--border); border-radius: 14px;
+    padding: 6px; box-shadow: var(--shadow-lg); min-width: 240px;
+    opacity: 0; visibility: hidden; transform: translateY(-6px);
+    transition: opacity .15s ease, transform .15s ease, visibility .15s ease;
+    z-index: 100;
+  }
+  .nav-dropdown:hover .dropdown-menu,
+  .nav-dropdown .dropdown-menu.open{ opacity: 1; visibility: visible; transform: translateY(0); }
+  .nav-dropdown .dropdown-menu a{
+    display: block; padding: 10px 14px; border-radius: 8px;
+    color: var(--navy); font-weight: 500; font-size: 0.95rem;
+  }
+  .nav-dropdown .dropdown-menu a:hover{ background: rgba(37,99,235,.08); color: var(--blue); text-decoration: none; }
+
+  /* BUTTONS */
+  .btn{ display:inline-flex; align-items:center; justify-content:center; gap:8px;
+    padding: 13px 22px; border-radius: 12px; font-weight: 600; font-size: 1rem;
+    cursor: pointer; border: 2px solid transparent;
+    transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+    text-decoration: none !important; }
+  .btn:hover{ transform: translateY(-2px); box-shadow: var(--shadow); }
+  .btn-primary{ background: var(--blue); color: white; }
+  .btn-primary:hover{ background: #1d4ed8; }
+  .btn-cyan{ background: var(--cyan); color: white; }
+  .btn-cyan:hover{ background: #0891b2; }
+  .btn-yellow{ background: var(--yellow); color: var(--navy); }
+  .btn-outline{ background: transparent; color: var(--navy); border: 2px solid var(--border); }
+  .btn-outline:hover{ border-color: var(--blue); color: var(--blue); }
+  .btn-lg{ padding: 16px 28px; font-size: 1.05rem; }
+
+  /* HERO */
+  .page-head{
+    padding: 70px 0 40px;
+    background:
+      radial-gradient(900px 400px at 90% 0%, rgba(250,204,21,.18), transparent 60%),
+      radial-gradient(700px 400px at 0% 0%, rgba(37,99,235,.13), transparent 60%),
+      linear-gradient(180deg, #ffffff 0%, var(--bg) 100%);
+    text-align: center;
+  }
+  .eyebrow{
+    display:inline-flex; gap:8px;
+    background: rgba(250,204,21,.2); color: #b45309;
+    padding: 6px 14px; border-radius: 999px;
+    font-size: 0.85rem; font-weight: 700; margin-bottom: 18px;
+    text-transform: uppercase; letter-spacing: .08em;
+  }
+  .page-head h1{
+    font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+    line-height: 1.1; letter-spacing: -0.02em;
+    font-weight: 800; margin-bottom: 14px;
+  }
+  .page-head h1 .accent{ color: var(--yellow); }
+  .page-head .lead{
+    color: var(--muted); font-size: 1.15rem;
+    max-width: 700px; margin: 0 auto;
+  }
+
+  /* FILTER PILLS */
+  .filters{
+    display: flex; flex-wrap: wrap; gap: 8px;
+    justify-content: center;
+    margin: 36px auto 0;
+    max-width: 880px;
+  }
+  .filter-pill{
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--navy);
+    cursor: pointer;
+    transition: all .15s ease;
+  }
+  .filter-pill:hover{ border-color: var(--blue); color: var(--blue); }
+  .filter-pill.active{ background: var(--navy); color: white; border-color: var(--navy); }
+
+  /* ARCHIVE GRID */
+  .archive{ padding: 60px 0 80px; }
+  .archive-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  @media (max-width: 900px){ .archive-grid{ grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 600px){ .archive-grid{ grid-template-columns: 1fr; } }
+
+  .post-card{
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    overflow: hidden;
+    display: flex; flex-direction: column;
+    transition: transform .2s ease, box-shadow .2s ease;
+    text-decoration: none !important;
+    color: inherit;
+  }
+  .post-card:hover{ transform: translateY(-4px); box-shadow: var(--shadow-lg); text-decoration: none !important; }
+  .post-thumb{
+    aspect-ratio: 16/9;
+    background: linear-gradient(135deg, var(--blue), var(--cyan));
+    position: relative;
+    overflow: hidden;
+    display: grid; place-items: center;
+    color: rgba(255,255,255,0.9);
+  }
+  .post-thumb img{
+    width: 100%; height: 100%; object-fit: cover;
+    position: absolute; inset: 0; z-index: 1;
+  }
+  .post-thumb-icon{
+    font-size: 3.4rem;
+    z-index: 0;
+    position: relative;
+    filter: drop-shadow(0 4px 14px rgba(0,0,0,0.2));
+  }
+  .post-card.kc .post-thumb{ background: linear-gradient(135deg, #f59e0b, #ec4899); }
+  .post-card.workshop .post-thumb{ background: linear-gradient(135deg, var(--cyan), var(--blue)); }
+  .post-card.plenary .post-thumb{ background: linear-gradient(135deg, var(--blue), #7c3aed); }
+  .post-card.webinar .post-thumb{ background: linear-gradient(135deg, var(--green), var(--cyan)); }
+
+  .post-format-tag{
+    position: absolute; top: 12px; left: 12px;
+    z-index: 2;
+    background: rgba(255,255,255,0.95);
+    color: var(--navy);
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    padding: 5px 10px;
+    border-radius: 999px;
+  }
+
+  .post-body{ padding: 22px 22px 24px; display: flex; flex-direction: column; flex: 1; }
+  .post-meta{
+    font-size: 0.78rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .post-card h2{
+    font-size: 1.15rem;
+    line-height: 1.3;
+    margin-bottom: 8px;
+    color: var(--navy);
+  }
+  .post-host{
+    color: var(--blue);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+  .post-excerpt{
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+    flex: 1;
+  }
+  .post-tags{
+    display: flex; flex-wrap: wrap; gap: 6px;
+    margin-bottom: 14px;
+  }
+  .post-tag{
+    background: rgba(37,99,235,.08);
+    color: var(--blue);
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 600;
+  }
+  .post-readmore{
+    color: var(--blue);
+    font-weight: 600;
+    font-size: 0.95rem;
+    align-self: flex-start;
+    margin-top: auto;
+  }
+
+  /* WHY ARCHIVE EXISTS */
+  .why-archive{ background: var(--surface); padding: 70px 0; }
+  .why-archive .container{ max-width: 880px; }
+  .why-archive h2{
+    font-size: clamp(1.8rem, 3vw, 2.3rem);
+    text-align: center;
+    margin-bottom: 36px;
+  }
+  .why-archive-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  @media (max-width: 700px){ .why-archive-grid{ grid-template-columns: 1fr; } }
+  .why-card{
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px;
+  }
+  .why-card-icon{
+    width: 44px; height: 44px;
+    border-radius: 12px;
+    background: rgba(37,99,235,.12);
+    color: var(--blue);
+    display: grid; place-items: center;
+    font-size: 1.3rem;
+    margin-bottom: 14px;
+  }
+  .why-card.c2 .why-card-icon{ background: rgba(6,182,212,.14); color: var(--cyan); }
+  .why-card.c3 .why-card-icon{ background: rgba(250,204,21,.22); color: #b45309; }
+  .why-card h3{ font-size: 1.1rem; margin-bottom: 6px; }
+  .why-card p{ color: var(--muted); font-size: 0.95rem; }
+
+  /* CTA */
+  .archive-cta{
+    background: linear-gradient(135deg, var(--navy) 0%, #1e293b 100%);
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+  }
+  .archive-cta h2{
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    margin-bottom: 14px;
+  }
+  .archive-cta p{
+    color: #cbd5e1;
+    max-width: 560px;
+    margin: 0 auto 28px;
+    font-size: 1.1rem;
+  }
+
+  /* FOOTER */
+  footer{ background: #0b1220; color: #94a3b8; padding: 50px 0 24px; }
+  .foot-grid{ display:grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 32px; margin-bottom: 32px; }
+  .foot h4{ color: white; margin-bottom: 14px; font-size: 0.95rem; letter-spacing: .05em; text-transform: uppercase; }
+  .foot a{ color:#94a3b8; display: block; padding: 4px 0; font-size: 0.95rem; }
+  .foot a:hover{ color: white; text-decoration: none; }
+  .foot-bottom{ border-top: 1px solid #1e293b; padding-top: 20px; text-align: center; font-size: 0.88rem; }
+
+  /* RESPONSIVE NAV */
+  @media (max-width: 900px){
+    .foot-grid{ grid-template-columns: 1fr 1fr; }
+    .nav-links{
+      display:none; position: absolute; top: 100%; left:0; right:0;
+      background: white; flex-direction: column;
+      padding: 18px; border-bottom: 1px solid var(--border); gap: 14px;
+    }
+    .nav-links.open{ display:flex; }
+    .menu-toggle{ display:block; }
+    .nav-dropdown{ width: 100%; }
+    .nav-dropdown .dropdown-trigger{ width: 100%; justify-content: space-between; padding: 6px 0; }
+    .nav-dropdown .dropdown-menu{
+      position: static; box-shadow: none; border: none;
+      padding: 0 0 4px 14px; margin-top: 0; min-width: 0;
+      opacity: 1; visibility: visible; transform: none; display: none;
+      background: transparent;
+    }
+    .nav-dropdown:hover .dropdown-menu{ display: none; }
+    .nav-dropdown .dropdown-menu.open{ display: block; }
+  }
+  @media (max-width: 600px){ .foot-grid{ grid-template-columns: 1fr; } }
+</style>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wnr3kox01b");
+  </script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="/" class="logo logo-lockup" aria-label="Numberbender — Home">
+      <img src="images/numberbender_banner_only.svg" alt="Numberbender" class="lockup-img">
+    </a>
+    <button class="menu-toggle" aria-label="Toggle menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
+    <nav class="nav-links" id="navlinks">
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">For Students <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="start-here.html">🎁 Free Starter Lesson</a>
+          <a href="find-your-course.html">🧭 Find My Course</a>
+          <a href="courses.html">📚 All Courses</a>
+          <a href="math-worksheets.html">📝 Free Worksheets</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">For Educators <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="for-teachers.html">🏫 For Teachers Hub</a>
+          <a href="teach-it-like-you-stream-it.html">🎬 Teach It Like You Stream It</a>
+          <a href="teacher-resources.html">📦 Teacher Resources</a>
+          <a href="flipped-classroom-math.html">🔄 Flipped Classroom Guide</a>
+        </div>
+      </div>
+      <a href="about.html">About Dr. E</a>
+      <a href="speaking.html">Speaking</a>
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Blog <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="blog.html">✍️ Blog Posts</a>
+          <a href="speaking-archive.html">🎤 Past Engagements</a>
+        </div>
+      </div>
+      <a href="contact.html" class="nav-cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-head">
+  <div class="container">
+    <div class="eyebrow" aria-hidden="true">🎤 Speaking Archive</div>
+    <h1>Past <span class="accent">keynotes &amp; workshops</span></h1>
+    <p class="lead">
+      A growing archive of Dr. E's speaking engagements — keynotes, workshops, and faculty
+      development sessions delivered in person and online to educators around the world.
+    </p>
+    <div class="filters" role="tablist" aria-label="Filter archive">
+      <button class="filter-pill active" data-filter="all" onclick="filterPosts('all', this)">All Engagements</button>
+      <button class="filter-pill" data-filter="keynote" onclick="filterPosts('keynote', this)">Keynotes</button>
+      <button class="filter-pill" data-filter="workshop" onclick="filterPosts('workshop', this)">Workshops</button>
+      <button class="filter-pill" data-filter="plenary" onclick="filterPosts('plenary', this)">Plenary</button>
+      <button class="filter-pill" data-filter="webinar" onclick="filterPosts('webinar', this)">Webinars</button>
+    </div>
+  </div>
+</section>
+
+<section class="archive">
+  <div class="container">
+    <div class="archive-grid" id="archive-grid">
+
+      <!-- POST: ACTLA 51 Webinar -->
+      <a href="speaking-2026-04-actla-51.html" class="post-card webinar" data-format="webinar">
+        <div class="post-thumb">
+          <span class="post-format-tag">Webinar</span>
+          <span class="post-thumb-icon" aria-hidden="true">💻</span>
+          <img src="images/ACTLA_Cover.png" alt="ACTLA 51 — Tutor Like a Streamer" loading="lazy">
+        </div>
+        <div class="post-body">
+          <div class="post-meta">April 15–17, 2026 · California (online)</div>
+          <h2>Tutor Like a Streamer: Building Trust and Engagement in Online Tutoring</h2>
+          <div class="post-host">ACTLA · Association of Colleges for Tutoring and Learning Assistance</div>
+          <p class="post-excerpt">The first webinar in the TILYSI movement — delivered to higher-ed tutors across California colleges, framed around education as the practice of freedom.</p>
+          <div class="post-tags">
+            <span class="post-tag">Online Teaching</span>
+            <span class="post-tag">EdTech Integration</span>
+            <span class="post-tag">Higher Ed Innovation</span>
+          </div>
+          <span class="post-readmore">Read recap →</span>
+        </div>
+      </a>
+
+      <!-- POST: SITE 2026 Philadelphia -->
+      <a href="speaking-2026-03-site-philadelphia.html" class="post-card plenary" data-format="plenary">
+        <div class="post-thumb">
+          <span class="post-format-tag">Plenary</span>
+          <span class="post-thumb-icon" aria-hidden="true">🎙️</span>
+          <img src="images/SITE_Cover.png" alt="SITE 2026 Philadelphia — Teach It Like You Stream It" loading="lazy">
+        </div>
+        <div class="post-body">
+          <div class="post-meta">March 23–27, 2026 · Philadelphia, PA</div>
+          <h2>Teach It Like You Stream It at SITE 2026</h2>
+          <div class="post-host">AACE · Association for the Advancement of Computing in Education</div>
+          <p class="post-excerpt">A small Philadelphia venue made the case that the framework scales down as well as up — laptop, iPad, and Ecamm Live, in front of K–12 and higher-ed educators.</p>
+          <div class="post-tags">
+            <span class="post-tag">Online Teaching</span>
+            <span class="post-tag">EdTech Integration</span>
+            <span class="post-tag">Higher Ed Innovation</span>
+          </div>
+          <span class="post-readmore">Read recap →</span>
+        </div>
+      </a>
+
+      <!-- POST: SEAMEO QITEP Indonesia -->
+      <a href="speaking-2025-08-seameo-indonesia.html" class="post-card workshop" data-format="workshop">
+        <div class="post-thumb">
+          <span class="post-format-tag">Workshop</span>
+          <span class="post-thumb-icon" aria-hidden="true">🌏</span>
+          <picture><source srcset="images/SEAMEAO_Cover.webp" type="image/webp"><img src="images/SEAMEAO_Cover.png" alt="SEAMEO QITEP in Mathematics — Differentiating Math Across Southeast Asia" loading="lazy"></picture>
+        </div>
+        <div class="post-body">
+          <div class="post-meta">August 14–16, 2025 · Yogyakarta, Indonesia (online)</div>
+          <h2>Differentiating Math Across Southeast Asia</h2>
+          <div class="post-host">SEAMEO QITEP in Mathematics</div>
+          <p class="post-excerpt">Delivering a three-day workshop to 500 junior high math teachers across Southeast Asia — from a desk in California — on differentiated instruction in the online classroom.</p>
+          <div class="post-tags">
+            <span class="post-tag">Online Teaching</span>
+            <span class="post-tag">Math Pedagogy</span>
+            <span class="post-tag">Faculty Development</span>
+          </div>
+          <span class="post-readmore">Read recap →</span>
+        </div>
+      </a>
+
+      <!-- POST: Luisiana, Laguna -->
+      <a href="speaking-2025-07-luisiana.html" class="post-card workshop" data-format="workshop">
+        <div class="post-thumb">
+          <span class="post-format-tag">Workshop</span>
+          <span class="post-thumb-icon" aria-hidden="true">🏡</span>
+          <picture><source srcset="images/LUISIANA_cover.webp" type="image/webp"><img src="images/LUISIANA_cover.png" alt="Luisiana, Laguna — Teaching the TikTok Generation" loading="lazy"></picture>
+        </div>
+        <div class="post-body">
+          <div class="post-meta">July 12, 2025 · Luisiana, Laguna, Philippines</div>
+          <h2>Teaching the TikTok Generation: Coming Home to Luisiana</h2>
+          <div class="post-host">Luisiana LGU · Vice Mayor Jonieces Acaylar</div>
+          <p class="post-excerpt">A homecoming. 300 K–12 teachers — including some of Dr. E's former teachers and classmates — gathered on a Saturday in his hometown for a workshop on teaching with video.</p>
+          <div class="post-tags">
+            <span class="post-tag">Video Production</span>
+            <span class="post-tag">K-12 Practice</span>
+            <span class="post-tag">Faculty Development</span>
+          </div>
+          <span class="post-readmore">Read recap →</span>
+        </div>
+      </a>
+
+      <!-- POST: OTC '26 Long Beach -->
+      <a href="speaking-2025-06-otc.html" class="post-card plenary" data-format="plenary">
+        <div class="post-thumb">
+          <span class="post-format-tag">Plenary</span>
+          <span class="post-thumb-icon" aria-hidden="true">🎬</span>
+          <picture><source srcset="images/OTC2025_Cover.webp" type="image/webp"><img src="images/OTC2025_Cover.png" alt="OTC 2025 Long Beach — Engage Like a YouTuber" loading="lazy"></picture>
+        </div>
+        <div class="post-body">
+          <div class="post-meta">June 16–18, 2025 · Long Beach, CA</div>
+          <h2>Engage Like a YouTuber: Transforming Online Teaching with Video</h2>
+          <div class="post-host">Online Teaching Conference (OTC) · California Community Colleges</div>
+          <p class="post-excerpt">Moved to the largest ballroom in the Long Beach Convention Center the morning of the talk. SRO crowd, teachers sitting on the floor — and a clear message: distance learning doesn't have to feel distant.</p>
+          <div class="post-tags">
+            <span class="post-tag">Online Teaching</span>
+            <span class="post-tag">Video Production</span>
+            <span class="post-tag">Higher Ed Innovation</span>
+          </div>
+          <span class="post-readmore">Read recap →</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<section class="why-archive">
+  <div class="container">
+    <h2>Why this archive exists</h2>
+    <div class="why-archive-grid">
+      <div class="why-card">
+        <div class="why-card-icon" aria-hidden="true">🏫</div>
+        <h3>For institutions evaluating Dr. E</h3>
+        <p>See where he's spoken, what audiences he serves, and how each engagement was received.</p>
+      </div>
+      <div class="why-card c2">
+        <div class="why-card-icon" aria-hidden="true">📚</div>
+        <h3>For fellow educators</h3>
+        <p>Each post includes the takeaways and frameworks from the session — free to use in your own work.</p>
+      </div>
+      <div class="why-card c3">
+        <div class="why-card-icon" aria-hidden="true">📖</div>
+        <h3>For the long arc</h3>
+        <p>One-off events become permanent. The archive turns each keynote into ongoing social proof and SEO.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="archive-cta">
+  <div class="container">
+    <h2>Want Dr. E at your event?</h2>
+    <p>Workshops, keynotes, and ongoing faculty development on online teaching, AI in education, flipped learning, and the Teach It Like You Stream It movement.</p>
+    <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+      <a href="speaking.html" class="btn btn-yellow btn-lg">See speaking topics →</a>
+      <a href="contact.html" class="btn btn-outline btn-lg" style="color:white; border-color:rgba(255,255,255,0.4);">Inquire about availability</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot foot-brand">
+        <p style="color:#cbd5e1; font-size: 0.95rem;">Helping students learn math with confidence and helping educators teach online with energy, clarity, and impact.</p>
+        <p class="footer-tagline" style="color: var(--cyan); font-style: italic; font-weight: 600; margin-top: 8px; font-size: 0.95rem;">Math is hard. So we made it human.</p>
+      </div>
+      <div class="foot">
+        <h4>Speaking</h4>
+        <a href="speaking.html">Topics &amp; Formats</a>
+        <a href="speaking-archive.html">Speaking Archive</a>
+        <a href="contact.html">Book Dr. E</a>
+      </div>
+      <div class="foot">
+        <h4>Educators</h4>
+        <a href="teach-it-like-you-stream-it.html">Teach It Like You Stream It</a>
+        <a href="teacher-resources.html">Teacher Resources</a>
+      </div>
+      <div class="foot">
+        <h4>Connect</h4>
+        <a href="about.html">About Dr. E</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://www.youtube.com/@numberbender" target="_blank" rel="noopener">YouTube Channel</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      © 2026 Numberbender · Founded by Dr. Peter Esperanza · <a href="privacy.html" style="color:#94a3b8;">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleDD(btn){
+    var menu = btn.nextElementSibling;
+    var willOpen = !menu.classList.contains('open');
+    document.querySelectorAll('.nav-dropdown .dropdown-menu.open').forEach(function(m){
+      m.classList.remove('open');
+      var t = m.previousElementSibling;
+      if (t) t.setAttribute('aria-expanded','false');
+    });
+    if (willOpen){
+      menu.classList.add('open');
+      btn.setAttribute('aria-expanded','true');
+    }
+  }
+  document.addEventListener('click', function(e){
+    if (!e.target.closest('.nav-dropdown')){
+      document.querySelectorAll('.nav-dropdown .dropdown-menu.open').forEach(function(m){
+        m.classList.remove('open');
+        var t = m.previousElementSibling;
+        if (t) t.setAttribute('aria-expanded','false');
+      });
+    }
+  });
+
+  function filterPosts(filter, btn){
+    document.querySelectorAll('.filter-pill').forEach(function(p){ p.classList.remove('active'); });
+    btn.classList.add('active');
+    var cards = document.querySelectorAll('#archive-grid .post-card');
+    cards.forEach(function(card){
+      if (filter === 'all' || card.getAttribute('data-format') === filter){
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+</script>
+
+<script>
+  // GA4 event tracking: email signups + outbound clicks
+  document.querySelectorAll('form').forEach(function(form) {
+    if (form.querySelector('input[type="email"]')) {
+      form.addEventListener('submit', function() {
+        gtag('event', 'email_signup', { event_category: 'engagement', event_label: window.location.pathname });
+      });
+    }
+  });
+  document.querySelectorAll('a[target="_blank"]').forEach(function(link) {
+    link.addEventListener('click', function() {
+      gtag('event', 'outbound_click', { event_category: 'outbound', link_url: link.href });
+    });
+  });
+</script>
+
+</body>
+</html>

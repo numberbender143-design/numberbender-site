@@ -1,0 +1,1544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P1M2WZD840"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-P1M2WZD840');
+</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Free Math Video Lessons & Printable Worksheets | Numberbender</title>
+<meta name="description" content="800+ free math video lessons and 400 free printable worksheets with answer keys for students and teachers. Flipped classroom resources, online teaching strategies, and math in English and Filipino." />
+<!-- SEO: Canonical + Open Graph + Twitter Card -->
+<link rel="canonical" href="https://numberbender.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Free Math Video Lessons & Printable Worksheets | Numberbender" />
+<meta property="og:description" content="800+ free math video lessons for students and teachers. Flipped classroom resources, online teaching strategies, and math in English and Filipino." />
+<meta property="og:url" content="https://numberbender.com/" />
+<meta property="og:site_name" content="Numberbender" />
+<meta property="og:image" content="https://numberbender.com/images/dr-e-hero.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@numberbender" />
+<meta name="twitter:title" content="Free Math Video Lessons & Printable Worksheets | Numberbender" />
+<meta name="twitter:description" content="800+ free math video lessons and 400 free printable worksheets with answer keys — for students and teachers. Flipped classroom resources in English and Filipino." />
+<meta name="twitter:image" content="https://numberbender.com/images/dr-e-hero.jpg" />
+
+<!-- Favicon (Numberbender brand by Claude Design) -->
+<link rel="icon" type="image/svg+xml" href="images/exports/numberbender-favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="images/exports/png/favicon-32.png">
+<link rel="icon" type="image/png" sizes="180x180" href="images/exports/png/favicon-180.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/exports/png/favicon-180.png">
+<meta name="theme-color" content="#1F6F6B">
+<style>
+  :root{
+    --navy:#0F172A;
+    --blue:#2563EB;
+    --yellow:#FACC15;
+    --cyan:#06B6D4;
+    --green:#22C55E;
+    --bg:#F8FAFC;
+    --surface:#FFFFFF;
+    --muted:#64748B;
+    --border:#E2E8F0;
+    --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+    --shadow-lg: 0 20px 50px rgba(15, 23, 42, 0.12);
+    --radius: 16px;
+  }
+
+  *{ box-sizing: border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; }
+  body{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--navy);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a{ color: var(--blue); text-decoration:none; }
+  a:hover{ text-decoration: underline; }
+  img{ max-width:100%; display:block; }
+
+  .container{
+    width: min(1200px, 92%);
+    margin-inline: auto;
+  }
+
+  /* ========== NAVIGATION ========== */
+  .nav{
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: saturate(180%) blur(10px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-inner{
+    display:flex; align-items:center; justify-content:space-between;
+    padding: 14px 0;
+  }
+  .logo{
+    display:flex; align-items:center; gap:10px;
+    font-weight: 800; font-size: 1.15rem; color: var(--navy);
+  }
+  .logo-mark{
+    width: 56px; height: 56px; border-radius: 12px;
+    background: transparent;
+    display: grid; place-items: center;
+    color: white; font-weight: 800; font-size: 1rem;
+    overflow: hidden;
+  }
+  .nav-links{
+    display:flex; gap: 22px; align-items:center;
+  }
+  .nav-links a{
+    color: var(--navy);
+    font-weight: 500;
+    font-size: 0.95rem;
+  }
+  .nav-links a:hover{ color: var(--blue); text-decoration: none; }
+  .nav-cta{
+    background: var(--navy);
+    color: white !important;
+    padding: 9px 16px;
+    border-radius: 10px;
+    font-weight: 600;
+  }
+  .nav-cta:hover{ background: var(--blue); text-decoration: none; }
+  .menu-toggle{
+    display:none; background:none; border:none; cursor:pointer;
+    font-size: 1.4rem; color: var(--navy);
+  }
+
+  /* ========== DROPDOWN NAV ========== */
+  .nav-links{ flex-wrap: nowrap; }
+  .nav-links a, .nav-links .dropdown-trigger{ white-space: nowrap; }
+  .nav-dropdown{ position: relative; }
+  .nav-dropdown .dropdown-trigger{
+    background: none; border: none; padding: 0; margin: 0;
+    font: inherit; color: var(--navy); font-weight: 500; font-size: 0.95rem;
+    cursor: pointer; display: inline-flex; align-items: center; gap: 4px;
+    transition: color .15s ease;
+  }
+  .nav-dropdown .dropdown-trigger:hover{ color: var(--blue); }
+  .nav-dropdown .caret{ font-size: 0.75em; display: inline-block; transition: transform .2s ease; }
+  .nav-dropdown:hover .caret,
+  .nav-dropdown .dropdown-trigger[aria-expanded="true"] .caret{ transform: rotate(180deg); }
+  .nav-dropdown .dropdown-menu{
+    position: absolute; top: 100%; left: 0;
+    margin-top: 10px;
+    background: white;
+    border: 1px solid var(--border); border-radius: 14px;
+    padding: 6px;
+    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
+    min-width: 240px;
+    opacity: 0; visibility: hidden;
+    transform: translateY(-6px);
+    transition: opacity .15s ease, transform .15s ease, visibility .15s ease;
+    z-index: 100;
+  }
+  .nav-dropdown:hover .dropdown-menu,
+  .nav-dropdown .dropdown-menu.open{ opacity: 1; visibility: visible; transform: translateY(0); }
+  .nav-dropdown .dropdown-menu a{
+    display: block; padding: 10px 14px; border-radius: 8px;
+    color: var(--navy); font-weight: 500; font-size: 0.95rem;
+  }
+  .nav-dropdown .dropdown-menu a:hover{
+    background: rgba(37,99,235,.08); color: var(--blue); text-decoration: none;
+  }
+  @media (max-width: 900px){
+    .nav-dropdown{ width: 100%; }
+    .nav-dropdown .dropdown-trigger{ width: 100%; justify-content: space-between; padding: 6px 0; }
+    .nav-dropdown .dropdown-menu{
+      position: static; box-shadow: none; border: none;
+      padding: 0 0 4px 14px; margin-top: 0; min-width: 0;
+      opacity: 1; visibility: visible; transform: none;
+      display: none; background: transparent;
+    }
+    .nav-dropdown:hover .dropdown-menu{ display: none; }
+    .nav-dropdown .dropdown-menu.open{ display: block; }
+  }
+
+  /* ========== BUTTONS ========== */
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:8px;
+    padding: 13px 22px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+    text-decoration: none !important;
+  }
+  .btn:hover{ transform: translateY(-2px); box-shadow: var(--shadow); }
+  .btn-primary{ background: var(--blue); color: white; }
+  .btn-primary:hover{ background: #1d4ed8; }
+  .btn-yellow{ background: var(--yellow); color: var(--navy); }
+  .btn-yellow:hover{ background: #eab308; }
+  .btn-cyan{ background: var(--cyan); color: white; }
+  .btn-cyan:hover{ background: #0891b2; }
+  .btn-outline{ background: transparent; color: var(--navy); border: 2px solid var(--border); }
+  .btn-outline:hover{ border-color: var(--blue); color: var(--blue); }
+  .btn-lg{ padding: 16px 28px; font-size: 1.05rem; }
+
+  /* ========== HERO ========== */
+  .hero{
+    position: relative;
+    padding: 100px 0 90px;
+    overflow: hidden;
+    background:
+      radial-gradient(1200px 500px at 90% -10%, rgba(6,182,212,.18), transparent 60%),
+      radial-gradient(900px 500px at -10% 10%, rgba(37,99,235,.15), transparent 60%),
+      linear-gradient(180deg, #ffffff 0%, var(--bg) 100%);
+  }
+  .hero-centered-inner{
+    text-align: center;
+    max-width: 920px;
+    margin: 0 auto;
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .hero-eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    background: rgba(37,99,235,.1);
+    color: var(--blue);
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 18px;
+  }
+  .hero h1{
+    font-size: clamp(2.6rem, 6.5vw, 5.2rem);
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    font-weight: 800;
+    margin-bottom: 24px;
+  }
+  .hero h1 .accent-blue{ color: var(--blue); }
+  .hero h1 .accent-cyan{ color: var(--cyan); }
+  .hero h1 .accent-yellow{
+    background: linear-gradient(120deg, var(--yellow) 0%, #f59e0b 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .hero p.lead{
+    font-size: 1.25rem;
+    color: var(--muted);
+    max-width: 720px;
+    margin: 0 auto 36px;
+    line-height: 1.55;
+  }
+  .hero-centered-inner .hero-ctas{
+    justify-content: center;
+  }
+  .hero-ctas{
+    display:flex; flex-wrap:wrap; gap: 14px;
+  }
+  .hero-centered-inner .hero-stats{
+    justify-content: center;
+    gap: 48px;
+    margin-top: 48px;
+    padding-top: 36px;
+    border-top: 1px solid var(--border);
+  }
+  .hero-stats{
+    display:flex; gap: 28px; margin-top: 32px; flex-wrap:wrap;
+  }
+  .hero-centered-inner .stat{ align-items: center; text-align: center; }
+  .hero-centered-inner .stat-num{ font-size: 1.75rem; }
+  .stat{ display:flex; flex-direction:column; align-items: flex-start; }
+  .stat-num{ font-weight: 800; font-size: 1.4rem; color: var(--navy); }
+  .stat-label{ font-size: 0.85rem; color: var(--muted); }
+  .stat-icon{ width: 28px; height: 28px; color: var(--blue); margin-bottom: 6px; flex-shrink: 0; }
+
+  /* Hero two-column layout */
+  .hero-left{ text-align: left; }
+  .hero-left p.lead{ margin: 0 0 36px; }
+  .hero-left .hero-stats{
+    justify-content: flex-start; gap: 28px; flex-wrap: wrap;
+    margin-top: 36px; padding-top: 28px; border-top: 1px solid var(--border);
+  }
+  .hero-left .stat{ align-items: flex-start; }
+  .hero-characters-wrap{ display: flex; align-items: center; justify-content: flex-end; }
+  .hero-characters-wrap img{
+    width: 100%; max-width: 500px; height: auto; display: block;
+    filter: drop-shadow(0 20px 48px rgba(15,23,42,0.10));
+  }
+  .hero-chars-inner{ position: relative; max-width: 500px; width: 100%; }
+  .ws-float-badge{
+    position: absolute; top: 3%; left: 0; right: 0;
+    margin: 0 auto; width: fit-content;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px 28px;
+    box-shadow: var(--shadow-lg);
+    display: flex; align-items: center; gap: 16px;
+    white-space: nowrap;
+    animation: floaty 6s ease-in-out infinite;
+    animation-delay: -3s;
+    z-index: 2;
+  }
+  .ws-float-badge .ws-badge-icon{
+    width: 52px; height: 52px; border-radius: 12px;
+    background: rgba(31,111,107,0.12);
+    display: grid; place-items: center;
+    font-size: 1.6rem; flex-shrink: 0;
+  }
+  .ws-float-badge .ws-badge-title{
+    font-size: 1.1rem; font-weight: 700; color: var(--navy); line-height: 1.2;
+  }
+  .ws-float-badge .ws-badge-sub{
+    font-size: 0.82rem; font-weight: 500; color: var(--muted); margin-top: 3px;
+  }
+  @media (max-width: 900px){
+    .hero-characters-wrap{ justify-content: center; order: -1; }
+    .hero-characters-wrap img{ max-width: 320px; }
+    .hero-chars-inner{ max-width: 320px; }
+    .ws-float-badge{ padding: 13px 18px; gap: 12px; }
+    .ws-float-badge .ws-badge-icon{ width: 44px; height: 44px; font-size: 1.3rem; }
+    .ws-float-badge .ws-badge-title{ font-size: 0.95rem; }
+    .ws-float-badge .ws-badge-sub{ font-size: 0.75rem; }
+    .hero-left{ text-align: center; }
+    .hero-left p.lead{ margin: 0 auto 36px; }
+    .hero-left .hero-stats{ justify-content: center; }
+    .hero-left .stat{ align-items: center; }
+  }
+
+  /* Social link cards */
+  .social-card-link{
+    display: block; text-decoration: none !important; color: inherit;
+    transition: transform .15s ease, box-shadow .15s ease;
+    border-radius: inherit;
+  }
+  .social-card-link:hover{ transform: translateY(-3px); }
+
+  /* Hero visual */
+  .hero-visual{
+    position: relative;
+    aspect-ratio: 1/1;
+    max-width: 480px;
+    margin-left: auto;
+  }
+  .blob{
+    position:absolute; inset:0;
+    background: linear-gradient(135deg, var(--blue), var(--cyan));
+    border-radius: 38% 62% 55% 45% / 45% 38% 62% 55%;
+    opacity: .12;
+    animation: morph 12s ease-in-out infinite;
+  }
+  @keyframes morph{
+    0%,100%{ border-radius: 38% 62% 55% 45% / 45% 38% 62% 55%; }
+    50%{ border-radius: 55% 45% 38% 62% / 62% 55% 45% 38%; }
+  }
+  .float-card{
+    position: absolute;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    box-shadow: var(--shadow-lg);
+    display:flex; align-items:center; gap: 12px;
+    font-weight: 600;
+    animation: floaty 6s ease-in-out infinite;
+  }
+  .float-card .ic{
+    width: 40px; height: 40px; border-radius: 10px;
+    display:grid; place-items:center; font-size: 1.2rem;
+  }
+  .fc-1{ top: 10%; left: -4%; }
+  .fc-1 .ic{ background: rgba(37,99,235,.12); color: var(--blue); }
+  .fc-2{ top: 50%; right: -6%; animation-delay: -2s; }
+  .fc-2 .ic{ background: rgba(250,204,21,.18); color: #b45309; }
+  .fc-3{ bottom: 6%; left: 8%; animation-delay: -4s; }
+  .fc-3 .ic{ background: rgba(34,197,94,.15); color: var(--green); }
+  @keyframes floaty{
+    0%,100%{ transform: translateY(0); }
+    50%{ transform: translateY(-10px); }
+  }
+  .hero-emoji{
+    position:absolute; inset:0;
+    display:grid; place-items:center;
+    font-size: clamp(7rem, 18vw, 11rem);
+    filter: drop-shadow(0 20px 30px rgba(37,99,235,.25));
+  }
+  .hero-photo-wrap{
+    position:absolute; inset: 8%;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(37,99,235,.3), 0 0 0 8px rgba(255,255,255,.7);
+  }
+  .hero-photo{
+    width:100%; height:100%; object-fit: cover; display:block;
+  }
+
+  /* ========== SECTION BASE ========== */
+  section{ padding: 80px 0; }
+  .section-head{
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 50px;
+  }
+  .section-eyebrow{
+    text-transform: uppercase;
+    letter-spacing: .12em;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--blue);
+    margin-bottom: 12px;
+  }
+  .section-head h2{
+    font-size: clamp(1.8rem, 3.2vw, 2.5rem);
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    margin-bottom: 14px;
+  }
+  .section-head p{
+    color: var(--muted);
+    font-size: 1.08rem;
+  }
+
+  /* ========== AUDIENCE CARDS ========== */
+  .audience{ background: var(--surface); }
+  .audience-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+  .a-card{
+    position: relative;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 36px;
+    overflow: hidden;
+    transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  }
+  .a-card:hover{ transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+  .a-card.student{ border-top: 6px solid var(--blue); }
+  .a-card.educator{ border-top: 6px solid var(--cyan); }
+  .a-card .a-icon{
+    width: 56px; height: 56px; border-radius: 14px;
+    display:grid; place-items:center;
+    font-size: 1.6rem;
+    margin-bottom: 18px;
+  }
+  .student .a-icon{ background: rgba(37,99,235,.12); color: var(--blue); }
+  .educator .a-icon{ background: rgba(6,182,212,.14); color: var(--cyan); }
+  .a-card h3{
+    font-size: 1.5rem; margin-bottom: 10px;
+  }
+  .a-card .a-desc{
+    color: var(--muted);
+    margin-bottom: 22px;
+  }
+  .a-features{
+    list-style: none;
+    margin-bottom: 26px;
+  }
+  .a-features li{
+    display:flex; align-items:flex-start; gap: 10px;
+    padding: 8px 0;
+    font-size: 0.98rem;
+  }
+  .a-features li::before{
+    content: "✓";
+    flex-shrink: 0;
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    background: rgba(34,197,94,.15);
+    color: var(--green);
+    display:grid; place-items:center;
+    font-weight: 700;
+    font-size: 0.8rem;
+    margin-top: 2px;
+  }
+
+  /* ========== MISSION ========== */
+  .mission{
+    background: linear-gradient(135deg, var(--navy) 0%, #1e293b 100%);
+    color: white;
+    text-align: center;
+  }
+  .mission h2{
+    font-size: clamp(1.8rem, 3.2vw, 2.5rem);
+    max-width: 820px; margin: 0 auto 20px;
+    line-height: 1.25;
+  }
+  .mission h2 span{ color: var(--yellow); }
+  .mission p{
+    max-width: 720px; margin: 0 auto;
+    color: #cbd5e1;
+    font-size: 1.1rem;
+  }
+
+  /* ========== FEATURE BLOCKS ========== */
+  .features-grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .f-card{
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .f-card:hover{ transform: translateY(-4px); box-shadow: var(--shadow); }
+  .f-card .f-icon{
+    width: 48px; height: 48px; border-radius: 12px;
+    display:grid; place-items:center;
+    font-size: 1.4rem;
+    margin-bottom: 16px;
+  }
+  .f-card.f1 .f-icon{ background: rgba(37,99,235,.12); color: var(--blue); }
+  .f-card.f2 .f-icon{ background: rgba(6,182,212,.14); color: var(--cyan); }
+  .f-card.f3 .f-icon{ background: rgba(250,204,21,.2); color: #b45309; }
+  .f-card h3{ font-size: 1.2rem; margin-bottom: 8px; }
+  .f-card p{ color: var(--muted); font-size: 0.97rem; margin-bottom: 14px; }
+  .f-link{
+    font-weight: 600; color: var(--blue);
+    display:inline-flex; align-items:center; gap: 6px;
+  }
+
+  /* ========== ABOUT DR E ========== */
+  .about{ background: var(--surface); }
+  .about-grid{
+    display:grid;
+    grid-template-columns: .85fr 1.15fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .about-photo{
+    aspect-ratio: 1/1;
+    border-radius: 24px;
+    background: linear-gradient(135deg, var(--blue), var(--cyan));
+    display:grid; place-items:center;
+    color: white;
+    font-size: 7rem;
+    font-weight: 800;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    overflow:hidden;
+  }
+  .about-photo::after{
+    content:""; position:absolute; inset:0;
+    background:
+      radial-gradient(circle at 30% 30%, rgba(255,255,255,.25), transparent 50%);
+    pointer-events:none;
+  }
+  .about-photo-img{
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+    z-index: 1;
+  }
+  .about-content h2{
+    font-size: clamp(1.8rem, 3vw, 2.3rem);
+    margin-bottom: 16px;
+  }
+  .about-content p{
+    color: var(--muted);
+    margin-bottom: 16px;
+    font-size: 1.05rem;
+  }
+  .about-tags{
+    display:flex; flex-wrap: wrap; gap: 8px;
+    margin-bottom: 24px;
+  }
+  .tag{
+    background: rgba(37,99,235,.08);
+    color: var(--blue);
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+
+  /* ========== VIDEO SECTION ========== */
+  .video-section{
+    background: var(--bg);
+  }
+  .video-wrap{
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    background: #000;
+    aspect-ratio: 16 / 9;
+  }
+  .video-wrap video,
+  .video-wrap iframe{
+    width: 100%; height: 100%;
+    display: block;
+    object-fit: cover;
+    border: 0;
+  }
+
+  /* ========== SOCIAL PROOF ========== */
+  .social{
+    background: var(--surface);
+  }
+  .social-grid{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  .social-card{
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    text-align: center;
+  }
+  .social-num{
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--navy);
+    margin-bottom: 4px;
+  }
+  .social-label{
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+  .social-icon{ font-size: 1.8rem; margin-bottom: 8px; }
+
+  .testimonials{
+    margin-top: 50px;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .testimonial{
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+    position: relative;
+  }
+  .testimonial::before{
+    content: "“";
+    position: absolute;
+    top: 8px; left: 18px;
+    font-size: 4rem;
+    color: var(--yellow);
+    font-family: Georgia, serif;
+    line-height: 1;
+  }
+  .testimonial p{
+    font-style: italic;
+    color: #334155;
+    margin: 12px 0 16px;
+    padding-left: 8px;
+  }
+  .testimonial-author{
+    display:flex; align-items:center; gap: 12px;
+  }
+  .avatar{
+    width: 44px; height: 44px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--blue), var(--cyan));
+    color: white; font-weight: 700;
+    display:grid; place-items:center;
+    overflow: hidden;
+  }
+  .avatar img{ width:100%; height:100%; object-fit: cover; }
+  .author-name{ font-weight: 700; }
+  .author-role{ font-size: 0.85rem; color: var(--muted); }
+
+  /* ========== FINAL CTA ========== */
+  .final-cta{
+    background:
+      radial-gradient(800px 400px at 80% 0%, rgba(6,182,212,.25), transparent 60%),
+      radial-gradient(800px 400px at 20% 100%, rgba(250,204,21,.18), transparent 60%),
+      linear-gradient(135deg, var(--navy) 0%, #1e293b 100%);
+    color: white;
+    text-align: center;
+  }
+  .final-cta h2{
+    font-size: clamp(2rem, 3.6vw, 2.8rem);
+    margin-bottom: 14px;
+  }
+  .final-cta p{
+    color: #cbd5e1;
+    max-width: 620px; margin: 0 auto 32px;
+    font-size: 1.1rem;
+  }
+  .final-ctas{
+    display:flex; gap: 14px; justify-content:center; flex-wrap:wrap;
+  }
+
+  /* ========== NEWSLETTER ========== */
+  .newsletter{
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    padding: 60px 0;
+  }
+  .newsletter-inner{
+    display:flex; align-items:center; justify-content:space-between;
+    gap: 36px; flex-wrap:wrap;
+    max-width: 900px; margin: 0 auto;
+  }
+  .newsletter-copy{ flex: 1; min-width: 260px; }
+  .newsletter-copy .nl-eyebrow{
+    font-size: 0.8rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: .1em; color: var(--blue); margin-bottom: 8px;
+  }
+  .newsletter-copy h2{
+    font-size: clamp(1.4rem, 2.4vw, 1.9rem);
+    line-height: 1.2; margin-bottom: 8px;
+  }
+  .newsletter-copy p{
+    color: var(--muted); font-size: 0.97rem;
+  }
+  .newsletter-form-wrap{ flex: 1; min-width: 280px; }
+  .newsletter-form{
+    display:flex; flex-direction: column; gap: 10px;
+  }
+  .nl-row{
+    display:flex; gap: 10px; flex-wrap: wrap;
+  }
+  .nl-row .nl-input{ flex: 1; min-width: 140px; }
+  .nl-input{
+    width: 100%;
+    padding: 11px 14px;
+    border: 1.5px solid var(--border); border-radius: 10px;
+    font-size: 0.95rem; font-family: inherit;
+    background: var(--bg); color: var(--navy);
+    transition: border-color .15s ease, box-shadow .15s ease;
+    appearance: none; -webkit-appearance: none;
+  }
+  .nl-input:focus{
+    outline: none; border-color: var(--blue);
+    box-shadow: 0 0 0 4px rgba(37,99,235,.12);
+  }
+  .nl-input::placeholder{ color: var(--muted); }
+  .nl-btn{
+    background: var(--blue); color: white;
+    padding: 13px 20px; border: none; border-radius: 10px;
+    font-size: 1rem; font-weight: 700; cursor: pointer;
+    font-family: inherit; white-space: nowrap;
+    transition: background .15s ease, transform .15s ease;
+  }
+  .nl-btn:hover{ background: #1d4ed8; transform: translateY(-1px); }
+  .nl-note{
+    font-size: 0.82rem; color: var(--muted); margin-top: 4px;
+  }
+  @media (max-width: 700px){
+    .newsletter-inner{ flex-direction: column; }
+    .nl-row{ flex-direction: column; }
+  }
+
+  /* ========== FOOTER ========== */
+  footer{
+    background: #0b1220;
+    color: #94a3b8;
+    padding: 50px 0 24px;
+  }
+  .foot-grid{
+    display:grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 32px;
+    margin-bottom: 32px;
+  }
+  .foot h4{
+    color: white;
+    margin-bottom: 14px;
+    font-size: 0.95rem;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+  }
+  .foot a{
+    color: #94a3b8;
+    display: block;
+    padding: 4px 0;
+    font-size: 0.95rem;
+  }
+  .foot a:hover{ color: white; text-decoration: none; }
+  .foot-brand p{ margin-top: 12px; font-size: 0.95rem; }
+  .footer-tagline{
+    color: var(--cyan);
+    font-style: italic;
+    font-weight: 600;
+    margin-top: 8px !important;
+    font-size: 0.95rem !important;
+  }
+
+  .socials{ display:flex; gap: 10px; margin-top: 14px; }
+  .socials a{
+    width: 38px; height: 38px;
+    border-radius: 10px;
+    background: #1e293b;
+    display: inline-flex; align-items: center; justify-content: center;
+    color: white;
+    transition: background .15s ease, transform .15s ease;
+  }
+  .socials a:hover{ transform: translateY(-2px); }
+  .socials a svg{ display: block; }
+  /* Brand colors on hover */
+  .socials a[aria-label="YouTube"]:hover{ background: #ff0000; }
+  .socials a[aria-label="TikTok"]:hover{ background: #000000; }
+  .socials a[aria-label="Facebook"]:hover{ background: #1877f2; }
+  .socials a[aria-label="LinkedIn"]:hover{ background: #0a66c2; }
+  .foot-bottom{
+    border-top: 1px solid #1e293b;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 0.88rem;
+  }
+
+  /* ========== RESPONSIVE ========== */
+  @media (max-width: 900px){
+    .hero-grid{ grid-template-columns: 1fr; gap: 32px; }
+    .ws-band-grid{ grid-template-columns: 1fr !important; gap: 32px !important; }
+    .hero-visual{ margin: 0 auto; max-width: 360px; }
+    .audience-grid{ grid-template-columns: 1fr; }
+    .features-grid{ grid-template-columns: 1fr; }
+    .about-grid{ grid-template-columns: 1fr; gap: 32px; }
+    .about-photo{ max-width: 280px; margin: 0 auto; }
+    .social-grid{ grid-template-columns: repeat(2, 1fr); }
+    .testimonials{ grid-template-columns: 1fr; }
+    .foot-grid{ grid-template-columns: 1fr 1fr; }
+    .nav-links{
+      display:none;
+      position: absolute; top: 100%; left:0; right:0;
+      background: white; flex-direction: column;
+      padding: 18px; border-bottom: 1px solid var(--border);
+      gap: 14px;
+    }
+    .nav-links.open{ display:flex; }
+    .menu-toggle{ display:block; }
+  }
+  @media (max-width: 520px){
+    section{ padding: 60px 0; }
+    .hero{ padding: 50px 0 40px; }
+    .a-card{ padding: 28px 22px; }
+    .social-grid{ grid-template-columns: 1fr 1fr; }
+    .foot-grid{ grid-template-columns: 1fr; }
+  }
+
+  /* Header lockup (full Numberbender mark + wordmark + tagline SVG) */
+  .logo-lockup{ padding: 0; }
+  .logo-lockup .lockup-img{
+    height: 72px; width: auto; display: block;
+    max-width: 360px;
+  }
+  @media (max-width: 900px){
+    .logo-lockup .lockup-img{ height: 60px; max-width: 300px; }
+  }
+  @media (max-width: 600px){
+    .logo-lockup .lockup-img{ height: 50px; max-width: 240px; }
+  }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Numberbender",
+  "url": "https://numberbender.com",
+  "description": "Free math video lessons for students and a creator-style teaching framework for educators.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://numberbender.com/courses?s={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "@id": "https://numberbender.com/#organization",
+  "name": "Numberbender",
+  "url": "https://numberbender.com",
+  "logo": "https://numberbender.com/images/Numberbender_Logo.png",
+  "description": "Numberbender provides free math video lessons for students and creator-style teaching training for educators.",
+  "foundingDate": "2012",
+  "founder": {
+    "@type": "Person",
+    "@id": "https://numberbender.com/about#dr-e"
+  },
+  "sameAs": [
+    "https://www.youtube.com/@numberbender",
+    "https://www.instagram.com/numberbender",
+    "https://www.tiktok.com/@numberbender"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://numberbender.com/about#dr-e",
+  "name": "Dr. Peter Esperanza",
+  "alternateName": "Dr. E",
+  "jobTitle": "Math Professor, Online Educator & Speaker",
+  "url": "https://numberbender.com/about",
+  "image": "https://numberbender.com/images/dr-e-headshot.jpg",
+  "sameAs": [
+    "https://www.youtube.com/@numberbender",
+    "https://www.instagram.com/numberbender",
+    "https://www.tiktok.com/@numberbender"
+  ],
+  "worksFor": {
+    "@type": "EducationalOrganization",
+    "@id": "https://numberbender.com/#organization",
+    "name": "Numberbender"
+  }
+}
+</script>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wnr3kox01b");
+  </script>
+</head>
+<body>
+
+<!-- ========== NAVIGATION ========== -->
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="/" class="logo logo-lockup" aria-label="Numberbender — Master the Elements of Math">
+      <img src="images/numberbender_banner_only.svg" alt="Numberbender" class="lockup-img">
+    </a>
+    <button class="menu-toggle" aria-label="Toggle menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
+    <nav class="nav-links" id="navlinks">
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">For Students <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="start-here.html">🎁 Free Starter Lesson</a>
+          <a href="find-your-course.html">🧭 Find My Course</a>
+          <a href="courses.html">📚 All Courses</a>
+          <a href="math-worksheets.html">📝 Free Worksheets</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">For Educators <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="for-teachers.html">🏫 For Teachers Hub</a>
+          <a href="teach-it-like-you-stream-it.html">🎬 Teach It Like You Stream It</a>
+          <a href="teacher-resources.html">📦 Teacher Resources</a>
+          <a href="math-worksheets.html">📄 Printable Worksheets</a>
+        </div>
+      </div>
+      <a href="about.html">About Dr. E</a>
+      <a href="speaking.html">Speaking</a>
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Blog <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="blog.html">✍️ Blog Posts</a>
+          <a href="speaking-archive.html">🎤 Past Engagements</a>
+        </div>
+      </div>
+      <a href="contact.html" class="nav-cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ========== HERO ========== -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <!-- Left: Text, CTAs, Stats -->
+      <div class="hero-left">
+        <div class="hero-eyebrow">✨ Math is hard. So we made it human.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:16px;">
+          <span style="display:inline-flex;align-items:center;gap:6px;background:#f1f5f9;border:1px solid #e2e8f0;border-radius:20px;padding:5px 12px;font-size:0.8rem;font-weight:600;color:#0f172a;">▶️ YouTube Silver Play Button</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;background:#f1f5f9;border:1px solid #e2e8f0;border-radius:20px;padding:5px 12px;font-size:0.8rem;font-weight:600;color:#0f172a;"> Apple Distinguished Educator</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;background:#f1f5f9;border:1px solid #e2e8f0;border-radius:20px;padding:5px 12px;font-size:0.8rem;font-weight:600;color:#0f172a;">📚 Peer-Reviewed Researcher</span>
+        </div>
+        <h1>
+          Learn <span class="accent-blue">Math</span>.<br/>
+          Teach <span class="accent-cyan">Online</span>.<br/>
+          Bend the <span class="accent-yellow">Future</span> of Education.
+        </h1>
+        <p class="lead">
+          Numberbender helps students build math confidence through video-based learning
+          and helps educators create engaging online classrooms through the
+          <a href="flipped-classroom-math.html">flipped classroom</a> model and the Teach It Like You Stream It movement.
+        </p>
+        <div class="hero-ctas">
+          <a href="#students" class="btn btn-primary btn-lg">I'm a Student →</a>
+          <a href="#educators" class="btn btn-cyan btn-lg">I'm an Educator →</a>
+          <a href="find-your-course.html" class="btn btn-yellow btn-lg">🎓 Find My Course</a>
+        </div>
+        <form class="hero-email-form" action="https://numberbender.us17.list-manage.com/subscribe/post?u=65e30fe527dde6fb604f6760a&amp;id=ad0977e0cc&amp;f_id=003758e0f0" method="post" target="_blank" style="display:flex;gap:8px;margin:20px 0 4px;max-width:420px;">
+          <input type="email" name="EMAIL" required placeholder="your@email.com" autocomplete="email" aria-label="Email address" style="flex:1;padding:10px 14px;border-radius:8px;border:1.5px solid var(--border);font-size:0.95rem;min-width:0;background:white;color:var(--navy);">
+          <div aria-hidden="true" style="position:absolute;left:-5000px;"><input type="text" name="b_65e30fe527dde6fb604f6760a_ad0977e0cc" tabindex="-1" value=""></div>
+          <button type="submit" style="background:var(--blue);color:white;border:none;padding:10px 18px;border-radius:8px;font-weight:700;cursor:pointer;white-space:nowrap;font-size:0.95rem;">Get Tips →</button>
+        </form>
+        <p style="font-size:0.8rem;color:var(--muted);margin:0 0 24px;">Join educators getting free math resources every week — no spam, just math.</p>
+        <div class="hero-stats">
+          <div class="stat">
+            <svg class="stat-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <span class="stat-num">16M+</span><span class="stat-label">Learners reached</span>
+          </div>
+          <div class="stat">
+            <svg class="stat-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.66 2.69 3 6 3s6-1.34 6-3v-5"/></svg>
+            <span class="stat-num">20+ yrs</span><span class="stat-label">Classroom Teaching</span>
+          </div>
+          <div class="stat">
+            <svg class="stat-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+            <span class="stat-num">100+</span><span class="stat-label">Talks &amp; workshops</span>
+          </div>
+          <div class="stat">
+            <svg class="stat-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>
+            <span class="stat-num">50+</span><span class="stat-label">Institutions Served</span>
+          </div>
+          <div class="stat">
+            <svg class="stat-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <span class="stat-num">10+</span><span class="stat-label">Countries Presented</span>
+          </div>
+        </div>
+      </div>
+      <!-- Right: Illustration -->
+      <div class="hero-characters-wrap">
+        <div class="hero-chars-inner">
+          <div class="ws-float-badge">
+            <div class="ws-badge-icon">📝</div>
+            <div>
+              <div class="ws-badge-title">400 Free PDF Worksheets</div>
+              <div class="ws-badge-sub">Answer keys included · No sign-up needed</div>
+            </div>
+          </div>
+          <img src="images/hero-characters.png" alt="Numberbender students and educators" loading="eager">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== AUDIENCE CARDS ========== -->
+<section class="audience">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-eyebrow">Choose your path</div>
+      <h2>Two clear pathways. One education movement.</h2>
+      <p>Numberbender helps students learn math with confidence and helps educators teach online with energy, clarity, and impact.</p>
+    </div>
+
+    <div class="audience-grid">
+      <!-- STUDENT CARD -->
+      <div class="a-card student" id="students">
+        <div class="a-icon">🎓</div>
+        <h3>For Students</h3>
+        <p class="a-desc">
+          Access clear, curriculum-based math lessons designed to help you understand
+          concepts, practice with confidence, and prepare for success in algebra,
+          statistics, calculus, and beyond.
+        </p>
+        <ul class="a-features">
+          <li>Video-based math lessons</li>
+          <li>Step-by-step explanations</li>
+          <li>Practice-focused learning</li>
+          <li>Confidence-building support</li>
+        </ul>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;">
+          <a href="courses.html" class="btn btn-primary">Try a Free Lesson →</a>
+          <a href="find-your-course.html" class="btn btn-outline">Find My Course</a>
+        </div>
+      </div>
+
+      <!-- EDUCATOR CARD -->
+      <div class="a-card educator" id="educators">
+        <div class="a-icon">🎥</div>
+        <h3>For Teachers &amp; Educators</h3>
+        <p class="a-desc">
+          Learn how to teach online with energy, presence, and impact using simple
+          video production tools, AI-enhanced workflows, flipped learning, and
+          practical engagement strategies.
+        </p>
+        <ul class="a-features">
+          <li>Teach It Like You Stream It workshops</li>
+          <li>Online teaching presence</li>
+          <li>Video lesson creation</li>
+          <li>AI &amp; educational technology integration</li>
+        </ul>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;">
+          <a href="for-teachers.html" class="btn btn-cyan">For Teachers Hub →</a>
+          <a href="teach-it-like-you-stream-it.html" class="btn btn-outline">Explore TILYSI</a>
+          <a href="teacher-resources.html" class="btn btn-outline">Free Resources</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FREE WORKSHEETS BAND ========== -->
+<section class="ws-band" style="background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+  <div class="container">
+    <div class="ws-band-grid" style="display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;">
+      <div>
+        <div class="section-eyebrow" style="text-align:left;">📝 Free printable worksheets</div>
+        <h2 style="font-size:clamp(1.7rem,3vw,2.4rem);line-height:1.15;letter-spacing:-0.02em;margin-bottom:14px;">
+          400 free math worksheets — every one paired with a video lesson.
+        </h2>
+        <p style="color:var(--muted);font-size:1.08rem;margin-bottom:24px;max-width:560px;">
+          Print-ready PDF practice sheets for Algebra through Calculus, lesson-ordered and packaged with a full
+          answer key. No subscription, no paywall, no signup — just download and assign. It's the practice
+          library other worksheet sites charge for, built free for every classroom.
+        </p>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:26px;">
+          <span style="background:rgba(34,197,94,.12);color:#15803d;font-weight:700;font-size:0.85rem;padding:6px 13px;border-radius:999px;">✅ Answer key in every PDF</span>
+          <span style="background:rgba(37,99,235,.1);color:var(--blue);font-weight:700;font-size:0.85rem;padding:6px 13px;border-radius:999px;">🎬 Paired with video lessons</span>
+          <span style="background:rgba(6,182,212,.14);color:#0e7490;font-weight:700;font-size:0.85rem;padding:6px 13px;border-radius:999px;">🌐 English &amp; Filipino</span>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <a href="math-worksheets.html" class="btn btn-primary btn-lg">Browse free worksheets →</a>
+          <a href="courses.html" class="btn btn-outline btn-lg">See all courses</a>
+        </div>
+      </div>
+      <div>
+        <img src="images/blog_post_banner/worksheet_download_home.png" alt="Free printable math worksheets with answer keys" style="width:100%;border-radius:var(--radius);margin-bottom:14px;display:block;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+        <div style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:22px 18px;text-align:center;">
+          <div style="font-size:2.2rem;font-weight:800;color:var(--blue);line-height:1;">400</div>
+          <div style="font-size:0.88rem;color:var(--muted);margin-top:6px;">Printable worksheets</div>
+        </div>
+        <div style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:22px 18px;text-align:center;">
+          <div style="font-size:2.2rem;font-weight:800;color:var(--cyan);line-height:1;">10</div>
+          <div style="font-size:0.88rem;color:var(--muted);margin-top:6px;">Subjects covered</div>
+        </div>
+        <div style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:22px 18px;text-align:center;">
+          <div style="font-size:2.2rem;font-weight:800;color:var(--green);line-height:1;">100%</div>
+          <div style="font-size:0.88rem;color:var(--muted);margin-top:6px;">Free — no login</div>
+        </div>
+        <div style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:22px 18px;text-align:center;">
+          <div style="font-size:2.2rem;font-weight:800;color:#b45309;line-height:1;">400</div>
+          <div style="font-size:0.88rem;color:var(--muted);margin-top:6px;">Answer keys included</div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== MISSION ========== -->
+<section class="mission">
+  <div class="container">
+    <h2>Math education should be <span>clear, human, and accessible.</span></h2>
+    <p>
+      Numberbender was created to make math less intimidating for students and to help
+      educators bring more personality, clarity, and connection into online learning.
+      Whether you are learning math or teaching it, this platform gives you tools to grow.
+    </p>
+  </div>
+</section>
+
+<!-- ========== FEATURE BLOCKS ========== -->
+<section id="features">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-eyebrow">What's inside</div>
+      <h2>Three ways Numberbender supports your growth</h2>
+      <p>From self-paced math courses to faculty development — built for real students and real educators.</p>
+    </div>
+
+    <div class="features-grid">
+      <div class="f-card f1">
+        <div class="f-icon">📚</div>
+        <h3>Math Courses for Students</h3>
+        <p>
+          Curriculum-aligned lessons in algebra, statistics, calculus, and more —
+          taught with clarity, examples, and practice that builds real confidence.
+        </p>
+        <a href="courses.html" class="f-link">Browse courses →</a>
+      </div>
+
+      <div class="f-card f2" id="tilysi">
+        <div class="f-icon">🎬</div>
+        <h3>Teach It Like You Stream It</h3>
+        <p>
+          A creator-style training program for educators who want to bring energy,
+          presence, and modern video production into their online classrooms.
+        </p>
+        <a href="teach-it-like-you-stream-it.html" class="f-link">Join the movement →</a>
+      </div>
+
+      <div class="f-card f3">
+        <div class="f-icon">🎤</div>
+        <h3>Speaking, Workshops &amp; PD</h3>
+        <p>
+          Keynotes, faculty development sessions, and conference workshops on
+          flipped learning, AI in education, and online engagement strategies.
+        </p>
+        <a href="speaking.html" class="f-link">Book Dr. E →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== ABOUT DR E ========== -->
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div class="about-photo" aria-label="Dr. Peter Esperanza">
+      <img src="images/dr-e-headshot.jpg" alt="Dr. Peter Esperanza" class="about-photo-img" onerror="this.style.display='none';this.parentElement.innerHTML='Dr. E';">
+    </div>
+    <div class="about-content">
+      <div class="section-eyebrow" style="text-align:left;">Meet the founder</div>
+      <h2>Dr. Peter Esperanza — Math Professor &amp; Online Educator</h2>
+      <p>
+        Dr. E is a community college math professor, published researcher, online educator, content creator,
+        and conference presenter. He founded Numberbender on a simple belief: that democratizing education
+        means making great math instruction free, accessible, and available to anyone — student or teacher,
+        anywhere in the world.
+      </p>
+      <p>
+        Through social media, he has reached hundreds of thousands of learners and
+        shared best practices in online teaching, flipped learning, AI integration,
+        and educational technology.
+      </p>
+      <div class="about-tags">
+        <span class="tag">Math Professor</span>
+        <span class="tag">Content Creator</span>
+        <span class="tag">Conference Speaker</span>
+        <span class="tag">AI in Education</span>
+        <span class="tag">Flipped Learning</span>
+      </div>
+      <a href="about.html" class="btn btn-outline">Learn more about Dr. E →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== DR. E IN ACTION (VIDEO) ========== -->
+<section class="video-section">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-eyebrow">Behind the scenes</div>
+      <h2>Dr. E in action</h2>
+      <p>A peek inside the home workstation where math meets streaming energy.</p>
+    </div>
+    <div class="video-wrap">
+      <div onclick="var f=document.createElement('iframe');f.src='https://www.youtube.com/embed/--dQxo3KwBM?autoplay=1';f.allow='autoplay;encrypted-media;picture-in-picture';f.allowFullscreen=true;f.style.cssText='width:100%;height:100%;border:0;display:block;';this.innerHTML='';this.appendChild(f);" style="cursor:pointer;position:relative;width:100%;height:100%;">
+        <img src="images/dr-e-hero.jpg" alt="Dr. E in action at his home workstation" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
+        <div aria-hidden="true" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;">
+          <svg width="68" height="48" viewBox="0 0 68 48" xmlns="http://www.w3.org/2000/svg"><rect width="68" height="48" rx="12" fill="rgba(0,0,0,0.75)"/><polygon points="27,16 27,32 45,24" fill="white"/></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SOCIAL PROOF ========== -->
+<section class="social">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-eyebrow">A growing community</div>
+      <h2>Trusted by students, educators, and institutions</h2>
+      <p>Numberbender's reach spans social platforms, college campuses, and conference stages.</p>
+    </div>
+
+    <div class="social-grid">
+      <div class="social-card">
+        <a href="https://www.youtube.com/@numberbender" target="_blank" rel="noopener" class="social-card-link" aria-label="Numberbender on YouTube">
+          <div class="social-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" aria-hidden="true"><path fill="#FF0000" d="M23.498 6.186a2.997 2.997 0 0 0-2.108-2.119C19.42 3.5 12 3.5 12 3.5s-7.42 0-9.39.567A2.997 2.997 0 0 0 .502 6.186C0 8.176 0 12 0 12s0 3.824.502 5.814a2.997 2.997 0 0 0 2.108 2.119C4.58 20.5 12 20.5 12 20.5s7.42 0 9.39-.567a2.997 2.997 0 0 0 2.108-2.119C24 15.824 24 12 24 12s0-3.824-.502-5.814zM9.6 15.572V8.428L15.818 12 9.6 15.572z"/></svg>
+          </div>
+          <div class="social-num">340K+</div>
+          <div class="social-label">YouTube Subscribers</div>
+        </a>
+      </div>
+      <div class="social-card">
+        <a href="https://www.tiktok.com/@numberbender" target="_blank" rel="noopener" class="social-card-link" aria-label="Numberbender on TikTok">
+          <div class="social-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" aria-hidden="true"><path fill="#000000" d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.74a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.17z"/></svg>
+          </div>
+          <div class="social-num">45K+</div>
+          <div class="social-label">TikTok Followers</div>
+        </a>
+      </div>
+      <div class="social-card">
+        <a href="https://www.facebook.com/thenumberbender" target="_blank" rel="noopener" class="social-card-link" aria-label="Numberbender on Facebook">
+          <div class="social-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" aria-hidden="true"><path fill="#1877F2" d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"/></svg>
+          </div>
+          <div class="social-num">20K+</div>
+          <div class="social-label">Facebook Community</div>
+        </a>
+      </div>
+      <div class="social-card">
+        <div class="social-icon">🎤</div>
+        <div class="social-num">100+</div>
+        <div class="social-label">Conference Talks</div>
+      </div>
+    </div>
+
+    <div class="testimonials">
+      <div class="testimonial">
+        <p>I transferred to Barstow High as a new student, and Dr. E's videos rebuilt my confidence in math. Then he had me create AP Calculus and AP Statistics videos of my own — I got to learn math twice, and scored a 5 on both AP exams. That's an experience I'll cherish forever.</p>
+        <div class="testimonial-author">
+          <div class="avatar"><picture><source srcset="images/Willow_S.webp" type="image/webp"><img src="images/Willow_S.png" alt="Willow S." onerror="this.style.display='none'"></picture></div>
+          <div>
+            <div class="author-name">Willow S.</div>
+            <div class="author-role">Former Barstow High School Student · 5s on AP Calculus &amp; AP Statistics</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <p>I was hesitant to record my first video — it always felt awkward and I cringed watching myself back. Dr. E told me to focus on the students in my classroom and ignore the noise of who else might watch, and that one shift unlocked it. I found a skill I never thought I could do.</p>
+        <div class="testimonial-author">
+          <div class="avatar"><picture><source srcset="images/Katrinah_M.webp" type="image/webp"><img src="images/Katrinah_M.jpg" alt="Katrinah M." onerror="this.style.display='none'"></picture></div>
+          <div>
+            <div class="author-name">Katrinah M.</div>
+            <div class="author-role">Teacher · Desert Rose Elementary School</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FINAL CTA ========== -->
+<section class="final-cta" id="contact">
+  <div class="container">
+    <div class="section-eyebrow" style="color: var(--yellow);">Math is hard. So we made it human.</div>
+      <h2>Ready to bend the future of education?</h2>
+    <p>Whether you're learning math or teaching it, there's a place for you here. Pick your path and let's get started.</p>
+    <div class="final-ctas">
+      <a href="#students" class="btn btn-yellow btn-lg">Learn Math with Numberbender</a>
+      <a href="#educators" class="btn btn-cyan btn-lg">Teach Online with More Impact</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ========== FOR SCHOOLS, COLLEGES & DISTRICTS ========== -->
+<section id="schools" style="background:var(--surface);">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-eyebrow">For Schools, Colleges &amp; Districts</div>
+      <h2>Three ways to bring Dr. E in</h2>
+      <p>Workshops, keynotes, and ongoing PD — pick the format that fits your audience and goals.</p>
+    </div>
+    <div class="features-grid">
+      <div class="f-card f1">
+        <div class="f-icon">🛠️</div>
+        <h3>Workshops</h3>
+        <p>2–4 hour interactive sessions for teacher teams and faculty cohorts. Participants leave with something they recorded or planned during the session.</p>
+        <a href="speaking.html" class="f-link">Workshop details →</a>
+      </div>
+      <div class="f-card f2">
+        <div class="f-icon">🎤</div>
+        <h3>Keynotes &amp; Speaking</h3>
+        <p>30–60 minute talks for conferences, district kickoffs, and college all-faculty events. The opening session that sets the tone for the whole event.</p>
+        <a href="speaking.html" class="f-link">Keynote details →</a>
+      </div>
+      <div class="f-card f3">
+        <div class="f-icon">📚</div>
+        <h3>Ongoing PD</h3>
+        <p>4–8 sessions across a semester or year — coaching, deliverables, and ongoing access. Best for institutions ready to invest in sustained change.</p>
+        <a href="speaking.html" class="f-link">Faculty development details →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== NEWSLETTER ========== -->
+<section class="newsletter">
+  <div class="container">
+    <div class="newsletter-inner">
+      <div class="newsletter-copy">
+        <div class="nl-eyebrow">📬 For students & teachers alike</div>
+        <h2>One email a week. Actually useful.</h2>
+        <p>Whether you're studying math or teaching it — Dr. E sends one short email a week with free resources, lesson tips, new worksheets, and video drops. No fluff, no hard sell. Just the good stuff. Unsubscribe anytime in one click.</p>
+      </div>
+      <div class="newsletter-form-wrap">
+        <form class="newsletter-form" id="newsletterForm" action="https://numberbender.us17.list-manage.com/subscribe/post?u=65e30fe527dde6fb604f6760a&amp;id=ad0977e0cc&amp;f_id=003758e0f0" method="post" target="_blank">
+          <div class="nl-row">
+            <input class="nl-input" type="text" name="FNAME" placeholder="First name (optional)" autocomplete="given-name" aria-label="First name">
+            <select class="nl-input" name="ROLE" aria-label="I am a...">
+              <option value="">I am a... (optional)</option>
+              <option value="Student">Student</option>
+              <option value="Teacher">Teacher</option>
+              <option value="Administrator">Administrator</option>
+              <option value="Researcher">Researcher</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="nl-row">
+            <input class="nl-input" type="text" name="SCHOOL" placeholder="School / Institution (optional)" aria-label="School or institution">
+            <input class="nl-input" type="text" name="COUNTRY" placeholder="Country (optional)" autocomplete="country-name" aria-label="Country">
+          </div>
+          <select class="nl-input" name="GOAL" aria-label="I'm here to...">
+            <option value="">I'm here to... (optional)</option>
+            <option value="Learn math">Learn math</option>
+            <option value="Improve my teaching">Improve my teaching</option>
+            <option value="Find flipped classroom resources">Find flipped classroom resources</option>
+            <option value="Research and professional development">Research &amp; professional development</option>
+            <option value="Just exploring">Just exploring</option>
+          </select>
+          <div class="nl-row">
+            <input class="nl-input" type="email" name="EMAIL" required placeholder="your@email.com" autocomplete="email" aria-label="Email address">
+            <button class="nl-btn" type="submit">Get Free Resources →</button>
+          </div>
+          <div aria-hidden="true" style="position:absolute;left:-5000px;"><input type="text" name="b_65e30fe527dde6fb604f6760a_ad0977e0cc" tabindex="-1" value=""></div>
+        </form>
+        <p class="nl-note">All fields optional except email. No spam. Unsubscribe anytime.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot foot-brand">
+        <div class="logo" style="color:white;">
+          <div class="logo-mark" style="background:transparent;overflow:hidden;">
+            <img src="images/numberbender_mark_teal_transparent.svg" alt="Numberbender" style="width:100%;height:100%;object-fit:contain;display:block;">
+          </div>
+          <span>Numberbender</span>
+        </div>
+        <p>Helping students learn math with confidence and helping educators teach online with energy, clarity, and impact.</p>
+        <p class="footer-tagline">Math is hard. So we made it human.</p>
+        <div style="margin-top:16px;">
+          <p style="color:#94a3b8;font-size:0.88rem;margin-bottom:8px;">📬 Get free math resources sent to your inbox — no spam, just math.</p>
+          <form action="https://numberbender.us17.list-manage.com/subscribe/post?u=65e30fe527dde6fb604f6760a&amp;id=ad0977e0cc&amp;f_id=003758e0f0" method="post" target="_blank" style="display:flex;gap:8px;">
+            <input type="email" name="EMAIL" required placeholder="your@email.com" style="flex:1;padding:9px 12px;border-radius:8px;border:1px solid #334155;background:#1e293b;color:white;font-size:0.9rem;min-width:0;">
+            <div aria-hidden="true" style="position:absolute;left:-5000px;"><input type="text" name="b_65e30fe527dde6fb604f6760a_ad0977e0cc" tabindex="-1" value=""></div>
+            <button type="submit" style="background:var(--blue);color:white;border:none;padding:9px 14px;border-radius:8px;font-weight:700;cursor:pointer;white-space:nowrap;">Join</button>
+          </form>
+        </div>
+        <div class="socials">
+          <a href="https://www.youtube.com/@numberbender" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a2.997 2.997 0 0 0-2.108-2.119C19.42 3.5 12 3.5 12 3.5s-7.42 0-9.39.567A2.997 2.997 0 0 0 .502 6.186C0 8.176 0 12 0 12s0 3.824.502 5.814a2.997 2.997 0 0 0 2.108 2.119C4.58 20.5 12 20.5 12 20.5s7.42 0 9.39-.567a2.997 2.997 0 0 0 2.108-2.119C24 15.824 24 12 24 12s0-3.824-.502-5.814zM9.6 15.572V8.428L15.818 12 9.6 15.572z"/></svg></a>
+          <a href="https://www.tiktok.com/@numberbender" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.74a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.17z"/></svg></a>
+          <a href="https://www.facebook.com/thenumberbender" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"/></svg></a>
+          <a href="https://www.linkedin.com/in/numberbender/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.063 2.063 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        </div>
+      </div>
+      <div class="foot">
+        <h4>Students</h4>
+        <a href="courses.html">All Courses</a>
+        <a href="courses.html#algebra-card">Algebra</a>
+        <a href="courses.html#statistics-card">Statistics</a>
+        <a href="courses.html">Calculus</a>
+      </div>
+      <div class="foot">
+        <h4>Educators</h4>
+        <a href="for-teachers.html">For Teachers Hub</a>
+        <a href="teach-it-like-you-stream-it.html">Teach It Like You Stream It</a>
+        <a href="teacher-resources.html">Teacher Resources</a>
+        <a href="flipped-classroom-math.html">Flipped Classroom Guide</a>
+        <a href="speaking.html">Workshops &amp; Keynotes</a>
+      </div>
+      <div class="foot">
+        <h4>Connect</h4>
+        <a href="about.html">About Dr. E</a>
+        <a href="speaking.html">Speaking</a>
+        <a href="speaking-archive.html">Speaking Archive</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://www.youtube.com/@numberbender" target="_blank" rel="noopener">YouTube Channel</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      © 2026 Numberbender · Founded by Dr. Peter Esperanza · Numberbender Inc. is a 501(c)(3) nonprofit organization · EIN: 86-2952520 · Made with care for learners and educators everywhere.
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleDD(btn){
+    var menu = btn.nextElementSibling;
+    var willOpen = !menu.classList.contains('open');
+    document.querySelectorAll('.nav-dropdown .dropdown-menu.open').forEach(function(m){
+      m.classList.remove('open');
+      var t = m.previousElementSibling;
+      if (t) t.setAttribute('aria-expanded','false');
+    });
+    if (willOpen){
+      menu.classList.add('open');
+      btn.setAttribute('aria-expanded','true');
+    }
+  }
+  document.addEventListener('click', function(e){
+    if (!e.target.closest('.nav-dropdown')){
+      document.querySelectorAll('.nav-dropdown .dropdown-menu.open').forEach(function(m){
+        m.classList.remove('open');
+        var t = m.previousElementSibling;
+        if (t) t.setAttribute('aria-expanded','false');
+      });
+    }
+  });
+
+  // ── GA4 Event Tracking ──────────────────────────────────────────
+
+  // 1. email_signup — fires on any newsletter form submission
+  document.querySelectorAll('form').forEach(function(form) {
+    if (form.querySelector('input[type="email"]')) {
+      form.addEventListener('submit', function() {
+        gtag('event', 'email_signup', {
+          event_category: 'engagement',
+          event_label: form.id || form.className || 'newsletter_form'
+        });
+      });
+    }
+  });
+
+  // 2. outbound_click — fires on YouTube, social, and external links
+  document.querySelectorAll('a[target="_blank"]').forEach(function(link) {
+    link.addEventListener('click', function() {
+      var url = link.href || '';
+      var label = url.includes('youtube') ? 'youtube' :
+                  url.includes('tiktok')  ? 'tiktok'  :
+                  url.includes('instagram') ? 'instagram' :
+                  url.includes('facebook') ? 'facebook' :
+                  url.includes('linkedin') ? 'linkedin' :
+                  url.includes('researchgate') ? 'researchgate' :
+                  url.includes('academia') ? 'academia' : 'external';
+      gtag('event', 'outbound_click', {
+        event_category: 'outbound',
+        event_label: label,
+        link_url: url
+      });
+    });
+  });
+
+  // 3. page_scroll_75 — fires once when user scrolls 75% of the page
+  var scroll75Fired = false;
+  window.addEventListener('scroll', function() {
+    if (scroll75Fired) return;
+    var scrolled = window.scrollY + window.innerHeight;
+    var total = document.documentElement.scrollHeight;
+    if (scrolled / total >= 0.75) {
+      scroll75Fired = true;
+      gtag('event', 'page_scroll_75', {
+        event_category: 'engagement',
+        event_label: 'homepage'
+      });
+    }
+  });
+
+  // 4. newsletter_button_click — fires on CTA button click before form submit
+  document.querySelectorAll('.nl-btn, .hero-email-form button[type="submit"]').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      gtag('event', 'newsletter_button_click', {
+        event_category: 'engagement',
+        event_label: btn.closest('form') ? btn.closest('form').id || 'form' : 'unknown'
+      });
+    });
+  });
+</script>
+</body>
+</html>

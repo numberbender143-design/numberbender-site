@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P1M2WZD840"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-P1M2WZD840');
+</script>
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Find Your Course — Numberbender Math Self-Assessment</title>
+<meta name="description" content="Not sure where to start? Take a 6-question math self-assessment and get pointed to the right free course — Algebra, Statistics, Pre-Calculus, or Calculus." />
+<!-- SEO: Canonical + Open Graph + Twitter Card -->
+<link rel="canonical" href="https://numberbender.com/find-your-course" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Find Your Math Course — Quiz | Numberbender" />
+<meta property="og:description" content="Not sure which math course is right for you? Answer a few quick questions and Dr. E will point you to the perfect starting point." />
+<meta property="og:url" content="https://numberbender.com/find-your-course" />
+<meta property="og:site_name" content="Numberbender" />
+<meta property="og:image" content="https://numberbender.com/images/dr-e-hero.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@numberbender" />
+<meta name="twitter:title" content="Find Your Math Course — Quiz | Numberbender" />
+<meta name="twitter:description" content="Not sure which math course is right for you? Answer a few quick questions and Dr. E will point you to the perfect starting point." />
+<meta name="twitter:image" content="https://numberbender.com/images/dr-e-hero.jpg" />
+
+<link rel="icon" type="image/svg+xml" href="images/exports/numberbender-favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="images/exports/png/favicon-32.png">
+<link rel="icon" type="image/png" sizes="180x180" href="images/exports/png/favicon-180.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/exports/png/favicon-180.png">
+
+<meta name="theme-color" content="#1F6F6B">
+<style>
+  :root{
+    --navy:#0F172A; --blue:#2563EB; --yellow:#FACC15; --cyan:#06B6D4; --green:#22C55E;
+    --bg:#F8FAFC; --surface:#FFFFFF; --muted:#64748B; --border:#E2E8F0;
+    --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+    --shadow-lg: 0 20px 50px rgba(15, 23, 42, 0.12);
+  }
+  *{ box-sizing: border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; }
+  body{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--navy); background: var(--bg); line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a{ color: var(--blue); text-decoration:none; }
+  a:hover{ text-decoration: underline; }
+  img{ max-width:100%; display:block; }
+  .container{ width: min(900px, 92%); margin-inline: auto; }
+
+  /* NAV */
+  .nav{
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: saturate(180%) blur(10px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-inner{
+    display:flex; align-items:center; justify-content:space-between;
+    padding: 14px 0;
+  }
+  .nav-inner-wide{ width: min(1200px, 92%); margin-inline: auto; }
+  .logo-lockup .lockup-img{ height: 100px; max-width: 360px; }
+  .nav-links{ display:flex; gap: 22px; align-items:center; }
+  .nav-links a{ color: var(--navy); font-weight: 500; font-size: 0.95rem; }
+  .nav-links a:hover{ color: var(--blue); text-decoration: none; }
+  .nav-cta{
+    background: var(--navy); color: white !important;
+    padding: 9px 16px; border-radius: 10px; font-weight: 600;
+  }
+  .nav-cta:hover{ background: var(--blue); text-decoration: none; }
+  .menu-toggle{ display:none; background:none; border:none; cursor:pointer; font-size: 1.4rem; }
+
+  /* BUTTONS */
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:8px;
+    padding: 13px 22px; border-radius: 12px;
+    font-weight: 600; font-size: 1rem; cursor: pointer;
+    border: 2px solid transparent;
+    transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+    text-decoration: none !important;
+  }
+  .btn:hover{ transform: translateY(-2px); box-shadow: var(--shadow); }
+  .btn-primary{ background: var(--blue); color: white; }
+  .btn-primary:hover{ background: #1d4ed8; }
+  .btn-cyan{ background: var(--cyan); color: white; }
+  .btn-outline{ background: transparent; color: var(--navy); border: 2px solid var(--border); }
+  .btn-outline:hover{ border-color: var(--blue); color: var(--blue); }
+  .btn-lg{ padding: 16px 28px; font-size: 1.05rem; }
+  .btn[disabled]{ opacity: .45; cursor: not-allowed; transform: none; box-shadow: none; }
+
+  /* HEADER */
+  .page-head{
+    padding: 60px 0 30px;
+    background:
+      radial-gradient(900px 400px at 90% -10%, rgba(6,182,212,.18), transparent 60%),
+      radial-gradient(700px 400px at -10% 10%, rgba(37,99,235,.15), transparent 60%),
+      linear-gradient(180deg, #ffffff 0%, var(--bg) 100%);
+    text-align: center;
+  }
+  .eyebrow{
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(37,99,235,.1); color: var(--blue);
+    padding: 6px 14px; border-radius: 999px;
+    font-size: 0.85rem; font-weight: 600; margin-bottom: 16px;
+  }
+  .page-head h1{
+    font-size: clamp(2.1rem, 4.5vw, 3.2rem);
+    line-height: 1.1; letter-spacing: -0.02em;
+    font-weight: 800; margin-bottom: 14px;
+  }
+  .page-head .lead{
+    color: var(--muted); font-size: 1.1rem;
+    max-width: 600px; margin: 0 auto;
+  }
+
+  /* QUIZ CARD */
+  .quiz-wrap{ padding: 50px 0 80px; }
+  .quiz-card{
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    padding: 36px 36px 28px;
+    box-shadow: var(--shadow);
+  }
+  .progress{
+    height: 8px;
+    background: var(--border);
+    border-radius: 999px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  .progress-bar{
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, var(--blue), var(--cyan));
+    transition: width .4s ease;
+  }
+  .q-meta{
+    display: flex; justify-content: space-between;
+    color: var(--muted); font-size: 0.9rem; font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .q-text{
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 22px;
+  }
+  .options{ display: grid; gap: 10px; margin-bottom: 24px; }
+  .opt{
+    display: block;
+    padding: 14px 18px;
+    background: #f8fafc;
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: border-color .15s ease, background .15s ease, transform .15s ease;
+    user-select: none;
+  }
+  .opt:hover{ border-color: var(--blue); background: rgba(37,99,235,.05); }
+  .opt input{ display: none; }
+  .opt.selected{
+    border-color: var(--blue);
+    background: rgba(37,99,235,.08);
+    box-shadow: inset 0 0 0 1px var(--blue);
+  }
+  .nav-row{
+    display: flex; justify-content: space-between; align-items: center;
+    margin-top: 8px;
+  }
+
+  /* RESULT */
+  .result-card{
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    padding: 40px;
+    box-shadow: var(--shadow);
+    text-align: center;
+  }
+  .result-icon{
+    width: 80px; height: 80px;
+    border-radius: 22px;
+    margin: 0 auto 20px;
+    display: grid; place-items: center;
+    font-size: 2.4rem;
+    background: rgba(37,99,235,.12); color: var(--blue);
+  }
+  .result-card.algebra .result-icon{ background: rgba(37,99,235,.12); color: var(--blue); }
+  .result-card.statistics .result-icon{ background: rgba(6,182,212,.14); color: var(--cyan); }
+  .result-card.precalc .result-icon{ background: rgba(167,139,250,.18); color: #7c3aed; }
+  .result-card.calculus .result-icon{ background: rgba(250,204,21,.22); color: #b45309; }
+  .result-card h2{
+    font-size: 1.8rem; margin-bottom: 10px;
+  }
+  .result-name{ color: var(--blue); }
+  .result-card.statistics .result-name{ color: var(--cyan); }
+  .result-card.precalc .result-name{ color: #7c3aed; }
+  .result-card.calculus .result-name{ color: #b45309; }
+  .result-card p{
+    color: var(--muted); font-size: 1.1rem;
+    max-width: 540px; margin: 0 auto 26px;
+  }
+  .result-actions{ display:flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .result-meta{
+    margin-top: 28px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+  .restart{ background: none; border: none; color: var(--blue); cursor: pointer; font-weight: 600; text-decoration: underline; padding: 0; }
+
+  .hidden{ display: none !important; }
+
+  /* TIPS CAROUSEL */
+  .tips-carousel-section{
+    padding: 10px 0 40px;
+  }
+  .tips-carousel-label{
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  .tips-carousel-label .eyebrow{
+    background: rgba(250,204,21,.2); color: #b45309;
+  }
+  .photo-carousel{
+    max-width: 680px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .photo-carousel-frame{
+    aspect-ratio: 1/1;
+    border-radius: 24px;
+    overflow: hidden;
+    background: #0b1220;
+    position: relative;
+    box-shadow: var(--shadow-lg);
+  }
+  .carousel-track{
+    display: flex;
+    height: 100%;
+    transition: transform .45s cubic-bezier(.4,.2,.2,1);
+  }
+  .carousel-slide{
+    flex: 0 0 100%;
+    height: 100%;
+    position: relative;
+  }
+  .carousel-slide img{
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .carousel-btn{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.95);
+    color: var(--navy);
+    border: none;
+    cursor: pointer;
+    display: grid; place-items: center;
+    font-size: 1.5rem;
+    line-height: 1;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    z-index: 3;
+    transition: transform .15s ease, background .15s ease;
+  }
+  .carousel-btn:hover{ transform: translateY(-50%) scale(1.08); background: white; }
+  .carousel-btn:focus-visible{ outline: 3px solid var(--blue); outline-offset: 2px; }
+  .carousel-btn.prev{ left: 14px; }
+  .carousel-btn.next{ right: 14px; }
+  .carousel-counter{
+    position: absolute;
+    top: 14px; right: 14px;
+    background: rgba(0,0,0,0.55);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    z-index: 3;
+    backdrop-filter: blur(6px);
+  }
+  .carousel-dots{
+    display: flex; gap: 8px;
+    justify-content: center;
+    margin-top: 16px;
+  }
+  .carousel-dot{
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: var(--border);
+    border: none;
+    cursor: pointer;
+    transition: background .2s ease, transform .2s ease;
+    padding: 0;
+  }
+  .carousel-dot:hover{ background: var(--muted); }
+  .carousel-dot.active{
+    background: var(--blue);
+    transform: scale(1.3);
+  }
+  .carousel-dot:focus-visible{ outline: 3px solid var(--blue); outline-offset: 3px; }
+  .carousel-caption{
+    text-align: center;
+    margin: 14px auto 0;
+    color: var(--muted);
+    font-size: 0.92rem;
+    font-style: italic;
+    max-width: 680px;
+  }
+
+  /* FOOTER */
+  footer{
+    background: #0b1220; color: #94a3b8;
+    padding: 40px 0 24px; text-align: center;
+    font-size: 0.9rem;
+  }
+  footer a{ color: #cbd5e1; }
+
+  /* RESPONSIVE */
+  @media (max-width: 700px){
+    .nav-links{
+      display:none; position: absolute; top: 100%; left:0; right:0;
+      background: white; flex-direction: column;
+      padding: 18px; border-bottom: 1px solid var(--border); gap: 14px;
+    }
+    .nav-links.open{ display:flex; }
+    .menu-toggle{ display:block; }
+    .quiz-card, .result-card{ padding: 28px 22px; }
+    .q-text{ font-size: 1.2rem; }
+  }
+
+  /* ===== Dropdown nav (added for consolidation) ===== */
+  .nav-links{ flex-wrap: nowrap; }
+  .nav-links a, .nav-links .dropdown-trigger{ white-space: nowrap; }
+  .nav-dropdown{ position: relative; }
+  .nav-dropdown .dropdown-trigger{
+    background: none; border: none; padding: 0; margin: 0;
+    font: inherit; color: var(--navy); font-weight: 500; font-size: 0.95rem;
+    cursor: pointer; display: inline-flex; align-items: center; gap: 4px;
+    transition: color .15s ease;
+  }
+  .nav-dropdown .dropdown-trigger:hover{ color: var(--blue); }
+  .nav-dropdown .caret{
+    font-size: 0.75em; display: inline-block;
+    transition: transform .2s ease;
+  }
+  .nav-dropdown:hover .caret,
+  .nav-dropdown .dropdown-trigger[aria-expanded="true"] .caret{ transform: rotate(180deg); }
+  .nav-dropdown .dropdown-menu{
+    position: absolute; top: 100%; left: 0;
+    margin-top: 10px;
+    background: white;
+    border: 1px solid var(--border); border-radius: 14px;
+    padding: 6px;
+    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
+    min-width: 240px;
+    opacity: 0; visibility: hidden;
+    transform: translateY(-6px);
+    transition: opacity .15s ease, transform .15s ease, visibility .15s ease;
+    z-index: 100;
+  }
+  .nav-dropdown:hover .dropdown-menu,
+  .nav-dropdown .dropdown-menu.open{
+    opacity: 1; visibility: visible; transform: translateY(0);
+  }
+  .nav-dropdown .dropdown-menu a{
+    display: block;
+    padding: 10px 14px;
+    border-radius: 8px;
+    color: var(--navy);
+    font-weight: 500; font-size: 0.95rem;
+  }
+  .nav-dropdown .dropdown-menu a:hover{
+    background: rgba(37,99,235,.08);
+    color: var(--blue);
+    text-decoration: none;
+  }
+  @media (max-width: 900px){
+    .nav-dropdown{ width: 100%; }
+    .nav-dropdown .dropdown-trigger{ width: 100%; justify-content: space-between; padding: 6px 0; }
+    .nav-dropdown .dropdown-menu{
+      position: static;
+      box-shadow: none; border: none;
+      padding: 0 0 4px 14px;
+      margin-top: 0;
+      min-width: 0;
+      opacity: 1; visibility: visible; transform: none;
+      display: none;
+      background: transparent;
+    }
+    .nav-dropdown:hover .dropdown-menu{ display: none; }
+    .nav-dropdown .dropdown-menu.open{ display: block; }
+  }
+
+</style>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wnr3kox01b");
+  </script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="/" class="logo-lockup" aria-label="Numberbender — Home">
+      <img src="images/numberbender_banner_only.svg" alt="Numberbender" class="lockup-img">
+    </a>
+    <button class="menu-toggle" aria-label="Toggle menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
+        <nav class="nav-links" id="navlinks">
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">For Students <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="start-here.html">🎁 Free Starter Lesson</a>
+          <a href="find-your-course.html">🧭 Find My Course</a>
+          <a href="courses.html">📚 All Courses</a>
+          <a href="math-worksheets.html">📝 Free Worksheets</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">For Educators <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="for-teachers.html">🏫 For Teachers Hub</a>
+          <a href="teach-it-like-you-stream-it.html">🎬 Teach It Like You Stream It</a>
+          <a href="teacher-resources.html">📦 Teacher Resources</a>
+          <a href="flipped-classroom-math.html">🔄 Flipped Classroom Guide</a>
+        </div>
+      </div>
+      <a href="about.html">About Dr. E</a>
+      <a href="speaking.html">Speaking</a>
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Blog <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="blog.html">✍️ Blog Posts</a>
+          <a href="speaking-archive.html">🎤 Past Engagements</a>
+        </div>
+      </div>
+      <a href="contact.html" class="nav-cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-head">
+  <div class="container">
+    <div class="eyebrow">🧭 6 questions · About 90 seconds</div>
+    <h1>Where are you stuck?</h1>
+    <p class="lead">
+      Answer six quick questions and we'll point you to the Numberbender course
+      that fits where you are right now.
+    </p>
+  </div>
+</section>
+
+<section class="tips-carousel-section">
+  <div class="container">
+    <div class="tips-carousel-label">
+      <div class="eyebrow">💡 5 Tips Before You Start</div>
+    </div>
+    <div class="photo-carousel" id="tips-carousel" role="region" aria-roledescription="carousel" aria-label="5 tips for finding your course">
+      <div class="photo-carousel-frame">
+        <div class="carousel-counter" id="tips-carousel-counter" aria-live="polite">1 / 6</div>
+        <div class="carousel-track" id="tips-carousel-track">
+          <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="Slide 1 of 6">
+            <img src="images/carousel_5_tips/slide-1.jpg" alt="Tip 1 for finding your Numberbender course" loading="lazy">
+          </div>
+          <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="Slide 2 of 6">
+            <img src="images/carousel_5_tips/slide-2.jpg" alt="Tip 2 for finding your Numberbender course" loading="lazy">
+          </div>
+          <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="Slide 3 of 6">
+            <img src="images/carousel_5_tips/slide-3.jpg" alt="Tip 3 for finding your Numberbender course" loading="lazy">
+          </div>
+          <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="Slide 4 of 6">
+            <picture><source srcset="images/carousel_5_tips/slide-4.webp" type="image/webp"><img src="images/carousel_5_tips/slide-4.jpg" alt="Tip 4 for finding your Numberbender course" loading="lazy"></picture>
+          </div>
+          <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="Slide 5 of 6">
+            <img src="images/carousel_5_tips/slide-5.jpg" alt="Tip 5 for finding your Numberbender course" loading="lazy">
+          </div>
+          <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="Slide 6 of 6">
+            <img src="images/carousel_5_tips/slide-6.jpg" alt="Tip 6 for finding your Numberbender course" loading="lazy">
+          </div>
+        </div>
+        <button class="carousel-btn prev" id="tips-carousel-prev" aria-label="Previous tip" type="button">‹</button>
+        <button class="carousel-btn next" id="tips-carousel-next" aria-label="Next tip" type="button">›</button>
+      </div>
+      <div class="carousel-dots" role="tablist" aria-label="Go to tip">
+        <button class="carousel-dot active" data-slide="0" aria-label="Tip 1" aria-selected="true" type="button"></button>
+        <button class="carousel-dot" data-slide="1" aria-label="Tip 2" aria-selected="false" type="button"></button>
+        <button class="carousel-dot" data-slide="2" aria-label="Tip 3" aria-selected="false" type="button"></button>
+        <button class="carousel-dot" data-slide="3" aria-label="Tip 4" aria-selected="false" type="button"></button>
+        <button class="carousel-dot" data-slide="4" aria-label="Tip 5" aria-selected="false" type="button"></button>
+        <button class="carousel-dot" data-slide="5" aria-label="Tip 6" aria-selected="false" type="button"></button>
+      </div>
+      <p class="carousel-caption">Swipe through before you take the quiz — these tips help you pick the right starting point.</p>
+    </div>
+  </div>
+</section>
+
+<section class="quiz-wrap">
+  <div class="container">
+
+    <!-- QUIZ -->
+    <div id="quiz" class="quiz-card">
+      <div class="progress"><div class="progress-bar" id="progressBar"></div></div>
+      <div class="q-meta"><span id="qNum">Question 1 of 6</span><span id="qTopic">Where you are</span></div>
+      <div class="q-text" id="qText">Loading…</div>
+      <div class="options" id="options"></div>
+      <div class="nav-row">
+        <button class="btn btn-outline" id="backBtn" onclick="goBack()" disabled>← Back</button>
+        <button class="btn btn-primary" id="nextBtn" onclick="goNext()" disabled>Next →</button>
+      </div>
+    </div>
+
+    <!-- RESULT -->
+    <div id="result" class="result-card hidden">
+      <div class="result-icon" id="resultIcon">📘</div>
+      <h2>We recommend starting with <span class="result-name" id="resultName">Algebra</span></h2>
+      <p id="resultBody">Loading…</p>
+      <div class="result-actions">
+        <a id="resultLink" href="courses.html" class="btn btn-primary btn-lg">Open the course →</a>
+        <a href="start-here.html" class="btn btn-outline">Try a free lesson first</a>
+      </div>
+      <div class="result-meta">
+        Not quite right? <button class="restart" onclick="restart()">Retake the quiz</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    © 2026 Numberbender · Founded by Dr. Peter Esperanza · <a href="/">Home</a> · <a href="contact.html">Contact</a>
+  </div>
+</footer>
+
+<script>
+  // Each option carries a "weight" object — points toward each course.
+  // Course keys: algebra, statistics, precalc, calculus
+  const QUESTIONS = [
+    {
+      topic: "Where you are",
+      text: "Which class are you in (or about to take) right now?",
+      options: [
+        { label: "Pre-algebra or beginning algebra", w: { algebra: 3 } },
+        { label: "Intermediate algebra or college algebra", w: { algebra: 2, precalc: 1 } },
+        { label: "Statistics", w: { statistics: 3 } },
+        { label: "Pre-calculus / trigonometry", w: { precalc: 3 } },
+        { label: "Calculus 1 or AP Calculus", w: { calculus: 3 } }
+      ]
+    },
+    {
+      topic: "Comfort check",
+      text: "Solve for x:  2x + 5 = 17. How does that feel?",
+      options: [
+        { label: "I'm not sure where to start", w: { algebra: 3 } },
+        { label: "I can do it but it takes me a minute", w: { algebra: 2, precalc: 1 } },
+        { label: "Easy — x = 6", w: { precalc: 1, calculus: 1, statistics: 1 } }
+      ]
+    },
+    {
+      topic: "Pain point",
+      text: "What's tripping you up the most right now?",
+      options: [
+        { label: "Solving equations and word problems", w: { algebra: 3 } },
+        { label: "Mean, median, standard deviation, normal curves", w: { statistics: 3 } },
+        { label: "Functions, graphs, trig identities, logarithms", w: { precalc: 3 } },
+        { label: "Limits, derivatives, related rates", w: { calculus: 3 } },
+        { label: "I just don't feel confident in math at all", w: { algebra: 2 } }
+      ]
+    },
+    {
+      topic: "Goal",
+      text: "What are you trying to do with math?",
+      options: [
+        { label: "Pass my class / improve my grade", w: { algebra: 1, statistics: 1, precalc: 1, calculus: 1 } },
+        { label: "Get ready for college-level math", w: { precalc: 2, algebra: 1 } },
+        { label: "Get through a stats requirement (psych, business, nursing, etc.)", w: { statistics: 3 } },
+        { label: "Prepare for AP / a STEM major", w: { calculus: 2, precalc: 1 } }
+      ]
+    },
+    {
+      topic: "Background",
+      text: "When you hear the word \"function,\" how do you feel?",
+      options: [
+        { label: "What's a function?", w: { algebra: 3 } },
+        { label: "I know what it is but get lost with notation like f(x)", w: { algebra: 2, precalc: 1 } },
+        { label: "I'm comfortable graphing and transforming functions", w: { precalc: 2, calculus: 1 } },
+        { label: "Functions are easy — I want to take their derivatives", w: { calculus: 3 } }
+      ]
+    },
+    {
+      topic: "Style",
+      text: "How do you learn best?",
+      options: [
+        { label: "Slow, clear video walkthroughs with examples", w: { algebra: 1, statistics: 1, precalc: 1, calculus: 1 } },
+        { label: "Lots of practice problems with worked solutions", w: { algebra: 1, statistics: 1, precalc: 1, calculus: 1 } },
+        { label: "Real-world applications I can connect to", w: { statistics: 2, algebra: 1 } },
+        { label: "Theory and proofs first, then problems", w: { calculus: 1, precalc: 1 } }
+      ]
+    }
+  ];
+
+  const COURSES = {
+    algebra: {
+      name: "Algebra",
+      icon: "📘",
+      cls: "algebra",
+      blurb: "Algebra is the foundation. Master variables, equations, factoring, and graphing here, and every course after this will feel easier.",
+      link: "courses.html#algebra-card"
+    },
+    statistics: {
+      name: "Statistics",
+      icon: "📊",
+      cls: "statistics",
+      blurb: "Statistics is about reading the world through data. We'll cover descriptive stats, probability, distributions, and inference — clearly and humanly.",
+      link: "courses.html#statistics-card"
+    },
+    precalc: {
+      name: "Pre-Calculus",
+      icon: "📐",
+      cls: "precalc",
+      blurb: "Pre-Calculus bridges algebra and calculus. Functions, trig, and logarithms — taught visually so the ideas actually stick before calculus arrives.",
+      link: "courses.html"
+    },
+    calculus: {
+      name: "Calculus",
+      icon: "∫",
+      cls: "calculus",
+      blurb: "Calculus is the math of change. We'll build limits, derivatives, and integrals on top of solid algebra and pre-calc foundations.",
+      link: "courses.html"
+    }
+  };
+
+  let current = 0;
+  let answers = new Array(QUESTIONS.length).fill(null);
+
+  function render(){
+    const q = QUESTIONS[current];
+    document.getElementById('qNum').textContent = `Question ${current+1} of ${QUESTIONS.length}`;
+    document.getElementById('qTopic').textContent = q.topic;
+    document.getElementById('qText').textContent = q.text;
+    document.getElementById('progressBar').style.width = ((current) / QUESTIONS.length * 100) + '%';
+
+    const optsEl = document.getElementById('options');
+    optsEl.innerHTML = '';
+    q.options.forEach((opt, i) => {
+      const label = document.createElement('label');
+      label.className = 'opt' + (answers[current] === i ? ' selected' : '');
+      label.innerHTML = `<input type="radio" name="q${current}" value="${i}" ${answers[current] === i ? 'checked' : ''}> ${opt.label}`;
+      label.addEventListener('click', () => {
+        answers[current] = i;
+        document.querySelectorAll('.opt').forEach(el => el.classList.remove('selected'));
+        label.classList.add('selected');
+        document.getElementById('nextBtn').disabled = false;
+      });
+      optsEl.appendChild(label);
+    });
+
+    document.getElementById('backBtn').disabled = current === 0;
+    document.getElementById('nextBtn').disabled = answers[current] === null;
+    document.getElementById('nextBtn').textContent = (current === QUESTIONS.length - 1) ? 'See my result →' : 'Next →';
+  }
+
+  function goNext(){
+    if (answers[current] === null) return;
+    if (current === QUESTIONS.length - 1) {
+      showResult();
+    } else {
+      current++;
+      render();
+    }
+  }
+  function goBack(){
+    if (current === 0) return;
+    current--;
+    render();
+  }
+
+  function showResult(){
+    document.getElementById('progressBar').style.width = '100%';
+    // Tally
+    const totals = { algebra: 0, statistics: 0, precalc: 0, calculus: 0 };
+    answers.forEach((ansIdx, qIdx) => {
+      if (ansIdx === null) return;
+      const w = QUESTIONS[qIdx].options[ansIdx].w;
+      Object.keys(w).forEach(k => { totals[k] += w[k]; });
+    });
+    // Pick winner (ties resolved by order: algebra > statistics > precalc > calculus,
+    // because most uncertain learners should start with algebra)
+    const order = ['algebra', 'statistics', 'precalc', 'calculus'];
+    let winner = order[0];
+    order.forEach(k => { if (totals[k] > totals[winner]) winner = k; });
+
+    const c = COURSES[winner];
+    const card = document.getElementById('result');
+    document.getElementById('quiz').classList.add('hidden');
+    card.classList.remove('hidden');
+    card.className = 'result-card ' + c.cls;
+    document.getElementById('resultIcon').textContent = c.icon;
+    document.getElementById('resultName').textContent = c.name;
+    document.getElementById('resultBody').textContent = c.blurb;
+    document.getElementById('resultLink').href = c.link;
+    document.getElementById('resultLink').textContent = `Open ${c.name} course →`;
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Redirect to thank-you page so GA4 records the find_course_click conversion
+    setTimeout(function(){ window.location.href = 'find-course-thanks.html'; }, 2500);
+  }
+
+  function restart(){
+    current = 0;
+    answers = new Array(QUESTIONS.length).fill(null);
+    document.getElementById('result').classList.add('hidden');
+    document.getElementById('quiz').classList.remove('hidden');
+    render();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  render();
+</script>
+
+<script>
+  // Tips carousel
+  (function(){
+    var track = document.getElementById('tips-carousel-track');
+    if (!track) return;
+    var dots = document.querySelectorAll('#tips-carousel .carousel-dot');
+    var counter = document.getElementById('tips-carousel-counter');
+    var prevBtn = document.getElementById('tips-carousel-prev');
+    var nextBtn = document.getElementById('tips-carousel-next');
+    var carousel = document.getElementById('tips-carousel');
+    var total = track.children.length;
+    var current = 0;
+
+    function go(i){
+      current = (i + total) % total;
+      track.style.transform = 'translateX(-' + (current * 100) + '%)';
+      dots.forEach(function(d, idx){
+        d.classList.toggle('active', idx === current);
+        d.setAttribute('aria-selected', idx === current ? 'true' : 'false');
+      });
+      counter.textContent = (current + 1) + ' / ' + total;
+    }
+
+    // Auto-advance every 5 seconds; pause on user interaction
+    var autoTimer = setInterval(function(){ go(current + 1); }, 5000);
+    function resetTimer(){
+      clearInterval(autoTimer);
+      autoTimer = setInterval(function(){ go(current + 1); }, 5000);
+    }
+    carousel.addEventListener('mouseenter', function(){ clearInterval(autoTimer); });
+    carousel.addEventListener('mouseleave', function(){ autoTimer = setInterval(function(){ go(current + 1); }, 5000); });
+    carousel.addEventListener('focusin', function(){ clearInterval(autoTimer); });
+    carousel.addEventListener('focusout', function(){ autoTimer = setInterval(function(){ go(current + 1); }, 5000); });
+
+    prevBtn.addEventListener('click', function(){ go(current - 1); resetTimer(); });
+    nextBtn.addEventListener('click', function(){ go(current + 1); resetTimer(); });
+    dots.forEach(function(d){
+      d.addEventListener('click', function(){ go(parseInt(d.getAttribute('data-slide'), 10)); resetTimer(); });
+    });
+
+    carousel.addEventListener('keydown', function(e){
+      if (e.key === 'ArrowLeft'){ e.preventDefault(); go(current - 1); resetTimer(); }
+      if (e.key === 'ArrowRight'){ e.preventDefault(); go(current + 1); resetTimer(); }
+    });
+
+    var startX = null;
+    track.addEventListener('touchstart', function(e){ startX = e.touches[0].clientX; clearInterval(autoTimer); }, { passive: true });
+    track.addEventListener('touchend', function(e){
+      if (startX === null) return;
+      var dx = e.changedTouches[0].clientX - startX;
+      if (Math.abs(dx) > 40) go(current + (dx < 0 ? 1 : -1));
+      startX = null;
+      resetTimer();
+    });
+  })();
+</script>
+
+<script>
+  function toggleDD(btn){
+    var menu = btn.nextElementSibling;
+    var willOpen = !menu.classList.contains('open');
+    document.querySelectorAll('.nav-dropdown .dropdown-menu.open').forEach(function(m){
+      m.classList.remove('open');
+      var t = m.previousElementSibling;
+      if (t) t.setAttribute('aria-expanded','false');
+    });
+    if (willOpen){
+      menu.classList.add('open');
+      btn.setAttribute('aria-expanded','true');
+    }
+  }
+  document.addEventListener('click', function(e){
+    if (!e.target.closest('.nav-dropdown')){
+      document.querySelectorAll('.nav-dropdown .dropdown-menu.open').forEach(function(m){
+        m.classList.remove('open');
+        var t = m.previousElementSibling;
+        if (t) t.setAttribute('aria-expanded','false');
+      });
+    }
+  });
+</script>
+
+<script>
+  // GA4 event tracking: email signups + outbound clicks
+  document.querySelectorAll('form').forEach(function(form) {
+    if (form.querySelector('input[type="email"]')) {
+      form.addEventListener('submit', function() {
+        gtag('event', 'email_signup', { event_category: 'engagement', event_label: window.location.pathname });
+      });
+    }
+  });
+  document.querySelectorAll('a[target="_blank"]').forEach(function(link) {
+    link.addEventListener('click', function() {
+      gtag('event', 'outbound_click', { event_category: 'outbound', link_url: link.href });
+    });
+  });
+</script>
+
+</body>
+</html>

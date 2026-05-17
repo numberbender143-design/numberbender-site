@@ -1,0 +1,48 @@
+# Netlify Redirects — numberbender.com
+# Old CMS platform URLs → new static site
+
+# Homepage aliases
+/home                           /                               301
+/index                          /                               301
+/index.html                     /                               301
+
+# Worksheets hub aliases → printable worksheet library landing page
+/worksheets                     /math-worksheets                301
+/math-worksheets.html           /math-worksheets                301
+/free-worksheets                /math-worksheets                301
+/printable-worksheets           /math-worksheets                301
+
+# Old lesson/subject/course URLs → courses page
+# NOTE: do NOT add a blanket /courses/* rule here — /courses/ is now a real
+# directory tree (worksheet hubs). A broad /courses/* 301 makes any missing
+# or mistyped worksheet path soft-redirect to /courses.html instead of
+# returning a clean 404, which can cause Google to deindex real pages.
+/lessons/*                      /courses.html                   301
+/subjects/*                     /courses.html                   301
+/topics/*                       /courses.html                   301
+
+# Old uploads/attachments → homepage
+/uploads/*                      /                               301
+/attachments/*                  /                               301
+
+# Old user/profile URLs
+/users/*                        /about.html                     301
+/profile/*                      /about.html                     301
+
+# Old blog/post URLs → blog
+/posts/*                        /blog.html                      301
+/blog/posts/*                   /blog.html                      301
+/news/*                         /blog.html                      301
+
+# Old contact/about URLs
+/contact-us                     /contact.html                   301
+/about-us                       /about.html                     301
+
+# Trailing slash normalization (Netlify handles this, but just in case)
+/courses/                       /courses.html                   301
+/about/                         /about.html                     301
+/contact/                       /contact.html                   301
+/blog/                          /blog.html                      301
+/speaking/                      /speaking.html                  301
+
+# Catch-all: anything else not found → custom 404 (Netlify does this automatically via 404.html)

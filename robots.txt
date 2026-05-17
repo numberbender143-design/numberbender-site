@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Keep internal/utility files out of search index
+Disallow: /ACTLA_Carousel.html
+Disallow: /thank-you.html
+
+Sitemap: https://numberbender.com/sitemap.xml

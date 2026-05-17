@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="1200" height="320">
+  
+  <g transform="translate(60 80)">
+    <rect width="160" height="160" rx="28" fill="#1F6F6B"></rect>
+    <g transform="translate(80 80) scale(0.65) translate(-100 -100)">
+      <rect x="30" y="30" width="140" height="140" rx="14" fill="none" stroke="#F4ECDC" stroke-width="6"></rect>
+      <path d="M 62 152 L 62 50 L 138 152 L 138 50" stroke="#F4ECDC" stroke-width="18" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+      <circle cx="158" cy="48" r="6" fill="#E26B2C"></circle>
+    </g>
+  </g>
+  <text x="260" y="160" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="84" letter-spacing="-3" fill="#15110E">numberbender</text>
+  <text x="262" y="210" font-family="ui-monospace, &#39;JetBrains Mono&#39;, Menlo, monospace" font-size="22" letter-spacing="2" fill="#6B5E4E">MASTER THE ELEMENTS OF MATH</text>
+</svg>

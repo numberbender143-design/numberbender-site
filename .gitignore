@@ -1,0 +1,19 @@
+# Local Netlify folder
+.netlify
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Python build scripts (not site content)
+*.py
+
+# Spreadsheet working files
+*.xlsx
+*.pages
+
+# Claude workspace
+.claude/
+
+# macOS FUSE temp files
+.fuse_hidden*

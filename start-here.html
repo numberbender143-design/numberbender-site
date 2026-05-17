@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P1M2WZD840"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-P1M2WZD840');
+</script>
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Start Here — A Free Math Lesson from Dr. E | Numberbender</title>
+<meta name="description" content="A free math lesson from Dr. E — watch a short video, work a solved example, and try a practice problem yourself. No signup required. Start learning now." />
+<!-- SEO: Canonical + Open Graph + Twitter Card -->
+<link rel="canonical" href="https://numberbender.com/start-here" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Start Here — Find the Right Path | Numberbender" />
+<meta property="og:description" content="New to Numberbender? Start here to find the right courses, resources, and community for you — whether you're a math student or an educator." />
+<meta property="og:url" content="https://numberbender.com/start-here" />
+<meta property="og:site_name" content="Numberbender" />
+<meta property="og:image" content="https://numberbender.com/images/dr-e-hero.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@numberbender" />
+<meta name="twitter:title" content="Start Here — Find the Right Path | Numberbender" />
+<meta name="twitter:description" content="New to Numberbender? Start here to find the right courses, resources, and community for you — whether you're a math student or an educator." />
+<meta name="twitter:image" content="https://numberbender.com/images/dr-e-hero.jpg" />
+
+<link rel="icon" type="image/svg+xml" href="images/exports/numberbender-favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="images/exports/png/favicon-32.png">
+<link rel="icon" type="image/png" sizes="180x180" href="images/exports/png/favicon-180.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/exports/png/favicon-180.png">
+
+<meta name="theme-color" content="#1F6F6B">
+<style>
+  :root{
+    --navy:#0F172A; --blue:#2563EB; --yellow:#FACC15; --cyan:#06B6D4; --green:#22C55E;
+    --bg:#F8FAFC; --surface:#FFFFFF; --muted:#64748B; --border:#E2E8F0;
+    --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+    --shadow-lg: 0 20px 50px rgba(15, 23, 42, 0.12);
+    --radius: 16px;
+  }
+  *{ box-sizing: border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; }
+  body{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--navy); background: var(--bg); line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a{ color: var(--blue); text-decoration:none; }
+  a:hover{ text-decoration: underline; }
+  img{ max-width:100%; display:block; }
+  .container{ width: min(1100px, 92%); margin-inline: auto; }
+
+  /* NAV */
+  .nav{
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: saturate(180%) blur(10px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-inner{
+    display:flex; align-items:center; justify-content:space-between;
+    padding: 14px 0;
+  }
+  .logo-lockup .lockup-img{
+    height: 100px; width: auto; max-width: 360px;
+  }
+  .nav-links{ display:flex; gap: 22px; align-items:center; }
+  .nav-links a{ color: var(--navy); font-weight: 500; font-size: 0.95rem; }
+  .nav-links a:hover{ color: var(--blue); text-decoration: none; }
+  .nav-cta{
+    background: var(--navy); color: white !important;
+    padding: 9px 16px; border-radius: 10px; font-weight: 600;
+  }
+  .nav-cta:hover{ background: var(--blue); text-decoration: none; }
+  .menu-toggle{ display:none; background:none; border:none; cursor:pointer; font-size: 1.4rem; color: var(--navy); }
+
+  /* BUTTONS */
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:8px;
+    padding: 13px 22px; border-radius: 12px;
+    font-weight: 600; font-size: 1rem; cursor: pointer;
+    border: 2px solid transparent;
+    transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+    text-decoration: none !important;
+  }
+  .btn:hover{ transform: translateY(-2px); box-shadow: var(--shadow); }
+  .btn-primary{ background: var(--blue); color: white; }
+  .btn-primary:hover{ background: #1d4ed8; }
+  .btn-cyan{ background: var(--cyan); color: white; }
+  .btn-cyan:hover{ background: #0891b2; }
+  .btn-outline{ background: transparent; color: var(--navy); border: 2px solid var(--border); }
+  .btn-outline:hover{ border-color: var(--blue); color: var(--blue); }
+  .btn-lg{ padding: 16px 28px; font-size: 1.05rem; }
+
+  /* PAGE HEADER */
+  .page-head{
+    padding: 70px 0 40px;
+    background:
+      radial-gradient(900px 400px at 90% -10%, rgba(6,182,212,.18), transparent 60%),
+      radial-gradient(700px 400px at -10% 10%, rgba(37,99,235,.15), transparent 60%),
+      linear-gradient(180deg, #ffffff 0%, var(--bg) 100%);
+    text-align: center;
+  }
+  .eyebrow{
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(34,197,94,.14); color: #15803d;
+    padding: 6px 14px; border-radius: 999px;
+    font-size: 0.85rem; font-weight: 600; margin-bottom: 16px;
+  }
+  .page-head h1{
+    font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+    line-height: 1.1; letter-spacing: -0.02em;
+    font-weight: 800; margin-bottom: 14px;
+  }
+  .page-head h1 .accent{ color: var(--blue); }
+  .page-head .lead{
+    color: var(--muted); font-size: 1.15rem;
+    max-width: 720px; margin: 0 auto;
+  }
+
+  /* LESSON SECTIONS */
+  .lesson{ padding: 50px 0; }
+  .lesson + .lesson{ padding-top: 0; }
+  .step-card{
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 36px;
+    box-shadow: var(--shadow);
+    margin-bottom: 28px;
+  }
+  .step-head{
+    display: flex; align-items: center; gap: 14px;
+    margin-bottom: 18px;
+  }
+  .step-num{
+    width: 44px; height: 44px;
+    border-radius: 12px;
+    background: rgba(37,99,235,.12); color: var(--blue);
+    display: grid; place-items: center;
+    font-weight: 800; font-size: 1.15rem;
+    flex-shrink: 0;
+  }
+  .step-card.s2 .step-num{ background: rgba(6,182,212,.14); color: var(--cyan); }
+  .step-card.s3 .step-num{ background: rgba(250,204,21,.22); color: #b45309; }
+  .step-head h2{
+    font-size: 1.6rem;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+  .step-sub{ color: var(--muted); margin-bottom: 18px; }
+  .video-wrap{
+    border-radius: 14px;
+    overflow: hidden;
+    background: #000;
+    aspect-ratio: 16/9;
+    position: relative;
+  }
+  .video-wrap video{ width: 100%; height: 100%; display: block; object-fit: cover; }
+  /* YouTube thumbnail facade */
+  .yt-facade{
+    cursor: pointer;
+    display: block;
+  }
+  .yt-facade .yt-thumb{
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .3s ease, filter .3s ease;
+  }
+  .yt-facade:hover .yt-thumb,
+  .yt-facade:focus-visible .yt-thumb{ transform: scale(1.02); filter: brightness(.9); }
+  .yt-facade .yt-play{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: transform .2s ease, opacity .2s ease;
+    filter: drop-shadow(0 4px 12px rgba(0,0,0,.4));
+  }
+  .yt-facade:hover .yt-play,
+  .yt-facade:focus-visible .yt-play{ transform: translate(-50%, -50%) scale(1.08); }
+  .yt-facade:focus{ outline: none; }
+  .yt-facade:focus-visible{ outline: 3px solid var(--blue); outline-offset: 2px; }
+  .yt-facade iframe{ width: 100%; height: 100%; border: 0; display: block; }
+
+  /* WORKED EXAMPLE STYLES */
+  .equation-block{
+    font-family: "SF Mono", "Menlo", Consolas, "Liberation Mono", monospace;
+    font-size: 1.25rem;
+    background: #f1f5f9;
+    border-left: 4px solid var(--blue);
+    padding: 14px 18px;
+    border-radius: 8px;
+    margin: 14px 0;
+    color: var(--navy);
+  }
+  .ex-step{
+    display: grid;
+    grid-template-columns: 36px 1fr;
+    gap: 14px;
+    align-items: start;
+    padding: 14px 0;
+    border-bottom: 1px dashed var(--border);
+  }
+  .ex-step:last-child{ border-bottom: none; }
+  .ex-step .num{
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    background: var(--blue); color: white;
+    display: grid; place-items: center;
+    font-weight: 700; font-size: 0.85rem;
+    margin-top: 2px;
+  }
+  .ex-step .text strong{ color: var(--navy); }
+  .ex-step .math{
+    font-family: "SF Mono", "Menlo", Consolas, monospace;
+    background: #f8fafc;
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin-top: 6px;
+    display: inline-block;
+    font-size: 1.05rem;
+    color: var(--navy);
+  }
+  .answer-box{
+    background: linear-gradient(135deg, rgba(34,197,94,.10), rgba(6,182,212,.10));
+    border: 2px solid rgba(34,197,94,.4);
+    color: var(--navy);
+    padding: 18px 22px;
+    border-radius: 12px;
+    margin-top: 18px;
+    font-weight: 600;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .answer-box .check{
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    background: var(--green); color: white;
+    display: grid; place-items: center;
+    font-weight: 800;
+    flex-shrink: 0;
+  }
+
+  /* PRACTICE PROBLEM */
+  .practice-prompt{
+    font-size: 1.15rem;
+    margin: 12px 0 18px;
+    color: var(--navy);
+  }
+  details.solution{
+    background: #f8fafc;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 0;
+    margin-top: 16px;
+    overflow: hidden;
+  }
+  details.solution summary{
+    cursor: pointer;
+    padding: 16px 20px;
+    font-weight: 700;
+    color: var(--blue);
+    list-style: none;
+    user-select: none;
+  }
+  details.solution summary::-webkit-details-marker{ display: none; }
+  details.solution summary::before{
+    content: "▶  ";
+    display: inline-block;
+    margin-right: 4px;
+    transition: transform .2s ease;
+  }
+  details.solution[open] summary::before{ transform: rotate(90deg); }
+  details.solution .body{ padding: 0 20px 20px; }
+
+  /* CTA SECTION */
+  .next-cta{
+    background: linear-gradient(135deg, var(--navy) 0%, #1e293b 100%);
+    color: white;
+    padding: 70px 0;
+    text-align: center;
+    margin-top: 30px;
+  }
+  .next-cta h2{
+    font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+    margin-bottom: 12px;
+  }
+  .next-cta p{
+    color: #cbd5e1;
+    max-width: 640px;
+    margin: 0 auto 28px;
+    font-size: 1.1rem;
+  }
+  .cta-row{
+    display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;
+  }
+  .btn-yellow{ background: var(--yellow); color: var(--navy); }
+  .btn-yellow:hover{ background: #eab308; }
+
+  /* FOOTER */
+  footer{
+    background: #0b1220; color: #94a3b8;
+    padding: 40px 0 24px; text-align: center;
+    font-size: 0.9rem;
+  }
+  footer a{ color: #cbd5e1; }
+
+  /* RESPONSIVE */
+  @media (max-width: 700px){
+    .nav-links{
+      display:none; position: absolute; top: 100%; left:0; right:0;
+      background: white; flex-direction: column;
+      padding: 18px; border-bottom: 1px solid var(--border); gap: 14px;
+    }
+    .nav-links.open{ display:flex; }
+    .menu-toggle{ display:block; }
+    .step-card{ padding: 26px 22px; }
+    .step-head h2{ font-size: 1.35rem; }
+    .equation-block{ font-size: 1.05rem; padding: 12px 14px; }
+  }
+
+  /* ===== Dropdown nav (added for consolidation) ===== */
+  .nav-links{ flex-wrap: nowrap; }
+  .nav-links a, .nav-links .dropdown-trigger{ white-space: nowrap; }
+  .nav-dropdown{ position: relative; }
+  .nav-dropdown .dropdown-trigger{
+    background: none; border: none; padding: 0; margin: 0;
+    font: inherit; color: var(--navy); font-weight: 500; font-size: 0.95rem;
+    cursor: pointer; display: inline-flex; align-items: center; gap: 4px;
+    transition: color .15s ease;
+  }
+  .nav-dropdown .dropdown-trigger:hover{ color: var(--blue); }
+  .nav-dropdown .caret{
+    font-size: 0.75em; display: inline-block;
+    transition: transform .2s ease;
+  }
+  .nav-dropdown:hover .caret,
+  .nav-dropdown .dropdown-trigger[aria-expanded="true"] .caret{ transform: rotate(180deg); }
+  .nav-dropdown .dropdown-menu{
+    position: absolute; top: 100%; left: 0;
+    margin-top: 10px;
+    background: white;
+    border: 1px solid var(--border); border-radius: 14px;
+    padding: 6px;
+    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
+    min-width: 240px;
+    opacity: 0; visibility: hidden;
+    transform: translateY(-6px);
+    transition: opacity .15s ease, transform .15s ease, visibility .15s ease;
+    z-index: 100;
+  }
+  .nav-dropdown:hover .dropdown-menu,
+  .nav-dropdown .dropdown-menu.open{
+    opacity: 1; visibility: visible; transform: translateY(0);
+  }
+  .nav-dropdown .dropdown-menu a{
+    display: block;
+    padding: 10px 14px;
+    border-radius: 8px;
+    color: var(--navy);
+    font-weight: 500; font-size: 0.95rem;
+  }
+  .nav-dropdown .dropdown-menu a:hover{
+    background: rgba(37,99,235,.08);
+    color: var(--blue);
+    text-decoration: none;
+  }
+  @media (max-width: 900px){
+    .nav-dropdown{ width: 100%; }
+    .nav-dropdown .dropdown-trigger{ width: 100%; justify-content: space-between; padding: 6px 0; }
+    .nav-dropdown .dropdown-menu{
+      position: static;
+      box-shadow: none; border: none;
+      padding: 0 0 4px 14px;
+      margin-top: 0;
+      min-width: 0;
+      opacity: 1; visibility: visible; transform: none;
+      display: none;
+      background: transparent;
+    }
+    .nav-dropdown:hover .dropdown-menu{ display: none; }
+    .nav-dropdown .dropdown-menu.open{ display: block; }
+  }
+
+</style>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wnr3kox01b");
+  </script>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="/" class="logo-lockup" aria-label="Numberbender — Home">
+      <img src="images/numberbender_banner_only.svg" alt="Numberbender" class="lockup-img">
+    </a>
+    <button class="menu-toggle" aria-label="Toggle menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
+        <nav class="nav-links" id="navlinks">
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">For Students <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="start-here.html">🎁 Free Starter Lesson</a>
+          <a href="find-your-course.html">🧭 Find My Course</a>
+          <a href="courses.html">📚 All Courses</a>
+          <a href="math-worksheets.html">📝 Free Worksheets</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">For Educators <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="for-teachers.html">🏫 For Teachers Hub</a>
+          <a href="teach-it-like-you-stream-it.html">🎬 Teach It Like You Stream It</a>
+          <a href="teacher-resources.html">📦 Teacher Resources</a>
+          <a href="flipped-classroom-math.html">🔄 Flipped Classroom Guide</a>
+        </div>
+      </div>
+      <a href="about.html">About Dr. E</a>
+      <a href="speaking.html">Speaking</a>
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Blog <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="blog.html">✍️ Blog Posts</a>
+          <a href="speaking-archive.html">🎤 Past Engagements</a>
+        </div>
+      </div>
+      <a href="contact.html" class="nav-cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HEADER -->
+<section class="page-head">
+  <div class="container">
+    <div class="eyebrow">🎁 Free starter lesson · No signup required</div>
+    <h1>Start Here: <span class="accent">Solving a Linear Equation</span></h1>
+    <p class="lead">
+      A free 3-step lesson from Dr. E. Watch a short clip, walk through one worked example,
+      then try a practice problem on your own. Nothing to install. No account to make.
+    </p>
+  </div>
+</section>
+
+<!-- STEP 1: VIDEO -->
+<section class="lesson">
+  <div class="container">
+    <div class="step-card s1">
+      <div class="step-head">
+        <div class="step-num" aria-hidden="true">1</div>
+        <h2>Watch the lesson</h2>
+      </div>
+      <p class="step-sub">A quick intro to how Dr. E breaks down a linear equation. Press play whenever you're ready.</p>
+      <div class="video-wrap yt-facade" data-video-id="A2btQVNRFIU" role="button" tabindex="0" aria-label="Play video: Solving Linear Equations" onclick="loadYT(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();loadYT(this);}">
+        <img src="https://img.youtube.com/vi/A2btQVNRFIU/maxresdefault.jpg" alt="Solving Linear Equations — Numberbender lesson with Dr. E" class="yt-thumb" onerror="this.src='https://img.youtube.com/vi/A2btQVNRFIU/hqdefault.jpg'">
+        <div class="yt-play" aria-hidden="true">
+          <svg viewBox="0 0 68 48" width="68" height="48"><path d="M66.52 7.74a8 8 0 0 0-5.64-5.64C56.06 1 34 1 34 1S11.94 1 7.12 2.1a8 8 0 0 0-5.64 5.64A83.7 83.7 0 0 0 0 24a83.7 83.7 0 0 0 1.48 16.26 8 8 0 0 0 5.64 5.64C11.94 47 34 47 34 47s22.06 0 26.88-1.1a8 8 0 0 0 5.64-5.64A83.7 83.7 0 0 0 68 24a83.7 83.7 0 0 0-1.48-16.26z" fill="#ff0000"/><path d="M27 34l18-10-18-10z" fill="#fff"/></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: WORKED EXAMPLE -->
+<section class="lesson">
+  <div class="container">
+    <div class="step-card s2">
+      <div class="step-head">
+        <div class="step-num" aria-hidden="true">2</div>
+        <h2>Worked example: solve <em>3x + 7 = 22</em></h2>
+      </div>
+      <p class="step-sub">Linear equations have one variable. Your job is to isolate that variable using inverse operations — one step at a time.</p>
+
+      <div class="equation-block">3x + 7 = 22</div>
+
+      <div class="ex-step">
+        <div class="num">1</div>
+        <div class="text">
+          <strong>Subtract 7 from both sides</strong> to undo the +7.
+          <div class="math">3x + 7 − 7 = 22 − 7  →  3x = 15</div>
+        </div>
+      </div>
+
+      <div class="ex-step">
+        <div class="num">2</div>
+        <div class="text">
+          <strong>Divide both sides by 3</strong> to undo the multiplication.
+          <div class="math">3x ÷ 3 = 15 ÷ 3  →  x = 5</div>
+        </div>
+      </div>
+
+      <div class="ex-step">
+        <div class="num">3</div>
+        <div class="text">
+          <strong>Check by plugging x = 5 back in.</strong>
+          <div class="math">3(5) + 7 = 15 + 7 = 22 ✓</div>
+        </div>
+      </div>
+
+      <div class="answer-box">
+        <div class="check">✓</div>
+        <div>The answer is <strong>x = 5</strong>. The equation is balanced.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: PRACTICE PROBLEM -->
+<section class="lesson">
+  <div class="container">
+    <div class="step-card s3">
+      <div class="step-head">
+        <div class="step-num" aria-hidden="true">3</div>
+        <h2>Now you try</h2>
+      </div>
+      <p class="step-sub">Use the same two moves: undo addition or subtraction first, then undo multiplication or division. Grab a piece of paper.</p>
+
+      <p class="practice-prompt"><strong>Solve for x:</strong></p>
+      <div class="equation-block">5x − 9 = 16</div>
+
+      <details class="solution">
+        <summary>Show the solution</summary>
+        <div class="body">
+          <div class="ex-step">
+            <div class="num">1</div>
+            <div class="text">
+              <strong>Add 9 to both sides</strong> to undo the −9.
+              <div class="math">5x − 9 + 9 = 16 + 9  →  5x = 25</div>
+            </div>
+          </div>
+          <div class="ex-step">
+            <div class="num">2</div>
+            <div class="text">
+              <strong>Divide both sides by 5</strong> to undo the multiplication.
+              <div class="math">5x ÷ 5 = 25 ÷ 5  →  x = 5</div>
+            </div>
+          </div>
+          <div class="ex-step">
+            <div class="num">3</div>
+            <div class="text">
+              <strong>Check by substituting x = 5.</strong>
+              <div class="math">5(5) − 9 = 25 − 9 = 16 ✓</div>
+            </div>
+          </div>
+          <div class="answer-box">
+            <div class="check">✓</div>
+            <div>The answer is <strong>x = 5</strong>. Nice work.</div>
+          </div>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- NEXT STEPS CTA -->
+<section class="next-cta">
+  <div class="container">
+    <h2>That's a Numberbender lesson.</h2>
+    <p>If that felt clear and human — that's the whole idea. Keep going with full courses in algebra, statistics, and beyond.</p>
+    <div class="cta-row">
+      <a href="courses.html" class="btn btn-yellow btn-lg">Browse all courses →</a>
+      <a href="find-your-course.html" class="btn btn-cyan btn-lg">Find the right course for me</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    © 2026 Numberbender · Founded by Dr. Peter Esperanza · <a href="/">Home</a> · <a href="contact.html">Contact</a>
+  </div>
+</footer>
+
+<script>
+  function loadYT(el){
+    var id = el.getAttribute('data-video-id');
+    if(!id) return;
+    var iframe = document.createElement('iframe');
+    iframe.src = 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0';
+    iframe.title = el.getAttribute('aria-label') || 'YouTube video';
+    iframe.setAttribute('frameborder', '0');
+    iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+    iframe.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+    iframe.setAttribute('allowfullscreen', '');
+    el.innerHTML = '';
+    el.appendChild(iframe);
+    el.removeAttribute('role');
+    el.removeAttribute('tabindex');
+    el.onclick = null;
+  }
+</script>
+
+<script>
+  function toggleDD(btn){
+    var menu = btn.nextElementSibling;
+    var willOpen = !menu.classList.contains('open');
+    document.querySelectorAll('.nav-dropdown .dropdown-menu.open').forEach(function(m){
+      m.classList.remove('open');
+      var t = m.previousElementSibling;
+      if (t) t.setAttribute('aria-expanded','false');
+    });
+    if (willOpen){
+      menu.classList.add('open');
+      btn.setAttribute('aria-expanded','true');
+    }
+  }
+  document.addEventListener('click', function(e){
+    if (!e.target.closest('.nav-dropdown')){
+      document.querySelectorAll('.nav-dropdown .dropdown-menu.open').forEach(function(m){
+        m.classList.remove('open');
+        var t = m.previousElementSibling;
+        if (t) t.setAttribute('aria-expanded','false');
+      });
+    }
+  });
+</script>
+
+<script>
+  // GA4 event tracking: email signups + outbound clicks
+  document.querySelectorAll('form').forEach(function(form) {
+    if (form.querySelector('input[type="email"]')) {
+      form.addEventListener('submit', function() {
+        gtag('event', 'email_signup', { event_category: 'engagement', event_label: window.location.pathname });
+      });
+    }
+  });
+  document.querySelectorAll('a[target="_blank"]').forEach(function(link) {
+    link.addEventListener('click', function() {
+      gtag('event', 'outbound_click', { event_category: 'outbound', link_url: link.href });
+    });
+  });
+</script>
+
+</body>
+</html>

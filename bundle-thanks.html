@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Free Bundle is Ready | Numberbender</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/svg+xml" href="images/exports/numberbender-favicon.svg">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body{ background: var(--bg); display: flex; flex-direction: column; min-height: 100vh; }
+    .thanks-wrap{
+      flex: 1; display: flex; align-items: center; justify-content: center;
+      padding: 60px 20px;
+    }
+    .thanks-card{
+      background: white; border: 1px solid var(--border);
+      border-radius: 20px; padding: 48px 44px;
+      max-width: 560px; width: 100%;
+      box-shadow: 0 8px 40px rgba(37,99,235,.10);
+      text-align: center;
+    }
+    .thanks-icon{ font-size: 3rem; margin-bottom: 16px; }
+    .thanks-card h1{
+      font-size: 1.8rem; font-weight: 800;
+      color: var(--navy); margin-bottom: 10px;
+    }
+    .thanks-card p{
+      color: var(--muted); font-size: 1.05rem;
+      margin-bottom: 28px; line-height: 1.6;
+    }
+    .subject-label{
+      display: inline-block;
+      background: rgba(37,99,235,.10); color: var(--blue);
+      font-weight: 700; font-size: 1rem;
+      padding: 6px 18px; border-radius: 999px;
+      text-transform: capitalize; margin-bottom: 28px;
+    }
+    .btn-download{
+      display: inline-flex; align-items: center; gap: 10px;
+      background: var(--blue); color: white;
+      font-size: 1.05rem; font-weight: 700;
+      padding: 14px 32px; border-radius: 12px;
+      text-decoration: none; margin-bottom: 20px;
+      transition: background .2s;
+    }
+    .btn-download:hover{ background: #1d4ed8; }
+    .note{
+      font-size: 0.85rem; color: var(--muted);
+      margin-top: 16px;
+    }
+    .back-link{
+      display: inline-block; margin-top: 28px;
+      font-size: 0.9rem; color: var(--blue);
+      text-decoration: none; font-weight: 600;
+    }
+    .back-link:hover{ text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="/" class="logo logo-lockup" aria-label="Numberbender">
+      <img src="images/numberbender_banner_only.svg" alt="Numberbender" class="lockup-img">
+    </a>
+  </div>
+</header>
+
+<div class="thanks-wrap">
+  <div class="thanks-card">
+    <div class="thanks-icon">🎉</div>
+    <h1>Your bundle is ready!</h1>
+    <p id="thanks-msg">Thank you for joining the Numberbender community. Your free worksheet bundle is ready to download below.</p>
+    <div class="subject-label" id="subject-display">Loading…</div><br>
+    <a class="btn-download" id="download-btn" href="#">
+      ⬇ Download ZIP Bundle
+    </a>
+    <p class="note">All worksheets include full answer keys. No expiry — keep it forever.</p>
+    <br>
+    <a class="back-link" href="math-worksheets">← Browse more worksheets</a>
+  </div>
+</div>
+
+<script>
+  var bundles = {
+    'algebra':                'bundles/numberbender-algebra-worksheets.zip',
+    'precalculus':            'bundles/numberbender-precalculus-worksheets.zip',
+    'statistics':             'bundles/numberbender-statistics-worksheets.zip',
+    'calculus':               'bundles/numberbender-calculus-worksheets.zip',
+    'geometry':               'bundles/numberbender-geometry-worksheets.zip',
+    'inferential-statistics': 'bundles/numberbender-inferential-statistics-worksheets.zip',
+    'trigonometry':           'bundles/numberbender-trigonometry-worksheets.zip',
+    'analytic-geometry':      'bundles/numberbender-analytic-geometry-worksheets.zip',
+    'discrete-math':          'bundles/numberbender-discrete-math-worksheets.zip',
+    'linear-algebra':         'bundles/numberbender-linear-algebra-worksheets.zip'
+  };
+
+  var labels = {
+    'algebra': 'Algebra', 'precalculus': 'Precalculus',
+    'statistics': 'Statistics', 'calculus': 'Calculus',
+    'geometry': 'Geometry', 'inferential-statistics': 'Inferential Statistics',
+    'trigonometry': 'Trigonometry', 'analytic-geometry': 'Analytic Geometry',
+    'discrete-math': 'Discrete Math', 'linear-algebra': 'Linear Algebra'
+  };
+
+  var params = new URLSearchParams(window.location.search);
+  var subject = params.get('subject') || '';
+  var btn = document.getElementById('download-btn');
+  var display = document.getElementById('subject-display');
+
+  if (bundles[subject]) {
+    display.textContent = labels[subject] + ' Bundle';
+    btn.href = bundles[subject];
+    btn.setAttribute('download', '');
+  } else {
+    display.style.display = 'none';
+    document.getElementById('thanks-msg').textContent =
+      'Thank you for joining! Browse all subject bundles below.';
+    btn.style.display = 'none';
+  }
+</script>
+
+</body>
+</html>
