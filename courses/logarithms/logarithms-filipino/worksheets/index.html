@@ -68,6 +68,11 @@
     .nav-dropdown .dropdown-menu a{ display:block; padding:10px 14px; border-radius:8px; color:var(--navy); font-weight:500; font-size:0.95rem; }
     .nav-dropdown .dropdown-menu a:hover{ background:rgba(37,99,235,.08); color:var(--blue); text-decoration:none; }
     .ws-hero{ padding:60px 0 36px; background:radial-gradient(900px 400px at 90% 0%,rgba(6,182,212,.18),transparent 60%),radial-gradient(700px 400px at 0% 0%,rgba(37,99,235,.13),transparent 60%),linear-gradient(180deg,#ffffff 0%,var(--bg) 100%); }
+    .ws-hero-inner{ display:flex; align-items:center; gap:56px; }
+    .ws-hero-text{ flex:1; min-width:0; }
+    .ws-hero-art{ flex:0 0 460px; display:flex; align-items:center; justify-content:flex-end; }
+    .ws-hero-art img{ width:100%; height:auto; display:block; }
+    @media(max-width:900px){ .ws-hero-art{ display:none; } }
     .ws-breadcrumb{ font-size:0.9rem; color:var(--muted); margin-bottom:18px; }
     .ws-breadcrumb a{ color:var(--muted); }
     .ws-breadcrumb a:hover{ color:var(--blue); text-decoration:underline; }
@@ -173,21 +178,24 @@
   </div>
 </header>
 <section class="ws-hero">
-  <div class="container">
-    <nav class="ws-breadcrumb" aria-label="Breadcrumb">
-      <a href="../../../../index.html">Home</a><span class="sep">›</span>
-      <a href="../../../../courses.html">Courses</a><span class="sep">›</span>
-      <span>Logarithms (Filipino)</span>
-    </nav>
-    <span class="ws-eyebrow">Logarithms · Filipino</span>
-    <h1>Logarithms <span class="accent">Practice Worksheets</span></h1>
-    <p class="lead">6 worksheets na sumasaklaw sa exponential at logarithmic functions — mula sa graphing exponentials at intro to logs hanggang sa properties, graphing, at solving equations.</p>
-    <div class="meta-row">
-      <span class="meta-chip"><strong>6</strong> worksheets</span>
-      <span class="meta-chip">Lesson-ordered</span>
-      <span class="meta-chip">Free PDF</span>
-      <a href="https://youtube.com/playlist?list=PLIQh59u-CUovIqQw55o5rv5xUwm3WNbE9" target="_blank" rel="noopener"><img src="../../../../images/worksheets_button/btn-watch-youtube.svg" alt="Watch on YouTube" style="height:40px;display:inline-block;vertical-align:middle;"></a>
+  <div class="container ws-hero-inner">
+    <div class="ws-hero-text">
+      <nav class="ws-breadcrumb" aria-label="Breadcrumb">
+        <a href="../../../../index.html">Home</a><span class="sep">›</span>
+        <a href="../../../../courses.html">Courses</a><span class="sep">›</span>
+        <span>Logarithms (Filipino)</span>
+      </nav>
+      <span class="ws-eyebrow">Logarithms · Filipino</span>
+      <h1>Logarithms <span class="accent">Practice Worksheets</span></h1>
+      <p class="lead">6 worksheets na sumasaklaw sa exponential at logarithmic functions — mula sa graphing exponentials at intro to logs hanggang sa properties, graphing, at solving equations.</p>
+      <div class="meta-row">
+        <span class="meta-chip"><strong>6</strong> worksheets</span>
+        <span class="meta-chip">Lesson-ordered</span>
+        <span class="meta-chip">Free PDF</span>
+        <a href="https://youtube.com/playlist?list=PLIQh59u-CUovIqQw55o5rv5xUwm3WNbE9" target="_blank" rel="noopener"><img src="../../../../images/worksheets_button/btn-watch-youtube.svg" alt="Watch on YouTube" style="height:40px;display:inline-block;vertical-align:middle;"></a>
+      </div>
     </div>
+    <div class="ws-hero-art" aria-hidden="true"><img src="../../../../images/worksheet_page_artworks/12_logarithms.png" alt="Logarithms illustration" width="460" height="auto" loading="eager" style="width:100%;height:auto;display:block;"></div>
   </div>
 </section>
 <section class="ws-section">
@@ -202,12 +210,15 @@
   <div class="ws-topic">Exponential Functions</div>
   <h3>Graphing Exponential Functions</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary ws-btn-img" href="../../../../worksheets/precalculus/03-01-precalc-graphing-exponential-functions.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="../../../../worksheets/precalculus/03-01-precalc-graphing-exponential-functions.pdf" target="_blank" rel="noopener"
        data-worksheet="03-01-precalc-graphing-exponential-functions.pdf" data-action="open"
-       aria-label="Open Graphing Exponential Functions worksheet PDF in a new tab"><img src="../../../../images/worksheets_button/btn-view-pdf.svg" alt="View PDF" style="height:40px;display:block;"></a>
-    <a class="ws-btn ws-btn-img" href="../../../../worksheets/precalculus/03-01-precalc-graphing-exponential-functions.pdf" download
+       aria-label="Open Graphing Exponential Functions worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+    <a class="ws-btn download" href="../../../../worksheets/precalculus/03-01-precalc-graphing-exponential-functions.pdf" download
        data-worksheet="03-01-precalc-graphing-exponential-functions.pdf" data-action="download"
-       aria-label="Download Graphing Exponential Functions worksheet PDF"><img src="../../../../images/worksheets_button/btn-download.svg" alt="Download" style="height:40px;display:block;"></a>
+       aria-label="Download Graphing Exponential Functions worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
+    <a class="ws-btn watch" href="https://youtube.com/playlist?list=PLIQh59u-CUovIqQw55o5rv5xUwm3WNbE9" target="_blank" rel="noopener"
+       data-worksheet="03-01-precalc-graphing-exponential-functions.pdf" data-action="watch"
+       aria-label="Watch Graphing Exponential Functions video lesson on YouTube"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg> Watch</a>
   </div>
 </article>
 <article class="ws-card">
@@ -218,12 +229,15 @@
   <div class="ws-topic">Logarithms</div>
   <h3>Introduction to Logarithmic Functions</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary ws-btn-img" href="../../../../worksheets/precalculus/03-02-precalc-introduction-to-logarithmic-functions.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="../../../../worksheets/precalculus/03-02-precalc-introduction-to-logarithmic-functions.pdf" target="_blank" rel="noopener"
        data-worksheet="03-02-precalc-introduction-to-logarithmic-functions.pdf" data-action="open"
-       aria-label="Open Introduction to Logarithmic Functions worksheet PDF in a new tab"><img src="../../../../images/worksheets_button/btn-view-pdf.svg" alt="View PDF" style="height:40px;display:block;"></a>
-    <a class="ws-btn ws-btn-img" href="../../../../worksheets/precalculus/03-02-precalc-introduction-to-logarithmic-functions.pdf" download
+       aria-label="Open Introduction to Logarithmic Functions worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+    <a class="ws-btn download" href="../../../../worksheets/precalculus/03-02-precalc-introduction-to-logarithmic-functions.pdf" download
        data-worksheet="03-02-precalc-introduction-to-logarithmic-functions.pdf" data-action="download"
-       aria-label="Download Introduction to Logarithmic Functions worksheet PDF"><img src="../../../../images/worksheets_button/btn-download.svg" alt="Download" style="height:40px;display:block;"></a>
+       aria-label="Download Introduction to Logarithmic Functions worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
+    <a class="ws-btn watch" href="https://youtube.com/playlist?list=PLIQh59u-CUovIqQw55o5rv5xUwm3WNbE9" target="_blank" rel="noopener"
+       data-worksheet="03-02-precalc-introduction-to-logarithmic-functions.pdf" data-action="watch"
+       aria-label="Watch Introduction to Logarithmic Functions video lesson on YouTube"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg> Watch</a>
   </div>
 </article>
 <article class="ws-card">
@@ -234,12 +248,15 @@
   <div class="ws-topic">Logarithms</div>
   <h3>Properties of Logarithms</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary ws-btn-img" href="../../../../worksheets/precalculus/03-03-precalc-properties-of-logarithms.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="../../../../worksheets/precalculus/03-03-precalc-properties-of-logarithms.pdf" target="_blank" rel="noopener"
        data-worksheet="03-03-precalc-properties-of-logarithms.pdf" data-action="open"
-       aria-label="Open Properties of Logarithms worksheet PDF in a new tab"><img src="../../../../images/worksheets_button/btn-view-pdf.svg" alt="View PDF" style="height:40px;display:block;"></a>
-    <a class="ws-btn ws-btn-img" href="../../../../worksheets/precalculus/03-03-precalc-properties-of-logarithms.pdf" download
+       aria-label="Open Properties of Logarithms worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+    <a class="ws-btn download" href="../../../../worksheets/precalculus/03-03-precalc-properties-of-logarithms.pdf" download
        data-worksheet="03-03-precalc-properties-of-logarithms.pdf" data-action="download"
-       aria-label="Download Properties of Logarithms worksheet PDF"><img src="../../../../images/worksheets_button/btn-download.svg" alt="Download" style="height:40px;display:block;"></a>
+       aria-label="Download Properties of Logarithms worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
+    <a class="ws-btn watch" href="https://youtube.com/playlist?list=PLIQh59u-CUovIqQw55o5rv5xUwm3WNbE9" target="_blank" rel="noopener"
+       data-worksheet="03-03-precalc-properties-of-logarithms.pdf" data-action="watch"
+       aria-label="Watch Properties of Logarithms video lesson on YouTube"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg> Watch</a>
   </div>
 </article>
 <article class="ws-card">
@@ -250,12 +267,15 @@
   <div class="ws-topic">Logarithms</div>
   <h3>Graphing Logarithmic Functions</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary ws-btn-img" href="../../../../worksheets/precalculus/03-04-precalc-graphing-logarithmic-functions.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="../../../../worksheets/precalculus/03-04-precalc-graphing-logarithmic-functions.pdf" target="_blank" rel="noopener"
        data-worksheet="03-04-precalc-graphing-logarithmic-functions.pdf" data-action="open"
-       aria-label="Open Graphing Logarithmic Functions worksheet PDF in a new tab"><img src="../../../../images/worksheets_button/btn-view-pdf.svg" alt="View PDF" style="height:40px;display:block;"></a>
-    <a class="ws-btn ws-btn-img" href="../../../../worksheets/precalculus/03-04-precalc-graphing-logarithmic-functions.pdf" download
+       aria-label="Open Graphing Logarithmic Functions worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+    <a class="ws-btn download" href="../../../../worksheets/precalculus/03-04-precalc-graphing-logarithmic-functions.pdf" download
        data-worksheet="03-04-precalc-graphing-logarithmic-functions.pdf" data-action="download"
-       aria-label="Download Graphing Logarithmic Functions worksheet PDF"><img src="../../../../images/worksheets_button/btn-download.svg" alt="Download" style="height:40px;display:block;"></a>
+       aria-label="Download Graphing Logarithmic Functions worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
+    <a class="ws-btn watch" href="https://youtube.com/playlist?list=PLIQh59u-CUovIqQw55o5rv5xUwm3WNbE9" target="_blank" rel="noopener"
+       data-worksheet="03-04-precalc-graphing-logarithmic-functions.pdf" data-action="watch"
+       aria-label="Watch Graphing Logarithmic Functions video lesson on YouTube"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg> Watch</a>
   </div>
 </article>
 <article class="ws-card">
@@ -266,12 +286,15 @@
   <div class="ws-topic">Exponential Equations</div>
   <h3>Solving Exponential Equations — Change of Base</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary ws-btn-img" href="../../../../worksheets/precalculus/03-05-precalc-solving-exponential-equations-change-of-base.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="../../../../worksheets/precalculus/03-05-precalc-solving-exponential-equations-change-of-base.pdf" target="_blank" rel="noopener"
        data-worksheet="03-05-precalc-solving-exponential-equations-change-of-base.pdf" data-action="open"
-       aria-label="Open Solving Exponential Equations — Change of Base worksheet PDF in a new tab"><img src="../../../../images/worksheets_button/btn-view-pdf.svg" alt="View PDF" style="height:40px;display:block;"></a>
-    <a class="ws-btn ws-btn-img" href="../../../../worksheets/precalculus/03-05-precalc-solving-exponential-equations-change-of-base.pdf" download
+       aria-label="Open Solving Exponential Equations — Change of Base worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+    <a class="ws-btn download" href="../../../../worksheets/precalculus/03-05-precalc-solving-exponential-equations-change-of-base.pdf" download
        data-worksheet="03-05-precalc-solving-exponential-equations-change-of-base.pdf" data-action="download"
-       aria-label="Download Solving Exponential Equations — Change of Base worksheet PDF"><img src="../../../../images/worksheets_button/btn-download.svg" alt="Download" style="height:40px;display:block;"></a>
+       aria-label="Download Solving Exponential Equations — Change of Base worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
+    <a class="ws-btn watch" href="https://youtube.com/playlist?list=PLIQh59u-CUovIqQw55o5rv5xUwm3WNbE9" target="_blank" rel="noopener"
+       data-worksheet="03-05-precalc-solving-exponential-equations-change-of-base.pdf" data-action="watch"
+       aria-label="Watch Solving Exponential Equations video lesson on YouTube"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg> Watch</a>
   </div>
 </article>
 <article class="ws-card">
@@ -282,12 +305,15 @@
   <div class="ws-topic">Logarithmic Equations</div>
   <h3>Solving Logarithmic Equations</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary ws-btn-img" href="../../../../worksheets/precalculus/03-06-precalc-solving-logarithmic-equations.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="../../../../worksheets/precalculus/03-06-precalc-solving-logarithmic-equations.pdf" target="_blank" rel="noopener"
        data-worksheet="03-06-precalc-solving-logarithmic-equations.pdf" data-action="open"
-       aria-label="Open Solving Logarithmic Equations worksheet PDF in a new tab"><img src="../../../../images/worksheets_button/btn-view-pdf.svg" alt="View PDF" style="height:40px;display:block;"></a>
-    <a class="ws-btn ws-btn-img" href="../../../../worksheets/precalculus/03-06-precalc-solving-logarithmic-equations.pdf" download
+       aria-label="Open Solving Logarithmic Equations worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+    <a class="ws-btn download" href="../../../../worksheets/precalculus/03-06-precalc-solving-logarithmic-equations.pdf" download
        data-worksheet="03-06-precalc-solving-logarithmic-equations.pdf" data-action="download"
-       aria-label="Download Solving Logarithmic Equations worksheet PDF"><img src="../../../../images/worksheets_button/btn-download.svg" alt="Download" style="height:40px;display:block;"></a>
+       aria-label="Download Solving Logarithmic Equations worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
+    <a class="ws-btn watch" href="https://youtube.com/playlist?list=PLIQh59u-CUovIqQw55o5rv5xUwm3WNbE9" target="_blank" rel="noopener"
+       data-worksheet="03-06-precalc-solving-logarithmic-equations.pdf" data-action="watch"
+       aria-label="Watch Solving Logarithmic Equations video lesson on YouTube"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg> Watch</a>
   </div>
 </article>
     </div>
