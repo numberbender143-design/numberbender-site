@@ -136,6 +136,24 @@
       .foot-grid{ grid-template-columns:1fr; }
       .logo-lockup .lockup-img{ height:68px; max-width:300px; }
     }
+  
+    /* ── Worksheet search bar ── */
+    .ws-search-wrap{padding:0 0 22px;}
+    .ws-search{
+      width:100%;padding:11px 16px 11px 44px;
+      font-size:1rem;border:2px solid var(--border);border-radius:10px;
+      background:var(--surface);outline:none;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%2364748B' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'/%3E%3C/svg%3E");
+      background-repeat:no-repeat;background-position:12px center;
+      transition:border-color .2s;color:var(--navy);
+    }
+    .ws-search:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(37,99,235,.12);}
+    .ws-search::placeholder{color:var(--muted);}
+    .ws-no-results{
+      display:none;text-align:center;padding:48px 20px;
+      color:var(--muted);font-size:1.05rem;
+    }
+    .ws-no-results.visible{display:block;}
   </style>
 </head>
 <body style="--accent-color:#b45309;--accent-bg:rgba(180,83,9,0.10);">
@@ -201,7 +219,13 @@
 <section class="ws-section">
   <div class="container">
     <p class="ws-note"><strong>Tandaan:</strong> Ang mga worksheets na ito ay mula sa Precalculus exponential &amp; logarithmic functions unit at naaayon sa mga paksa ng playlist na ito.</p>
-    <div class="ws-grid">
+    <div class="ws-search-wrap">
+  <input type="search" id="wsSearch" class="ws-search"
+         placeholder="Search worksheets by topic or title…"
+         aria-label="Search worksheets">
+</div>
+<p class="ws-no-results" id="wsNoResults">No worksheets match your search. Try a different keyword.</p>
+<div class="ws-grid">
 <article class="ws-card">
   <div class="ws-card-meta">
     <span class="ws-lesson">Lesson 1</span>
@@ -417,5 +441,50 @@
   });
 </script>
 <script src="../../../../js/video-modal.js" defer></script>
+
+<script>
+(function(){
+  var inp = document.getElementById('wsSearch');
+  var msg = document.getElementById('wsNoResults');
+  if (!inp) return;
+  inp.addEventListener('input', function(){
+    var q = inp.value.trim().toLowerCase();
+    var cards = document.querySelectorAll('.ws-card');
+    var units = document.querySelectorAll('.ws-unit-header, h2.ws-unit');
+    cards.forEach(function(c){
+      var title  = (c.querySelector('h3')         || {}).textContent || '';
+      var topic  = (c.querySelector('.ws-topic')  || {}).textContent || '';
+      var lesson = (c.querySelector('.ws-lesson') || {}).textContent || '';
+      var match  = !q || [title, topic, lesson].some(function(t){
+        return t.toLowerCase().indexOf(q) !== -1;
+      });
+      c.style.display = match ? '' : 'none';
+    });
+    units.forEach(function(u){
+      if (!q){ u.style.display = ''; return; }
+      var sib = u.nextElementSibling;
+      var any = false;
+      while(sib && !sib.classList.contains('ws-unit-header') && !(sib.tagName==='H2' && sib.classList.contains('ws-unit'))){
+        if(sib.classList.contains('ws-card') && sib.style.display !== 'none') any = true;
+        // also look inside ws-grid divs
+        if(sib.classList.contains('ws-grid')){
+          sib.querySelectorAll('.ws-card').forEach(function(c){
+            if(c.style.display !== 'none') any = true;
+          });
+        }
+        sib = sib.nextElementSibling;
+      }
+      u.style.display = any ? '' : 'none';
+    });
+    if(msg){
+      var anyVisible = Array.prototype.some.call(cards, function(c){
+        return c.style.display !== 'none';
+      });
+      msg.className = (q && !anyVisible) ? 'ws-no-results visible' : 'ws-no-results';
+    }
+  });
+})();
+</script>
+
 </body>
 </html>
