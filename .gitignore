@@ -17,3 +17,6 @@
 
 # macOS FUSE temp files
 .fuse_hidden*
+
+# ZIP bundles (hosted on Google Drive, not Netlify)
+bundles/*.zip
