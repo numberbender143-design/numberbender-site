@@ -5128,5 +5128,115 @@
     "watchUrl": "https://www.youtube.com/watch?v=s3bL4ZFVyls",
     "pageUrl": "/courses/algebra/intermediate-algebra/worksheets/",
     "watchUrlFil": "https://www.youtube.com/watch?v=GfmyLztNY3E"
+  },
+  {
+    "title": "Power Rule & Constant Rule: Finding Derivatives",
+    "topic": "Basic Rules",
+    "subject": "Calculus · Derivatives",
+    "lesson": "Lesson 4.1",
+    "difficulty": "beg",
+    "pdfUrl": "/worksheets/calculus/derivatives/worksheet-derivatives-power-rule-constant-rule.pdf",
+    "watchUrl": "https://youtu.be/Sq40TTKQJhE",
+    "pageUrl": "/courses/calculus/derivatives-english/worksheets/",
+    "watchUrlFil": "https://youtu.be/Sq40TTKQJhE"
+  },
+  {
+    "title": "Derivatives Using the Power Rule",
+    "topic": "Basic Rules",
+    "subject": "Calculus · Derivatives",
+    "lesson": "Lesson 4.2",
+    "difficulty": "beg",
+    "pdfUrl": "/worksheets/calculus/derivatives/worksheet-derivatives-using-power-rule.pdf",
+    "watchUrl": "https://youtu.be/K-gBxRRcUX8",
+    "pageUrl": "/courses/calculus/derivatives-english/worksheets/",
+    "watchUrlFil": "https://youtu.be/K-gBxRRcUX8"
+  },
+  {
+    "title": "Finding the Derivative Using the Product Rule",
+    "topic": "Product/Quotient/Chain",
+    "subject": "Calculus · Derivatives",
+    "lesson": "Lesson 14.1",
+    "difficulty": "int",
+    "pdfUrl": "/worksheets/calculus/derivatives/worksheet-derivatives-product-rule.pdf",
+    "watchUrl": "https://youtu.be/wut95XJZWjQ",
+    "pageUrl": "/courses/calculus/derivatives-english/worksheets/",
+    "watchUrlFil": "https://youtu.be/wut95XJZWjQ"
+  },
+  {
+    "title": "Derivative Rules: Product & Quotient Rules with Given Values",
+    "topic": "Product/Quotient/Chain",
+    "subject": "Calculus · Derivatives",
+    "lesson": "Lesson 14.2",
+    "difficulty": "int",
+    "pdfUrl": "/worksheets/calculus/derivatives/worksheet-derivatives-product-quotient-given-values.pdf",
+    "watchUrl": "https://youtu.be/WSapMTjl5xs",
+    "pageUrl": "/courses/calculus/derivatives-english/worksheets/",
+    "watchUrlFil": "https://youtu.be/WSapMTjl5xs"
+  },
+  {
+    "title": "Implicit Differentiation",
+    "topic": "Implicit Differentiation",
+    "subject": "Calculus · Derivatives",
+    "lesson": "Lesson 14.5",
+    "difficulty": "int",
+    "pdfUrl": "/worksheets/calculus/derivatives/worksheet-derivatives-implicit-differentiation-intro.pdf",
+    "watchUrl": "https://youtu.be/LEgAtSBYrW8",
+    "pageUrl": "/courses/calculus/derivatives-english/worksheets/",
+    "watchUrlFil": "https://youtu.be/LEgAtSBYrW8"
+  },
+  {
+    "title": "Optimization Problems Using Derivatives",
+    "topic": "Optimization",
+    "subject": "Calculus · Derivatives",
+    "lesson": "Lesson 31.1",
+    "difficulty": "adv",
+    "pdfUrl": "/worksheets/calculus/derivatives/worksheet-derivatives-optimization-problems.pdf",
+    "watchUrl": "https://youtu.be/8iT01LY0rC0",
+    "pageUrl": "/courses/calculus/derivatives-english/worksheets/",
+    "watchUrlFil": "https://youtu.be/8iT01LY0rC0"
+  },
+  {
+    "title": "Optimization Word Problems Using Derivatives",
+    "topic": "Optimization",
+    "subject": "Calculus · Derivatives",
+    "lesson": "Lesson 32.1",
+    "difficulty": "adv",
+    "pdfUrl": "/worksheets/calculus/derivatives/worksheet-derivatives-optimization-word-problems.pdf",
+    "watchUrl": "https://youtu.be/-nqUM4k6oYA",
+    "pageUrl": "/courses/calculus/derivatives-english/worksheets/",
+    "watchUrlFil": "https://youtu.be/-nqUM4k6oYA"
+  },
+  {
+    "title": "Optimization: Open Top Box Problem",
+    "topic": "Optimization",
+    "subject": "Calculus · Derivatives",
+    "lesson": "Lesson 33.1",
+    "difficulty": "adv",
+    "pdfUrl": "/worksheets/calculus/derivatives/worksheet-derivatives-optimization-open-box.pdf",
+    "watchUrl": "https://youtu.be/Rl2rlNiC8sw",
+    "pageUrl": "/courses/calculus/derivatives-english/worksheets/",
+    "watchUrlFil": "https://youtu.be/Rl2rlNiC8sw"
+  },
+  {
+    "title": "Related Rates",
+    "topic": "Related Rates",
+    "subject": "Calculus · Derivatives",
+    "lesson": "Lesson 40.5",
+    "difficulty": "adv",
+    "pdfUrl": "/worksheets/calculus/derivatives/worksheet-derivatives-related-rates-basic.pdf",
+    "watchUrl": "https://youtu.be/Xc2qlgYfM4I",
+    "pageUrl": "/courses/calculus/derivatives-english/worksheets/",
+    "watchUrlFil": "https://youtu.be/Xc2qlgYfM4I"
+  },
+  {
+    "title": "Related Rates: Geometric Applications",
+    "topic": "Related Rates",
+    "subject": "Calculus · Derivatives",
+    "lesson": "Lesson 41.5",
+    "difficulty": "adv",
+    "pdfUrl": "/worksheets/calculus/derivatives/worksheet-derivatives-related-rates-geometric.pdf",
+    "watchUrl": "https://youtu.be/4rHR3WNtGB0",
+    "pageUrl": "/courses/calculus/derivatives-english/worksheets/",
+    "watchUrlFil": "https://youtu.be/4rHR3WNtGB0"
   }
 ]
