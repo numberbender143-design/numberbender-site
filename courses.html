@@ -1588,46 +1588,41 @@
 
 
 <script>
-  // Fetch the latest thumbnail for each YouTube playlist.
-  // Uses YouTube's public oEmbed endpoint (no API key needed).
-  // Cache-busting strategy:
-  //   1. oEmbed fetch uses cache:'no-cache' so the browser always asks YouTube for fresh metadata.
-  //   2. The resolved image src gets a daily ?cb= param so the browser re-fetches the actual
-  //      image from YouTube's CDN once per day, picking up any thumbnail you updated in Studio.
-  //   3. We try maxresdefault first (where YouTube serves the latest custom playlist thumbnail),
-  //      then fall back to hqdefault if maxres returns a 404.
+  // Fetch actual playlist thumbnails via YouTube Data API v3.
+  // This returns the real custom thumbnail set in YouTube Studio — not just the first video.
+  // Key is restricted to: numberbender.com/* | YouTube Data API v3 only.
   (function(){
-    // Daily cache-buster — same value all day, refreshes at midnight UTC.
-    const cb = new Date().toISOString().slice(0, 10).replace(/-/g, '');
+    const YT_API_KEY = 'AIzaSyApHeJvJ15Nhe4bLv0ntt8WFPENcMag11Q';
 
-    function tryMaxres(baseUrl, img) {
-      const maxres = baseUrl.replace(/\/[^/]+\.jpg(\?.*)?$/, '/maxresdefault.jpg') + '?cb=' + cb;
-      const probe  = new Image();
-      probe.onload  = () => { img.src = maxres; };
-      probe.onerror = () => {
-        const hq = baseUrl.replace(/\/(default|hqdefault|mqdefault|maxresdefault)\.jpg(\?.*)?$/, '/hqdefault.jpg') + '?cb=' + cb;
-        img.src = hq;
-      };
-      probe.src = maxres;
-    }
+    const imgs   = document.querySelectorAll('img.yt-thumb[data-playlist]');
+    const ids    = [...new Set([...imgs].map(img => img.dataset.playlist))];
 
-    const imgs = document.querySelectorAll('img.yt-thumb[data-playlist]');
-    imgs.forEach(img => {
-      const plid = img.dataset.playlist;
-      const oembedUrl = `https://www.youtube.com/oembed?url=https://www.youtube.com/playlist?list=${plid}&format=json`;
-      fetch(oembedUrl, { cache: 'no-cache' })
-        .then(r => r.ok ? r.json() : Promise.reject('oembed failed'))
-        .then(data => {
-          if (data && data.thumbnail_url) {
-            tryMaxres(data.thumbnail_url, img);
-          } else {
-            img.classList.add('failed');
-          }
-        })
-        .catch(() => {
-          img.classList.add('failed');
+    // Batch into groups of 50 (API max per request)
+    const chunks = [];
+    for (let i = 0; i < ids.length; i += 50) chunks.push(ids.slice(i, i + 50));
+
+    const thumbMap = {};
+
+    Promise.all(chunks.map(batch => {
+      const url = `https://www.googleapis.com/youtube/v3/playlists?part=snippet&id=${batch.join(',')}&maxResults=50&key=${YT_API_KEY}`;
+      return fetch(url, { cache: 'no-cache' })
+        .then(r => r.ok ? r.json() : Promise.reject('yt-api failed'));
+    }))
+    .then(results => {
+      results.forEach(data => {
+        (data.items || []).forEach(item => {
+          const t = item.snippet.thumbnails;
+          const url = (t.maxres || t.standard || t.high || t.medium || t.default || {}).url;
+          if (url) thumbMap[item.id] = url;
         });
-    });
+      });
+      imgs.forEach(img => {
+        const url = thumbMap[img.dataset.playlist];
+        if (url) img.src = url;
+        else img.classList.add('failed');
+      });
+    })
+    .catch(() => imgs.forEach(img => img.classList.add('failed')));
   })();
 </script>
 <script>
