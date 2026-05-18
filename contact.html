@@ -374,56 +374,92 @@
   }
   .foot-signup-form button:hover{ background: #0891b2; }
 
-  /* ── Research / newsletter form (bottom section) ── */
+  /* ── Research form (bottom section) ── */
   .research-section{
     background: var(--surface);
     border-top: 1px solid var(--border);
-    padding: 60px 0;
+    padding: 64px 0;
   }
-  .research-inner{
+  .research-section .section-head{ text-align:center; margin-bottom: 36px; }
+  .research-section .section-head .section-eyebrow{ margin-bottom: 8px; }
+  .research-section .section-head h2{ margin-bottom: 10px; }
+  .research-section .section-head p{ color: var(--muted); font-size: 0.97rem; max-width: 560px; margin: 0 auto; }
+  .research-form-box{
+    max-width: 680px; margin: 0 auto;
+    background: var(--bg); border: 1.5px solid var(--border);
+    border-radius: 16px; padding: 36px 40px;
+    box-shadow: 0 4px 24px rgba(0,0,0,.06);
+  }
+  .rf-row{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .rf-group{ margin-bottom:14px; }
+  .rf-group label{
+    display:block; font-size:0.82rem; font-weight:700;
+    color: var(--navy); margin-bottom:5px;
+  }
+  .rf-group input, .rf-group select{
+    width:100%; padding:10px 14px; border:1.5px solid var(--border);
+    border-radius:9px; font-size:0.93rem; color: var(--navy);
+    background: var(--surface); font-family:inherit;
+    transition:border-color .2s; box-sizing:border-box;
+    appearance:none; -webkit-appearance:none;
+  }
+  .rf-group input:focus, .rf-group select:focus{
+    outline:none; border-color:var(--blue);
+    box-shadow: 0 0 0 3px rgba(37,99,235,.12);
+  }
+  .rf-group.full{ grid-column:1/-1; }
+  .rf-consent{
+    background:#f8fafc; border:1px solid var(--border);
+    border-radius:10px; padding:14px 16px; margin-bottom:18px;
+    grid-column:1/-1;
+  }
+  .rf-consent label{
+    display:flex; gap:10px; align-items:flex-start;
+    font-size:0.84rem; color: var(--muted); cursor:pointer; line-height:1.5;
+  }
+  .rf-consent input[type=checkbox]{
+    width:16px; height:16px; flex-shrink:0; margin-top:2px; accent-color:var(--blue);
+  }
+  .btn-research{
+    width:100%; padding:13px; background:var(--blue); color:white;
+    font-size:1rem; font-weight:700; border:none; border-radius:10px;
+    cursor:pointer; font-family:inherit; transition:background .2s, transform .15s;
+  }
+  .btn-research:hover{ background:#1d4ed8; transform:translateY(-1px); }
+  .rf-privacy{ text-align:center; font-size:0.78rem; color: var(--muted); margin-top:12px; }
+  /* ── Free resources CTA strip ── */
+  .free-resources-strip{
+    background: var(--navy); color: white;
+    padding: 28px 0; border-top: none;
+  }
+  .free-resources-inner{
     display:flex; align-items:center; justify-content:space-between;
-    gap: 36px; flex-wrap:wrap;
-    max-width: 900px; margin: 0 auto;
+    gap: 20px; flex-wrap:wrap; max-width: 860px; margin: 0 auto;
   }
-  .research-copy{ flex: 1; min-width: 260px; }
-  .research-copy .nl-eyebrow{
-    font-size: 0.8rem; font-weight: 700; text-transform: uppercase;
-    letter-spacing: .1em; color: var(--blue); margin-bottom: 8px;
+  .free-resources-copy p{ margin:0; font-size:0.97rem; opacity:.85; }
+  .free-resources-copy strong{ font-size:1.05rem; }
+  .free-resources-form{ display:flex; gap:10px; flex-wrap:wrap; }
+  .frf-input{
+    padding:10px 14px; border:1.5px solid rgba(255,255,255,.25);
+    border-radius:9px; font-size:0.93rem; font-family:inherit;
+    background:rgba(255,255,255,.1); color:white;
+    min-width: 220px; transition:border-color .2s;
   }
-  .research-copy h2{
-    font-size: clamp(1.4rem, 2.4vw, 1.9rem);
-    line-height: 1.2; margin-bottom: 8px;
+  .frf-input::placeholder{ color:rgba(255,255,255,.5); }
+  .frf-input:focus{ outline:none; border-color:rgba(255,255,255,.6); }
+  .frf-btn{
+    padding:10px 20px; background:var(--teal); color:white;
+    border:none; border-radius:9px; font-size:0.93rem; font-weight:700;
+    cursor:pointer; font-family:inherit; white-space:nowrap; transition:background .2s;
   }
-  .research-copy p{ color: var(--muted); font-size: 0.97rem; }
-  .research-form-wrap{ flex: 1; min-width: 280px; }
-  .research-form{ display:flex; flex-direction: column; gap: 10px; }
-  .nl-row{ display:flex; gap: 10px; flex-wrap: wrap; }
-  .nl-row .nl-input{ flex: 1; min-width: 140px; }
-  .nl-input{
-    width: 100%; padding: 11px 14px;
-    border: 1.5px solid var(--border); border-radius: 10px;
-    font-size: 0.95rem; font-family: inherit;
-    background: var(--bg); color: var(--navy);
-    transition: border-color .15s ease, box-shadow .15s ease;
-    appearance: none; -webkit-appearance: none;
-  }
-  .nl-input:focus{
-    outline: none; border-color: var(--blue);
-    box-shadow: 0 0 0 4px rgba(37,99,235,.12);
-  }
-  .nl-input::placeholder{ color: var(--muted); }
-  .nl-btn{
-    background: var(--blue); color: white;
-    padding: 13px 20px; border: none; border-radius: 10px;
-    font-size: 1rem; font-weight: 700; cursor: pointer;
-    font-family: inherit; white-space: nowrap;
-    transition: background .15s ease, transform .15s ease;
-  }
-  .nl-btn:hover{ background: #1d4ed8; transform: translateY(-1px); }
-  .nl-note{ font-size: 0.82rem; color: var(--muted); margin-top: 4px; }
+  .frf-btn:hover{ background:#0891b2; }
   @media (max-width: 700px){
-    .research-inner{ flex-direction: column; }
-    .nl-row{ flex-direction: column; }
+    .research-form-box{ padding: 24px 18px; }
+    .rf-row{ grid-template-columns:1fr; }
+    .free-resources-inner{ flex-direction:column; }
+    .free-resources-form{ width:100%; }
+    .frf-input{ width:100%; }
+    .frf-btn{ width:100%; }
   }
 
 </style>
@@ -616,45 +652,151 @@
 
 <section class="research-section">
   <div class="container">
-    <div class="research-inner">
-      <div class="research-copy">
-        <div class="nl-eyebrow">📬 Free resources from Dr. E</div>
-        <h2>Get free math teaching resources every week</h2>
-        <p>Flipped classroom strategies, video teaching tips, new worksheets, and math resources for educators — delivered weekly, totally free. No fluff, no hard sell. Unsubscribe anytime.</p>
-      </div>
-      <div class="research-form-wrap">
-        <form class="research-form" action="https://numberbender.us17.list-manage.com/subscribe/post?u=65e30fe527dde6fb604f6760a&amp;id=ad0977e0cc&amp;f_id=003758e0f0" method="post" target="_blank">
-          <div class="nl-row">
-            <input class="nl-input" type="text" name="FNAME" placeholder="First name (optional)" autocomplete="given-name" aria-label="First name">
-            <select class="nl-input" name="ROLE" aria-label="I am a...">
-              <option value="">I am a... (optional)</option>
-              <option value="Student">Student</option>
-              <option value="Teacher">Teacher</option>
-              <option value="Administrator">Administrator</option>
-              <option value="Researcher">Researcher</option>
-              <option value="Other">Other</option>
+    <div class="section-head">
+      <div class="section-eyebrow">📊 Help us improve math education</div>
+      <h2>Join our research community</h2>
+      <p>Your answers help Dr. E understand how students and educators access math resources — and shape future content, workshops, and research.</p>
+    </div>
+
+    <div class="research-form-box">
+      <form name="contact-research" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact-research">
+        <p style="display:none;"><input name="bot-field"></p>
+
+        <div class="rf-row">
+          <div class="rf-group">
+            <label for="rf-fname">First Name *</label>
+            <input type="text" id="rf-fname" name="first_name" required placeholder="Maria">
+          </div>
+          <div class="rf-group">
+            <label for="rf-lname">Last Name *</label>
+            <input type="text" id="rf-lname" name="last_name" required placeholder="Santos">
+          </div>
+        </div>
+
+        <div class="rf-row">
+          <div class="rf-group full">
+            <label for="rf-email">Email Address *</label>
+            <input type="email" id="rf-email" name="email" required placeholder="you@example.com" autocomplete="email">
+          </div>
+        </div>
+
+        <div class="rf-row">
+          <div class="rf-group">
+            <label for="rf-role">I am a… *</label>
+            <select id="rf-role" name="role" required>
+              <option value="">Select role</option>
+              <option value="student">Student</option>
+              <option value="teacher">Teacher / Educator</option>
+              <option value="parent">Parent</option>
+              <option value="tutor">Tutor</option>
+              <option value="self-learner">Self-Learner</option>
             </select>
           </div>
-          <div class="nl-row">
-            <input class="nl-input" type="text" name="SCHOOL" placeholder="School / Institution (optional)" aria-label="School or institution">
-            <input class="nl-input" type="text" name="COUNTRY" placeholder="Country (optional)" autocomplete="country-name" aria-label="Country">
+          <div class="rf-group">
+            <label for="rf-country">Country *</label>
+            <input type="text" id="rf-country" name="country" required placeholder="Philippines" autocomplete="country-name">
           </div>
-          <select class="nl-input" name="GOAL" aria-label="I'm here to...">
-            <option value="">I'm here to... (optional)</option>
-            <option value="Learn math">Learn math</option>
-            <option value="Improve my teaching">Improve my teaching</option>
-            <option value="Find flipped classroom resources">Find flipped classroom resources</option>
-            <option value="Research and professional development">Research &amp; professional development</option>
-            <option value="Just exploring">Just exploring</option>
-          </select>
-          <div class="nl-row">
-            <input class="nl-input" type="email" name="EMAIL" required placeholder="your@email.com" autocomplete="email" aria-label="Email address">
-            <button class="nl-btn" type="submit">Get Free Resources →</button>
+        </div>
+
+        <div class="rf-row">
+          <div class="rf-group">
+            <label for="rf-setting">School Setting</label>
+            <select id="rf-setting" name="school_setting">
+              <option value="">Select setting</option>
+              <option value="public">Public School</option>
+              <option value="private">Private School</option>
+              <option value="university">University / College</option>
+              <option value="homeschool">Homeschool</option>
+              <option value="self-study">Self-Study / No School</option>
+            </select>
           </div>
-          <div aria-hidden="true" style="position:absolute;left:-5000px;"><input type="text" name="b_65e30fe527dde6fb604f6760a_ad0977e0cc" tabindex="-1" value=""></div>
-        </form>
-        <p class="nl-note">All fields optional except email. No spam. Unsubscribe anytime.</p>
+          <div class="rf-group">
+            <label for="rf-area">Area Type</label>
+            <select id="rf-area" name="area_type">
+              <option value="">Select area</option>
+              <option value="urban">Urban / City</option>
+              <option value="suburban">Suburban</option>
+              <option value="rural">Rural</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="rf-row">
+          <div class="rf-group">
+            <label for="rf-access">Access to Paid Resources?</label>
+            <select id="rf-access" name="paid_resource_access">
+              <option value="">Select</option>
+              <option value="yes">Yes, regularly</option>
+              <option value="sometimes">Sometimes</option>
+              <option value="no">No / Very limited</option>
+            </select>
+          </div>
+          <div class="rf-group">
+            <label for="rf-internet">Internet Access</label>
+            <select id="rf-internet" name="internet_access">
+              <option value="">Select</option>
+              <option value="reliable">Reliable</option>
+              <option value="inconsistent">Inconsistent</option>
+              <option value="limited">Very Limited</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="rf-row">
+          <div class="rf-group full">
+            <label for="rf-lang">Primary Language of Math Instruction</label>
+            <select id="rf-lang" name="instruction_language">
+              <option value="">Select language</option>
+              <option value="english">English</option>
+              <option value="filipino">Filipino / Tagalog</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="rf-row">
+          <div class="rf-group full">
+            <label for="rf-use">How will you use these resources?</label>
+            <select id="rf-use" name="usage_intent">
+              <option value="">Select use</option>
+              <option value="classroom">Classroom instruction</option>
+              <option value="homework">Homework / assignments</option>
+              <option value="self-study">Personal self-study</option>
+              <option value="tutoring">Tutoring sessions</option>
+              <option value="exam-prep">Exam preparation</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="rf-row">
+          <div class="rf-consent">
+            <label>
+              <input type="checkbox" name="research_consent" value="yes">
+              <span>I'm willing to participate in <strong>anonymous educational research</strong> to help improve math learning access globally. My data will never be sold and will only be used for academic publication. <em>(Optional)</em></span>
+            </label>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-research">Submit Research Form</button>
+        <p class="rf-privacy">🔒 No spam. Your information is kept private and secure.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="free-resources-strip">
+  <div class="container">
+    <div class="free-resources-inner">
+      <div class="free-resources-copy">
+        <strong>📬 Get free math resources every week</strong>
+        <p>Worksheets, video tips, and flipped classroom strategies — from Dr. E, totally free.</p>
       </div>
+      <form class="free-resources-form" action="https://numberbender.us17.list-manage.com/subscribe/post?u=65e30fe527dde6fb604f6760a&amp;id=ad0977e0cc&amp;f_id=003758e0f0" method="post" target="_blank">
+        <input class="frf-input" type="email" name="EMAIL" required placeholder="your@email.com" autocomplete="email" aria-label="Email address">
+        <div aria-hidden="true" style="position:absolute;left:-5000px;"><input type="text" name="b_65e30fe527dde6fb604f6760a_ad0977e0cc" tabindex="-1" value=""></div>
+        <button class="frf-btn" type="submit">Get Free Resources →</button>
+      </form>
     </div>
   </div>
 </section>
