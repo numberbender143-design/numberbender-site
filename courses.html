@@ -1588,29 +1588,43 @@
 
 
 <script>
-  // Fetch first video thumbnail from each YouTube playlist and use it as the course-card image.
-  // Uses YouTube's public oEmbed endpoint (no API key needed, runs from the browser, never blocked
-  // by referrer or embed restrictions like Error 153). Falls back gracefully to the gradient + emoji
-  // if a playlist's metadata can't be loaded.
+  // Fetch the latest thumbnail for each YouTube playlist.
+  // Uses YouTube's public oEmbed endpoint (no API key needed).
+  // Cache-busting strategy:
+  //   1. oEmbed fetch uses cache:'no-cache' so the browser always asks YouTube for fresh metadata.
+  //   2. The resolved image src gets a daily ?cb= param so the browser re-fetches the actual
+  //      image from YouTube's CDN once per day, picking up any thumbnail you updated in Studio.
+  //   3. We try maxresdefault first (where YouTube serves the latest custom playlist thumbnail),
+  //      then fall back to hqdefault if maxres returns a 404.
   (function(){
+    // Daily cache-buster — same value all day, refreshes at midnight UTC.
+    const cb = new Date().toISOString().slice(0, 10).replace(/-/g, '');
+
+    function tryMaxres(baseUrl, img) {
+      const maxres = baseUrl.replace(/\/[^/]+\.jpg(\?.*)?$/, '/maxresdefault.jpg') + '?cb=' + cb;
+      const probe  = new Image();
+      probe.onload  = () => { img.src = maxres; };
+      probe.onerror = () => {
+        const hq = baseUrl.replace(/\/(default|hqdefault|mqdefault|maxresdefault)\.jpg(\?.*)?$/, '/hqdefault.jpg') + '?cb=' + cb;
+        img.src = hq;
+      };
+      probe.src = maxres;
+    }
+
     const imgs = document.querySelectorAll('img.yt-thumb[data-playlist]');
     imgs.forEach(img => {
       const plid = img.dataset.playlist;
       const oembedUrl = `https://www.youtube.com/oembed?url=https://www.youtube.com/playlist?list=${plid}&format=json`;
-      fetch(oembedUrl)
+      fetch(oembedUrl, { cache: 'no-cache' })
         .then(r => r.ok ? r.json() : Promise.reject('oembed failed'))
         .then(data => {
           if (data && data.thumbnail_url) {
-            // Upgrade to higher-resolution thumbnail when possible
-            const hi = data.thumbnail_url.replace(/\/(default|hqdefault|mqdefault)\.jpg/, '/hqdefault.jpg');
-            img.src = hi;
+            tryMaxres(data.thumbnail_url, img);
           } else {
             img.classList.add('failed');
           }
         })
         .catch(() => {
-          // oEmbed sometimes blocks playlists. Fall back to grabbing the first video ID via the
-          // RSS feed proxy that some hosts allow, or just leave the gradient+emoji fallback.
           img.classList.add('failed');
         });
     });
