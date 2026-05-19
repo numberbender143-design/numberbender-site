@@ -221,9 +221,21 @@
   }
   .awards-grid{
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
     gap: 18px;
   }
+  .award-logo-band{
+    border-radius: 10px;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    min-height: 58px;
+  }
+  .oer-band{ background: #ffffff; border: 1px solid #e2e8f0; }
+  .merlot-band{ background: #006644; }
+  .award-inst-logo{ max-height: 38px; max-width: 130px; width: auto; height: auto; display: block; }
   .award-card{
     background: var(--bg);
     border: 1px solid var(--border);
@@ -745,6 +757,25 @@
         <h3>Filipino Hero Community Award</h3>
         <p>Recognized by Kababayan Today, Los Angeles, for community impact through education.</p>
       </div>
+
+      <div class="award-card">
+        <div class="award-year">2026</div>
+        <div class="award-logo-band oer-band">
+          <img src="images/oer-commons-logo.png" alt="OER Commons" class="award-inst-logo">
+        </div>
+        <h3>Featured on OER Commons</h3>
+        <p>Bilingual math worksheets &amp; video lessons (English &amp; Filipino) listed in the world's largest open educational resource repository.</p>
+      </div>
+
+      <div class="award-card">
+        <div class="award-year">2026</div>
+        <div class="award-logo-band merlot-band">
+          <img src="images/merlot-logo.svg" alt="MERLOT" class="award-inst-logo">
+        </div>
+        <h3>Listed on MERLOT</h3>
+        <p>Bilingual math worksheets &amp; video lessons peer-reviewed and curated in MERLOT's premier collection of online teaching materials.</p>
+      </div>
+
     </div>
   </div>
 </section>
