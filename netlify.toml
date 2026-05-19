@@ -132,6 +132,12 @@
   status = 301
   force  = true
 
+[[redirects]]
+  from = "/for-filipino-students.html"
+  to   = "/for-filipino-students"
+  status = 301
+  force  = true
+
 # Speaking sub-pages
 [[redirects]]
   from = "/speaking-2025-06-otc.html"
