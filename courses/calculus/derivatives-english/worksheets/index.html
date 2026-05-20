@@ -197,22 +197,44 @@
     .ws-card .ws-actions{
       margin-top: auto; display:flex; gap: 8px;
     }
+    /* ── Option B: Soft Tinted Fill ─────────────────────────── */
     .ws-card .ws-btn{
       flex:1; display:inline-flex; align-items:center; justify-content:center;
-      gap: 6px;
-      padding: 10px 12px; border-radius: 10px;
+      gap: 6px; padding: 10px 12px; border-radius: 10px;
       font-weight: 600; font-size: 0.9rem;
-      text-decoration: none;
-      border: 1px solid var(--border);
-      color: var(--navy); background: white;
-      transition: background .15s ease, border-color .15s ease, color .15s ease;
+      text-decoration: none; border: none; cursor: pointer; font-family: inherit;
+      transition: background .18s ease, color .18s ease;
     }
-    .ws-card .ws-btn.primary{
-      background: var(--accent-color); color: white; border-color: var(--accent-color);
+    .ws-card .ws-btn.primary{ background:#EFF6FF; color:#2563EB; }
+    .ws-card .ws-btn.primary:hover{ background:#2563EB; color:white; text-decoration:none; }
+    .ws-card .ws-btn.download{ background:#F0FDFA; color:#1F6F6B; }
+    .ws-card .ws-btn.download:hover{ background:#1F6F6B; color:white; text-decoration:none; }
+    .ws-card .ws-btn.watch{ background:#FEF2F2; color:#dc2626; }
+    .ws-card .ws-btn.watch:hover{ background:#dc2626; color:white; text-decoration:none; }
+    /* PDF Modal */
+    .pdf-modal-overlay{
+      display:none; position:fixed; inset:0; z-index:1000;
+      background:rgba(15,23,42,0.78); backdrop-filter:blur(4px);
+      align-items:center; justify-content:center;
     }
-    .ws-card .ws-btn.primary:hover{ filter: brightness(1.05); text-decoration: none; }
-    .ws-card .ws-btn:hover{ border-color: var(--accent-color); color: var(--accent-color); text-decoration: none; }
-    .ws-card .ws-btn.primary:hover{ color: white; }
+    .pdf-modal-overlay.open{ display:flex; }
+    .pdf-modal{
+      position:relative; width:min(920px,94vw); height:min(88vh,1100px);
+      background:#fff; border-radius:16px; overflow:hidden;
+      display:flex; flex-direction:column;
+      box-shadow:0 25px 60px rgba(0,0,0,0.40);
+    }
+    .pdf-modal-bar{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:12px 18px; background:var(--navy); color:white; flex-shrink:0; gap:12px;
+    }
+    .pdf-modal-title{ font-size:0.9rem; font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    .pdf-modal-actions{ display:flex; align-items:center; gap:8px; flex-shrink:0; }
+    .pdf-modal-dl{ font-size:0.8rem; font-weight:600; color:rgba(255,255,255,0.85); text-decoration:none; background:rgba(255,255,255,0.12); border-radius:6px; padding:5px 10px; }
+    .pdf-modal-dl:hover{ background:rgba(255,255,255,0.22); color:white; text-decoration:none; }
+    .pdf-modal-close{ background:rgba(255,255,255,0.12); border:none; color:white; border-radius:8px; width:32px; height:32px; cursor:pointer; font-size:1.1rem; display:grid; place-items:center; flex-shrink:0; }
+    .pdf-modal-close:hover{ background:rgba(255,255,255,0.28); }
+    .pdf-modal iframe{ flex:1; border:none; width:100%; display:block; }
 
     /* HUB CARDS */
     .ws-hub-grid{
@@ -380,7 +402,7 @@
         <h1>Derivatives <span class="accent">Practice Worksheets</span></h1>
         <p class="lead">20 derivative practice worksheets — from the basic power rule to optimization, related rates, and applications. Lesson-ordered to follow the video playlist.</p>
         <div class="meta-row">
-          <span class="meta-chip"><strong>45</strong> worksheets</span>
+          <span class="meta-chip"><strong>55</strong> worksheets</span>
           <span class="meta-chip">Lesson-ordered</span>
           <span class="meta-chip">Free PDF</span>
           <a href="https://youtube.com/playlist?list=PLmnIr_qavptSJj_DR3PbzjjSXDWMUk3Px" target="_blank" rel="noopener"><img src="../../../../images/worksheets_button/btn-watch-youtube.svg" alt="Watch on YouTube" style="height:40px;display:inline-block;vertical-align:middle;"></a>
@@ -408,9 +430,10 @@
   <div class="ws-topic">Algebra Skills</div>
   <h3>Solving Quadratic Equations by Factoring</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-solving-quadratic-by-factoring.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-solving-quadratic-by-factoring.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-derivatives-solving-quadratic-by-factoring.pdf" data-action="open"
-       aria-label="Open Solving Quadratic Equations by Factoring worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Solving Quadratic Equations by Factoring worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/derivatives/worksheet-derivatives-solving-quadratic-by-factoring.pdf" download
        data-worksheet="worksheet-derivatives-solving-quadratic-by-factoring.pdf" data-action="download"
        aria-label="Download Solving Quadratic Equations by Factoring worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -430,9 +453,10 @@
   <div class="ws-topic">Limit Definition</div>
   <h3>Derivative Using the Limit Definition</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-limit-definition.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-limit-definition.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-derivatives-limit-definition.pdf" data-action="open"
-       aria-label="Open Derivative Using the Limit Definition worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Derivative Using the Limit Definition worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/derivatives/worksheet-derivatives-limit-definition.pdf" download
        data-worksheet="worksheet-derivatives-limit-definition.pdf" data-action="download"
        aria-label="Download Derivative Using the Limit Definition worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -452,9 +476,10 @@
   <div class="ws-topic">Basic Rules</div>
   <h3>Derivatives Using a Table of Values</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-table-of-values.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-table-of-values.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-derivatives-table-of-values.pdf" data-action="open"
-       aria-label="Open Derivatives Using a Table of Values worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Derivatives Using a Table of Values worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/derivatives/worksheet-derivatives-table-of-values.pdf" download
        data-worksheet="worksheet-derivatives-table-of-values.pdf" data-action="download"
        aria-label="Download Derivatives Using a Table of Values worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -471,9 +496,10 @@
   <div class="ws-topic">Basic Rules</div>
   <h3>Power Rule</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-power-rule.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-power-rule.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-derivatives-power-rule.pdf" data-action="open"
-       aria-label="Open Power Rule worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Power Rule worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/derivatives/worksheet-derivatives-power-rule.pdf" download
        data-worksheet="worksheet-derivatives-power-rule.pdf" data-action="download"
        aria-label="Download Power Rule worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -490,9 +516,10 @@
   <div class="ws-topic">Basic Rules</div>
   <h3>Power Rule & Constant Rule: Finding Derivatives</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-power-rule-constant-rule.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-power-rule-constant-rule.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-derivatives-power-rule-constant-rule.pdf" data-action="open"
-       aria-label="Open Power Rule & Constant Rule: Finding Derivatives worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Power Rule & Constant Rule: Finding Derivatives worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/derivatives/worksheet-derivatives-power-rule-constant-rule.pdf" download
        data-worksheet="worksheet-derivatives-power-rule-constant-rule.pdf" data-action="download"
        aria-label="Download Power Rule & Constant Rule: Finding Derivatives worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -509,9 +536,10 @@
   <div class="ws-topic">Basic Rules</div>
   <h3>Derivatives Using the Power Rule</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-using-power-rule.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-using-power-rule.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-derivatives-using-power-rule.pdf" data-action="open"
-       aria-label="Open Derivatives Using the Power Rule worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Derivatives Using the Power Rule worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/derivatives/worksheet-derivatives-using-power-rule.pdf" download
        data-worksheet="worksheet-derivatives-using-power-rule.pdf" data-action="download"
        aria-label="Download Derivatives Using the Power Rule worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -531,9 +559,10 @@
   <div class="ws-topic">Chain Rule</div>
   <h3>Chain Rule — Composite Functions</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-chain-rule-composite-functions.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-chain-rule-composite-functions.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-derivatives-chain-rule-composite-functions.pdf" data-action="open"
-       aria-label="Open Chain Rule — Composite Functions worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Chain Rule — Composite Functions worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/derivatives/worksheet-derivatives-chain-rule-composite-functions.pdf" download
        data-worksheet="worksheet-derivatives-chain-rule-composite-functions.pdf" data-action="download"
        aria-label="Download Chain Rule — Composite Functions worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -553,9 +582,10 @@
   <div class="ws-topic">Trig Derivatives</div>
   <h3>Derivatives of Sine and Cosine</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-sin-and-cos.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-sin-and-cos.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-derivatives-sin-and-cos.pdf" data-action="open"
-       aria-label="Open Derivatives of Sine and Cosine worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Derivatives of Sine and Cosine worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/derivatives/worksheet-derivatives-sin-and-cos.pdf" download
        data-worksheet="worksheet-derivatives-sin-and-cos.pdf" data-action="download"
        aria-label="Download Derivatives of Sine and Cosine worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -572,9 +602,10 @@
   <div class="ws-topic">Trig Derivatives</div>
   <h3>Derivatives of Trigonometric Functions</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-trig-functions.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-trig-functions.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-derivatives-trig-functions.pdf" data-action="open"
-       aria-label="Open Derivatives of Trigonometric Functions worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Derivatives of Trigonometric Functions worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/derivatives/worksheet-derivatives-trig-functions.pdf" download
        data-worksheet="worksheet-derivatives-trig-functions.pdf" data-action="download"
        aria-label="Download Derivatives of Trigonometric Functions worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -591,9 +622,10 @@
   <div class="ws-topic">Trig Derivatives</div>
   <h3>Derivatives of Trigonometric Functions — Set B</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-trig-functions-b.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-trig-functions-b.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-derivatives-trig-functions-b.pdf" data-action="open"
-       aria-label="Open Derivatives of Trigonometric Functions — Set B worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Derivatives of Trigonometric Functions — Set B worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/derivatives/worksheet-derivatives-trig-functions-b.pdf" download
        data-worksheet="worksheet-derivatives-trig-functions-b.pdf" data-action="download"
        aria-label="Download Derivatives of Trigonometric Functions — Set B worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -610,9 +642,10 @@
   <div class="ws-topic">Trig Derivatives</div>
   <h3>Derivatives of Inverse Trig Functions</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-inverse-trig-functions.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-inverse-trig-functions.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-derivatives-inverse-trig-functions.pdf" data-action="open"
-       aria-label="Open Derivatives of Inverse Trig Functions worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Derivatives of Inverse Trig Functions worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/derivatives/worksheet-derivatives-inverse-trig-functions.pdf" download
        data-worksheet="worksheet-derivatives-inverse-trig-functions.pdf" data-action="download"
        aria-label="Download Derivatives of Inverse Trig Functions worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -629,9 +662,10 @@
   <div class="ws-topic">Trig Derivatives</div>
   <h3>Derivatives of Inverse Trig Functions — Set B</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-inverse-trig-functions-b.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-inverse-trig-functions-b.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-derivatives-inverse-trig-functions-b.pdf" data-action="open"
-       aria-label="Open Derivatives of Inverse Trig Functions — Set B worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Derivatives of Inverse Trig Functions — Set B worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/derivatives/worksheet-derivatives-inverse-trig-functions-b.pdf" download
        data-worksheet="worksheet-derivatives-inverse-trig-functions-b.pdf" data-action="download"
        aria-label="Download Derivatives of Inverse Trig Functions — Set B worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -651,9 +685,10 @@
   <div class="ws-topic">Exp/Log Derivatives</div>
   <h3>Derivatives of Exponential Functions</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-exponential-functions.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-exponential-functions.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-derivatives-exponential-functions.pdf" data-action="open"
-       aria-label="Open Derivatives of Exponential Functions worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Derivatives of Exponential Functions worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/derivatives/worksheet-derivatives-exponential-functions.pdf" download
        data-worksheet="worksheet-derivatives-exponential-functions.pdf" data-action="download"
        aria-label="Download Derivatives of Exponential Functions worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -670,9 +705,10 @@
   <div class="ws-topic">Exp/Log Derivatives</div>
   <h3>Derivatives of Logarithmic Functions</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-logarithmic-functions.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-logarithmic-functions.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-derivatives-logarithmic-functions.pdf" data-action="open"
-       aria-label="Open Derivatives of Logarithmic Functions worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Derivatives of Logarithmic Functions worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/derivatives/worksheet-derivatives-logarithmic-functions.pdf" download
        data-worksheet="worksheet-derivatives-logarithmic-functions.pdf" data-action="download"
        aria-label="Download Derivatives of Logarithmic Functions worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -689,9 +725,10 @@
   <div class="ws-topic">Exp/Log Derivatives</div>
   <h3>Exponential and Logarithmic Derivatives</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-exponential-and-ln-properties.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-exponential-and-ln-properties.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-derivatives-exponential-and-ln-properties.pdf" data-action="open"
-       aria-label="Open Exponential and Logarithmic Derivatives worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Exponential and Logarithmic Derivatives worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/derivatives/worksheet-derivatives-exponential-and-ln-properties.pdf" download
        data-worksheet="worksheet-derivatives-exponential-and-ln-properties.pdf" data-action="download"
        aria-label="Download Exponential and Logarithmic Derivatives worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -711,9 +748,10 @@
   <div class="ws-topic">Product/Quotient/Chain</div>
   <h3>Special Differentiation Techniques</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-special-techniques.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-special-techniques.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-derivatives-special-techniques.pdf" data-action="open"
-       aria-label="Open Special Differentiation Techniques worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Special Differentiation Techniques worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/derivatives/worksheet-derivatives-special-techniques.pdf" download
        data-worksheet="worksheet-derivatives-special-techniques.pdf" data-action="download"
        aria-label="Download Special Differentiation Techniques worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -730,9 +768,10 @@
   <div class="ws-topic">Product/Quotient/Chain</div>
   <h3>Finding the Derivative Using the Product Rule</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-product-rule.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-product-rule.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-derivatives-product-rule.pdf" data-action="open"
-       aria-label="Open Finding the Derivative Using the Product Rule worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Finding the Derivative Using the Product Rule worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/derivatives/worksheet-derivatives-product-rule.pdf" download
        data-worksheet="worksheet-derivatives-product-rule.pdf" data-action="download"
        aria-label="Download Finding the Derivative Using the Product Rule worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -749,9 +788,10 @@
   <div class="ws-topic">Product/Quotient/Chain</div>
   <h3>Derivative Rules: Product & Quotient Rules with Given Values</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-product-quotient-given-values.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-product-quotient-given-values.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-derivatives-product-quotient-given-values.pdf" data-action="open"
-       aria-label="Open Derivative Rules: Product & Quotient Rules with Given Values worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Derivative Rules: Product & Quotient Rules with Given Values worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/derivatives/worksheet-derivatives-product-quotient-given-values.pdf" download
        data-worksheet="worksheet-derivatives-product-quotient-given-values.pdf" data-action="download"
        aria-label="Download Derivative Rules: Product & Quotient Rules with Given Values worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -771,9 +811,10 @@
   <div class="ws-topic">Implicit Differentiation</div>
   <h3>Implicit Differentiation</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-implicit-differentiation-intro.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-implicit-differentiation-intro.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-derivatives-implicit-differentiation-intro.pdf" data-action="open"
-       aria-label="Open Implicit Differentiation worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Implicit Differentiation worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/derivatives/worksheet-derivatives-implicit-differentiation-intro.pdf" download
        data-worksheet="worksheet-derivatives-implicit-differentiation-intro.pdf" data-action="download"
        aria-label="Download Implicit Differentiation worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -790,9 +831,10 @@
   <div class="ws-topic">Implicit Differentiation</div>
   <h3>Second Derivatives Using Implicit Differentiation</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-second-derivative-implicit-differentiation.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-second-derivative-implicit-differentiation.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-derivatives-second-derivative-implicit-differentiation.pdf" data-action="open"
-       aria-label="Open Second Derivatives Using Implicit Differentiation worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Second Derivatives Using Implicit Differentiation worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/derivatives/worksheet-derivatives-second-derivative-implicit-differentiation.pdf" download
        data-worksheet="worksheet-derivatives-second-derivative-implicit-differentiation.pdf" data-action="download"
        aria-label="Download Second Derivatives Using Implicit Differentiation worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -809,9 +851,10 @@
   <div class="ws-topic">Implicit Differentiation</div>
   <h3>Derivatives With Respect to Time</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-with-respect-to-time.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-with-respect-to-time.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-derivatives-with-respect-to-time.pdf" data-action="open"
-       aria-label="Open Derivatives With Respect to Time worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Derivatives With Respect to Time worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/derivatives/worksheet-derivatives-with-respect-to-time.pdf" download
        data-worksheet="worksheet-derivatives-with-respect-to-time.pdf" data-action="download"
        aria-label="Download Derivatives With Respect to Time worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -831,9 +874,10 @@
   <div class="ws-topic">Applications</div>
   <h3>Slopes and Tangent Lines</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-slopes-and-tangent-lines.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-slopes-and-tangent-lines.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-derivatives-slopes-and-tangent-lines.pdf" data-action="open"
-       aria-label="Open Slopes and Tangent Lines worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Slopes and Tangent Lines worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/derivatives/worksheet-derivatives-slopes-and-tangent-lines.pdf" download
        data-worksheet="worksheet-derivatives-slopes-and-tangent-lines.pdf" data-action="download"
        aria-label="Download Slopes and Tangent Lines worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -850,9 +894,10 @@
   <div class="ws-topic">Applications</div>
   <h3>Tangent and Normal Lines</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-tangent-and-normal-lines.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-tangent-and-normal-lines.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-derivatives-tangent-and-normal-lines.pdf" data-action="open"
-       aria-label="Open Tangent and Normal Lines worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Tangent and Normal Lines worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/derivatives/worksheet-derivatives-tangent-and-normal-lines.pdf" download
        data-worksheet="worksheet-derivatives-tangent-and-normal-lines.pdf" data-action="download"
        aria-label="Download Tangent and Normal Lines worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -869,9 +914,10 @@
   <div class="ws-topic">Applications</div>
   <h3>Tangent Lines to Curves</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-tangent-lines-to-curves.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-tangent-lines-to-curves.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-derivatives-tangent-lines-to-curves.pdf" data-action="open"
-       aria-label="Open Tangent Lines to Curves worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Tangent Lines to Curves worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/derivatives/worksheet-derivatives-tangent-lines-to-curves.pdf" download
        data-worksheet="worksheet-derivatives-tangent-lines-to-curves.pdf" data-action="download"
        aria-label="Download Tangent Lines to Curves worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -888,9 +934,10 @@
   <div class="ws-topic">Applications</div>
   <h3>Application: Approximation</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-application-approximation.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-application-approximation.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-derivatives-application-approximation.pdf" data-action="open"
-       aria-label="Open Application: Approximation worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Application: Approximation worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/derivatives/worksheet-derivatives-application-approximation.pdf" download
        data-worksheet="worksheet-derivatives-application-approximation.pdf" data-action="download"
        aria-label="Download Application: Approximation worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -907,9 +954,10 @@
   <div class="ws-topic">Applications</div>
   <h3>Application: Approximation Part 2</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-application-approximation-2.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-application-approximation-2.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-derivatives-application-approximation-2.pdf" data-action="open"
-       aria-label="Open Application: Approximation Part 2 worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Application: Approximation Part 2 worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/derivatives/worksheet-derivatives-application-approximation-2.pdf" download
        data-worksheet="worksheet-derivatives-application-approximation-2.pdf" data-action="download"
        aria-label="Download Application: Approximation Part 2 worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -926,9 +974,10 @@
   <div class="ws-topic">Applications</div>
   <h3>Rates of Change Using Derivatives</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-rates-of-change-using-derivatives.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-rates-of-change-using-derivatives.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-derivatives-rates-of-change-using-derivatives.pdf" data-action="open"
-       aria-label="Open Rates of Change Using Derivatives worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Rates of Change Using Derivatives worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/derivatives/worksheet-derivatives-rates-of-change-using-derivatives.pdf" download
        data-worksheet="worksheet-derivatives-rates-of-change-using-derivatives.pdf" data-action="download"
        aria-label="Download Rates of Change Using Derivatives worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -945,9 +994,10 @@
   <div class="ws-topic">Applications</div>
   <h3>Rates of Change — Velocity and Acceleration</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-rates-of-change-velocity-acceleration.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-rates-of-change-velocity-acceleration.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-derivatives-rates-of-change-velocity-acceleration.pdf" data-action="open"
-       aria-label="Open Rates of Change — Velocity and Acceleration worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Rates of Change — Velocity and Acceleration worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/derivatives/worksheet-derivatives-rates-of-change-velocity-acceleration.pdf" download
        data-worksheet="worksheet-derivatives-rates-of-change-velocity-acceleration.pdf" data-action="download"
        aria-label="Download Rates of Change — Velocity and Acceleration worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -964,9 +1014,10 @@
   <div class="ws-topic">Applications</div>
   <h3>Position, Velocity, and Acceleration</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-application-position-velocity-acceleration.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-application-position-velocity-acceleration.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-derivatives-application-position-velocity-acceleration.pdf" data-action="open"
-       aria-label="Open Position, Velocity, and Acceleration worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Position, Velocity, and Acceleration worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/derivatives/worksheet-derivatives-application-position-velocity-acceleration.pdf" download
        data-worksheet="worksheet-derivatives-application-position-velocity-acceleration.pdf" data-action="download"
        aria-label="Download Position, Velocity, and Acceleration worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -983,9 +1034,10 @@
   <div class="ws-topic">Applications</div>
   <h3>Applications of Derivatives — Rectilinear Motion</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-application-rectilinear-motion.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-application-rectilinear-motion.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-derivatives-application-rectilinear-motion.pdf" data-action="open"
-       aria-label="Open Applications of Derivatives — Rectilinear Motion worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Applications of Derivatives — Rectilinear Motion worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/derivatives/worksheet-derivatives-application-rectilinear-motion.pdf" download
        data-worksheet="worksheet-derivatives-application-rectilinear-motion.pdf" data-action="download"
        aria-label="Download Applications of Derivatives — Rectilinear Motion worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -1002,9 +1054,10 @@
   <div class="ws-topic">Applications</div>
   <h3>Particle Motion — Velocity and Acceleration</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-particle-motion-velocity-acceleration.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-particle-motion-velocity-acceleration.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-derivatives-particle-motion-velocity-acceleration.pdf" data-action="open"
-       aria-label="Open Particle Motion — Velocity and Acceleration worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Particle Motion — Velocity and Acceleration worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/derivatives/worksheet-derivatives-particle-motion-velocity-acceleration.pdf" download
        data-worksheet="worksheet-derivatives-particle-motion-velocity-acceleration.pdf" data-action="download"
        aria-label="Download Particle Motion — Velocity and Acceleration worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -1021,9 +1074,10 @@
   <div class="ws-topic">Applications</div>
   <h3>Particle Motion — Speeding Up and Slowing Down</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-particle-motion-speeding-slowing.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-particle-motion-speeding-slowing.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-derivatives-particle-motion-speeding-slowing.pdf" data-action="open"
-       aria-label="Open Particle Motion — Speeding Up and Slowing Down worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Particle Motion — Speeding Up and Slowing Down worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/derivatives/worksheet-derivatives-particle-motion-speeding-slowing.pdf" download
        data-worksheet="worksheet-derivatives-particle-motion-speeding-slowing.pdf" data-action="download"
        aria-label="Download Particle Motion — Speeding Up and Slowing Down worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -1040,9 +1094,10 @@
   <div class="ws-topic">Applications</div>
   <h3>Exponential Growth Applications</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-application-exponential-growth.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-application-exponential-growth.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-derivatives-application-exponential-growth.pdf" data-action="open"
-       aria-label="Open Exponential Growth Applications worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Exponential Growth Applications worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/derivatives/worksheet-derivatives-application-exponential-growth.pdf" download
        data-worksheet="worksheet-derivatives-application-exponential-growth.pdf" data-action="download"
        aria-label="Download Exponential Growth Applications worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -1059,9 +1114,10 @@
   <div class="ws-topic">Applications</div>
   <h3>Related Rates Review</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-related-rates-review.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-related-rates-review.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-derivatives-related-rates-review.pdf" data-action="open"
-       aria-label="Open Related Rates Review worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Related Rates Review worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/derivatives/worksheet-derivatives-related-rates-review.pdf" download
        data-worksheet="worksheet-derivatives-related-rates-review.pdf" data-action="download"
        aria-label="Download Related Rates Review worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -1081,9 +1137,10 @@
   <div class="ws-topic">Theorems</div>
   <h3>Rolle's Theorem</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-rolles-theorem.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-rolles-theorem.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-derivatives-rolles-theorem.pdf" data-action="open"
-       aria-label="Open Rolle's Theorem worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Rolle's Theorem worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/derivatives/worksheet-derivatives-rolles-theorem.pdf" download
        data-worksheet="worksheet-derivatives-rolles-theorem.pdf" data-action="download"
        aria-label="Download Rolle's Theorem worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -1100,9 +1157,10 @@
   <div class="ws-topic">Theorems</div>
   <h3>Mean Value Theorem</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-mean-value-theorem.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-mean-value-theorem.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-derivatives-mean-value-theorem.pdf" data-action="open"
-       aria-label="Open Mean Value Theorem worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Mean Value Theorem worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/derivatives/worksheet-derivatives-mean-value-theorem.pdf" download
        data-worksheet="worksheet-derivatives-mean-value-theorem.pdf" data-action="download"
        aria-label="Download Mean Value Theorem worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -1119,9 +1177,10 @@
   <div class="ws-topic">Theorems</div>
   <h3>Mean Value Theorem — Set B</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-mean-value-theorem-b.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-mean-value-theorem-b.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-derivatives-mean-value-theorem-b.pdf" data-action="open"
-       aria-label="Open Mean Value Theorem — Set B worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Mean Value Theorem — Set B worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/derivatives/worksheet-derivatives-mean-value-theorem-b.pdf" download
        data-worksheet="worksheet-derivatives-mean-value-theorem-b.pdf" data-action="download"
        aria-label="Download Mean Value Theorem — Set B worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -1138,9 +1197,10 @@
   <div class="ws-topic">Theorems</div>
   <h3>MVT and Rolle&#x27;s Theorem</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-mvt-rolles-theorem.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-mvt-rolles-theorem.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-derivatives-mvt-rolles-theorem.pdf" data-action="open"
-       aria-label="Open MVT and Rolle&#x27;s Theorem worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View MVT and Rolle&#x27;s Theorem worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/derivatives/worksheet-derivatives-mvt-rolles-theorem.pdf" download
        data-worksheet="worksheet-derivatives-mvt-rolles-theorem.pdf" data-action="download"
        aria-label="Download MVT and Rolle&#x27;s Theorem worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -1160,9 +1220,10 @@
   <div class="ws-topic">Function Analysis</div>
   <h3>Finding Critical Numbers — Part A</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-critical-numbers-a.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-critical-numbers-a.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-derivatives-critical-numbers-a.pdf" data-action="open"
-       aria-label="Open Finding Critical Numbers — Part A worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Finding Critical Numbers — Part A worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/derivatives/worksheet-derivatives-critical-numbers-a.pdf" download
        data-worksheet="worksheet-derivatives-critical-numbers-a.pdf" data-action="download"
        aria-label="Download Finding Critical Numbers — Part A worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -1179,9 +1240,10 @@
   <div class="ws-topic">Function Analysis</div>
   <h3>Finding Critical Numbers — Part B</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-critical-numbers-b.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-critical-numbers-b.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-derivatives-critical-numbers-b.pdf" data-action="open"
-       aria-label="Open Finding Critical Numbers — Part B worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Finding Critical Numbers — Part B worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/derivatives/worksheet-derivatives-critical-numbers-b.pdf" download
        data-worksheet="worksheet-derivatives-critical-numbers-b.pdf" data-action="download"
        aria-label="Download Finding Critical Numbers — Part B worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -1198,9 +1260,10 @@
   <div class="ws-topic">Function Analysis</div>
   <h3>First Derivative Test</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-first-derivative-test.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-first-derivative-test.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-derivatives-first-derivative-test.pdf" data-action="open"
-       aria-label="Open First Derivative Test worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View First Derivative Test worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/derivatives/worksheet-derivatives-first-derivative-test.pdf" download
        data-worksheet="worksheet-derivatives-first-derivative-test.pdf" data-action="download"
        aria-label="Download First Derivative Test worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -1217,9 +1280,10 @@
   <div class="ws-topic">Function Analysis</div>
   <h3>Using the First Derivative to Analyze Behavior</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-first-derivative-analyze-behavior.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-first-derivative-analyze-behavior.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-derivatives-first-derivative-analyze-behavior.pdf" data-action="open"
-       aria-label="Open Using the First Derivative to Analyze Behavior worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Using the First Derivative to Analyze Behavior worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/derivatives/worksheet-derivatives-first-derivative-analyze-behavior.pdf" download
        data-worksheet="worksheet-derivatives-first-derivative-analyze-behavior.pdf" data-action="download"
        aria-label="Download Using the First Derivative to Analyze Behavior worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -1236,9 +1300,10 @@
   <div class="ws-topic">Function Analysis</div>
   <h3>First and Second Derivative Test (TI-84)</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-first-second-derivative-test-ti84.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-first-second-derivative-test-ti84.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-derivatives-first-second-derivative-test-ti84.pdf" data-action="open"
-       aria-label="Open First and Second Derivative Test (TI-84) worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View First and Second Derivative Test (TI-84) worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/derivatives/worksheet-derivatives-first-second-derivative-test-ti84.pdf" download
        data-worksheet="worksheet-derivatives-first-second-derivative-test-ti84.pdf" data-action="download"
        aria-label="Download First and Second Derivative Test (TI-84) worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -1258,9 +1323,10 @@
   <div class="ws-topic">Optimization</div>
   <h3>Optimization: Absolute Extrema</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-optimization-absolute-extrema.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-optimization-absolute-extrema.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-derivatives-optimization-absolute-extrema.pdf" data-action="open"
-       aria-label="Open Optimization: Absolute Extrema worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Optimization: Absolute Extrema worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/derivatives/worksheet-derivatives-optimization-absolute-extrema.pdf" download
        data-worksheet="worksheet-derivatives-optimization-absolute-extrema.pdf" data-action="download"
        aria-label="Download Optimization: Absolute Extrema worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -1277,9 +1343,10 @@
   <div class="ws-topic">Optimization</div>
   <h3>Optimization Problems Using Derivatives</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-optimization-problems.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-optimization-problems.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-derivatives-optimization-problems.pdf" data-action="open"
-       aria-label="Open Optimization Problems Using Derivatives worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Optimization Problems Using Derivatives worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/derivatives/worksheet-derivatives-optimization-problems.pdf" download
        data-worksheet="worksheet-derivatives-optimization-problems.pdf" data-action="download"
        aria-label="Download Optimization Problems Using Derivatives worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -1296,9 +1363,10 @@
   <div class="ws-topic">Optimization</div>
   <h3>Optimization and Graphing</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-optimization-and-graphing.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-optimization-and-graphing.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-derivatives-optimization-and-graphing.pdf" data-action="open"
-       aria-label="Open Optimization and Graphing worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Optimization and Graphing worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/derivatives/worksheet-derivatives-optimization-and-graphing.pdf" download
        data-worksheet="worksheet-derivatives-optimization-and-graphing.pdf" data-action="download"
        aria-label="Download Optimization and Graphing worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -1315,9 +1383,10 @@
   <div class="ws-topic">Optimization</div>
   <h3>Optimization Word Problems Using Derivatives</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-optimization-word-problems.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-optimization-word-problems.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-derivatives-optimization-word-problems.pdf" data-action="open"
-       aria-label="Open Optimization Word Problems Using Derivatives worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Optimization Word Problems Using Derivatives worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/derivatives/worksheet-derivatives-optimization-word-problems.pdf" download
        data-worksheet="worksheet-derivatives-optimization-word-problems.pdf" data-action="download"
        aria-label="Download Optimization Word Problems Using Derivatives worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -1334,9 +1403,10 @@
   <div class="ws-topic">Optimization</div>
   <h3>Optimization: Max Volume of an Open Box</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-optimization-max-volume-open-box.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-optimization-max-volume-open-box.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-derivatives-optimization-max-volume-open-box.pdf" data-action="open"
-       aria-label="Open Optimization: Max Volume of an Open Box worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Optimization: Max Volume of an Open Box worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/derivatives/worksheet-derivatives-optimization-max-volume-open-box.pdf" download
        data-worksheet="worksheet-derivatives-optimization-max-volume-open-box.pdf" data-action="download"
        aria-label="Download Optimization: Max Volume of an Open Box worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -1353,9 +1423,10 @@
   <div class="ws-topic">Optimization</div>
   <h3>Optimization: Open Top Box Problem</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-optimization-open-box.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-optimization-open-box.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-derivatives-optimization-open-box.pdf" data-action="open"
-       aria-label="Open Optimization: Open Top Box Problem worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Optimization: Open Top Box Problem worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/derivatives/worksheet-derivatives-optimization-open-box.pdf" download
        data-worksheet="worksheet-derivatives-optimization-open-box.pdf" data-action="download"
        aria-label="Download Optimization: Open Top Box Problem worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -1375,9 +1446,10 @@
   <div class="ws-topic">Related Rates</div>
   <h3>Related Rates</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-related-rates-basic.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-related-rates-basic.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-derivatives-related-rates-basic.pdf" data-action="open"
-       aria-label="Open Related Rates worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Related Rates worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/derivatives/worksheet-derivatives-related-rates-basic.pdf" download
        data-worksheet="worksheet-derivatives-related-rates-basic.pdf" data-action="download"
        aria-label="Download Related Rates worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -1394,9 +1466,10 @@
   <div class="ws-topic">Related Rates</div>
   <h3>Related Rates with Implicit Differentiation</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-related-rates-implicit-differentiation.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-related-rates-implicit-differentiation.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-derivatives-related-rates-implicit-differentiation.pdf" data-action="open"
-       aria-label="Open Related Rates with Implicit Differentiation worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Related Rates with Implicit Differentiation worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/derivatives/worksheet-derivatives-related-rates-implicit-differentiation.pdf" download
        data-worksheet="worksheet-derivatives-related-rates-implicit-differentiation.pdf" data-action="download"
        aria-label="Download Related Rates with Implicit Differentiation worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -1413,9 +1486,10 @@
   <div class="ws-topic">Related Rates</div>
   <h3>Related Rates: Geometric Applications</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-related-rates-geometric.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-related-rates-geometric.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-derivatives-related-rates-geometric.pdf" data-action="open"
-       aria-label="Open Related Rates: Geometric Applications worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Related Rates: Geometric Applications worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/derivatives/worksheet-derivatives-related-rates-geometric.pdf" download
        data-worksheet="worksheet-derivatives-related-rates-geometric.pdf" data-action="download"
        aria-label="Download Related Rates: Geometric Applications worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -1432,9 +1506,10 @@
   <div class="ws-topic">Related Rates</div>
   <h3>Related Rates — Word Problems</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-related-rates-word-problems.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-related-rates-word-problems.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-derivatives-related-rates-word-problems.pdf" data-action="open"
-       aria-label="Open Related Rates — Word Problems worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Related Rates — Word Problems worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/derivatives/worksheet-derivatives-related-rates-word-problems.pdf" download
        data-worksheet="worksheet-derivatives-related-rates-word-problems.pdf" data-action="download"
        aria-label="Download Related Rates — Word Problems worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -1451,9 +1526,10 @@
   <div class="ws-topic">Related Rates</div>
   <h3>Related Rates — Advanced Applications</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-related-rates-advanced.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-related-rates-advanced.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-derivatives-related-rates-advanced.pdf" data-action="open"
-       aria-label="Open Related Rates — Advanced Applications worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Related Rates — Advanced Applications worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/derivatives/worksheet-derivatives-related-rates-advanced.pdf" download
        data-worksheet="worksheet-derivatives-related-rates-advanced.pdf" data-action="download"
        aria-label="Download Related Rates — Advanced Applications worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -1473,9 +1549,10 @@
   <div class="ws-topic">Full Review</div>
   <h3>Derivatives Review</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-review.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/derivatives/worksheet-derivatives-review.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-derivatives-review.pdf" data-action="open"
-       aria-label="Open Derivatives Review worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Derivatives Review worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/derivatives/worksheet-derivatives-review.pdf" download
        data-worksheet="worksheet-derivatives-review.pdf" data-action="download"
        aria-label="Download Derivatives Review worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -1636,5 +1713,42 @@
 })();
 </script>
 
+<!-- PDF Modal Viewer -->
+<div class="pdf-modal-overlay" id="pdfModal" role="dialog" aria-modal="true" aria-labelledby="pdfModalTitle">
+  <div class="pdf-modal">
+    <div class="pdf-modal-bar">
+      <span class="pdf-modal-title" id="pdfModalTitle">Worksheet</span>
+      <div class="pdf-modal-actions">
+        <a class="pdf-modal-dl" id="pdfModalDl" href="#" download aria-label="Download PDF">&#11015; Download</a>
+        <button class="pdf-modal-close" id="pdfModalClose" aria-label="Close PDF viewer">&#x2715;</button>
+      </div>
+    </div>
+    <iframe id="pdfModalFrame" src="" title="Worksheet PDF Viewer" loading="lazy"></iframe>
+  </div>
+</div>
+<script>
+(function(){
+  var overlay=document.getElementById('pdfModal');
+  var frame=document.getElementById('pdfModalFrame');
+  var titleEl=document.getElementById('pdfModalTitle');
+  var dlLink=document.getElementById('pdfModalDl');
+  var closeBtn=document.getElementById('pdfModalClose');
+  window.openPdfModal=function(url,title){
+    frame.src=url;
+    titleEl.textContent=title||'Worksheet';
+    dlLink.href=url;
+    overlay.classList.add('open');
+    document.body.style.overflow='hidden';
+  };
+  function closeModal(){
+    overlay.classList.remove('open');
+    frame.src='';
+    document.body.style.overflow='';
+  }
+  closeBtn.addEventListener('click',closeModal);
+  overlay.addEventListener('click',function(e){if(e.target===overlay)closeModal();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal();});
+})();
+</script>
 </body>
     </html>

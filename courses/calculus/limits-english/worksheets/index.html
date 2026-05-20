@@ -197,22 +197,44 @@
     .ws-card .ws-actions{
       margin-top: auto; display:flex; gap: 8px;
     }
+    /* ── Option B: Soft Tinted Fill ─────────────────────────── */
     .ws-card .ws-btn{
       flex:1; display:inline-flex; align-items:center; justify-content:center;
-      gap: 6px;
-      padding: 10px 12px; border-radius: 10px;
+      gap: 6px; padding: 10px 12px; border-radius: 10px;
       font-weight: 600; font-size: 0.9rem;
-      text-decoration: none;
-      border: 1px solid var(--border);
-      color: var(--navy); background: white;
-      transition: background .15s ease, border-color .15s ease, color .15s ease;
+      text-decoration: none; border: none; cursor: pointer; font-family: inherit;
+      transition: background .18s ease, color .18s ease;
     }
-    .ws-card .ws-btn.primary{
-      background: var(--accent-color); color: white; border-color: var(--accent-color);
+    .ws-card .ws-btn.primary{ background:#EFF6FF; color:#2563EB; }
+    .ws-card .ws-btn.primary:hover{ background:#2563EB; color:white; text-decoration:none; }
+    .ws-card .ws-btn.download{ background:#F0FDFA; color:#1F6F6B; }
+    .ws-card .ws-btn.download:hover{ background:#1F6F6B; color:white; text-decoration:none; }
+    .ws-card .ws-btn.watch{ background:#FEF2F2; color:#dc2626; }
+    .ws-card .ws-btn.watch:hover{ background:#dc2626; color:white; text-decoration:none; }
+    /* PDF Modal */
+    .pdf-modal-overlay{
+      display:none; position:fixed; inset:0; z-index:1000;
+      background:rgba(15,23,42,0.78); backdrop-filter:blur(4px);
+      align-items:center; justify-content:center;
     }
-    .ws-card .ws-btn.primary:hover{ filter: brightness(1.05); text-decoration: none; }
-    .ws-card .ws-btn:hover{ border-color: var(--accent-color); color: var(--accent-color); text-decoration: none; }
-    .ws-card .ws-btn.primary:hover{ color: white; }
+    .pdf-modal-overlay.open{ display:flex; }
+    .pdf-modal{
+      position:relative; width:min(920px,94vw); height:min(88vh,1100px);
+      background:#fff; border-radius:16px; overflow:hidden;
+      display:flex; flex-direction:column;
+      box-shadow:0 25px 60px rgba(0,0,0,0.40);
+    }
+    .pdf-modal-bar{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:12px 18px; background:var(--navy); color:white; flex-shrink:0; gap:12px;
+    }
+    .pdf-modal-title{ font-size:0.9rem; font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    .pdf-modal-actions{ display:flex; align-items:center; gap:8px; flex-shrink:0; }
+    .pdf-modal-dl{ font-size:0.8rem; font-weight:600; color:rgba(255,255,255,0.85); text-decoration:none; background:rgba(255,255,255,0.12); border-radius:6px; padding:5px 10px; }
+    .pdf-modal-dl:hover{ background:rgba(255,255,255,0.22); color:white; text-decoration:none; }
+    .pdf-modal-close{ background:rgba(255,255,255,0.12); border:none; color:white; border-radius:8px; width:32px; height:32px; cursor:pointer; font-size:1.1rem; display:grid; place-items:center; flex-shrink:0; }
+    .pdf-modal-close:hover{ background:rgba(255,255,255,0.28); }
+    .pdf-modal iframe{ flex:1; border:none; width:100%; display:block; }
 
     /* HUB CARDS */
     .ws-hub-grid{
@@ -408,9 +430,10 @@
   <div class="ws-topic">Direct Substitution</div>
   <h3>Solving Basic Limits</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/limits/worksheet-limits-solving-basic.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/limits/worksheet-limits-solving-basic.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-limits-solving-basic.pdf" data-action="open"
-       aria-label="Open Solving Basic Limits worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Solving Basic Limits worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/limits/worksheet-limits-solving-basic.pdf" download
        data-worksheet="worksheet-limits-solving-basic.pdf" data-action="download"
        aria-label="Download Solving Basic Limits worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -430,9 +453,10 @@
   <div class="ws-topic">Evaluating Limits</div>
   <h3>Limits Approaching a Number</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/limits/worksheet-limits-approaching-a-number.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/limits/worksheet-limits-approaching-a-number.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-limits-approaching-a-number.pdf" data-action="open"
-       aria-label="Open Limits Approaching a Number worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Limits Approaching a Number worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/limits/worksheet-limits-approaching-a-number.pdf" download
        data-worksheet="worksheet-limits-approaching-a-number.pdf" data-action="download"
        aria-label="Download Limits Approaching a Number worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -452,9 +476,10 @@
   <div class="ws-topic">Limit Evaluation</div>
   <h3>Evaluating Limits — Algebraic Techniques</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/limits/worksheet-limits-algebraic-techniques.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/limits/worksheet-limits-algebraic-techniques.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-limits-algebraic-techniques.pdf" data-action="open"
-       aria-label="Open Evaluating Limits — Algebraic Techniques worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Evaluating Limits — Algebraic Techniques worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/limits/worksheet-limits-algebraic-techniques.pdf" download
        data-worksheet="worksheet-limits-algebraic-techniques.pdf" data-action="download"
        aria-label="Download Evaluating Limits — Algebraic Techniques worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -474,9 +499,10 @@
   <div class="ws-topic">Asymptotic Behavior</div>
   <h3>Limits to Infinity</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/limits/worksheet-limits-to-infinity.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/limits/worksheet-limits-to-infinity.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-limits-to-infinity.pdf" data-action="open"
-       aria-label="Open Limits to Infinity worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Limits to Infinity worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/limits/worksheet-limits-to-infinity.pdf" download
        data-worksheet="worksheet-limits-to-infinity.pdf" data-action="download"
        aria-label="Download Limits to Infinity worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -493,9 +519,10 @@
   <div class="ws-topic">Asymptotic Behavior</div>
   <h3>Solving Limits to Infinity</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/limits/worksheet-limits-solving-to-infinity.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/limits/worksheet-limits-solving-to-infinity.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-limits-solving-to-infinity.pdf" data-action="open"
-       aria-label="Open Solving Limits to Infinity worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Solving Limits to Infinity worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/limits/worksheet-limits-solving-to-infinity.pdf" download
        data-worksheet="worksheet-limits-solving-to-infinity.pdf" data-action="download"
        aria-label="Download Solving Limits to Infinity worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -515,9 +542,10 @@
   <div class="ws-topic">Trig Limits</div>
   <h3>Limits of Trigonometric Functions</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/limits/worksheet-limits-of-trig-functions.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/limits/worksheet-limits-of-trig-functions.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-limits-of-trig-functions.pdf" data-action="open"
-       aria-label="Open Limits of Trigonometric Functions worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Limits of Trigonometric Functions worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/limits/worksheet-limits-of-trig-functions.pdf" download
        data-worksheet="worksheet-limits-of-trig-functions.pdf" data-action="download"
        aria-label="Download Limits of Trigonometric Functions worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -534,9 +562,10 @@
   <div class="ws-topic">Trig Limits</div>
   <h3>Solving Limits of Trig Functions</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/limits/worksheet-limits-solving-trig-functions.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/limits/worksheet-limits-solving-trig-functions.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-limits-solving-trig-functions.pdf" data-action="open"
-       aria-label="Open Solving Limits of Trig Functions worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Solving Limits of Trig Functions worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/limits/worksheet-limits-solving-trig-functions.pdf" download
        data-worksheet="worksheet-limits-solving-trig-functions.pdf" data-action="download"
        aria-label="Download Solving Limits of Trig Functions worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -556,9 +585,10 @@
   <div class="ws-topic">Indeterminate Forms</div>
   <h3>L&#x27;Hôpital&#x27;s Rule</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/calculus/limits/worksheet-limits-lhopitals-rule.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/calculus/limits/worksheet-limits-lhopitals-rule.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="worksheet-limits-lhopitals-rule.pdf" data-action="open"
-       aria-label="Open L&#x27;Hôpital&#x27;s Rule worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View L&#x27;Hôpital&#x27;s Rule worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/limits/worksheet-limits-lhopitals-rule.pdf" download
        data-worksheet="worksheet-limits-lhopitals-rule.pdf" data-action="download"
        aria-label="Download L&#x27;Hôpital&#x27;s Rule worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -719,5 +749,42 @@
 })();
 </script>
 
+<!-- PDF Modal Viewer -->
+<div class="pdf-modal-overlay" id="pdfModal" role="dialog" aria-modal="true" aria-labelledby="pdfModalTitle">
+  <div class="pdf-modal">
+    <div class="pdf-modal-bar">
+      <span class="pdf-modal-title" id="pdfModalTitle">Worksheet</span>
+      <div class="pdf-modal-actions">
+        <a class="pdf-modal-dl" id="pdfModalDl" href="#" download aria-label="Download PDF">&#11015; Download</a>
+        <button class="pdf-modal-close" id="pdfModalClose" aria-label="Close PDF viewer">&#x2715;</button>
+      </div>
+    </div>
+    <iframe id="pdfModalFrame" src="" title="Worksheet PDF Viewer" loading="lazy"></iframe>
+  </div>
+</div>
+<script>
+(function(){
+  var overlay=document.getElementById('pdfModal');
+  var frame=document.getElementById('pdfModalFrame');
+  var titleEl=document.getElementById('pdfModalTitle');
+  var dlLink=document.getElementById('pdfModalDl');
+  var closeBtn=document.getElementById('pdfModalClose');
+  window.openPdfModal=function(url,title){
+    frame.src=url;
+    titleEl.textContent=title||'Worksheet';
+    dlLink.href=url;
+    overlay.classList.add('open');
+    document.body.style.overflow='hidden';
+  };
+  function closeModal(){
+    overlay.classList.remove('open');
+    frame.src='';
+    document.body.style.overflow='';
+  }
+  closeBtn.addEventListener('click',closeModal);
+  overlay.addEventListener('click',function(e){if(e.target===overlay)closeModal();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal();});
+})();
+</script>
 </body>
     </html>

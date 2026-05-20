@@ -101,11 +101,44 @@
     .ws-card h3{ font-size:1.05rem; line-height:1.3; font-weight:700; color:var(--navy); }
     .ws-card .ws-topic{ font-size:0.85rem; color:var(--muted); margin-bottom:2px; }
     .ws-card .ws-actions{ margin-top:auto; display:flex; gap:8px; }
-    .ws-card .ws-btn{ flex:1; display:inline-flex; align-items:center; justify-content:center; gap:6px; padding:10px 12px; border-radius:10px; font-weight:600; font-size:0.9rem; text-decoration:none; border:1px solid var(--border); color:var(--navy); background:white; transition:background .15s ease,border-color .15s ease,color .15s ease; }
-    .ws-card .ws-btn.primary{ background:var(--accent-color); color:white; border-color:var(--accent-color); }
-    .ws-card .ws-btn.primary:hover{ filter:brightness(1.05); text-decoration:none; }
-    .ws-card .ws-btn:hover{ border-color:var(--accent-color); color:var(--accent-color); text-decoration:none; }
-    .ws-card .ws-btn.primary:hover{ color:white; }
+    /* ── Option B: Soft Tinted Fill ─────────────────────────── */
+    .ws-card .ws-btn{
+      flex:1; display:inline-flex; align-items:center; justify-content:center;
+      gap: 6px; padding: 10px 12px; border-radius: 10px;
+      font-weight: 600; font-size: 0.9rem;
+      text-decoration: none; border: none; cursor: pointer; font-family: inherit;
+      transition: background .18s ease, color .18s ease;
+    }
+    .ws-card .ws-btn.primary{ background:#EFF6FF; color:#2563EB; }
+    .ws-card .ws-btn.primary:hover{ background:#2563EB; color:white; text-decoration:none; }
+    .ws-card .ws-btn.download{ background:#F0FDFA; color:#1F6F6B; }
+    .ws-card .ws-btn.download:hover{ background:#1F6F6B; color:white; text-decoration:none; }
+    .ws-card .ws-btn.watch{ background:#FEF2F2; color:#dc2626; }
+    .ws-card .ws-btn.watch:hover{ background:#dc2626; color:white; text-decoration:none; }
+    /* PDF Modal */
+    .pdf-modal-overlay{
+      display:none; position:fixed; inset:0; z-index:1000;
+      background:rgba(15,23,42,0.78); backdrop-filter:blur(4px);
+      align-items:center; justify-content:center;
+    }
+    .pdf-modal-overlay.open{ display:flex; }
+    .pdf-modal{
+      position:relative; width:min(920px,94vw); height:min(88vh,1100px);
+      background:#fff; border-radius:16px; overflow:hidden;
+      display:flex; flex-direction:column;
+      box-shadow:0 25px 60px rgba(0,0,0,0.40);
+    }
+    .pdf-modal-bar{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:12px 18px; background:var(--navy); color:white; flex-shrink:0; gap:12px;
+    }
+    .pdf-modal-title{ font-size:0.9rem; font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    .pdf-modal-actions{ display:flex; align-items:center; gap:8px; flex-shrink:0; }
+    .pdf-modal-dl{ font-size:0.8rem; font-weight:600; color:rgba(255,255,255,0.85); text-decoration:none; background:rgba(255,255,255,0.12); border-radius:6px; padding:5px 10px; }
+    .pdf-modal-dl:hover{ background:rgba(255,255,255,0.22); color:white; text-decoration:none; }
+    .pdf-modal-close{ background:rgba(255,255,255,0.12); border:none; color:white; border-radius:8px; width:32px; height:32px; cursor:pointer; font-size:1.1rem; display:grid; place-items:center; flex-shrink:0; }
+    .pdf-modal-close:hover{ background:rgba(255,255,255,0.28); }
+    .pdf-modal iframe{ flex:1; border:none; width:100%; display:block; }
     /* PLAYLIST CTA */
     .ws-playlist-cta{ margin-top:36px; background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:28px; display:grid; grid-template-columns:1fr auto; gap:20px; align-items:center; }
     .ws-playlist-cta h3{ font-size:1.2rem; margin-bottom:4px; }
@@ -239,9 +272,10 @@
   <div class="ws-topic">SOHCAHTOA</div>
   <h3>Solving Right Triangles (SOHCAHTOA) — Set B</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/trigonometry/04-05-precalc-trig-solving-right-triangles-sohcahtoa-b.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/trigonometry/04-05-precalc-trig-solving-right-triangles-sohcahtoa-b.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="04-05-precalc-trig-solving-right-triangles-sohcahtoa-b.pdf" data-action="open"
-       aria-label="Open Solving Right Triangles (SOHCAHTOA) — Set B worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Solving Right Triangles (SOHCAHTOA) — Set B worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/trigonometry/04-05-precalc-trig-solving-right-triangles-sohcahtoa-b.pdf" download
        data-worksheet="04-05-precalc-trig-solving-right-triangles-sohcahtoa-b.pdf" data-action="download"
        aria-label="Download Solving Right Triangles (SOHCAHTOA) — Set B worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -258,9 +292,10 @@
   <div class="ws-topic">SOHCAHTOA</div>
   <h3>Solving Right Triangles (SOHCAHTOA) — Set C</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/trigonometry/04-05-precalc-trig-solving-right-triangles-sohcahtoa-c.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/trigonometry/04-05-precalc-trig-solving-right-triangles-sohcahtoa-c.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="04-05-precalc-trig-solving-right-triangles-sohcahtoa-c.pdf" data-action="open"
-       aria-label="Open Solving Right Triangles (SOHCAHTOA) — Set C worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Solving Right Triangles (SOHCAHTOA) — Set C worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/trigonometry/04-05-precalc-trig-solving-right-triangles-sohcahtoa-c.pdf" download
        data-worksheet="04-05-precalc-trig-solving-right-triangles-sohcahtoa-c.pdf" data-action="download"
        aria-label="Download Solving Right Triangles (SOHCAHTOA) — Set C worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -277,9 +312,10 @@
   <div class="ws-topic">SOHCAHTOA</div>
   <h3>Solving Right Triangles (SOHCAHTOA) — Set D</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/trigonometry/04-05-precalc-trig-solving-right-triangles-sohcahtoa-d.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/trigonometry/04-05-precalc-trig-solving-right-triangles-sohcahtoa-d.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="04-05-precalc-trig-solving-right-triangles-sohcahtoa-d.pdf" data-action="open"
-       aria-label="Open Solving Right Triangles (SOHCAHTOA) — Set D worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Solving Right Triangles (SOHCAHTOA) — Set D worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/trigonometry/04-05-precalc-trig-solving-right-triangles-sohcahtoa-d.pdf" download
        data-worksheet="04-05-precalc-trig-solving-right-triangles-sohcahtoa-d.pdf" data-action="download"
        aria-label="Download Solving Right Triangles (SOHCAHTOA) — Set D worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -296,9 +332,10 @@
   <div class="ws-topic">SOHCAHTOA</div>
   <h3>Word Problems — SOHCAHTOA — Set B</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/trigonometry/04-06-precalc-trig-word-problems-sohcahtoa-b.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/trigonometry/04-06-precalc-trig-word-problems-sohcahtoa-b.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="04-06-precalc-trig-word-problems-sohcahtoa-b.pdf" data-action="open"
-       aria-label="Open Word Problems — SOHCAHTOA — Set B worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Word Problems — SOHCAHTOA — Set B worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/trigonometry/04-06-precalc-trig-word-problems-sohcahtoa-b.pdf" download
        data-worksheet="04-06-precalc-trig-word-problems-sohcahtoa-b.pdf" data-action="download"
        aria-label="Download Word Problems — SOHCAHTOA — Set B worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -315,9 +352,10 @@
   <div class="ws-topic">SOHCAHTOA</div>
   <h3>Word Problems — SOHCAHTOA — Set C</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/trigonometry/04-06-precalc-trig-word-problems-sohcahtoa-c.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/trigonometry/04-06-precalc-trig-word-problems-sohcahtoa-c.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="04-06-precalc-trig-word-problems-sohcahtoa-c.pdf" data-action="open"
-       aria-label="Open Word Problems — SOHCAHTOA — Set C worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Word Problems — SOHCAHTOA — Set C worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/trigonometry/04-06-precalc-trig-word-problems-sohcahtoa-c.pdf" download
        data-worksheet="04-06-precalc-trig-word-problems-sohcahtoa-c.pdf" data-action="download"
        aria-label="Download Word Problems — SOHCAHTOA — Set C worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -334,9 +372,10 @@
   <div class="ws-topic">SOHCAHTOA</div>
   <h3>Word Problems — SOHCAHTOA — Set D</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/trigonometry/04-06-precalc-trig-word-problems-sohcahtoa-d.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/trigonometry/04-06-precalc-trig-word-problems-sohcahtoa-d.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="04-06-precalc-trig-word-problems-sohcahtoa-d.pdf" data-action="open"
-       aria-label="Open Word Problems — SOHCAHTOA — Set D worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Word Problems — SOHCAHTOA — Set D worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/trigonometry/04-06-precalc-trig-word-problems-sohcahtoa-d.pdf" download
        data-worksheet="04-06-precalc-trig-word-problems-sohcahtoa-d.pdf" data-action="download"
        aria-label="Download Word Problems — SOHCAHTOA — Set D worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -353,9 +392,10 @@
   <div class="ws-topic">SOHCAHTOA</div>
   <h3>Word Problems — SOHCAHTOA — Set E</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/trigonometry/04-06-precalc-trig-word-problems-sohcahtoa-e.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/trigonometry/04-06-precalc-trig-word-problems-sohcahtoa-e.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="04-06-precalc-trig-word-problems-sohcahtoa-e.pdf" data-action="open"
-       aria-label="Open Word Problems — SOHCAHTOA — Set E worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Word Problems — SOHCAHTOA — Set E worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/trigonometry/04-06-precalc-trig-word-problems-sohcahtoa-e.pdf" download
        data-worksheet="04-06-precalc-trig-word-problems-sohcahtoa-e.pdf" data-action="download"
        aria-label="Download Word Problems — SOHCAHTOA — Set E worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -372,9 +412,10 @@
   <div class="ws-topic">SOHCAHTOA</div>
   <h3>Solving Right Triangles (SOHCAHTOA)</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/trigonometry/04-05-precalc-trig-solving-right-triangles-sohcahtoa.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/trigonometry/04-05-precalc-trig-solving-right-triangles-sohcahtoa.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="04-05-precalc-trig-solving-right-triangles-sohcahtoa.pdf" data-action="open"
-       aria-label="Open Solving Right Triangles (SOHCAHTOA) worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Solving Right Triangles (SOHCAHTOA) worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/trigonometry/04-05-precalc-trig-solving-right-triangles-sohcahtoa.pdf" download
        data-worksheet="04-05-precalc-trig-solving-right-triangles-sohcahtoa.pdf" data-action="download"
        aria-label="Download Solving Right Triangles (SOHCAHTOA) worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -391,9 +432,10 @@
   <div class="ws-topic">SOHCAHTOA</div>
   <h3>Word Problems — SOHCAHTOA</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/trigonometry/04-06-precalc-trig-word-problems-sohcahtoa.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/trigonometry/04-06-precalc-trig-word-problems-sohcahtoa.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="04-06-precalc-trig-word-problems-sohcahtoa.pdf" data-action="open"
-       aria-label="Open Word Problems — SOHCAHTOA worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Word Problems — SOHCAHTOA worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/trigonometry/04-06-precalc-trig-word-problems-sohcahtoa.pdf" download
        data-worksheet="04-06-precalc-trig-word-problems-sohcahtoa.pdf" data-action="download"
        aria-label="Download Word Problems — SOHCAHTOA worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -410,9 +452,10 @@
   <div class="ws-topic">SOHCAHTOA</div>
   <h3>Solving Missing Sides Using SOHCAHTOA</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/trigonometry/04-08-precalc-trig-missing-sides-sohcahtoa.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/trigonometry/04-08-precalc-trig-missing-sides-sohcahtoa.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="04-08-precalc-trig-missing-sides-sohcahtoa.pdf" data-action="open"
-       aria-label="Open Solving Missing Sides Using SOHCAHTOA worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Solving Missing Sides Using SOHCAHTOA worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/trigonometry/04-08-precalc-trig-missing-sides-sohcahtoa.pdf" download
        data-worksheet="04-08-precalc-trig-missing-sides-sohcahtoa.pdf" data-action="download"
        aria-label="Download Solving Missing Sides Using SOHCAHTOA worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -430,9 +473,10 @@
   <div class="ws-topic">Graphing</div>
   <h3>Graphing Secant and Cosecant Functions — Set B</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/trigonometry/05-02-precalc-graphing-cosecant-and-secant-b.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/trigonometry/05-02-precalc-graphing-cosecant-and-secant-b.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="05-02-precalc-graphing-cosecant-and-secant-b.pdf" data-action="open"
-       aria-label="Open Graphing Secant and Cosecant Functions — Set B worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Graphing Secant and Cosecant Functions — Set B worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/trigonometry/05-02-precalc-graphing-cosecant-and-secant-b.pdf" download
        data-worksheet="05-02-precalc-graphing-cosecant-and-secant-b.pdf" data-action="download"
        aria-label="Download Graphing Secant and Cosecant Functions — Set B worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -449,9 +493,10 @@
   <div class="ws-topic">Graphing</div>
   <h3>Graphing Sine, Cosine, Secant, and Cosecant</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/trigonometry/05-01-precalc-graphing-sine-cosine-secant-cosecant.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/trigonometry/05-01-precalc-graphing-sine-cosine-secant-cosecant.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="05-01-precalc-graphing-sine-cosine-secant-cosecant.pdf" data-action="open"
-       aria-label="Open Graphing Sine, Cosine, Secant, and Cosecant worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Graphing Sine, Cosine, Secant, and Cosecant worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/trigonometry/05-01-precalc-graphing-sine-cosine-secant-cosecant.pdf" download
        data-worksheet="05-01-precalc-graphing-sine-cosine-secant-cosecant.pdf" data-action="download"
        aria-label="Download Graphing Sine, Cosine, Secant, and Cosecant worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -468,9 +513,10 @@
   <div class="ws-topic">Graphing</div>
   <h3>Graphing Cosecant and Secant</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/trigonometry/05-02-precalc-graphing-cosecant-and-secant.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/trigonometry/05-02-precalc-graphing-cosecant-and-secant.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="05-02-precalc-graphing-cosecant-and-secant.pdf" data-action="open"
-       aria-label="Open Graphing Cosecant and Secant worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Graphing Cosecant and Secant worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/trigonometry/05-02-precalc-graphing-cosecant-and-secant.pdf" download
        data-worksheet="05-02-precalc-graphing-cosecant-and-secant.pdf" data-action="download"
        aria-label="Download Graphing Cosecant and Secant worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -488,9 +534,10 @@
   <div class="ws-topic">Trig Identities</div>
   <h3>Simplifying Trig Expressions — Set B</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/trigonometry/06-01-precalc-trig-simplifying-expressions-b.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/trigonometry/06-01-precalc-trig-simplifying-expressions-b.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="06-01-precalc-trig-simplifying-expressions-b.pdf" data-action="open"
-       aria-label="Open Simplifying Trig Expressions — Set B worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Simplifying Trig Expressions — Set B worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/trigonometry/06-01-precalc-trig-simplifying-expressions-b.pdf" download
        data-worksheet="06-01-precalc-trig-simplifying-expressions-b.pdf" data-action="download"
        aria-label="Download Simplifying Trig Expressions — Set B worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -507,9 +554,10 @@
   <div class="ws-topic">Trig Identities</div>
   <h3>Proving Trig Identities — Set B</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/trigonometry/06-02-precalc-trig-proving-identities-b.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/trigonometry/06-02-precalc-trig-proving-identities-b.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="06-02-precalc-trig-proving-identities-b.pdf" data-action="open"
-       aria-label="Open Proving Trig Identities — Set B worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Proving Trig Identities — Set B worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/trigonometry/06-02-precalc-trig-proving-identities-b.pdf" download
        data-worksheet="06-02-precalc-trig-proving-identities-b.pdf" data-action="download"
        aria-label="Download Proving Trig Identities — Set B worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -526,9 +574,10 @@
   <div class="ws-topic">Trig Identities</div>
   <h3>Simplifying Trig Expressions</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/trigonometry/06-01-precalc-trig-simplifying-expressions.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/trigonometry/06-01-precalc-trig-simplifying-expressions.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="06-01-precalc-trig-simplifying-expressions.pdf" data-action="open"
-       aria-label="Open Simplifying Trig Expressions worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Simplifying Trig Expressions worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/trigonometry/06-01-precalc-trig-simplifying-expressions.pdf" download
        data-worksheet="06-01-precalc-trig-simplifying-expressions.pdf" data-action="download"
        aria-label="Download Simplifying Trig Expressions worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -545,9 +594,10 @@
   <div class="ws-topic">Trig Identities</div>
   <h3>Proving Trig Identities</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/trigonometry/06-02-precalc-trig-proving-identities.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/trigonometry/06-02-precalc-trig-proving-identities.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="06-02-precalc-trig-proving-identities.pdf" data-action="open"
-       aria-label="Open Proving Trig Identities worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Proving Trig Identities worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/trigonometry/06-02-precalc-trig-proving-identities.pdf" download
        data-worksheet="06-02-precalc-trig-proving-identities.pdf" data-action="download"
        aria-label="Download Proving Trig Identities worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -564,9 +614,10 @@
   <div class="ws-topic">Trig Identities</div>
   <h3>Sum and Difference Formulas</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/trigonometry/06-03-precalc-trig-sum-and-difference-formulas.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/trigonometry/06-03-precalc-trig-sum-and-difference-formulas.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="06-03-precalc-trig-sum-and-difference-formulas.pdf" data-action="open"
-       aria-label="Open Sum and Difference Formulas worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Sum and Difference Formulas worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/trigonometry/06-03-precalc-trig-sum-and-difference-formulas.pdf" download
        data-worksheet="06-03-precalc-trig-sum-and-difference-formulas.pdf" data-action="download"
        aria-label="Download Sum and Difference Formulas worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -584,9 +635,10 @@
   <div class="ws-topic">Trig Equations</div>
   <h3>Solving Trig Equations — Set B</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/trigonometry/06-04-precalc-trig-solving-equations-b.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/trigonometry/06-04-precalc-trig-solving-equations-b.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="06-04-precalc-trig-solving-equations-b.pdf" data-action="open"
-       aria-label="Open Solving Trig Equations — Set B worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Solving Trig Equations — Set B worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/trigonometry/06-04-precalc-trig-solving-equations-b.pdf" download
        data-worksheet="06-04-precalc-trig-solving-equations-b.pdf" data-action="download"
        aria-label="Download Solving Trig Equations — Set B worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -603,9 +655,10 @@
   <div class="ws-topic">Trig Equations</div>
   <h3>Solving Trig Equations</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/trigonometry/06-04-precalc-trig-solving-equations.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/trigonometry/06-04-precalc-trig-solving-equations.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="06-04-precalc-trig-solving-equations.pdf" data-action="open"
-       aria-label="Open Solving Trig Equations worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Solving Trig Equations worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/trigonometry/06-04-precalc-trig-solving-equations.pdf" download
        data-worksheet="06-04-precalc-trig-solving-equations.pdf" data-action="download"
        aria-label="Download Solving Trig Equations worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -622,9 +675,10 @@
   <div class="ws-topic">Trig Equations</div>
   <h3>Solving Equations — Pythagorean Identities</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/trigonometry/06-05-precalc-trig-solving-equations-pythagorean-identities.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/trigonometry/06-05-precalc-trig-solving-equations-pythagorean-identities.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="06-05-precalc-trig-solving-equations-pythagorean-identities.pdf" data-action="open"
-       aria-label="Open Solving Equations — Pythagorean Identities worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Solving Equations — Pythagorean Identities worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/trigonometry/06-05-precalc-trig-solving-equations-pythagorean-identities.pdf" download
        data-worksheet="06-05-precalc-trig-solving-equations-pythagorean-identities.pdf" data-action="download"
        aria-label="Download Solving Equations — Pythagorean Identities worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -641,9 +695,10 @@
   <div class="ws-topic">Trig Equations</div>
   <h3>Solving Trig Equations Using Identities</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/trigonometry/06-08-precalc-trig-solving-equations-using-identities.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/trigonometry/06-08-precalc-trig-solving-equations-using-identities.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="06-08-precalc-trig-solving-equations-using-identities.pdf" data-action="open"
-       aria-label="Open Solving Trig Equations Using Identities worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Solving Trig Equations Using Identities worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/trigonometry/06-08-precalc-trig-solving-equations-using-identities.pdf" download
        data-worksheet="06-08-precalc-trig-solving-equations-using-identities.pdf" data-action="download"
        aria-label="Download Solving Trig Equations Using Identities worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -661,9 +716,10 @@
   <div class="ws-topic">Law of Sines</div>
   <h3>Law of Sines — Set B</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/trigonometry/06-06-precalc-trig-law-of-sines-b.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/trigonometry/06-06-precalc-trig-law-of-sines-b.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="06-06-precalc-trig-law-of-sines-b.pdf" data-action="open"
-       aria-label="Open Law of Sines — Set B worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Law of Sines — Set B worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/trigonometry/06-06-precalc-trig-law-of-sines-b.pdf" download
        data-worksheet="06-06-precalc-trig-law-of-sines-b.pdf" data-action="download"
        aria-label="Download Law of Sines — Set B worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -680,9 +736,10 @@
   <div class="ws-topic">Law of Sines</div>
   <h3>Law of Sines</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/trigonometry/06-06-precalc-trig-law-of-sines.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/trigonometry/06-06-precalc-trig-law-of-sines.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="06-06-precalc-trig-law-of-sines.pdf" data-action="open"
-       aria-label="Open Law of Sines worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Law of Sines worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/trigonometry/06-06-precalc-trig-law-of-sines.pdf" download
        data-worksheet="06-06-precalc-trig-law-of-sines.pdf" data-action="download"
        aria-label="Download Law of Sines worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -699,9 +756,10 @@
   <div class="ws-topic">Law of Sines</div>
   <h3>Law of Sines — Word Problems</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/trigonometry/06-09-precalc-trig-law-of-sines-word-problems.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/trigonometry/06-09-precalc-trig-law-of-sines-word-problems.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="06-09-precalc-trig-law-of-sines-word-problems.pdf" data-action="open"
-       aria-label="Open Law of Sines — Word Problems worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Law of Sines — Word Problems worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/trigonometry/06-09-precalc-trig-law-of-sines-word-problems.pdf" download
        data-worksheet="06-09-precalc-trig-law-of-sines-word-problems.pdf" data-action="download"
        aria-label="Download Law of Sines — Word Problems worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -719,9 +777,10 @@
   <div class="ws-topic">Law of Cosines</div>
   <h3>Law of Cosines — Set B</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/trigonometry/06-07-precalc-trig-law-of-cosines-b.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/trigonometry/06-07-precalc-trig-law-of-cosines-b.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="06-07-precalc-trig-law-of-cosines-b.pdf" data-action="open"
-       aria-label="Open Law of Cosines — Set B worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Law of Cosines — Set B worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/trigonometry/06-07-precalc-trig-law-of-cosines-b.pdf" download
        data-worksheet="06-07-precalc-trig-law-of-cosines-b.pdf" data-action="download"
        aria-label="Download Law of Cosines — Set B worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -738,9 +797,10 @@
   <div class="ws-topic">Law of Cosines</div>
   <h3>Law of Cosines</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/trigonometry/06-07-precalc-trig-law-of-cosines.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/trigonometry/06-07-precalc-trig-law-of-cosines.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="06-07-precalc-trig-law-of-cosines.pdf" data-action="open"
-       aria-label="Open Law of Cosines worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Law of Cosines worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/trigonometry/06-07-precalc-trig-law-of-cosines.pdf" download
        data-worksheet="06-07-precalc-trig-law-of-cosines.pdf" data-action="download"
        aria-label="Download Law of Cosines worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -757,9 +817,10 @@
   <div class="ws-topic">Law of Cosines</div>
   <h3>Law of Cosines — Solving Oblique Triangles</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/trigonometry/06-10-precalc-trig-law-of-cosines-oblique-triangles.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/trigonometry/06-10-precalc-trig-law-of-cosines-oblique-triangles.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="06-10-precalc-trig-law-of-cosines-oblique-triangles.pdf" data-action="open"
-       aria-label="Open Law of Cosines — Solving Oblique Triangles worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Law of Cosines — Solving Oblique Triangles worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/trigonometry/06-10-precalc-trig-law-of-cosines-oblique-triangles.pdf" download
        data-worksheet="06-10-precalc-trig-law-of-cosines-oblique-triangles.pdf" data-action="download"
        aria-label="Download Law of Cosines — Solving Oblique Triangles worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -776,9 +837,10 @@
   <div class="ws-topic">Law of Cosines</div>
   <h3>Law of Cosines — Word Problems</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/trigonometry/06-11-precalc-trig-law-of-cosines-word-problems.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/trigonometry/06-11-precalc-trig-law-of-cosines-word-problems.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="06-11-precalc-trig-law-of-cosines-word-problems.pdf" data-action="open"
-       aria-label="Open Law of Cosines — Word Problems worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Law of Cosines — Word Problems worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/trigonometry/06-11-precalc-trig-law-of-cosines-word-problems.pdf" download
        data-worksheet="06-11-precalc-trig-law-of-cosines-word-problems.pdf" data-action="download"
        aria-label="Download Law of Cosines — Word Problems worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -796,9 +858,10 @@
   <div class="ws-topic">Complex Numbers</div>
   <h3>Complex Numbers in Trig Form — Operations — Set B</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/trigonometry/07-03-precalc-trig-complex-numbers-trig-form-operations-b.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/trigonometry/07-03-precalc-trig-complex-numbers-trig-form-operations-b.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="07-03-precalc-trig-complex-numbers-trig-form-operations-b.pdf" data-action="open"
-       aria-label="Open Complex Numbers in Trig Form — Operations — Set B worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Complex Numbers in Trig Form — Operations — Set B worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/trigonometry/07-03-precalc-trig-complex-numbers-trig-form-operations-b.pdf" download
        data-worksheet="07-03-precalc-trig-complex-numbers-trig-form-operations-b.pdf" data-action="download"
        aria-label="Download Complex Numbers in Trig Form — Operations — Set B worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -815,9 +878,10 @@
   <div class="ws-topic">Complex Numbers</div>
   <h3>De Moivre’s Theorem — Powers of Complex Numbers — Set B</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/trigonometry/07-04-precalc-trig-de-moivres-theorem-b.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/trigonometry/07-04-precalc-trig-de-moivres-theorem-b.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="07-04-precalc-trig-de-moivres-theorem-b.pdf" data-action="open"
-       aria-label="Open De Moivre’s Theorem — Powers of Complex Numbers — Set B worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View De Moivre’s Theorem — Powers of Complex Numbers — Set B worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/trigonometry/07-04-precalc-trig-de-moivres-theorem-b.pdf" download
        data-worksheet="07-04-precalc-trig-de-moivres-theorem-b.pdf" data-action="download"
        aria-label="Download De Moivre’s Theorem — Powers of Complex Numbers — Set B worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -834,9 +898,10 @@
   <div class="ws-topic">Complex Numbers</div>
   <h3>Trigonometric Form of a Complex Number</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/trigonometry/07-01-precalc-trig-complex-numbers-trig-form.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/trigonometry/07-01-precalc-trig-complex-numbers-trig-form.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="07-01-precalc-trig-complex-numbers-trig-form.pdf" data-action="open"
-       aria-label="Open Trigonometric Form of a Complex Number worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Trigonometric Form of a Complex Number worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/trigonometry/07-01-precalc-trig-complex-numbers-trig-form.pdf" download
        data-worksheet="07-01-precalc-trig-complex-numbers-trig-form.pdf" data-action="download"
        aria-label="Download Trigonometric Form of a Complex Number worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -853,9 +918,10 @@
   <div class="ws-topic">Complex Numbers</div>
   <h3>Absolute Value of Complex Numbers</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/trigonometry/07-02-precalc-trig-complex-numbers-absolute-value.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/trigonometry/07-02-precalc-trig-complex-numbers-absolute-value.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="07-02-precalc-trig-complex-numbers-absolute-value.pdf" data-action="open"
-       aria-label="Open Absolute Value of Complex Numbers worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Absolute Value of Complex Numbers worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/trigonometry/07-02-precalc-trig-complex-numbers-absolute-value.pdf" download
        data-worksheet="07-02-precalc-trig-complex-numbers-absolute-value.pdf" data-action="download"
        aria-label="Download Absolute Value of Complex Numbers worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -872,9 +938,10 @@
   <div class="ws-topic">Complex Numbers</div>
   <h3>Complex Numbers in Trig Form — Operations</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/trigonometry/07-03-precalc-trig-complex-numbers-trig-form-operations.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/trigonometry/07-03-precalc-trig-complex-numbers-trig-form-operations.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="07-03-precalc-trig-complex-numbers-trig-form-operations.pdf" data-action="open"
-       aria-label="Open Complex Numbers in Trig Form — Operations worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Complex Numbers in Trig Form — Operations worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/trigonometry/07-03-precalc-trig-complex-numbers-trig-form-operations.pdf" download
        data-worksheet="07-03-precalc-trig-complex-numbers-trig-form-operations.pdf" data-action="download"
        aria-label="Download Complex Numbers in Trig Form — Operations worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -891,9 +958,10 @@
   <div class="ws-topic">Complex Numbers</div>
   <h3>De Moivre’s Theorem</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/trigonometry/07-04-precalc-trig-de-moivres-theorem.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/trigonometry/07-04-precalc-trig-de-moivres-theorem.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="07-04-precalc-trig-de-moivres-theorem.pdf" data-action="open"
-       aria-label="Open De Moivre’s Theorem worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View De Moivre’s Theorem worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/trigonometry/07-04-precalc-trig-de-moivres-theorem.pdf" download
        data-worksheet="07-04-precalc-trig-de-moivres-theorem.pdf" data-action="download"
        aria-label="Download De Moivre’s Theorem worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -911,9 +979,10 @@
   <div class="ws-topic">Angle Measurement</div>
   <h3>Trig Introduction — Angles and Measurement</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/trigonometry/04-01-precalc-trig-introduction-angles-measurement.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/trigonometry/04-01-precalc-trig-introduction-angles-measurement.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="04-01-precalc-trig-introduction-angles-measurement.pdf" data-action="open"
-       aria-label="Open Trig Introduction — Angles and Measurement worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Trig Introduction — Angles and Measurement worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/trigonometry/04-01-precalc-trig-introduction-angles-measurement.pdf" download
        data-worksheet="04-01-precalc-trig-introduction-angles-measurement.pdf" data-action="download"
        aria-label="Download Trig Introduction — Angles and Measurement worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -930,9 +999,10 @@
   <div class="ws-topic">Angle Measurement</div>
   <h3>Angles in Standard Position</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/trigonometry/04-07-precalc-trig-angles-standard-position.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/trigonometry/04-07-precalc-trig-angles-standard-position.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="04-07-precalc-trig-angles-standard-position.pdf" data-action="open"
-       aria-label="Open Angles in Standard Position worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Angles in Standard Position worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/trigonometry/04-07-precalc-trig-angles-standard-position.pdf" download
        data-worksheet="04-07-precalc-trig-angles-standard-position.pdf" data-action="download"
        aria-label="Download Angles in Standard Position worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -949,9 +1019,10 @@
   <div class="ws-topic">Angle Measurement</div>
   <h3>Angle Conversion: Radian to Degree</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/trigonometry/04-09-trig-angle-conversion-radian-to-degree.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/trigonometry/04-09-trig-angle-conversion-radian-to-degree.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="04-09-trig-angle-conversion-radian-to-degree.pdf" data-action="open"
-       aria-label="Open Angle Conversion: Radian to Degree worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Angle Conversion: Radian to Degree worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/trigonometry/04-09-trig-angle-conversion-radian-to-degree.pdf" download
        data-worksheet="04-09-trig-angle-conversion-radian-to-degree.pdf" data-action="download"
        aria-label="Download Angle Conversion: Radian to Degree worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -969,9 +1040,10 @@
   <div class="ws-topic">Trig Ratios</div>
   <h3>Six Trig Ratios and the Pythagorean Theorem</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/trigonometry/04-02-precalc-trig-six-ratios-pythagorean-theorem.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/trigonometry/04-02-precalc-trig-six-ratios-pythagorean-theorem.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="04-02-precalc-trig-six-ratios-pythagorean-theorem.pdf" data-action="open"
-       aria-label="Open Six Trig Ratios and the Pythagorean Theorem worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Six Trig Ratios and the Pythagorean Theorem worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/trigonometry/04-02-precalc-trig-six-ratios-pythagorean-theorem.pdf" download
        data-worksheet="04-02-precalc-trig-six-ratios-pythagorean-theorem.pdf" data-action="download"
        aria-label="Download Six Trig Ratios and the Pythagorean Theorem worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -989,9 +1061,10 @@
   <div class="ws-topic">Unit Circle</div>
   <h3>Unit Circle and Special Right Triangles</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/trigonometry/04-03-precalc-trig-unit-circle-special-right-triangles.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/trigonometry/04-03-precalc-trig-unit-circle-special-right-triangles.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="04-03-precalc-trig-unit-circle-special-right-triangles.pdf" data-action="open"
-       aria-label="Open Unit Circle and Special Right Triangles worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Unit Circle and Special Right Triangles worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/trigonometry/04-03-precalc-trig-unit-circle-special-right-triangles.pdf" download
        data-worksheet="04-03-precalc-trig-unit-circle-special-right-triangles.pdf" data-action="download"
        aria-label="Download Unit Circle and Special Right Triangles worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -1009,9 +1082,10 @@
   <div class="ws-topic">Right Triangles</div>
   <h3>Right Triangle — Rationalizing Fractions</h3>
   <div class="ws-actions">
-    <a class="ws-btn primary" href="/worksheets/trigonometry/04-04-precalc-trig-right-triangle-rationalizing-fractions.pdf" target="_blank" rel="noopener"
+    <a class="ws-btn primary" href="/worksheets/trigonometry/04-04-precalc-trig-right-triangle-rationalizing-fractions.pdf"
+       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
        data-worksheet="04-04-precalc-trig-right-triangle-rationalizing-fractions.pdf" data-action="open"
-       aria-label="Open Right Triangle — Rationalizing Fractions worksheet PDF in a new tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
+       aria-label="View Right Triangle — Rationalizing Fractions worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/trigonometry/04-04-precalc-trig-right-triangle-rationalizing-fractions.pdf" download
        data-worksheet="04-04-precalc-trig-right-triangle-rationalizing-fractions.pdf" data-action="download"
        aria-label="Download Right Triangle — Rationalizing Fractions worksheet PDF"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
@@ -1159,5 +1233,42 @@
 })();
 </script>
 
+<!-- PDF Modal Viewer -->
+<div class="pdf-modal-overlay" id="pdfModal" role="dialog" aria-modal="true" aria-labelledby="pdfModalTitle">
+  <div class="pdf-modal">
+    <div class="pdf-modal-bar">
+      <span class="pdf-modal-title" id="pdfModalTitle">Worksheet</span>
+      <div class="pdf-modal-actions">
+        <a class="pdf-modal-dl" id="pdfModalDl" href="#" download aria-label="Download PDF">&#11015; Download</a>
+        <button class="pdf-modal-close" id="pdfModalClose" aria-label="Close PDF viewer">&#x2715;</button>
+      </div>
+    </div>
+    <iframe id="pdfModalFrame" src="" title="Worksheet PDF Viewer" loading="lazy"></iframe>
+  </div>
+</div>
+<script>
+(function(){
+  var overlay=document.getElementById('pdfModal');
+  var frame=document.getElementById('pdfModalFrame');
+  var titleEl=document.getElementById('pdfModalTitle');
+  var dlLink=document.getElementById('pdfModalDl');
+  var closeBtn=document.getElementById('pdfModalClose');
+  window.openPdfModal=function(url,title){
+    frame.src=url;
+    titleEl.textContent=title||'Worksheet';
+    dlLink.href=url;
+    overlay.classList.add('open');
+    document.body.style.overflow='hidden';
+  };
+  function closeModal(){
+    overlay.classList.remove('open');
+    frame.src='';
+    document.body.style.overflow='';
+  }
+  closeBtn.addEventListener('click',closeModal);
+  overlay.addEventListener('click',function(e){if(e.target===overlay)closeModal();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal();});
+})();
+</script>
 </body>
 </html>

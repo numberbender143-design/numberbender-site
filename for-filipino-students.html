@@ -77,7 +77,7 @@
     {"@type": "ListItem", "position": 9, "name": "Inferential Statistics", "url": "https://numberbender.com/courses"},
     {"@type": "ListItem", "position": 10, "name": "Discrete Mathematics", "url": "https://numberbender.com/courses"},
     {"@type": "ListItem", "position": 11, "name": "Linear Algebra", "url": "https://numberbender.com/courses"},
-    {"@type": "ListItem", "position": 12, "name": "Logarithms", "url": "https://numberbender.com/courses"}
+    {"@type": "ListItem", "position": 12, "name": "Analytic Geometry", "url": "https://numberbender.com/courses/analytic-geometry/analytic-geometry-filipino/worksheets/"}
   ]
 }
 </script>
@@ -569,11 +569,113 @@
     .subjects-grid{ grid-template-columns: repeat(2, 1fr); }
     .who-grid{ grid-template-columns: 1fr; }
     .hero-stats{ gap: 0; }
-    .stat{ padding: 12px 16px; border-right: none; border-bottom: 1px solid var(--border); width: 50%; }
-    .stat:nth-child(odd){ border-right: 1px solid var(--border); }
+    .stat{ padding: 12px 16px; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.12); width: 50%; }
+    .stat:nth-child(odd){ border-right: 1px solid rgba(255,255,255,0.12); }
     .stat:nth-last-child(-n+2){ border-bottom: none; }
     .foot-grid{ grid-template-columns: 1fr; }
     .logo-lockup .lockup-img{ height: 50px; max-width: 240px; }
+    .pill-grid{ grid-template-columns: 1fr; }
+  }
+
+  /* ========== B3 GLASS BUTTONS ========== */
+  .btn-glass{
+    display:inline-flex; align-items:center; justify-content:center; gap:8px;
+    padding: 13px 22px; border-radius: 12px;
+    font-weight: 700; font-size: 1rem; cursor: pointer;
+    background: rgba(255,255,255,0.16);
+    color: white;
+    border: 1.5px solid rgba(255,255,255,0.32);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    transition: background .15s ease, transform .15s ease, box-shadow .15s ease;
+    text-decoration: none !important;
+  }
+  .btn-glass:hover{
+    background: rgba(255,255,255,0.26);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(0,0,0,0.25);
+    color: white;
+  }
+  .btn-glass-solid{
+    display:inline-flex; align-items:center; justify-content:center; gap:8px;
+    padding: 13px 22px; border-radius: 12px;
+    font-weight: 700; font-size: 1rem; cursor: pointer;
+    background: rgba(255,255,255,0.95);
+    color: #1F6F6B;
+    border: 1.5px solid transparent;
+    transition: background .15s ease, transform .15s ease, box-shadow .15s ease;
+    text-decoration: none !important;
+  }
+  .btn-glass-solid:hover{
+    background: white;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(0,0,0,0.25);
+    color: #1F6F6B;
+  }
+  .btn-glass.btn-lg, .btn-glass-solid.btn-lg{ padding: 16px 28px; font-size: 1.05rem; }
+
+  /* ========== HERO — DARK GRADIENT OVERRIDE ========== */
+  .hero{
+    background:
+      radial-gradient(900px 600px at 100% -20%, rgba(6,182,212,0.22), transparent 60%),
+      radial-gradient(800px 500px at -10% 80%, rgba(31,111,107,0.28), transparent 60%),
+      linear-gradient(150deg, #0e1f3b 0%, #1F6F6B 55%, #0d3b5e 100%) !important;
+  }
+  .hero h1{ color: white; }
+  .hero h1 .accent-blue{ color: #93c5fd; }
+  .hero h1 .accent-cyan{ color: #67e8f9; }
+  .hero p.subhead{ color: rgba(255,255,255,0.78); }
+  .hero p.subhead-fil{ color: rgba(255,255,255,0.52); }
+  .hero-eyebrow{
+    background: rgba(255,255,255,0.12) !important;
+    border: 1px solid rgba(255,255,255,0.22) !important;
+    color: rgba(255,255,255,0.92) !important;
+  }
+  .hero-stats{
+    border-top: 1px solid rgba(255,255,255,0.15) !important;
+  }
+  .stat{ border-right-color: rgba(255,255,255,0.15); }
+  .stat-num{ color: white !important; }
+  .stat-label{ color: rgba(255,255,255,0.6) !important; }
+
+  /* ========== D2 SUBJECT PILL GRID ========== */
+  .pill-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 12px;
+  }
+  .subj-pill{
+    display: flex; align-items: center; gap: 14px;
+    background: var(--surface);
+    border: 1.5px solid var(--border);
+    border-radius: 999px;
+    padding: 11px 18px 11px 11px;
+    text-decoration: none !important; color: var(--navy);
+    transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+  }
+  .subj-pill:hover{
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+    border-color: #1F6F6B;
+    text-decoration: none;
+  }
+  .pill-icon-wrap{
+    width: 52px; height: 52px; border-radius: 50%;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    display: grid; place-items: center;
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+  .pill-icon-wrap img{ width: 100%; height: 100%; object-fit: cover; display: block; }
+  .pill-text{ display: flex; flex-direction: column; flex: 1; min-width: 0; }
+  .pill-name{ font-size: 0.9rem; font-weight: 700; line-height: 1.25; }
+  .pill-sub{ font-size: 0.73rem; color: var(--muted); white-space: nowrap; }
+  .pill-arrow{ font-size: 1rem; color: var(--muted); flex-shrink: 0; margin-left: 4px; transition: color .15s, transform .15s; }
+  .subj-pill:hover .pill-arrow{ color: #1F6F6B; transform: translateX(3px); }
+
+  @media (max-width: 900px){
+    .pill-grid{ grid-template-columns: repeat(2, 1fr); }
   }
 </style>
 </head>
@@ -634,10 +736,10 @@
         <div class="hero-eyebrow">🇵🇭 Para sa mga Filipino STEM Students</div>
         <h1>Free Math in <span class="accent-blue">English</span> &amp; <span class="accent-cyan">Filipino</span></h1>
         <p class="subhead">Algebra, Calculus, Statistics, Trigonometry — clear, free, and bilingual.</p>
-        <p class="subhead-fil">Algebra, Calculus, Statistics, Trigonometry — malinaw, libre, at dalawang wika.</p>
+        <p class="subhead-fil">Algebra, Calculus, Statistics, Trigonometry — malinaw, libreng access, at dalawang wika.</p>
         <div class="hero-ctas">
-          <a href="math-worksheets.html" class="btn btn-primary btn-lg">📝 Get Free Worksheets</a>
-          <a href="courses.html" class="btn btn-outline btn-lg">▶️ Watch Lessons</a>
+          <a href="math-worksheets.html" class="btn-glass-solid btn-lg">📝 Get Free Worksheets</a>
+          <a href="courses.html" class="btn-glass btn-lg">▶ Panoorin ang mga Aralin</a>
         </div>
       </div>
       <!-- Right: Hero Image -->
@@ -704,19 +806,67 @@
     <div class="section-head">
       <h2>Every subject. Both languages. Always free.</h2>
     </div>
-    <div class="subjects-grid">
-      <a href="courses.html" class="subject-card"><div class="s-icon"><img src="images/playlist_icons/13_elementary_algebra.png" alt="Elementary Algebra"></div><h4>Elementary Algebra</h4></a>
-      <a href="courses.html" class="subject-card"><div class="s-icon"><img src="images/playlist_icons/12_intermediate_algebra.png" alt="Intermediate Algebra"></div><h4>Intermediate Algebra</h4></a>
-      <a href="courses.html" class="subject-card"><div class="s-icon"><img src="images/playlist_icons/1_algebra.png" alt="College Algebra"></div><h4>College Algebra</h4></a>
-      <a href="courses.html" class="subject-card"><div class="s-icon"><img src="images/playlist_icons/2_precalculus.png" alt="Pre-Calculus"></div><h4>Pre-Calculus</h4></a>
-      <a href="courses.html" class="subject-card"><div class="s-icon"><img src="images/playlist_icons/8_trigonometry.png" alt="Trigonometry"></div><h4>Trigonometry</h4></a>
-      <a href="courses.html" class="subject-card"><div class="s-icon"><img src="images/playlist_icons/10_geomtery.png" alt="Geometry"></div><h4>Geometry</h4></a>
-      <a href="courses.html" class="subject-card"><div class="s-icon"><img src="images/playlist_icons/4_Calculus.png" alt="Calculus"></div><h4>Calculus</h4></a>
-      <a href="courses.html" class="subject-card"><div class="s-icon"><img src="images/playlist_icons/3_statistics.png" alt="Statistics"></div><h4>Statistics</h4></a>
-      <a href="courses.html" class="subject-card"><div class="s-icon"><img src="images/playlist_icons/7_Inferential-Stats.png" alt="Inferential Statistics"></div><h4>Inferential Statistics</h4></a>
-      <a href="courses.html" class="subject-card"><div class="s-icon"><img src="images/playlist_icons/5_discrete_math.png" alt="Discrete Mathematics"></div><h4>Discrete Mathematics</h4></a>
-      <a href="courses.html" class="subject-card"><div class="s-icon"><img src="images/playlist_icons/6_linear_algebra.png" alt="Linear Algebra"></div><h4>Linear Algebra</h4></a>
-      <a href="courses.html" class="subject-card"><div class="s-icon"><img src="images/playlist_icons/11_logarithm.png" alt="Logarithms"></div><h4>Logarithms</h4></a>
+    <div class="pill-grid">
+      <a href="courses/algebra/elementary-algebra-filipino/worksheets/" class="subj-pill">
+        <div class="pill-icon-wrap"><img src="images/playlist_icons/13_elementary_algebra.png" alt="Elementary Algebra"></div>
+        <div class="pill-text"><span class="pill-name">Elementary Algebra</span><span class="pill-sub">Panoorin ang mga aralin</span></div>
+        <span class="pill-arrow">›</span>
+      </a>
+      <a href="courses/algebra/intermediate-algebra-filipino/worksheets/" class="subj-pill">
+        <div class="pill-icon-wrap"><img src="images/playlist_icons/12_intermediate_algebra.png" alt="Intermediate Algebra"></div>
+        <div class="pill-text"><span class="pill-name">Intermediate Algebra</span><span class="pill-sub">Panoorin ang mga aralin</span></div>
+        <span class="pill-arrow">›</span>
+      </a>
+      <a href="courses/algebra/algebra-filipino/worksheets/" class="subj-pill">
+        <div class="pill-icon-wrap"><img src="images/playlist_icons/1_algebra.png" alt="College Algebra"></div>
+        <div class="pill-text"><span class="pill-name">College Algebra</span><span class="pill-sub">Panoorin ang mga aralin</span></div>
+        <span class="pill-arrow">›</span>
+      </a>
+      <a href="courses/precalculus/precalculus-filipino/worksheets/" class="subj-pill">
+        <div class="pill-icon-wrap"><img src="images/playlist_icons/2_precalculus.png" alt="Pre-Calculus"></div>
+        <div class="pill-text"><span class="pill-name">Pre-Calculus</span><span class="pill-sub">Panoorin ang mga aralin</span></div>
+        <span class="pill-arrow">›</span>
+      </a>
+      <a href="courses/trigonometry/trigonometry-filipino/worksheets/" class="subj-pill">
+        <div class="pill-icon-wrap"><img src="images/playlist_icons/8_trigonometry.png" alt="Trigonometry"></div>
+        <div class="pill-text"><span class="pill-name">Trigonometry</span><span class="pill-sub">Panoorin ang mga aralin</span></div>
+        <span class="pill-arrow">›</span>
+      </a>
+      <a href="courses/geometry/geometry-filipino/worksheets/" class="subj-pill">
+        <div class="pill-icon-wrap"><img src="images/playlist_icons/10_geomtery.png" alt="Geometry"></div>
+        <div class="pill-text"><span class="pill-name">Geometry</span><span class="pill-sub">Panoorin ang mga aralin</span></div>
+        <span class="pill-arrow">›</span>
+      </a>
+      <a href="courses/calculus/calculus-filipino/worksheets/" class="subj-pill">
+        <div class="pill-icon-wrap"><img src="images/playlist_icons/4_Calculus.png" alt="Calculus"></div>
+        <div class="pill-text"><span class="pill-name">Calculus</span><span class="pill-sub">Panoorin ang mga aralin</span></div>
+        <span class="pill-arrow">›</span>
+      </a>
+      <a href="courses/statistics/statistics-filipino/worksheets/" class="subj-pill">
+        <div class="pill-icon-wrap"><img src="images/playlist_icons/3_statistics.png" alt="Statistics"></div>
+        <div class="pill-text"><span class="pill-name">Statistics</span><span class="pill-sub">Panoorin ang mga aralin</span></div>
+        <span class="pill-arrow">›</span>
+      </a>
+      <a href="courses/statistics/inferential-statistics-filipino/worksheets/" class="subj-pill">
+        <div class="pill-icon-wrap"><img src="images/playlist_icons/7_Inferential-Stats.png" alt="Inferential Statistics"></div>
+        <div class="pill-text"><span class="pill-name">Inferential Statistics</span><span class="pill-sub">Panoorin ang mga aralin</span></div>
+        <span class="pill-arrow">›</span>
+      </a>
+      <a href="courses/discrete-math/discrete-math-filipino/worksheets/" class="subj-pill">
+        <div class="pill-icon-wrap"><img src="images/playlist_icons/5_discrete_math.png" alt="Discrete Mathematics"></div>
+        <div class="pill-text"><span class="pill-name">Discrete Mathematics</span><span class="pill-sub">Panoorin ang mga aralin</span></div>
+        <span class="pill-arrow">›</span>
+      </a>
+      <a href="courses/linear-algebra/linear-algebra-filipino/worksheets/" class="subj-pill">
+        <div class="pill-icon-wrap"><img src="images/playlist_icons/6_linear_algebra.png" alt="Linear Algebra"></div>
+        <div class="pill-text"><span class="pill-name">Linear Algebra</span><span class="pill-sub">Panoorin ang mga aralin</span></div>
+        <span class="pill-arrow">›</span>
+      </a>
+      <a href="courses/analytic-geometry/analytic-geometry-filipino/worksheets/" class="subj-pill">
+        <div class="pill-icon-wrap"><img src="images/playlist_icons/9_analytic_geometry.png" alt="Analytic Geometry"></div>
+        <div class="pill-text"><span class="pill-name">Analytic Geometry</span><span class="pill-sub">Panoorin ang mga aralin</span></div>
+        <span class="pill-arrow">›</span>
+      </a>
     </div>
   </div>
 </section>
@@ -821,10 +971,10 @@
     <div class="section-eyebrow" style="color: var(--yellow);">Para sa lahat ng gustong matuto.</div>
     <h2>Ready to bend the math?</h2>
     <p>Free worksheets, free videos, free forever.</p>
-    <p class="fil-line">Libre ang lahat — para sa lahat ng gustong matuto.</p>
+    <p class="fil-line">Libreng access and lahat — para sa lahat ng gustong matuto.</p>
     <div class="final-ctas">
-      <a href="math-worksheets.html" class="btn btn-yellow btn-lg">📝 Get Free Worksheets</a>
-      <a href="courses.html" class="btn btn-cyan btn-lg">▶️ Watch Lessons</a>
+      <a href="math-worksheets.html" class="btn-glass-solid btn-lg">📝 Get Free Worksheets</a>
+      <a href="courses.html" class="btn-glass btn-lg">▶ Panoorin ang mga Aralin</a>
     </div>
   </div>
 </section>
