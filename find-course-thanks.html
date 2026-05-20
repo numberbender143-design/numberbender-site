@@ -166,6 +166,25 @@
   .socials a[aria-label="TikTok"]:hover{ background: #000000; }
   .socials a[aria-label="Facebook"]:hover{ background: #1877f2; }
   .socials a[aria-label="LinkedIn"]:hover{ background: #0a66c2; }
+
+  /* Dropdown nav */
+  .nav-dropdown{ position:relative; }
+  .nav-dropdown .dropdown-trigger{ background:none; border:none; padding:0; margin:0; font:inherit; color:var(--navy); font-weight:500; font-size:0.95rem; cursor:pointer; display:inline-flex; align-items:center; gap:4px; }
+  .nav-dropdown .dropdown-trigger:hover{ color:var(--blue); }
+  .nav-dropdown .caret{ font-size:0.75em; display:inline-block; transition:transform .2s ease; }
+  .nav-dropdown:hover .caret, .nav-dropdown .dropdown-trigger[aria-expanded="true"] .caret{ transform:rotate(180deg); }
+  .nav-dropdown .dropdown-menu{ position:absolute; top:100%; left:0; margin-top:10px; background:white; border:1px solid var(--border); border-radius:14px; padding:6px; box-shadow:0 20px 50px rgba(15,23,42,.12); min-width:240px; opacity:0; visibility:hidden; transform:translateY(-6px); transition:opacity .15s ease,transform .15s ease,visibility .15s ease; z-index:100; }
+  .nav-dropdown .dropdown-menu::before{ content:''; position:absolute; top:-12px; left:0; right:0; height:12px; }
+  .nav-dropdown:hover .dropdown-menu, .nav-dropdown .dropdown-menu.open{ opacity:1; visibility:visible; transform:translateY(0); }
+  .nav-dropdown .dropdown-menu a{ display:block; padding:10px 14px; border-radius:8px; color:var(--navy); font-weight:500; font-size:0.95rem; }
+  .nav-dropdown .dropdown-menu a:hover{ background:rgba(37,99,235,.08); color:var(--blue); text-decoration:none; }
+  @media (max-width:900px){
+    .nav-dropdown{ width:100%; }
+    .nav-dropdown .dropdown-trigger{ width:100%; justify-content:space-between; padding:6px 0; }
+    .nav-dropdown .dropdown-menu{ position:static; box-shadow:none; border:none; padding:0 0 4px 14px; margin-top:0; min-width:0; opacity:1; visibility:visible; transform:none; display:none; background:transparent; }
+    .nav-dropdown:hover .dropdown-menu{ display:none; }
+    .nav-dropdown .dropdown-menu.open{ display:block; }
+  }
 </style>
   <!-- Microsoft Clarity -->
   <script type="text/javascript">
@@ -282,6 +301,34 @@
     </div>
   </div>
 </footer>
+
+<script>
+  function toggleDD(btn){
+    var menu = btn.nextElementSibling;
+    var willOpen = !menu.classList.contains('open');
+    document.querySelectorAll('.nav-dropdown .dropdown-menu.open').forEach(function(m){
+      m.classList.remove('open');
+      var t = m.previousElementSibling;
+      if (t) t.setAttribute('aria-expanded','false');
+    });
+    if (willOpen){
+      menu.style.transition='none';
+      menu.classList.add('open');
+      menu.getBoundingClientRect();
+      menu.style.transition='';
+      btn.setAttribute('aria-expanded','true');
+    }
+  }
+  document.addEventListener('click', function(e){
+    if (!e.target.closest('.nav-dropdown')){
+      document.querySelectorAll('.nav-dropdown .dropdown-menu.open').forEach(function(m){
+        m.classList.remove('open');
+        var t = m.previousElementSibling;
+        if (t) t.setAttribute('aria-expanded','false');
+      });
+    }
+  });
+</script>
 
 </body>
 </html>

@@ -52,6 +52,7 @@
     .nav-dropdown .caret{font-size:0.75em;display:inline-block;transition:transform .2s ease;}
     .nav-dropdown:hover .caret,.nav-dropdown .dropdown-trigger[aria-expanded="true"] .caret{transform:rotate(180deg);}
     .nav-dropdown .dropdown-menu{position:absolute;top:100%;left:0;margin-top:10px;background:white;border:1px solid var(--border);border-radius:14px;padding:6px;box-shadow:0 20px 50px rgba(15,23,42,.12);min-width:240px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .15s ease,transform .15s ease,visibility .15s ease;z-index:100;}
+    .nav-dropdown .dropdown-menu::before{ content:''; position:absolute; top:-12px; left:0; right:0; height:12px; }
     .nav-dropdown:hover .dropdown-menu,.nav-dropdown .dropdown-menu.open{opacity:1;visibility:visible;transform:translateY(0);}
     .nav-dropdown .dropdown-menu a{display:block;padding:10px 14px;border-radius:8px;color:var(--navy);font-weight:500;font-size:0.95rem;}
     .nav-dropdown .dropdown-menu a:hover{background:rgba(37,99,235,.08);color:var(--blue);text-decoration:none;}
@@ -325,7 +326,14 @@
 </footer>
 
 <script>
-function toggleDD(btn){var m=btn.closest('.nav-dropdown').querySelector('.dropdown-menu');var o=m.classList.toggle('open');btn.setAttribute('aria-expanded',o);}
+function toggleDD(btn){
+  var m=btn.closest('.nav-dropdown').querySelector('.dropdown-menu');
+  var willOpen=!m.classList.contains('open');
+  if(willOpen){m.style.transition='none';}
+  m.classList.toggle('open');
+  if(willOpen){m.getBoundingClientRect();m.style.transition='';}
+  btn.setAttribute('aria-expanded',m.classList.contains('open'));
+}
 document.addEventListener('click',function(e){document.querySelectorAll('.dropdown-menu.open').forEach(function(m){if(!m.closest('.nav-dropdown').contains(e.target)){m.classList.remove('open');var t=m.closest('.nav-dropdown').querySelector('.dropdown-trigger');if(t)t.setAttribute('aria-expanded','false');}});});
 (function(){var inp=document.getElementById('wsSearch');if(!inp)return;inp.addEventListener('input',function(){var q=inp.value.toLowerCase().trim();var cards=document.querySelectorAll('#ws-grid .ws-card');var vis=0;cards.forEach(function(c){var txt=c.textContent.toLowerCase();var show=!q||txt.includes(q);c.style.display=show?'':'none';if(show)vis++;});document.getElementById('wsNoResults').classList.toggle('visible',!!q&&vis===0);});})();
 </script>

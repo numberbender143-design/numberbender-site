@@ -402,6 +402,9 @@
     transition: opacity .15s ease, transform .15s ease, visibility .15s ease;
     z-index: 100;
   }
+  .nav-dropdown .dropdown-menu::before{
+    content: ''; position: absolute; top: -10px; left: 0; right: 0; height: 10px;
+  }
   .nav-dropdown:hover .dropdown-menu,
   .nav-dropdown .dropdown-menu.open{
     opacity: 1; visibility: visible; transform: translateY(0);
@@ -860,7 +863,10 @@
       if (t) t.setAttribute('aria-expanded','false');
     });
     if (willOpen){
+      menu.style.transition='none';
       menu.classList.add('open');
+      menu.getBoundingClientRect();
+      menu.style.transition='';
       btn.setAttribute('aria-expanded','true');
     }
   }
