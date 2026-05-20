@@ -348,6 +348,14 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- ===== Press & Media ===== -->
+  <url>
+    <loc>https://numberbender.com/press</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- ===== Speaking pages ===== -->
   <url>
     <loc>https://numberbender.com/speaking</loc>
