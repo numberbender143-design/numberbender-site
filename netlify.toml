@@ -138,6 +138,12 @@
   status = 301
   force  = true
 
+[[redirects]]
+  from = "/press.html"
+  to   = "/press"
+  status = 301
+  force  = true
+
 # Speaking sub-pages
 [[redirects]]
   from = "/speaking-2025-06-otc.html"
