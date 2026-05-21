@@ -559,6 +559,19 @@
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "wnr3kox01b");
   </script>
+
+<!-- ── Numberbender Sticky Bar CSS ── -->
+<style>
+#nb-sticky-bar{position:fixed;bottom:0;left:0;right:0;background:#1F6F6B;color:#fff;padding:12px 20px;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;z-index:9999;box-shadow:0 -2px 12px rgba(0,0,0,.15);font-family:'Plus Jakarta Sans',sans-serif;}
+#nb-sticky-bar p{margin:0;font-size:14px;font-weight:500;color:#fff;white-space:nowrap;}
+#nb-sticky-bar input[type="email"]{padding:8px 14px;border-radius:6px;border:none;font-size:14px;width:240px;outline:none;color:#0F2B3D;}
+#nb-sticky-bar button.nb-submit{background:#F4A922;color:#0F2B3D;border:none;padding:9px 18px;border-radius:6px;font-size:14px;font-weight:700;cursor:pointer;white-space:nowrap;transition:background .2s;}
+#nb-sticky-bar button.nb-submit:hover{background:#e09910;}
+#nb-sticky-bar button.nb-close{background:transparent;border:1.5px solid rgba(255,255,255,.4);color:#fff;width:28px;height:28px;border-radius:50%;font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .2s;}
+#nb-sticky-bar button.nb-close:hover{background:rgba(255,255,255,.15);}
+#nb-sticky-bar .nb-success{font-size:15px;font-weight:600;color:#fff;}
+@media(max-width:640px){#nb-sticky-bar{flex-direction:column;gap:8px;padding:14px 16px;text-align:center;}#nb-sticky-bar p{white-space:normal;font-size:13px;}#nb-sticky-bar input[type="email"]{width:100%;}#nb-sticky-bar button.nb-submit{width:100%;}}
+</style>
 </head>
 <body>
 
@@ -908,5 +921,42 @@
   });
 </script>
 
+
+<!-- ── Numberbender Sticky Bar — Back to School June 2026 ── -->
+<div id="nb-sticky-bar">
+  <p>🇵🇭 Philippine schools open in June! Get FREE bilingual math worksheets:</p>
+  <input type="email" id="nb-email-input" placeholder="your@email.com" autocomplete="email" />
+  <button class="nb-submit" onclick="nbSubmit()">Get Free Worksheets →</button>
+  <button class="nb-close" onclick="nbDismiss()" aria-label="Close">✕</button>
+</div>
+<script>
+(function(){
+  var d = localStorage.getItem('nb_bar_dismissed');
+  if(d && (Date.now()-parseInt(d))/(1000*60*60*24)<7){
+    document.getElementById('nb-sticky-bar').style.display='none';
+  }
+})();
+function nbDismiss(){
+  document.getElementById('nb-sticky-bar').style.display='none';
+  localStorage.setItem('nb_bar_dismissed',Date.now());
+}
+function nbSubmit(){
+  var email=document.getElementById('nb-email-input').value.trim();
+  if(!email||!email.includes('@')){document.getElementById('nb-email-input').focus();return;}
+  // Submit to Mailchimp via hidden iframe (no page redirect)
+  var iframe=document.getElementById('nb-mc-frame');
+  if(!iframe){iframe=document.createElement('iframe');iframe.name='nb-mc-frame';iframe.id='nb-mc-frame';iframe.style.display='none';document.body.appendChild(iframe);}
+  var form=document.createElement('form');
+  form.action='https://numberbender.us17.list-manage.com/subscribe/post?u=65e30fe527dde6fb604f6760a&id=ad0977e0cc&f_id=003758e0f0';
+  form.method='POST';form.target='nb-mc-frame';
+  var ei=document.createElement('input');ei.type='email';ei.name='EMAIL';ei.value=email;form.appendChild(ei);
+  var hp=document.createElement('input');hp.type='text';hp.name='b_65e30fe527dde6fb604f6760a_ad0977e0cc';hp.value='';hp.style.display='none';form.appendChild(hp);
+  document.body.appendChild(form);form.submit();document.body.removeChild(form);
+  // Show success
+  var bar=document.getElementById('nb-sticky-bar');
+  bar.innerHTML='<p class="nb-success">✅ You're in! Check your inbox for your free worksheets. — Dr. E 🇵🇭</p><button class="nb-close" onclick="nbDismiss()" aria-label="Close">✕</button>';
+  localStorage.setItem('nb_bar_dismissed',Date.now()+(7*24*60*60*1000));
+}
+</script>
 </body>
 </html>
