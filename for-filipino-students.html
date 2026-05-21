@@ -1102,19 +1102,15 @@ function nbDismiss(){
 function nbSubmit(){
   var email=document.getElementById('nb-email-input').value.trim();
   if(!email||!email.includes('@')){document.getElementById('nb-email-input').focus();return;}
-  // Submit to Mailchimp via hidden iframe (no page redirect)
-  var iframe=document.getElementById('nb-mc-frame');
-  if(!iframe){iframe=document.createElement('iframe');iframe.name='nb-mc-frame';iframe.id='nb-mc-frame';iframe.style.display='none';document.body.appendChild(iframe);}
-  var form=document.createElement('form');
-  form.action='https://numberbender.us17.list-manage.com/subscribe/post?u=65e30fe527dde6fb604f6760a&id=ad0977e0cc&f_id=003758e0f0';
-  form.method='POST';form.target='nb-mc-frame';
-  var ei=document.createElement('input');ei.type='email';ei.name='EMAIL';ei.value=email;form.appendChild(ei);
-  var hp=document.createElement('input');hp.type='text';hp.name='b_65e30fe527dde6fb604f6760a_ad0977e0cc';hp.value='';hp.style.display='none';form.appendChild(hp);
-  document.body.appendChild(form);form.submit();document.body.removeChild(form);
-  // Show success
+  // Show success immediately
   var bar=document.getElementById('nb-sticky-bar');
-  bar.innerHTML='<p class="nb-success">✅ You're in! Check your inbox for your free worksheets. — Dr. E 🇵🇭</p><button class="nb-close" onclick="nbDismiss()" aria-label="Close">✕</button>';
+  bar.innerHTML='<p class="nb-success">✅ You’re in! Check your inbox for your free worksheets. — Dr. E 🇵🇭</p><button class="nb-close" onclick="nbDismiss()" aria-label="Close">✕</button>';
   localStorage.setItem('nb_bar_dismissed',Date.now()+(7*24*60*60*1000));
+  // Submit to Mailchimp via JSONP
+  window.nbMcCb=function(){};
+  var s=document.createElement('script');
+  s.src='https://numberbender.us17.list-manage.com/subscribe/post-json?u=65e30fe527dde6fb604f6760a&id=ad0977e0cc&f_id=003758e0f0&EMAIL='+encodeURIComponent(email)+'&b_65e30fe527dde6fb604f6760a_ad0977e0cc=&c=nbMcCb';
+  document.body.appendChild(s);
 }
 </script>
 </body>
