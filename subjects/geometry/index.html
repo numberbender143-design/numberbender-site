@@ -856,6 +856,12 @@ document.addEventListener('keydown', function(e) {
   if (document.getElementById('ws-modal').classList.contains('active')) closeWsModal();
   else if (document.getElementById('video-modal').classList.contains('active')) closeModal();
 });
+
+/* ── AUTO-LANGUAGE FROM URL PARAM (?lang=fil) ── */
+(function(){
+  var p = new URLSearchParams(window.location.search);
+  if (p.get('lang') === 'fil') setLang('fil');
+})();
 </script>
 </body>
 </html>
