@@ -833,6 +833,120 @@
     .foot-grid{ grid-template-columns: 1fr; }
   }
 
+  /* ========== FEATURED COURSES ========== */
+  .course-cards-grid{
+    display:grid; grid-template-columns:1fr 1fr; gap:28px;
+  }
+  .course-card{
+    border-radius:20px; padding:36px;
+    display:flex; flex-direction:column; justify-content:space-between;
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .course-card:hover{ transform:translateY(-4px); box-shadow:var(--shadow-lg); }
+  .blue-card{ background:rgba(37,99,235,.06); border:2px solid rgba(37,99,235,.25); }
+  .purple-card{ background:rgba(124,58,237,.06); border:2px solid rgba(124,58,237,.25); }
+  .course-card-top{ flex:1; }
+  .course-badge-wrap{ display:flex; flex-wrap:wrap; gap:8px; margin-bottom:16px; }
+  .course-badge-pill{
+    display:inline-block; padding:4px 12px; border-radius:999px;
+    font-size:0.82rem; font-weight:700;
+    background:rgba(37,99,235,.12); color:var(--blue);
+  }
+  .purple-card .course-badge-pill{ background:rgba(124,58,237,.12); color:#7C3AED; }
+  .stem-badge{ background:rgba(124,58,237,.2) !important; }
+  .course-card h3{ font-size:1.55rem; margin-bottom:10px; }
+  .blue-card h3{ color:#1d4ed8; }
+  .purple-card h3{ color:#7C3AED; }
+  .course-card>p{ color:var(--muted); margin-bottom:16px; font-size:1rem; }
+  .course-card-features{ list-style:none; margin-bottom:28px; }
+  .course-card-features li{
+    display:flex; align-items:flex-start; gap:10px;
+    padding:7px 0; font-size:0.95rem;
+    border-bottom:1px solid var(--border);
+  }
+  .course-card-features li:last-child{ border-bottom:none; }
+  .course-card-features li::before{
+    content:"✓"; flex-shrink:0;
+    width:20px; height:20px; border-radius:50%;
+    display:grid; place-items:center;
+    font-weight:700; font-size:0.78rem; margin-top:2px;
+  }
+  .blue-card .course-card-features li::before{ background:rgba(37,99,235,.15); color:var(--blue); }
+  .purple-card .course-card-features li::before{ background:rgba(124,58,237,.15); color:#7C3AED; }
+  .course-card-btn{
+    display:block; text-align:center;
+    padding:14px 22px; border-radius:12px;
+    font-weight:700; font-size:1rem;
+    text-decoration:none !important;
+    transition:transform .15s ease, box-shadow .15s ease;
+    margin-top:auto;
+  }
+  .course-card-btn:hover{ transform:translateY(-2px); box-shadow:var(--shadow); }
+  .blue-btn{ background:var(--blue); color:white; }
+  .blue-btn:hover{ background:#1d4ed8; }
+  .purple-btn{ background:#7C3AED; color:white; }
+  .purple-btn:hover{ background:#6D28D9; }
+
+  /* ========== FLIPPED CLASSROOM ========== */
+  .flipped-section{
+    background: linear-gradient(135deg, var(--navy) 0%, #1a2f4a 60%, #0f2b3d 100%);
+    color: white;
+  }
+  .flipped-grid{
+    display:grid; grid-template-columns:1.1fr .9fr;
+    gap:56px; align-items:center;
+  }
+  .flipped-text h2{
+    font-size:clamp(1.8rem,3vw,2.5rem); line-height:1.2;
+    margin-bottom:18px; color:white;
+  }
+  .flipped-text>p{
+    color:#94a3b8; font-size:1.05rem;
+    margin-bottom:28px; line-height:1.65;
+  }
+  .flipped-list{
+    list-style:none; display:flex;
+    flex-direction:column; gap:20px; margin-bottom:28px;
+  }
+  .flipped-list li{ display:flex; gap:16px; align-items:flex-start; }
+  .flipped-icon{
+    font-size:1.4rem; flex-shrink:0;
+    width:44px; height:44px;
+    background:rgba(255,255,255,.08); border-radius:12px;
+    display:grid; place-items:center;
+  }
+  .flipped-list li>div strong{ color:white; display:block; margin-bottom:4px; font-size:1rem; }
+  .flipped-list li>div p{ color:#94a3b8; font-size:0.92rem; margin:0; }
+  .flipped-text .btn-outline{ border-color:rgba(255,255,255,.3); color:white; }
+  .flipped-text .btn-outline:hover{ border-color:white; background:rgba(255,255,255,.08); }
+  .flipped-stats-wrap{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  .flipped-stat-card{
+    background:rgba(255,255,255,.07);
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:16px; padding:24px 20px; text-align:center;
+  }
+  .flipped-stat-card.teal-card{
+    background:rgba(31,111,107,.35);
+    border-color:rgba(93,202,165,.3);
+    grid-column:span 2;
+  }
+  .flipped-stat-num{
+    font-size:2.4rem; font-weight:800;
+    color:var(--yellow); line-height:1; margin-bottom:8px;
+  }
+  .flipped-stat-label{
+    font-size:0.85rem; color:rgba(255,255,255,.7); line-height:1.4;
+  }
+  @media(max-width:900px){
+    .course-cards-grid{ grid-template-columns:1fr; }
+    .flipped-grid{ grid-template-columns:1fr; gap:36px; }
+    .flipped-stats-wrap{ grid-template-columns:1fr 1fr; }
+  }
+  @media(max-width:520px){
+    .flipped-stats-wrap{ grid-template-columns:1fr; }
+    .flipped-stat-card.teal-card{ grid-column:span 1; }
+  }
+
   /* Header lockup (full Numberbender mark + wordmark + tagline SVG) */
   .logo-lockup{ padding: 0; }
   .logo-lockup .lockup-img{
@@ -1008,7 +1122,7 @@
         <div class="hero-ctas">
           <a href="#students" class="btn btn-primary btn-lg">I'm a Student →</a>
           <a href="#educators" class="btn btn-cyan btn-lg">I'm an Educator →</a>
-          <a href="find-your-course.html" class="btn btn-yellow btn-lg">🎓 Where Do I Start?</a>
+          <a href="find-your-course.html" class="btn btn-yellow btn-lg">🧭 Where Do I Start?</a>
         </div>
         <form class="hero-email-form" action="https://numberbender.us17.list-manage.com/subscribe/post?u=65e30fe527dde6fb604f6760a&amp;id=ad0977e0cc&amp;f_id=003758e0f0" method="post" target="_blank" style="display:flex;gap:8px;margin:20px 0 4px;max-width:420px;">
           <input type="email" name="EMAIL" required placeholder="your@email.com" autocomplete="email" aria-label="Email address" style="flex:1;padding:10px 14px;border-radius:8px;border:1.5px solid var(--border);font-size:0.95rem;min-width:0;background:white;color:var(--navy);">
@@ -1043,13 +1157,13 @@
       <div class="hero-characters-wrap">
         <div class="hero-chars-inner">
           <div class="ws-float-badge">
-            <div class="ws-badge-icon">📝</div>
+            <div class="ws-badge-icon">🌐</div>
             <div>
-              <div class="ws-badge-title">415 Free PDF Worksheets</div>
-              <div class="ws-badge-sub">Answer keys included · No sign-up needed</div>
+              <div class="ws-badge-title">Bilingual: English + Filipino</div>
+              <div class="ws-badge-sub">Math for every Filipino learner, worldwide</div>
             </div>
           </div>
-          <img src="images/hero-characters.png" alt="Numberbender students and educators" loading="eager">
+          <img src="images/hero_image_worksheet_teacher.png" alt="Student with bilingual math worksheet and Dr. E with laptop showing Numberbender" loading="eager">
         </div>
       </div>
     </div>
@@ -1112,6 +1226,62 @@
   </div>
 </section>
 
+<!-- ========== FEATURED COURSES ========== -->
+<section id="courses" style="background:var(--bg);border-top:1px solid var(--border);">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-eyebrow">📅 Full Semester Courses</div>
+      <h2>Real classroom. Real students. Real math.</h2>
+      <p>Dr. E recorded his actual college algebra courses — 14 weeks each, full sessions, real students in the room. The most authentic math learning experience available online.</p>
+    </div>
+    <div class="course-cards-grid">
+
+      <!-- Elementary Algebra -->
+      <div class="course-card blue-card">
+        <div class="course-card-top">
+          <div class="course-badge-wrap">
+            <span class="course-badge-pill">📅 14-Week Course</span>
+            <span class="course-badge-pill">🎓 College Level</span>
+          </div>
+          <h3>Elementary Algebra</h3>
+          <p>The foundational semester-length course for students starting their algebra journey. Filmed in Dr. E's real college classroom with real students.</p>
+          <ul class="course-card-features">
+            <li>Real Numbers, Variables &amp; Linear Equations</li>
+            <li>Graphing, Slope &amp; Systems of Equations</li>
+            <li>Exponents, Polynomials &amp; Factoring</li>
+            <li>14 weeks · ~60–75 min per session</li>
+          </ul>
+        </div>
+        <a href="learn/elementary-algebra/" class="course-card-btn blue-btn">Start Elementary Algebra →</a>
+      </div>
+
+      <!-- Intermediate Algebra -->
+      <div class="course-card purple-card">
+        <div class="course-card-top">
+          <div class="course-badge-wrap">
+            <span class="course-badge-pill">📅 14-Week Course</span>
+            <span class="course-badge-pill stem-badge">Bridge to STEM</span>
+          </div>
+          <h3>Intermediate Algebra</h3>
+          <p>Pick up where Elementary Algebra ends. The topics every STEM student needs — quadratics, rational expressions, exponential &amp; logarithmic functions.</p>
+          <ul class="course-card-features">
+            <li>Advanced Factoring &amp; Rational Expressions</li>
+            <li>Quadratic Equations &amp; Functions</li>
+            <li>Exponential &amp; Logarithmic Functions</li>
+            <li>14 weeks · ~60–75 min per session</li>
+          </ul>
+        </div>
+        <a href="learn/intermediate-algebra/" class="course-card-btn purple-btn">Start Intermediate Algebra →</a>
+      </div>
+
+    </div>
+    <div style="text-align:center;margin-top:32px;">
+      <p style="color:var(--muted);font-size:0.95rem;margin-bottom:12px;">Statistics and Calculus courses coming 2027 — join the list to be notified.</p>
+      <a href="courses.html" class="btn btn-outline">Explore All Subjects →</a>
+    </div>
+  </div>
+</section>
+
 <!-- ========== FREE WORKSHEETS BAND ========== -->
 <section class="ws-band" style="background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
   <div class="container">
@@ -1133,7 +1303,7 @@
         </div>
         <div style="display:flex;gap:12px;flex-wrap:wrap;">
           <a href="math-worksheets.html" class="btn btn-primary btn-lg">Browse free worksheets →</a>
-          <a href="courses.html" class="btn btn-outline btn-lg">See all courses</a>
+          <a href="courses.html" class="btn btn-outline btn-lg">Explore All Subjects</a>
         </div>
       </div>
       <div>
@@ -1157,6 +1327,66 @@
         </div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FLIPPED CLASSROOM ========== -->
+<section class="flipped-section">
+  <div class="container">
+    <div class="flipped-grid">
+
+      <!-- Left: Text -->
+      <div class="flipped-text">
+        <div class="section-eyebrow" style="text-align:left;color:#5DCAA5;margin-bottom:12px;">The Numberbender Difference</div>
+        <h2>Built for the flipped classroom.<br>Designed for global reach.</h2>
+        <p>Dr. E pioneered flipped classroom math at the community college level — students watch the lesson before class, then use class time for deeper problem-solving. That same asynchronous model now reaches learners in 10+ countries who've never set foot in his classroom.</p>
+        <ul class="flipped-list">
+          <li>
+            <span class="flipped-icon">🏠</span>
+            <div>
+              <strong>Watch at home, practice in class</strong>
+              <p>Every video is designed to replace lecture time — concise, complete, and ready to assign before the next session.</p>
+            </div>
+          </li>
+          <li>
+            <span class="flipped-icon">🌐</span>
+            <div>
+              <strong>Bilingual for Filipino STEM students worldwide</strong>
+              <p>Lessons in English and Filipino (Tagalog) — built for students in the Philippines, UAE, Canada, and every corner of the Filipino diaspora.</p>
+            </div>
+          </li>
+          <li>
+            <span class="flipped-icon">📱</span>
+            <div>
+              <strong>Asynchronous by design</strong>
+              <p>Pause, rewind, replay at 2AM before an exam — the flexibility traditional lecture never gave students.</p>
+            </div>
+          </li>
+        </ul>
+        <a href="flipped-classroom-math.html" class="btn btn-outline">The Flipped Classroom Guide →</a>
+      </div>
+
+      <!-- Right: Stats -->
+      <div class="flipped-stats-wrap">
+        <div class="flipped-stat-card">
+          <div class="flipped-stat-num">20+</div>
+          <div class="flipped-stat-label">Years teaching the flipped classroom model at community college</div>
+        </div>
+        <div class="flipped-stat-card">
+          <div class="flipped-stat-num">16M+</div>
+          <div class="flipped-stat-label">Learners reached through video-based math instruction</div>
+        </div>
+        <div class="flipped-stat-card">
+          <div class="flipped-stat-num">1,621</div>
+          <div class="flipped-stat-label">Video lessons — each crafted for the flipped classroom model</div>
+        </div>
+        <div class="flipped-stat-card teal-card">
+          <div class="flipped-stat-num" style="color:var(--yellow);">10+</div>
+          <div class="flipped-stat-label" style="color:rgba(255,255,255,0.85);">Countries where Dr. E has presented and taught the flipped classroom model</div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
