@@ -1590,6 +1590,34 @@ document.querySelectorAll('.lesson-item').forEach(function(item) {
     openModal(videoId, title, lang);
   });
 });
+
+/* ── DROPDOWN NAV ── */
+function toggleDD(btn){
+  var menu=btn.nextElementSibling;
+  var willOpen=!menu.classList.contains('open');
+  document.querySelectorAll('.nav-dropdown .dropdown-menu.open').forEach(function(m){
+    m.classList.remove('open');
+    var t=m.previousElementSibling;
+    if(t)t.setAttribute('aria-expanded','false');
+  });
+  if(willOpen){
+    menu.style.transition='none';
+    menu.classList.add('open');
+    menu.getBoundingClientRect();
+    menu.style.transition='';
+    btn.setAttribute('aria-expanded','true');
+  }
+}
+document.addEventListener('click',function(e){
+  if(!e.target.closest('.nav-dropdown')){
+    document.querySelectorAll('.nav-dropdown .dropdown-menu.open').forEach(function(m){
+      m.classList.remove('open');
+      var t=m.previousElementSibling;
+      if(t)t.setAttribute('aria-expanded','false');
+    });
+  }
+});
+
 </script>
 </body>
 </html>

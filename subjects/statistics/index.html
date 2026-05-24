@@ -59,13 +59,36 @@ img{max-width:100%;display:block;}
 .nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.94);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--border);}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0;}
 .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.1rem;color:var(--navy);text-decoration:none;}
-.logo-mark{width:42px;height:42px;border-radius:10px;display:grid;place-items:center;overflow:hidden;}
-.nav-links{display:flex;gap:20px;align-items:center;}
+.logo-lockup{padding:0;}
+.logo-lockup .lockup-img{height:52px;width:auto;display:block;max-width:280px;}
+.menu-toggle{display:none;background:none;border:none;cursor:pointer;font-size:1.4rem;color:var(--navy);}
+.nav-links{display:flex;gap:20px;align-items:center;flex-wrap:nowrap;}
+.nav-links a,.nav-links .dropdown-trigger{white-space:nowrap;}
 .nav-links a{color:var(--navy);font-weight:500;font-size:0.92rem;}
 .nav-links a:hover{color:var(--blue);text-decoration:none;}
-.nav-links a.active{color:var(--blue);font-weight:700;}
 .nav-cta{background:var(--teal-dark);color:white!important;padding:8px 15px;border-radius:9px;font-weight:600;font-size:0.88rem;}
 .nav-cta:hover{background:var(--teal);text-decoration:none!important;}
+.nav-dropdown{position:relative;}
+.nav-dropdown .dropdown-trigger{background:none;border:none;padding:0;margin:0;font:inherit;color:var(--navy);font-weight:500;font-size:0.92rem;cursor:pointer;display:inline-flex;align-items:center;gap:4px;transition:color .15s ease;}
+.nav-dropdown .dropdown-trigger:hover{color:var(--blue);}
+.nav-dropdown .caret{font-size:.75em;display:inline-block;transition:transform .2s ease;}
+.nav-dropdown:hover .caret,.nav-dropdown .dropdown-trigger[aria-expanded="true"] .caret{transform:rotate(180deg);}
+.nav-dropdown .dropdown-menu{position:absolute;top:100%;left:0;margin-top:10px;background:white;border:1px solid var(--border);border-radius:14px;padding:6px;box-shadow:0 20px 50px rgba(15,23,42,.12);min-width:240px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .15s ease,transform .15s ease,visibility .15s ease;z-index:100;}
+.nav-dropdown .dropdown-menu::before{content:'';position:absolute;top:-10px;left:0;right:0;height:10px;}
+.nav-dropdown:hover .dropdown-menu,.nav-dropdown .dropdown-menu.open{opacity:1;visibility:visible;transform:translateY(0);}
+.nav-dropdown .dropdown-menu a{display:block;padding:10px 14px;border-radius:8px;color:var(--navy);font-weight:500;font-size:0.92rem;}
+.nav-dropdown .dropdown-menu a:hover{background:rgba(37,99,235,.08);color:var(--blue);text-decoration:none;}
+@media(max-width:900px){
+  .logo-lockup .lockup-img{height:42px;max-width:220px;}
+  .menu-toggle{display:block;}
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:white;flex-direction:column;padding:18px;border-bottom:1px solid var(--border);gap:14px;}
+  .nav-links.open{display:flex;}
+  .nav-dropdown{width:100%;}
+  .nav-dropdown .dropdown-trigger{width:100%;justify-content:space-between;padding:6px 0;}
+  .nav-dropdown .dropdown-menu{position:static;box-shadow:none;border:none;padding:0 0 4px 14px;margin-top:0;min-width:0;opacity:1;visibility:visible;transform:none;display:none;background:transparent;}
+  .nav-dropdown:hover .dropdown-menu{display:none;}
+  .nav-dropdown .dropdown-menu.open{display:block;}
+}
 
 /* ── HERO ── */
 .subject-hero{background:linear-gradient(135deg,#166534 0%,#16a34a 60%,#22c55e 100%);color:white;padding:44px 0 0;}
@@ -272,23 +295,49 @@ footer{background:var(--navy);color:#94a3b8;padding:56px 0 28px;}
 
 <!-- ── NAV ── -->
 <header class="nav">
-  <div class="container">
-    <div class="nav-inner">
-      <a href="../../index.html" class="logo">
-        <div class="logo-mark">
-          <img src="../../images/numberbender-mark-teal-transparent.svg" alt="Numberbender" style="width:100%;height:100%;object-fit:contain;">
+  <div class="container nav-inner">
+    <a href="../../" class="logo logo-lockup" aria-label="Numberbender — Master the Elements of Math">
+      <img src="../../images/numberbender_banner_only.svg" alt="Numberbender" class="lockup-img">
+    </a>
+    <button class="menu-toggle" aria-label="Toggle menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
+    <nav class="nav-links" id="navlinks">
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">For Students <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="../../start-here.html">🎁 Free Starter Lesson</a>
+          <a href="../../find-your-course.html">🧭 Where Do I Start?</a>
+          <a href="../../courses-v2.html">📚 Explore All Subjects</a>
+          <a href="../../math-worksheets.html">📝 Free Worksheets</a>
+          <a href="../../for-filipino-students.html">🇵🇭 Para sa Filipino Students</a>
         </div>
-        <span>Numberbender</span>
-      </a>
-      <nav class="nav-links" aria-label="Main navigation">
-        <a href="../../courses-v2.html" class="active">Courses</a>
-        <a href="../../math-worksheets.html">Worksheets</a>
-        <a href="../../for-teachers.html">For Teachers</a>
-        <a href="../../blog.html">Blog</a>
-        <a href="../../about.html">About Dr. E</a>
-      </nav>
+      </div>
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">For Educators <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="../../for-teachers.html">🏫 For Teachers Hub</a>
+          <a href="../../teach-it-like-you-stream-it.html">🎬 Teach It Like You Stream It</a>
+          <a href="../../teacher-resources.html">📦 Teacher Resources</a>
+          <a href="../../teach-the-math.html">🎓 Teach the Math</a>
+          <a href="../../math-worksheets.html">📄 Printable Worksheets</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">About Dr. E <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="../../about.html">👨‍🏫 About Dr. E</a>
+          <a href="../../speaking.html">🎤 Speaking</a>
+          <a href="../../press.html">📰 Press &amp; Media</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Blog <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="../../blog.html">✍️ Blog Posts</a>
+          <a href="../../speaking-archive.html">📅 Past Engagements</a>
+        </div>
+      </div>
       <a href="../../contact.html" class="nav-cta">Contact</a>
-    </div>
+    </nav>
   </div>
 </header>
 
@@ -1095,6 +1144,34 @@ document.addEventListener('keydown', function(e) {
   if (e.key !== 'Escape') return;
   if (document.getElementById('ws-modal').classList.contains('active')) closeWsModal();
   else if (document.getElementById('video-modal').classList.contains('active')) closeModal();
+});
+
+
+/* ── DROPDOWN NAV ── */
+function toggleDD(btn){
+  var menu=btn.nextElementSibling;
+  var willOpen=!menu.classList.contains('open');
+  document.querySelectorAll('.nav-dropdown .dropdown-menu.open').forEach(function(m){
+    m.classList.remove('open');
+    var t=m.previousElementSibling;
+    if(t)t.setAttribute('aria-expanded','false');
+  });
+  if(willOpen){
+    menu.style.transition='none';
+    menu.classList.add('open');
+    menu.getBoundingClientRect();
+    menu.style.transition='';
+    btn.setAttribute('aria-expanded','true');
+  }
+}
+document.addEventListener('click',function(e){
+  if(!e.target.closest('.nav-dropdown')){
+    document.querySelectorAll('.nav-dropdown .dropdown-menu.open').forEach(function(m){
+      m.classList.remove('open');
+      var t=m.previousElementSibling;
+      if(t)t.setAttribute('aria-expanded','false');
+    });
+  }
 });
 
 /* ── AUTO-LANGUAGE FROM URL PARAM (?lang=fil) ── */
