@@ -175,6 +175,57 @@
   status = 301
   force  = true
 
+# Blog pages
+[[redirects]]
+  from = "/blog.html"
+  to   = "/blog"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/blog-flipped-first-class.html"
+  to   = "/blog-flipped-first-class"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/blog-flipped-mistakes.html"
+  to   = "/blog-flipped-mistakes"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/blog-become-edutuber.html"
+  to   = "/blog-become-edutuber"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/blog-five-minute-rule.html"
+  to   = "/blog-five-minute-rule"
+  status = 301
+  force  = true
+
+# Teacher & educator pages
+[[redirects]]
+  from = "/for-teachers.html"
+  to   = "/for-teachers"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/teach-the-math.html"
+  to   = "/teach-the-math"
+  status = 301
+  force  = true
+
+# Worksheets hub
+[[redirects]]
+  from = "/math-worksheets.html"
+  to   = "/math-worksheets"
+  status = 301
+  force  = true
+
 # 404 catch-all (must be last)
 [[redirects]]
   from   = "/*"

@@ -429,6 +429,58 @@
   @media(max-width:760px){ .bundle-grid{ grid-template-columns:1fr 1fr; } }
   @media(max-width:480px){ .bundle-grid{ grid-template-columns:1fr; } }
 
+  /* ── PDF PREVIEW MODAL ── */
+  .pdf-modal-overlay{
+    display:none; position:fixed; inset:0; z-index:1100;
+    background:rgba(15,23,42,.72); backdrop-filter:blur(6px);
+    align-items:center; justify-content:center; padding:16px;
+  }
+  .pdf-modal-overlay.open{ display:flex; }
+  .pdf-modal-box{
+    background:white; border-radius:16px;
+    width:min(980px,96vw); height:min(90vh,920px);
+    display:flex; flex-direction:column;
+    box-shadow:0 32px 80px rgba(15,23,42,.28);
+    overflow:hidden;
+  }
+  .pdf-modal-header{
+    display:flex; align-items:center; gap:12px;
+    padding:13px 18px; border-bottom:1px solid var(--border);
+    flex-shrink:0; background:white;
+  }
+  .pdf-modal-eyebrow{
+    font-size:0.72rem; font-weight:700; text-transform:uppercase;
+    letter-spacing:.08em; color:var(--blue); white-space:nowrap; flex-shrink:0;
+  }
+  .pdf-modal-title{
+    flex:1; font-weight:700; font-size:0.95rem; color:var(--navy);
+    white-space:nowrap; overflow:hidden; text-overflow:ellipsis; min-width:0;
+  }
+  .pdf-modal-dl{
+    display:inline-flex; align-items:center; gap:6px;
+    background:var(--blue); color:white !important; padding:8px 14px;
+    border-radius:8px; font-size:0.83rem; font-weight:700;
+    text-decoration:none !important; white-space:nowrap; flex-shrink:0;
+    transition:background .15s;
+  }
+  .pdf-modal-dl:hover{ background:#1d4ed8; }
+  .pdf-modal-close{
+    background:none; border:none; cursor:pointer;
+    color:#94a3b8; font-size:1.4rem; line-height:1; padding:6px;
+    border-radius:8px; flex-shrink:0; transition:color .15s, background .15s;
+  }
+  .pdf-modal-close:hover{ color:var(--navy); background:#f1f5f9; }
+  .pdf-modal-frame{
+    flex:1; width:100%; border:none; display:block; min-height:0;
+    background:#f8fafc;
+  }
+  @media(max-width:600px){
+    .pdf-modal-box{ height:94vh; border-radius:12px; }
+    .pdf-modal-title{ font-size:0.84rem; }
+    .pdf-modal-dl{ padding:7px 10px; font-size:0.79rem; }
+    .pdf-modal-eyebrow{ display:none; }
+  }
+
   /* FOOTER */
   footer{ background: #0b1220; color: #94a3b8; padding: 50px 0 24px; }
   .foot-grid{ display:grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 32px; margin-bottom: 32px; }
@@ -639,8 +691,8 @@
         <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">For Students <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
           <a href="start-here.html">🎁 Free Starter Lesson</a>
-          <a href="find-your-course.html">🧭 Find My Course</a>
-          <a href="courses.html">📚 All Courses</a>
+          <a href="find-your-course.html">🧭 Where Do I Start?</a>
+          <a href="courses.html">📚 Explore All Subjects</a>
           <a href="math-worksheets.html">📝 Free Worksheets</a>
           <a href="for-filipino-students.html">🇵🇭 Para sa Filipino Students</a>
         </div>
@@ -651,6 +703,7 @@
           <a href="for-teachers.html">🏫 For Teachers Hub</a>
           <a href="teach-it-like-you-stream-it.html">🎬 Teach It Like You Stream It</a>
           <a href="teacher-resources.html">📦 Teacher Resources</a>
+          <a href="teach-the-math.html">🎓 Teach the Math</a>
           <a href="math-worksheets.html">📄 Printable Worksheets</a>
         </div>
       </div>
@@ -1202,6 +1255,19 @@
   </div>
 </div>
 
+<!-- ========== PDF PREVIEW MODAL ========== -->
+<div class="pdf-modal-overlay" id="pdf-preview-modal" role="dialog" aria-modal="true" aria-labelledby="pdf-modal-title">
+  <div class="pdf-modal-box">
+    <div class="pdf-modal-header">
+      <span class="pdf-modal-eyebrow">👁 Preview</span>
+      <span class="pdf-modal-title" id="pdf-modal-title">Worksheet Preview</span>
+      <a id="pdf-modal-dl-btn" href="#" download class="pdf-modal-dl">⬇ Download PDF</a>
+      <button class="pdf-modal-close" onclick="closePdfModal()" aria-label="Close preview">✕</button>
+    </div>
+    <iframe class="pdf-modal-frame" id="pdf-modal-frame" src="" title="Worksheet PDF Preview"></iframe>
+  </div>
+</div>
+
 <!-- ========== WHY THESE WORKSHEETS ========== -->
 <section id="why">
   <div class="container">
@@ -1339,14 +1405,15 @@
       </div>
       <div class="foot">
         <h4>Students</h4>
-        <a href="courses.html">All Courses</a>
+        <a href="courses.html">Explore All Subjects</a>
         <a href="math-worksheets.html">Free Worksheets</a>
-        <a href="find-your-course.html">Find My Course</a>
+        <a href="find-your-course.html">Where Do I Start?</a>
         <a href="start-here.html">Free Starter Lesson</a>
       </div>
       <div class="foot">
         <h4>Educators</h4>
         <a href="for-teachers.html">For Teachers Hub</a>
+        <a href="teach-the-math.html">Teach the Math</a>
         <a href="teacher-resources.html">Teacher Resources</a>
         <a href="flipped-classroom-math.html">Flipped Classroom Guide</a>
         <a href="teach-it-like-you-stream-it.html">Teach It Like You Stream It</a>
@@ -1437,6 +1504,34 @@
 </script>
 
 <script>
+  // ── PDF PREVIEW MODAL ──
+  function openPdfPreview(btn) {
+    var url   = btn.getAttribute('data-pdf');
+    var title = btn.getAttribute('data-title') || 'Worksheet Preview';
+    document.getElementById('pdf-modal-title').textContent = title;
+    document.getElementById('pdf-modal-frame').src = url;
+    document.getElementById('pdf-modal-dl-btn').href = url;
+    document.getElementById('pdf-modal-dl-btn').setAttribute('download', title + '.pdf');
+    document.getElementById('pdf-preview-modal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closePdfModal() {
+    document.getElementById('pdf-preview-modal').classList.remove('open');
+    // Clear src after transition so browser stops loading/rendering the PDF
+    setTimeout(function(){ document.getElementById('pdf-modal-frame').src = ''; }, 200);
+    document.body.style.overflow = '';
+  }
+  document.getElementById('pdf-preview-modal').addEventListener('click', function(e) {
+    if (e.target === this) closePdfModal();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && document.getElementById('pdf-preview-modal').classList.contains('open')) {
+      closePdfModal();
+    }
+  });
+</script>
+
+<script>
 (function(){
   var INDEX = null, loading = false, activeQ = '', activeLang = 'en';
 
@@ -1474,8 +1569,9 @@
   var STYLE_ACTIONS = 'style="display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin-top:12px;"';
   var BTN_BASE      = 'display:block;text-align:center;padding:7px 4px;border-radius:8px;font-size:0.78rem;font-weight:600;text-decoration:none;white-space:nowrap;';
   var STYLE_BTN     = 'style="'+BTN_BASE+'border:1px solid #E2E8F0;color:#0F172A;background:white;"';
-  var STYLE_BTN_PRI = 'style="'+BTN_BASE+'border:1px solid #2563EB;color:white;background:#2563EB;"';
-  var STYLE_BTN_YT  = 'style="'+BTN_BASE+'border:1px solid rgba(220,38,38,.3);color:#dc2626;background:white;"';
+  var STYLE_BTN_PRI     = 'style="'+BTN_BASE+'border:1px solid #2563EB;color:white;background:#2563EB;"';
+  var STYLE_BTN_PRI_BTN = 'style="'+BTN_BASE+'border:1px solid #2563EB;color:white;background:#2563EB;cursor:pointer;font-family:inherit;"';
+  var STYLE_BTN_YT      = 'style="'+BTN_BASE+'border:1px solid rgba(220,38,38,.3);color:#dc2626;background:white;"';
 
   function diffStyle(d){ return d==='beg'?STYLE_DIFF_BEG:d==='int'?STYLE_DIFF_INT:d==='adv'?STYLE_DIFF_ADV:STYLE_DIFF; }
 
@@ -1494,7 +1590,7 @@
       +(w.topic?'<div class="sr-topic" '+STYLE_TOPIC+'>'+hl(w.topic,q)+'</div>':'')
       +'<h3 class="sr-title" '+STYLE_TITLE+'>'+hl(w.title,q)+'</h3>'
       +'<div class="sr-actions" '+STYLE_ACTIONS+'>'
-        +(w.pdfUrl?'<a class="sr-btn primary" '+STYLE_BTN_PRI+' href="'+esc(w.pdfUrl)+'" target="_blank" rel="noopener">&#128065; View PDF</a>':'<span></span>')
+        +(w.pdfUrl?'<button '+STYLE_BTN_PRI_BTN+' onclick="openPdfPreview(this)" data-pdf="'+esc(w.pdfUrl)+'" data-title="'+esc(w.title)+'">'+SVG_EYE+' View</button>':'<span></span>')
         +(w.pdfUrl?'<a class="sr-btn" '+STYLE_BTN+' href="'+esc(w.pdfUrl)+'" download>&#8595; Download</a>':'<span></span>')
         +watch
       +'</div>'

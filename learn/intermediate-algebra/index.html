@@ -1,0 +1,1419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P1M2WZD840"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P1M2WZD840');
+</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Intermediate Algebra — Full 14-Week Course | Numberbender</title>
+<meta name="description" content="A complete 14-week Intermediate Algebra course taught by Dr. E in an actual college classroom. The bridge to Precalculus and STEM." />
+<link rel="canonical" href="https://numberbender.com/learn/intermediate-algebra/" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Intermediate Algebra — Full 14-Week College Course | Numberbender" />
+<meta property="og:description" content="The bridge to Precalculus and STEM — a complete semester taught by Dr. E in a real college classroom. 14 weeks of lessons, free." />
+<meta property="og:url" content="https://numberbender.com/learn/intermediate-algebra/" />
+<meta property="og:site_name" content="Numberbender" />
+<meta property="og:image" content="https://numberbender.com/images/dr-e-hero.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Intermediate Algebra — Full 14-Week College Course | Numberbender" />
+<meta name="twitter:description" content="The bridge to Precalculus and STEM — taught by Dr. E in a real college classroom. 14 weeks, free." />
+<link rel="icon" type="image/svg+xml" href="../../images/exports/numberbender-favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../../images/exports/png/favicon-32.png">
+<link rel="icon" type="image/png" sizes="180x180" href="../../images/exports/png/favicon-180.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/exports/png/favicon-180.png">
+<meta name="theme-color" content="#7C3AED">
+<style>
+  :root{
+    --navy:#0F172A;
+    --teal:#1F6F6B;
+    --teal-light:#E1F5EE;
+    --teal-mid:#5DCAA5;
+    --teal-dark:#085041;
+    --blue:#2563EB;
+    --yellow:#FACC15;
+    --cyan:#06B6D4;
+    --green:#22C55E;
+    --bg:#F8FAFC;
+    --surface:#FFFFFF;
+    --muted:#64748B;
+    --border:#E2E8F0;
+    --shadow: 0 10px 30px rgba(15,23,42,0.08);
+    --shadow-lg: 0 20px 50px rgba(15,23,42,0.12);
+    --radius: 16px;
+    /* Course identity color */
+    --course:#7C3AED;
+    --course-dark:#5B21B6;
+    --course-light:#EDE9FE;
+    --course-mid:#C4B5FD;
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; }
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Inter",Roboto,"Helvetica Neue",Arial,sans-serif;
+    color:var(--navy); background:var(--bg);
+    line-height:1.6; -webkit-font-smoothing:antialiased;
+  }
+  a{ color:var(--course); text-decoration:none; }
+  a:hover{ text-decoration:underline; }
+  img{ max-width:100%; display:block; }
+  .container{ width:min(1100px,92%); margin-inline:auto; }
+
+  /* NAV */
+  .nav{
+    position:sticky; top:0; z-index:50;
+    background:rgba(255,255,255,0.92);
+    backdrop-filter:saturate(180%) blur(10px);
+    border-bottom:1px solid var(--border);
+  }
+  .nav-inner{ display:flex; align-items:center; justify-content:space-between; padding:14px 0; }
+  .logo{ display:flex; align-items:center; gap:10px; font-weight:800; font-size:1.15rem; color:var(--navy); }
+  .logo-mark{ width:48px; height:48px; border-radius:10px; background:transparent; display:grid; place-items:center; overflow:hidden; }
+  .nav-links{ display:flex; gap:20px; align-items:center; }
+  .nav-links a{ color:var(--navy); font-weight:500; font-size:0.95rem; }
+  .nav-links a:hover{ color:var(--teal); text-decoration:none; }
+  .nav-links a.active{ color:var(--teal); }
+  .nav-cta{ background:var(--teal-dark); color:white !important; padding:9px 16px; border-radius:10px; font-weight:600; }
+  .nav-cta:hover{ background:var(--teal); text-decoration:none; }
+  .breadcrumb{ font-size:0.85rem; color:var(--muted); display:flex; gap:6px; align-items:center; }
+  .breadcrumb a{ color:var(--muted); }
+  .breadcrumb a:hover{ color:var(--teal); }
+  .breadcrumb .sep{ opacity:0.4; }
+
+  /* COURSE HERO */
+  .course-hero{
+    background: linear-gradient(135deg, #4c1d95 0%, #5b21b6 50%, #7c3aed 100%);
+    padding:60px 0 50px; color:white; position:relative; overflow:hidden;
+  }
+  .course-hero::before{
+    content:""; position:absolute; right:-80px; top:-80px;
+    width:400px; height:400px; border-radius:50%;
+    background:rgba(255,255,255,0.04); pointer-events:none;
+  }
+  .course-hero::after{
+    content:""; position:absolute; left:-60px; bottom:-60px;
+    width:300px; height:300px; border-radius:50%;
+    background:rgba(255,255,255,0.03); pointer-events:none;
+  }
+  .hero-eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    background:rgba(255,255,255,0.12); color:#DDD6FE;
+    padding:6px 14px; border-radius:999px;
+    font-size:0.82rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase;
+    margin-bottom:18px;
+  }
+  .course-hero h1{
+    font-size:clamp(2rem,4vw,3rem); font-weight:800;
+    line-height:1.1; letter-spacing:-0.02em; margin-bottom:14px; color:white;
+  }
+  .course-hero h1 .sub{ display:block; font-size:0.55em; font-weight:500; color:#DDD6FE; margin-bottom:6px; letter-spacing:.04em; text-transform:uppercase; }
+  .course-hero .lead{ font-size:1.1rem; color:rgba(255,255,255,0.8); max-width:600px; margin-bottom:28px; line-height:1.7; }
+  .hero-stats{
+    display:flex; gap:0; flex-wrap:wrap;
+    background:rgba(255,255,255,0.1); border-radius:14px;
+    border:1px solid rgba(255,255,255,0.15);
+    overflow:hidden; max-width:600px;
+  }
+  .hero-stat{
+    flex:1; min-width:120px; padding:16px 20px;
+    border-right:1px solid rgba(255,255,255,0.1);
+    text-align:center;
+  }
+  .hero-stat:last-child{ border-right:none; }
+  .hero-stat .val{ font-size:1.6rem; font-weight:800; color:white; display:block; }
+  .hero-stat .lbl{ font-size:0.78rem; color:#DDD6FE; font-weight:500; }
+  .course-badge{
+    display:inline-flex; align-items:center; gap:6px;
+    background:#FACC15; color:#0F172A;
+    font-size:0.82rem; font-weight:800; padding:6px 14px; border-radius:999px;
+    margin-top:20px; letter-spacing:.02em;
+  }
+
+  /* WHAT YOU'LL BUILD */
+  .outcomes{ background:var(--surface); padding:50px 0; border-bottom:1px solid var(--border); }
+  .outcomes-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px; margin-top:28px; }
+  .outcome-item{
+    background:var(--bg); border:1px solid var(--border);
+    border-radius:12px; padding:18px 20px;
+    display:flex; align-items:flex-start; gap:12px;
+  }
+  .outcome-icon{ font-size:1.3rem; flex-shrink:0; }
+  .outcome-text{ font-size:0.95rem; color:var(--navy); line-height:1.5; }
+
+  /* SECTION LABELS */
+  .section-label{
+    font-size:0.78rem; font-weight:700; text-transform:uppercase;
+    letter-spacing:.1em; color:var(--course); margin-bottom:8px;
+  }
+  .section-title{ font-size:clamp(1.5rem,3vw,2rem); font-weight:800; margin-bottom:10px; }
+  .section-sub{ color:var(--muted); font-size:1rem; max-width:620px; }
+
+  /* COURSE CONTENT */
+  .course-content{ padding:60px 0; }
+  .content-layout{ display:grid; grid-template-columns:1fr 300px; gap:40px; align-items:start; }
+
+  /* WEEK BLOCKS */
+  .weeks{ display:flex; flex-direction:column; gap:12px; }
+  .week-block{
+    background:var(--surface); border:1px solid var(--border);
+    border-radius:var(--radius); overflow:hidden;
+    transition:box-shadow .2s ease;
+  }
+  .week-block:hover{ box-shadow:var(--shadow); }
+  .week-header{
+    padding:20px 24px; cursor:pointer;
+    display:flex; align-items:flex-start; gap:16px;
+  }
+  .week-num-badge{
+    background:var(--course-light); color:var(--course-dark);
+    font-size:0.75rem; font-weight:800; letter-spacing:.06em;
+    padding:4px 10px; border-radius:999px; white-space:nowrap;
+    flex-shrink:0; margin-top:2px;
+  }
+  .week-info{ flex:1; }
+  .week-title{ font-size:1.05rem; font-weight:700; color:var(--navy); margin-bottom:4px; }
+  .week-topics{ font-size:0.88rem; color:var(--muted); line-height:1.5; }
+  .week-toggle{ font-size:1.2rem; color:var(--muted); flex-shrink:0; transition:transform .2s ease; }
+  .week-block.open .week-toggle{ transform:rotate(180deg); }
+
+  .week-lessons{
+    display:none; padding:0 24px 20px;
+    border-top:1px solid var(--border);
+  }
+  .week-block.open .week-lessons{ display:block; }
+
+  /* LESSON SLOT */
+  .lesson-slot{
+    display:flex; align-items:center; gap:14px;
+    padding:14px 0; border-bottom:1px solid var(--border);
+  }
+  .lesson-slot:last-child{ border-bottom:none; }
+  .slot-play{
+    width:44px; height:44px; border-radius:50%; flex-shrink:0;
+    display:grid; place-items:center; font-size:1.1rem;
+  }
+  .slot-play.has-video{
+    background:var(--course-dark); color:white; cursor:pointer;
+  }
+  .slot-play.has-video:hover{ background:var(--course); }
+  .slot-play.no-video{
+    background:var(--border); color:var(--muted);
+  }
+  .slot-info{ flex:1; }
+  .slot-title{ font-size:0.95rem; font-weight:600; color:var(--navy); }
+  .slot-meta{ font-size:0.82rem; color:var(--muted); margin-top:2px; }
+  .slot-coming{
+    font-size:0.78rem; font-weight:700; text-transform:uppercase;
+    letter-spacing:.06em; color:var(--muted);
+    background:var(--bg); padding:3px 9px; border-radius:999px;
+    border:1px solid var(--border);
+  }
+  .slot-actions{ display:flex; gap:8px; flex-shrink:0; }
+  .slot-btn{
+    display:inline-flex; align-items:center; gap:5px;
+    font-size:0.82rem; font-weight:600; padding:7px 12px;
+    border-radius:8px; border:1.5px solid var(--border);
+    background:var(--surface); color:var(--navy);
+    cursor:pointer; white-space:nowrap;
+    transition:all .15s ease; text-decoration:none;
+  }
+  .slot-btn:hover{ border-color:var(--course); color:var(--course); text-decoration:none; }
+  .slot-btn.primary{ background:var(--course-dark); color:white; border-color:var(--course-dark); }
+  .slot-btn.primary:hover{ background:var(--course); }
+  .slot-btn.disabled{ opacity:0.4; cursor:not-allowed; pointer-events:none; }
+
+  /* BEFORE YOU WATCH — PREP SECTION */
+  .prep-section{
+    background:#FFFBEB; border:1.5px solid #FDE68A;
+    border-radius:12px; padding:16px 18px; margin-bottom:14px;
+  }
+  .prep-header{ display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:4px; flex-wrap:wrap; }
+  .prep-label{ font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; color:#92400E; }
+  .prep-time{ font-size:0.72rem; font-weight:600; color:#B45309; background:#FEF3C7; padding:2px 8px; border-radius:999px; white-space:nowrap; }
+  .prep-intro{ font-size:0.82rem; color:#78350F; margin-bottom:12px; line-height:1.5; }
+  .prep-links{ display:flex; flex-direction:column; gap:7px; margin-bottom:12px; }
+  .prep-card{
+    display:flex; align-items:center; gap:10px;
+    background:white; border:1px solid #FDE68A; border-radius:9px;
+    padding:9px 12px; text-decoration:none; color:inherit;
+    transition:border-color .15s, box-shadow .15s;
+  }
+  .prep-card:hover{ border-color:#F59E0B; box-shadow:0 2px 8px rgba(245,158,11,.15); text-decoration:none; }
+  .prep-play{ width:28px; height:28px; border-radius:50%; background:#F59E0B; color:white; display:grid; place-items:center; font-size:0.7rem; flex-shrink:0; }
+  .prep-info{ flex:1; min-width:0; }
+  .prep-title{ font-size:0.88rem; font-weight:600; color:var(--navy); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .prep-meta{ font-size:0.74rem; color:var(--muted); margin-top:1px; }
+  .prep-arrow{ font-size:0.85rem; color:#D97706; flex-shrink:0; }
+  .prep-footer{ border-top:1px solid #FDE68A; padding-top:10px; }
+  .prep-view-all{ font-size:0.8rem; font-weight:700; color:#92400E; text-decoration:none; display:inline-flex; align-items:center; gap:4px; }
+  .prep-view-all:hover{ color:#78350F; text-decoration:underline; }
+
+  /* SIDEBAR */
+  .course-sidebar{ position:sticky; top:80px; }
+  .sidebar-card{
+    background:var(--surface); border:1px solid var(--border);
+    border-radius:var(--radius); overflow:hidden; margin-bottom:16px;
+  }
+  .sidebar-header{
+    background:var(--course-dark); color:white; padding:18px 20px;
+  }
+  .sidebar-header h3{ font-size:1.05rem; font-weight:700; margin-bottom:4px; }
+  .sidebar-header p{ font-size:0.85rem; color:#DDD6FE; }
+  .sidebar-body{ padding:16px 20px; }
+  .sidebar-stat{ display:flex; justify-content:space-between; align-items:center; padding:8px 0; border-bottom:1px solid var(--border); font-size:0.9rem; }
+  .sidebar-stat:last-child{ border-bottom:none; }
+  .sidebar-stat .label{ color:var(--muted); }
+  .sidebar-stat .value{ font-weight:700; color:var(--navy); }
+  .sidebar-cta{
+    display:block; width:100%; margin-top:16px;
+    background:var(--course-dark); color:white;
+    padding:13px; border-radius:10px; font-weight:700;
+    font-size:0.95rem; text-align:center; border:none; cursor:pointer;
+    transition:background .15s ease; text-decoration:none;
+  }
+  .sidebar-cta:hover{ background:var(--course); text-decoration:none; color:white; }
+  .next-course-card{
+    background:linear-gradient(135deg,#1e3a5f,#2563EB);
+    color:white; border-radius:var(--radius); padding:20px;
+    margin-top:16px;
+  }
+  .next-course-card .next-label{ font-size:0.75rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:#93c5fd; margin-bottom:6px; }
+  .next-course-card h4{ font-size:1rem; font-weight:700; margin-bottom:6px; }
+  .next-course-card p{ font-size:0.85rem; color:rgba(255,255,255,0.75); margin-bottom:14px; }
+  .next-course-card a{ background:white; color:#1e3a5f; padding:9px 16px; border-radius:8px; font-weight:700; font-size:0.88rem; display:inline-block; }
+  .next-course-card a:hover{ background:#dbeafe; text-decoration:none; }
+
+  /* INSTRUCTOR */
+  .instructor{ background:var(--surface); padding:50px 0; border-top:1px solid var(--border); }
+  .instructor-inner{ display:flex; gap:32px; align-items:center; }
+  .instructor-avatar{
+    width:90px; height:90px; border-radius:50%;
+    background:var(--course-light); display:grid; place-items:center;
+    font-size:2.4rem; flex-shrink:0;
+    border:3px solid var(--course-mid);
+  }
+  .instructor-body h3{ font-size:1.2rem; font-weight:800; margin-bottom:4px; }
+  .instructor-body .inst-title{ font-size:0.9rem; color:var(--course); font-weight:600; margin-bottom:10px; }
+  .instructor-body p{ font-size:0.95rem; color:var(--muted); line-height:1.7; }
+
+  /* FOOTER */
+  footer{
+    background:var(--navy); color:#94a3b8; padding:60px 0 30px;
+  }
+  .foot-grid{
+    display:grid; grid-template-columns:2fr 1fr 1fr 1fr;
+    gap:40px; margin-bottom:40px;
+  }
+  .foot h4{ color:white; font-size:0.95rem; font-weight:700; margin-bottom:14px; }
+  .foot a{ display:block; color:#94a3b8; font-size:0.9rem; margin-bottom:8px; }
+  .foot a:hover{ color:white; text-decoration:none; }
+  .foot-brand p{ font-size:0.9rem; line-height:1.7; margin-top:12px; }
+  .foot-bottom{ border-top:1px solid #1e293b; padding-top:24px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; font-size:0.85rem; }
+  .logo{ display:flex; align-items:center; gap:10px; font-weight:800; font-size:1.15rem; color:white; }
+  .logo-mark{ width:48px; height:48px; border-radius:10px; background:transparent; display:grid; place-items:center; overflow:hidden; }
+
+  /* RESPONSIVE */
+  @media(max-width:860px){
+    .content-layout{ grid-template-columns:1fr; }
+    .course-sidebar{ position:static; }
+    .foot-grid{ grid-template-columns:1fr 1fr; }
+    .instructor-inner{ flex-direction:column; text-align:center; }
+    .hero-stats{ flex-direction:column; }
+    .hero-stat{ border-right:none; border-bottom:1px solid rgba(255,255,255,0.1); }
+    .hero-stat:last-child{ border-bottom:none; }
+  }
+  @media(max-width:560px){
+    .nav-links{ display:none; }
+    .slot-actions{ flex-direction:column; }
+    .foot-grid{ grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="../../index.html" class="logo" style="text-decoration:none;">
+        <div class="logo-mark">
+          <img src="../../images/numberbender-mark-teal-transparent.svg" alt="Numberbender" style="width:100%;height:100%;object-fit:contain;">
+        </div>
+        <span>Numberbender</span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="../../courses.html" class="active">Courses</a>
+        <a href="../../math-worksheets.html">Worksheets</a>
+        <a href="../../for-teachers.html">For Teachers</a>
+        <a href="../../blog.html">Blog</a>
+        <a href="../../about.html">About Dr. E</a>
+      </nav>
+      <a href="../../contact.html" class="nav-cta">Contact</a>
+    </div>
+  </div>
+</header>
+
+<!-- BREADCRUMB -->
+<div style="background:var(--surface);border-bottom:1px solid var(--border);padding:10px 0;">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../../index.html">Home</a>
+      <span class="sep">›</span>
+      <a href="../../courses.html">Courses</a>
+      <span class="sep">›</span>
+      <span>Intermediate Algebra</span>
+    </div>
+  </div>
+</div>
+
+<!-- COURSE HERO -->
+<section class="course-hero">
+  <div class="container">
+    <div class="hero-eyebrow">📚 Full 14-Week Course</div>
+    <h1>
+      <span class="sub">The Bridge to Precalculus &amp; STEM</span>
+      Intermediate Algebra
+    </h1>
+    <p class="lead">
+      Pick up where Elementary Algebra left off. Dr. E takes you through the topics every STEM student needs — from quadratics to exponential functions — in a real college classroom.
+    </p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="val">15</span>
+        <span class="lbl">weeks</span>
+      </div>
+      <div class="hero-stat">
+        <span class="val">12</span>
+        <span class="lbl">lessons</span>
+      </div>
+      <div class="hero-stat">
+        <span class="val">EN</span>
+        <span class="lbl">English</span>
+      </div>
+      <div class="hero-stat">
+        <span class="val">Free</span>
+        <span class="lbl">no login</span>
+      </div>
+    </div>
+    <div class="course-badge">🎓 Real classroom · Real students · Real math</div>
+  </div>
+</section>
+
+<!-- WHAT YOU'LL LEARN -->
+<section class="outcomes">
+  <div class="container">
+    <div class="section-label">What you'll be able to do</div>
+    <h2 class="section-title">Master the algebra every STEM path requires</h2>
+    <div class="outcomes-grid">
+      <div class="outcome-item">
+        <div class="outcome-icon">⚙️</div>
+        <div class="outcome-text">Simplify and solve rational equations, including work and rate problems</div>
+      </div>
+      <div class="outcome-item">
+        <div class="outcome-icon">📐</div>
+        <div class="outcome-text">Solve quadratic equations by completing the square and the quadratic formula</div>
+      </div>
+      <div class="outcome-item">
+        <div class="outcome-icon">📈</div>
+        <div class="outcome-text">Graph quadratic, exponential, and logarithmic functions with confidence</div>
+      </div>
+      <div class="outcome-item">
+        <div class="outcome-icon">🔢</div>
+        <div class="outcome-text">Work with complex numbers and solve radical equations</div>
+      </div>
+      <div class="outcome-item">
+        <div class="outcome-icon">💡</div>
+        <div class="outcome-text">Understand function notation, domain, range, and composition of functions</div>
+      </div>
+      <div class="outcome-item">
+        <div class="outcome-icon">🚀</div>
+        <div class="outcome-text">Move confidently into Precalculus, Statistics, or Calculus</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COURSE CONTENT -->
+<section class="course-content">
+  <div class="container">
+    <div class="content-layout">
+
+      <!-- WEEK-BY-WEEK LESSONS -->
+      <div>
+        <div class="section-label">Course curriculum</div>
+        <h2 class="section-title" style="margin-bottom:6px;">15 Weeks of Intermediate Algebra</h2>
+        <p class="section-sub" style="margin-bottom:28px;">12 lessons + Midterm + Unit Test + Final. Click any week to expand. Videos uploading soon.</p>
+
+        <div class="weeks" id="weeks-list">
+
+          <!-- WEEK 1 -->
+          <div class="week-block" id="week-1">
+            <div class="week-header" onclick="toggleWeek('week-1')">
+              <div class="week-num-badge">Week 1</div>
+              <div class="week-info">
+                <div class="week-title">Laws of Exponents and Factoring</div>
+                <div class="week-topics">Review of exponent rules; factoring strategies; factoring by grouping; sum and difference of cubes</div>
+              </div>
+              <div class="week-toggle">▾</div>
+            </div>
+            <div class="week-lessons">
+
+              <!-- BEFORE YOU WATCH -->
+              <div class="prep-section">
+                <div class="prep-header">
+                  <span class="prep-label">📖 Before you watch</span>
+                  <span class="prep-time">~15 min total</span>
+                </div>
+                <p class="prep-intro">Watch these focused lessons first — then the classroom recording will click faster. Each one opens the Algebra Library where you can also toggle to Filipino and grab a practice worksheet.</p>
+                <div class="prep-links">
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-7" target="_blank" rel="noopener">
+                    <div class="prep-play">▶</div>
+                    <div class="prep-info">
+                      <div class="prep-title">Laws of Exponents</div>
+                      <div class="prep-meta">Algebra Library · Unit 7 · Lesson 1</div>
+                    </div>
+                    <span class="prep-arrow">→</span>
+                  </a>
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-7" target="_blank" rel="noopener">
+                    <div class="prep-play">▶</div>
+                    <div class="prep-info">
+                      <div class="prep-title">Factoring — Greatest Common Factor (GCF)</div>
+                      <div class="prep-meta">Algebra Library · Unit 7 · Lesson 5</div>
+                    </div>
+                    <span class="prep-arrow">→</span>
+                  </a>
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-7" target="_blank" rel="noopener">
+                    <div class="prep-play">▶</div>
+                    <div class="prep-info">
+                      <div class="prep-title">Factoring Trinomials (a = 1)</div>
+                      <div class="prep-meta">Algebra Library · Unit 7 · Lesson 6</div>
+                    </div>
+                    <span class="prep-arrow">→</span>
+                  </a>
+                </div>
+                <div class="prep-footer">
+                  <a class="prep-view-all" href="../../subjects/algebra/index.html#unit-7" target="_blank" rel="noopener">View all of Unit 7 — Polynomials &amp; Factoring →</a>
+                </div>
+              </div>
+
+              <div class="lesson-slot" data-video-id="54Wgb1R75vw">
+                <div class="slot-play has-video" onclick="openVideo('54Wgb1R75vw', 'Week 1 — Laws of Exponents and Factoring')">▶</div>
+                <div class="slot-info">
+                  <div class="slot-title">Week 1 — Classroom Lesson</div>
+                  <div class="slot-meta">Laws of Exponents and Factoring · ~60–75 min</div>
+                </div>
+                <div class="slot-actions">
+                  <button class="slot-btn primary" onclick="openVideo('54Wgb1R75vw', 'Week 1 — Laws of Exponents and Factoring')">▶ Watch</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- WEEK 2 -->
+          <div class="week-block" id="week-2">
+            <div class="week-header" onclick="toggleWeek('week-2')">
+              <div class="week-num-badge">Week 2</div>
+              <div class="week-info">
+                <div class="week-title">Rational Expressions and Equations</div>
+                <div class="week-topics">Simplifying, multiplying, dividing, adding, and subtracting rational expressions; complex fractions; solving rational equations</div>
+              </div>
+              <div class="week-toggle">▾</div>
+            </div>
+            <div class="week-lessons">
+
+              <!-- BEFORE YOU WATCH -->
+              <div class="prep-section">
+                <div class="prep-header">
+                  <span class="prep-label">📖 Before you watch</span>
+                  <span class="prep-time">~15 min total</span>
+                </div>
+                <p class="prep-intro">Watch these focused lessons first — then the classroom recording will click faster. Each one opens the Algebra Library where you can also toggle to Filipino and grab a practice worksheet.</p>
+                <div class="prep-links">
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-8" target="_blank" rel="noopener">
+                    <div class="prep-play">▶</div>
+                    <div class="prep-info">
+                      <div class="prep-title">Simplifying Rational Expressions</div>
+                      <div class="prep-meta">Algebra Library · Unit 8 · Lesson 1</div>
+                    </div>
+                    <span class="prep-arrow">→</span>
+                  </a>
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-8" target="_blank" rel="noopener">
+                    <div class="prep-play">▶</div>
+                    <div class="prep-info">
+                      <div class="prep-title">Multiplying and Dividing Rational Expressions</div>
+                      <div class="prep-meta">Algebra Library · Unit 8 · Lesson 2</div>
+                    </div>
+                    <span class="prep-arrow">→</span>
+                  </a>
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-8" target="_blank" rel="noopener">
+                    <div class="prep-play">▶</div>
+                    <div class="prep-info">
+                      <div class="prep-title">Adding and Subtracting Rational Expressions</div>
+                      <div class="prep-meta">Algebra Library · Unit 8 · Lesson 3</div>
+                    </div>
+                    <span class="prep-arrow">→</span>
+                  </a>
+                </div>
+                <div class="prep-footer">
+                  <a class="prep-view-all" href="../../subjects/algebra/index.html#unit-8" target="_blank" rel="noopener">View all of Unit 8 — Rational Expressions &amp; Equations →</a>
+                </div>
+              </div>
+
+              <div class="lesson-slot" data-video-id="">
+                <div class="slot-play no-video">▶</div>
+                <div class="slot-info">
+                  <div class="slot-title">Week 2 — Classroom Lesson</div>
+                  <div class="slot-meta">Rational Expressions and Equations · ~60–75 min</div>
+                </div>
+                <div class="slot-actions"><span class="slot-coming">Coming soon</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- WEEK 3 -->
+          <div class="week-block" id="week-3">
+            <div class="week-header" onclick="toggleWeek('week-3')">
+              <div class="week-num-badge">Week 3</div>
+              <div class="week-info">
+                <div class="week-title">Radical Expressions and Equations</div>
+                <div class="week-topics">Simplifying nth roots; rational exponents; operations with radicals; solving radical equations; extraneous solutions</div>
+              </div>
+              <div class="week-toggle">▾</div>
+            </div>
+            <div class="week-lessons">
+
+              <!-- BEFORE YOU WATCH -->
+              <div class="prep-section">
+                <div class="prep-header">
+                  <span class="prep-label">📖 Before you watch</span>
+                  <span class="prep-time">~15 min total</span>
+                </div>
+                <p class="prep-intro">Watch these focused lessons first — then the classroom recording will click faster. Each one opens the Algebra Library where you can also toggle to Filipino and grab a practice worksheet.</p>
+                <div class="prep-links">
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-9" target="_blank" rel="noopener">
+                    <div class="prep-play">▶</div>
+                    <div class="prep-info">
+                      <div class="prep-title">Simplifying Radicals</div>
+                      <div class="prep-meta">Algebra Library · Unit 9 · Lesson 1</div>
+                    </div>
+                    <span class="prep-arrow">→</span>
+                  </a>
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-9" target="_blank" rel="noopener">
+                    <div class="prep-play">▶</div>
+                    <div class="prep-info">
+                      <div class="prep-title">Adding and Subtracting Radicals</div>
+                      <div class="prep-meta">Algebra Library · Unit 9 · Lesson 2</div>
+                    </div>
+                    <span class="prep-arrow">→</span>
+                  </a>
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-9" target="_blank" rel="noopener">
+                    <div class="prep-play">▶</div>
+                    <div class="prep-info">
+                      <div class="prep-title">Radical Equations</div>
+                      <div class="prep-meta">Algebra Library · Unit 9 · Lesson 3</div>
+                    </div>
+                    <span class="prep-arrow">→</span>
+                  </a>
+                </div>
+                <div class="prep-footer">
+                  <a class="prep-view-all" href="../../subjects/algebra/index.html#unit-9" target="_blank" rel="noopener">View all of Unit 9 — Radicals &amp; Quadratic Equations →</a>
+                </div>
+              </div>
+
+              <div class="lesson-slot" data-video-id="">
+                <div class="slot-play no-video">▶</div>
+                <div class="slot-info">
+                  <div class="slot-title">Week 3 — Classroom Lesson</div>
+                  <div class="slot-meta">Radical Expressions and Equations · ~60–75 min</div>
+                </div>
+                <div class="slot-actions"><span class="slot-coming">Coming soon</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- WEEK 4 -->
+          <div class="week-block" id="week-4">
+            <div class="week-header" onclick="toggleWeek('week-4')">
+              <div class="week-num-badge">Week 4</div>
+              <div class="week-info">
+                <div class="week-title">Linear Equations and Inequalities, Absolute Value Equations and Inequalities</div>
+                <div class="week-topics">Solving linear equations and inequalities; compound inequalities; absolute value equations and inequalities; applications</div>
+              </div>
+              <div class="week-toggle">▾</div>
+            </div>
+            <div class="week-lessons">
+
+              <!-- BEFORE YOU WATCH -->
+              <div class="prep-section">
+                <div class="prep-header">
+                  <span class="prep-label">📖 Before you watch</span>
+                  <span class="prep-time">~15 min total</span>
+                </div>
+                <p class="prep-intro">Watch these focused lessons first — then the classroom recording will click faster. Each one opens the Algebra Library where you can also toggle to Filipino and grab a practice worksheet.</p>
+                <div class="prep-links">
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-4" target="_blank" rel="noopener">
+                    <div class="prep-play">▶</div>
+                    <div class="prep-info">
+                      <div class="prep-title">Solving Linear Inequalities</div>
+                      <div class="prep-meta">Algebra Library · Unit 4 · Lesson 1</div>
+                    </div>
+                    <span class="prep-arrow">→</span>
+                  </a>
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-4" target="_blank" rel="noopener">
+                    <div class="prep-play">▶</div>
+                    <div class="prep-info">
+                      <div class="prep-title">Compound Inequalities — And / Or</div>
+                      <div class="prep-meta">Algebra Library · Unit 4 · Lesson 2</div>
+                    </div>
+                    <span class="prep-arrow">→</span>
+                  </a>
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-4" target="_blank" rel="noopener">
+                    <div class="prep-play">▶</div>
+                    <div class="prep-info">
+                      <div class="prep-title">Absolute Value Equations</div>
+                      <div class="prep-meta">Algebra Library · Unit 4 · Lesson 4</div>
+                    </div>
+                    <span class="prep-arrow">→</span>
+                  </a>
+                </div>
+                <div class="prep-footer">
+                  <a class="prep-view-all" href="../../subjects/algebra/index.html#unit-4" target="_blank" rel="noopener">View all of Unit 4 — Linear Inequalities &amp; Absolute Value →</a>
+                </div>
+              </div>
+
+              <div class="lesson-slot" data-video-id="">
+                <div class="slot-play no-video">▶</div>
+                <div class="slot-info">
+                  <div class="slot-title">Week 4 — Classroom Lesson</div>
+                  <div class="slot-meta">Linear Equations, Inequalities &amp; Absolute Value · ~60–75 min</div>
+                </div>
+                <div class="slot-actions"><span class="slot-coming">Coming soon</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- WEEK 5 -->
+          <div class="week-block" id="week-5">
+            <div class="week-header" onclick="toggleWeek('week-5')">
+              <div class="week-num-badge">Week 5</div>
+              <div class="week-info">
+                <div class="week-title">Quadratic Equations and Inequality</div>
+                <div class="week-topics">Completing the square; quadratic formula; discriminant; quadratic inequalities; applications</div>
+              </div>
+              <div class="week-toggle">▾</div>
+            </div>
+            <div class="week-lessons">
+
+              <!-- BEFORE YOU WATCH -->
+              <div class="prep-section">
+                <div class="prep-header">
+                  <span class="prep-label">📖 Before you watch</span>
+                  <span class="prep-time">~15 min total</span>
+                </div>
+                <p class="prep-intro">Watch these focused lessons first — then the classroom recording will click faster. Each one opens the Algebra Library where you can also toggle to Filipino and grab a practice worksheet.</p>
+                <div class="prep-links">
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-9" target="_blank" rel="noopener">
+                    <div class="prep-play">▶</div>
+                    <div class="prep-info">
+                      <div class="prep-title">Solving Quadratics — Missing Linear Term</div>
+                      <div class="prep-meta">Algebra Library · Unit 9 · Lesson 4</div>
+                    </div>
+                    <span class="prep-arrow">→</span>
+                  </a>
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-9" target="_blank" rel="noopener">
+                    <div class="prep-play">▶</div>
+                    <div class="prep-info">
+                      <div class="prep-title">Completing the Square</div>
+                      <div class="prep-meta">Algebra Library · Unit 9 · Lesson 6</div>
+                    </div>
+                    <span class="prep-arrow">→</span>
+                  </a>
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-9" target="_blank" rel="noopener">
+                    <div class="prep-play">▶</div>
+                    <div class="prep-info">
+                      <div class="prep-title">The Quadratic Formula</div>
+                      <div class="prep-meta">Algebra Library · Unit 9 · Lesson 7</div>
+                    </div>
+                    <span class="prep-arrow">→</span>
+                  </a>
+                </div>
+                <div class="prep-footer">
+                  <a class="prep-view-all" href="../../subjects/algebra/index.html#unit-9" target="_blank" rel="noopener">View all of Unit 9 — Radicals &amp; Quadratic Equations →</a>
+                </div>
+              </div>
+
+              <div class="lesson-slot" data-video-id="">
+                <div class="slot-play no-video">▶</div>
+                <div class="slot-info">
+                  <div class="slot-title">Week 5 — Classroom Lesson</div>
+                  <div class="slot-meta">Quadratic Equations and Inequality · ~60–75 min</div>
+                </div>
+                <div class="slot-actions"><span class="slot-coming">Coming soon</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- WEEK 6 — MIDTERM -->
+          <div class="week-block" id="week-6" style="border-color:var(--course-mid);">
+            <div class="week-header" onclick="toggleWeek('week-6')" style="background:var(--course-light);">
+              <div class="week-num-badge" style="background:var(--course-dark);color:white;">Week 6</div>
+              <div class="week-info">
+                <div class="week-title">Midterm Exam</div>
+                <div class="week-topics">Summative assessment · Covers Weeks 1–5 · Exponents through Quadratic Equations</div>
+              </div>
+              <div class="week-toggle">▾</div>
+            </div>
+            <div class="week-lessons">
+              <div class="lesson-slot">
+                <div class="slot-play" style="background:var(--course-light);color:var(--course-dark);font-size:1.3rem;">📝</div>
+                <div class="slot-info">
+                  <div class="slot-title">Midterm Exam — Intermediate Algebra</div>
+                  <div class="slot-meta">Covers Weeks 1–5 · Multiple choice + short answer</div>
+                </div>
+                <div class="slot-actions">
+                  <span class="slot-coming" style="background:var(--course-light);color:var(--course-dark);border-color:var(--course-mid);">Assessment</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- WEEK 7 -->
+          <div class="week-block" id="week-7">
+            <div class="week-header" onclick="toggleWeek('week-7')">
+              <div class="week-num-badge">Week 7</div>
+              <div class="week-info">
+                <div class="week-title">Rectangular Coordinates and Circle</div>
+                <div class="week-topics">Distance and midpoint formulas; standard form of a circle; graphing circles; completing the square for circles</div>
+              </div>
+              <div class="week-toggle">▾</div>
+            </div>
+            <div class="week-lessons">
+
+              <!-- BEFORE YOU WATCH -->
+              <div class="prep-section">
+                <div class="prep-header">
+                  <span class="prep-label">📖 Before you watch</span>
+                  <span class="prep-time">~15 min total</span>
+                </div>
+                <p class="prep-intro">Watch these focused lessons first — then the classroom recording will click faster. Each one opens the Algebra Library where you can also toggle to Filipino and grab a practice worksheet.</p>
+                <div class="prep-links">
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-5" target="_blank" rel="noopener">
+                    <div class="prep-play">▶</div>
+                    <div class="prep-info">
+                      <div class="prep-title">Plotting Points in the Coordinate Plane</div>
+                      <div class="prep-meta">Algebra Library · Unit 5 · Lesson 1</div>
+                    </div>
+                    <span class="prep-arrow">→</span>
+                  </a>
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-5" target="_blank" rel="noopener">
+                    <div class="prep-play">▶</div>
+                    <div class="prep-info">
+                      <div class="prep-title">Graphing Linear Equations</div>
+                      <div class="prep-meta">Algebra Library · Unit 5 · Lesson 2</div>
+                    </div>
+                    <span class="prep-arrow">→</span>
+                  </a>
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-5" target="_blank" rel="noopener">
+                    <div class="prep-play">▶</div>
+                    <div class="prep-info">
+                      <div class="prep-title">Domain and Range of Functions</div>
+                      <div class="prep-meta">Algebra Library · Unit 5 · Lesson 9</div>
+                    </div>
+                    <span class="prep-arrow">→</span>
+                  </a>
+                </div>
+                <div class="prep-footer">
+                  <a class="prep-view-all" href="../../subjects/algebra/index.html#unit-5" target="_blank" rel="noopener">View all of Unit 5 — Graphing &amp; Functions →</a>
+                </div>
+              </div>
+
+              <div class="lesson-slot" data-video-id="">
+                <div class="slot-play no-video">▶</div>
+                <div class="slot-info">
+                  <div class="slot-title">Week 7 — Classroom Lesson</div>
+                  <div class="slot-meta">Rectangular Coordinates and Circle · ~60–75 min</div>
+                </div>
+                <div class="slot-actions"><span class="slot-coming">Coming soon</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- WEEK 8 -->
+          <div class="week-block" id="week-8">
+            <div class="week-header" onclick="toggleWeek('week-8')">
+              <div class="week-num-badge">Week 8</div>
+              <div class="week-info">
+                <div class="week-title">Equations of a Line</div>
+                <div class="week-topics">Slope; slope-intercept and point-slope forms; parallel and perpendicular lines; writing equations of lines</div>
+              </div>
+              <div class="week-toggle">▾</div>
+            </div>
+            <div class="week-lessons">
+
+              <!-- BEFORE YOU WATCH -->
+              <div class="prep-section">
+                <div class="prep-header">
+                  <span class="prep-label">📖 Before you watch</span>
+                  <span class="prep-time">~15 min total</span>
+                </div>
+                <p class="prep-intro">Watch these focused lessons first — then the classroom recording will click faster. Each one opens the Algebra Library where you can also toggle to Filipino and grab a practice worksheet.</p>
+                <div class="prep-links">
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-5" target="_blank" rel="noopener">
+                    <div class="prep-play">▶</div>
+                    <div class="prep-info">
+                      <div class="prep-title">Calculating Slope</div>
+                      <div class="prep-meta">Algebra Library · Unit 5 · Lesson 4</div>
+                    </div>
+                    <span class="prep-arrow">→</span>
+                  </a>
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-5" target="_blank" rel="noopener">
+                    <div class="prep-play">▶</div>
+                    <div class="prep-info">
+                      <div class="prep-title">Slope-Intercept Form</div>
+                      <div class="prep-meta">Algebra Library · Unit 5 · Lesson 5</div>
+                    </div>
+                    <span class="prep-arrow">→</span>
+                  </a>
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-5" target="_blank" rel="noopener">
+                    <div class="prep-play">▶</div>
+                    <div class="prep-info">
+                      <div class="prep-title">Writing Equations of Lines</div>
+                      <div class="prep-meta">Algebra Library · Unit 5 · Lesson 7</div>
+                    </div>
+                    <span class="prep-arrow">→</span>
+                  </a>
+                </div>
+                <div class="prep-footer">
+                  <a class="prep-view-all" href="../../subjects/algebra/index.html#unit-5" target="_blank" rel="noopener">View all of Unit 5 — Graphing &amp; Functions →</a>
+                </div>
+              </div>
+
+              <div class="lesson-slot" data-video-id="">
+                <div class="slot-play no-video">▶</div>
+                <div class="slot-info">
+                  <div class="slot-title">Week 8 — Classroom Lesson</div>
+                  <div class="slot-meta">Equations of a Line · ~60–75 min</div>
+                </div>
+                <div class="slot-actions"><span class="slot-coming">Coming soon</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- WEEK 9 -->
+          <div class="week-block" id="week-9">
+            <div class="week-header" onclick="toggleWeek('week-9')">
+              <div class="week-num-badge">Week 9</div>
+              <div class="week-info">
+                <div class="week-title">Function and Composition of Functions</div>
+                <div class="week-topics">Function notation; domain and range; arithmetic of functions; composition of functions; inverse functions</div>
+              </div>
+              <div class="week-toggle">▾</div>
+            </div>
+            <div class="week-lessons">
+
+              <!-- BEFORE YOU WATCH -->
+              <div class="prep-section">
+                <div class="prep-header">
+                  <span class="prep-label">📖 Before you watch</span>
+                  <span class="prep-time">~15 min total</span>
+                </div>
+                <p class="prep-intro">Watch these focused lessons first — then the classroom recording will click faster. Each one opens the Algebra Library where you can also toggle to Filipino and grab a practice worksheet.</p>
+                <div class="prep-links">
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-5" target="_blank" rel="noopener">
+                    <div class="prep-play">▶</div>
+                    <div class="prep-info">
+                      <div class="prep-title">Domain and Range of Functions</div>
+                      <div class="prep-meta">Algebra Library · Unit 5 · Lesson 9</div>
+                    </div>
+                    <span class="prep-arrow">→</span>
+                  </a>
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-5" target="_blank" rel="noopener">
+                    <div class="prep-play">▶</div>
+                    <div class="prep-info">
+                      <div class="prep-title">Graphing Linear Equations</div>
+                      <div class="prep-meta">Algebra Library · Unit 5 · Lesson 2</div>
+                    </div>
+                    <span class="prep-arrow">→</span>
+                  </a>
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-10" target="_blank" rel="noopener">
+                    <div class="prep-play">▶</div>
+                    <div class="prep-info">
+                      <div class="prep-title">Exponential Functions — Graphs and Properties</div>
+                      <div class="prep-meta">Algebra Library · Unit 10 · Lesson 1</div>
+                    </div>
+                    <span class="prep-arrow">→</span>
+                  </a>
+                </div>
+                <div class="prep-footer">
+                  <a class="prep-view-all" href="../../subjects/algebra/index.html#unit-5" target="_blank" rel="noopener">View all of Unit 5 — Graphing &amp; Functions →</a>
+                </div>
+              </div>
+
+              <div class="lesson-slot" data-video-id="">
+                <div class="slot-play no-video">▶</div>
+                <div class="slot-info">
+                  <div class="slot-title">Week 9 — Classroom Lesson</div>
+                  <div class="slot-meta">Function and Composition of Functions · ~60–75 min</div>
+                </div>
+                <div class="slot-actions"><span class="slot-coming">Coming soon</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- WEEK 10 -->
+          <div class="week-block" id="week-10">
+            <div class="week-header" onclick="toggleWeek('week-10')">
+              <div class="week-num-badge">Week 10</div>
+              <div class="week-info">
+                <div class="week-title">Graphing Basic Functions and Quadratic Functions</div>
+                <div class="week-topics">Graphing parent functions and transformations; vertex form of parabolas; axis of symmetry; graphing quadratics</div>
+              </div>
+              <div class="week-toggle">▾</div>
+            </div>
+            <div class="week-lessons">
+
+              <!-- BEFORE YOU WATCH -->
+              <div class="prep-section">
+                <div class="prep-header">
+                  <span class="prep-label">📖 Before you watch</span>
+                  <span class="prep-time">~15 min total</span>
+                </div>
+                <p class="prep-intro">Watch these focused lessons first — then the classroom recording will click faster. Each one opens the Algebra Library where you can also toggle to Filipino and grab a practice worksheet.</p>
+                <div class="prep-links">
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-9" target="_blank" rel="noopener">
+                    <div class="prep-play">▶</div>
+                    <div class="prep-info">
+                      <div class="prep-title">Quadratic Functions and Parabolas</div>
+                      <div class="prep-meta">Algebra Library · Unit 9 · Lesson 8</div>
+                    </div>
+                    <span class="prep-arrow">→</span>
+                  </a>
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-9" target="_blank" rel="noopener">
+                    <div class="prep-play">▶</div>
+                    <div class="prep-info">
+                      <div class="prep-title">Solving Quadratic Equations by Factoring</div>
+                      <div class="prep-meta">Algebra Library · Unit 9 · Lesson 5</div>
+                    </div>
+                    <span class="prep-arrow">→</span>
+                  </a>
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-9" target="_blank" rel="noopener">
+                    <div class="prep-play">▶</div>
+                    <div class="prep-info">
+                      <div class="prep-title">Completing the Square</div>
+                      <div class="prep-meta">Algebra Library · Unit 9 · Lesson 6</div>
+                    </div>
+                    <span class="prep-arrow">→</span>
+                  </a>
+                </div>
+                <div class="prep-footer">
+                  <a class="prep-view-all" href="../../subjects/algebra/index.html#unit-9" target="_blank" rel="noopener">View all of Unit 9 — Radicals &amp; Quadratic Equations →</a>
+                </div>
+              </div>
+
+              <div class="lesson-slot" data-video-id="">
+                <div class="slot-play no-video">▶</div>
+                <div class="slot-info">
+                  <div class="slot-title">Week 10 — Classroom Lesson</div>
+                  <div class="slot-meta">Graphing Basic Functions and Quadratic Functions · ~60–75 min</div>
+                </div>
+                <div class="slot-actions"><span class="slot-coming">Coming soon</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- WEEK 11 — UNIT TEST -->
+          <div class="week-block" id="week-11" style="border-color:var(--course-mid);">
+            <div class="week-header" onclick="toggleWeek('week-11')" style="background:var(--course-light);">
+              <div class="week-num-badge" style="background:var(--course-dark);color:white;">Week 11</div>
+              <div class="week-info">
+                <div class="week-title">Unit Test</div>
+                <div class="week-topics">Summative assessment · Covers Weeks 7–10 · Coordinates through Graphing Functions</div>
+              </div>
+              <div class="week-toggle">▾</div>
+            </div>
+            <div class="week-lessons">
+              <div class="lesson-slot">
+                <div class="slot-play" style="background:var(--course-light);color:var(--course-dark);font-size:1.3rem;">📝</div>
+                <div class="slot-info">
+                  <div class="slot-title">Unit Test — Intermediate Algebra</div>
+                  <div class="slot-meta">Covers Weeks 7–10 · Multiple choice + short answer</div>
+                </div>
+                <div class="slot-actions">
+                  <span class="slot-coming" style="background:var(--course-light);color:var(--course-dark);border-color:var(--course-mid);">Assessment</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- WEEK 12 -->
+          <div class="week-block" id="week-12">
+            <div class="week-header" onclick="toggleWeek('week-12')">
+              <div class="week-num-badge">Week 12</div>
+              <div class="week-info">
+                <div class="week-title">Polynomial Functions and Factor Root Theorem</div>
+                <div class="week-topics">Polynomial functions; synthetic division; factor theorem; rational root theorem; graphing polynomials</div>
+              </div>
+              <div class="week-toggle">▾</div>
+            </div>
+            <div class="week-lessons">
+
+              <!-- BEFORE YOU WATCH -->
+              <div class="prep-section">
+                <div class="prep-header">
+                  <span class="prep-label">📖 Before you watch</span>
+                  <span class="prep-time">~15 min total</span>
+                </div>
+                <p class="prep-intro">Watch these focused lessons first — then the classroom recording will click faster. Each one opens the Algebra Library where you can also toggle to Filipino and grab a practice worksheet.</p>
+                <div class="prep-links">
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-7" target="_blank" rel="noopener">
+                    <div class="prep-play">▶</div>
+                    <div class="prep-info">
+                      <div class="prep-title">Dividing Polynomials</div>
+                      <div class="prep-meta">Algebra Library · Unit 7 · Lesson 4</div>
+                    </div>
+                    <span class="prep-arrow">→</span>
+                  </a>
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-7" target="_blank" rel="noopener">
+                    <div class="prep-play">▶</div>
+                    <div class="prep-info">
+                      <div class="prep-title">Factoring — Greatest Common Factor (GCF)</div>
+                      <div class="prep-meta">Algebra Library · Unit 7 · Lesson 5</div>
+                    </div>
+                    <span class="prep-arrow">→</span>
+                  </a>
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-7" target="_blank" rel="noopener">
+                    <div class="prep-play">▶</div>
+                    <div class="prep-info">
+                      <div class="prep-title">Zero Product Property and Special Patterns</div>
+                      <div class="prep-meta">Algebra Library · Unit 7 · Lesson 7</div>
+                    </div>
+                    <span class="prep-arrow">→</span>
+                  </a>
+                </div>
+                <div class="prep-footer">
+                  <a class="prep-view-all" href="../../subjects/algebra/index.html#unit-7" target="_blank" rel="noopener">View all of Unit 7 — Polynomials &amp; Factoring →</a>
+                </div>
+              </div>
+
+              <div class="lesson-slot" data-video-id="">
+                <div class="slot-play no-video">▶</div>
+                <div class="slot-info">
+                  <div class="slot-title">Week 12 — Classroom Lesson</div>
+                  <div class="slot-meta">Polynomial Functions and Factor Root Theorem · ~60–75 min</div>
+                </div>
+                <div class="slot-actions"><span class="slot-coming">Coming soon</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- WEEK 13 -->
+          <div class="week-block" id="week-13">
+            <div class="week-header" onclick="toggleWeek('week-13')">
+              <div class="week-num-badge">Week 13</div>
+              <div class="week-info">
+                <div class="week-title">Logarithmic and Exponential Functions</div>
+                <div class="week-topics">Properties of logarithms; exponential functions; solving log and exponential equations; change of base; applications</div>
+              </div>
+              <div class="week-toggle">▾</div>
+            </div>
+            <div class="week-lessons">
+
+              <!-- BEFORE YOU WATCH -->
+              <div class="prep-section">
+                <div class="prep-header">
+                  <span class="prep-label">📖 Before you watch</span>
+                  <span class="prep-time">~15 min total</span>
+                </div>
+                <p class="prep-intro">Watch these focused lessons first — then the classroom recording will click faster. Each one opens the Algebra Library where you can also toggle to Filipino and grab a practice worksheet.</p>
+                <div class="prep-links">
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-10" target="_blank" rel="noopener">
+                    <div class="prep-play">▶</div>
+                    <div class="prep-info">
+                      <div class="prep-title">Exponential Functions — Graphs and Properties</div>
+                      <div class="prep-meta">Algebra Library · Unit 10 · Lesson 1</div>
+                    </div>
+                    <span class="prep-arrow">→</span>
+                  </a>
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-10" target="_blank" rel="noopener">
+                    <div class="prep-play">▶</div>
+                    <div class="prep-info">
+                      <div class="prep-title">Introduction to Logarithms</div>
+                      <div class="prep-meta">Algebra Library · Unit 10 · Lesson 2</div>
+                    </div>
+                    <span class="prep-arrow">→</span>
+                  </a>
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-10" target="_blank" rel="noopener">
+                    <div class="prep-play">▶</div>
+                    <div class="prep-info">
+                      <div class="prep-title">Properties of Logarithms</div>
+                      <div class="prep-meta">Algebra Library · Unit 10 · Lesson 3</div>
+                    </div>
+                    <span class="prep-arrow">→</span>
+                  </a>
+                </div>
+                <div class="prep-footer">
+                  <a class="prep-view-all" href="../../subjects/algebra/index.html#unit-10" target="_blank" rel="noopener">View all of Unit 10 — Exponential &amp; Logarithmic Functions →</a>
+                </div>
+              </div>
+
+              <div class="lesson-slot" data-video-id="">
+                <div class="slot-play no-video">▶</div>
+                <div class="slot-info">
+                  <div class="slot-title">Week 13 — Classroom Lesson</div>
+                  <div class="slot-meta">Logarithmic and Exponential Functions · ~60–75 min</div>
+                </div>
+                <div class="slot-actions"><span class="slot-coming">Coming soon</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- WEEK 14 -->
+          <div class="week-block" id="week-14">
+            <div class="week-header" onclick="toggleWeek('week-14')">
+              <div class="week-num-badge">Week 14</div>
+              <div class="week-info">
+                <div class="week-title">Systems of Linear Equations</div>
+                <div class="week-topics">Systems of two and three linear equations; substitution; elimination; applications and word problems</div>
+              </div>
+              <div class="week-toggle">▾</div>
+            </div>
+            <div class="week-lessons">
+
+              <!-- BEFORE YOU WATCH -->
+              <div class="prep-section">
+                <div class="prep-header">
+                  <span class="prep-label">📖 Before you watch</span>
+                  <span class="prep-time">~15 min total</span>
+                </div>
+                <p class="prep-intro">Watch these focused lessons first — then the classroom recording will click faster. Each one opens the Algebra Library where you can also toggle to Filipino and grab a practice worksheet.</p>
+                <div class="prep-links">
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-6" target="_blank" rel="noopener">
+                    <div class="prep-play">▶</div>
+                    <div class="prep-info">
+                      <div class="prep-title">Solving Systems by Graphing</div>
+                      <div class="prep-meta">Algebra Library · Unit 6 · Lesson 1</div>
+                    </div>
+                    <span class="prep-arrow">→</span>
+                  </a>
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-6" target="_blank" rel="noopener">
+                    <div class="prep-play">▶</div>
+                    <div class="prep-info">
+                      <div class="prep-title">Solving Systems by Substitution</div>
+                      <div class="prep-meta">Algebra Library · Unit 6 · Lesson 2</div>
+                    </div>
+                    <span class="prep-arrow">→</span>
+                  </a>
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-6" target="_blank" rel="noopener">
+                    <div class="prep-play">▶</div>
+                    <div class="prep-info">
+                      <div class="prep-title">Solving Systems by Elimination</div>
+                      <div class="prep-meta">Algebra Library · Unit 6 · Lesson 3</div>
+                    </div>
+                    <span class="prep-arrow">→</span>
+                  </a>
+                </div>
+                <div class="prep-footer">
+                  <a class="prep-view-all" href="../../subjects/algebra/index.html#unit-6" target="_blank" rel="noopener">View all of Unit 6 — Systems of Equations →</a>
+                </div>
+              </div>
+
+              <div class="lesson-slot" data-video-id="">
+                <div class="slot-play no-video">▶</div>
+                <div class="slot-info">
+                  <div class="slot-title">Week 14 — Classroom Lesson</div>
+                  <div class="slot-meta">Systems of Linear Equations · ~60–75 min</div>
+                </div>
+                <div class="slot-actions"><span class="slot-coming">Coming soon</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- WEEK 15 — FINAL EXAM -->
+          <div class="week-block" id="week-15" style="border-color:var(--course-mid);">
+            <div class="week-header" onclick="toggleWeek('week-15')" style="background:var(--course-light);">
+              <div class="week-num-badge" style="background:var(--course-dark);color:white;">Week 15</div>
+              <div class="week-info">
+                <div class="week-title">Final Exam</div>
+                <div class="week-topics">Summative assessment · Covers all topics from the semester · Weeks 1–14</div>
+              </div>
+              <div class="week-toggle">▾</div>
+            </div>
+            <div class="week-lessons">
+              <div class="lesson-slot">
+                <div class="slot-play" style="background:var(--course-light);color:var(--course-dark);font-size:1.3rem;">📝</div>
+                <div class="slot-info">
+                  <div class="slot-title">Final Exam — Intermediate Algebra</div>
+                  <div class="slot-meta">Covers Weeks 1–14 · Multiple choice + short answer</div>
+                </div>
+                <div class="slot-actions">
+                  <span class="slot-coming" style="background:var(--course-light);color:var(--course-dark);border-color:var(--course-mid);">Assessment</span>
+                </div>
+              </div>
+              <div style="margin-top:14px;padding:14px;background:var(--bg);border-radius:10px;font-size:0.9rem;color:var(--muted);">
+                🎓 <strong style="color:var(--navy);">You've completed both Algebra courses.</strong> You're ready for
+                <a href="../../courses.html" style="color:var(--course);font-weight:700;">Precalculus, Statistics, or Calculus →</a>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- end .weeks -->
+      </div><!-- end main col -->
+
+      <!-- SIDEBAR -->
+      <div class="course-sidebar">
+        <div class="sidebar-card">
+          <div class="sidebar-header">
+            <h3>Course Details</h3>
+            <p>Everything in one place</p>
+          </div>
+          <div class="sidebar-body">
+            <div class="sidebar-stat">
+              <span class="label">Duration</span>
+              <span class="value">14 weeks</span>
+            </div>
+            <div class="sidebar-stat">
+              <span class="label">Format</span>
+              <span class="value">Classroom video</span>
+            </div>
+            <div class="sidebar-stat">
+              <span class="label">Language</span>
+              <span class="value">English</span>
+            </div>
+            <div class="sidebar-stat">
+              <span class="label">Level</span>
+              <span class="value">College / Developmental</span>
+            </div>
+            <div class="sidebar-stat">
+              <span class="label">Prerequisite</span>
+              <span class="value"><a href="../elementary-algebra/" style="color:var(--teal);">Elementary Algebra</a></span>
+            </div>
+            <div class="sidebar-stat">
+              <span class="label">Worksheets</span>
+              <span class="value">Coming soon</span>
+            </div>
+            <div class="sidebar-stat">
+              <span class="label">Price</span>
+              <span class="value" style="color:var(--course-dark);">Free — always</span>
+            </div>
+            <a href="https://www.youtube.com/@numberbender" target="_blank" rel="noopener" class="sidebar-cta">
+              ▶ Subscribe on YouTube
+            </a>
+          </div>
+        </div>
+
+        <div class="next-course-card">
+          <div class="next-label">Where this takes you</div>
+          <h4>Precalculus, Statistics &amp; Calculus</h4>
+          <p>You've finished both algebra courses. Explore the full subject library — Precalculus, Trigonometry, Statistics, and more.</p>
+          <a href="../../courses.html">Explore Subjects →</a>
+        </div>
+
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px;margin-top:16px;text-align:center;">
+          <div style="font-size:0.78rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;">Start from the beginning</div>
+          <a href="../elementary-algebra/" style="display:block;font-weight:600;color:var(--navy);padding:8px 0;border-bottom:1px solid var(--border);text-decoration:none;" onmouseover="this.style.color='var(--course)'" onmouseout="this.style.color='var(--navy)'">← Elementary Algebra</a>
+          <a href="../../courses.html" style="display:block;font-weight:600;color:var(--navy);padding:8px 0;text-decoration:none;" onmouseover="this.style.color='var(--course)'" onmouseout="this.style.color='var(--navy)'">📚 All Subjects Library</a>
+        </div>
+      </div>
+
+    </div><!-- end content-layout -->
+  </div>
+</section>
+
+<!-- INSTRUCTOR -->
+<section class="instructor">
+  <div class="container">
+    <div class="instructor-inner">
+      <div class="instructor-avatar">👨‍🏫</div>
+      <div class="instructor-body">
+        <h3>Dr. Peter Esperanza — Dr. E</h3>
+        <div class="inst-title">Community College Professor · Numberbender Founder</div>
+        <p>Dr. E has taught mathematics at the college level for over a decade and has built one of the most-watched bilingual math channels on YouTube. This course was recorded in a real classroom with real students — you get the authentic teaching energy, the questions, the humor, and the clarity that his students experience every semester.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot foot-brand">
+        <div class="logo">
+          <div class="logo-mark">
+            <img src="../../images/numberbender-mark-teal-transparent.svg" alt="Numberbender" style="width:100%;height:100%;object-fit:contain;">
+          </div>
+          <span>Numberbender</span>
+        </div>
+        <p>Helping students learn math with confidence and helping educators teach online with energy, clarity, and impact.</p>
+      </div>
+      <div class="foot">
+        <h4>Courses</h4>
+        <a href="../../courses.html">All Subjects</a>
+        <a href="../elementary-algebra/">Elementary Algebra</a>
+        <a href="../intermediate-algebra/">Intermediate Algebra</a>
+      </div>
+      <div class="foot">
+        <h4>Students</h4>
+        <a href="../../math-worksheets.html">Free Worksheets</a>
+        <a href="../../courses.html">Video Lessons</a>
+      </div>
+      <div class="foot">
+        <h4>Connect</h4>
+        <a href="../../about.html">About Dr. E</a>
+        <a href="../../speaking.html">Speaking</a>
+        <a href="../../contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Numberbender · Dr. Peter Esperanza</span>
+      <span>Free bilingual math — English &amp; Filipino</span>
+    </div>
+  </div>
+</footer>
+
+<!-- VIDEO MODAL -->
+<div id="vid-modal" style="display:none;position:fixed;inset:0;z-index:1200;background:rgba(15,23,42,.82);backdrop-filter:blur(6px);align-items:center;justify-content:center;padding:16px;" onclick="if(event.target===this)closeVideo()">
+  <div style="background:white;border-radius:16px;width:min(900px,96vw);overflow:hidden;box-shadow:0 32px 80px rgba(15,23,42,.3);">
+    <div style="display:flex;align-items:center;gap:12px;padding:13px 18px;border-bottom:1px solid var(--border);background:white;">
+      <span style="flex:1;font-weight:700;font-size:0.95rem;color:var(--navy);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;" id="vid-modal-title">Classroom Lesson</span>
+      <button onclick="closeVideo()" style="background:none;border:none;cursor:pointer;color:#94a3b8;font-size:1.4rem;line-height:1;padding:6px 8px;border-radius:8px;flex-shrink:0;transition:color .15s,background .15s;" onmouseover="this.style.color='var(--navy)';this.style.background='#f1f5f9'" onmouseout="this.style.color='#94a3b8';this.style.background='none'" aria-label="Close video">✕</button>
+    </div>
+    <div style="position:relative;padding-bottom:56.25%;height:0;background:#0f172a;">
+      <iframe id="vid-modal-frame" style="position:absolute;inset:0;width:100%;height:100%;border:none;" src="" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen title="Classroom Lesson Video"></iframe>
+    </div>
+  </div>
+</div>
+
+<script>
+function toggleWeek(id) {
+  const block = document.getElementById(id);
+  block.classList.toggle('open');
+}
+// Open week 1 by default
+document.getElementById('week-1').classList.add('open');
+
+// Video modal
+function openVideo(videoId, title) {
+  document.getElementById('vid-modal-title').textContent = title || 'Classroom Lesson';
+  document.getElementById('vid-modal-frame').src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0&modestbranding=1';
+  var modal = document.getElementById('vid-modal');
+  modal.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+function closeVideo() {
+  var modal = document.getElementById('vid-modal');
+  modal.style.display = 'none';
+  setTimeout(function(){ document.getElementById('vid-modal-frame').src = ''; }, 200);
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape' && document.getElementById('vid-modal').style.display === 'flex') closeVideo();
+});
+</script>
+
+</body>
+</html>

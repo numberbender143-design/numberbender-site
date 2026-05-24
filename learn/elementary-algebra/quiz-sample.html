@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Week 1 Quiz Sample — Elementary Algebra | Numberbender</title>
+<style>
+  :root{--teal:#1F6F6B;--teal-dark:#085041;--teal-light:#E1F5EE;--navy:#0F172A;--bg:#F8FAFC;--border:#E2E8F0;--muted:#64748B;--green:#16a34a;--red:#dc2626;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--navy);line-height:1.6;}
+  .wrap{width:min(680px,92%);margin:40px auto;}
+  .quiz-header{background:linear-gradient(135deg,#085041,#1F6F6B);color:white;padding:28px 32px;border-radius:16px;margin-bottom:28px;}
+  .quiz-header .label{font-size:0.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#9FE1CB;margin-bottom:6px;}
+  .quiz-header h1{font-size:1.5rem;font-weight:800;}
+  .quiz-header p{font-size:0.9rem;color:rgba(255,255,255,0.75);margin-top:6px;}
+  .question{background:white;border:1px solid var(--border);border-radius:12px;padding:24px;margin-bottom:16px;}
+  .q-num{font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--teal);margin-bottom:8px;}
+  .q-text{font-size:1.05rem;font-weight:600;margin-bottom:16px;}
+  .choices{display:flex;flex-direction:column;gap:8px;}
+  .choice{display:flex;align-items:center;gap:12px;padding:10px 14px;border:1.5px solid var(--border);border-radius:8px;cursor:pointer;transition:all .15s;}
+  .choice:hover{border-color:var(--teal);background:var(--teal-light);}
+  .choice input{accent-color:var(--teal);width:16px;height:16px;flex-shrink:0;}
+  .choice label{cursor:pointer;font-size:0.95rem;}
+  .choice.correct{border-color:var(--green);background:#f0fdf4;}
+  .choice.wrong{border-color:var(--red);background:#fef2f2;}
+  .feedback{margin-top:10px;font-size:0.88rem;font-weight:600;display:none;}
+  .feedback.show{display:block;}
+  .feedback.right{color:var(--green);}
+  .feedback.wrong{color:var(--red);}
+  .submit-btn{display:block;width:100%;padding:14px;background:var(--teal-dark);color:white;font-size:1rem;font-weight:700;border:none;border-radius:10px;cursor:pointer;margin-top:8px;transition:background .15s;}
+  .submit-btn:hover{background:var(--teal);}
+  .submit-btn:disabled{opacity:0.5;cursor:not-allowed;}
+  .score-card{display:none;background:white;border:1px solid var(--border);border-radius:16px;padding:32px;text-align:center;margin-top:24px;}
+  .score-card.show{display:block;}
+  .score-big{font-size:3rem;font-weight:800;color:var(--teal-dark);}
+  .score-label{font-size:1rem;color:var(--muted);margin-top:4px;}
+  .score-msg{margin-top:16px;font-size:1rem;font-weight:600;}
+  .retry-btn{display:inline-block;margin-top:16px;padding:10px 24px;background:var(--bg);border:1.5px solid var(--border);border-radius:8px;font-weight:600;cursor:pointer;font-size:0.95rem;}
+  .retry-btn:hover{border-color:var(--teal);color:var(--teal);}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="quiz-header">
+    <div class="label">Elementary Algebra · Week 1</div>
+    <h1>Operations with Integers</h1>
+    <p>5 questions · Select the best answer for each item</p>
+  </div>
+
+  <form id="quiz">
+
+    <div class="question">
+      <div class="q-num">Question 1</div>
+      <div class="q-text">What is (−8) + 3?</div>
+      <div class="choices">
+        <div class="choice"><input type="radio" name="q1" id="q1a" value="a"><label for="q1a">−11</label></div>
+        <div class="choice"><input type="radio" name="q1" id="q1b" value="b"><label for="q1b">11</label></div>
+        <div class="choice"><input type="radio" name="q1" id="q1c" value="c"><label for="q1c">−5</label></div>
+        <div class="choice"><input type="radio" name="q1" id="q1d" value="d"><label for="q1d">5</label></div>
+      </div>
+      <div class="feedback" id="fb1"></div>
+    </div>
+
+    <div class="question">
+      <div class="q-num">Question 2</div>
+      <div class="q-text">What is (−4) × (−6)?</div>
+      <div class="choices">
+        <div class="choice"><input type="radio" name="q2" id="q2a" value="a"><label for="q2a">−24</label></div>
+        <div class="choice"><input type="radio" name="q2" id="q2b" value="b"><label for="q2b">24</label></div>
+        <div class="choice"><input type="radio" name="q2" id="q2c" value="c"><label for="q2c">−10</label></div>
+        <div class="choice"><input type="radio" name="q2" id="q2d" value="d"><label for="q2d">10</label></div>
+      </div>
+      <div class="feedback" id="fb2"></div>
+    </div>
+
+    <div class="question">
+      <div class="q-num">Question 3</div>
+      <div class="q-text">What is 15 ÷ (−3)?</div>
+      <div class="choices">
+        <div class="choice"><input type="radio" name="q3" id="q3a" value="a"><label for="q3a">5</label></div>
+        <div class="choice"><input type="radio" name="q3" id="q3b" value="b"><label for="q3b">−45</label></div>
+        <div class="choice"><input type="radio" name="q3" id="q3c" value="c"><label for="q3c">45</label></div>
+        <div class="choice"><input type="radio" name="q3" id="q3d" value="d"><label for="q3d">−5</label></div>
+      </div>
+      <div class="feedback" id="fb3"></div>
+    </div>
+
+    <div class="question">
+      <div class="q-num">Question 4</div>
+      <div class="q-text">What is (−7) − (−2)?</div>
+      <div class="choices">
+        <div class="choice"><input type="radio" name="q4" id="q4a" value="a"><label for="q4a">−9</label></div>
+        <div class="choice"><input type="radio" name="q4" id="q4b" value="b"><label for="q4b">9</label></div>
+        <div class="choice"><input type="radio" name="q4" id="q4c" value="c"><label for="q4c">−5</label></div>
+        <div class="choice"><input type="radio" name="q4" id="q4d" value="d"><label for="q4d">5</label></div>
+      </div>
+      <div class="feedback" id="fb4"></div>
+    </div>
+
+    <div class="question">
+      <div class="q-num">Question 5</div>
+      <div class="q-text">What is |−9|?</div>
+      <div class="choices">
+        <div class="choice"><input type="radio" name="q5" id="q5a" value="a"><label for="q5a">−9</label></div>
+        <div class="choice"><input type="radio" name="q5" id="q5b" value="b"><label for="q5b">9</label></div>
+        <div class="choice"><input type="radio" name="q5" id="q5c" value="c"><label for="q5c">0</label></div>
+        <div class="choice"><input type="radio" name="q5" id="q5d" value="d"><label for="q5d">81</label></div>
+      </div>
+      <div class="feedback" id="fb5"></div>
+    </div>
+
+    <button type="button" class="submit-btn" id="submitBtn" onclick="gradeQuiz()">Submit Answers</button>
+  </form>
+
+  <div class="score-card" id="scoreCard">
+    <div class="score-big" id="scoreNum"></div>
+    <div class="score-label">out of 5</div>
+    <div class="score-msg" id="scoreMsg"></div>
+    <button class="retry-btn" onclick="resetQuiz()">Try Again</button>
+  </div>
+
+</div>
+<script>
+const answers = { q1:'c', q2:'b', q3:'d', q4:'c', q5:'b' };
+const explanations = {
+  q1: '(−8) + 3 = −5. Adding a positive to a negative: subtract and keep the sign of the larger.',
+  q2: '(−4) × (−6) = 24. Negative × Negative = Positive.',
+  q3: '15 ÷ (−3) = −5. Positive ÷ Negative = Negative.',
+  q4: '(−7) − (−2) = −7 + 2 = −5. Subtracting a negative is the same as adding.',
+  q5: '|−9| = 9. Absolute value is always the distance from zero — always positive.'
+};
+
+function gradeQuiz() {
+  let score = 0;
+  for (let i = 1; i <= 5; i++) {
+    const sel = document.querySelector(`input[name="q${i}"]:checked`);
+    const fb = document.getElementById(`fb${i}`);
+    const choices = document.querySelectorAll(`input[name="q${i}"]`);
+    if (!sel) continue;
+    const correct = answers[`q${i}`];
+    choices.forEach(c => {
+      const div = c.closest('.choice');
+      if (c.value === correct) div.classList.add('correct');
+      else if (c.checked) div.classList.add('wrong');
+      c.disabled = true;
+    });
+    fb.textContent = (sel.value === correct ? '✓ Correct! ' : '✗ Incorrect. ') + explanations[`q${i}`];
+    fb.className = 'feedback show ' + (sel.value === correct ? 'right' : 'wrong');
+    if (sel.value === correct) score++;
+  }
+  document.getElementById('submitBtn').disabled = true;
+  const card = document.getElementById('scoreCard');
+  document.getElementById('scoreNum').textContent = score;
+  const msgs = ['Keep practicing — review the lesson and try again.','Getting there — a little more review will help.','Good effort! Review the ones you missed.','Nice work! Almost perfect.','Perfect score! You are ready for Week 2.'];
+  document.getElementById('scoreMsg').textContent = msgs[score];
+  card.classList.add('show');
+  card.scrollIntoView({behavior:'smooth'});
+}
+
+function resetQuiz() {
+  document.querySelectorAll('input[type="radio"]').forEach(r => { r.checked=false; r.disabled=false; });
+  document.querySelectorAll('.choice').forEach(d => d.classList.remove('correct','wrong'));
+  document.querySelectorAll('.feedback').forEach(f => { f.className='feedback'; f.textContent=''; });
+  document.getElementById('submitBtn').disabled = false;
+  document.getElementById('scoreCard').classList.remove('show');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+</script>
+</body>
+</html>

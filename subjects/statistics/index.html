@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P1M2WZD840"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P1M2WZD840');
+</script>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Statistics Lessons — 9 Units, 70 Lessons | Numberbender</title>
+<meta name="description" content="Free statistics video lessons by Dr. E — exploring data, probability, regression, confidence intervals, hypothesis testing, and AP Stats FRQ. Bilingual English &amp;."/>
+<link rel="canonical" href="https://numberbender.com/subjects/statistics/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Statistics Lessons | Numberbender"/>
+<meta property="og:description" content="9 units, 70 free lessons — data to AP Stats exam prep, taught by Dr. E in English and Filipino 🇵🇭"/>
+<meta property="og:url" content="https://numberbender.com/subjects/statistics/"/>
+<meta property="og:site_name" content="Numberbender"/>
+<meta property="og:image" content="https://numberbender.com/images/dr-e-hero.jpg"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Statistics Lessons | Numberbender"/>
+<meta name="twitter:description" content="Free statistics video lessons by Dr. E — exploring data, probability, regression, confidence intervals, hypothesis testing, and AP Stats FRQ. Bilingual English "/>
+<meta name="twitter:image" content="https://numberbender.com/images/dr-e-hero.jpg"/>
+<link rel="icon" type="image/svg+xml" href="../../images/exports/numberbender-favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../../images/exports/png/favicon-32.png">
+<link rel="icon" type="image/png" sizes="180x180" href="../../images/exports/png/favicon-180.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/exports/png/favicon-180.png">
+<meta name="theme-color" content="#16a34a">
+<style>
+:root{
+  --navy:#0F172A;
+  --blue:#2563EB; --blue-dark:#1d4ed8; --blue-light:#EFF6FF; --blue-mid:#93C5FD; --blue-xlight:#DBEAFE;
+  --red:#DC2626; --red-dark:#b91c1c; --red-light:#FEF2F2; --red-mid:#FCA5A5;
+  --teal:#1F6F6B; --teal-dark:#085041;
+  --bg:#F8FAFC; --surface:#FFFFFF;
+  --muted:#64748B; --border:#E2E8F0;
+  --green:#16a34a; --green-light:#f0fdf4; --green-mid:#86efac;
+  --amber:#92400e; --amber-light:#fef3c7; --amber-mid:#fde68a;
+  --radius:16px; --shadow:0 8px 24px rgba(15,23,42,0.09);
+  /* active color tokens — subject: Statistics (green) */
+  --active:#16a34a; --active-dark:#166534; --active-light:#f0fdf4; --active-mid:#86efac;
+}
+body[data-lang="fil"]{
+  --active:var(--red); --active-dark:var(--red-dark); --active-light:var(--red-light); --active-mid:var(--red-mid);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Inter",Roboto,Arial,sans-serif;color:var(--navy);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;}
+a{color:var(--blue);text-decoration:none;}
+a:hover{text-decoration:underline;}
+img{max-width:100%;display:block;}
+.container{width:min(1000px,92%);margin-inline:auto;}
+
+/* ── NAV ── */
+.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.94);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--border);}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0;}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.1rem;color:var(--navy);text-decoration:none;}
+.logo-mark{width:42px;height:42px;border-radius:10px;display:grid;place-items:center;overflow:hidden;}
+.nav-links{display:flex;gap:20px;align-items:center;}
+.nav-links a{color:var(--navy);font-weight:500;font-size:0.92rem;}
+.nav-links a:hover{color:var(--blue);text-decoration:none;}
+.nav-links a.active{color:var(--blue);font-weight:700;}
+.nav-cta{background:var(--teal-dark);color:white!important;padding:8px 15px;border-radius:9px;font-weight:600;font-size:0.88rem;}
+.nav-cta:hover{background:var(--teal);text-decoration:none!important;}
+
+/* ── HERO ── */
+.subject-hero{background:linear-gradient(135deg,#166534 0%,#16a34a 60%,#22c55e 100%);color:white;padding:44px 0 0;}
+.breadcrumb-nav{font-size:0.82rem;margin-bottom:20px;color:rgba(255,255,255,0.65);}
+.breadcrumb-nav a{color:rgba(255,255,255,0.65);}
+.breadcrumb-nav a:hover{color:white;text-decoration:none;}
+.hero-inner{display:flex;align-items:flex-end;gap:28px;}
+.hero-content{flex:1;display:flex;align-items:flex-start;gap:20px;padding-bottom:48px;}
+.hero-icon{width:80px;height:80px;border-radius:18px;flex-shrink:0;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,0.25);}
+.hero-text h1{font-size:clamp(1.9rem,4vw,2.5rem);font-weight:900;letter-spacing:-0.025em;margin-bottom:10px;line-height:1.1;}
+.hero-text .tagline{font-size:1rem;color:rgba(255,255,255,0.78);max-width:540px;margin-bottom:22px;line-height:1.55;}
+.hero-stats{display:inline-flex;background:rgba(0,0,0,0.22);border:1px solid rgba(255,255,255,0.14);border-radius:12px;overflow:hidden;}
+.hstat{padding:11px 22px;text-align:center;border-right:1px solid rgba(255,255,255,0.1);}
+.hstat:last-child{border-right:none;}
+.hstat .n{display:block;font-size:1.25rem;font-weight:800;line-height:1.2;}
+.hstat .l{font-size:0.7rem;color:rgba(255,255,255,0.65);font-weight:500;text-transform:uppercase;letter-spacing:.05em;}
+.hero-pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px;}
+.hero-pill{font-size:0.75rem;font-weight:600;padding:4px 12px;border-radius:999px;background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.88);}
+
+/* ── LANG BAR ── */
+.lang-bar{background:var(--surface);border-bottom:2px solid var(--border);padding:0;position:sticky;top:71px;z-index:40;transition:border-color .3s;}
+body[data-lang="fil"] .lang-bar{border-bottom-color:var(--red-mid);}
+.lang-bar-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0;height:52px;}
+.lang-note{font-size:0.83rem;color:var(--muted);display:flex;align-items:center;gap:6px;}
+.lang-note strong{color:var(--navy);transition:color .2s;}
+body[data-lang="fil"] .lang-note strong{color:var(--red);}
+.lang-toggle{display:flex;background:var(--bg);border:1.5px solid var(--border);border-radius:9px;padding:3px;gap:2px;}
+.lang-btn{padding:6px 18px;border-radius:6px;font-size:0.85rem;font-weight:700;cursor:pointer;border:none;background:transparent;color:var(--muted);transition:all .18s;display:flex;align-items:center;gap:6px;}
+.lang-btn.active{background:var(--active);color:white;box-shadow:0 2px 6px rgba(22,163,74,0.3);}
+body[data-lang="fil"] .lang-btn.active{background:var(--red);box-shadow:0 2px 6px rgba(220,38,38,0.3);}
+
+/* ── UNITS SECTION ── */
+.units-section{padding:36px 0 64px;}
+.section-heading{font-size:0.78rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:18px;display:flex;align-items:center;gap:10px;}
+.section-heading::after{content:'';flex:1;height:1px;background:var(--border);}
+.unit-list{display:flex;flex-direction:column;gap:10px;}
+
+/* ── UNIT ACCORDION ── */
+.unit-block{background:var(--surface);border:1.5px solid var(--border);border-radius:14px;overflow:hidden;transition:border-color .2s,box-shadow .2s;}
+.unit-block.open{border-color:var(--active-mid);box-shadow:0 4px 16px rgba(22,163,74,0.08);}
+body[data-lang="fil"] .unit-block.open{box-shadow:0 4px 16px rgba(220,38,38,0.08);}
+.unit-header{display:flex;align-items:center;gap:14px;padding:18px 22px;cursor:pointer;user-select:none;transition:background .15s;}
+.unit-header:hover{background:var(--active-light);}
+.unit-num{height:42px;padding:0 16px;border-radius:10px;background:var(--blue-light);color:var(--blue);font-weight:800;font-size:0.8rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .2s;white-space:nowrap;letter-spacing:.01em;border:1.5px solid var(--blue-xlight);}
+.unit-block.open .unit-num{background:var(--active);color:white;border-color:var(--active-dark);}
+.unit-info{flex:1;min-width:0;}
+.unit-title{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:3px;}
+.unit-meta{font-size:0.78rem;color:var(--muted);}
+.unit-complete{color:var(--green);font-weight:700;}
+.unit-complete::before{content:'✓ ';}
+.unit-chevron{color:var(--muted);font-size:1rem;transition:transform .25s;line-height:1;flex-shrink:0;}
+.unit-block.open .unit-chevron{transform:rotate(180deg);}
+
+.unit-lessons{max-height:0;overflow:hidden;transition:max-height .38s cubic-bezier(.4,0,.2,1);}
+.unit-block.open .unit-lessons{max-height:4000px;}
+.lessons-inner{padding:4px 22px 18px;}
+.lessons-divider{height:1px;background:var(--border);margin-bottom:14px;}
+.lesson-list{display:flex;flex-direction:column;gap:6px;}
+
+/* ── LESSON CARD ── */
+.lesson-item{display:flex;align-items:center;gap:12px;padding:11px 14px;border-radius:10px;border:1px solid var(--border);background:var(--bg);transition:all .15s;text-decoration:none;color:inherit;}
+.lesson-item:hover:not(.no-video){border-color:var(--active-mid);background:var(--active-light);text-decoration:none;}
+.lesson-item.no-video{cursor:default;opacity:0.6;}
+.lesson-item.no-video:hover{border-color:var(--border);background:var(--bg);}
+
+.lesson-play{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;flex-shrink:0;font-size:0.72rem;transition:all .2s;}
+.lesson-item:not(.no-video) .lesson-play{background:var(--active);color:white;}
+.lesson-item:not(.no-video):hover .lesson-play{background:var(--active-dark);}
+.lesson-item.no-video .lesson-play{background:var(--border);color:var(--muted);}
+
+.lesson-meta{flex:1;min-width:0;}
+.lesson-title{font-size:0.93rem;font-weight:600;color:var(--navy);line-height:1.35;}
+.lesson-item.no-video .lesson-title{color:var(--muted);}
+.lesson-sub{font-size:0.75rem;color:var(--muted);margin-top:1px;}
+
+.lesson-badge{font-size:0.7rem;font-weight:700;padding:3px 9px;border-radius:999px;border:1px solid var(--border);color:var(--muted);background:white;white-space:nowrap;flex-shrink:0;letter-spacing:.02em;}
+.lesson-badge.both{background:var(--green-light);border-color:var(--green-mid);color:var(--green);}
+.lesson-badge.en{background:var(--blue-light);border-color:var(--blue-mid);color:var(--blue);}
+.lesson-badge.fil{background:var(--amber-light);border-color:var(--amber-mid);color:var(--amber);}
+
+/* ── BOTTOM CARDS ── */
+.bottom-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:48px;}
+.related-card{background:var(--surface);border:1.5px solid var(--border);border-radius:14px;padding:22px;}
+.related-card h4{font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:14px;}
+.subject-chips{display:flex;flex-wrap:wrap;gap:8px;}
+.subject-chip{display:inline-flex;align-items:center;gap:6px;padding:7px 14px;border:1.5px solid var(--border);border-radius:9px;font-weight:600;font-size:0.87rem;color:var(--navy);background:var(--bg);text-decoration:none;transition:all .15s;}
+.subject-chip:hover{border-color:var(--blue);color:var(--blue);background:var(--blue-light);text-decoration:none;}
+.subject-chip.all{border-color:var(--blue-mid);color:var(--blue);background:var(--blue-light);}
+.course-callout{background:linear-gradient(135deg,#085041,#1F6F6B);border-radius:14px;padding:22px 24px;display:flex;flex-direction:column;justify-content:space-between;gap:16px;}
+.course-callout .cal-label{font-size:0.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#9FE1CB;margin-bottom:6px;}
+.course-callout .cal-title{font-size:1rem;font-weight:800;color:white;margin-bottom:4px;}
+.course-callout .cal-sub{font-size:0.82rem;color:rgba(255,255,255,0.72);line-height:1.5;}
+.cal-links{display:flex;flex-direction:column;gap:8px;}
+.cal-link{display:block;text-align:center;padding:9px 16px;border-radius:9px;font-weight:700;font-size:0.85rem;text-decoration:none;transition:all .15s;}
+.cal-link.primary{background:white;color:#085041;}
+.cal-link.primary:hover{background:#f0fdf4;text-decoration:none;}
+.cal-link.secondary{background:rgba(255,255,255,0.14);color:white;border:1px solid rgba(255,255,255,0.25);}
+.cal-link.secondary:hover{background:rgba(255,255,255,0.22);text-decoration:none;}
+
+/* ── FOOTER ── */
+footer{background:var(--navy);color:#94a3b8;padding:56px 0 28px;}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:36px;}
+.foot h4{color:white;font-size:0.92rem;font-weight:700;margin-bottom:12px;}
+.foot a{display:block;color:#94a3b8;font-size:0.88rem;margin-bottom:8px;}
+.foot a:hover{color:white;text-decoration:none;}
+.foot-brand p{font-size:0.88rem;line-height:1.7;margin-top:12px;}
+.foot-bottom{border-top:1px solid #1e293b;padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:0.82rem;}
+.foot-logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.1rem;color:white;}
+.foot-logo-mark{width:42px;height:42px;border-radius:10px;display:grid;place-items:center;overflow:hidden;}
+
+/* ── HERO TRIO ── */
+.hero-trio{display:flex;align-items:stretch;margin-top:22px;background:rgba(0,0,0,0.22);border:1px solid rgba(255,255,255,0.15);border-radius:14px;overflow:hidden;}
+.hero-trio-step{display:flex;align-items:center;gap:13px;padding:15px 20px;flex:1;border-right:1px solid rgba(255,255,255,0.1);}
+.hero-trio-step:last-child{border-right:none;}
+.hero-trio-icon{font-size:1.5rem;line-height:1;flex-shrink:0;}
+.hero-trio-verb{font-size:0.68rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-bottom:3px;}
+.hero-trio-desc{font-size:0.84rem;font-weight:600;color:white;line-height:1.35;}
+
+/* ── HERO ARTWORK ── */
+.hero-text{flex:1;min-width:0;}
+.hero-artwork-wrap{
+  flex-shrink:0;
+  align-self:flex-end;
+  width:240px;
+  background:rgba(255,255,255,0.96);
+  border-radius:20px 20px 0 0;
+  padding:14px 14px 0;
+  overflow:hidden;
+  box-shadow:0 -4px 24px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.8);
+}
+.hero-artwork{width:100%;height:auto;display:block;}
+@media(max-width:760px){.hero-artwork-wrap{display:none;}}
+
+/* ── LESSON WORKSHEET BUTTONS ── */
+.lesson-right{display:flex;flex-direction:column;align-items:flex-end;gap:5px;flex-shrink:0;}
+.lesson-ws-row{display:flex;gap:4px;}
+.lesson-ws-btn{font-size:0.71rem;font-weight:700;padding:4px 10px;border-radius:7px;border:1.5px solid;cursor:pointer;white-space:nowrap;transition:all .15s;user-select:none;line-height:1.5;}
+.lesson-ws-btn.ws-view{background:var(--blue-light);color:var(--blue);border-color:var(--blue-mid);}
+.lesson-ws-btn.ws-view:hover{background:var(--blue);color:white;}
+.lesson-ws-btn.ws-dl{background:var(--green-light);color:var(--green);border-color:var(--green-mid);}
+.lesson-ws-btn.ws-dl:hover{background:var(--green);color:white;}
+
+/* ── VIDEO MODAL ── */
+.modal-overlay{position:fixed;inset:0;z-index:200;background:rgba(0,0,0,0.78);padding:24px 16px;overflow-y:auto;display:flex;align-items:flex-start;justify-content:center;visibility:hidden;opacity:0;transition:opacity .2s,visibility .2s;}
+.modal-overlay.active{visibility:visible;opacity:1;}
+.modal-box{background:var(--surface);border-radius:18px;width:min(820px,100%);margin:auto;overflow:hidden;box-shadow:0 24px 72px rgba(0,0,0,0.35);transform:translateY(8px);transition:transform .2s;}
+.modal-overlay.active .modal-box{transform:translateY(0);}
+.modal-header{display:flex;align-items:flex-start;justify-content:space-between;padding:18px 22px 14px;gap:14px;}
+.modal-lesson-title{font-size:1.05rem;font-weight:700;color:var(--navy);line-height:1.3;}
+.modal-lesson-sub{font-size:0.8rem;color:var(--muted);margin-top:3px;}
+.modal-close{background:none;border:1.5px solid var(--border);cursor:pointer;font-size:1.1rem;color:var(--muted);padding:5px 10px;border-radius:8px;line-height:1;flex-shrink:0;transition:all .15s;}
+.modal-close:hover{background:var(--bg);color:var(--navy);border-color:var(--navy);}
+.modal-video-wrap{position:relative;padding-bottom:56.25%;height:0;background:#000;}
+.modal-video-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none;}
+.modal-footer{padding:14px 22px;border-top:1px solid var(--border);display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:14px;}
+.ws-block{flex:1;min-width:0;}
+.ws-label{font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px;}
+.modal-btn-row{display:flex;gap:8px;flex-wrap:wrap;}
+.modal-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:9px;font-weight:700;font-size:0.85rem;text-decoration:none;border:1.5px solid;transition:all .15s;cursor:pointer;white-space:nowrap;}
+.modal-btn:hover{text-decoration:none;filter:brightness(.93);}
+.modal-btn.view{background:var(--blue-light);color:var(--blue);border-color:var(--blue-mid);}
+.modal-btn.dl{background:var(--green-light);color:var(--green);border-color:var(--green-mid);}
+.modal-btn.yt{background:var(--bg);color:var(--muted);border-color:var(--border);}
+
+/* ── WORKSHEET PREVIEW MODAL ── */
+.ws-iframe-wrap{border-top:1px solid var(--border);}
+.ws-iframe-wrap iframe{width:100%;height:clamp(380px,65vh,680px);border:none;display:block;background:var(--bg);}
+
+/* ── RESPONSIVE ── */
+@media(max-width:720px){
+  .hero-inner{flex-direction:column;gap:18px;}
+  .hero-icon{width:60px;height:60px;font-size:1.3rem;}
+  .hero-trio{flex-direction:column;}
+  .hero-trio-step{border-right:none;border-bottom:1px solid rgba(255,255,255,0.1);}
+  .hero-trio-step:last-child{border-bottom:none;}
+  .bottom-grid{grid-template-columns:1fr;}
+  .foot-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:560px){
+  .nav-links{display:none;}
+  .foot-grid{grid-template-columns:1fr;}
+  .hstat{padding:9px 14px;}
+  .lang-bar-inner{height:auto;padding:10px 0;}
+  .lesson-ws-row{display:none;}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "Statistics",
+  "description": "Free statistics video lessons by Dr. E — exploring data, probability, regression, confidence intervals, hypothesis testing, and AP Stats FRQ. Bilingual English &.",
+  "url": "https://numberbender.com/subjects/statistics/",
+  "provider": {"@type": "Organization", "name": "Numberbender", "url": "https://numberbender.com"},
+  "instructor": {"@type": "Person", "name": "Dr. Peter Esperanza"},
+  "isAccessibleForFree": true,
+  "inLanguage": ["en", "fil"],
+  "numberOfLessons": 70,
+  "hasCourseInstance": {"@type": "CourseInstance", "courseMode": "online"}
+}
+</script>
+</head>
+<body data-lang="en">
+
+<!-- ── NAV ── -->
+<header class="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="../../index.html" class="logo">
+        <div class="logo-mark">
+          <img src="../../images/numberbender-mark-teal-transparent.svg" alt="Numberbender" style="width:100%;height:100%;object-fit:contain;">
+        </div>
+        <span>Numberbender</span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="../../courses-v2.html" class="active">Courses</a>
+        <a href="../../math-worksheets.html">Worksheets</a>
+        <a href="../../for-teachers.html">For Teachers</a>
+        <a href="../../blog.html">Blog</a>
+        <a href="../../about.html">About Dr. E</a>
+      </nav>
+      <a href="../../contact.html" class="nav-cta">Contact</a>
+    </div>
+  </div>
+</header>
+
+<!-- ── HERO ── -->
+<section class="subject-hero">
+  <div class="container">
+    <div class="breadcrumb-nav">
+      <a href="../../courses-v2.html">Subjects</a>
+      <span style="margin:0 8px;">›</span>
+      <span style="color:rgba(255,255,255,0.9);font-weight:600;">Statistics</span>
+    </div>
+    <div class="hero-inner">
+      <div class="hero-content">
+      <div class="hero-icon"><img src="../../images/playlist_icons/3_statistics.png" alt="Statistics" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+      <div class="hero-text">
+        <h1>Statistics</h1>
+        <p class="tagline">Dr. E's complete statistics video library — exploring data, probability, inference, and AP Stats exam prep. Every Units 1–5 lesson paired with a free downloadable worksheet, taught in both English and Filipino 🇵🇭</p>
+        <div class="hero-stats">
+          <div class="hstat"><span class="n">9</span><span class="l">units</span></div>
+          <div class="hstat"><span class="n">70</span><span class="l">lessons</span></div>
+          <div class="hstat"><span class="n">EN · FIL</span><span class="l">bilingual 🇵🇭</span></div>
+          <div class="hstat"><span class="n">🆓</span><span class="l">always free</span></div>
+        </div>
+        <div class="hero-trio">
+          <div class="hero-trio-step">
+            <div class="hero-trio-icon">🎬</div>
+            <div>
+              <div class="hero-trio-verb">Watch</div>
+              <div class="hero-trio-desc">Bilingual video lessons<br>English &amp; Filipino</div>
+            </div>
+          </div>
+          <div class="hero-trio-step">
+            <div class="hero-trio-icon">📄</div>
+            <div>
+              <div class="hero-trio-verb">Worksheet</div>
+              <div class="hero-trio-desc">Aligned practice problems<br>for every lesson</div>
+            </div>
+          </div>
+          <div class="hero-trio-step">
+            <div class="hero-trio-icon">⬇</div>
+            <div>
+              <div class="hero-trio-verb">Download</div>
+              <div class="hero-trio-desc">Free PDF — print it or<br>solve it digitally</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div><!-- /hero-content -->
+      <div class="hero-artwork-wrap">
+        <img class="hero-artwork" src="../../images/worksheet_page_artworks/6_statistics.png" alt="" aria-hidden="true">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── LANG BAR ── -->
+<div class="lang-bar">
+  <div class="container">
+    <div class="lang-bar-inner">
+      <p class="lang-note">Watching in: <strong id="lang-label">English</strong> — toggle to switch video links</p>
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <button class="lang-btn active" id="btn-en" onclick="setLang('en')">🇺🇸 English</button>
+        <button class="lang-btn" id="btn-fil" onclick="setLang('fil')">🇵🇭 Filipino</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── UNITS ── -->
+<section class="units-section">
+  <div class="container">
+    <div class="section-heading">9 Units · 70 Lessons</div>
+    <div class="unit-list">
+
+      <!-- ═══ UNIT 1 ═══ -->
+      <div class="unit-block open" id="unit-1">
+        <div class="unit-header" onclick="toggleUnit('unit-1')">
+          <div class="unit-num">Unit 1</div>
+          <div class="unit-info">
+            <div class="unit-title">Exploring Data &amp; Study Design</div>
+            <div class="unit-meta"><span class="unit-complete">All 8 lessons available</span></div>
+          </div>
+          <div class="unit-chevron">▾</div>
+        </div>
+        <div class="unit-lessons"><div class="lessons-inner"><div class="lessons-divider"></div><div class="lesson-list">
+          <a class="lesson-item" data-en-id="d3j9WYKGDfY" data-fil-id="vDF0BW-6T2o" data-worksheet="01-01-statistics-identifying-population-and-sample.pdf" href="https://www.youtube.com/watch?v=d3j9WYKGDfY" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Identifying Population and Sample</div><div class="lesson-sub">Unit 1 · Lesson 1</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="KD4t2b3XJn0" data-fil-id="h3Sh82NcLCk" data-worksheet="01-02-statistics-population-sample-parameters-statistics.pdf" href="https://www.youtube.com/watch?v=KD4t2b3XJn0" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Parameters vs Statistics</div><div class="lesson-sub">Unit 1 · Lesson 2</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="kuh6FVuMEEE" data-fil-id="9CLkyEQ7p_I" data-worksheet="01-04-statistics-categorical-vs-quantitative-variables.pdf" href="https://www.youtube.com/watch?v=kuh6FVuMEEE" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Categorical vs Quantitative Variables</div><div class="lesson-sub">Unit 1 · Lesson 3</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="KLw_tP5UBM8" data-fil-id="4EtREeEnbKE" data-worksheet="01-02-statistics-discrete-vs-continuous-variables.pdf" href="https://www.youtube.com/watch?v=KLw_tP5UBM8" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Discrete vs Continuous Variables</div><div class="lesson-sub">Unit 1 · Lesson 4</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="y2vn3O8X3aw" data-fil-id="4nEtsjk57mg" data-worksheet="01-05-statistics-simple-random-sampling-random-digit-table.pdf" href="https://www.youtube.com/watch?v=y2vn3O8X3aw" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Sampling Techniques — Random Number Generator</div><div class="lesson-sub">Unit 1 · Lesson 5</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="mTt7D2ww-0g" data-fil-id="4nEtsjk57mg" data-worksheet="01-06-statistics-simple-random-sampling-with-table-d.pdf" href="https://www.youtube.com/watch?v=mTt7D2ww-0g" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Simple Random Sampling — Table D</div><div class="lesson-sub">Unit 1 · Lesson 6</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="R9-T568w3SQ" data-fil-id="bgK_zWq7B3I" data-worksheet="01-07-statistics-simulating-experiments-random-digit-table.pdf" href="https://www.youtube.com/watch?v=R9-T568w3SQ" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Simulating Experiments — Random Digit Table</div><div class="lesson-sub">Unit 1 · Lesson 7</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="BtqCDd6yV9E" data-fil-id="_00ZzgjIE8E" data-worksheet="01-09-statistics-selection-bias-lurking-confounding-variables.pdf" href="https://www.youtube.com/watch?v=BtqCDd6yV9E" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Bias, Lurking &amp; Confounding Variables</div><div class="lesson-sub">Unit 1 · Lesson 8</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+        </div></div></div>
+      </div>
+
+      <!-- ═══ UNIT 2 ═══ -->
+      <div class="unit-block" id="unit-2">
+        <div class="unit-header" onclick="toggleUnit('unit-2')">
+          <div class="unit-num">Unit 2</div>
+          <div class="unit-info">
+            <div class="unit-title">Representing &amp; Summarizing Data</div>
+            <div class="unit-meta"><span class="unit-complete">All 9 lessons available</span></div>
+          </div>
+          <div class="unit-chevron">▾</div>
+        </div>
+        <div class="unit-lessons"><div class="lessons-inner"><div class="lessons-divider"></div><div class="lesson-list">
+          <a class="lesson-item" data-en-id="gBYX9_S7API" data-fil-id="SMFxqUbQBjY" data-worksheet="02-01-statistics-dot-plots-univariate-data.pdf" href="https://www.youtube.com/watch?v=gBYX9_S7API" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Constructing Dot Plots</div><div class="lesson-sub">Unit 2 · Lesson 1</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="bG7fvCwe7aI" data-fil-id="QdCwoJoIfW0" data-worksheet="02-02-statistics-analyzing-univariate-data-dot-plots-histograms.pdf" href="https://www.youtube.com/watch?v=bG7fvCwe7aI" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Frequency Distribution Tables &amp; Histograms</div><div class="lesson-sub">Unit 2 · Lesson 2</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="UHefJnSA1v4" data-fil-id="W07Yil2XEQQ" data-worksheet="02-03-statistics-stem-and-leaf-plots.pdf" href="https://www.youtube.com/watch?v=UHefJnSA1v4" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Stem-and-Leaf Plots</div><div class="lesson-sub">Unit 2 · Lesson 3</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="kkPNZ4SJDp0" data-fil-id="-BBMRaI_XFA" data-worksheet="02-04-statistics-mean-vs-median-measures-of-center.pdf" href="https://www.youtube.com/watch?v=kkPNZ4SJDp0" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Measures of Center — Mean vs Median</div><div class="lesson-sub">Unit 2 · Lesson 4</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="EU4E6t3h9yU" data-fil-id="JxOguy6_9Iw" data-worksheet="02-05-statistics-percentile-rank-from-raw-data.pdf" href="https://www.youtube.com/watch?v=EU4E6t3h9yU" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Percentile Rank from Raw Data</div><div class="lesson-sub">Unit 2 · Lesson 5</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="JNe38QYVfTE" data-fil-id="zegZ7OvSzV0" data-worksheet="02-06-statistics-percentile-rank-raw-data-and-normal-distributions.pdf" href="https://www.youtube.com/watch?v=JNe38QYVfTE" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Percentile Rank &amp; the Normal Distribution</div><div class="lesson-sub">Unit 2 · Lesson 6</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="cM8gRnu0ez4" data-fil-id="XgWIHOErYic" data-worksheet="02-07-statistics-percentile-rank-raw-data-normal-distributions.pdf" href="https://www.youtube.com/watch?v=cM8gRnu0ez4" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Finding Area Under the Normal Curve — Z-Table</div><div class="lesson-sub">Unit 2 · Lesson 7</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="KtqpHjCKju8" data-fil-id="LHFMQObuGE0" data-worksheet="02-08-statistics-quartiles-box-and-whisker-plots.pdf" href="https://www.youtube.com/watch?v=KtqpHjCKju8" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Quartiles and Box-and-Whisker Plots</div><div class="lesson-sub">Unit 2 · Lesson 8</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="gd4inGFFXUY" data-fil-id="JUrP06C7RJg" data-worksheet="02-09-statistics-summation-sigma-notation.pdf" href="https://www.youtube.com/watch?v=gd4inGFFXUY" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Standard Deviation &amp; Sigma Notation</div><div class="lesson-sub">Unit 2 · Lesson 9</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+        </div></div></div>
+      </div>
+
+      <!-- ═══ UNIT 3 ═══ -->
+      <div class="unit-block" id="unit-3">
+        <div class="unit-header" onclick="toggleUnit('unit-3')">
+          <div class="unit-num">Unit 3</div>
+          <div class="unit-info">
+            <div class="unit-title">The Normal Distribution</div>
+            <div class="unit-meta"><span class="unit-complete">All 5 lessons available</span></div>
+          </div>
+          <div class="unit-chevron">▾</div>
+        </div>
+        <div class="unit-lessons"><div class="lessons-inner"><div class="lessons-divider"></div><div class="lesson-list">
+          <a class="lesson-item" data-en-id="JNe38QYVfTE" data-fil-id="zegZ7OvSzV0" data-worksheet="03-01-statistics-z-scores-and-standard-normal-distribution.pdf" href="https://www.youtube.com/watch?v=JNe38QYVfTE" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Z-Scores and Standard Normal Distribution</div><div class="lesson-sub">Unit 3 · Lesson 1</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="-7NClNBCP-U" data-fil-id="eneZPveMdqs" data-worksheet="03-02-statistics-empirical-rule-68-95-99-7.pdf" href="https://www.youtube.com/watch?v=-7NClNBCP-U" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">The Empirical Rule — 68-95-99.7</div><div class="lesson-sub">Unit 3 · Lesson 2</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="cM8gRnu0ez4" data-fil-id="XgWIHOErYic" data-worksheet="03-03-statistics-normal-distribution-probability.pdf" href="https://www.youtube.com/watch?v=cM8gRnu0ez4" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Normal Distribution Probability — Z-Table</div><div class="lesson-sub">Unit 3 · Lesson 3</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="GJSBWnpeOJo" data-fil-id="UfJiUqdrcaU" data-worksheet="03-04-statistics-normal-distribution-sampling-using-z-table.pdf" href="https://www.youtube.com/watch?v=GJSBWnpeOJo" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Finding Area Under Normal Curve — Ti-84</div><div class="lesson-sub">Unit 3 · Lesson 4</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="IAG57XsYku0" data-fil-id="4EtREeEnbKE" data-worksheet="03-05-statistics-discrete-continuous-random-variables-normal-distribution.pdf" href="https://www.youtube.com/watch?v=IAG57XsYku0" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Continuous Random Variables &amp; Normal Distribution</div><div class="lesson-sub">Unit 3 · Lesson 5</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+        </div></div></div>
+      </div>
+
+      <!-- ═══ UNIT 4 ═══ -->
+      <div class="unit-block" id="unit-4">
+        <div class="unit-header" onclick="toggleUnit('unit-4')">
+          <div class="unit-num">Unit 4</div>
+          <div class="unit-info">
+            <div class="unit-title">Linear Regression &amp; Correlation</div>
+            <div class="unit-meta"><span class="unit-complete">All 8 lessons available</span></div>
+          </div>
+          <div class="unit-chevron">▾</div>
+        </div>
+        <div class="unit-lessons"><div class="lessons-inner"><div class="lessons-divider"></div><div class="lesson-list">
+          <a class="lesson-item" data-en-id="dblfS2r546U" data-fil-id="vvEgYDJ9uEs" data-worksheet="04-01-statistics-explanatory-response-variables-scatter-plots.pdf" href="https://www.youtube.com/watch?v=dblfS2r546U" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Explanatory &amp; Response Variables — Scatterplots</div><div class="lesson-sub">Unit 4 · Lesson 1</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="J1y8vBtrvso" data-fil-id="yP3wIjfrxaY" data-worksheet="04-02-statistics-correlation-and-scatter-plots.pdf" href="https://www.youtube.com/watch?v=J1y8vBtrvso" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Graphing &amp; Interpreting Scatterplots</div><div class="lesson-sub">Unit 4 · Lesson 2</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="XwEWvD0IbWw" data-fil-id="BHX8NVdtExk" data-worksheet="04-03-statistics-interpreting-scatter-plots-using-fods.pdf" href="https://www.youtube.com/watch?v=XwEWvD0IbWw" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Interpreting Correlation — FODS</div><div class="lesson-sub">Unit 4 · Lesson 3</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="FMkxtndCrf8" data-fil-id="nTzTKcHPbEE" data-worksheet="04-04-statistics-least-squares-regression-line.pdf" href="https://www.youtube.com/watch?v=FMkxtndCrf8" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Least Squares Regression Line (LSRL)</div><div class="lesson-sub">Unit 4 · Lesson 4</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="999WrlRXho4" data-fil-id="OL_NaOAcpEo" data-worksheet="04-05-statistics-lsrl-from-numerical-summary-computer-output.pdf" href="https://www.youtube.com/watch?v=999WrlRXho4" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">LSRL from Computer Output</div><div class="lesson-sub">Unit 4 · Lesson 5</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="Brpyw-uNXBs" data-fil-id="7AIC1XcT2-k" data-worksheet="04-06-statistics-lsrl-predictions.pdf" href="https://www.youtube.com/watch?v=Brpyw-uNXBs" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">LSRL Predictions — Desmos</div><div class="lesson-sub">Unit 4 · Lesson 6</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="aw__r4XQsIw" data-fil-id="" data-worksheet="04-07-statistics-linear-transformation-on-bivariate-data.pdf" href="https://www.youtube.com/watch?v=aw__r4XQsIw" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Linear Transformation of Bivariate Data</div><div class="lesson-sub">Unit 4 · Lesson 7</div></div>
+            <span class="lesson-badge en">EN</span>
+          </a>
+          <a class="lesson-item" data-en-id="rJarRLrz1qI" data-fil-id="" data-worksheet="04-08-statistics-transforming-data-to-achieve-linearity.pdf" href="https://www.youtube.com/watch?v=rJarRLrz1qI" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Transforming Data to Achieve Linearity</div><div class="lesson-sub">Unit 4 · Lesson 8</div></div>
+            <span class="lesson-badge en">EN</span>
+          </a>
+        </div></div></div>
+      </div>
+
+      <!-- ═══ UNIT 5 ═══ -->
+      <div class="unit-block" id="unit-5">
+        <div class="unit-header" onclick="toggleUnit('unit-5')">
+          <div class="unit-num">Unit 5</div>
+          <div class="unit-info">
+            <div class="unit-title">Probability</div>
+            <div class="unit-meta"><span class="unit-complete">All 10 lessons available</span></div>
+          </div>
+          <div class="unit-chevron">▾</div>
+        </div>
+        <div class="unit-lessons"><div class="lessons-inner"><div class="lessons-divider"></div><div class="lesson-list">
+          <a class="lesson-item" data-en-id="xuArY4tl5S4" data-fil-id="2lGEECua_8U" data-worksheet="05-01-statistics-probability-introduction-sample-spaces.pdf" href="https://www.youtube.com/watch?v=xuArY4tl5S4" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Introduction to Probability — Sample Spaces</div><div class="lesson-sub">Unit 5 · Lesson 1</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="Nbrw9-RdtLY" data-fil-id="lmDzvcAQOwU" data-worksheet="05-02-statistics-probability-introduction-rules-events.pdf" href="https://www.youtube.com/watch?v=Nbrw9-RdtLY" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Probability Rules — Events</div><div class="lesson-sub">Unit 5 · Lesson 2</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="chjuz7CJpWY" data-fil-id="2lGEECua_8U" data-worksheet="05-03-statistics-classical-probability.pdf" href="https://www.youtube.com/watch?v=chjuz7CJpWY" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Classical Probability</div><div class="lesson-sub">Unit 5 · Lesson 3</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="uFnGgN_Frx0" data-fil-id="bpkXQ9E8aR0" data-worksheet="05-04-statistics-probability-rules-events-operations.pdf" href="https://www.youtube.com/watch?v=uFnGgN_Frx0" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Independent vs Dependent Events</div><div class="lesson-sub">Unit 5 · Lesson 4</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="39e3Uuqbh4k" data-fil-id="UoVZwUQWsHU" data-worksheet="05-05-statistics-probability-rules-models.pdf" href="https://www.youtube.com/watch?v=39e3Uuqbh4k" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Probability Models</div><div class="lesson-sub">Unit 5 · Lesson 5</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="cdG5BDqCWM4" data-fil-id="D-r173kf97g" data-worksheet="05-06-statistics-probability-two-way-tables-venn-diagrams.pdf" href="https://www.youtube.com/watch?v=cdG5BDqCWM4" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Two-Way Tables &amp; Venn Diagrams</div><div class="lesson-sub">Unit 5 · Lesson 6</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="tUOnmXfpERI" data-fil-id="8qpWv-_HC1I" data-worksheet="05-07-statistics-probability-two-way-tables-venn-diagrams-tree-diagrams.pdf" href="https://www.youtube.com/watch?v=tUOnmXfpERI" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Two-Way Tables, Venn Diagrams &amp; Tree Diagrams</div><div class="lesson-sub">Unit 5 · Lesson 7</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="JxSqveQeyYQ" data-fil-id="rZpAhmy8KFg" data-worksheet="05-08-statistics-conditional-probability.pdf" href="https://www.youtube.com/watch?v=JxSqveQeyYQ" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Conditional Probability</div><div class="lesson-sub">Unit 5 · Lesson 8</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="xH2mmlN_tTU" data-fil-id="yGSt1FijghI" data-worksheet="05-09-statistics-conditional-probability-using-tables.pdf" href="https://www.youtube.com/watch?v=xH2mmlN_tTU" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Conditional Probability — Using Tables</div><div class="lesson-sub">Unit 5 · Lesson 9</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="DZPgDCWpGxE" data-fil-id="K_mC6eQzkrI" data-worksheet="05-10-statistics-combinations.pdf" href="https://www.youtube.com/watch?v=DZPgDCWpGxE" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Combinations &amp; Counting Methods</div><div class="lesson-sub">Unit 5 · Lesson 10</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+        </div></div></div>
+      </div>
+
+      <!-- ═══ UNIT 6 ═══ -->
+      <div class="unit-block" id="unit-6">
+        <div class="unit-header" onclick="toggleUnit('unit-6')">
+          <div class="unit-num">Unit 6</div>
+          <div class="unit-info">
+            <div class="unit-title">Random Variables &amp; Distributions</div>
+            <div class="unit-meta">7 lessons · Worksheets coming soon</div>
+          </div>
+          <div class="unit-chevron">▾</div>
+        </div>
+        <div class="unit-lessons"><div class="lessons-inner"><div class="lessons-divider"></div><div class="lesson-list">
+          <a class="lesson-item" data-en-id="kbgtCljxcxA" data-fil-id="Rfo8xvyjhhU" data-worksheet="numberbender_probability_using_discrete_random_variables.pdf" href="https://www.youtube.com/watch?v=kbgtCljxcxA" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Probability of Discrete Random Variables</div><div class="lesson-sub">Unit 6 · Lesson 1</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="uzYEcIDTKQM" data-fil-id="MeC40ACXHx4" data-worksheet="numberbender_mean_and_standard_deviation_of_a_discrete_random_variable.pdf" href="https://www.youtube.com/watch?v=uzYEcIDTKQM" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Mean &amp; Standard Deviation of Discrete Random Variables</div><div class="lesson-sub">Unit 6 · Lesson 2</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="RbPVH2SRwFo" data-fil-id="a7ZkBcvczBs" data-worksheet="numberbender_binomial_probability.pdf" href="https://www.youtube.com/watch?v=RbPVH2SRwFo" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Binomial Probability</div><div class="lesson-sub">Unit 6 · Lesson 3</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="DK5SraaptvM" data-fil-id="87Ih1hTdxJc" data-worksheet="numberbender_mean_variance_standard_deviation_of_a_binomial_distribution.pdf" href="https://www.youtube.com/watch?v=DK5SraaptvM" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Mean &amp; Standard Deviation of Binomial Distribution</div><div class="lesson-sub">Unit 6 · Lesson 4</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="SD7NOs77NXw" data-fil-id="VFrfBEzO6kM" data-worksheet="numberbender_geometric_probability_distribution.pdf" href="https://www.youtube.com/watch?v=SD7NOs77NXw" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Geometric Distribution</div><div class="lesson-sub">Unit 6 · Lesson 5</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="totfWFcb8M8" data-fil-id="Vih3Kn0x8mU" data-worksheet="numberbender_uniform_distribution_continuous_random_variables.pdf" href="https://www.youtube.com/watch?v=totfWFcb8M8" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Uniform Distribution — Continuous Random Variables</div><div class="lesson-sub">Unit 6 · Lesson 6</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="Z66GkDW9l1A" data-fil-id="Ly8oz-aL3IU" data-worksheet="numberbender_sampling_distribution_mean_standard_deviation.pdf" href="https://www.youtube.com/watch?v=Z66GkDW9l1A" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Sampling Distributions</div><div class="lesson-sub">Unit 6 · Lesson 7</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+        </div></div></div>
+      </div>
+
+      <!-- ═══ UNIT 7 ═══ -->
+      <div class="unit-block" id="unit-7">
+        <div class="unit-header" onclick="toggleUnit('unit-7')">
+          <div class="unit-num">Unit 7</div>
+          <div class="unit-info">
+            <div class="unit-title">Confidence Intervals</div>
+            <div class="unit-meta">8 lessons · Worksheets coming soon</div>
+          </div>
+          <div class="unit-chevron">▾</div>
+        </div>
+        <div class="unit-lessons"><div class="lessons-inner"><div class="lessons-divider"></div><div class="lesson-list">
+          <a class="lesson-item" data-en-id="u6fUod_UZgY" data-fil-id="MGTeT-ZAL_I" data-worksheet="numberbender_confidence_intervals_estimating_the_population_mean.pdf" href="https://www.youtube.com/watch?v=u6fUod_UZgY" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Introduction to Confidence Intervals</div><div class="lesson-sub">Unit 7 · Lesson 1</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="RnN-Ze4EyHU" data-fil-id="8GuQ56pcKZs" data-worksheet="numberbender_confidence_intervals_for_population_mean.pdf" href="https://www.youtube.com/watch?v=RnN-Ze4EyHU" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Computing CI for Population Mean (Z-interval)</div><div class="lesson-sub">Unit 7 · Lesson 2</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="adnUfMk5pqg" data-fil-id="Or2-wCpX4jI" data-worksheet="numberbender_confidence_intervals_t_distribution.pdf" href="https://www.youtube.com/watch?v=adnUfMk5pqg" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">CI for Population Mean — t-Distribution</div><div class="lesson-sub">Unit 7 · Lesson 3</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="bCe8b_vGQ7A" data-fil-id="eq_SmOHzzqA" data-worksheet="numberbender_confidence_intervals_for_the_population_mean.pdf" href="https://www.youtube.com/watch?v=bCe8b_vGQ7A" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Solving Problems — CI for Population Mean</div><div class="lesson-sub">Unit 7 · Lesson 4</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="u7t_0mWlRZE" data-fil-id="XO9NtHvRQTQ" data-worksheet="numberbender_determining_minimum_sample_size_for_estimating_a_population_mean.pdf" href="https://www.youtube.com/watch?v=u7t_0mWlRZE" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Determining Sample Size for CI</div><div class="lesson-sub">Unit 7 · Lesson 5</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="kUV12zT5RUc" data-fil-id="84vkAH8-Bgg" data-worksheet="numberbender_confidence_interval_for_population_proportion.pdf" href="https://www.youtube.com/watch?v=kUV12zT5RUc" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Confidence Interval for Population Proportion</div><div class="lesson-sub">Unit 7 · Lesson 6</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="lgqPlZiRXOI" data-fil-id="z3IrVrNzH1c" data-worksheet="numberbender_confidence_intervals_for_population_proportion.pdf" href="https://www.youtube.com/watch?v=lgqPlZiRXOI" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Solving Problems — CI for Proportion</div><div class="lesson-sub">Unit 7 · Lesson 7</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="e4iw35_vUMw" data-fil-id="WSM6xzlbnPI" data-worksheet="numberbender_confidence_intervals_using_the_paired_t_design.pdf" href="https://www.youtube.com/watch?v=e4iw35_vUMw" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Matched Pairs — Confidence Interval</div><div class="lesson-sub">Unit 7 · Lesson 8</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+        </div></div></div>
+      </div>
+
+      <!-- ═══ UNIT 8 ═══ -->
+      <div class="unit-block" id="unit-8">
+        <div class="unit-header" onclick="toggleUnit('unit-8')">
+          <div class="unit-num">Unit 8</div>
+          <div class="unit-info">
+            <div class="unit-title">Hypothesis Testing</div>
+            <div class="unit-meta">9 lessons · 2 worksheets available</div>
+          </div>
+          <div class="unit-chevron">▾</div>
+        </div>
+        <div class="unit-lessons"><div class="lessons-inner"><div class="lessons-divider"></div><div class="lesson-list">
+          <a class="lesson-item" data-en-id="qMpRIpouNkE" data-fil-id="plAiYXYaqY0" data-worksheet="numberbender_hypothesis_testing_null_alternative_hypotheses.pdf" href="https://www.youtube.com/watch?v=qMpRIpouNkE" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Introduction to Hypothesis Testing</div><div class="lesson-sub">Unit 8 · Lesson 1</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="5u01m343-1M" data-fil-id="Sdw2E7Xi0Q0" data-worksheet="02-01-statistics-type-1-and-type-2-errors.pdf" href="https://www.youtube.com/watch?v=5u01m343-1M" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Type I and Type II Errors</div><div class="lesson-sub">Unit 8 · Lesson 2</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="_-ltcU7RbOU" data-fil-id="zfeY94knNNs" data-worksheet="numberbender_hypothesis_testing_for_population_mean.pdf" href="https://www.youtube.com/watch?v=_-ltcU7RbOU" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Hypothesis Testing — One Sample Mean (Z-Test)</div><div class="lesson-sub">Unit 8 · Lesson 3</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="qdM16bfNSyE" data-fil-id="nAwz1Z2sxRw" data-worksheet="numberbender_hypothesis_testing_for_one_sample_proportion.pdf" href="https://www.youtube.com/watch?v=qdM16bfNSyE" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Hypothesis Testing — One Sample Proportion</div><div class="lesson-sub">Unit 8 · Lesson 4</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="jxadMxJj8sk" data-fil-id="7k9fvQsO0BM" data-worksheet="numberbender_hypothesis_testing_for_two_sample_means.pdf" href="https://www.youtube.com/watch?v=jxadMxJj8sk" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Hypothesis Testing — Two Sample Means</div><div class="lesson-sub">Unit 8 · Lesson 5</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="wqihbWAml3Q" data-fil-id="LPmfL0BfgmE" data-worksheet="numberbender_hypothesis_testing_for_two_sample_proportions.pdf" href="https://www.youtube.com/watch?v=wqihbWAml3Q" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Hypothesis Testing — Two Sample Proportions</div><div class="lesson-sub">Unit 8 · Lesson 6</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="i8lFGYoFmsM" data-fil-id="iMZCtt4D6Vk" data-worksheet="numberbender_matched_pairs_design_paired_t_test.pdf" href="https://www.youtube.com/watch?v=i8lFGYoFmsM" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Hypothesis Testing — Matched Pairs</div><div class="lesson-sub">Unit 8 · Lesson 7</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="gKY8TqndNo4" data-fil-id="TZYd6JWBtUA" data-worksheet="numberbender_chi_square_goodness_of_fit_test.pdf" href="https://www.youtube.com/watch?v=gKY8TqndNo4" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Chi-Square Goodness of Fit</div><div class="lesson-sub">Unit 8 · Lesson 8</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="7LF4VQVltds" data-fil-id="hIiR2jpDxgU" data-worksheet="02-02-statistics-chi-square-test-independence.pdf" href="https://www.youtube.com/watch?v=7LF4VQVltds" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Chi-Square Test for Independence</div><div class="lesson-sub">Unit 8 · Lesson 9</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+        </div></div></div>
+      </div>
+
+      <!-- ═══ UNIT 9 ═══ -->
+      <div class="unit-block" id="unit-9">
+        <div class="unit-header" onclick="toggleUnit('unit-9')">
+          <div class="unit-num">Unit 9</div>
+          <div class="unit-info">
+            <div class="unit-title">AP Statistics Exam Prep — FRQ Practice</div>
+            <div class="unit-meta">6 exam walkthroughs · EN AP FRQ videos · FIL toggle shows a related concept lesson</div>
+          </div>
+          <div class="unit-chevron">▾</div>
+        </div>
+        <div class="unit-lessons"><div class="lessons-inner"><div class="lessons-divider"></div><div class="lesson-list">
+          <a class="lesson-item" data-en-id="byztwWgOrMQ" data-fil-id="yP3wIjfrxaY" data-worksheet="numberbender_linear_regression_influential_points.pdf" href="https://www.youtube.com/watch?v=byztwWgOrMQ" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">2003 Q1 Form B — Linear Regression Problem</div><div class="lesson-sub">Unit 9 · Lesson 1</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="z0yMDPJNPK8" data-fil-id="2lGEECua_8U" data-worksheet="numberbender_probability_conditional_probability.pdf" href="https://www.youtube.com/watch?v=z0yMDPJNPK8" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">2003 Q2 Form B — Probability Problem</div><div class="lesson-sub">Unit 9 · Lesson 2</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="3h1rsiVXv-8" data-fil-id="plAiYXYaqY0" data-worksheet="numberbender_matched_pairs_design_paired_t_test.pdf" href="https://www.youtube.com/watch?v=3h1rsiVXv-8" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">2003 Q3 Form B — Hypothesis Testing Problem</div><div class="lesson-sub">Unit 9 · Lesson 3</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="ruENYw_vzec" data-fil-id="_00ZzgjIE8E" data-worksheet="numberbender_designing_experiments_statistical_inference.pdf" href="https://www.youtube.com/watch?v=ruENYw_vzec" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">2003 Q4 Form B — Designing an Experiment</div><div class="lesson-sub">Unit 9 · Lesson 4</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="46db-otzMQM" data-fil-id="TZYd6JWBtUA" data-worksheet="numberbender_probability_expected_value_chi_square_goodness_of_fit.pdf" href="https://www.youtube.com/watch?v=46db-otzMQM" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">2003 Q5 Form B — Chi-Square GOF Problem</div><div class="lesson-sub">Unit 9 · Lesson 5</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="VxQ-kSvqH6M" data-fil-id="zfeY94knNNs" data-worksheet="numberbender_hypothesis_testing_for_two_sample_proportions.pdf" href="https://www.youtube.com/watch?v=VxQ-kSvqH6M" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">2004 Q1 — Hypothesis Testing Problem</div><div class="lesson-sub">Unit 9 · Lesson 6</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+        </div></div></div>
+      </div>
+
+    </div><!-- /unit-list -->
+
+    <!-- ── BOTTOM CARDS ── -->
+    <div class="bottom-grid">
+      <div class="related-card">
+        <h4>Related Subjects</h4>
+        <div class="subject-chips">
+          <a href="../../courses-v2.html" class="subject-chip all">📚 All Subjects</a>
+          <a href="../calculus/" class="subject-chip">🟣 Calculus</a>
+          <a href="../precalculus/" class="subject-chip">🔵 Precalculus</a>
+          <a href="../algebra/" class="subject-chip">🟠 Algebra</a>
+          <a href="../geometry/" class="subject-chip">🟡 Geometry</a>
+        </div>
+      </div>
+      <div class="course-callout">
+        <div>
+          <div class="cal-label">Full Course</div>
+          <div class="cal-title">Intermediate Algebra</div>
+          <div class="cal-sub">Dr. E's full structured course with lectures, assignments, and quizzes — available free.</div>
+        </div>
+        <div class="cal-links">
+          <a href="../../learn/intermediate-algebra/" class="cal-link primary">View Course →</a>
+          <a href="../../courses-v2.html" class="cal-link secondary">Explore All Subjects</a>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /container -->
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot foot-brand">
+        <div class="foot-logo">
+          <div class="foot-logo-mark">
+            <img src="../../images/numberbender-mark-teal-transparent.svg" alt="Numberbender" style="width:100%;height:100%;object-fit:contain;">
+          </div>
+          <span>Numberbender</span>
+        </div>
+        <p>Free bilingual math lessons by Dr. E — community college math professor and YouTube creator teaching in English and Filipino.</p>
+      </div>
+      <div class="foot">
+        <h4>Subjects</h4>
+        <a href="../algebra/">Algebra</a>
+        <a href="../statistics/">Statistics</a>
+        <a href="../calculus/">Calculus</a>
+        <a href="../precalculus/">Precalculus</a>
+      </div>
+      <div class="foot">
+        <h4>Full Courses</h4>
+        <a href="../../learn/elementary-algebra/">Elementary Algebra</a>
+        <a href="../../learn/intermediate-algebra/">Intermediate Algebra</a>
+      </div>
+      <div class="foot">
+        <h4>Connect</h4>
+        <a href="../../about.html">About Dr. E</a>
+        <a href="../../math-worksheets.html">Worksheets</a>
+        <a href="../../contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Numberbender · Dr. Peter Esperanza</span>
+      <span>Free bilingual math — English &amp; Filipino 🇵🇭</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ── VIDEO MODAL ── -->
+<div id="video-modal" class="modal-overlay" onclick="modalBackdropClick(event)" role="dialog" aria-modal="true" aria-labelledby="modal-lesson-title">
+  <div class="modal-box">
+    <div class="modal-header">
+      <div>
+        <div class="modal-lesson-title" id="modal-lesson-title"></div>
+        <div class="modal-lesson-sub" id="modal-lesson-sub"></div>
+      </div>
+      <button class="modal-close" onclick="closeModal()" aria-label="Close video">✕</button>
+    </div>
+    <div class="modal-video-wrap">
+      <iframe id="modal-iframe" src="" allow="autoplay; accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="modal-footer">
+      <div class="ws-block" id="modal-ws-block" style="display:none;">
+        <div class="ws-label">📄 Practice Worksheet</div>
+        <div class="modal-btn-row">
+          <button id="modal-view-btn" onclick="openWsFromVideo()" class="modal-btn view">👁 View PDF</button>
+          <a id="modal-dl-btn" href="#" target="_blank" rel="noopener" class="modal-btn dl">⬇ Download</a>
+        </div>
+      </div>
+      <div class="modal-btn-row" style="margin-left:auto;">
+        <a id="modal-yt-btn" href="#" target="_blank" rel="noopener" class="modal-btn yt">↗ Open on YouTube</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── WORKSHEET PREVIEW MODAL ── -->
+<div id="ws-modal" class="modal-overlay" onclick="wsBackdropClick(event)" role="dialog" aria-modal="true" aria-labelledby="ws-modal-title">
+  <div class="modal-box">
+    <div class="modal-header">
+      <div>
+        <div class="modal-lesson-title" id="ws-modal-title">Practice Worksheet</div>
+        <div class="modal-lesson-sub" id="ws-modal-sub"></div>
+      </div>
+      <div class="modal-btn-row" style="align-items:center;gap:8px;">
+        <a id="ws-dl-link" href="#" target="_blank" rel="noopener" class="modal-btn yt" style="font-size:0.8rem;padding:6px 14px;">↗ Open to Download</a>
+        <button class="modal-close" onclick="closeWsModal()" aria-label="Close worksheet">✕</button>
+      </div>
+    </div>
+    <div class="ws-iframe-wrap">
+      <iframe id="ws-iframe" src="" title="Worksheet preview"></iframe>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ── UNIT ACCORDION ── */
+function toggleUnit(id) {
+  document.getElementById(id).classList.toggle('open');
+}
+
+/* ── LANGUAGE TOGGLE ── */
+function setLang(lang) {
+  document.body.setAttribute('data-lang', lang);
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-fil').classList.toggle('active', lang === 'fil');
+  document.getElementById('lang-label').textContent = lang === 'en' ? 'English' : 'Filipino 🇵🇭';
+  document.querySelectorAll('.lesson-item').forEach(function(item) {
+    var enId = item.dataset.enId || '';
+    var filId = item.dataset.filId || '';
+    var activeId = lang === 'en' ? enId : filId;
+    if (activeId) {
+      item.href = 'https://www.youtube.com/watch?v=' + activeId;
+      item.classList.remove('no-video');
+    } else {
+      item.href = '#';
+      item.classList.add('no-video');
+    }
+  });
+}
+
+/* ── INJECT WORKSHEET BUTTONS ── */
+document.querySelectorAll('.lesson-item[data-worksheet]').forEach(function(item) {
+  var ws   = item.dataset.worksheet;
+  var href = ws.startsWith('../../') ? ws : '../../worksheets/statistics/' + ws;
+  var badge = item.querySelector('.lesson-badge');
+  var right = document.createElement('div');
+  right.className = 'lesson-right';
+  badge.parentNode.insertBefore(right, badge);
+  right.appendChild(badge);
+  var wsRow = document.createElement('div');
+  wsRow.className = 'lesson-ws-row';
+  wsRow.innerHTML =
+    '<span class="lesson-ws-btn ws-view" data-href="' + href + '" data-title="' + item.querySelector('.lesson-title').textContent + '" data-sub="' + item.querySelector('.lesson-sub').textContent + '" role="button" tabindex="0">👁 View</span>' +
+    '<span class="lesson-ws-btn ws-dl"   data-href="' + href + '" role="button" tabindex="0">⬇ Download</span>';
+  right.appendChild(wsRow);
+});
+
+/* ── VIDEO MODAL ── */
+var _wsHref = '';
+
+function openModal(item) {
+  var lang = document.body.dataset.lang || 'en';
+  var enId  = item.dataset.enId  || '';
+  var filId = item.dataset.filId || '';
+  var activeId = lang === 'en' ? enId : filId;
+  if (!activeId) return;
+  var title     = item.querySelector('.lesson-title').textContent;
+  var sub       = item.querySelector('.lesson-sub').textContent;
+  var worksheet = item.dataset.worksheet || '';
+  var ytUrl     = 'https://www.youtube.com/watch?v=' + activeId;
+  document.getElementById('modal-lesson-title').textContent = title;
+  document.getElementById('modal-lesson-sub').textContent   = sub;
+  document.getElementById('modal-iframe').src = 'https://www.youtube.com/embed/' + activeId + '?autoplay=1&rel=0';
+  document.getElementById('modal-yt-btn').href = ytUrl;
+  var wsBlock = document.getElementById('modal-ws-block');
+  if (worksheet) {
+    var wsBase = '../../worksheets/statistics/';
+    _wsHref = worksheet.startsWith('../../') ? worksheet : wsBase + worksheet;
+    document.getElementById('modal-dl-btn').href = _wsHref;
+    wsBlock.style.display = 'block';
+  } else {
+    _wsHref = '';
+    wsBlock.style.display = 'none';
+  }
+  document.getElementById('video-modal').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('modal-iframe').src = '';
+  document.getElementById('video-modal').classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+function modalBackdropClick(e) {
+  if (e.target === document.getElementById('video-modal')) closeModal();
+}
+
+function openWsFromVideo() {
+  if (!_wsHref) return;
+  var title = document.getElementById('modal-lesson-title').textContent;
+  var sub   = document.getElementById('modal-lesson-sub').textContent;
+  closeModal();
+  openWsModal(_wsHref, title, sub);
+}
+
+/* ── WORKSHEET PREVIEW MODAL ── */
+function openWsModal(href, title, sub) {
+  document.getElementById('ws-modal-title').textContent = title || 'Practice Worksheet';
+  document.getElementById('ws-modal-sub').textContent   = sub ? sub + ' · Worksheet' : 'Practice Worksheet';
+  document.getElementById('ws-iframe').src = href;
+  document.getElementById('ws-dl-link').href = href;
+  document.getElementById('ws-modal').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeWsModal() {
+  document.getElementById('ws-iframe').src = '';
+  document.getElementById('ws-modal').classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+function wsBackdropClick(e) {
+  if (e.target === document.getElementById('ws-modal')) closeWsModal();
+}
+
+/* ── CLICK HANDLER ── */
+document.addEventListener('click', function(e) {
+  var wsBtn = e.target.closest('.lesson-ws-btn');
+  if (wsBtn) {
+    e.stopPropagation();
+    e.preventDefault();
+    var href  = wsBtn.dataset.href;
+    var title = wsBtn.dataset.title || '';
+    var sub   = wsBtn.dataset.sub   || '';
+    if (wsBtn.classList.contains('ws-dl')) {
+      window.open(href, '_blank', 'noopener noreferrer');
+    } else {
+      openWsModal(href, title, sub);
+    }
+    return;
+  }
+  var item = e.target.closest('.lesson-item');
+  if (!item) return;
+  e.preventDefault();
+  if (item.classList.contains('no-video')) return;
+  openModal(item);
+});
+
+/* ESC closes whichever modal is open */
+document.addEventListener('keydown', function(e) {
+  if (e.key !== 'Escape') return;
+  if (document.getElementById('ws-modal').classList.contains('active')) closeWsModal();
+  else if (document.getElementById('video-modal').classList.contains('active')) closeModal();
+});
+</script>
+</body>
+</html>

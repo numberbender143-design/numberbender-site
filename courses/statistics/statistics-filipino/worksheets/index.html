@@ -200,8 +200,8 @@
         <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">For Students <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
           <a href="../../../../start-here.html">🎁 Free Starter Lesson</a>
-          <a href="../../../../find-your-course.html">🧭 Find My Course</a>
-          <a href="../../../../courses.html">📚 All Courses</a>
+          <a href="../../../../find-your-course.html">🧭 Where Do I Start?</a>
+          <a href="../../../../courses.html">📚 Explore All Subjects</a>
           <a href="../../../../math-worksheets.html">📝 Free Worksheets</a>
           <a href="../../../../for-filipino-students.html">🇵🇭 Para sa Filipino Students</a>
         </div>
@@ -212,6 +212,7 @@
           <a href="../../../../for-teachers.html">🏫 For Teachers Hub</a>
           <a href="../../../../teach-it-like-you-stream-it.html">🎬 Teach It Like You Stream It</a>
           <a href="../../../../teacher-resources.html">📦 Teacher Resources</a>
+          <a href="../../../../teach-the-math.html">🎓 Teach the Math</a>
           <a href="../../../../math-worksheets.html">📄 Printable Worksheets</a>
         </div>
       </div>
@@ -275,7 +276,7 @@
   <h3>Identifying Population and Sample</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/statistics/01-01-statistics-identifying-population-and-sample.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="01-01-statistics-identifying-population-and-sample.pdf" data-action="open"
        aria-label="View Identifying Population and Sample worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/statistics/01-01-statistics-identifying-population-and-sample.pdf" download
@@ -295,7 +296,7 @@
   <h3>Population, Sample, Parameters, and Statistics</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/statistics/01-02-statistics-population-sample-parameters-statistics.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="01-02-statistics-population-sample-parameters-statistics.pdf" data-action="open"
        aria-label="View Population, Sample, Parameters, and Statistics worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/statistics/01-02-statistics-population-sample-parameters-statistics.pdf" download
@@ -315,7 +316,7 @@
   <h3>Population, Sample, and Sampling Techniques</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/statistics/01-03-statistics-population-sample-sampling-techniques.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="01-03-statistics-population-sample-sampling-techniques.pdf" data-action="open"
        aria-label="View Population, Sample, and Sampling Techniques worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/statistics/01-03-statistics-population-sample-sampling-techniques.pdf" download
@@ -336,7 +337,7 @@
   <h3>Categorical vs. Quantitative Variables</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/statistics/01-04-statistics-categorical-vs-quantitative-variables.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="01-04-statistics-categorical-vs-quantitative-variables.pdf" data-action="open"
        aria-label="View Categorical vs. Quantitative Variables worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/statistics/01-04-statistics-categorical-vs-quantitative-variables.pdf" download
@@ -357,7 +358,7 @@
   <h3>Simple Random Sampling with a Random Digit Table</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/statistics/01-05-statistics-simple-random-sampling-random-digit-table.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="01-05-statistics-simple-random-sampling-random-digit-table.pdf" data-action="open"
        aria-label="View Simple Random Sampling with a Random Digit Table worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/statistics/01-05-statistics-simple-random-sampling-random-digit-table.pdf" download
@@ -377,7 +378,7 @@
   <h3>Simple Random Sampling with Table D</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/statistics/01-06-statistics-simple-random-sampling-with-table-d.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="01-06-statistics-simple-random-sampling-with-table-d.pdf" data-action="open"
        aria-label="View Simple Random Sampling with Table D worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/statistics/01-06-statistics-simple-random-sampling-with-table-d.pdf" download
@@ -398,7 +399,7 @@
   <h3>Simulating Experiments with a Random Digit Table</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/statistics/01-07-statistics-simulating-experiments-random-digit-table.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="01-07-statistics-simulating-experiments-random-digit-table.pdf" data-action="open"
        aria-label="View Simulating Experiments with a Random Digit Table worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/statistics/01-07-statistics-simulating-experiments-random-digit-table.pdf" download
@@ -418,7 +419,7 @@
   <h3>Simulation Using a Random Number Table</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/statistics/01-08-statistics-simulation-using-random-number-table.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="01-08-statistics-simulation-using-random-number-table.pdf" data-action="open"
        aria-label="View Simulation Using a Random Number Table worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/statistics/01-08-statistics-simulation-using-random-number-table.pdf" download
@@ -439,7 +440,7 @@
   <h3>Selection Bias, Lurking, and Confounding Variables</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/statistics/01-09-statistics-selection-bias-lurking-confounding-variables.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="01-09-statistics-selection-bias-lurking-confounding-variables.pdf" data-action="open"
        aria-label="View Selection Bias, Lurking, and Confounding Variables worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/statistics/01-09-statistics-selection-bias-lurking-confounding-variables.pdf" download
@@ -460,7 +461,7 @@
   <h3>Dot Plots and Univariate Data</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/statistics/02-01-statistics-dot-plots-univariate-data.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="02-01-statistics-dot-plots-univariate-data.pdf" data-action="open"
        aria-label="View Dot Plots and Univariate Data worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/statistics/02-01-statistics-dot-plots-univariate-data.pdf" download
@@ -480,7 +481,7 @@
   <h3>Analyzing Univariate Data — Dot Plots and Histograms</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/statistics/02-02-statistics-analyzing-univariate-data-dot-plots-histograms.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="02-02-statistics-analyzing-univariate-data-dot-plots-histograms.pdf" data-action="open"
        aria-label="View Analyzing Univariate Data — Dot Plots and Histograms worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/statistics/02-02-statistics-analyzing-univariate-data-dot-plots-histograms.pdf" download
@@ -500,7 +501,7 @@
   <h3>Stem-and-Leaf Plots</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/statistics/02-03-statistics-stem-and-leaf-plots.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="02-03-statistics-stem-and-leaf-plots.pdf" data-action="open"
        aria-label="View Stem-and-Leaf Plots worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/statistics/02-03-statistics-stem-and-leaf-plots.pdf" download
@@ -521,7 +522,7 @@
   <h3>Mean vs. Median — Measures of Center</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/statistics/02-04-statistics-mean-vs-median-measures-of-center.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="02-04-statistics-mean-vs-median-measures-of-center.pdf" data-action="open"
        aria-label="View Mean vs. Median — Measures of Center worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/statistics/02-04-statistics-mean-vs-median-measures-of-center.pdf" download
@@ -542,7 +543,7 @@
   <h3>Percentile Rank from Raw Data</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/statistics/02-05-statistics-percentile-rank-from-raw-data.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="02-05-statistics-percentile-rank-from-raw-data.pdf" data-action="open"
        aria-label="View Percentile Rank from Raw Data worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/statistics/02-05-statistics-percentile-rank-from-raw-data.pdf" download
@@ -562,7 +563,7 @@
   <h3>Percentile Rank — Raw Data and Normal Distributions</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/statistics/02-06-statistics-percentile-rank-raw-data-and-normal-distributions.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="02-06-statistics-percentile-rank-raw-data-and-normal-distributions.pdf" data-action="open"
        aria-label="View Percentile Rank — Raw Data and Normal Distributions worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/statistics/02-06-statistics-percentile-rank-raw-data-and-normal-distributions.pdf" download
@@ -582,7 +583,7 @@
   <h3>Percentile Rank from Raw Data and Normal Distributions</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/statistics/02-07-statistics-percentile-rank-raw-data-normal-distributions.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="02-07-statistics-percentile-rank-raw-data-normal-distributions.pdf" data-action="open"
        aria-label="View Percentile Rank from Raw Data and Normal Distributions worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/statistics/02-07-statistics-percentile-rank-raw-data-normal-distributions.pdf" download
@@ -603,7 +604,7 @@
   <h3>Quartiles and Box-and-Whisker Plots</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/statistics/02-08-statistics-quartiles-box-and-whisker-plots.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="02-08-statistics-quartiles-box-and-whisker-plots.pdf" data-action="open"
        aria-label="View Quartiles and Box-and-Whisker Plots worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/statistics/02-08-statistics-quartiles-box-and-whisker-plots.pdf" download
@@ -624,7 +625,7 @@
   <h3>Summation and Sigma Notation</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/statistics/02-09-statistics-summation-sigma-notation.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="02-09-statistics-summation-sigma-notation.pdf" data-action="open"
        aria-label="View Summation and Sigma Notation worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/statistics/02-09-statistics-summation-sigma-notation.pdf" download
@@ -645,7 +646,7 @@
   <h3>Z-Scores and Standard Normal Distribution</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/statistics/03-01-statistics-z-scores-and-standard-normal-distribution.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="03-01-statistics-z-scores-and-standard-normal-distribution.pdf" data-action="open"
        aria-label="View Z-Scores and Standard Normal Distribution worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/statistics/03-01-statistics-z-scores-and-standard-normal-distribution.pdf" download
@@ -666,7 +667,7 @@
   <h3>Empirical Rule (68-95-99.7)</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/statistics/03-02-statistics-empirical-rule-68-95-99-7.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="03-02-statistics-empirical-rule-68-95-99-7.pdf" data-action="open"
        aria-label="View Empirical Rule (68-95-99.7) worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/statistics/03-02-statistics-empirical-rule-68-95-99-7.pdf" download
@@ -686,7 +687,7 @@
   <h3>Normal Distribution Probability</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/statistics/03-03-statistics-normal-distribution-probability.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="03-03-statistics-normal-distribution-probability.pdf" data-action="open"
        aria-label="View Normal Distribution Probability worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/statistics/03-03-statistics-normal-distribution-probability.pdf" download
@@ -706,7 +707,7 @@
   <h3>Normal Distribution Sampling Using Z-Table</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/statistics/03-04-statistics-normal-distribution-sampling-using-z-table.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="03-04-statistics-normal-distribution-sampling-using-z-table.pdf" data-action="open"
        aria-label="View Normal Distribution Sampling Using Z-Table worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/statistics/03-04-statistics-normal-distribution-sampling-using-z-table.pdf" download
@@ -727,7 +728,7 @@
   <h3>Discrete and Continuous Random Variables and Normal Distribution</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/statistics/03-05-statistics-discrete-continuous-random-variables-normal-distribution.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="03-05-statistics-discrete-continuous-random-variables-normal-distribution.pdf" data-action="open"
        aria-label="View Discrete and Continuous Random Variables and Normal Distribution worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/statistics/03-05-statistics-discrete-continuous-random-variables-normal-distribution.pdf" download
@@ -748,7 +749,7 @@
   <h3>Explanatory and Response Variables — Scatter Plots</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/statistics/04-01-statistics-explanatory-response-variables-scatter-plots.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="04-01-statistics-explanatory-response-variables-scatter-plots.pdf" data-action="open"
        aria-label="View Explanatory and Response Variables — Scatter Plots worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/statistics/04-01-statistics-explanatory-response-variables-scatter-plots.pdf" download
@@ -769,7 +770,7 @@
   <h3>Correlation and Scatter Plots</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/statistics/04-02-statistics-correlation-and-scatter-plots.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="04-02-statistics-correlation-and-scatter-plots.pdf" data-action="open"
        aria-label="View Correlation and Scatter Plots worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/statistics/04-02-statistics-correlation-and-scatter-plots.pdf" download
@@ -789,7 +790,7 @@
   <h3>Interpreting Scatter Plots Using FODS</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/statistics/04-03-statistics-interpreting-scatter-plots-using-fods.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="04-03-statistics-interpreting-scatter-plots-using-fods.pdf" data-action="open"
        aria-label="View Interpreting Scatter Plots Using FODS worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/statistics/04-03-statistics-interpreting-scatter-plots-using-fods.pdf" download
@@ -810,7 +811,7 @@
   <h3>Least Squares Regression Line</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/statistics/04-04-statistics-least-squares-regression-line.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="04-04-statistics-least-squares-regression-line.pdf" data-action="open"
        aria-label="View Least Squares Regression Line worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/statistics/04-04-statistics-least-squares-regression-line.pdf" download
@@ -830,7 +831,7 @@
   <h3>LSRL from Numerical Summary and Computer Output</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/statistics/04-05-statistics-lsrl-from-numerical-summary-computer-output.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="04-05-statistics-lsrl-from-numerical-summary-computer-output.pdf" data-action="open"
        aria-label="View LSRL from Numerical Summary and Computer Output worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/statistics/04-05-statistics-lsrl-from-numerical-summary-computer-output.pdf" download
@@ -850,7 +851,7 @@
   <h3>LSRL Predictions</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/statistics/04-06-statistics-lsrl-predictions.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="04-06-statistics-lsrl-predictions.pdf" data-action="open"
        aria-label="View LSRL Predictions worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/statistics/04-06-statistics-lsrl-predictions.pdf" download
@@ -871,7 +872,7 @@
   <h3>Linear Transformation on Bivariate Data</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/statistics/04-07-statistics-linear-transformation-on-bivariate-data.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="04-07-statistics-linear-transformation-on-bivariate-data.pdf" data-action="open"
        aria-label="View Linear Transformation on Bivariate Data worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/statistics/04-07-statistics-linear-transformation-on-bivariate-data.pdf" download
@@ -891,7 +892,7 @@
   <h3>Transforming Data to Achieve Linearity</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/statistics/04-08-statistics-transforming-data-to-achieve-linearity.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="04-08-statistics-transforming-data-to-achieve-linearity.pdf" data-action="open"
        aria-label="View Transforming Data to Achieve Linearity worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/statistics/04-08-statistics-transforming-data-to-achieve-linearity.pdf" download
@@ -912,7 +913,7 @@
   <h3>Probability Introduction — Sample Spaces</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/statistics/05-01-statistics-probability-introduction-sample-spaces.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="05-01-statistics-probability-introduction-sample-spaces.pdf" data-action="open"
        aria-label="View Probability Introduction — Sample Spaces worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/statistics/05-01-statistics-probability-introduction-sample-spaces.pdf" download
@@ -932,7 +933,7 @@
   <h3>Probability Introduction — Rules and Events</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/statistics/05-02-statistics-probability-introduction-rules-events.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="05-02-statistics-probability-introduction-rules-events.pdf" data-action="open"
        aria-label="View Probability Introduction — Rules and Events worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/statistics/05-02-statistics-probability-introduction-rules-events.pdf" download
@@ -953,7 +954,7 @@
   <h3>Classical Probability</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/statistics/05-03-statistics-classical-probability.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="05-03-statistics-classical-probability.pdf" data-action="open"
        aria-label="View Classical Probability worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/statistics/05-03-statistics-classical-probability.pdf" download
@@ -973,7 +974,7 @@
   <h3>Probability — Two-Way Tables and Venn Diagrams</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/statistics/05-06-statistics-probability-two-way-tables-venn-diagrams.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="05-06-statistics-probability-two-way-tables-venn-diagrams.pdf" data-action="open"
        aria-label="View Probability — Two-Way Tables and Venn Diagrams worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/statistics/05-06-statistics-probability-two-way-tables-venn-diagrams.pdf" download
@@ -993,7 +994,7 @@
   <h3>Probability — Two-Way Tables, Venn Diagrams, and Tree Diagrams</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/statistics/05-07-statistics-probability-two-way-tables-venn-diagrams-tree-diagrams.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="05-07-statistics-probability-two-way-tables-venn-diagrams-tree-diagrams.pdf" data-action="open"
        aria-label="View Probability — Two-Way Tables, Venn Diagrams, and Tree Diagrams worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/statistics/05-07-statistics-probability-two-way-tables-venn-diagrams-tree-diagrams.pdf" download
@@ -1014,7 +1015,7 @@
   <h3>Probability Rules — Events and Operations</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/statistics/05-04-statistics-probability-rules-events-operations.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="05-04-statistics-probability-rules-events-operations.pdf" data-action="open"
        aria-label="View Probability Rules — Events and Operations worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/statistics/05-04-statistics-probability-rules-events-operations.pdf" download
@@ -1034,7 +1035,7 @@
   <h3>Probability Rules and Models</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/statistics/05-05-statistics-probability-rules-models.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="05-05-statistics-probability-rules-models.pdf" data-action="open"
        aria-label="View Probability Rules and Models worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/statistics/05-05-statistics-probability-rules-models.pdf" download
@@ -1055,7 +1056,7 @@
   <h3>Conditional Probability</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/statistics/05-08-statistics-conditional-probability.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="05-08-statistics-conditional-probability.pdf" data-action="open"
        aria-label="View Conditional Probability worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/statistics/05-08-statistics-conditional-probability.pdf" download
@@ -1075,7 +1076,7 @@
   <h3>Conditional Probability Using Tables</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/statistics/05-09-statistics-conditional-probability-using-tables.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="05-09-statistics-conditional-probability-using-tables.pdf" data-action="open"
        aria-label="View Conditional Probability Using Tables worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/statistics/05-09-statistics-conditional-probability-using-tables.pdf" download
@@ -1096,7 +1097,7 @@
   <h3>Combinations</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/statistics/05-10-statistics-combinations.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="05-10-statistics-combinations.pdf" data-action="open"
        aria-label="View Combinations worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/statistics/05-10-statistics-combinations.pdf" download
@@ -1132,7 +1133,7 @@
       </div>
       <div class="foot">
         <h4>Students</h4>
-        <a href="../../../../courses.html">All Courses</a>
+        <a href="../../../../courses.html">Explore All Subjects</a>
         <a href="../../../../courses.html#algebra-card">Algebra</a>
         <a href="../../../../courses.html#statistics-card">Statistics</a>
         <a href="../../../../courses.html#calculus-card">Calculus</a>
@@ -1140,6 +1141,7 @@
       <div class="foot">
         <h4>Educators</h4>
         <a href="../../../../teach-it-like-you-stream-it.html">Teach It Like You Stream It</a>
+        <a href="../../../../teach-the-math.html">Teach the Math</a>
         <a href="../../../../teacher-resources.html">Teacher Resources</a>
         <a href="../../../../ap-calculus-frq-books.html">AP Calculus FRQ Books</a>
         <a href="../../../../speaking.html">Speaking</a>
