@@ -108,16 +108,22 @@
   .course-card.coming{opacity:0.65;}
   .course-card.coming:hover{box-shadow:none;transform:none;}
   .course-card-top{padding:24px 24px 20px;background:linear-gradient(135deg,#085041,#1F6F6B);color:white;position:relative;}
+  .course-card-top.blue-top{background:linear-gradient(135deg,#1d4ed8,#1e40af,#2563EB);}
+  .course-card-top.blue-top .badge{color:#BFDBFE;}
+  .course-card-top.purple-top{background:linear-gradient(135deg,#4c1d95,#5b21b6,#7c3aed);}
+  .course-card-top.purple-top .badge{color:#DDD6FE;}
   .course-card-top .badge{font-size:0.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#9FE1CB;margin-bottom:10px;display:block;}
   .course-card-top h3{font-size:1.2rem;font-weight:800;margin-bottom:4px;}
   .course-card-top .tagline{font-size:0.85rem;color:rgba(255,255,255,0.75);}
   .course-card-top .coming-ribbon{position:absolute;top:16px;right:16px;background:rgba(255,255,255,0.15);color:rgba(255,255,255,0.8);font-size:0.72rem;font-weight:700;padding:4px 10px;border-radius:999px;letter-spacing:.06em;text-transform:uppercase;}
   .course-card-body{padding:20px 24px;}
   .course-stat-row{display:flex;gap:20px;margin-bottom:16px;}
-  .course-stat .val{font-size:1.2rem;font-weight:800;color:var(--navy);}
+.course-stat .val{font-size:1.2rem;font-weight:800;color:var(--navy);}
   .course-stat .lbl{font-size:0.75rem;color:var(--muted);font-weight:500;}
   .course-cta{display:block;text-align:center;padding:11px;background:var(--teal-dark);color:white;border-radius:10px;font-weight:700;font-size:0.9rem;transition:background .15s;text-decoration:none;}
   .course-cta:hover{background:var(--teal);text-decoration:none;color:white;}
+  .course-cta.blue{background:#1e40af;}.course-cta.blue:hover{background:#2563EB;}
+  .course-cta.purple{background:#5b21b6;}.course-cta.purple:hover{background:#7C3AED;}
   .course-cta.disabled{background:var(--border);color:var(--muted);cursor:not-allowed;pointer-events:none;}
 
   /* FOOTER */
@@ -372,7 +378,7 @@
 
       <!-- Elementary Algebra -->
       <div class="course-card">
-        <div class="course-card-top">
+        <div class="course-card-top blue-top">
           <span class="badge">📚 15-Week Course</span>
           <h3>Elementary Algebra</h3>
           <div class="tagline">Algebra for Future STEM Students</div>
@@ -396,13 +402,13 @@
               <div class="lbl">always</div>
             </div>
           </div>
-          <a href="learn/elementary-algebra/" class="course-cta">Start Course →</a>
+          <a href="learn/elementary-algebra/" class="course-cta blue">Start Course →</a>
         </div>
       </div>
 
       <!-- Intermediate Algebra -->
       <div class="course-card">
-        <div class="course-card-top">
+        <div class="course-card-top purple-top">
           <span class="badge">📚 15-Week Course</span>
           <h3>Intermediate Algebra</h3>
           <div class="tagline">The Bridge to Precalculus &amp; STEM</div>
@@ -426,7 +432,7 @@
               <div class="lbl">always</div>
             </div>
           </div>
-          <a href="learn/intermediate-algebra/" class="course-cta">Start Course →</a>
+          <a href="learn/intermediate-algebra/" class="course-cta purple">Start Course →</a>
         </div>
       </div>
 
