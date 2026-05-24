@@ -1178,6 +1178,13 @@ document.addEventListener('click',function(e){
 (function(){
   var p = new URLSearchParams(window.location.search);
   if (p.get('lang') === 'fil') setLang('fil');
+  // Open + scroll to a unit via URL hash (e.g. #unit-8)
+  var hash = window.location.hash.replace('#','');
+  if (hash && document.getElementById(hash)) {
+    var block = document.getElementById(hash);
+    if (!block.classList.contains('open')) block.classList.add('open');
+    setTimeout(function(){ block.scrollIntoView({behavior:'smooth',block:'start'}); }, 250);
+  }
 })();
 </script>
 </body>
