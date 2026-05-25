@@ -360,41 +360,37 @@
     <button class="menu-toggle" aria-label="Toggle menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
     <nav class="nav-links" id="navlinks">
       <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">For Students <span class="caret" aria-hidden="true">▾</span></button>
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Learn <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
-          <a href="start-here.html">🎁 Free Starter Lesson</a>
-          <a href="find-your-course.html">🧭 Where Do I Start?</a>
-          <a href="courses-v2.html">📚 Explore All Subjects</a>
-          <a href="math-worksheets.html">📝 Free Worksheets</a>
-          <a href="for-filipino-students.html">🇵🇭 Para sa Filipino Students</a>
+          <a href="/start-here">🎁 Free Starter Lesson</a>
+          <a href="/find-your-course">🧭 Find My Course</a>
+          <a href="/courses">📚 All Courses &amp; Subjects</a>
+          <a href="/math-worksheets">📝 Free Worksheets</a>
+          <a href="/for-filipino-students">🇵🇭 Para sa Filipino Students</a>
         </div>
       </div>
       <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">For Educators <span class="caret" aria-hidden="true">▾</span></button>
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Teach <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
-          <a href="teach-it-like-you-stream-it.html">🎬 Teach It Like You Stream It</a>
-          <a href="teacher-resources.html">📦 Teacher Resources</a>
-          <a href="teach-the-math.html">🎓 Teach the Math</a>
-          <a href="math-worksheets.html">📄 Printable Worksheets</a>
-          <a href="for-teachers.html">🏫 For Teachers Hub</a>
+          <a href="/for-teachers">🏫 For Teachers Hub</a>
+          <a href="/teach-the-math">🎓 Teach the Math</a>
+          <a href="/teach-it-like-you-stream-it">🎬 Teach It Like You Stream It</a>
+          <a href="/teacher-resources">📦 Teacher Resources</a>
+          <a href="/math-worksheets">📄 Printable Worksheets</a>
+          <a href="/courses">📚 Lesson &amp; Course Library</a>
         </div>
       </div>
       <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">About Dr. E <span class="caret" aria-hidden="true">▾</span></button>
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">About <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
-          <a href="about.html">👨‍🏫 About Dr. E</a>
-          <a href="speaking.html">🎤 Speaking</a>
-          <a href="press.html">📰 Press &amp; Media</a>
+          <a href="/about">👨‍🏫 About Dr. E</a>
+          <a href="/speaking">🎤 Speaking</a>
+          <a href="/press">📰 Press &amp; Media</a>
+          <a href="/blog">✍️ Blog</a>
+          <a href="/speaking-archive">📅 Past Engagements</a>
         </div>
       </div>
-      <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Blog <span class="caret" aria-hidden="true">▾</span></button>
-        <div class="dropdown-menu">
-          <a href="blog.html">✍️ Blog Posts</a>
-          <a href="speaking-archive.html">📅 Past Engagements</a>
-        </div>
-      </div>
-      <a href="contact.html" class="nav-cta">Contact</a>
+      <a href="/contact" class="nav-cta">Contact</a>
     </nav>
   </div>
 </header>
@@ -558,6 +554,123 @@
   </div>
 </section>
 
+<!-- ========== TEACH THE MATH — MODEL LESSONS PILLAR ========== -->
+<style>
+  #teach-the-math-feature{background:var(--bg,#F8FAFC);}
+  .ttm-band{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;
+    background:linear-gradient(135deg,#0F172A 0%,#1F6F6B 100%);border-radius:24px;padding:44px 48px;color:#fff;}
+  .ttm-eyebrow{display:inline-block;background:rgba(255,255,255,.15);color:#fff;font-weight:700;
+    font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;padding:5px 14px;border-radius:999px;margin-bottom:16px;}
+  .ttm-band h2{color:#fff;margin:0 0 14px;font-size:1.7rem;line-height:1.2;}
+  .ttm-band p{color:rgba(255,255,255,.88);margin:0 0 22px;line-height:1.6;font-size:1.02rem;}
+  .ttm-subjects{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 26px;}
+  .ttm-chip{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:999px;
+    padding:6px 14px;font-size:.85rem;font-weight:600;}
+  .ttm-cta{display:inline-flex;align-items:center;gap:8px;background:#FACC15;color:#0F172A;font-weight:800;
+    text-decoration:none;padding:14px 26px;border-radius:12px;transition:transform .18s ease;}
+  .ttm-cta:hover{transform:translateY(-2px);}
+  .ttm-howto{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:18px;padding:26px 28px;}
+  .ttm-howto h3{color:#fff;font-size:1rem;margin:0 0 14px;}
+  .ttm-step{display:flex;gap:12px;margin-bottom:14px;align-items:flex-start;}
+  .ttm-num{flex-shrink:0;width:26px;height:26px;border-radius:50%;background:#FACC15;color:#0F172A;
+    font-weight:800;font-size:.82rem;display:flex;align-items:center;justify-content:center;}
+  .ttm-step span{color:rgba(255,255,255,.9);font-size:.92rem;line-height:1.45;}
+  @media(max-width:768px){.ttm-band{grid-template-columns:1fr;padding:32px 24px;}}
+</style>
+<section id="teach-the-math-feature">
+  <div class="container">
+    <div class="ttm-band">
+      <div>
+        <span class="ttm-eyebrow">🎓 Model Lessons for Teachers</span>
+        <h2>Teach the Math — watch Dr. E teach it first.</h2>
+        <p>Not lessons for your students — lessons for <em>you</em>. Watch how Dr. E actually teaches each
+        topic in a real classroom: the pacing, the board work, the questions, the moves that land. The clearest
+        way to flip a unit is to see a master teacher do it first — in English and Filipino.</p>
+        <div class="ttm-subjects">
+          <span class="ttm-chip">Algebra</span><span class="ttm-chip">Calculus</span>
+          <span class="ttm-chip">Trigonometry</span><span class="ttm-chip">Statistics</span>
+          <span class="ttm-chip">Precalculus</span><span class="ttm-chip">Linear Algebra</span>
+        </div>
+        <a class="ttm-cta" href="teach-the-math.html">Explore the model lessons →</a>
+      </div>
+      <div class="ttm-howto">
+        <h3>How teachers use it</h3>
+        <div class="ttm-step"><span class="ttm-num">1</span><span>Pick the topic you're about to teach.</span></div>
+        <div class="ttm-step"><span class="ttm-num">2</span><span>Watch how Dr. E sequences and explains it.</span></div>
+        <div class="ttm-step"><span class="ttm-num">3</span><span>Borrow the moves — or assign the video as the pre-class flip.</span></div>
+        <div class="ttm-step"><span class="ttm-num">4</span><span>Pair it with the matching free worksheet.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== COMPLETE FLIPPED CLASSROOM LIBRARY ========== -->
+<section class="resources" id="flipped-library" style="background:var(--surface,#fff);">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-eyebrow">The complete cluster</div>
+      <h2>The Flipped Classroom Library</h2>
+      <p>Everything Dr. E has published on flipping a math classroom — research, real-world guides, and the mistakes to skip — in one place.</p>
+    </div>
+    <div class="res-grid">
+      <div class="res-card">
+        <div class="r-icon">🔄</div>
+        <h3>Flipped Classroom Math</h3>
+        <p>What actually works after 15 years, one peer-reviewed RCT, and 340K+ subscribers.</p>
+        <a href="flipped-classroom-math.html">Start here →</a>
+      </div>
+      <div class="res-card">
+        <div class="r-icon">🎬</div>
+        <h3>Flipped Classroom Videos</h3>
+        <p>The full library of free flipped video lessons — Algebra through AP Calculus.</p>
+        <a href="flipped-classroom-videos.html">Browse videos →</a>
+      </div>
+      <div class="res-card">
+        <div class="r-icon">📊</div>
+        <h3>The Research</h3>
+        <p>Peer-reviewed evidence: 2014 AACE, 2016 RCT, 2021 IJMEST, and an ongoing 2025–26 study.</p>
+        <a href="flipped-classroom-research.html">Read the research →</a>
+      </div>
+      <div class="res-card">
+        <div class="r-icon">💻</div>
+        <h3>Distance Learning</h3>
+        <p>What survived COVID, what evolved, and what online-first flipping looks like now.</p>
+        <a href="flipped-classroom-distance-learning.html">See how →</a>
+      </div>
+      <div class="res-card">
+        <div class="r-icon">🎓</div>
+        <h3>Higher Education</h3>
+        <p>What transfers from K–12, what doesn't, and findings from a community-college study.</p>
+        <a href="flipped-classroom-higher-ed.html">For college faculty →</a>
+      </div>
+      <div class="res-card">
+        <div class="r-icon">⚠️</div>
+        <h3>5 Mistakes to Avoid</h3>
+        <p>The real mistakes Dr. E made in his first two years flipping — and how to skip them.</p>
+        <a href="flipped-classroom-mistakes.html">Avoid these →</a>
+      </div>
+      <div class="res-card">
+        <div class="r-icon">📈</div>
+        <h3>AP Statistics Guide</h3>
+        <p>Which units to flip first, how to handle FRQs, and what the data says.</p>
+        <a href="flipped-classroom-ap-statistics.html">For stats teachers →</a>
+      </div>
+      <div class="res-card">
+        <div class="r-icon">⚡</div>
+        <h3>7-Day Quickstart</h3>
+        <p>The free one-page starter plan — flip your first unit in a week.</p>
+        <a href="flipped-classroom-quickstart.html">Download free →</a>
+      </div>
+      <div class="res-card">
+        <div class="r-icon">📚</div>
+        <h3>Free Apple Book</h3>
+        <p>“The Power of the Flipped Classroom” — a free multi-touch book on Apple Books.</p>
+        <a href="flipped-classroom-books.html">Get the book →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- TESTIMONIALS -->
 <section class="testimonials-section">
   <div class="container">
@@ -654,10 +767,10 @@
       </div>
       <div class="foot">
         <h4>Students</h4>
-        <a href="courses-v2.html">Explore All Subjects</a>
+        <a href="/courses">Explore All Subjects</a>
         <a href="subjects/algebra/">Algebra</a>
         <a href="subjects/statistics/">Statistics</a>
-        <a href="courses-v2.html">Calculus</a>
+        <a href="/courses">Calculus</a>
       </div>
       <div class="foot">
         <h4>Educators</h4>

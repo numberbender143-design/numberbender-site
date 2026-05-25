@@ -12,14 +12,18 @@
 /free-worksheets                /math-worksheets                301
 /printable-worksheets           /math-worksheets                301
 
-# Old lesson/subject/course URLs → courses page
-# NOTE: do NOT add a blanket /courses/* rule here — /courses/ is now a real
-# directory tree (worksheet hubs). A broad /courses/* 301 makes any missing
-# or mistyped worksheet path soft-redirect to /courses.html instead of
-# returning a clean 404, which can cause Google to deindex real pages.
-/lessons/*                      /courses.html                   301
-/subjects/*                     /courses.html                   301
-/topics/*                       /courses.html                   301
+# Hub canonical = /courses. The v2 hub content now lives at courses.html, served
+# at /courses (netlify.toml: /courses.html -> /courses). The old courses-v2.html
+# filename is retired — send any old/bookmarked links to the canonical hub.
+/courses-v2.html                /courses                        301
+/courses-v2                     /courses                        301
+
+# Old lesson/topic URLs → canonical hub
+# NOTE: do NOT add a /subjects/* rule — /subjects/ is now a real v2 directory
+# tree (the subject library). A glob there would shadow real pages and can
+# cause Google to deindex them. Same caution applies to /courses/* (worksheet hubs).
+/lessons/*                      /courses                        301
+/topics/*                       /courses                        301
 
 # Old uploads/attachments → homepage
 /uploads/*                      /                               301
@@ -39,7 +43,7 @@
 /about-us                       /about.html                     301
 
 # Trailing slash normalization (Netlify handles this, but just in case)
-/courses/                       /courses.html                   301
+/courses/                       /courses                        301
 /about/                         /about.html                     301
 /contact/                       /contact.html                   301
 /blog/                          /blog.html                      301
