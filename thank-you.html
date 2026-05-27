@@ -151,7 +151,7 @@
     .steps-grid{ grid-template-columns:1fr; }
     .hero{ padding:60px 0 40px; }
   }
-</style>
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}.skip-link:focus{position:fixed;top:0;left:0;width:auto;height:auto;padding:8px 16px;background:#0F2B3D;color:#fff;z-index:9999;font-size:14px;text-decoration:none;border-radius:0 0 4px 0;}</style>
   <!-- Microsoft Clarity -->
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -175,6 +175,8 @@
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
 
 <!-- NAV -->
 <header class="nav">
@@ -187,7 +189,7 @@
 </header>
 
 <!-- HERO + DOWNLOAD -->
-<main class="hero">
+<main id="main-content" class="hero">
   <div class="container-narrow">
 
     <div class="success-icon" aria-hidden="true">
@@ -226,19 +228,19 @@
         <div class="icon">📖</div>
         <h3>Read the full pillar guide</h3>
         <p>15 years of lessons, the 7-day plan in full detail, video rules, and the research behind the model.</p>
-        <a href="flipped-classroom-math.html">Read the guide →</a>
+        <a href="/flipped-classroom-math">Read the guide →</a>
       </div>
       <div class="step-card">
         <div class="icon">🔬</div>
         <h3>See the research</h3>
         <p>The 2016 Springer RCT, the 2021 IJMEST paper, and the in-progress community college study.</p>
-        <a href="flipped-classroom-research.html">See the research →</a>
+        <a href="/flipped-classroom-research">See the research →</a>
       </div>
       <div class="step-card">
         <div class="icon">⚠️</div>
         <h3>The 5 mistakes in detail</h3>
         <p>The full story behind each mistake — and the concrete fix — in Dr. E's own voice.</p>
-        <a href="flipped-classroom-mistakes.html">Read the mistakes →</a>
+        <a href="/flipped-classroom-mistakes">Read the mistakes →</a>
       </div>
     </div>
   </div>
@@ -249,14 +251,14 @@
   <div class="container">
     <p>
       <a href="/">Home</a> ·
-      <a href="flipped-classroom-math.html">Flipped Classroom</a> ·
-      <a href="teach-the-math.html">Teach the Math</a>
-        <a href="teacher-resources.html">Teacher Resources</a> ·
-      <a href="contact.html">Contact</a> ·
-      <a href="privacy.html">Privacy Policy</a>
+      <a href="/flipped-classroom-math">Flipped Classroom</a> ·
+      <a href="/teach-the-math">Teach the Math</a>
+        <a href="/teacher-resources">Teacher Resources</a> ·
+      <a href="/contact">Contact</a> ·
+      <a href="/privacy">Privacy Policy</a>
     </p>
     <p style="margin-top:10px;color:#475569;">© 2026 Numberbender · Founded by Dr. Peter Esperanza</p>
-      <div style="margin-top:8px;font-size:0.78rem;color:#64748b;">
+      <div style="margin-top:8px;font-size:0.78rem;color:#94a3b8;">
         <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener"><img src="https://licensebuttons.net/l/by/4.0/88x31.png" alt="CC BY 4.0" style="border:0;vertical-align:middle;margin-right:6px;"></a>
         Original content licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener" style="color:#94a3b8;">CC BY 4.0</a> &mdash; free to share and adapt with credit to Peter Esperanza / Numberbender.
       </div>
@@ -267,7 +269,7 @@
 <!-- ── Numberbender Sticky Bar — Back to School June 2026 ── -->
 <div id="nb-sticky-bar">
   <p>🇵🇭 Philippine schools open in June! Get FREE bilingual math worksheets:</p>
-  <input type="email" id="nb-email-input" placeholder="your@email.com" autocomplete="email" />
+  <input type="email" id="nb-email-input" placeholder="your@email.com" autocomplete="email" aria-label="Email address" />
   <button class="nb-submit" onclick="nbSubmit()">Get Free Worksheets →</button>
   <button class="nb-close" onclick="nbDismiss()" aria-label="Close">✕</button>
 </div>

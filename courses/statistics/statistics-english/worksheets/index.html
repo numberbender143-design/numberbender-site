@@ -73,7 +73,7 @@
     .ws-breadcrumb a{ color:var(--muted); }
     .ws-breadcrumb a:hover{ color:var(--blue); text-decoration:underline; }
     .ws-breadcrumb .sep{ margin:0 8px; color:#cbd5e1; }
-    .ws-eyebrow{ display:inline-flex; align-items:center; gap:8px; color:var(--accent-color); background:var(--accent-bg); padding:6px 14px; border-radius:999px; font-size:0.85rem; font-weight:700; margin-bottom:14px; text-transform:uppercase; letter-spacing:.06em; }
+    .ws-eyebrow{ display:inline-flex; align-items:center; gap:8px; color:var(--accent-dark); background:var(--accent-bg); padding:6px 14px; border-radius:999px; font-size:0.85rem; font-weight:700; margin-bottom:14px; text-transform:uppercase; letter-spacing:.06em; }
     .ws-hero h1{ font-size:clamp(2rem,4.2vw,3rem); line-height:1.1; letter-spacing:-0.02em; font-weight:800; margin-bottom:14px; max-width:900px; }
     .ws-hero h1 .accent{ color:var(--accent-color); }
     .ws-hero .lead{ font-size:1.1rem; color:var(--muted); max-width:720px; margin-bottom:22px; }
@@ -91,7 +91,7 @@
     .ws-card{ background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:22px 22px 20px; display:flex; flex-direction:column; gap:12px; transition:transform .15s ease,box-shadow .15s ease,border-color .15s ease; }
     .ws-card:hover{ transform:translateY(-3px); box-shadow:var(--shadow); border-color:rgba(37,99,235,.25); }
     .ws-card .ws-card-meta{ display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
-    .ws-card .ws-lesson{ font-size:0.78rem; font-weight:700; color:var(--accent-color); background:var(--accent-bg); padding:3px 10px; border-radius:999px; text-transform:uppercase; letter-spacing:.06em; }
+    .ws-card .ws-lesson{ font-size:0.78rem; font-weight:700; color:var(--accent-dark); background:var(--accent-bg); padding:3px 10px; border-radius:999px; text-transform:uppercase; letter-spacing:.06em; }
     .ws-card .ws-diff{ font-size:0.78rem; font-weight:600; color:var(--muted); padding:3px 10px; border-radius:999px; background:#f1f5f9; text-transform:uppercase; letter-spacing:.06em; }
     .ws-card .ws-diff.beg{ background:#dcfce7; color:#15803d; }
     .ws-card .ws-diff.int{ background:#fef9c3; color:#a16207; }
@@ -111,7 +111,7 @@
     .ws-card .ws-btn.primary:hover{ background:#2563EB; color:white; text-decoration:none; }
     .ws-card .ws-btn.download{ background:#F0FDFA; color:#1F6F6B; }
     .ws-card .ws-btn.download:hover{ background:#1F6F6B; color:white; text-decoration:none; }
-    .ws-card .ws-btn.watch{ background:#FEF2F2; color:#dc2626; }
+    .ws-card .ws-btn.watch{ background:#FEF2F2; color:#b91c1c; }
     .ws-card .ws-btn.watch:hover{ background:#dc2626; color:white; text-decoration:none; }
     /* PDF Modal */
     .pdf-modal-overlay{
@@ -188,10 +188,12 @@
     .ws-no-results.visible{display:block;}
   </style>
 </head>
-<body style="--accent-color:#0369a1;--accent-bg:rgba(3,105,161,0.10);">
+<body style="--accent-color:#0369a1;--accent-bg:rgba(3,105,161,0.10); --accent-dark: #075985">
+<style>.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}.skip-link:focus{position:fixed;top:0;left:0;width:auto;height:auto;padding:8px 16px;background:#0F2B3D;color:#fff;z-index:9999;font-size:14px;text-decoration:none;border-radius:0 0 4px 0;}</style>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="nav">
   <div class="container nav-inner">
-    <a href="../../../../index.html" class="logo logo-lockup" aria-label="Numberbender — Master the Elements of Math">
+    <a href="/" class="logo logo-lockup" aria-label="Numberbender — Master the Elements of Math">
       <img src="../../../../images/numberbender_banner_only.svg" alt="Numberbender" class="lockup-img">
     </a>
     <button class="menu-toggle" aria-label="Toggle menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
@@ -231,12 +233,13 @@
     </nav>
   </div>
 </header>
+<main id="main-content">
 <section class="ws-hero">
   <div class="container ws-hero-inner">
     <div class="ws-hero-text">
 
     <nav class="ws-breadcrumb" aria-label="Breadcrumb">
-      <a href="../../../../index.html">Home</a><span class="sep">›</span>
+      <a href="/">Home</a><span class="sep">›</span>
       <a href="/courses">Courses</a><span class="sep">›</span>
       <span>Statistics (English)</span>
     </nav>
@@ -1114,6 +1117,7 @@
     </div>
   </div>
 </section>
+</main>
 <footer>
   <div class="container">
     <div class="foot-grid">

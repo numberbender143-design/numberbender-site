@@ -3,8 +3,6 @@
 <head>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-P1M2WZD840"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-P1M2WZD840');
 </script>
@@ -274,7 +272,38 @@ footer{background:var(--navy);color:#94a3b8;padding:56px 0 28px;}
   .lang-bar-inner{height:auto;padding:10px 0;}
   .lesson-ws-row{display:none;} /* hide on very small screens — modal still shows them */
 }
-</style>
+
+/* ── SEARCH ── */
+.search-wrap{position:relative;margin-bottom:10px;}
+.search-icon{position:absolute;left:14px;top:50%;transform:translateY(-50%);font-size:1rem;pointer-events:none;color:var(--muted);line-height:1;}
+.lesson-search{
+  width:100%;padding:13px 44px 13px 42px;
+  border:2px solid var(--border);border-radius:10px;
+  font-size:0.95rem;color:var(--navy);background:var(--surface);
+  outline:none;transition:border-color .2s,box-shadow .2s;font-family:inherit;
+}
+.lesson-search:focus{border-color:var(--active);box-shadow:0 0 0 3px rgba(37,99,235,0.1);}
+.lesson-search::placeholder{color:var(--muted);}
+.search-clear{
+  position:absolute;right:12px;top:50%;transform:translateY(-50%);
+  cursor:pointer;color:var(--muted);background:var(--border);
+  width:22px;height:22px;border-radius:50%;border:none;
+  display:none;place-items:center;font-size:0.7rem;line-height:1;
+  transition:background .15s,color .15s;
+}
+.search-clear.visible{display:grid;}
+.search-clear:hover{background:var(--active);color:white;}
+.search-count{font-size:0.82rem;color:var(--muted);margin-bottom:16px;min-height:1.3em;}
+.search-count strong{color:var(--active-dark);}
+.search-no-results{
+  display:none;text-align:center;padding:40px 20px;
+  background:var(--surface);border:1.5px solid var(--border);
+  border-radius:14px;color:var(--muted);font-size:0.95rem;line-height:1.7;
+}
+.search-no-results.visible{display:block;}
+.unit-block.search-hidden{display:none;}
+.lesson-item.search-hidden{display:none;}
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}.skip-link:focus{position:fixed;top:0;left:0;width:auto;height:auto;padding:8px 16px;background:#0F2B3D;color:#fff;z-index:9999;font-size:14px;text-decoration:none;border-radius:0 0 4px 0;}</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -292,6 +321,8 @@ footer{background:var(--navy);color:#94a3b8;padding:56px 0 28px;}
 </script>
 </head>
 <body data-lang="en">
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
 
 <!-- ── NAV ── -->
 <header class="nav">
@@ -336,6 +367,7 @@ footer{background:var(--navy);color:#94a3b8;padding:56px 0 28px;}
     </nav>
   </div>
 </header>
+<main id="main-content">
 
 <!-- ── HERO ── -->
 <section class="subject-hero">
@@ -407,7 +439,32 @@ footer{background:var(--navy);color:#94a3b8;padding:56px 0 28px;}
 <section class="units-section">
   <div class="container">
     <div class="section-heading">11 Units · 67 Lessons</div>
-    <div class="unit-list">
+
+    <!-- SEARCH BAR -->
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input
+        type="text"
+        id="lesson-search"
+        class="lesson-search"
+        placeholder="Search lessons… e.g. 'factoring', 'slope', 'quadratic formula'"
+        oninput="filterLessons(this.value)"
+        autocomplete="off"
+        spellcheck="false"
+      >
+      <button class="search-clear" id="search-clear" onclick="clearSearch()" aria-label="Clear search">✕</button>
+    </div>
+    <div class="search-count" id="search-count"></div>
+    <div class="search-no-results" id="search-no-results">
+      No lessons found for that search.<br>
+      <span style="font-size:0.85rem;">Try a broader keyword — like "linear", "factor", or "graph".</span>
+    </div>
+
+    <!-- ⚠️  LESSON INDEX REMINDER
+     When adding new lessons here, also update LESSON_INDEX in courses.html
+     so the cross-subject search on the main courses page stays accurate.
+     Search for "LESSON_INDEX" in courses.html to find it quickly. -->
+<div class="unit-list">
 
       <!-- ═══ UNIT 1 ═══ -->
       <div class="unit-block open" id="unit-1">
@@ -440,7 +497,7 @@ footer{background:var(--navy);color:#94a3b8;padding:56px 0 28px;}
             <div class="lesson-meta"><div class="lesson-title">Rational Numbers and Decimals</div><div class="lesson-sub">Unit 1 · Lesson 4</div></div>
             <span class="lesson-badge both">EN + FIL</span>
           </a>
-          <a class="lesson-item" data-en-id="q3nEMF34x6c" data-fil-id="Apzjg_Y0_SQ" data-worksheet="01-03-algebra-order-of-operations.pdf" href="https://www.youtube.com/watch?v=q3nEMF34x6c" target="_blank" rel="noopener">
+          <a class="lesson-item" data-en-id="q3nEMF34x6c" data-fil-id="oJPrPfIjKB0" data-worksheet="01-03-algebra-order-of-operations.pdf" href="https://www.youtube.com/watch?v=q3nEMF34x6c" target="_blank" rel="noopener">
             <div class="lesson-play">▶</div>
             <div class="lesson-meta"><div class="lesson-title">Order of Operations (PEMDAS)</div><div class="lesson-sub">Unit 1 · Lesson 5</div></div>
             <span class="lesson-badge both">EN + FIL</span>
@@ -459,27 +516,27 @@ footer{background:var(--navy);color:#94a3b8;padding:56px 0 28px;}
           <div class="unit-chevron">▾</div>
         </div>
         <div class="unit-lessons"><div class="lessons-inner"><div class="lessons-divider"></div><div class="lesson-list">
-          <a class="lesson-item" data-en-id="ODXWMglNUYg" data-fil-id="IGTgGQqNDdQ" data-worksheet="02-01-algebra-evaluating-expressions.pdf" href="https://www.youtube.com/watch?v=ODXWMglNUYg" target="_blank" rel="noopener">
+          <a class="lesson-item" data-en-id="lHXM0qNqN5U" data-fil-id="S0iEn9OOXBc" data-worksheet="02-01-algebra-evaluating-expressions.pdf" href="https://www.youtube.com/watch?v=lHXM0qNqN5U" target="_blank" rel="noopener">
             <div class="lesson-play">▶</div>
             <div class="lesson-meta"><div class="lesson-title">Variables and Algebraic Expressions</div><div class="lesson-sub">Unit 2 · Lesson 1</div></div>
             <span class="lesson-badge both">EN + FIL</span>
           </a>
-          <a class="lesson-item" data-en-id="3zpS3TYD3PE" data-fil-id="ed4cmYOn8U4" data-worksheet="02-01-algebra-evaluating-expressions.pdf" href="https://www.youtube.com/watch?v=3zpS3TYD3PE" target="_blank" rel="noopener">
+          <a class="lesson-item" data-en-id="3zpS3TYD3PE" data-fil-id="mIfkWQ8wvNA" data-worksheet="02-01-algebra-evaluating-expressions.pdf" href="https://www.youtube.com/watch?v=3zpS3TYD3PE" target="_blank" rel="noopener">
             <div class="lesson-play">▶</div>
             <div class="lesson-meta"><div class="lesson-title">Translating Verbal to Algebraic Expressions</div><div class="lesson-sub">Unit 2 · Lesson 2</div></div>
             <span class="lesson-badge both">EN + FIL</span>
           </a>
-          <a class="lesson-item" data-en-id="xKtNiqVXtfc" data-fil-id="07vb7k7mQdg" data-worksheet="01-02-algebra-number-properties.pdf" href="https://www.youtube.com/watch?v=xKtNiqVXtfc" target="_blank" rel="noopener">
+          <a class="lesson-item" data-en-id="xKtNiqVXtfc" data-fil-id="B8sE5C7ucD4" data-worksheet="01-02-algebra-number-properties.pdf" href="https://www.youtube.com/watch?v=xKtNiqVXtfc" target="_blank" rel="noopener">
             <div class="lesson-play">▶</div>
             <div class="lesson-meta"><div class="lesson-title">Properties of Real Numbers</div><div class="lesson-sub">Unit 2 · Lesson 3</div></div>
             <span class="lesson-badge both">EN + FIL</span>
           </a>
-          <a class="lesson-item" data-en-id="ODXWMglNUYg" data-fil-id="QAV84ArIMjQ" data-worksheet="02-02-algebra-evaluating-expressions-2.pdf" href="https://www.youtube.com/watch?v=ODXWMglNUYg" target="_blank" rel="noopener">
+          <a class="lesson-item" data-en-id="B5L0k6LXf4c" data-fil-id="cfPCDs7zBTM" data-worksheet="02-02-algebra-evaluating-expressions-2.pdf" href="https://www.youtube.com/watch?v=B5L0k6LXf4c" target="_blank" rel="noopener">
             <div class="lesson-play">▶</div>
             <div class="lesson-meta"><div class="lesson-title">Combining Like Terms</div><div class="lesson-sub">Unit 2 · Lesson 4</div></div>
             <span class="lesson-badge both">EN + FIL</span>
           </a>
-          <a class="lesson-item" data-en-id="x_iTz3pQFXU" data-fil-id="QAV84ArIMjQ" data-worksheet="02-03-algebra-evaluating-expressions-3.pdf" href="https://www.youtube.com/watch?v=x_iTz3pQFXU" target="_blank" rel="noopener">
+          <a class="lesson-item" data-en-id="T0zBD5aa4_g" data-fil-id="QAV84ArIMjQ" data-worksheet="02-03-algebra-evaluating-expressions-3.pdf" href="https://www.youtube.com/watch?v=T0zBD5aa4_g" target="_blank" rel="noopener">
             <div class="lesson-play">▶</div>
             <div class="lesson-meta"><div class="lesson-title">The Distributive Property</div><div class="lesson-sub">Unit 2 · Lesson 5</div></div>
             <span class="lesson-badge both">EN + FIL</span>
@@ -498,32 +555,32 @@ footer{background:var(--navy);color:#94a3b8;padding:56px 0 28px;}
           <div class="unit-chevron">▾</div>
         </div>
         <div class="unit-lessons"><div class="lessons-inner"><div class="lessons-divider"></div><div class="lesson-list">
-          <a class="lesson-item" data-en-id="8FiLIEU48IQ" data-fil-id="DNzB3Psf19E" data-worksheet="numberbender_solving_one_step_linear_equations.pdf" href="https://www.youtube.com/watch?v=8FiLIEU48IQ" target="_blank" rel="noopener">
+          <a class="lesson-item" data-en-id="8FiLIEU48IQ" data-fil-id="oRhyDgCkIqM" data-worksheet="numberbender_solving_one_step_linear_equations.pdf" href="https://www.youtube.com/watch?v=8FiLIEU48IQ" target="_blank" rel="noopener">
             <div class="lesson-play">▶</div>
             <div class="lesson-meta"><div class="lesson-title">One-Step Equations</div><div class="lesson-sub">Unit 3 · Lesson 1</div></div>
             <span class="lesson-badge both">EN + FIL</span>
           </a>
-          <a class="lesson-item" data-en-id="A2btQVNRFIU" data-fil-id="DNzB3Psf19E" data-worksheet="numberbender_solving_basic_equations_integer_operations.pdf" href="https://www.youtube.com/watch?v=A2btQVNRFIU" target="_blank" rel="noopener">
+          <a class="lesson-item" data-en-id="zTSZMxut_lk" data-fil-id="ausztnAvctE" data-worksheet="numberbender_solving_basic_equations_integer_operations.pdf" href="https://www.youtube.com/watch?v=zTSZMxut_lk" target="_blank" rel="noopener">
             <div class="lesson-play">▶</div>
             <div class="lesson-meta"><div class="lesson-title">Multi-Step Equations</div><div class="lesson-sub">Unit 3 · Lesson 2</div></div>
             <span class="lesson-badge both">EN + FIL</span>
           </a>
-          <a class="lesson-item" data-en-id="A2btQVNRFIU" data-fil-id="DNzB3Psf19E" data-worksheet="numberbender_solving_basic_equations_integer_operations.pdf" href="https://www.youtube.com/watch?v=A2btQVNRFIU" target="_blank" rel="noopener">
+          <a class="lesson-item" data-en-id="A2btQVNRFIU" data-fil-id="14IUXOGtE5M" data-worksheet="numberbender_solving_basic_equations_integer_operations.pdf" href="https://www.youtube.com/watch?v=A2btQVNRFIU" target="_blank" rel="noopener">
             <div class="lesson-play">▶</div>
             <div class="lesson-meta"><div class="lesson-title">Solving Linear Equations</div><div class="lesson-sub">Unit 3 · Lesson 3</div></div>
             <span class="lesson-badge both">EN + FIL</span>
           </a>
-          <a class="lesson-item" data-en-id="A2btQVNRFIU" data-fil-id="zumQq2UQWvM" data-worksheet="numberbender_solving_basic_equations_integer_operations.pdf" href="https://www.youtube.com/watch?v=A2btQVNRFIU" target="_blank" rel="noopener">
+          <a class="lesson-item" data-en-id="0ycdog3Nxo8" data-fil-id="L9vBbJY-GQ8" data-worksheet="numberbender_solving_basic_equations_integer_operations.pdf" href="https://www.youtube.com/watch?v=0ycdog3Nxo8" target="_blank" rel="noopener">
             <div class="lesson-play">▶</div>
             <div class="lesson-meta"><div class="lesson-title">Equations with Fractions and Decimals</div><div class="lesson-sub">Unit 3 · Lesson 4</div></div>
             <span class="lesson-badge both">EN + FIL</span>
           </a>
-          <a class="lesson-item" data-en-id="A2btQVNRFIU" data-fil-id="zumQq2UQWvM" data-worksheet="numberbender_solving_basic_equations_integer_operations.pdf" href="https://www.youtube.com/watch?v=A2btQVNRFIU" target="_blank" rel="noopener">
+          <a class="lesson-item" data-en-id="VT2irUg5h1E" data-fil-id="SBZCMK_fUqw" data-worksheet="numberbender_solving_basic_equations_integer_operations.pdf" href="https://www.youtube.com/watch?v=VT2irUg5h1E" target="_blank" rel="noopener">
             <div class="lesson-play">▶</div>
             <div class="lesson-meta"><div class="lesson-title">Literal Equations and Formulas</div><div class="lesson-sub">Unit 3 · Lesson 5</div></div>
             <span class="lesson-badge both">EN + FIL</span>
           </a>
-          <a class="lesson-item" data-en-id="dqlP1bqcBJ8" data-fil-id="Ktp95pPYUdw" data-worksheet="numberbender_real_numbers_in_word_problems.pdf" href="https://www.youtube.com/watch?v=dqlP1bqcBJ8" target="_blank" rel="noopener">
+          <a class="lesson-item" data-en-id="3zpS3TYD3PE" data-fil-id="mIfkWQ8wvNA" data-worksheet="numberbender_real_numbers_in_word_problems.pdf" href="https://www.youtube.com/watch?v=3zpS3TYD3PE" target="_blank" rel="noopener">
             <div class="lesson-play">▶</div>
             <div class="lesson-meta"><div class="lesson-title">Word Problems — Setting Up Equations</div><div class="lesson-sub">Unit 3 · Lesson 6</div></div>
             <span class="lesson-badge both">EN + FIL</span>
@@ -542,29 +599,24 @@ footer{background:var(--navy);color:#94a3b8;padding:56px 0 28px;}
           <div class="unit-chevron">▾</div>
         </div>
         <div class="unit-lessons"><div class="lessons-inner"><div class="lessons-divider"></div><div class="lesson-list">
-          <a class="lesson-item" data-en-id="J9sPV1jczN8" data-fil-id="bv4XD6CKGF4" data-worksheet="03-01-algebra-inequalities.pdf" href="https://www.youtube.com/watch?v=J9sPV1jczN8" target="_blank" rel="noopener">
+          <a class="lesson-item" data-en-id="J9sPV1jczN8" data-fil-id="BGX27UYSiUY" data-worksheet="03-01-algebra-inequalities.pdf" href="https://www.youtube.com/watch?v=J9sPV1jczN8" target="_blank" rel="noopener">
             <div class="lesson-play">▶</div>
             <div class="lesson-meta"><div class="lesson-title">Solving Linear Inequalities</div><div class="lesson-sub">Unit 4 · Lesson 1</div></div>
             <span class="lesson-badge both">EN + FIL</span>
           </a>
-          <a class="lesson-item" data-en-id="RnzH-sN-5cs" data-fil-id="BCol3AmQvzI" data-worksheet="03-02-algebra-compound-inequalities.pdf" href="https://www.youtube.com/watch?v=RnzH-sN-5cs" target="_blank" rel="noopener">
+          <a class="lesson-item" data-en-id="RnzH-sN-5cs" data-fil-id="RDzDRrHG3_k" data-worksheet="03-02-algebra-compound-inequalities.pdf" href="https://www.youtube.com/watch?v=RnzH-sN-5cs" target="_blank" rel="noopener">
             <div class="lesson-play">▶</div>
             <div class="lesson-meta"><div class="lesson-title">Compound Inequalities — And / Or</div><div class="lesson-sub">Unit 4 · Lesson 2</div></div>
             <span class="lesson-badge both">EN + FIL</span>
           </a>
-          <a class="lesson-item" data-en-id="50qUULhZf-c" data-fil-id="i846rU9K8Fc" data-worksheet="03-01-algebra-inequalities.pdf" href="https://www.youtube.com/watch?v=50qUULhZf-c" target="_blank" rel="noopener">
+          <a class="lesson-item" data-en-id="50qUULhZf-c" data-fil-id="V4AzzQBlMTA" data-worksheet="03-01-algebra-inequalities.pdf" href="https://www.youtube.com/watch?v=50qUULhZf-c" target="_blank" rel="noopener">
             <div class="lesson-play">▶</div>
             <div class="lesson-meta"><div class="lesson-title">Solving and Graphing Inequalities</div><div class="lesson-sub">Unit 4 · Lesson 3</div></div>
             <span class="lesson-badge both">EN + FIL</span>
           </a>
-          <a class="lesson-item" data-en-id="nY_WeBeXAsQ" data-fil-id="ijdhB-lpu6c" data-worksheet="numberbender_solving_absolute_value_equations.pdf" href="https://www.youtube.com/watch?v=nY_WeBeXAsQ" target="_blank" rel="noopener">
+          <a class="lesson-item" data-en-id="nY_WeBeXAsQ" data-fil-id="Hk09Hazc1bU" data-worksheet="numberbender_solving_absolute_value_equations.pdf" href="https://www.youtube.com/watch?v=nY_WeBeXAsQ" target="_blank" rel="noopener">
             <div class="lesson-play">▶</div>
             <div class="lesson-meta"><div class="lesson-title">Absolute Value Equations</div><div class="lesson-sub">Unit 4 · Lesson 4</div></div>
-            <span class="lesson-badge both">EN + FIL</span>
-          </a>
-          <a class="lesson-item" data-en-id="nY_WeBeXAsQ" data-fil-id="V4AzzQBlMTA" data-worksheet="numberbender_solving_absolute_value_equations.pdf" href="https://www.youtube.com/watch?v=nY_WeBeXAsQ" target="_blank" rel="noopener">
-            <div class="lesson-play">▶</div>
-            <div class="lesson-meta"><div class="lesson-title">Absolute Value Inequalities</div><div class="lesson-sub">Unit 4 · Lesson 5</div></div>
             <span class="lesson-badge both">EN + FIL</span>
           </a>
         </div></div></div>
@@ -576,54 +628,59 @@ footer{background:var(--navy);color:#94a3b8;padding:56px 0 28px;}
           <div class="unit-num">Unit 5</div>
           <div class="unit-info">
             <div class="unit-title">Graphing &amp; Functions</div>
-            <div class="unit-meta"><span class="unit-complete">All 9 lessons available</span></div>
+            <div class="unit-meta"><span class="unit-complete">All 10 lessons available</span></div>
           </div>
           <div class="unit-chevron">▾</div>
         </div>
         <div class="unit-lessons"><div class="lessons-inner"><div class="lessons-divider"></div><div class="lesson-list">
-          <a class="lesson-item" data-en-id="gat5MiXJA8k" data-fil-id="BES-zmsD4B4" data-worksheet="04-01-algebra-plotting-points-xy-plane.pdf" href="https://www.youtube.com/watch?v=gat5MiXJA8k" target="_blank" rel="noopener">
+          <a class="lesson-item" data-en-id="gat5MiXJA8k" data-fil-id="bB0rIYTJcPw" data-worksheet="04-01-algebra-plotting-points-xy-plane.pdf" href="https://www.youtube.com/watch?v=gat5MiXJA8k" target="_blank" rel="noopener">
             <div class="lesson-play">▶</div>
             <div class="lesson-meta"><div class="lesson-title">Plotting Points in the Coordinate Plane</div><div class="lesson-sub">Unit 5 · Lesson 1</div></div>
             <span class="lesson-badge both">EN + FIL</span>
           </a>
-          <a class="lesson-item" data-en-id="qyb9k_rmtSI" data-fil-id="BES-zmsD4B4" data-worksheet="04-02-algebra-graphing-equations-plotting-points.pdf" href="https://www.youtube.com/watch?v=qyb9k_rmtSI" target="_blank" rel="noopener">
+          <a class="lesson-item" data-en-id="sEYvt02Upns" data-fil-id="d1xoFQ1Ksjs" data-worksheet="04-02-algebra-graphing-equations-plotting-points.pdf" href="https://www.youtube.com/watch?v=sEYvt02Upns" target="_blank" rel="noopener">
             <div class="lesson-play">▶</div>
             <div class="lesson-meta"><div class="lesson-title">Graphing Linear Equations</div><div class="lesson-sub">Unit 5 · Lesson 2</div></div>
             <span class="lesson-badge both">EN + FIL</span>
           </a>
-          <a class="lesson-item" data-en-id="nk_xP6hjkHw" data-fil-id="f0nUVLoCkUE" data-worksheet="04-02-algebra-graphing-equations-plotting-points.pdf" href="https://www.youtube.com/watch?v=nk_xP6hjkHw" target="_blank" rel="noopener">
+          <a class="lesson-item" data-en-id="nk_xP6hjkHw" data-fil-id="WdCjASOqzJY" data-worksheet="04-02-algebra-graphing-equations-plotting-points.pdf" href="https://www.youtube.com/watch?v=nk_xP6hjkHw" target="_blank" rel="noopener">
             <div class="lesson-play">▶</div>
             <div class="lesson-meta"><div class="lesson-title">Finding X and Y Intercepts</div><div class="lesson-sub">Unit 5 · Lesson 3</div></div>
             <span class="lesson-badge both">EN + FIL</span>
           </a>
-          <a class="lesson-item" data-en-id="9tMSRf8pcRs" data-fil-id="KJM39xGS2EA" data-worksheet="04-03-algebra-slope-intercept-form.pdf" href="https://www.youtube.com/watch?v=9tMSRf8pcRs" target="_blank" rel="noopener">
+          <a class="lesson-item" data-en-id="AwuXXdjzZrk" data-fil-id="Ac5-9MNPYvk" data-worksheet="04-03-algebra-slope-intercept-form.pdf" href="https://www.youtube.com/watch?v=AwuXXdjzZrk" target="_blank" rel="noopener">
             <div class="lesson-play">▶</div>
             <div class="lesson-meta"><div class="lesson-title">Calculating Slope</div><div class="lesson-sub">Unit 5 · Lesson 4</div></div>
             <span class="lesson-badge both">EN + FIL</span>
           </a>
-          <a class="lesson-item" data-en-id="9tMSRf8pcRs" data-fil-id="L8MnKR9o1O8" data-worksheet="04-03-algebra-slope-intercept-form.pdf" href="https://www.youtube.com/watch?v=9tMSRf8pcRs" target="_blank" rel="noopener">
+          <a class="lesson-item" data-en-id="9tMSRf8pcRs" data-fil-id="e0pgfD66bZY" data-worksheet="04-03-algebra-slope-intercept-form.pdf" href="https://www.youtube.com/watch?v=9tMSRf8pcRs" target="_blank" rel="noopener">
             <div class="lesson-play">▶</div>
             <div class="lesson-meta"><div class="lesson-title">Slope-Intercept Form</div><div class="lesson-sub">Unit 5 · Lesson 5</div></div>
             <span class="lesson-badge both">EN + FIL</span>
           </a>
-          <a class="lesson-item" data-en-id="xcOkFUZi2xU" data-fil-id="LG2Z2IyEak8" data-worksheet="04-04-algebra-point-slope-form.pdf" href="https://www.youtube.com/watch?v=xcOkFUZi2xU" target="_blank" rel="noopener">
+          <a class="lesson-item" data-en-id="xcOkFUZi2xU" data-fil-id="efLCemgaTj0" data-worksheet="04-04-algebra-point-slope-form.pdf" href="https://www.youtube.com/watch?v=xcOkFUZi2xU" target="_blank" rel="noopener">
             <div class="lesson-play">▶</div>
             <div class="lesson-meta"><div class="lesson-title">Point-Slope Form</div><div class="lesson-sub">Unit 5 · Lesson 6</div></div>
             <span class="lesson-badge both">EN + FIL</span>
           </a>
-          <a class="lesson-item" data-en-id="48Gmyl2OnF8" data-fil-id="8_mGWRpK5wQ" data-worksheet="04-04-algebra-point-slope-form.pdf" href="https://www.youtube.com/watch?v=48Gmyl2OnF8" target="_blank" rel="noopener">
+          <a class="lesson-item" data-en-id="3mJWzS1d1k0" data-fil-id="4hahbxxC0kk" data-worksheet="04-04-algebra-point-slope-form.pdf" href="https://www.youtube.com/watch?v=3mJWzS1d1k0" target="_blank" rel="noopener">
             <div class="lesson-play">▶</div>
             <div class="lesson-meta"><div class="lesson-title">Writing Equations of Lines</div><div class="lesson-sub">Unit 5 · Lesson 7</div></div>
             <span class="lesson-badge both">EN + FIL</span>
           </a>
-          <a class="lesson-item" data-en-id="zbhPxGD0nWA" data-fil-id="eNTA8HHNWjU" data-worksheet="04-05-algebra-parallel-and-perpendicular-lines.pdf" href="https://www.youtube.com/watch?v=zbhPxGD0nWA" target="_blank" rel="noopener">
+          <a class="lesson-item" data-en-id="zbhPxGD0nWA" data-fil-id="m5eJLkgq3Hc" data-worksheet="04-05-algebra-parallel-and-perpendicular-lines.pdf" href="https://www.youtube.com/watch?v=zbhPxGD0nWA" target="_blank" rel="noopener">
             <div class="lesson-play">▶</div>
             <div class="lesson-meta"><div class="lesson-title">Parallel and Perpendicular Lines</div><div class="lesson-sub">Unit 5 · Lesson 8</div></div>
             <span class="lesson-badge both">EN + FIL</span>
           </a>
-          <a class="lesson-item" data-en-id="CXkjM33MXww" data-fil-id="A8MStPOoK8A" data-worksheet="11-01-algebra-domain-and-range.pdf" href="https://www.youtube.com/watch?v=CXkjM33MXww" target="_blank" rel="noopener">
+          <a class="lesson-item" data-en-id="CXkjM33MXww" data-fil-id="0NVqydqyzV4" data-worksheet="11-01-algebra-domain-and-range.pdf" href="https://www.youtube.com/watch?v=CXkjM33MXww" target="_blank" rel="noopener">
             <div class="lesson-play">▶</div>
             <div class="lesson-meta"><div class="lesson-title">Domain and Range of Functions</div><div class="lesson-sub">Unit 5 · Lesson 9</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="U4zwSs7-O3o" data-fil-id="-GxjyUcybOM" data-worksheet="11-07-algebra-piecewise-functions.pdf" href="https://www.youtube.com/watch?v=U4zwSs7-O3o" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Solving Piecewise Defined Functions</div><div class="lesson-sub">Unit 5 · Lesson 10</div></div>
             <span class="lesson-badge both">EN + FIL</span>
           </a>
         </div></div></div>
@@ -640,12 +697,12 @@ footer{background:var(--navy);color:#94a3b8;padding:56px 0 28px;}
           <div class="unit-chevron">▾</div>
         </div>
         <div class="unit-lessons"><div class="lessons-inner"><div class="lessons-divider"></div><div class="lesson-list">
-          <a class="lesson-item" data-en-id="cc6ijkPI8MM" data-fil-id="EKLF78hXD5A" data-worksheet="05-01-algebra-systems-graphing.pdf" href="https://www.youtube.com/watch?v=cc6ijkPI8MM" target="_blank" rel="noopener">
+          <a class="lesson-item" data-en-id="cc6ijkPI8MM" data-fil-id="xt6thfh646I" data-worksheet="05-01-algebra-systems-graphing.pdf" href="https://www.youtube.com/watch?v=cc6ijkPI8MM" target="_blank" rel="noopener">
             <div class="lesson-play">▶</div>
             <div class="lesson-meta"><div class="lesson-title">Solving Systems by Graphing</div><div class="lesson-sub">Unit 6 · Lesson 1</div></div>
             <span class="lesson-badge both">EN + FIL</span>
           </a>
-          <a class="lesson-item" data-en-id="daL82LCYivM" data-fil-id="J3URwIpi3bg" data-worksheet="05-02-algebra-systems-substitution-method.pdf" href="https://www.youtube.com/watch?v=daL82LCYivM" target="_blank" rel="noopener">
+          <a class="lesson-item" data-en-id="daL82LCYivM" data-fil-id="z5Ln2B5J5XQ" data-worksheet="05-02-algebra-systems-substitution-method.pdf" href="https://www.youtube.com/watch?v=daL82LCYivM" target="_blank" rel="noopener">
             <div class="lesson-play">▶</div>
             <div class="lesson-meta"><div class="lesson-title">Solving Systems by Substitution</div><div class="lesson-sub">Unit 6 · Lesson 2</div></div>
             <span class="lesson-badge both">EN + FIL</span>
@@ -660,7 +717,7 @@ footer{background:var(--navy);color:#94a3b8;padding:56px 0 28px;}
             <div class="lesson-meta"><div class="lesson-title">Systems of Linear Inequalities</div><div class="lesson-sub">Unit 6 · Lesson 4</div></div>
             <span class="lesson-badge both">EN + FIL</span>
           </a>
-          <a class="lesson-item" data-en-id="dqlP1bqcBJ8" data-fil-id="Ktp95pPYUdw" data-worksheet="numberbender_real_numbers_in_word_problems.pdf" href="https://www.youtube.com/watch?v=dqlP1bqcBJ8" target="_blank" rel="noopener">
+          <a class="lesson-item" data-en-id="xae19D-7J8k" data-fil-id="gQs5htPgmsQ" data-worksheet="numberbender_real_numbers_in_word_problems.pdf" href="https://www.youtube.com/watch?v=xae19D-7J8k" target="_blank" rel="noopener">
             <div class="lesson-play">▶</div>
             <div class="lesson-meta"><div class="lesson-title">Applications and Word Problems</div><div class="lesson-sub">Unit 6 · Lesson 5</div></div>
             <span class="lesson-badge both">EN + FIL</span>
@@ -679,22 +736,22 @@ footer{background:var(--navy);color:#94a3b8;padding:56px 0 28px;}
           <div class="unit-chevron">▾</div>
         </div>
         <div class="unit-lessons"><div class="lessons-inner"><div class="lessons-divider"></div><div class="lesson-list">
-          <a class="lesson-item" data-en-id="EjFvomRXPkM" data-fil-id="AA__Cltzpbo" data-worksheet="06-01-algebra-laws-of-exponents.pdf" href="https://www.youtube.com/watch?v=EjFvomRXPkM" target="_blank" rel="noopener">
+          <a class="lesson-item" data-en-id="56Kq-RG6KBs" data-fil-id="PSf_iZ4B_6Q" data-worksheet="06-01-algebra-laws-of-exponents.pdf" href="https://www.youtube.com/watch?v=56Kq-RG6KBs" target="_blank" rel="noopener">
             <div class="lesson-play">▶</div>
             <div class="lesson-meta"><div class="lesson-title">Laws of Exponents</div><div class="lesson-sub">Unit 7 · Lesson 1</div></div>
             <span class="lesson-badge both">EN + FIL</span>
           </a>
-          <a class="lesson-item" data-en-id="x_iTz3pQFXU" data-fil-id="QAV84ArIMjQ" data-worksheet="06-03-algebra-polynomial-operations.pdf" href="https://www.youtube.com/watch?v=x_iTz3pQFXU" target="_blank" rel="noopener">
+          <a class="lesson-item" data-en-id="T0zBD5aa4_g" data-fil-id="QAV84ArIMjQ" data-worksheet="06-03-algebra-polynomial-operations.pdf" href="https://www.youtube.com/watch?v=T0zBD5aa4_g" target="_blank" rel="noopener">
             <div class="lesson-play">▶</div>
             <div class="lesson-meta"><div class="lesson-title">Adding and Subtracting Polynomials</div><div class="lesson-sub">Unit 7 · Lesson 2</div></div>
             <span class="lesson-badge both">EN + FIL</span>
           </a>
-          <a class="lesson-item" data-en-id="x_iTz3pQFXU" data-fil-id="QAV84ArIMjQ" data-worksheet="06-03-algebra-polynomial-operations.pdf" href="https://www.youtube.com/watch?v=x_iTz3pQFXU" target="_blank" rel="noopener">
+          <a class="lesson-item" data-en-id="Z1miPkVBHPM" data-fil-id="45RC3IN7Un8" data-worksheet="06-03-algebra-polynomial-operations.pdf" href="https://www.youtube.com/watch?v=Z1miPkVBHPM" target="_blank" rel="noopener">
             <div class="lesson-play">▶</div>
             <div class="lesson-meta"><div class="lesson-title">Multiplying Polynomials — FOIL and Distributive</div><div class="lesson-sub">Unit 7 · Lesson 3</div></div>
             <span class="lesson-badge both">EN + FIL</span>
           </a>
-          <a class="lesson-item" data-en-id="NdOlPD1habQ" data-fil-id="QAV84ArIMjQ" data-worksheet="06-04-algebra-polynomial-division.pdf" href="https://www.youtube.com/watch?v=NdOlPD1habQ" target="_blank" rel="noopener">
+          <a class="lesson-item" data-en-id="F4ESeJeBlxU" data-fil-id="Uzv5hgELC0A" data-worksheet="06-04-algebra-polynomial-division.pdf" href="https://www.youtube.com/watch?v=F4ESeJeBlxU" target="_blank" rel="noopener">
             <div class="lesson-play">▶</div>
             <div class="lesson-meta"><div class="lesson-title">Dividing Polynomials</div><div class="lesson-sub">Unit 7 · Lesson 4</div></div>
             <span class="lesson-badge both">EN + FIL</span>
@@ -704,12 +761,12 @@ footer{background:var(--navy);color:#94a3b8;padding:56px 0 28px;}
             <div class="lesson-meta"><div class="lesson-title">Factoring — Greatest Common Factor (GCF)</div><div class="lesson-sub">Unit 7 · Lesson 5</div></div>
             <span class="lesson-badge both">EN + FIL</span>
           </a>
-          <a class="lesson-item" data-en-id="hHufHz25gks" data-fil-id="5_udGw4NYx4" data-worksheet="07-03-algebra-factoring-quadratics-a-equals-1.pdf" href="https://www.youtube.com/watch?v=hHufHz25gks" target="_blank" rel="noopener">
+          <a class="lesson-item" data-en-id="hHufHz25gks" data-fil-id="sLIaI7lQ7AM" data-worksheet="07-03-algebra-factoring-quadratics-a-equals-1.pdf" href="https://www.youtube.com/watch?v=hHufHz25gks" target="_blank" rel="noopener">
             <div class="lesson-play">▶</div>
             <div class="lesson-meta"><div class="lesson-title">Factoring Trinomials (a = 1)</div><div class="lesson-sub">Unit 7 · Lesson 6</div></div>
             <span class="lesson-badge both">EN + FIL</span>
           </a>
-          <a class="lesson-item" data-en-id="BuOrHLgdKas" data-fil-id="F--HDJtzmi8" data-worksheet="07-05-algebra-zero-product-property.pdf" href="https://www.youtube.com/watch?v=BuOrHLgdKas" target="_blank" rel="noopener">
+          <a class="lesson-item" data-en-id="BuOrHLgdKas" data-fil-id="DDp9Bbt_pFo" data-worksheet="07-05-algebra-zero-product-property.pdf" href="https://www.youtube.com/watch?v=BuOrHLgdKas" target="_blank" rel="noopener">
             <div class="lesson-play">▶</div>
             <div class="lesson-meta"><div class="lesson-title">Zero Product Property and Special Patterns</div><div class="lesson-sub">Unit 7 · Lesson 7</div></div>
             <span class="lesson-badge both">EN + FIL</span>
@@ -728,17 +785,17 @@ footer{background:var(--navy);color:#94a3b8;padding:56px 0 28px;}
           <div class="unit-chevron">▾</div>
         </div>
         <div class="unit-lessons"><div class="lessons-inner"><div class="lessons-divider"></div><div class="lesson-list">
-          <a class="lesson-item" data-en-id="MltJKMq_V4g" data-fil-id="0MmWojTBd04" data-worksheet="10-02-algebra-simplifying-rational-expressions.pdf" href="https://www.youtube.com/watch?v=MltJKMq_V4g" target="_blank" rel="noopener">
+          <a class="lesson-item" data-en-id="MltJKMq_V4g" data-fil-id="PINV8RCbxrs" data-worksheet="10-02-algebra-simplifying-rational-expressions.pdf" href="https://www.youtube.com/watch?v=MltJKMq_V4g" target="_blank" rel="noopener">
             <div class="lesson-play">▶</div>
             <div class="lesson-meta"><div class="lesson-title">Simplifying Rational Expressions</div><div class="lesson-sub">Unit 8 · Lesson 1</div></div>
             <span class="lesson-badge both">EN + FIL</span>
           </a>
-          <a class="lesson-item" data-en-id="BerPSkwXXq0" data-fil-id="0MmWojTBd04" data-worksheet="10-04-algebra-multiplying-dividing-rational-expressions.pdf" href="https://www.youtube.com/watch?v=BerPSkwXXq0" target="_blank" rel="noopener">
+          <a class="lesson-item" data-en-id="BerPSkwXXq0" data-fil-id="vj1loE5B5Ic" data-worksheet="10-04-algebra-multiplying-dividing-rational-expressions.pdf" href="https://www.youtube.com/watch?v=BerPSkwXXq0" target="_blank" rel="noopener">
             <div class="lesson-play">▶</div>
             <div class="lesson-meta"><div class="lesson-title">Multiplying and Dividing Rational Expressions</div><div class="lesson-sub">Unit 8 · Lesson 2</div></div>
             <span class="lesson-badge both">EN + FIL</span>
           </a>
-          <a class="lesson-item" data-en-id="24iEx_9wSUQ" data-fil-id="0MmWojTBd04" data-worksheet="10-05-algebra-adding-subtracting-rational-expressions.pdf" href="https://www.youtube.com/watch?v=24iEx_9wSUQ" target="_blank" rel="noopener">
+          <a class="lesson-item" data-en-id="24iEx_9wSUQ" data-fil-id="hThjYu2tScU" data-worksheet="10-05-algebra-adding-subtracting-rational-expressions.pdf" href="https://www.youtube.com/watch?v=24iEx_9wSUQ" target="_blank" rel="noopener">
             <div class="lesson-play">▶</div>
             <div class="lesson-meta"><div class="lesson-title">Adding and Subtracting Rational Expressions</div><div class="lesson-sub">Unit 8 · Lesson 3</div></div>
             <span class="lesson-badge both">EN + FIL</span>
@@ -748,7 +805,7 @@ footer{background:var(--navy);color:#94a3b8;padding:56px 0 28px;}
             <div class="lesson-meta"><div class="lesson-title">Complex Fractions</div><div class="lesson-sub">Unit 8 · Lesson 4</div></div>
             <span class="lesson-badge both">EN + FIL</span>
           </a>
-          <a class="lesson-item" data-en-id="24iEx_9wSUQ" data-fil-id="r293bDRlEn8" data-worksheet="10-01-algebra-rational-expressions.pdf" href="https://www.youtube.com/watch?v=24iEx_9wSUQ" target="_blank" rel="noopener">
+          <a class="lesson-item" data-en-id="4JhPTVF7JDw" data-fil-id="BrLb-jZRmio" data-worksheet="10-01-algebra-rational-expressions.pdf" href="https://www.youtube.com/watch?v=4JhPTVF7JDw" target="_blank" rel="noopener">
             <div class="lesson-play">▶</div>
             <div class="lesson-meta"><div class="lesson-title">Rational Equations and Applications</div><div class="lesson-sub">Unit 8 · Lesson 5</div></div>
             <span class="lesson-badge both">EN + FIL</span>
@@ -777,7 +834,7 @@ footer{background:var(--navy);color:#94a3b8;padding:56px 0 28px;}
             <div class="lesson-meta"><div class="lesson-title">Adding and Subtracting Radicals</div><div class="lesson-sub">Unit 9 · Lesson 2</div></div>
             <span class="lesson-badge both">EN + FIL</span>
           </a>
-          <a class="lesson-item" data-en-id="XCiOhz9H_As" data-fil-id="kFprml1Qd4o" data-worksheet="09-06-algebra-radical-equations.pdf" href="https://www.youtube.com/watch?v=XCiOhz9H_As" target="_blank" rel="noopener">
+          <a class="lesson-item" data-en-id="rDd6KZhdMuc" data-fil-id="kFprml1Qd4o" data-worksheet="09-06-algebra-radical-equations.pdf" href="https://www.youtube.com/watch?v=rDd6KZhdMuc" target="_blank" rel="noopener">
             <div class="lesson-play">▶</div>
             <div class="lesson-meta"><div class="lesson-title">Radical Equations</div><div class="lesson-sub">Unit 9 · Lesson 3</div></div>
             <span class="lesson-badge both">EN + FIL</span>
@@ -831,7 +888,7 @@ footer{background:var(--navy);color:#94a3b8;padding:56px 0 28px;}
             <div class="lesson-meta"><div class="lesson-title">Introduction to Logarithms</div><div class="lesson-sub">Unit 10 · Lesson 2</div></div>
             <span class="lesson-badge both">EN + FIL</span>
           </a>
-          <a class="lesson-item" data-en-id="HEMN1ZHkWcw" data-fil-id="f6p4P3whpao" data-worksheet="13-03-algebra-properties-of-logarithms.pdf" href="https://www.youtube.com/watch?v=HEMN1ZHkWcw" target="_blank" rel="noopener">
+          <a class="lesson-item" data-en-id="EDwKZas35Aw" data-fil-id="xhL8i6CgyQc" data-worksheet="13-03-algebra-properties-of-logarithms.pdf" href="https://www.youtube.com/watch?v=EDwKZas35Aw" target="_blank" rel="noopener">
             <div class="lesson-play">▶</div>
             <div class="lesson-meta"><div class="lesson-title">Properties of Logarithms</div><div class="lesson-sub">Unit 10 · Lesson 3</div></div>
             <span class="lesson-badge both">EN + FIL</span>
@@ -841,7 +898,7 @@ footer{background:var(--navy);color:#94a3b8;padding:56px 0 28px;}
             <div class="lesson-meta"><div class="lesson-title">Change of Base Formula</div><div class="lesson-sub">Unit 10 · Lesson 4</div></div>
             <span class="lesson-badge both">EN + FIL</span>
           </a>
-          <a class="lesson-item" data-en-id="c_pKjcRY3EI" data-fil-id="mTqpsR7CqNQ" data-worksheet="13-06-algebra-graphing-logarithmic-functions.pdf" href="https://www.youtube.com/watch?v=c_pKjcRY3EI" target="_blank" rel="noopener">
+          <a class="lesson-item" data-en-id="MUZx6vsnviQ" data-fil-id="mTqpsR7CqNQ" data-worksheet="13-06-algebra-graphing-logarithmic-functions.pdf" href="https://www.youtube.com/watch?v=MUZx6vsnviQ" target="_blank" rel="noopener">
             <div class="lesson-play">▶</div>
             <div class="lesson-meta"><div class="lesson-title">Graphing Logarithmic Functions</div><div class="lesson-sub">Unit 10 · Lesson 5</div></div>
             <span class="lesson-badge both">EN + FIL</span>
@@ -860,17 +917,17 @@ footer{background:var(--navy);color:#94a3b8;padding:56px 0 28px;}
           <div class="unit-chevron">▾</div>
         </div>
         <div class="unit-lessons"><div class="lessons-inner"><div class="lessons-divider"></div><div class="lesson-list">
-          <a class="lesson-item" data-en-id="9pa6dFedGTg" data-fil-id="MkvTfb_Yzu0" data-worksheet="../../worksheets/precalculus/10-02-precalc-arithmetic-sequences.pdf" href="https://www.youtube.com/watch?v=9pa6dFedGTg" target="_blank" rel="noopener">
+          <a class="lesson-item" data-en-id="9pa6dFedGTg" data-fil-id="OAhJuftIoEM" data-worksheet="../../worksheets/precalculus/10-02-precalc-arithmetic-sequences.pdf" href="https://www.youtube.com/watch?v=9pa6dFedGTg" target="_blank" rel="noopener">
             <div class="lesson-play">▶</div>
             <div class="lesson-meta"><div class="lesson-title">Arithmetic Sequences</div><div class="lesson-sub">Unit 11 · Lesson 1</div></div>
             <span class="lesson-badge both">EN + FIL</span>
           </a>
-          <a class="lesson-item" data-en-id="1eZpN9_T3n8" data-fil-id="xt-DXckc-Nc" data-worksheet="../../worksheets/precalculus/10-03-precalc-geometric-sequences.pdf" href="https://www.youtube.com/watch?v=1eZpN9_T3n8" target="_blank" rel="noopener">
+          <a class="lesson-item" data-en-id="1eZpN9_T3n8" data-fil-id="93X6Up32Peg" data-worksheet="../../worksheets/precalculus/10-03-precalc-geometric-sequences.pdf" href="https://www.youtube.com/watch?v=1eZpN9_T3n8" target="_blank" rel="noopener">
             <div class="lesson-play">▶</div>
             <div class="lesson-meta"><div class="lesson-title">Geometric Sequences</div><div class="lesson-sub">Unit 11 · Lesson 2</div></div>
             <span class="lesson-badge both">EN + FIL</span>
           </a>
-          <a class="lesson-item" data-en-id="V_T4o6upYfI" data-fil-id="-Xoyl0feXus" data-worksheet="../../worksheets/precalculus/10-01-precalc-sequences-and-factorial-notation.pdf" href="https://www.youtube.com/watch?v=V_T4o6upYfI" target="_blank" rel="noopener">
+          <a class="lesson-item" data-en-id="V_T4o6upYfI" data-fil-id="Fc8rAjxEIvs" data-worksheet="../../worksheets/precalculus/10-01-precalc-sequences-and-factorial-notation.pdf" href="https://www.youtube.com/watch?v=V_T4o6upYfI" target="_blank" rel="noopener">
             <div class="lesson-play">▶</div>
             <div class="lesson-meta"><div class="lesson-title">Sequences and Series Notation</div><div class="lesson-sub">Unit 11 · Lesson 3</div></div>
             <span class="lesson-badge both">EN + FIL</span>
@@ -880,17 +937,17 @@ footer{background:var(--navy);color:#94a3b8;padding:56px 0 28px;}
             <div class="lesson-meta"><div class="lesson-title">Summation Notation</div><div class="lesson-sub">Unit 11 · Lesson 4</div></div>
             <span class="lesson-badge both">EN + FIL</span>
           </a>
-          <a class="lesson-item" data-en-id="kUZvAP9W76M" data-fil-id="VGMuMi1F28M" data-worksheet="numberbender_permutations.pdf" href="https://www.youtube.com/watch?v=kUZvAP9W76M" target="_blank" rel="noopener">
+          <a class="lesson-item" data-en-id="kUZvAP9W76M" data-fil-id="kQmtvAKUXew" data-worksheet="numberbender_permutations.pdf" href="https://www.youtube.com/watch?v=kUZvAP9W76M" target="_blank" rel="noopener">
             <div class="lesson-play">▶</div>
             <div class="lesson-meta"><div class="lesson-title">Permutations</div><div class="lesson-sub">Unit 11 · Lesson 5</div></div>
             <span class="lesson-badge both">EN + FIL</span>
           </a>
-          <a class="lesson-item" data-en-id="DZPgDCWpGxE" data-fil-id="kBIh7mz1FhA" data-worksheet="../../worksheets/precalculus/10-07-precalc-combinations.pdf" href="https://www.youtube.com/watch?v=DZPgDCWpGxE" target="_blank" rel="noopener">
+          <a class="lesson-item" data-en-id="DZPgDCWpGxE" data-fil-id="K_mC6eQzkrI" data-worksheet="../../worksheets/precalculus/10-07-precalc-combinations.pdf" href="https://www.youtube.com/watch?v=DZPgDCWpGxE" target="_blank" rel="noopener">
             <div class="lesson-play">▶</div>
             <div class="lesson-meta"><div class="lesson-title">Combinations</div><div class="lesson-sub">Unit 11 · Lesson 6</div></div>
             <span class="lesson-badge both">EN + FIL</span>
           </a>
-          <a class="lesson-item" data-en-id="_XRi1geDD-o" data-fil-id="HK2F1EyeBLg" data-worksheet="../../worksheets/precalculus/10-01-precalc-sequences-and-factorial-notation.pdf" href="https://www.youtube.com/watch?v=_XRi1geDD-o" target="_blank" rel="noopener">
+          <a class="lesson-item" data-en-id="_XRi1geDD-o" data-fil-id="Fc8rAjxEIvs" data-worksheet="../../worksheets/precalculus/10-01-precalc-sequences-and-factorial-notation.pdf" href="https://www.youtube.com/watch?v=_XRi1geDD-o" target="_blank" rel="noopener">
             <div class="lesson-play">▶</div>
             <div class="lesson-meta"><div class="lesson-title">Factorials</div><div class="lesson-sub">Unit 11 · Lesson 7</div></div>
             <span class="lesson-badge both">EN + FIL</span>
@@ -929,17 +986,10 @@ footer{background:var(--navy);color:#94a3b8;padding:56px 0 28px;}
 </section>
 
 <!-- ── FOOTER ── -->
+</main>
 <footer>
   <div class="container">
     <div class="foot-grid">
-      <div class="foot foot-brand">
-        <div class="foot-logo">
-          <div class="foot-logo-mark">
-            <img src="../../images/numberbender-mark-teal-transparent.svg" alt="Numberbender" style="width:100%;height:100%;object-fit:contain;">
-          </div>
-          <span>Numberbender</span>
-        </div>
-        <p>Helping students learn math with confidence and helping educators teach online with energy, clarity, and impact.</p>
       </div>
       <div class="foot">
         <h4>Subjects</h4>
@@ -950,9 +1000,6 @@ footer{background:var(--navy);color:#94a3b8;padding:56px 0 28px;}
       </div>
       <div class="foot">
         <h4>Full Courses</h4>
-        <a href="../../learn/elementary-algebra/">Elementary Algebra</a>
-        <a href="../../learn/intermediate-algebra/">Intermediate Algebra</a>
-      </div>
       <div class="foot">
         <h4>Connect</h4>
         <a href="../../about.html">About Dr. E</a>
@@ -1019,6 +1066,74 @@ footer{background:var(--navy);color:#94a3b8;padding:56px 0 28px;}
 function toggleUnit(id) {
   document.getElementById(id).classList.toggle('open');
 }
+
+/* ── SEARCH ── */
+function filterLessons(query) {
+  const q = query.trim().toLowerCase();
+  const units = document.querySelectorAll('.unit-list .unit-block');
+  const clearBtn = document.getElementById('search-clear');
+  const countEl  = document.getElementById('search-count');
+  const noRes    = document.getElementById('search-no-results');
+
+  clearBtn.classList.toggle('visible', !!q);
+
+  if (!q) {
+    units.forEach((unit, i) => {
+      unit.classList.remove('search-hidden');
+      unit.querySelectorAll('.lesson-item').forEach(l => l.classList.remove('search-hidden'));
+      if (i === 0) unit.classList.add('open');
+      else unit.classList.remove('open');
+    });
+    countEl.innerHTML = '';
+    noRes.classList.remove('visible');
+    return;
+  }
+
+  let totalLessons = 0, visibleUnits = 0;
+
+  units.forEach(unit => {
+    const unitTitle = unit.querySelector('.unit-title')?.textContent.toLowerCase() || '';
+    const lessons   = unit.querySelectorAll('.lesson-item');
+    let unitMatches = 0;
+
+    lessons.forEach(lesson => {
+      const title = lesson.querySelector('.lesson-title')?.textContent.toLowerCase() || '';
+      const sub   = lesson.querySelector('.lesson-sub')?.textContent.toLowerCase()   || '';
+      if (title.includes(q) || sub.includes(q) || unitTitle.includes(q)) {
+        lesson.classList.remove('search-hidden');
+        unitMatches++;
+        totalLessons++;
+      } else {
+        lesson.classList.add('search-hidden');
+      }
+    });
+
+    if (unitMatches > 0) {
+      unit.classList.remove('search-hidden');
+      unit.classList.add('open');
+      visibleUnits++;
+    } else {
+      unit.classList.add('search-hidden');
+      unit.classList.remove('open');
+    }
+  });
+
+  if (totalLessons > 0) {
+    countEl.innerHTML = `Found <strong>${totalLessons}</strong> lesson${totalLessons !== 1 ? 's' : ''} across <strong>${visibleUnits}</strong> unit${visibleUnits !== 1 ? 's' : ''}`;
+    noRes.classList.remove('visible');
+  } else {
+    countEl.innerHTML = '';
+    noRes.classList.add('visible');
+  }
+}
+
+function clearSearch() {
+  const input = document.getElementById('lesson-search');
+  input.value = '';
+  filterLessons('');
+  input.focus();
+}
+/* ── END SEARCH ── */
 
 /* ── LANGUAGE TOGGLE ── */
 function setLang(lang) {

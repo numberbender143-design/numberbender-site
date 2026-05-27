@@ -696,6 +696,7 @@
     font-size: 0.85rem;
     line-height: 1.6;
   }
+  .foot-bottom a{ color: #94a3b8; text-decoration: underline; }
 
   /* ========== RESPONSIVE ========== */
   @media (max-width: 900px){
@@ -740,7 +741,7 @@
     .key-finding{ padding: 18px 20px; }
     .foot-grid{ grid-template-columns: 1fr; gap: 28px; }
   }
-</style>
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}.skip-link:focus{position:fixed;top:0;left:0;width:auto;height:auto;padding:8px 16px;background:#0F2B3D;color:#fff;z-index:9999;font-size:14px;text-decoration:none;border-radius:0 0 4px 0;}</style>
   <!-- Microsoft Clarity -->
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -764,6 +765,8 @@
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
 
 <!-- ========== NAVIGATION ========== -->
 <header class="nav">
@@ -815,9 +818,9 @@
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href="/">Home</a>
       <span class="sep">›</span>
-      <a href="teacher-resources.html">For Educators</a>
+      <a href="/teacher-resources">For Educators</a>
       <span class="sep">›</span>
-      <a href="flipped-classroom-math.html">Flipped Classroom Math</a>
+      <a href="/flipped-classroom-math">Flipped Classroom Math</a>
       <span class="sep">›</span>
       <span aria-current="page">Research</span>
     </nav>
@@ -830,7 +833,7 @@
 </section>
 
 <!-- ========== ARTICLE ========== -->
-<main class="article">
+<main id="main-content" class="article">
   <div class="container-narrow">
 
     <!-- TOC -->
@@ -851,9 +854,9 @@
     <!-- §1 -->
     <section id="s1">
       <h2><span class="num">§1</span>Why this page exists</h2>
-      <p>If you came here looking for the flipped-classroom literature, this is the right page. If you're trying to figure out whether to flip your own classroom, the <a href="flipped-classroom-math.html">pillar guide</a> is where I argue the practice case. This page is the receipts.</p>
+      <p>If you came here looking for the flipped-classroom literature, this is the right page. If you're trying to figure out whether to flip your own classroom, the <a href="/flipped-classroom-math">pillar guide</a> is where I argue the practice case. This page is the receipts.</p>
       <p>What follows is a chronological tour of the formal flipped-classroom math studies I've authored or co-authored, from 2014 to the present, plus the community-college research I'm running this academic year. There are four published peer-reviewed papers and one in-progress study. None of them is a meta-analysis. Together they're a practitioner's research arc — papers written by a math teacher who started flipping in 2012 and has been studying what happens ever since.</p>
-      <p>A note on what's a finding and what isn't. The four peer-reviewed papers are findings. The 2025–2026 community-college extension I'm collecting data on right now is in progress; I won't claim findings the data doesn't yet support. And the personal teaching outcome from my AP Statistics classroom — the one-to-ten-students-passing number you may have seen on the <a href="flipped-classroom-math.html#s8">pillar</a> or in interviews — is a story, not research. I explain why in <a href="#s7">section seven</a>.</p>
+      <p>A note on what's a finding and what isn't. The four peer-reviewed papers are findings. The 2025–2026 community-college extension I'm collecting data on right now is in progress; I won't claim findings the data doesn't yet support. And the personal teaching outcome from my AP Statistics classroom — the one-to-ten-students-passing number you may have seen on the <a href="/flipped-classroom-math#s8">pillar</a> or in interviews — is a story, not research. I explain why in <a href="#s7">section seven</a>.</p>
     </section>
 
     <!-- §2 -->
@@ -894,7 +897,7 @@
       <p>The same year as the Springer RCT, my co-author Khristin Fabian and I published a smaller paper — <em>Student Perceptions on the Use of the Flipped Classroom Model for Advanced Placement Mathematics</em> — in the proceedings of the International Congress on Mathematical Education (ICME).</p>
       <p>Where the Springer chapter measured outcomes, this one measured how students experienced the model. The population was AP-level high-school math students — calculus and statistics — and the question was whether the flipped structure made the AP workload more manageable or less, in the students' own assessment.</p>
       <p>The reason I mention this paper alongside the Springer one isn't that it's the more rigorous study — it isn't. The reason is that AP teachers and college faculty asking about flipping for advanced math tend to want this paper specifically, because the population is closer to theirs than a general algebra class. It's the paper I direct people to when the question is "does this work for AP?"</p>
-      <p>The AP Calculus FRQ Reviewer book series I later put on Apple Books — six volumes covering the standard FRQ topic areas — was partly informed by the perception data here. Specifically, students reported that the rewatch-and-pause behavior was worth more to them on FRQ practice than on procedural drills. That observation is what made me decide the FRQ books should be multi-touch with embedded video, rather than text-only. More on the books on the <a href="flipped-classroom-books.html">Books spoke</a> and the dedicated <a href="ap-calculus-frq-books.html">AP Calc FRQ page</a>.</p>
+      <p>The AP Calculus FRQ Reviewer book series I later put on Apple Books — six volumes covering the standard FRQ topic areas — was partly informed by the perception data here. Specifically, students reported that the rewatch-and-pause behavior was worth more to them on FRQ practice than on procedural drills. That observation is what made me decide the FRQ books should be multi-touch with embedded video, rather than text-only. More on the books on the <a href="/flipped-classroom-books">Books spoke</a> and the dedicated <a href="/ap-calculus-frq-books">AP Calc FRQ page</a>.</p>
     </section>
 
     <!-- §5 -->
@@ -903,7 +906,7 @@
       <p>Five years after the Springer paper, I co-authored a follow-up with a research team based in Cebu — <em>The Utility of a Flipped Classroom in Secondary Mathematics Education</em>, with C. Himang, M. Bongo, E. Selerio Jr., and L. Ocampo — published in the <em>International Journal of Mathematical Education in Science and Technology</em> (Taylor &amp; Francis).</p>
       <p>The point of the 2021 paper, in a sentence, is to test whether the effect from the 2016 RCT holds up in a wider sample, across multiple teachers and contexts. The 2016 paper was one school, one teacher; that's the right way to start a research line, and the wrong way to end one. If a model only works when the original investigator runs it, the field has a problem.</p>
       <p>The 2021 paper is the most recent peer-reviewed work I've co-authored on flipped classrooms in mathematics. It moves the conversation past "does the effect appear?" and toward "is the effect stable across teachers and student populations?" That's the question I'd want a research team in 2026 to be designing studies around, including the one I'm running myself.</p>
-      <p>A note on adjacent work. During the COVID period, I co-authored a separate study on Open Education Resources in Filipino-language mathematics video instruction — significant gain-score differences in favor of Filipino-language video for ninth-graders (<em>t</em> = 4.146, <em>p</em> &lt; .001) and a smaller but still significant effect for tenth-graders (<em>t</em> = 2.170, <em>p</em> &lt; .031). That paper sits more naturally on the <a href="flipped-classroom-distance-learning.html">Distance Learning spoke</a>, where I treat it in detail. I mention it here so the citation chain is complete.</p>
+      <p>A note on adjacent work. During the COVID period, I co-authored a separate study on Open Education Resources in Filipino-language mathematics video instruction — significant gain-score differences in favor of Filipino-language video for ninth-graders (<em>t</em> = 4.146, <em>p</em> &lt; .001) and a smaller but still significant effect for tenth-graders (<em>t</em> = 2.170, <em>p</em> &lt; .031). That paper sits more naturally on the <a href="/flipped-classroom-distance-learning">Distance Learning spoke</a>, where I treat it in detail. I mention it here so the citation chain is complete.</p>
     </section>
 
     <!-- §6 -->
@@ -913,7 +916,7 @@
       <p>I'm currently teaching at Barstow Community College, with adjunct loads at Victor Valley College and West Coast University. Through the 2025–2026 academic year, I'm running an action-research extension of the K–12 flipped-classroom study into the community-college population. The design borrows directly from the 2016 RCT — same instruments where they translate, same year-long structure, same focus on performance and attitude as outcomes.</p>
       <p>Three questions I'm asking, specifically. First, does the treatment effect from the K–12 RCT replicate in a population of adult learners? The constraints are different — jobs, kids, transportation, financial-aid timing — and any of those could moderate the effect. Second, does the in-class redesign that I rely on — the warm-up, the circulating, the one-on-one — survive the move to a fully online or hybrid course? About half my current load is online or hybrid, which is a different thing from face-to-face in ways that matter. Third, does the asynchronous video produce the same rewatch-and-recover behavior in college students that I saw in high schoolers? The early signal is that it does, and is in some ways more pronounced — but "early signal" is not a result.</p>
       <p>What I'm not claiming. The data isn't all in, and I'm not pre-publishing on this page. The qualitative signal so far is consistent with the K–12 work — students show up to the in-person or synchronous-online sessions more prepared, and those sessions are doing more of the work that used to happen at the kitchen table. The formal claim waits for the data, and the paper goes through peer review like the others.</p>
-      <p>There's also an earlier, smaller two-semester study I ran at the community-college level on additional online-based materials in an online Elementary Algebra class — listed on my <a href="https://www.linkedin.com/in/numberbender/" target="_blank" rel="noopener">LinkedIn profile</a> and the seed of the 2025–2026 extension. The <a href="flipped-classroom-higher-ed.html">Higher-Ed spoke</a> goes deeper on the teaching practice; this section is the research frame. When the paper lands, it'll be added to the references below.</p>
+      <p>There's also an earlier, smaller two-semester study I ran at the community-college level on additional online-based materials in an online Elementary Algebra class — listed on my <a href="https://www.linkedin.com/in/numberbender/" target="_blank" rel="noopener">LinkedIn profile</a> and the seed of the 2025–2026 extension. The <a href="/flipped-classroom-higher-ed">Higher-Ed spoke</a> goes deeper on the teaching practice; this section is the research frame. When the paper lands, it'll be added to the references below.</p>
     </section>
 
     <!-- §7 -->
@@ -934,14 +937,14 @@
         <details class="faq-item">
           <summary>Is one RCT with n=91 enough evidence to change my practice?</summary>
           <div class="faq-body">
-            <p>On its own, no. The 2016 paper is one study in one school with one teacher. What it does is sit alongside a broader meta-analytic literature on the flipped classroom that has accumulated since the mid-2010s — studies in math, chemistry, undergraduate physics, nursing, and beyond, with mixed but generally positive effect sizes. The short version: act on the practice signal where you can pilot it cheaply (one unit, per the <a href="flipped-classroom-math.html#s3">pillar's section three</a>), and watch whether the attendance, attitude, and assessment signals move in your room. The literature is informative; your room is decisive.</p>
+            <p>On its own, no. The 2016 paper is one study in one school with one teacher. What it does is sit alongside a broader meta-analytic literature on the flipped classroom that has accumulated since the mid-2010s — studies in math, chemistry, undergraduate physics, nursing, and beyond, with mixed but generally positive effect sizes. The short version: act on the practice signal where you can pilot it cheaply (one unit, per the <a href="/flipped-classroom-math#s3">pillar's section three</a>), and watch whether the attendance, attitude, and assessment signals move in your room. The literature is informative; your room is decisive.</p>
           </div>
         </details>
 
         <details class="faq-item">
           <summary>Where can I get the 2016 Springer paper?</summary>
           <div class="faq-body">
-            <p>The DOI in the references list resolves to the publisher's page on Springer Link. Most university libraries have institutional access. If you're an educator without institutional access, send me an email through the <a href="contact.html">contact page</a> and I'll point you to a legal copy.</p>
+            <p>The DOI in the references list resolves to the publisher's page on Springer Link. Most university libraries have institutional access. If you're an educator without institutional access, send me an email through the <a href="/contact">contact page</a> and I'll point you to a legal copy.</p>
           </div>
         </details>
 
@@ -984,8 +987,8 @@
     <h2>The studies are the receipts. The pillar is the practice.</h2>
     <p>If you came in via the research and want to see what flipping actually looks like in a math classroom — the units to start with, the video length rules, the seven-day starter plan — the pillar guide is the place. If you'd rather start a research conversation, the contact page is open.</p>
     <div class="cta-row">
-      <a href="flipped-classroom-math.html" class="btn btn-yellow btn-lg">Read the pillar guide →</a>
-      <a href="contact.html" class="btn btn-outline btn-lg">Email Dr. E about research</a>
+      <a href="/flipped-classroom-math" class="btn btn-yellow btn-lg">Read the pillar guide →</a>
+      <a href="/contact" class="btn btn-outline btn-lg">Email Dr. E about research</a>
     </div>
   </div>
 </section>
@@ -1027,27 +1030,27 @@
       </div>
       <div class="foot">
         <h4>Educators</h4>
-        <a href="teach-it-like-you-stream-it.html">Teach It Like You Stream It</a>
-        <a href="teach-the-math.html">Teach the Math</a>
-        <a href="teacher-resources.html">Teacher Resources</a>
-        <a href="speaking.html">Workshops</a>
-        <a href="speaking.html">AI in Education</a>
-        <a href="flipped-classroom-math.html">Flipped Learning</a>
+        <a href="/teach-it-like-you-stream-it">Teach It Like You Stream It</a>
+        <a href="/teach-the-math">Teach the Math</a>
+        <a href="/teacher-resources">Teacher Resources</a>
+        <a href="/speaking">Workshops</a>
+        <a href="/speaking">AI in Education</a>
+        <a href="/flipped-classroom-math">Flipped Learning</a>
       </div>
       <div class="foot">
         <h4>Connect</h4>
-        <a href="about.html">About Dr. E</a>
-        <a href="speaking.html">Speaking</a>
-        <a href="speaking-archive.html">Speaking Archive</a>
-        <a href="press.html">Press &amp; Media</a>
-        <a href="contact.html">Contact</a>
+        <a href="/about">About Dr. E</a>
+        <a href="/speaking">Speaking</a>
+        <a href="/speaking-archive">Speaking Archive</a>
+        <a href="/press">Press &amp; Media</a>
+        <a href="/contact">Contact</a>
         <a href="https://www.youtube.com/@numberbender" target="_blank" rel="noopener">YouTube Channel</a>
-        <a href="privacy.html">Privacy Policy</a>
+        <a href="/privacy">Privacy Policy</a>
       </div>
     </div>
     <div class="foot-bottom">
-      © 2026 Numberbender · Founded by Dr. Peter Esperanza · Numberbender Inc. is a 501(c)(3) nonprofit organization · EIN: 86-2952520 · Made with care for learners and educators everywhere. · <a href="privacy.html" style="color:#94a3b8;">Privacy Policy</a>
-      <div style="margin-top:8px;font-size:0.78rem;color:#64748b;">
+      © 2026 Numberbender · Founded by Dr. Peter Esperanza · Numberbender Inc. is a 501(c)(3) nonprofit organization · EIN: 86-2952520 · Made with care for learners and educators everywhere. · <a href="/privacy" style="color:#94a3b8;">Privacy Policy</a>
+      <div style="margin-top:8px;font-size:0.78rem;color:#94a3b8;">
         <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener"><img src="https://licensebuttons.net/l/by/4.0/88x31.png" alt="CC BY 4.0" style="border:0;vertical-align:middle;margin-right:6px;"></a>
         Original content licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener" style="color:#94a3b8;">CC BY 4.0</a> &mdash; free to share and adapt with credit to Peter Esperanza / Numberbender.
       </div>
@@ -1103,7 +1106,7 @@
 <!-- ── Numberbender Sticky Bar — Back to School June 2026 ── -->
 <div id="nb-sticky-bar">
   <p>🇵🇭 Philippine schools open in June! Get FREE bilingual math worksheets:</p>
-  <input type="email" id="nb-email-input" placeholder="your@email.com" autocomplete="email" />
+  <input type="email" id="nb-email-input" placeholder="your@email.com" autocomplete="email" aria-label="Email address" />
   <button class="nb-submit" onclick="nbSubmit()">Get Free Worksheets →</button>
   <button class="nb-close" onclick="nbDismiss()" aria-label="Close">✕</button>
 </div>

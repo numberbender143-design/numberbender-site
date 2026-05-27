@@ -25,10 +25,10 @@
 <meta name="twitter:title" content="Free Math Courses &amp; Lessons — Algebra to Calculus, EN &amp; Filipino | Numberbender"/>
 <meta name="twitter:description" content="10 math subjects, 59 units, and full 15-week college algebra courses — all free, taught by Dr. E."/>
 <meta name="twitter:image" content="https://numberbender.com/images/dr-e-hero.jpg"/>
-<link rel="icon" type="image/svg+xml" href="images/exports/numberbender-favicon.svg">
-<link rel="icon" type="image/png" sizes="32x32" href="images/exports/png/favicon-32.png">
-<link rel="icon" type="image/png" sizes="180x180" href="images/exports/png/favicon-180.png">
-<link rel="apple-touch-icon" sizes="180x180" href="images/exports/png/favicon-180.png">
+<link rel="icon" type="image/svg+xml" href="/images/exports/numberbender-favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/exports/png/favicon-32.png">
+<link rel="icon" type="image/png" sizes="180x180" href="/images/exports/png/favicon-180.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/exports/png/favicon-180.png">
 <meta name="theme-color" content="#1F6F6B">
 <style>
   :root{
@@ -157,8 +157,26 @@
   .foot a:hover{color:white;text-decoration:none;}
   .foot-brand p{font-size:0.9rem;line-height:1.7;margin-top:12px;}
   .foot-bottom{border-top:1px solid #1e293b;padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:0.85rem;}
+  .foot-bottom a{ color: #94a3b8; text-decoration: underline; }
   .foot-logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.15rem;color:white;}
   .foot-logo-mark{width:48px;height:48px;border-radius:10px;display:grid;place-items:center;overflow:hidden;}
+
+  /* CROSS-SUBJECT SEARCH */
+  .subject-search-wrap{position:relative;margin-bottom:24px;}
+  .subject-search-icon{position:absolute;left:16px;top:50%;transform:translateY(-50%);font-size:1.05rem;pointer-events:none;}
+  .subject-search-input{width:100%;padding:14px 48px 14px 46px;border:2px solid var(--border);border-radius:12px;font-size:1rem;background:var(--surface);color:var(--navy);outline:none;transition:border-color .2s,box-shadow .2s;font-family:inherit;}
+  .subject-search-input:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(37,99,235,0.12);}
+  .subject-search-input::placeholder{color:var(--muted);}
+  .subject-search-clear{position:absolute;right:14px;top:50%;transform:translateY(-50%);width:28px;height:28px;border:none;background:var(--border);border-radius:50%;cursor:pointer;display:none;place-items:center;font-size:0.85rem;color:var(--muted);transition:background .2s,color .2s;}
+  .subject-search-clear:hover{background:var(--blue);color:white;}
+  .subject-search-clear.visible{display:grid;}
+  .subject-search-status{font-size:0.85rem;color:var(--muted);margin-bottom:16px;min-height:1.3em;}
+  .subject-search-status strong{color:var(--blue);}
+  .subject-search-no-results{display:none;text-align:center;padding:48px 20px;color:var(--muted);}
+  .subject-search-no-results.visible{display:block;}
+  .subject-card.search-dim{opacity:0.22;pointer-events:none;}
+  .subject-card.search-match{border-color:var(--blue);box-shadow:0 0 0 3px rgba(37,99,235,0.10);}
+  .subject-card.search-hidden{display:none;}
 
   /* RESPONSIVE */
   @media(max-width:860px){
@@ -174,15 +192,17 @@
     .subject-grid{grid-template-columns:1fr 1fr;}
     .course-grid{grid-template-columns:1fr;}
   }
-</style>
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}.skip-link:focus{position:fixed;top:0;left:0;width:auto;height:auto;padding:8px 16px;background:#0F2B3D;color:#fff;z-index:9999;font-size:14px;text-decoration:none;border-radius:0 0 4px 0;}</style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
 
 <!-- NAV -->
 <header class="nav">
   <div class="container nav-inner">
-    <a href="index.html" class="logo logo-lockup" aria-label="Numberbender — Master the Elements of Math">
-      <img src="images/numberbender_banner_only.svg" alt="Numberbender" class="lockup-img">
+    <a href="/" class="logo logo-lockup" aria-label="Numberbender — Master the Elements of Math">
+      <img src="/images/numberbender_banner_only.svg" alt="Numberbender" class="lockup-img">
     </a>
     <button class="menu-toggle" aria-label="Toggle menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
     <nav class="nav-links" id="navlinks" aria-label="Main navigation">
@@ -221,6 +241,7 @@
     </nav>
   </div>
 </header>
+<main id="main-content">
 
 <!-- PAGE HERO -->
 <section class="page-hero">
@@ -267,11 +288,26 @@
       </div>
     </div>
 
+    <div class="subject-search-wrap">
+      <span class="subject-search-icon">🔍</span>
+      <input type="text" id="subject-search" class="subject-search-input"
+        placeholder="Search any topic… e.g. 'chain rule', 'fractions', 'standard deviation'"
+        oninput="filterSubjects(this.value)" autocomplete="off" spellcheck="false"
+        aria-label="Search lessons across all subjects">
+      <button class="subject-search-clear" id="subject-search-clear" onclick="clearSubjectSearch()" aria-label="Clear search">✕</button>
+    </div>
+    <div class="subject-search-status" id="subject-search-status"></div>
+    <div class="subject-search-no-results" id="subject-search-no-results">
+      <p style="font-size:2rem;margin-bottom:8px;">🔍</p>
+      <p style="font-weight:700;color:var(--navy);margin-bottom:6px;">No subjects found</p>
+      <p style="font-size:0.9rem;">Try a different keyword — or browse all subjects below.</p>
+    </div>
+
     <div class="subject-grid">
 
       <!-- Pre-Algebra -->
-      <a href="subjects/pre-algebra/" class="subject-card">
-        <div class="subject-icon"><img src="images/playlist_icons/13_elementary_algebra.png" alt="Pre-Algebra" style="object-fit:contain;"></div>
+      <a href="/subjects/pre-algebra/" class="subject-card" data-subject="pre-algebra">
+        <div class="subject-icon"><img src="/images/playlist_icons/13_elementary_algebra.png" alt="Pre-Algebra" style="object-fit:contain;"></div>
         <div>
           <div class="subject-name">Pre-Algebra</div>
           <div class="subject-meta">
@@ -283,8 +319,8 @@
       </a>
 
       <!-- Algebra -->
-      <a href="subjects/algebra/" class="subject-card">
-        <div class="subject-icon"><img src="images/playlist_icons/1_algebra.png" alt="Algebra"></div>
+      <a href="/subjects/algebra/" class="subject-card" data-subject="algebra">
+        <div class="subject-icon"><img src="/images/playlist_icons/1_algebra.png" alt="Algebra"></div>
         <div>
           <div class="subject-name">Algebra</div>
           <div class="subject-meta">
@@ -296,8 +332,8 @@
       </a>
 
       <!-- Geometry -->
-      <a href="subjects/geometry/" class="subject-card">
-        <div class="subject-icon"><img src="images/playlist_icons/10_geomtery.png" alt="Geometry"></div>
+      <a href="/subjects/geometry/" class="subject-card" data-subject="geometry">
+        <div class="subject-icon"><img src="/images/playlist_icons/10_geomtery.png" alt="Geometry"></div>
         <div>
           <div class="subject-name">Geometry</div>
           <div class="subject-meta">
@@ -309,8 +345,8 @@
       </a>
 
       <!-- Trigonometry -->
-      <a href="subjects/trigonometry/" class="subject-card">
-        <div class="subject-icon"><img src="images/playlist_icons/8_trigonometry.png" alt="Trigonometry"></div>
+      <a href="/subjects/trigonometry/" class="subject-card" data-subject="trigonometry">
+        <div class="subject-icon"><img src="/images/playlist_icons/8_trigonometry.png" alt="Trigonometry"></div>
         <div>
           <div class="subject-name">Trigonometry</div>
           <div class="subject-meta">
@@ -322,8 +358,8 @@
       </a>
 
       <!-- Precalculus -->
-      <a href="subjects/precalculus/" class="subject-card">
-        <div class="subject-icon"><img src="images/playlist_icons/2_precalculus.png" alt="Precalculus"></div>
+      <a href="/subjects/precalculus/" class="subject-card" data-subject="precalculus">
+        <div class="subject-icon"><img src="/images/playlist_icons/2_precalculus.png" alt="Precalculus"></div>
         <div>
           <div class="subject-name">Precalculus</div>
           <div class="subject-meta">
@@ -335,8 +371,8 @@
       </a>
 
       <!-- Calculus -->
-      <a href="subjects/calculus/" class="subject-card">
-        <div class="subject-icon"><img src="images/playlist_icons/4_Calculus.png" alt="Calculus"></div>
+      <a href="/subjects/calculus/" class="subject-card" data-subject="calculus">
+        <div class="subject-icon"><img src="/images/playlist_icons/4_Calculus.png" alt="Calculus"></div>
         <div>
           <div class="subject-name">Calculus</div>
           <div class="subject-meta">
@@ -348,8 +384,8 @@
       </a>
 
       <!-- Statistics -->
-      <a href="subjects/statistics/" class="subject-card">
-        <div class="subject-icon"><img src="images/playlist_icons/3_statistics.png" alt="Statistics"></div>
+      <a href="/subjects/statistics/" class="subject-card" data-subject="statistics">
+        <div class="subject-icon"><img src="/images/playlist_icons/3_statistics.png" alt="Statistics"></div>
         <div>
           <div class="subject-name">Statistics</div>
           <div class="subject-meta">
@@ -361,8 +397,8 @@
       </a>
 
       <!-- Linear Algebra -->
-      <a href="subjects/linear-algebra/" class="subject-card">
-        <div class="subject-icon"><img src="images/playlist_icons/6_linear_algebra.png" alt="Linear Algebra"></div>
+      <a href="/subjects/linear-algebra/" class="subject-card" data-subject="linear-algebra">
+        <div class="subject-icon"><img src="/images/playlist_icons/6_linear_algebra.png" alt="Linear Algebra"></div>
         <div>
           <div class="subject-name">Linear Algebra</div>
           <div class="subject-meta">
@@ -374,8 +410,8 @@
       </a>
 
       <!-- Discrete Mathematics -->
-      <a href="subjects/discrete-math/" class="subject-card">
-        <div class="subject-icon"><img src="images/playlist_icons/5_discrete_math.png" alt="Discrete Mathematics"></div>
+      <a href="/subjects/discrete-math/" class="subject-card" data-subject="discrete-math">
+        <div class="subject-icon"><img src="/images/playlist_icons/5_discrete_math.png" alt="Discrete Mathematics"></div>
         <div>
           <div class="subject-name">Discrete Mathematics</div>
           <div class="subject-meta">
@@ -387,8 +423,8 @@
       </a>
 
       <!-- Test Prep -->
-      <a href="subjects/test-prep/" class="subject-card">
-        <div class="subject-icon"><img src="images/playlist_icons/15_test_prep.png" alt="Test Prep"></div>
+      <a href="/subjects/test-prep/" class="subject-card" data-subject="test-prep">
+        <div class="subject-icon"><img src="/images/playlist_icons/15_test_prep.png" alt="Test Prep"></div>
         <div>
           <div class="subject-name">Test Prep</div>
           <div class="subject-meta">
@@ -447,7 +483,7 @@
               <div class="lbl">always</div>
             </div>
           </div>
-          <a href="learn/elementary-algebra/" class="course-cta blue">Start Course →</a>
+          <a href="/learn/elementary-algebra/" class="course-cta blue">Start Course →</a>
         </div>
       </div>
 
@@ -477,7 +513,7 @@
               <div class="lbl">always</div>
             </div>
           </div>
-          <a href="learn/intermediate-algebra/" class="course-cta purple">Start Course →</a>
+          <a href="/learn/intermediate-algebra/" class="course-cta purple">Start Course →</a>
         </div>
       </div>
 
@@ -540,13 +576,14 @@
 </section>
 
 <!-- FOOTER -->
+</main>
 <footer>
   <div class="container">
     <div class="foot-grid">
       <div class="foot foot-brand">
         <div class="foot-logo">
           <div class="foot-logo-mark">
-            <img src="images/numberbender-mark-teal-transparent.svg" alt="Numberbender" style="width:100%;height:100%;object-fit:contain;">
+            <img src="/images/numberbender-mark-teal-transparent.svg" alt="Numberbender" style="width:100%;height:100%;object-fit:contain;">
           </div>
           <span>Numberbender</span>
         </div>
@@ -555,19 +592,19 @@
       <div class="foot">
         <h4>Courses</h4>
         <a href="/courses">All Subjects</a>
-        <a href="learn/elementary-algebra/">Elementary Algebra</a>
-        <a href="learn/intermediate-algebra/">Intermediate Algebra</a>
+        <a href="/learn/elementary-algebra/">Elementary Algebra</a>
+        <a href="/learn/intermediate-algebra/">Intermediate Algebra</a>
       </div>
       <div class="foot">
         <h4>Students</h4>
-        <a href="math-worksheets.html">Free Worksheets</a>
+        <a href="/math-worksheets">Free Worksheets</a>
         <a href="/courses">Video Lessons</a>
       </div>
       <div class="foot">
         <h4>Connect</h4>
-        <a href="about.html">About Dr. E</a>
-        <a href="speaking.html">Speaking</a>
-        <a href="contact.html">Contact</a>
+        <a href="/about">About Dr. E</a>
+        <a href="/speaking">Speaking</a>
+        <a href="/contact">Contact</a>
       </div>
     </div>
     <div class="foot-bottom">
@@ -578,6 +615,379 @@
 </footer>
 
 <script>
+/* ═══════════════════════════════════════════════════════════════════
+   LESSON SEARCH INDEX — courses.html
+
+   ⚠️  MAINTENANCE REQUIRED: Whenever you add new lessons to any
+   subject page, update the matching array below so the cross-subject
+   search stays accurate.
+
+   Each array contains lesson titles + unit titles for that subject.
+   Last updated: May 2026 · 448 lessons across 10 subjects
+   ═══════════════════════════════════════════════════════════════════ */
+
+const LESSON_INDEX = {
+  'pre-algebra': [
+    'The Number Line','Absolute Value','Operations on Integers',
+    'The Coordinate System','Prime Factorization','Percent and Decimals',
+    'Ratio and Proportion','Square Roots','Laws of Exponents',
+    'Scientific Notation','Direct Variation','Inverse Variation',
+    'Joint Variation','Number Sense','Fractions, Percent & Ratios',
+    'Roots & Exponents','Variation'
+  ],
+  'algebra': [
+    'Adding and Subtracting Integers','Multiplying and Dividing Integers',
+    'Fractions and Mixed Numbers','Rational Numbers and Decimals',
+    'Order of Operations (PEMDAS)','Variables and Algebraic Expressions',
+    'Translating Verbal to Algebraic Expressions','Properties of Real Numbers',
+    'Combining Like Terms','The Distributive Property',
+    'One-Step Equations','Multi-Step Equations','Solving Linear Equations',
+    'Equations with Fractions and Decimals','Literal Equations and Formulas',
+    'Word Problems — Setting Up Equations','Solving Linear Inequalities',
+    'Compound Inequalities — And / Or','Solving and Graphing Inequalities',
+    'Absolute Value Equations','Absolute Value Inequalities',
+    'Plotting Points in the Coordinate Plane','Graphing Linear Equations',
+    'Finding X and Y Intercepts','Calculating Slope','Slope-Intercept Form',
+    'Point-Slope Form','Writing Equations of Lines',
+    'Parallel and Perpendicular Lines','Domain and Range of Functions',
+    'Solving Systems by Graphing','Solving Systems by Substitution',
+    'Solving Systems by Elimination','Systems of Linear Inequalities',
+    'Applications and Word Problems','Laws of Exponents',
+    'Adding and Subtracting Polynomials',
+    'Multiplying Polynomials — FOIL and Distributive','Dividing Polynomials',
+    'Factoring — Greatest Common Factor (GCF)','Factoring Trinomials (a = 1)',
+    'Zero Product Property and Special Patterns',
+    'Simplifying Rational Expressions',
+    'Multiplying and Dividing Rational Expressions',
+    'Adding and Subtracting Rational Expressions','Complex Fractions',
+    'Rational Equations and Applications','Simplifying Radicals',
+    'Adding and Subtracting Radicals','Radical Equations',
+    'Solving Quadratics — Missing Linear Term',
+    'Solving Quadratic Equations by Factoring','Completing the Square',
+    'The Quadratic Formula','Quadratic Functions and Parabolas',
+    'Exponential Functions — Graphs and Properties',
+    'Introduction to Logarithms','Properties of Logarithms',
+    'Change of Base Formula','Graphing Logarithmic Functions',
+    'Arithmetic Sequences','Geometric Sequences',
+    'Sequences and Series Notation','Summation Notation',
+    'Permutations','Combinations','Factorials',
+    'Number Systems & Operations','Variables, Expressions & Properties',
+    'Linear Equations','Linear Inequalities & Absolute Value',
+    'Graphing & Functions','Systems of Equations',
+    'Polynomials & Factoring','Rational Expressions & Equations',
+    'Radicals & Quadratic Equations','Exponential & Logarithmic Functions',
+    'Sequences, Series & Counting','Solving Piecewise Defined Functions'
+  ],
+  'geometry': [
+    'Naming Points, Lines, and Planes','Naming and Writing Angle Notations',
+    'Classifying and Naming Polygons',
+    'Measuring Interior Angles of Polygons Using Diagonals',
+    'Deductive and Inductive Reasoning',
+    'Axiomatic Structure of a Mathematical System',
+    'Theorems and Postulates on Parallel and Perpendicular Lines',
+    'Properties of Parallel Lines Cut by a Transversal',
+    'Using Properties of Parallel Lines Cut by a Transversal',
+    'Solving Angle Measures of Intersecting Lines',
+    'Constructing Parallel and Perpendicular Lines with a Compass',
+    'Constructing Triangles Using a Compass',
+    'Triangle Congruence — SSS and SAS Postulates',
+    'Triangle Congruence — AAS and ASA Postulates',
+    'Determining Similarity in Polygons',
+    'Proving Triangle Similarity — AA, SSS, and SAS',
+    'Ratio and Proportion in Similarity',
+    'Conditions That Make a Quadrilateral a Parallelogram',
+    'Trapezoids and the Midsegment Theorem',
+    'Writing Two-Column Proofs on Kite and Trapezoid',
+    'Finding Arc Measure and Arc Length of a Circle',
+    'Theorems on Chords and Arcs in Congruent Circles',
+    'Foundations of Geometry','Logic, Reasoning & Proofs',
+    'Parallel & Perpendicular Lines','Triangle Congruence',
+    'Similarity','Quadrilaterals','Circles'
+  ],
+  'trigonometry': [
+    'The Pythagorean Theorem','Introduction to SOH CAH TOA',
+    'Solving for Missing Sides','Right Triangle Word Problems',
+    'The Unit Circle','Graphing Sine and Cosine Functions',
+    'Graphing Cosecant and Secant Functions',
+    'Simplifying Trigonometric Expressions',
+    'Proving Trigonometric Identities',
+    'Proving Trigonometric Identities (Advanced)',
+    'Sum and Difference Formulas','Solving Trigonometric Equations',
+    'Solving Trig Equations Using Identities',
+    'Law of Sines — Oblique Triangles','Law of Cosines — Oblique Triangles',
+    'Right Triangle Trigonometry','Angles & the Unit Circle',
+    'Graphing Trigonometric Functions','Trigonometric Identities',
+    'Oblique Triangles'
+  ],
+  'precalculus': [
+    'Function Operations & Composition','Finding the Inverse of a Function',
+    'Finding the Inverse Algebraically','Solving Quadratic Equations',
+    'Remainder Theorem & Factor Theorem',
+    'Rational Exponents & Radical Expressions',
+    'Simplifying Radical Expressions','Solving Radical Equations',
+    'Simplifying Rational Expressions',
+    'Adding & Subtracting Rational Expressions',
+    'Multiplying & Dividing Rational Expressions',
+    'Domain of Rational Functions','Asymptotes of Rational Functions',
+    'Graphing Exponential Functions','Introduction to Logarithmic Functions',
+    'Properties of Logarithms','Graphing Logarithmic Functions',
+    'Solving Exponential Equations — Change of Base',
+    'Solving Logarithmic Equations','Angles & Radian Measure',
+    'The Six Trig Ratios (SOH CAH TOA)',
+    'The Unit Circle & Special Right Triangles',
+    'Right Triangle Trig — Rationalizing Fractions',
+    'Solving Right Triangles (SOH CAH TOA)','Trigonometry Word Problems',
+    'Graphing Sine & Cosine Functions','Graphing Cosecant & Secant Functions',
+    'Simplifying Trig Expressions','Proving Trigonometric Identities',
+    'Sum & Difference Formulas','Solving Trig Equations',
+    'Solving Trig Equations — Pythagorean Identities',
+    'Law of Sines','Law of Cosines','Operations with Complex Numbers',
+    'Absolute Value & Trig Form of Complex Numbers',
+    'Multiplying & Dividing Complex Numbers in Trig Form',
+    "De Moivre's Theorem",
+    'Vectors — Components, Magnitude & Unit Vectors','Vectors — Dot Product',
+    'Introduction to Conic Sections & Parabolas',
+    'Parabolas — Standard Form & Key Features',
+    'Writing the Equation of a Parabola','Conic Sections — Circles',
+    'Ellipses — Standard Form & Key Parts',
+    'Ellipses — Standard Form & Graphing',
+    'Ellipses — Equations, Graphs & Foci',
+    'Hyperbolas — Graphing & Analyzing',
+    'Converting Conics to Standard Form',
+    'Systems of Equations — Solving by Graphing',
+    'Systems of Linear Inequalities','Matrices — Elementary Row Operations',
+    'Matrix Multiplication','Determinants of 2×2 & 3×3 Matrices',
+    'Determinants — Advanced','Finding the Inverse of a 2×2 Matrix',
+    "Cramer's Rule",'Sequences & Factorial Notation',
+    'Arithmetic Sequences','Geometric Sequences',
+    'Summation & Sigma Notation','Mathematical Induction',
+    "Binomial Theorem & Pascal's Triangle",'Combinations',
+    'Introduction to Derivatives — Power Rule',
+    'Solving Piecewise Defined Functions',
+    'Functions','Polynomial & Rational Functions',
+    'Exponential & Logarithmic Functions','Trigonometry Basics',
+    'Graphing Trig Functions','Trig Identities & Laws',
+    'Complex Numbers & Vectors','Conic Sections','Systems & Matrices',
+    'Sequences, Series & Counting','Preview of Calculus'
+  ],
+  'calculus': [
+    'Introduction to Limits',
+    'Solving Limits — Direct Substitution & Factoring',
+    'Evaluating Limits — Multiple Techniques',
+    'One-Sided Limits & Piecewise Functions','Limits at Infinity',
+    "L'Hôpital's Rule",'Definition of Derivative',
+    'Power Rule & Constant Rule','Product Rule','Quotient Rule',
+    'Chain Rule','Derivatives from a Table of Values',
+    'Derivatives of Trig Functions','Derivatives of Exponential Functions',
+    'Derivative of ln and Logarithmic Functions',
+    'Derivative of Inverse Trig Functions',
+    'Differentiating Transcendental Functions','Implicit Differentiation',
+    'Implicit Differentiation — Trig Functions & 2nd Derivative',
+    'Higher-Order Derivatives','Equation of a Tangent Line',
+    'Related Rates — Circles & Balloons','Related Rates — Ladder & Cone',
+    "Mean Value Theorem & Rolle's Theorem",'Critical Numbers',
+    'Extreme Value Theorem','First Derivative Test — Local Extrema',
+    'Second Derivative Test — Concavity & Inflection',
+    "Analyzing f(x) Using the Graph of f'(x)",'Optimization Problems',
+    'Velocity, Acceleration & Sign Chart','Introduction to Antiderivatives',
+    'Antiderivatives of Transcendental Functions',
+    'Riemann Sums — Area Under the Curve',
+    'Riemann Sums — Distance & Displacement','Definite Integrals',
+    'Fundamental Theorem of Calculus','Net Change Applications',
+    'U-Substitution','Area Between Curves',
+    'Area with Subregions (WRT x and WRT y)','Volume — Disk Method',
+    'Volume — Washer Method','Volume — Cross Sections',
+    'Average Value of a Function',
+    'Slope Fields & Separable Differential Equations',
+    'TI-84 Strategies for the AP FRQ',
+    'Limits','Basic Derivative Rules','Transcendental Function Derivatives',
+    'Derivative Applications','Integration Fundamentals',
+    'Integral Applications','AP Calculus AB/BC Exam Prep — FRQ Practice'
+  ],
+  'statistics': [
+    'Identifying Population and Sample','Parameters vs Statistics',
+    'Categorical vs Quantitative Variables','Discrete vs Continuous Variables',
+    'Sampling Techniques — Random Number Generator',
+    'Simple Random Sampling — Table D',
+    'Simulating Experiments — Random Digit Table',
+    'Bias, Lurking & Confounding Variables','Constructing Dot Plots',
+    'Frequency Distribution Tables & Histograms','Stem-and-Leaf Plots',
+    'Measures of Center — Mean vs Median',
+    'Percentile Rank from Raw Data',
+    'Percentile Rank & the Normal Distribution',
+    'Finding Area Under the Normal Curve — Z-Table',
+    'Quartiles and Box-and-Whisker Plots',
+    'Standard Deviation & Sigma Notation',
+    'Z-Scores and Standard Normal Distribution',
+    'The Empirical Rule — 68-95-99.7',
+    'Normal Distribution Probability — Z-Table',
+    'Finding Area Under Normal Curve — Ti-84',
+    'Continuous Random Variables & Normal Distribution',
+    'Explanatory & Response Variables — Scatterplots',
+    'Graphing & Interpreting Scatterplots','Interpreting Correlation — FODS',
+    'Least Squares Regression Line (LSRL)',
+    'LSRL from Computer Output','LSRL Predictions — Desmos',
+    'Linear Transformation of Bivariate Data',
+    'Transforming Data to Achieve Linearity',
+    'Introduction to Probability — Sample Spaces','Probability Rules — Events',
+    'Classical Probability','Independent vs Dependent Events',
+    'Probability Models','Two-Way Tables & Venn Diagrams',
+    'Two-Way Tables, Venn Diagrams & Tree Diagrams',
+    'Conditional Probability','Conditional Probability — Using Tables',
+    'Combinations & Counting Methods',
+    'Probability of Discrete Random Variables',
+    'Mean & Standard Deviation of Discrete Random Variables',
+    'Binomial Probability',
+    'Mean & Standard Deviation of Binomial Distribution',
+    'Geometric Distribution',
+    'Uniform Distribution — Continuous Random Variables',
+    'Sampling Distributions','Introduction to Confidence Intervals',
+    'Computing CI for Population Mean (Z-interval)',
+    'CI for Population Mean — t-Distribution',
+    'Solving Problems — CI for Population Mean',
+    'Determining Sample Size for CI',
+    'Confidence Interval for Population Proportion',
+    'Solving Problems — CI for Proportion',
+    'Matched Pairs — Confidence Interval',
+    'Introduction to Hypothesis Testing','Type I and Type II Errors',
+    'Hypothesis Testing — One Sample Mean (Z-Test)',
+    'Hypothesis Testing — One Sample Proportion',
+    'Hypothesis Testing — Two Sample Means',
+    'Hypothesis Testing — Two Sample Proportions',
+    'Hypothesis Testing — Matched Pairs',
+    'Chi-Square Goodness of Fit','Chi-Square Test for Independence',
+    'Exploring Data & Study Design','Representing & Summarizing Data',
+    'The Normal Distribution','Linear Regression & Correlation',
+    'Probability','Random Variables & Distributions',
+    'Confidence Intervals','Hypothesis Testing',
+    'AP Statistics Exam Prep — FRQ Practice'
+  ],
+  'linear-algebra': [
+    'Introduction to Matrices',
+    'Matrix Addition, Subtraction & Scalar Multiplication',
+    'Matrix Multiplication','Elementary Row Operations',
+    'Converting to Augmented Matrices','Back Substitution',
+    'Describing Solutions of a Linear System',
+    'Solving 3-Variable Linear Systems with Matrices',
+    'Matrix Operations with Technology','Determinants of Matrices',
+    'Inverse of a 2×2 Matrix',"Cramer's Rule — 2×2 Systems",
+    "Cramer's Rule — Larger Systems",'Introduction to Vectors',
+    'Vector Dot Product','Linear Systems with Matrices',
+    'Determinants, Inverses & Cramer\'s Rule','Vectors'
+  ],
+  'discrete-math': [
+    'Statements & Negations','Compound Statements & Logical Connectives',
+    'Truth Tables — Conjunction & Disjunction',
+    'Translating Compound Statements to Symbolic Form',
+    'Basic Set Notation','Subsets','Venn Diagrams & Set Operations',
+    'Venn Diagrams — Reading Survey Problems',
+    'Venn Diagrams — Solving Survey Problems',
+    'Conditional Statements','Inverse, Converse & Contrapositive',
+    'Deductive Reasoning & Law of Detachment','Writing a Two-Column Proof',
+    'Arithmetic & Geometric Sequences (Part 1)',
+    'Arithmetic & Geometric Sequences (Part 2)',
+    'Summation Notation','Mathematical Induction',
+    'Fundamental Counting Principle','Logic & Symbolic Reasoning',
+    'Set Theory','Conditional Reasoning & Proof',
+    'Sequences, Counting & Induction'
+  ],
+  'test-prep': [
+    'Solving Equations — Algebraic Problem-Solving','Solving for x',
+    'Y-Intercept Problems — Decoding X-Y Tables',
+    'Calculating Slope of a Line',
+    'Graphing Linear Equations — Slope-Intercept',
+    'Mastering Linear Systems','Solutions of Linear Inequalities',
+    'Systems of Linear Inequalities',
+    'Quadratic Equations — Real Solutions & Imaginary Numbers',
+    'Graphing Quadratics — Vertex Form of Parabolas',
+    'Function Operations','Function Evaluation — Simplify with f(x)',
+    'Arithmetic Sequences — Step-by-Step',
+    'Logarithmic Equations — Converting Logs to Exponential',
+    'Equations with the Change of Base Formula',
+    'Decimal Problem Solving with Fraction Skills',
+    'Percentage Word Problems',
+    'Law of Exponents — Entrance Exam Strategies',
+    'Multiplying Radical Expressions — Distributive Property',
+    'Adding Radicals by Factoring',
+    'Multiplying Polynomials — Distributive Property',
+    'Addition of Rational Expressions','Complex Numbers',
+    'Data Analysis — Using Scatterplots (SAT & UPCAT)',
+    'Calculating Mean from a Graph',
+    'Interior Angle Theorem (SAT & UPCAT)',
+    'Volume — Rectangular Solids & Cubes','Congruence & Equations',
+    'Trig Ratios — SOH-CAH-TOA','Order of Operations (PEMDAS)',
+    'Adding & Subtracting Integers','Simplifying Fractions',
+    'Multiplying Fractions Using Prime Factors',
+    'Dividing Fractions Using Prime Factors',
+    'Dividing Fractions Using Factoring',
+    'Comparing Fractions — Which is Bigger?','Comparing Fractions',
+    'Simplifying Complex Fractions','Factoring Quadratics',
+    'Factoring — Difference of Two Squares','Geometric Sequences',
+    'Solving Probability Problems','Probability — 2-Way Table',
+    'Algebra & Linear Equations','Functions, Quadratics & Sequences',
+    'Number Sense, Radicals & Exponents',
+    'Statistics, Geometry & Word Problems','Quick Drills — Math in a Minute',
+    'LET','UPCAT','SAT','CBEST','PRAXIS'
+  ]
+};
+
+/* ═══════════════════════════════════════════════════════════════════
+   CROSS-SUBJECT SEARCH LOGIC
+   Searches lesson titles across all subjects and highlights cards.
+   Non-matching cards are dimmed (not hidden) so the full library
+   remains visible — students see WHERE the topic is, and WHERE it isn't.
+   ═══════════════════════════════════════════════════════════════════ */
+
+function filterSubjects(query) {
+  const q = query.trim().toLowerCase();
+  const clearBtn = document.getElementById('subject-search-clear');
+  const statusEl = document.getElementById('subject-search-status');
+  const noResults = document.getElementById('subject-search-no-results');
+  clearBtn.classList.toggle('visible', q.length > 0);
+
+  const cards = document.querySelectorAll('.subject-grid .subject-card');
+
+  if (!q) {
+    cards.forEach(card => {
+      card.classList.remove('search-match', 'search-dim');
+    });
+    statusEl.innerHTML = '';
+    noResults.classList.remove('visible');
+    return;
+  }
+
+  let matchCount = 0;
+  cards.forEach(card => {
+    const subject = card.dataset.subject;
+    const lessons = LESSON_INDEX[subject] || [];
+    const subjectName = (card.querySelector('.subject-name') || {innerText:''}).innerText.toLowerCase();
+    const hasMatch = subjectName.includes(q) || lessons.some(l => l.toLowerCase().includes(q));
+    if (hasMatch) {
+      card.classList.add('search-match');
+      card.classList.remove('search-dim');
+      matchCount++;
+    } else {
+      card.classList.add('search-dim');
+      card.classList.remove('search-match');
+    }
+  });
+
+  if (matchCount > 0) {
+    statusEl.innerHTML = `<strong>${matchCount} subject${matchCount !== 1 ? 's' : ''}</strong> have lessons matching "<strong>${query.trim()}</strong>"`;
+    noResults.classList.remove('visible');
+  } else {
+    statusEl.innerHTML = '';
+    noResults.classList.add('visible');
+  }
+}
+
+function clearSubjectSearch() {
+  const input = document.getElementById('subject-search');
+  input.value = '';
+  filterSubjects('');
+  input.focus();
+}
+
 function setLang(lang) {
   document.getElementById('btn-en').classList.toggle('active', lang === 'en');
   document.getElementById('btn-fil').classList.toggle('active', lang === 'fil');

@@ -90,7 +90,7 @@
     text-decoration: none !important; }
   .btn:hover{ transform: translateY(-2px); box-shadow: var(--shadow); }
   .btn-primary{ background: var(--blue); color: white; }
-  .btn-cyan{ background: var(--cyan); color: white; }
+  .btn-cyan{ background: #0e7490; color: white; }
   .btn-yellow{ background: var(--yellow); color: var(--navy); }
   .btn-outline{ background: transparent; color: var(--navy); border: 2px solid var(--border); }
   .btn-outline:hover{ border-color: var(--blue); color: var(--blue); }
@@ -430,6 +430,7 @@
   .socials a[aria-label="Facebook"]:hover{ background: #1877f2; }
   .socials a[aria-label="LinkedIn"]:hover{ background: #0a66c2; }
   .foot-bottom{ border-top: 1px solid #1e293b; padding-top: 20px; text-align: center; font-size: 0.88rem; }
+  .foot-bottom a{ color: #94a3b8; text-decoration: underline; }
 
   @media (max-width: 900px){
     .about-hero-grid, .story-grid, .work-grid{ grid-template-columns: 1fr; gap: 32px; }
@@ -555,7 +556,7 @@
   }
   .foot-signup-form button:hover{ background: #0891b2; }
 
-</style>
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}.skip-link:focus{position:fixed;top:0;left:0;width:auto;height:auto;padding:8px 16px;background:#0F2B3D;color:#fff;z-index:9999;font-size:14px;text-decoration:none;border-radius:0 0 4px 0;}</style>
 
 <script type="application/ld+json">
 {
@@ -614,6 +615,8 @@
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
 
 <header class="nav">
   <div class="container nav-inner">
@@ -657,6 +660,7 @@
     </nav>
   </div>
 </header>
+<main id="main-content">
 
 <section class="about-hero">
   <div class="container about-hero-grid">
@@ -676,8 +680,8 @@
         <span class="tag">501(c)(3) Founder</span>
       </div>
       <div class="about-cta">
-        <a href="contact.html" class="btn btn-primary">Get in Touch</a>
-        <a href="speaking.html" class="btn btn-outline">Book a Talk</a>
+        <a href="/contact" class="btn btn-primary">Get in Touch</a>
+        <a href="/speaking" class="btn btn-outline">Book a Talk</a>
       </div>
     </div>
   </div>
@@ -906,13 +910,13 @@
         <div class="ic" aria-hidden="true">🎬</div>
         <h3>Creating</h3>
         <p>Video content, social media, and the Teach It Like You Stream It series — helping educators teach for the camera.</p>
-        <a href="teach-it-like-you-stream-it.html">Watch the series →</a>
+        <a href="/teach-it-like-you-stream-it">Watch the series →</a>
       </div>
       <div class="work-card w3">
         <div class="ic" aria-hidden="true">🎤</div>
         <h3>Speaking</h3>
         <p>Keynotes, faculty development sessions, and conference workshops on flipped learning, AI, and online engagement.</p>
-        <a href="speaking.html">Book Dr. E →</a>
+        <a href="/speaking">Book Dr. E →</a>
       </div>
     </div>
   </div>
@@ -923,12 +927,13 @@
     <h2>Want to work together?</h2>
     <p>Whether you're a school looking for faculty development, a conference seeking a keynote, or a fellow educator who wants to collaborate — let's talk.</p>
     <div class="final-ctas">
-      <a href="contact.html" class="btn btn-cyan btn-lg">Contact Dr. E</a>
-      <a href="speaking.html" class="btn btn-yellow btn-lg">Book a Talk</a>
+      <a href="/contact" class="btn btn-cyan btn-lg">Contact Dr. E</a>
+      <a href="/speaking" class="btn btn-yellow btn-lg">Book a Talk</a>
     </div>
   </div>
 </section>
 
+</main>
 <footer>
   <div class="container">
     <div class="foot-grid">
@@ -966,27 +971,27 @@
       </div>
       <div class="foot">
         <h4>Educators</h4>
-        <a href="for-teachers.html">For Teachers Hub</a>
-        <a href="teach-it-like-you-stream-it.html">Teach It Like You Stream It</a>
-        <a href="teach-the-math.html">Teach the Math</a>
-        <a href="teacher-resources.html">Teacher Resources</a>
-        <a href="flipped-classroom-math.html">Flipped Classroom Guide</a>
-        <a href="speaking.html">Workshops &amp; Keynotes</a>
+        <a href="/for-teachers">For Teachers Hub</a>
+        <a href="/teach-it-like-you-stream-it">Teach It Like You Stream It</a>
+        <a href="/teach-the-math">Teach the Math</a>
+        <a href="/teacher-resources">Teacher Resources</a>
+        <a href="/flipped-classroom-math">Flipped Classroom Guide</a>
+        <a href="/speaking">Workshops &amp; Keynotes</a>
       </div>
       <div class="foot">
         <h4>Connect</h4>
-        <a href="about.html">About Dr. E</a>
-        <a href="speaking.html">Speaking</a>
-        <a href="speaking-archive.html">Speaking Archive</a>
-        <a href="press.html">Press &amp; Media</a>
-        <a href="contact.html">Contact</a>
+        <a href="/about">About Dr. E</a>
+        <a href="/speaking">Speaking</a>
+        <a href="/speaking-archive">Speaking Archive</a>
+        <a href="/press">Press &amp; Media</a>
+        <a href="/contact">Contact</a>
         <a href="https://www.youtube.com/@numberbender" target="_blank" rel="noopener">YouTube Channel</a>
-        <a href="privacy.html">Privacy Policy</a>
+        <a href="/privacy">Privacy Policy</a>
       </div>
     </div>
     <div class="foot-bottom">
-      © 2026 Numberbender · Founded by Dr. Peter Esperanza · Numberbender Inc. is a 501(c)(3) nonprofit organization · EIN: 86-2952520 · Made with care for learners and educators everywhere. · <a href="privacy.html" style="color:#94a3b8;">Privacy Policy</a>
-      <div style="margin-top:8px;font-size:0.78rem;color:#64748b;">
+      © 2026 Numberbender · Founded by Dr. Peter Esperanza · Numberbender Inc. is a 501(c)(3) nonprofit organization · EIN: 86-2952520 · Made with care for learners and educators everywhere. · <a href="/privacy" style="color:#94a3b8;">Privacy Policy</a>
+      <div style="margin-top:8px;font-size:0.78rem;color:#94a3b8;">
         <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener"><img src="https://licensebuttons.net/l/by/4.0/88x31.png" alt="CC BY 4.0" style="border:0;vertical-align:middle;margin-right:6px;"></a>
         Original content licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener" style="color:#94a3b8;">CC BY 4.0</a> &mdash; free to share and adapt with credit to Peter Esperanza / Numberbender.
       </div>
@@ -1042,7 +1047,7 @@
 <!-- ── Numberbender Sticky Bar — Back to School June 2026 ── -->
 <div id="nb-sticky-bar">
   <p>🇵🇭 Philippine schools open in June! Get FREE bilingual math worksheets:</p>
-  <input type="email" id="nb-email-input" placeholder="your@email.com" autocomplete="email" />
+  <input type="email" id="nb-email-input" placeholder="your@email.com" autocomplete="email" aria-label="Email address" />
   <button class="nb-submit" onclick="nbSubmit()">Get Free Worksheets →</button>
   <button class="nb-close" onclick="nbDismiss()" aria-label="Close">✕</button>
 </div>

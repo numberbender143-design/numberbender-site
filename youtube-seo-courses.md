@@ -1,4 +1,0 @@
-Completely valid — books are honestly better for self-study anyway, you can go at your own pace without scrubbing a timeline.
-Best single free resource for your situation: Paul's Online Math Notes (tutorial.math.lamar.edu). Reads like a real textbook, covers algebra through calculus, has worked examples and practice problems. Start with his algebra and trig review — it's built exactly for people returning to math after a gap.
-For drilling problems once a concept feels familiar again, I built a free worksheet generator at numberbender.com — pick the topic, get a printable problem set, no videos, no account needed. Full disclosure: math teacher who made it 😊
-If you got through precalc fine before it'll come back faster than you think. Two weeks of review and something clicks.

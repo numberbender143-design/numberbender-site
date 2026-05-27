@@ -19,7 +19,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="images/exports/png/favicon-180.png">
 <meta name="theme-color" content="#1F6F6B">
 <meta name="robots" content="noindex, nofollow">
-<link rel="canonical" href="https://numberbender.com/contact-thanks.html">
+<link rel="canonical" href="https://numberbender.com/contact-thanks">
 <style>
   :root{
     --navy:#0F172A; --blue:#2563EB; --yellow:#FACC15;
@@ -134,6 +134,7 @@
   /* FOOTER */
   footer{ background:#0b1220; color:#94a3b8; padding: 30px 0; }
   .foot-bottom{ text-align: center; font-size: 0.88rem; }
+  .foot-bottom a{ color: #94a3b8; text-decoration: underline; }
   .socials{ display:flex; gap: 10px; justify-content: center; margin-top: 12px; }
   .socials a{ width: 36px; height: 36px; border-radius: 10px; background: #1e293b;
     display: inline-flex; align-items: center; justify-content: center;
@@ -163,7 +164,7 @@
     .nav-dropdown:hover .dropdown-menu{ display:none; }
     .nav-dropdown .dropdown-menu.open{ display:block; }
   }
-</style>
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}.skip-link:focus{position:fixed;top:0;left:0;width:auto;height:auto;padding:8px 16px;background:#0F2B3D;color:#fff;z-index:9999;font-size:14px;text-decoration:none;border-radius:0 0 4px 0;}</style>
   <!-- Microsoft Clarity -->
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -187,6 +188,8 @@
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
 
 <header class="nav">
   <div class="container nav-inner">
@@ -231,7 +234,7 @@
   </div>
 </header>
 
-<main>
+<main id="main-content">
   <section class="thanks-section">
     <div class="container">
       <div class="thanks-inner">
@@ -246,17 +249,17 @@
         <div class="info-row">
           <div class="info-chip">
             <div class="ic">⏱️</div>
-            <h3>Response time</h3>
+            <h2>Response time</h2>
             <p>Within 2 business days</p>
           </div>
           <div class="info-chip">
             <div class="ic">✉️</div>
-            <h3>Email</h3>
+            <h2>Email</h2>
             <p>peter@numberbender.com</p>
           </div>
           <div class="info-chip">
             <div class="ic">🎤</div>
-            <h3>Speaking inquiries</h3>
+            <h2>Speaking inquiries</h2>
             <p>Include your date &amp; audience size</p>
           </div>
         </div>
@@ -269,7 +272,7 @@
   <div class="container">
     <div class="foot-bottom">
       © 2026 Numberbender · Numberbender Inc. is a 501(c)(3) nonprofit · EIN: 86-2952520
-      <div style="margin-top:8px;font-size:0.78rem;color:#64748b;">
+      <div style="margin-top:8px;font-size:0.78rem;color:#94a3b8;">
         <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener"><img src="https://licensebuttons.net/l/by/4.0/88x31.png" alt="CC BY 4.0" style="border:0;vertical-align:middle;margin-right:6px;"></a>
         Original content licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener" style="color:#94a3b8;">CC BY 4.0</a> &mdash; free to share and adapt with credit to Peter Esperanza / Numberbender.
       </div>
@@ -315,7 +318,7 @@
 <!-- ── Numberbender Sticky Bar — Back to School June 2026 ── -->
 <div id="nb-sticky-bar">
   <p>🇵🇭 Philippine schools open in June! Get FREE bilingual math worksheets:</p>
-  <input type="email" id="nb-email-input" placeholder="your@email.com" autocomplete="email" />
+  <input type="email" id="nb-email-input" placeholder="your@email.com" autocomplete="email" aria-label="Email address" />
   <button class="nb-submit" onclick="nbSubmit()">Get Free Worksheets →</button>
   <button class="nb-close" onclick="nbDismiss()" aria-label="Close">✕</button>
 </div>

@@ -609,8 +609,8 @@
   .btn:hover{ transform: translateY(-2px); box-shadow: var(--shadow); }
   .btn-yellow{ background: var(--yellow); color: var(--navy); }
   .btn-yellow:hover{ background: #eab308; }
-  .btn-cyan{ background: var(--cyan); color: white; }
-  .btn-cyan:hover{ background: #0891b2; }
+  .btn-cyan{ background: #0e7490; color: white; }
+  .btn-cyan:hover{ background: #155e75; }
   .btn-outline{
     background: transparent; color: white;
     border: 2px solid rgba(255,255,255,.3);
@@ -719,6 +719,7 @@
     font-size: 0.85rem;
     line-height: 1.6;
   }
+  .foot-bottom a{ color: #94a3b8; text-decoration: underline; }
 
   /* ========== RESPONSIVE ========== */
   @media (max-width: 900px){
@@ -763,7 +764,7 @@
     .key-finding{ padding: 18px 20px; }
     .foot-grid{ grid-template-columns: 1fr; gap: 28px; }
   }
-</style>
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}.skip-link:focus{position:fixed;top:0;left:0;width:auto;height:auto;padding:8px 16px;background:#0F2B3D;color:#fff;z-index:9999;font-size:14px;text-decoration:none;border-radius:0 0 4px 0;}</style>
   <!-- Microsoft Clarity -->
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -787,6 +788,8 @@
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
 
 <!-- ========== NAVIGATION ========== -->
 <header class="nav">
@@ -838,9 +841,9 @@
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href="/">Home</a>
       <span class="sep">›</span>
-      <a href="teacher-resources.html">For Educators</a>
+      <a href="/teacher-resources">For Educators</a>
       <span class="sep">›</span>
-      <a href="flipped-classroom-math.html">Flipped Classroom Math</a>
+      <a href="/flipped-classroom-math">Flipped Classroom Math</a>
       <span class="sep">›</span>
       <span aria-current="page">Distance Learning</span>
     </nav>
@@ -853,7 +856,7 @@
 </section>
 
 <!-- ========== ARTICLE ========== -->
-<main class="article">
+<main id="main-content" class="article">
   <div class="container-narrow">
 
     <!-- TOC -->
@@ -876,7 +879,7 @@
       <h2><span class="num">§1</span>The accidental head start</h2>
       <p>When schools closed in March 2020, most teachers scrambled to put their lectures on video for the first time. I had eight years of math videos already on YouTube, a channel approaching six figures of subscribers, and a classroom model built around the idea that the teacher's voice doesn't have to come from the front of the room at a fixed time of day.</p>
       <p>That's not a humble brag — it's context for what I'm about to say. The flipped classroom didn't survive distance learning because I'm a particularly gifted teacher. It survived because the model was already designed for a world where students watch video on their own time. Distance learning didn't break the flip. It removed the commute to school and revealed, more clearly than ever, which parts of the model were actually doing the work.</p>
-      <p>This page is about what I learned teaching through COVID and its aftermath — as someone who shifted from a high-school classroom into community college online and hybrid teaching, did a bilingual research study on video resource language, delivered a national webinar for Filipino educators, and watched my YouTube channels grow as students across the world found them. It's the practical companion to the <a href="flipped-classroom-math.html">pillar page</a> and the research on the <a href="flipped-classroom-research.html">research spoke</a>, with the focus narrowed to what changes — and what doesn't — when your classroom is entirely online.</p>
+      <p>This page is about what I learned teaching through COVID and its aftermath — as someone who shifted from a high-school classroom into community college online and hybrid teaching, did a bilingual research study on video resource language, delivered a national webinar for Filipino educators, and watched my YouTube channels grow as students across the world found them. It's the practical companion to the <a href="/flipped-classroom-math">pillar page</a> and the research on the <a href="/flipped-classroom-research">research spoke</a>, with the focus narrowed to what changes — and what doesn't — when your classroom is entirely online.</p>
     </section>
 
     <!-- §2 -->
@@ -951,7 +954,7 @@
       <p>This is the section I wish someone had given me a checklist version of in March 2020. Here's the distilled version of what I've learned works — and what doesn't.</p>
 
       <h3>Keep the video short and specific</h3>
-      <p>Online, video fatigue is real. A 20-minute lecture video that students might have partially tuned out in a classroom is a video that a third of them won't finish at home. Eight to twelve minutes per concept, with a clear stopping point and a self-check problem before the next video starts. The <a href="flipped-classroom-math.html#s4">pillar's section four</a> covers the video rules in detail — they apply even more strictly in a distance context.</p>
+      <p>Online, video fatigue is real. A 20-minute lecture video that students might have partially tuned out in a classroom is a video that a third of them won't finish at home. Eight to twelve minutes per concept, with a clear stopping point and a self-check problem before the next video starts. The <a href="/flipped-classroom-math#s4">pillar's section four</a> covers the video rules in detail — they apply even more strictly in a distance context.</p>
 
       <h3>Design your synchronous session around what the video couldn't do</h3>
       <p>If your Zoom session is you re-explaining the video for students who didn't watch it, the model has failed. The synchronous session should begin by assuming students watched — a quick warm-up problem to confirm it, then immediately into the work the video couldn't do: application, error analysis, one-on-one help in breakout rooms. Students who didn't watch will reveal themselves in the warm-up. You can redirect them without penalizing the students who came prepared.</p>
@@ -1041,8 +1044,8 @@
     <h2>Distance is a delivery problem. The flip is a design solution.</h2>
     <p>If you want the full practice guide — how to start, which unit to flip first, the video rules, the seven-day plan — the pillar is where to go. If you want to see the research behind it all, the research spoke has the peer-reviewed receipts.</p>
     <div class="cta-row">
-      <a href="flipped-classroom-math.html" class="btn btn-yellow btn-lg">Read the pillar guide →</a>
-      <a href="flipped-classroom-research.html" class="btn btn-outline btn-lg">See the research →</a>
+      <a href="/flipped-classroom-math" class="btn btn-yellow btn-lg">Read the pillar guide →</a>
+      <a href="/flipped-classroom-research" class="btn btn-outline btn-lg">See the research →</a>
     </div>
   </div>
 </section>
@@ -1084,27 +1087,27 @@
       </div>
       <div class="foot">
         <h4>Educators</h4>
-        <a href="teach-it-like-you-stream-it.html">Teach It Like You Stream It</a>
-        <a href="teach-the-math.html">Teach the Math</a>
-        <a href="teacher-resources.html">Teacher Resources</a>
-        <a href="speaking.html">Workshops</a>
-        <a href="flipped-classroom-math.html">Flipped Learning</a>
-        <a href="flipped-classroom-research.html">Research</a>
+        <a href="/teach-it-like-you-stream-it">Teach It Like You Stream It</a>
+        <a href="/teach-the-math">Teach the Math</a>
+        <a href="/teacher-resources">Teacher Resources</a>
+        <a href="/speaking">Workshops</a>
+        <a href="/flipped-classroom-math">Flipped Learning</a>
+        <a href="/flipped-classroom-research">Research</a>
       </div>
       <div class="foot">
         <h4>Connect</h4>
-        <a href="about.html">About Dr. E</a>
-        <a href="speaking.html">Speaking</a>
-        <a href="speaking-archive.html">Speaking Archive</a>
-        <a href="press.html">Press &amp; Media</a>
-        <a href="contact.html">Contact</a>
+        <a href="/about">About Dr. E</a>
+        <a href="/speaking">Speaking</a>
+        <a href="/speaking-archive">Speaking Archive</a>
+        <a href="/press">Press &amp; Media</a>
+        <a href="/contact">Contact</a>
         <a href="https://www.youtube.com/@numberbender" target="_blank" rel="noopener">YouTube Channel</a>
-        <a href="privacy.html">Privacy Policy</a>
+        <a href="/privacy">Privacy Policy</a>
       </div>
     </div>
     <div class="foot-bottom">
-      © 2026 Numberbender · Founded by Dr. Peter Esperanza · Numberbender Inc. is a 501(c)(3) nonprofit organization · EIN: 86-2952520 · Made with care for learners and educators everywhere. · <a href="privacy.html" style="color:#94a3b8;">Privacy Policy</a>
-      <div style="margin-top:8px;font-size:0.78rem;color:#64748b;">
+      © 2026 Numberbender · Founded by Dr. Peter Esperanza · Numberbender Inc. is a 501(c)(3) nonprofit organization · EIN: 86-2952520 · Made with care for learners and educators everywhere. · <a href="/privacy" style="color:#94a3b8;">Privacy Policy</a>
+      <div style="margin-top:8px;font-size:0.78rem;color:#94a3b8;">
         <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener"><img src="https://licensebuttons.net/l/by/4.0/88x31.png" alt="CC BY 4.0" style="border:0;vertical-align:middle;margin-right:6px;"></a>
         Original content licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener" style="color:#94a3b8;">CC BY 4.0</a> &mdash; free to share and adapt with credit to Peter Esperanza / Numberbender.
       </div>
@@ -1154,7 +1157,7 @@ document.addEventListener('click', function(e){
 <!-- ── Numberbender Sticky Bar — Back to School June 2026 ── -->
 <div id="nb-sticky-bar">
   <p>🇵🇭 Philippine schools open in June! Get FREE bilingual math worksheets:</p>
-  <input type="email" id="nb-email-input" placeholder="your@email.com" autocomplete="email" />
+  <input type="email" id="nb-email-input" placeholder="your@email.com" autocomplete="email" aria-label="Email address" />
   <button class="nb-submit" onclick="nbSubmit()">Get Free Worksheets →</button>
   <button class="nb-close" onclick="nbDismiss()" aria-label="Close">✕</button>
 </div>

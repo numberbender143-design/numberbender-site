@@ -349,6 +349,7 @@
   .socials a[aria-label="Facebook"]:hover{ background: #1877f2; }
   .socials a[aria-label="LinkedIn"]:hover{ background: #0a66c2; }
   .foot-bottom{ border-top: 1px solid #1e293b; padding-top: 20px; text-align: center; font-size: 0.88rem; }
+  .foot-bottom a{ color: #94a3b8; text-decoration: underline; }
 
   /* Footer email signup */
   .foot-signup-block{ margin-top: 18px; }
@@ -457,6 +458,45 @@
     .press-kit-inner{ padding: 40px 0; }
   }
 
+  /* VIDEO MODAL */
+  .vid-modal-overlay{
+    display: none;
+    position: fixed; inset: 0; z-index: 9000;
+    background: rgba(0,0,0,.85);
+    align-items: center; justify-content: center;
+    padding: 20px;
+  }
+  .vid-modal-overlay.open{ display: flex; }
+  .vid-modal{
+    position: relative;
+    width: min(960px, 100%);
+    aspect-ratio: 16/9;
+    background: #000;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 40px 100px rgba(0,0,0,.6);
+  }
+  .vid-modal iframe{ width: 100%; height: 100%; border: 0; display: block; }
+  .vid-modal-close{
+    position: absolute; top: -48px; right: 0;
+    background: rgba(255,255,255,.15);
+    border: 1.5px solid rgba(255,255,255,.3);
+    color: white; font-size: 1.3rem;
+    width: 40px; height: 40px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; transition: background .15s ease;
+    line-height: 1;
+  }
+  .vid-modal-close:hover{ background: rgba(255,255,255,.3); }
+
+  /* make watch/listen links look like links but open modal */
+  button.cta-link{
+    background: none; border: none; padding: 0;
+    font: inherit; cursor: pointer;
+    color: var(--teal-accent); font-weight: 700; font-size: 0.9rem; white-space: nowrap;
+  }
+  button.cta-link:hover{ color: var(--teal); }
+
   /* Outlet logo display in coverage cards */
   .outlet-logo-wrap {
     background: white;
@@ -484,7 +524,7 @@
     letter-spacing: .08em;
     margin-bottom: 12px;
   }
-</style>
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}.skip-link:focus{position:fixed;top:0;left:0;width:auto;height:auto;padding:8px 16px;background:#0F2B3D;color:#fff;z-index:9999;font-size:14px;text-decoration:none;border-radius:0 0 4px 0;}</style>
 
 <!-- ── Numberbender Sticky Bar CSS ── -->
 <style>
@@ -500,6 +540,8 @@
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
 
 <header class="nav">
   <div class="container nav-inner">
@@ -543,6 +585,7 @@
     </nav>
   </div>
 </header>
+<main id="main-content">
 
 <!-- ========== HERO ========== -->
 <section class="page-hero">
@@ -591,7 +634,7 @@
         <p class="pull-quote">"Dr. Peter Esperanza is redefining how Filipino students experience math — one YouTube video at a time."</p>
         <div class="card-footer">
           <span class="date-badge">GMA Public Affairs</span>
-          <a href="https://www.youtube.com/watch?v=VbFPTF2g_UA" target="_blank" rel="noopener" class="cta-link">Watch →</a>
+          <button onclick="openVideoModal('VbFPTF2g_UA')" class="cta-link">Watch →</button>
         </div>
       </div>
 
@@ -605,7 +648,7 @@
         <p class="pull-quote">"From a classroom in the Mojave Desert, Peter Esperanza is reaching students around the world with a whiteboard and a camera."</p>
         <div class="card-footer">
           <span class="date-badge">GMA Network</span>
-          <a href="https://www.youtube.com/watch?v=tEMoLKx2xtA" target="_blank" rel="noopener" class="cta-link">Watch →</a>
+          <button onclick="openVideoModal('tEMoLKx2xtA')" class="cta-link">Watch →</button>
         </div>
       </div>
 
@@ -619,7 +662,7 @@
         <p class="pull-quote">"A community college math professor in California is using YouTube to make higher math accessible to students who can't afford tutors."</p>
         <div class="card-footer">
           <span class="date-badge">ABS-CBN News</span>
-          <a href="https://www.youtube.com/watch?v=IUCI5PG8sqc" target="_blank" rel="noopener" class="cta-link">Watch →</a>
+          <button onclick="openVideoModal('IUCI5PG8sqc')" class="cta-link">Watch →</button>
         </div>
       </div>
 
@@ -632,7 +675,7 @@
         <p class="pull-quote">"Dr. Esperanza's story is about more than math — it's about using every gift you have to serve others."</p>
         <div class="card-footer">
           <span class="date-badge">The 700 Club Asia</span>
-          <a href="https://www.youtube.com/watch?v=uCXjtYv41zU" target="_blank" rel="noopener" class="cta-link">Watch →</a>
+          <button onclick="openVideoModal('uCXjtYv41zU')" class="cta-link">Watch →</button>
         </div>
       </div>
 
@@ -646,7 +689,7 @@
         <p class="pull-quote">"One of the most-watched Filipino educators online, Dr. E is proof that a barangay spirit can travel anywhere."</p>
         <div class="card-footer">
           <span class="date-badge">TFC · The Filipino Channel</span>
-          <a href="https://www.youtube.com/watch?v=1Hs4vAVGxsg" target="_blank" rel="noopener" class="cta-link">Watch →</a>
+          <button onclick="openVideoModal('1Hs4vAVGxsg')" class="cta-link">Watch →</button>
         </div>
       </div>
 
@@ -660,7 +703,7 @@
         <p class="pull-quote">"Recognized as a Filipino Community Hero for his decade of free math education and advocacy for Filipino-American students."</p>
         <div class="card-footer">
           <span class="date-badge">LA 18 / Kababayan Today</span>
-          <a href="https://www.youtube.com/watch?v=DWx5Dmk2CIk" target="_blank" rel="noopener" class="cta-link">Watch →</a>
+          <button onclick="openVideoModal('DWx5Dmk2CIk')" class="cta-link">Watch →</button>
         </div>
       </div>
 
@@ -739,7 +782,7 @@
         <p class="pull-quote">Dr. E breaks down how he built Numberbender from zero to hundreds of thousands of subscribers — and why he did it for free.</p>
         <div class="card-footer">
           <span class="date-badge">TeacherHoodTube</span>
-          <a href="https://www.youtube.com/watch?v=MBnu_-iiHgc" target="_blank" rel="noopener" class="cta-link">Listen →</a>
+          <button onclick="openVideoModal('MBnu_-iiHgc')" class="cta-link">Listen →</button>
         </div>
       </div>
 
@@ -750,7 +793,7 @@
         <p class="pull-quote">A candid conversation on failure, persistence, and what it really takes to flip a classroom.</p>
         <div class="card-footer">
           <span class="date-badge">Trying Hard with Lyqa</span>
-          <a href="https://www.youtube.com/watch?v=gQOCa9QIvzk" target="_blank" rel="noopener" class="cta-link">Listen →</a>
+          <button onclick="openVideoModal('gQOCa9QIvzk')" class="cta-link">Listen →</button>
         </div>
       </div>
 
@@ -761,7 +804,7 @@
         <p class="pull-quote">How Dr. Esperanza uses the creator mindset to make rigorous math approachable for community college students.</p>
         <div class="card-footer">
           <span class="date-badge">EmpowerED TV</span>
-          <a href="https://www.youtube.com/watch?v=9DdthXIfTeg" target="_blank" rel="noopener" class="cta-link">Watch →</a>
+          <button onclick="openVideoModal('9DdthXIfTeg')" class="cta-link">Watch →</button>
         </div>
       </div>
 
@@ -831,8 +874,8 @@
         <p>Booking info, approved headshots, official bio, and talking points — everything you need to cover Dr. E.</p>
       </div>
       <div class="press-kit-actions">
-        <a href="contact.html" class="btn btn-white btn-lg">Download Press Kit →</a>
-        <a href="contact.html" class="btn btn-outline-white btn-lg">Contact for Media Inquiries →</a>
+        <a href="/contact" class="btn btn-white btn-lg">Download Press Kit →</a>
+        <a href="/contact" class="btn btn-outline-white btn-lg">Contact for Media Inquiries →</a>
       </div>
     </div>
   </div>
@@ -869,6 +912,7 @@
   </div>
 </section>
 
+</main>
 <footer>
   <div class="container">
     <div class="foot-grid">
@@ -905,27 +949,27 @@
       </div>
       <div class="foot">
         <h4>Educators</h4>
-        <a href="teach-it-like-you-stream-it.html">Teach It Like You Stream It</a>
-        <a href="teach-the-math.html">Teach the Math</a>
-        <a href="teacher-resources.html">Teacher Resources</a>
-        <a href="speaking.html">Workshops</a>
-        <a href="speaking.html">AI in Education</a>
-        <a href="speaking.html">Flipped Learning</a>
+        <a href="/teach-it-like-you-stream-it">Teach It Like You Stream It</a>
+        <a href="/teach-the-math">Teach the Math</a>
+        <a href="/teacher-resources">Teacher Resources</a>
+        <a href="/speaking">Workshops</a>
+        <a href="/speaking">AI in Education</a>
+        <a href="/speaking">Flipped Learning</a>
       </div>
       <div class="foot">
         <h4>Connect</h4>
-        <a href="about.html">About Dr. E</a>
-        <a href="speaking.html">Speaking</a>
-        <a href="speaking-archive.html">Speaking Archive</a>
-        <a href="press.html">Press &amp; Media</a>
-        <a href="contact.html">Contact</a>
+        <a href="/about">About Dr. E</a>
+        <a href="/speaking">Speaking</a>
+        <a href="/speaking-archive">Speaking Archive</a>
+        <a href="/press">Press &amp; Media</a>
+        <a href="/contact">Contact</a>
         <a href="https://www.youtube.com/@numberbender" target="_blank" rel="noopener">YouTube Channel</a>
-        <a href="privacy.html">Privacy Policy</a>
+        <a href="/privacy">Privacy Policy</a>
       </div>
     </div>
     <div class="foot-bottom">
-      © 2026 Numberbender · Founded by Dr. Peter Esperanza · Numberbender Inc. is a 501(c)(3) nonprofit organization · EIN: 86-2952520 · Made with care for learners and educators everywhere. · <a href="privacy.html" style="color:#94a3b8;">Privacy Policy</a>
-      <div style="margin-top:8px;font-size:0.78rem;color:#64748b;">
+      © 2026 Numberbender · Founded by Dr. Peter Esperanza · Numberbender Inc. is a 501(c)(3) nonprofit organization · EIN: 86-2952520 · Made with care for learners and educators everywhere. · <a href="/privacy" style="color:#94a3b8;">Privacy Policy</a>
+      <div style="margin-top:8px;font-size:0.78rem;color:#94a3b8;">
         <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener"><img src="https://licensebuttons.net/l/by/4.0/88x31.png" alt="CC BY 4.0" style="border:0;vertical-align:middle;margin-right:6px;"></a>
         Original content licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener" style="color:#94a3b8;">CC BY 4.0</a> &mdash; free to share and adapt with credit to Peter Esperanza / Numberbender.
       </div>
@@ -981,7 +1025,7 @@
 <!-- ── Numberbender Sticky Bar — Back to School June 2026 ── -->
 <div id="nb-sticky-bar">
   <p>🇵🇭 Philippine schools open in June! Get FREE bilingual math worksheets:</p>
-  <input type="email" id="nb-email-input" placeholder="your@email.com" autocomplete="email" />
+  <input type="email" id="nb-email-input" placeholder="your@email.com" autocomplete="email" aria-label="Email address" />
   <button class="nb-submit" onclick="nbSubmit()">Get Free Worksheets →</button>
   <button class="nb-close" onclick="nbDismiss()" aria-label="Close">✕</button>
 </div>
@@ -1009,6 +1053,30 @@ function nbSubmit(){
   s.src='https://numberbender.us17.list-manage.com/subscribe/post-json?u=65e30fe527dde6fb604f6760a&id=ad0977e0cc&f_id=003758e0f0&EMAIL='+encodeURIComponent(email)+'&b_65e30fe527dde6fb604f6760a_ad0977e0cc=&c=nbMcCb';
   document.body.appendChild(s);
 }
+</script>
+
+<!-- VIDEO MODAL -->
+<div id="vidModal" onclick="closeVideoModal(event)" style="display:none;position:fixed;inset:0;z-index:9000;background:rgba(0,0,0,0.85);align-items:center;justify-content:center;">
+  <div style="position:relative;width:min(900px,92vw);">
+    <button onclick="closeVideoModal()" style="position:absolute;top:-40px;right:0;background:none;border:none;color:white;font-size:1.8rem;cursor:pointer;line-height:1;" aria-label="Close video">✕</button>
+    <iframe id="vidModalFrame" src="" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen style="width:100%;aspect-ratio:16/9;border:none;border-radius:12px;display:block;"></iframe>
+  </div>
+</div>
+<script>
+function openVideoModal(videoId){
+  var frame=document.getElementById('vidModalFrame');
+  frame.src='https://www.youtube.com/embed/'+videoId+'?autoplay=1&rel=0';
+  var modal=document.getElementById('vidModal');
+  modal.style.display='flex';
+  document.body.style.overflow='hidden';
+}
+function closeVideoModal(e){
+  if(e&&e.target!==document.getElementById('vidModal')&&e.type==='click')return;
+  document.getElementById('vidModal').style.display='none';
+  document.getElementById('vidModalFrame').src='';
+  document.body.style.overflow='';
+}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeVideoModal();});
 </script>
 </body>
 </html>

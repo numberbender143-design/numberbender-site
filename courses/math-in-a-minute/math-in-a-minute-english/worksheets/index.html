@@ -123,7 +123,7 @@
     .ws-breadcrumb .sep{ margin: 0 8px; color: #cbd5e1; }
     .ws-eyebrow{
       display:inline-flex; align-items:center; gap:8px;
-      color: var(--accent-color); background: var(--accent-bg);
+      color: var(--accent-dark); background: var(--accent-bg);
       padding: 6px 14px; border-radius: 999px;
       font-size: 0.85rem; font-weight: 700; margin-bottom: 14px;
       text-transform: uppercase; letter-spacing: .06em;
@@ -168,7 +168,7 @@
     }
     .ws-card .ws-lesson{
       font-size: 0.78rem; font-weight: 700;
-      color: var(--accent-color); background: var(--accent-bg);
+      color: var(--accent-dark); background: var(--accent-bg);
       padding: 3px 10px; border-radius: 999px;
       text-transform: uppercase; letter-spacing: .06em;
     }
@@ -295,11 +295,13 @@
     }
   </style>
 </head>
-    <body style="--accent-color: #b45309; --accent-bg: rgba(180,83,9,0.10);">
+    <body style="--accent-color: #b45309; --accent-bg: rgba(180,83,9,0.10); --accent-dark: #92400e">
 
-    <header class="nav">
+    <style>.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}.skip-link:focus{position:fixed;top:0;left:0;width:auto;height:auto;padding:8px 16px;background:#0F2B3D;color:#fff;z-index:9999;font-size:14px;text-decoration:none;border-radius:0 0 4px 0;}</style>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="nav">
   <div class="container nav-inner">
-    <a href="../../../../index.html" class="logo logo-lockup" aria-label="Numberbender — Master the Elements of Math">
+    <a href="/" class="logo logo-lockup" aria-label="Numberbender — Master the Elements of Math">
       <img src="../../../../images/numberbender_banner_only.svg" alt="Numberbender" class="lockup-img">
     </a>
     <button class="menu-toggle" aria-label="Toggle menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
@@ -340,10 +342,11 @@
   </div>
 </header>
 
-    <section class="ws-hero">
+    <main id="main-content">
+<section class="ws-hero">
       <div class="container">
         <nav class="ws-breadcrumb" aria-label="Breadcrumb">
-          <a href="../../../../index.html">Home</a><span class="sep">›</span>
+          <a href="/">Home</a><span class="sep">›</span>
           <a href="/courses">Courses</a><span class="sep">›</span>
           <span>Math in a Minute (English)</span>
         </nav>
@@ -365,7 +368,8 @@
       </div>
     </section>
 
-    <footer>
+    </main>
+<footer>
   <div class="container">
     <div class="foot-grid">
       <div class="foot foot-brand">

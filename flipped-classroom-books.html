@@ -353,6 +353,7 @@
   .foot-signup-form button{ padding: 10px 18px; border-radius: 10px; border: none; background: var(--blue); color: white; font-weight: 600; cursor: pointer; font-size: 0.92rem; transition: background .15s ease; }
   .foot-signup-form button:hover{ background: #1d4ed8; }
   .foot-bottom{ margin-top: 36px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.08); text-align: center; color: #94a3b8; font-size: 0.85rem; line-height: 1.6; }
+  .foot-bottom a{ color: #94a3b8; text-decoration: underline; }
 
   @media (max-width: 900px){
     .article p{ font-size: 1.04rem; line-height: 1.72; }
@@ -378,7 +379,7 @@
     .book-hero .ic{ width: 64px; height: 64px; font-size: 1.6rem; }
     .foot-grid{ grid-template-columns: 1fr; gap: 28px; }
   }
-</style>
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}.skip-link:focus{position:fixed;top:0;left:0;width:auto;height:auto;padding:8px 16px;background:#0F2B3D;color:#fff;z-index:9999;font-size:14px;text-decoration:none;border-radius:0 0 4px 0;}</style>
   <!-- Microsoft Clarity -->
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -402,6 +403,8 @@
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
 
 <!-- ========== NAVIGATION ========== -->
 <header class="nav">
@@ -453,9 +456,9 @@
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href="/">Home</a>
       <span class="sep">›</span>
-      <a href="teacher-resources.html">For Educators</a>
+      <a href="/teacher-resources">For Educators</a>
       <span class="sep">›</span>
-      <a href="flipped-classroom-math.html">Flipped Classroom Math</a>
+      <a href="/flipped-classroom-math">Flipped Classroom Math</a>
       <span class="sep">›</span>
       <span aria-current="page">Books</span>
     </nav>
@@ -468,7 +471,7 @@
 </section>
 
 <!-- ========== ARTICLE ========== -->
-<main class="article">
+<main id="main-content" class="article">
   <div class="container-narrow">
 
     <!-- TOC -->
@@ -487,7 +490,7 @@
     <!-- §1 -->
     <section id="s1">
       <h2><span class="num">§1</span>What this book is, and where it came from</h2>
-      <p><em>The Power of the Flipped Classroom</em> is a free multi-touch Apple Book I published in 2016. It's the long-form treatment of the work covered in the <a href="flipped-classroom-math.html">pillar guide</a> — production process, classroom redesign, early student data, embedded video. It has been a free download since publication and remains free now.</p>
+      <p><em>The Power of the Flipped Classroom</em> is a free multi-touch Apple Book I published in 2016. It's the long-form treatment of the work covered in the <a href="/flipped-classroom-math">pillar guide</a> — production process, classroom redesign, early student data, embedded video. It has been a free download since publication and remains free now.</p>
       <p>The book started as my Apple Distinguished Educator Summer Institute 2015 "One Best Thing" project. The Apple Distinguished Educator program selects educators worldwide for a community of practice; the Summer Institute is a multi-day gathering where each ADE writes a multi-touch book-length document on whatever pedagogical approach they're best known for. Mine, by the time I got to Berlin in 2015, was the flipped classroom — three years in at Barstow High, with two AACE conference papers behind me and the Springer randomized controlled trial still being written. ADE colleagues at the institute helped me draft, edit, and format the book during the week. Apple Education Community published it the following year, and it's been free ever since.</p>
 
       <div class="book-hero">
@@ -517,7 +520,7 @@
       <h2><span class="num">§2</span>What's inside</h2>
       <p>The book is structured around the same workflow the pillar guide covers — but in long form, with embedded video. It walks through the production rig (MacBook, cut-out whiteboard, colored markers), the recording flow, the editing pass, the in-class redesign that goes with each flipped lesson, the early student data from Barstow High, and a set of common mistakes I'd want any new flipper to avoid before they record their first video.</p>
       <p>The multi-touch format is the part that distinguishes this from a PDF. Videos play inside the book itself. You can read a chapter on the production process and watch the actual lessons referenced, in line, without leaving the book. That mattered to me because the work is fundamentally about video — a text-only book about how to make instructional video would be missing the point. A reader on an iPad, MacBook, or iPhone gets the lessons and the explanation in one continuous reading experience.</p>
-      <p>If you'd rather have the compressed version, the pillar's <a href="flipped-classroom-math.html#s9">section nine</a> covers the production rig in two paragraphs. The book is the place to go when you want the workflow with embedded video and enough detail to actually replicate it.</p>
+      <p>If you'd rather have the compressed version, the pillar's <a href="/flipped-classroom-math#s9">section nine</a> covers the production rig in two paragraphs. The book is the place to go when you want the workflow with embedded video and enough detail to actually replicate it.</p>
     </section>
 
     <!-- §3 -->
@@ -534,14 +537,14 @@
       <p>The most common: an individual teacher reads the book before flipping their first unit. They use it as a shoulder-to-shoulder reference while recording their first videos. Many email me afterward to tell me which chapter they re-read three times. That's the audience the book was written for, and it's the audience that still uses it most.</p>
       <p>The second pattern: department book study. A math department or a STEM team picks the book as a summer reading and discusses it across August and September department meetings. The chapter on common mistakes tends to drive the most discussion — the prevention version is much more useful at the start of a school year than the recovery version is mid-year.</p>
       <p>The third pattern: pre-service teacher training. A handful of education programs have used the book in their secondary-math methods courses. Pre-service teachers haven't taught yet, so the production chapter matters more to them than the classroom-redesign chapter; the redesign chapter resonates after their first practicum or student-teaching placement.</p>
-      <p>If you're using the book in any of those settings — book study, methods course, department pilot — and would like a video supplement or a Zoom Q&amp;A, the <a href="contact.html">contact page</a> is open. I do this a few times a semester for free when the timing works.</p>
+      <p>If you're using the book in any of those settings — book study, methods course, department pilot — and would like a video supplement or a Zoom Q&amp;A, the <a href="/contact">contact page</a> is open. I do this a few times a semester for free when the timing works.</p>
     </section>
 
     <!-- §5 -->
     <section id="s5">
       <h2><span class="num">§5</span>The AP Calculus FRQ Reviewer series</h2>
       <p>I've also published six volumes of the <em>AP Calculus FRQ Reviewer</em> on Apple Books, each about twenty-nine pages, all free, all multi-touch with embedded video. They cover the standard AP Calculus AB free-response topic areas: accumulation problems, implicit differentiation, particle in motion, areas and volumes, differential equations, and function analysis. They're meant for AP Calc students working through released free-response practice questions, with a video walk-through embedded next to each problem.</p>
-      <p>Those six get their own page: <a href="ap-calculus-frq-books.html">AP Calculus FRQ Reviewer →</a>.</p>
+      <p>Those six get their own page: <a href="/ap-calculus-frq-books">AP Calculus FRQ Reviewer →</a>.</p>
     </section>
 
     <!-- §6 FAQ -->
@@ -560,7 +563,7 @@
           <summary>Do I need an Apple device to read it?</summary>
           <div class="faq-body">
             <p>The Apple Education Community resource opens in a browser on Mac, iPad, or iPhone. The Apple Books store version requires the Apple Books app, also Mac, iPad, or iPhone. On Windows or Android the Apple Education Community link is the most reliable path.</p>
-            <p>If a school-issued device blocks the link, an email through the <a href="contact.html">contact page</a> will get you a viewing path that works on whatever you're using.</p>
+            <p>If a school-issued device blocks the link, an email through the <a href="/contact">contact page</a> will get you a viewing path that works on whatever you're using.</p>
           </div>
         </details>
 
@@ -568,7 +571,7 @@
           <summary>Can I cite the book in research or coursework?</summary>
           <div class="faq-body">
             <p>Yes. Suggested citation: Esperanza, P. (2016). <em>The Power of the Flipped Classroom</em>. Apple Education Community. https://education.apple.com/resource/250011019</p>
-            <p>For peer-reviewed citations specifically, the four flipped-classroom math papers on the <a href="flipped-classroom-research.html">Research spoke</a> are the more natural source — including the 2016 Springer RCT.</p>
+            <p>For peer-reviewed citations specifically, the four flipped-classroom math papers on the <a href="/flipped-classroom-research">Research spoke</a> are the more natural source — including the 2016 Springer RCT.</p>
           </div>
         </details>
 
@@ -584,7 +587,7 @@
     <h2>Want the practice case for flipping in the first place?</h2>
     <p>The book is the long-form treatment. The pillar guide is the working argument — why I started in 2012, what the model does, how to actually run it. Free, on the same site, no signup.</p>
     <div class="cta-row">
-      <a href="flipped-classroom-math.html" class="btn btn-yellow btn-lg">Read the pillar guide →</a>
+      <a href="/flipped-classroom-math" class="btn btn-yellow btn-lg">Read the pillar guide →</a>
       <a href="https://education.apple.com/resource/250011019" target="_blank" rel="noopener" class="btn btn-outline btn-lg">Download the book ↓</a>
     </div>
   </div>
@@ -627,27 +630,27 @@
       </div>
       <div class="foot">
         <h4>Educators</h4>
-        <a href="teach-it-like-you-stream-it.html">Teach It Like You Stream It</a>
-        <a href="teach-the-math.html">Teach the Math</a>
-        <a href="teacher-resources.html">Teacher Resources</a>
-        <a href="speaking.html">Workshops</a>
-        <a href="speaking.html">AI in Education</a>
-        <a href="flipped-classroom-math.html">Flipped Learning</a>
+        <a href="/teach-it-like-you-stream-it">Teach It Like You Stream It</a>
+        <a href="/teach-the-math">Teach the Math</a>
+        <a href="/teacher-resources">Teacher Resources</a>
+        <a href="/speaking">Workshops</a>
+        <a href="/speaking">AI in Education</a>
+        <a href="/flipped-classroom-math">Flipped Learning</a>
       </div>
       <div class="foot">
         <h4>Connect</h4>
-        <a href="about.html">About Dr. E</a>
-        <a href="speaking.html">Speaking</a>
-        <a href="speaking-archive.html">Speaking Archive</a>
-        <a href="press.html">Press &amp; Media</a>
-        <a href="contact.html">Contact</a>
+        <a href="/about">About Dr. E</a>
+        <a href="/speaking">Speaking</a>
+        <a href="/speaking-archive">Speaking Archive</a>
+        <a href="/press">Press &amp; Media</a>
+        <a href="/contact">Contact</a>
         <a href="https://www.youtube.com/@numberbender" target="_blank" rel="noopener">YouTube Channel</a>
-        <a href="privacy.html">Privacy Policy</a>
+        <a href="/privacy">Privacy Policy</a>
       </div>
     </div>
     <div class="foot-bottom">
-      © 2026 Numberbender · Founded by Dr. Peter Esperanza · Numberbender Inc. is a 501(c)(3) nonprofit organization · EIN: 86-2952520 · Made with care for learners and educators everywhere. · <a href="privacy.html" style="color:#94a3b8;">Privacy Policy</a>
-      <div style="margin-top:8px;font-size:0.78rem;color:#64748b;">
+      © 2026 Numberbender · Founded by Dr. Peter Esperanza · Numberbender Inc. is a 501(c)(3) nonprofit organization · EIN: 86-2952520 · Made with care for learners and educators everywhere. · <a href="/privacy" style="color:#94a3b8;">Privacy Policy</a>
+      <div style="margin-top:8px;font-size:0.78rem;color:#94a3b8;">
         <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener"><img src="https://licensebuttons.net/l/by/4.0/88x31.png" alt="CC BY 4.0" style="border:0;vertical-align:middle;margin-right:6px;"></a>
         Original content licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener" style="color:#94a3b8;">CC BY 4.0</a> &mdash; free to share and adapt with credit to Peter Esperanza / Numberbender.
       </div>
@@ -703,7 +706,7 @@
 <!-- ── Numberbender Sticky Bar — Back to School June 2026 ── -->
 <div id="nb-sticky-bar">
   <p>🇵🇭 Philippine schools open in June! Get FREE bilingual math worksheets:</p>
-  <input type="email" id="nb-email-input" placeholder="your@email.com" autocomplete="email" />
+  <input type="email" id="nb-email-input" placeholder="your@email.com" autocomplete="email" aria-label="Email address" />
   <button class="nb-submit" onclick="nbSubmit()">Get Free Worksheets →</button>
   <button class="nb-close" onclick="nbDismiss()" aria-label="Close">✕</button>
 </div>

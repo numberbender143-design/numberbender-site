@@ -105,7 +105,7 @@
     text-decoration: none !important; }
   .btn:hover{ transform: translateY(-2px); box-shadow: var(--shadow); }
   .btn-primary{ background: var(--blue); color: white; }
-  .btn-cyan{ background: var(--cyan); color: white; }
+  .btn-cyan{ background: #0e7490; color: white; }
   .btn-yellow{ background: var(--yellow); color: var(--navy); }
   .btn-outline{ background: transparent; color: var(--navy); border: 2px solid var(--border); }
   .btn-outline:hover{ border-color: var(--blue); color: var(--blue); }
@@ -313,6 +313,7 @@
   .foot a{ color:#94a3b8; display: block; padding: 4px 0; font-size: 0.95rem; }
   .foot a:hover{ color: white; text-decoration: none; }
   .foot-bottom{ border-top: 1px solid #1e293b; padding-top: 20px; text-align: center; font-size: 0.88rem; }
+  .foot-bottom a{ color: #94a3b8; text-decoration: underline; }
 
   @media (max-width: 900px){
     .foot-grid{ grid-template-columns: 1fr 1fr; }
@@ -336,7 +337,7 @@
     .sidebar{ position: static; }
   }
   @media (max-width: 600px){ .foot-grid{ grid-template-columns: 1fr; } }
-</style>
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}.skip-link:focus{position:fixed;top:0;left:0;width:auto;height:auto;padding:8px 16px;background:#0F2B3D;color:#fff;z-index:9999;font-size:14px;text-decoration:none;border-radius:0 0 4px 0;}</style>
 
 <script type="application/ld+json">
 {
@@ -384,6 +385,8 @@
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
 
 <header class="nav">
   <div class="container nav-inner">
@@ -427,12 +430,13 @@
     </nav>
   </div>
 </header>
+<main id="main-content">
 
 <div class="container">
   <nav class="breadcrumb" aria-label="breadcrumb">
     <a href="/">Home</a><span class="sep">·</span>
-    <a href="speaking.html">Speaking</a><span class="sep">·</span>
-    <a href="speaking-archive.html">Archive</a><span class="sep">·</span>
+    <a href="/speaking">Speaking</a><span class="sep">·</span>
+    <a href="/speaking-archive">Archive</a><span class="sep">·</span>
     SEAMEO QITEP Indonesia
   </nav>
 </div>
@@ -513,13 +517,13 @@
         <div class="side-cta">
           <h4>Train your faculty across distance</h4>
           <p>Dr. E delivers virtual workshops and PD programs to schools, colleges, and ministries around the world.</p>
-          <a href="contact.html" class="btn btn-yellow" style="width:100%;">Inquire about availability →</a>
+          <a href="/contact" class="btn btn-yellow" style="width:100%;">Inquire about availability →</a>
         </div>
 
         <div class="side-card" style="margin-top: 18px;">
           <h4>Browse the archive</h4>
           <p style="color: var(--muted); font-size: 0.9rem; margin-bottom: 12px;">More past keynotes, workshops, and faculty development sessions.</p>
-          <a href="speaking-archive.html" style="font-weight: 600;">All engagements →</a>
+          <a href="/speaking-archive" style="font-weight: 600;">All engagements →</a>
         </div>
       </aside>
 
@@ -532,12 +536,13 @@
     <h2>Same workshop, your region.</h2>
     <p>Whether your faculty is in one building or across an entire region, the workshop framework travels. Bring it to your institution.</p>
     <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
-      <a href="speaking.html" class="btn btn-yellow btn-lg">See speaking topics →</a>
-      <a href="contact.html" class="btn btn-outline btn-lg" style="color:white; border-color:rgba(255,255,255,0.4);">Book Dr. E</a>
+      <a href="/speaking" class="btn btn-yellow btn-lg">See speaking topics →</a>
+      <a href="/contact" class="btn btn-outline btn-lg" style="color:white; border-color:rgba(255,255,255,0.4);">Book Dr. E</a>
     </div>
   </div>
 </section>
 
+</main>
 <footer>
   <div class="container">
     <div class="foot-grid">
@@ -547,27 +552,27 @@
       </div>
       <div class="foot">
         <h4>Speaking</h4>
-        <a href="speaking.html">Topics &amp; Formats</a>
-        <a href="speaking-archive.html">Speaking Archive</a>
-        <a href="press.html">Press &amp; Media</a>
-        <a href="contact.html">Book Dr. E</a>
+        <a href="/speaking">Topics &amp; Formats</a>
+        <a href="/speaking-archive">Speaking Archive</a>
+        <a href="/press">Press &amp; Media</a>
+        <a href="/contact">Book Dr. E</a>
       </div>
       <div class="foot">
         <h4>Educators</h4>
-        <a href="teach-it-like-you-stream-it.html">Teach It Like You Stream It</a>
-        <a href="teach-the-math.html">Teach the Math</a>
-        <a href="teacher-resources.html">Teacher Resources</a>
+        <a href="/teach-it-like-you-stream-it">Teach It Like You Stream It</a>
+        <a href="/teach-the-math">Teach the Math</a>
+        <a href="/teacher-resources">Teacher Resources</a>
       </div>
       <div class="foot">
         <h4>Connect</h4>
-        <a href="about.html">About Dr. E</a>
-        <a href="contact.html">Contact</a>
+        <a href="/about">About Dr. E</a>
+        <a href="/contact">Contact</a>
         <a href="https://www.youtube.com/@numberbender" target="_blank" rel="noopener">YouTube Channel</a>
       </div>
     </div>
     <div class="foot-bottom">
-      © 2026 Numberbender · Founded by Dr. Peter Esperanza · <a href="privacy.html" style="color:#94a3b8;">Privacy Policy</a>
-      <div style="margin-top:8px;font-size:0.78rem;color:#64748b;">
+      © 2026 Numberbender · Founded by Dr. Peter Esperanza · <a href="/privacy" style="color:#94a3b8;">Privacy Policy</a>
+      <div style="margin-top:8px;font-size:0.78rem;color:#94a3b8;">
         <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener"><img src="https://licensebuttons.net/l/by/4.0/88x31.png" alt="CC BY 4.0" style="border:0;vertical-align:middle;margin-right:6px;"></a>
         Original content licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener" style="color:#94a3b8;">CC BY 4.0</a> &mdash; free to share and adapt with credit to Peter Esperanza / Numberbender.
       </div>
@@ -623,7 +628,7 @@
 <!-- ── Numberbender Sticky Bar — Back to School June 2026 ── -->
 <div id="nb-sticky-bar">
   <p>🇵🇭 Philippine schools open in June! Get FREE bilingual math worksheets:</p>
-  <input type="email" id="nb-email-input" placeholder="your@email.com" autocomplete="email" />
+  <input type="email" id="nb-email-input" placeholder="your@email.com" autocomplete="email" aria-label="Email address" />
   <button class="nb-submit" onclick="nbSubmit()">Get Free Worksheets →</button>
   <button class="nb-close" onclick="nbDismiss()" aria-label="Close">✕</button>
 </div>

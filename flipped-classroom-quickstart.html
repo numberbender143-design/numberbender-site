@@ -222,6 +222,7 @@
   footer a{ color:#cbd5e1; }
   footer a:hover{ color:white; }
   .foot-bottom{ margin-top:20px; font-size:.8rem; color:#64748b; }
+  .foot-bottom a{ color: #94a3b8; text-decoration: underline; }
 
   @media(max-width:680px){
     .form-card{ padding:28px 22px; }
@@ -230,7 +231,7 @@
     .about-inner{ flex-direction:column; text-align:center; }
     .proof-row{ gap:16px; }
   }
-</style>
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}.skip-link:focus{position:fixed;top:0;left:0;width:auto;height:auto;padding:8px 16px;background:#0F2B3D;color:#fff;z-index:9999;font-size:14px;text-decoration:none;border-radius:0 0 4px 0;}</style>
   <!-- Microsoft Clarity -->
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -254,6 +255,8 @@
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
 
 <!-- NAV -->
 <header class="nav">
@@ -298,11 +301,12 @@
     </nav>
   </div>
 </header>
+<main id="main-content">
 
 <!-- HERO -->
 <section class="hero">
   <div class="container-narrow">
-    <a href="flipped-classroom-math.html" style="display:inline-flex;align-items:center;gap:6px;font-size:0.88rem;font-weight:600;color:var(--blue);text-decoration:none;margin-bottom:16px;">← Back to Flipped Classroom Guide</a>
+    <a href="/flipped-classroom-math" style="display:inline-flex;align-items:center;gap:6px;font-size:0.88rem;font-weight:600;color:var(--blue);text-decoration:none;margin-bottom:16px;">← Back to Flipped Classroom Guide</a>
     <span class="eyebrow">📄 Free one-page guide — instant download</span>
     <h1>Flip Your Math Classroom<br><span class="accent">in 7 Days.</span></h1>
     <p class="lead">The quick-start guide distilled from 13 years of flipping math classrooms, one peer-reviewed RCT, and 340,000 YouTube subscribers. One page. No fluff.</p>
@@ -335,7 +339,7 @@
         </div>
       </form>
 
-      <p class="privacy-note">No spam. No selling your email. Just one practical teaching tip per week. <a href="privacy.html">Privacy policy</a>.</p>
+      <p class="privacy-note">No spam. No selling your email. Just one practical teaching tip per week. <a href="/privacy">Privacy policy</a>.</p>
 
       <div class="proof-row">
         <div class="proof-item">
@@ -407,21 +411,22 @@
 </section>
 
 <!-- FOOTER -->
+</main>
 <footer>
   <div class="container">
     <p>
-      <a href="flipped-classroom-math.html">Flipped Classroom Guide</a> ·
-      <a href="flipped-classroom-research.html">Research</a> ·
-      <a href="flipped-classroom-mistakes.html">Common Mistakes</a> ·
-      <a href="teach-the-math.html">Teach the Math</a>
-        <a href="teacher-resources.html">Teacher Resources</a> ·
-      <a href="about.html">About Dr. E</a>
-        <a href="press.html">Press &amp; Media</a> ·
-      <a href="contact.html">Contact</a>
+      <a href="/flipped-classroom-math">Flipped Classroom Guide</a> ·
+      <a href="/flipped-classroom-research">Research</a> ·
+      <a href="/flipped-classroom-mistakes">Common Mistakes</a> ·
+      <a href="/teach-the-math">Teach the Math</a>
+        <a href="/teacher-resources">Teacher Resources</a> ·
+      <a href="/about">About Dr. E</a>
+        <a href="/press">Press &amp; Media</a> ·
+      <a href="/contact">Contact</a>
     </p>
     <div class="foot-bottom">
       © 2026 Numberbender · Founded by Dr. Peter Esperanza · Numberbender Inc. is a 501(c)(3) nonprofit · EIN: 86-2952520 ·
-      <a href="privacy.html">Privacy Policy</a>
+      <a href="/privacy">Privacy Policy</a>
     </div>
   </div>
 </footer>
@@ -473,7 +478,7 @@
 <!-- ── Numberbender Sticky Bar — Back to School June 2026 ── -->
 <div id="nb-sticky-bar">
   <p>🇵🇭 Philippine schools open in June! Get FREE bilingual math worksheets:</p>
-  <input type="email" id="nb-email-input" placeholder="your@email.com" autocomplete="email" />
+  <input type="email" id="nb-email-input" placeholder="your@email.com" autocomplete="email" aria-label="Email address" />
   <button class="nb-submit" onclick="nbSubmit()">Get Free Worksheets →</button>
   <button class="nb-close" onclick="nbDismiss()" aria-label="Close">✕</button>
 </div>

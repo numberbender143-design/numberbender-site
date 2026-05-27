@@ -798,6 +798,7 @@
     font-size: 0.85rem;
     line-height: 1.6;
   }
+  .foot-bottom a{ color: #94a3b8; text-decoration: underline; }
 
   /* Responsive */
   @media (max-width: 900px){
@@ -841,7 +842,7 @@
     .playlist-grid{ grid-template-columns: 1fr; }
     .foot-grid{ grid-template-columns: 1fr; gap: 28px; }
   }
-</style>
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}.skip-link:focus{position:fixed;top:0;left:0;width:auto;height:auto;padding:8px 16px;background:#0F2B3D;color:#fff;z-index:9999;font-size:14px;text-decoration:none;border-radius:0 0 4px 0;}</style>
   <!-- Microsoft Clarity -->
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -865,6 +866,8 @@
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
 
 <!-- ========== NAVIGATION ========== -->
 <header class="nav">
@@ -916,9 +919,9 @@
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href="/">Home</a>
       <span class="sep">›</span>
-      <a href="teacher-resources.html">For Educators</a>
+      <a href="/teacher-resources">For Educators</a>
       <span class="sep">›</span>
-      <a href="flipped-classroom-math.html">Flipped Classroom Math</a>
+      <a href="/flipped-classroom-math">Flipped Classroom Math</a>
       <span class="sep">›</span>
       <span aria-current="page">Videos</span>
     </nav>
@@ -931,7 +934,7 @@
 </section>
 
 <!-- ========== ARTICLE ========== -->
-<main class="article">
+<main id="main-content" class="article">
   <div class="container-narrow">
 
     <!-- TOC -->
@@ -991,14 +994,14 @@
         <div class="stat"><span class="n">340K+</span><span class="l">subscribers<br>+ Silver Play Button 2023</span></div>
       </div>
 
-      <p>The Filipino-language strand started for a specific reason. As I told Metro.Style in 2019: I couldn't find any math tutorials in Filipino online. While I was here teaching foreign kids — meaning my American students — I wanted to make sure I also gave back to the country through teaching the kids back home. The Filipino-language playlists are a parallel set of the same lessons, recorded in Filipino, for students in the Philippines who deserve the same flipped-classroom resources my Barstow students get. The 2021 Manila Bulletin Knowledge Channel feature came partly out of that work; the <a href="flipped-classroom-distance-learning.html">Distance Learning spoke</a> goes deeper on it.</p>
+      <p>The Filipino-language strand started for a specific reason. As I told Metro.Style in 2019: I couldn't find any math tutorials in Filipino online. While I was here teaching foreign kids — meaning my American students — I wanted to make sure I also gave back to the country through teaching the kids back home. The Filipino-language playlists are a parallel set of the same lessons, recorded in Filipino, for students in the Philippines who deserve the same flipped-classroom resources my Barstow students get. The 2021 Manila Bulletin Knowledge Channel feature came partly out of that work; the <a href="/flipped-classroom-distance-learning">Distance Learning spoke</a> goes deeper on it.</p>
       <p>The English-exclusive NumberbenderEN channel exists because the bilingual main channel surfaces Filipino-language thumbnails to viewers who don't speak Filipino, which dilutes the experience for non-Filipino subscribers. NumberbenderEN is the clean version of the same catalog, built for a global audience.</p>
     </section>
 
     <!-- §3 -->
     <section id="s3">
       <h2><span class="num">§3</span>Start Here — the ten videos to watch first</h2>
-      <p>If this is your first visit, here are the ten videos I'd hand you, in three thematic clusters. Three of them are the same embeds you'll find on the <a href="flipped-classroom-math.html">pillar guide</a> — they earn their spot here too, because this is the videos page.</p>
+      <p>If this is your first visit, here are the ten videos I'd hand you, in three thematic clusters. Three of them are the same embeds you'll find on the <a href="/flipped-classroom-math">pillar guide</a> — they earn their spot here too, because this is the videos page.</p>
 
       <h3>How the flipped model works</h3>
       <p>Three videos that show what flipping is, why I started doing it, and what students get out of it.</p>
@@ -1209,7 +1212,7 @@
     <section id="s5">
       <h2><span class="num">§5</span>The Filipino-language work</h2>
       <p>The Filipino-language playlists started because, as I told Metro.Style in 2019, I couldn't find any math tutorials in Filipino online when I went looking. The lessons I'd already recorded in English were doing useful work in California; there was no reason the same lessons couldn't do the same useful work in the Philippines, in the language students actually use at home.</p>
-      <p>The Filipino playlists are a parallel set of the English ones. Same topic structure — Algebra, Trigonometry, Pre-Calculus, Calculus — recorded in Filipino, on the same main Numberbender channel. The 2021 Manila Bulletin Knowledge Channel feature was a moment where the Filipino-language work moved from a personal project to something the broader Philippine education system was using. The <a href="flipped-classroom-distance-learning.html">Distance Learning spoke</a> covers that arc in detail.</p>
+      <p>The Filipino playlists are a parallel set of the English ones. Same topic structure — Algebra, Trigonometry, Pre-Calculus, Calculus — recorded in Filipino, on the same main Numberbender channel. The 2021 Manila Bulletin Knowledge Channel feature was a moment where the Filipino-language work moved from a personal project to something the broader Philippine education system was using. The <a href="/flipped-classroom-distance-learning">Distance Learning spoke</a> covers that arc in detail.</p>
       <p>A representative Filipino-language collaboration is the 2021 episode I did with Lyqa Maravilla — <em>Paano Gumaling sa Calculus?</em> — embedded below. It's a long-form conversation in Filipino about how to actually get good at calculus, structured around the flipped-classroom approach to studying.</p>
 
       <div class="video-block">
@@ -1273,21 +1276,21 @@
           <summary>How do I find a video on a specific topic?</summary>
           <div class="faq-body">
             <p>The fastest path is the playlist for the course in <a href="#s4">section four above</a>. If you need a single concept and you're not sure which course it lives in, the YouTube channel search bar on the channel's About page surfaces results across both English and Filipino lessons.</p>
-            <p>For the AP Calculus FRQ topics specifically, the <a href="ap-calculus-frq-books.html">AP Calc FRQ Reviewer book series</a> on Apple Books is organized by FRQ topic area, with embedded video.</p>
+            <p>For the AP Calculus FRQ topics specifically, the <a href="/ap-calculus-frq-books">AP Calc FRQ Reviewer book series</a> on Apple Books is organized by FRQ topic area, with embedded video.</p>
           </div>
         </details>
 
         <details class="faq-item">
           <summary>Can I use these videos in my classroom or course?</summary>
           <div class="faq-body">
-            <p>Yes. The videos on both channels are publicly listed and free to embed, link to, or play in a class. If you're using them as primary instructional material in a paid course, an email through the <a href="contact.html">contact page</a> is appreciated as a courtesy — not a requirement. The free Apple Book <em>The Power of the Flipped Classroom</em> has a longer treatment of how to use the videos as a flipped-classroom backbone.</p>
+            <p>Yes. The videos on both channels are publicly listed and free to embed, link to, or play in a class. If you're using them as primary instructional material in a paid course, an email through the <a href="/contact">contact page</a> is appreciated as a courtesy — not a requirement. The free Apple Book <em>The Power of the Flipped Classroom</em> has a longer treatment of how to use the videos as a flipped-classroom backbone.</p>
           </div>
         </details>
 
         <details class="faq-item">
           <summary>Why are the videos five to ten minutes long?</summary>
           <div class="faq-body">
-            <p>Because long math videos are an attendance problem. The full reasoning is in the <a href="flipped-classroom-math.html#s4">pillar guide §4</a> — short version: a six-minute video on a single concept gets watched all the way through; a twelve-minute video on the same concept gets watched for four minutes and closed. The rule I use now is one concept per video.</p>
+            <p>Because long math videos are an attendance problem. The full reasoning is in the <a href="/flipped-classroom-math#s4">pillar guide §4</a> — short version: a six-minute video on a single concept gets watched all the way through; a twelve-minute video on the same concept gets watched for four minutes and closed. The rule I use now is one concept per video.</p>
           </div>
         </details>
 
@@ -1346,27 +1349,27 @@
       </div>
       <div class="foot">
         <h4>Educators</h4>
-        <a href="teach-it-like-you-stream-it.html">Teach It Like You Stream It</a>
-        <a href="teach-the-math.html">Teach the Math</a>
-        <a href="teacher-resources.html">Teacher Resources</a>
-        <a href="speaking.html">Workshops</a>
-        <a href="speaking.html">AI in Education</a>
-        <a href="flipped-classroom-math.html">Flipped Learning</a>
+        <a href="/teach-it-like-you-stream-it">Teach It Like You Stream It</a>
+        <a href="/teach-the-math">Teach the Math</a>
+        <a href="/teacher-resources">Teacher Resources</a>
+        <a href="/speaking">Workshops</a>
+        <a href="/speaking">AI in Education</a>
+        <a href="/flipped-classroom-math">Flipped Learning</a>
       </div>
       <div class="foot">
         <h4>Connect</h4>
-        <a href="about.html">About Dr. E</a>
-        <a href="speaking.html">Speaking</a>
-        <a href="speaking-archive.html">Speaking Archive</a>
-        <a href="press.html">Press &amp; Media</a>
-        <a href="contact.html">Contact</a>
+        <a href="/about">About Dr. E</a>
+        <a href="/speaking">Speaking</a>
+        <a href="/speaking-archive">Speaking Archive</a>
+        <a href="/press">Press &amp; Media</a>
+        <a href="/contact">Contact</a>
         <a href="https://www.youtube.com/@numberbender" target="_blank" rel="noopener">YouTube Channel</a>
-        <a href="privacy.html">Privacy Policy</a>
+        <a href="/privacy">Privacy Policy</a>
       </div>
     </div>
     <div class="foot-bottom">
-      © 2026 Numberbender · Founded by Dr. Peter Esperanza · Numberbender Inc. is a 501(c)(3) nonprofit organization · EIN: 86-2952520 · Made with care for learners and educators everywhere. · <a href="privacy.html" style="color:#94a3b8;">Privacy Policy</a>
-      <div style="margin-top:8px;font-size:0.78rem;color:#64748b;">
+      © 2026 Numberbender · Founded by Dr. Peter Esperanza · Numberbender Inc. is a 501(c)(3) nonprofit organization · EIN: 86-2952520 · Made with care for learners and educators everywhere. · <a href="/privacy" style="color:#94a3b8;">Privacy Policy</a>
+      <div style="margin-top:8px;font-size:0.78rem;color:#94a3b8;">
         <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener"><img src="https://licensebuttons.net/l/by/4.0/88x31.png" alt="CC BY 4.0" style="border:0;vertical-align:middle;margin-right:6px;"></a>
         Original content licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener" style="color:#94a3b8;">CC BY 4.0</a> &mdash; free to share and adapt with credit to Peter Esperanza / Numberbender.
       </div>
@@ -1444,7 +1447,7 @@
 <!-- ── Numberbender Sticky Bar — Back to School June 2026 ── -->
 <div id="nb-sticky-bar">
   <p>🇵🇭 Philippine schools open in June! Get FREE bilingual math worksheets:</p>
-  <input type="email" id="nb-email-input" placeholder="your@email.com" autocomplete="email" />
+  <input type="email" id="nb-email-input" placeholder="your@email.com" autocomplete="email" aria-label="Email address" />
   <button class="nb-submit" onclick="nbSubmit()">Get Free Worksheets →</button>
   <button class="nb-close" onclick="nbDismiss()" aria-label="Close">✕</button>
 </div>

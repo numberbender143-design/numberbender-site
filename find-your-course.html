@@ -353,7 +353,7 @@
     .nav-dropdown:hover .dropdown-menu{ display:none; }
     .nav-dropdown .dropdown-menu.open{ display:block; }
   }
-</style>
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}.skip-link:focus{position:fixed;top:0;left:0;width:auto;height:auto;padding:8px 16px;background:#0F2B3D;color:#fff;z-index:9999;font-size:14px;text-decoration:none;border-radius:0 0 4px 0;}</style>
 
 <!-- Microsoft Clarity -->
 <script type="text/javascript">
@@ -378,6 +378,8 @@
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
 
 <header class="nav">
   <div class="container nav-inner">
@@ -421,6 +423,7 @@
     </nav>
   </div>
 </header>
+<main id="main-content">
 
 <!-- HERO -->
 <section class="page-head">
@@ -615,7 +618,7 @@
       <p id="resultBody">Loading…</p>
       <div class="result-actions">
         <a id="resultLink" href="learn/elementary-algebra/" class="btn btn-primary btn-lg">Go to Algebra →</a>
-        <a href="start-here.html" class="btn btn-outline">Try a free lesson first</a>
+        <a href="/start-here" class="btn btn-outline">Try a free lesson first</a>
       </div>
       <div class="result-meta">
         Not quite right? <button class="restart" onclick="restartQuiz()">Retake the quiz</button>
@@ -673,10 +676,11 @@
   </div>
 </section>
 
+</main>
 <footer>
   <div class="container">
-    © 2026 Numberbender · Founded by Dr. Peter Esperanza · <a href="/">Home</a> · <a href="contact.html">Contact</a>
-    <div style="margin-top:8px;font-size:0.78rem;color:#64748b;">
+    © 2026 Numberbender · Founded by Dr. Peter Esperanza · <a href="/">Home</a> · <a href="/contact">Contact</a>
+    <div style="margin-top:8px;font-size:0.78rem;color:#94a3b8;">
       <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener"><img src="https://licensebuttons.net/l/by/4.0/88x31.png" alt="CC BY 4.0" style="border:0;vertical-align:middle;margin-right:6px;"></a>
       Original content licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener" style="color:#94a3b8;">CC BY 4.0</a> &mdash; free to share and adapt with credit to Peter Esperanza / Numberbender.
     </div>
@@ -959,7 +963,7 @@
 <!-- ── Numberbender Sticky Bar ── -->
 <div id="nb-sticky-bar">
   <p>🇵🇭 Philippine schools open in June! Get FREE bilingual math worksheets:</p>
-  <input type="email" id="nb-email-input" placeholder="your@email.com" autocomplete="email" />
+  <input type="email" id="nb-email-input" placeholder="your@email.com" autocomplete="email" aria-label="Email address" />
   <button class="nb-submit" onclick="nbSubmit()">Get Free Worksheets →</button>
   <button class="nb-close" onclick="nbDismiss()" aria-label="Close">✕</button>
 </div>

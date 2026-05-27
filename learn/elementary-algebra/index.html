@@ -71,14 +71,66 @@
     border-bottom:1px solid var(--border);
   }
   .nav-inner{ display:flex; align-items:center; justify-content:space-between; padding:14px 0; }
-  .logo{ display:flex; align-items:center; gap:10px; font-weight:800; font-size:1.15rem; color:var(--navy); }
-  .logo-mark{ width:48px; height:48px; border-radius:10px; background:transparent; display:grid; place-items:center; overflow:hidden; }
-  .nav-links{ display:flex; gap:20px; align-items:center; }
+  .logo-lockup{ padding:0; }
+  .logo-lockup .lockup-img{ height:72px; width:auto; display:block; max-width:360px; }
+  .menu-toggle{ display:none; background:none; border:none; cursor:pointer; font-size:1.4rem; color:var(--navy); }
+  .nav-links{ display:flex; gap:22px; align-items:center; flex-wrap:nowrap; }
+  .nav-links a, .nav-links .dropdown-trigger{ white-space:nowrap; }
   .nav-links a{ color:var(--navy); font-weight:500; font-size:0.95rem; }
-  .nav-links a:hover{ color:var(--teal); text-decoration:none; }
-  .nav-links a.active{ color:var(--teal); }
-  .nav-cta{ background:var(--teal-dark); color:white !important; padding:9px 16px; border-radius:10px; font-weight:600; }
-  .nav-cta:hover{ background:var(--teal); text-decoration:none; }
+  .nav-links a:hover{ color:var(--blue); text-decoration:none; }
+  .nav-cta{ background:var(--navy); color:white !important; padding:9px 16px; border-radius:10px; font-weight:600; }
+  .nav-cta:hover{ background:var(--blue); text-decoration:none; }
+  .nav-dropdown{ position:relative; }
+  .nav-dropdown .dropdown-trigger{
+    background:none; border:none; padding:0; margin:0;
+    font:inherit; color:var(--navy); font-weight:500; font-size:0.95rem;
+    cursor:pointer; display:inline-flex; align-items:center; gap:4px;
+    transition:color .15s ease;
+  }
+  .nav-dropdown .dropdown-trigger:hover{ color:var(--blue); }
+  .nav-dropdown .caret{ font-size:0.75em; display:inline-block; transition:transform .2s ease; }
+  .nav-dropdown:hover .caret,
+  .nav-dropdown .dropdown-trigger[aria-expanded="true"] .caret{ transform:rotate(180deg); }
+  .nav-dropdown .dropdown-menu{
+    position:absolute; top:100%; left:0; margin-top:10px;
+    background:white; border:1px solid var(--border); border-radius:14px;
+    padding:6px; box-shadow:0 20px 50px rgba(15,23,42,.12);
+    min-width:240px; opacity:0; visibility:hidden;
+    transform:translateY(-6px);
+    transition:opacity .15s ease, transform .15s ease, visibility .15s ease;
+    z-index:100;
+  }
+  .nav-dropdown .dropdown-menu::before{ content:''; position:absolute; top:-10px; left:0; right:0; height:10px; }
+  .nav-dropdown:hover .dropdown-menu,
+  .nav-dropdown .dropdown-menu.open{ opacity:1; visibility:visible; transform:translateY(0); }
+  .nav-dropdown .dropdown-menu a{
+    display:block; padding:10px 14px; border-radius:8px;
+    color:var(--navy); font-weight:500; font-size:0.95rem;
+  }
+  .nav-dropdown .dropdown-menu a:hover{ background:rgba(37,99,235,.08); color:var(--blue); text-decoration:none; }
+  @media(max-width:900px){
+    .menu-toggle{ display:block; }
+    .nav-links{
+      display:none; position:absolute; top:100%; left:0; right:0;
+      background:white; flex-direction:column; padding:18px;
+      border-bottom:1px solid var(--border); gap:14px;
+    }
+    .nav-links.open{ display:flex; }
+    .logo-lockup .lockup-img{ height:60px; max-width:300px; }
+    .nav-dropdown{ width:100%; }
+    .nav-dropdown .dropdown-trigger{ width:100%; justify-content:space-between; padding:6px 0; }
+    .nav-dropdown .dropdown-menu{
+      position:static; box-shadow:none; border:none;
+      padding:0 0 4px 14px; margin-top:0; min-width:0;
+      opacity:1; visibility:visible; transform:none;
+      display:none; background:transparent;
+    }
+    .nav-dropdown:hover .dropdown-menu{ display:none; }
+    .nav-dropdown .dropdown-menu.open{ display:block; }
+  }
+  @media(max-width:600px){
+    .logo-lockup .lockup-img{ height:50px; max-width:240px; }
+  }
   .breadcrumb{ font-size:0.85rem; color:var(--muted); display:flex; gap:6px; align-items:center; }
   .breadcrumb a{ color:var(--muted); }
   .breadcrumb a:hover{ color:var(--teal); }
@@ -177,6 +229,7 @@
   .week-info{ flex:1; }
   .week-title{ font-size:1.05rem; font-weight:700; color:var(--navy); margin-bottom:4px; }
   .week-topics{ font-size:0.88rem; color:var(--muted); line-height:1.5; }
+  .week-header[style] .week-topics{ color:var(--course-dark); }
   .week-toggle{ font-size:1.2rem; color:var(--muted); flex-shrink:0; transition:transform .2s ease; }
   .week-block.open .week-toggle{ transform:rotate(180deg); }
 
@@ -316,6 +369,42 @@
   .logo{ display:flex; align-items:center; gap:10px; font-weight:800; font-size:1.15rem; color:white; }
   .logo-mark{ width:48px; height:48px; border-radius:10px; background:transparent; display:grid; place-items:center; overflow:hidden; }
 
+  /* SEARCH BAR */
+  .search-wrap{ position:relative; margin-bottom:20px; }
+  .search-icon{
+    position:absolute; left:14px; top:50%; transform:translateY(-50%);
+    font-size:1rem; pointer-events:none; line-height:1; color:var(--muted);
+  }
+  .lesson-search{
+    width:100%; padding:12px 44px 12px 40px;
+    border:2px solid var(--border); border-radius:10px;
+    font-size:0.95rem; color:var(--navy); background:var(--surface);
+    outline:none; transition:border-color .2s ease; font-family:inherit;
+  }
+  .lesson-search:focus{ border-color:var(--teal); box-shadow:0 0 0 3px rgba(31,111,107,0.1); }
+  .lesson-search::placeholder{ color:var(--muted); }
+  .search-clear{
+    position:absolute; right:12px; top:50%; transform:translateY(-50%);
+    cursor:pointer; color:var(--muted); background:var(--border);
+    width:22px; height:22px; border-radius:50%; border:none;
+    display:none; place-items:center; font-size:0.7rem; line-height:1;
+    transition:background .15s, color .15s;
+  }
+  .search-clear.visible{ display:grid; }
+  .search-clear:hover{ background:var(--teal); color:white; }
+  .search-count{
+    font-size:0.82rem; color:var(--muted); margin-bottom:14px; min-height:1.3em;
+  }
+  .search-count strong{ color:var(--teal-dark); }
+  .search-no-results{
+    display:none; text-align:center; padding:40px 20px;
+    background:var(--surface); border:1px solid var(--border);
+    border-radius:var(--radius); color:var(--muted); font-size:0.95rem;
+    line-height:1.6;
+  }
+  .search-no-results.visible{ display:block; }
+  .week-block.search-hidden{ display:none; }
+
   /* RESPONSIVE */
   @media(max-width:860px){
     .content-layout{ grid-template-columns:1fr; }
@@ -336,32 +425,57 @@
 <body>
 
 <!-- NAV -->
+<style>.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}.skip-link:focus{position:fixed;top:0;left:0;width:auto;height:auto;padding:8px 16px;background:#0F2B3D;color:#fff;z-index:9999;font-size:14px;text-decoration:none;border-radius:0 0 4px 0;}</style>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="nav">
-  <div class="container">
-    <div class="nav-inner">
-      <a href="../../index.html" class="logo" style="text-decoration:none;">
-        <div class="logo-mark">
-          <img src="../../images/numberbender-mark-teal-transparent.svg" alt="Numberbender" style="width:100%;height:100%;object-fit:contain;">
+  <div class="container nav-inner">
+    <a href="/" class="logo-lockup" aria-label="Numberbender — Master the Elements of Math">
+      <img src="../../images/numberbender_banner_only.svg" alt="Numberbender" class="lockup-img">
+    </a>
+    <button class="menu-toggle" aria-label="Toggle menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
+    <nav class="nav-links" id="navlinks">
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Learn <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="/start-here">🎁 Free Starter Lesson</a>
+          <a href="/find-your-course">🧭 Where Do I Start?</a>
+          <a href="/courses">📚 Explore Math Lessons</a>
+          <a href="/math-worksheets">📝 Free Worksheets</a>
+          <a href="/for-filipino-students">🇵🇭 Para sa Filipino Students</a>
         </div>
-        <span>Numberbender</span>
-      </a>
-      <nav class="nav-links" aria-label="Main navigation">
-        <a href="/courses" class="active">Courses</a>
-        <a href="../../math-worksheets.html">Worksheets</a>
-        <a href="../../for-teachers.html">For Teachers</a>
-        <a href="../../blog.html">Blog</a>
-        <a href="../../about.html">About Dr. E</a>
-      </nav>
-      <a href="../../contact.html" class="nav-cta">Contact</a>
-    </div>
+      </div>
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Teach <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="/for-teachers">🏫 For Teachers Hub</a>
+          <a href="/teach-the-math">🎓 Teach the Math</a>
+          <a href="/teach-it-like-you-stream-it">🎬 Teach It Like You Stream It</a>
+          <a href="/teacher-resources">📦 Teacher Resources</a>
+          <a href="/math-worksheets">📄 Printable Worksheets</a>
+          <a href="/courses">📚 Lesson &amp; Course Library</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">About <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="/about">👨‍🏫 About Dr. E</a>
+          <a href="/speaking">🎤 Speaking</a>
+          <a href="/press">📰 Press &amp; Media</a>
+          <a href="/blog">✍️ Blog</a>
+          <a href="/speaking-archive">📅 Past Engagements</a>
+        </div>
+      </div>
+      <a href="/contact" class="nav-cta">Contact</a>
+    </nav>
   </div>
 </header>
 
+<main id="main-content">
 <!-- BREADCRUMB -->
 <div style="background:var(--surface);border-bottom:1px solid var(--border);padding:10px 0;">
   <div class="container">
     <div class="breadcrumb">
-      <a href="../../index.html">Home</a>
+      <a href="/">Home</a>
       <span class="sep">›</span>
       <a href="/courses">Courses</a>
       <span class="sep">›</span>
@@ -446,7 +560,27 @@
       <div>
         <div class="section-label">Course curriculum</div>
         <h2 class="section-title" style="margin-bottom:6px;">15 Weeks of Elementary Algebra</h2>
-        <p class="section-sub" style="margin-bottom:28px;">13 lessons + Midterm + Final. Click any week to expand. Videos uploading soon.</p>
+        <p class="section-sub" style="margin-bottom:20px;">13 lessons + Midterm + Final. Click any week to expand. Videos uploading soon.</p>
+
+        <!-- SEARCH BAR -->
+        <div class="search-wrap">
+          <span class="search-icon">🔍</span>
+          <input
+            type="text"
+            id="lesson-search"
+            class="lesson-search"
+            placeholder="Search topics… e.g. 'factoring', 'slope', 'quadratic'"
+            oninput="filterWeeks(this.value)"
+            autocomplete="off"
+            spellcheck="false"
+          >
+          <button class="search-clear" id="search-clear" onclick="clearSearch()" aria-label="Clear search">✕</button>
+        </div>
+        <div class="search-count" id="search-count"></div>
+        <div class="search-no-results" id="search-no-results">
+          No lessons found for that search.<br>
+          <span style="font-size:0.85rem;">Try a shorter keyword — like "linear", "factor", or "graph".</span>
+        </div>
 
         <div class="weeks" id="weeks-list">
 
@@ -470,7 +604,7 @@
                 </div>
                 <p class="prep-intro">Watch these focused lessons first — then the classroom recording will click faster. Each one opens the Algebra Library where you can also toggle to Filipino and grab a practice worksheet.</p>
                 <div class="prep-links">
-                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-1" target="_blank" rel="noopener">
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-1-lesson-1" target="_blank" rel="noopener">
                     <div class="prep-play">▶</div>
                     <div class="prep-info">
                       <div class="prep-title">Adding &amp; Subtracting Integers</div>
@@ -478,7 +612,7 @@
                     </div>
                     <span class="prep-arrow">→</span>
                   </a>
-                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-1" target="_blank" rel="noopener">
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-1-lesson-2" target="_blank" rel="noopener">
                     <div class="prep-play">▶</div>
                     <div class="prep-info">
                       <div class="prep-title">Multiplying &amp; Dividing Integers</div>
@@ -486,7 +620,7 @@
                     </div>
                     <span class="prep-arrow">→</span>
                   </a>
-                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-1" target="_blank" rel="noopener">
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-1-lesson-5" target="_blank" rel="noopener">
                     <div class="prep-play">▶</div>
                     <div class="prep-info">
                       <div class="prep-title">Order of Operations (PEMDAS)</div>
@@ -501,13 +635,14 @@
               </div>
 
               <div class="lesson-slot" data-video-id="IUdj3KCuPgQ">
-                <div class="slot-play has-video" onclick="openVideo('IUdj3KCuPgQ', 'Week 1 — Operations with Integers')">▶</div>
+                <div class="slot-play has-video" onclick="openVideo('IUdj3KCuPgQ', 'Week 1 — Number Properties')">▶</div>
                 <div class="slot-info">
-                  <div class="slot-title">Week 1 — Classroom Lesson</div>
-                  <div class="slot-meta">Operations with Integers · ~60–75 min</div>
+                  <div class="slot-title">Week 1 — Number Properties</div>
+                  <div class="slot-meta">Operations with Integers · ~1 hr 38 min</div>
                 </div>
                 <div class="slot-actions">
-                  <button class="slot-btn primary" onclick="openVideo('IUdj3KCuPgQ', 'Week 1 — Operations with Integers')">▶ Watch</button>
+                  <button class="slot-btn primary" onclick="openVideo('IUdj3KCuPgQ', 'Week 1 — Number Properties')">▶ Watch</button>
+                  <button class="slot-btn" onclick="openWorksheet('../../worksheets/algebra/Number_Properties_Elementary_Algebra_Week_1.pdf', 'Week 1 — Number Properties Worksheet')">📄 Worksheet</button>
                 </div>
               </div>
             </div>
@@ -518,8 +653,8 @@
             <div class="week-header" onclick="toggleWeek('week-2')">
               <div class="week-num-badge">Week 2</div>
               <div class="week-info">
-                <div class="week-title">Fraction Operations</div>
-                <div class="week-topics">Operations with fractions and mixed numbers; LCD; converting between fractions and decimals</div>
+                <div class="week-title">Simplifying Fractions and Mixed Fractions</div>
+                <div class="week-topics">Operations with fractions and mixed numbers; simplifying; LCD; adding and subtracting mixed fractions</div>
               </div>
               <div class="week-toggle">▾</div>
             </div>
@@ -533,7 +668,7 @@
                 </div>
                 <p class="prep-intro">Watch these focused lessons first — then the classroom recording will click faster. Each one opens the Algebra Library where you can also toggle to Filipino and grab a practice worksheet.</p>
                 <div class="prep-links">
-                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-1" target="_blank" rel="noopener">
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-1-lesson-3" target="_blank" rel="noopener">
                     <div class="prep-play">▶</div>
                     <div class="prep-info">
                       <div class="prep-title">Fractions and Mixed Numbers</div>
@@ -541,7 +676,7 @@
                     </div>
                     <span class="prep-arrow">→</span>
                   </a>
-                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-1" target="_blank" rel="noopener">
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-1-lesson-4" target="_blank" rel="noopener">
                     <div class="prep-play">▶</div>
                     <div class="prep-info">
                       <div class="prep-title">Rational Numbers and Decimals</div>
@@ -549,7 +684,7 @@
                     </div>
                     <span class="prep-arrow">→</span>
                   </a>
-                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-1" target="_blank" rel="noopener">
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-1-lesson-5" target="_blank" rel="noopener">
                     <div class="prep-play">▶</div>
                     <div class="prep-info">
                       <div class="prep-title">Order of Operations (PEMDAS)</div>
@@ -563,13 +698,27 @@
                 </div>
               </div>
 
-              <div class="lesson-slot" data-video-id="">
-                <div class="slot-play no-video">▶</div>
+              <div class="lesson-slot" data-video-id="3RKWkyYQ-8U">
+                <div class="slot-play has-video" onclick="openVideo('3RKWkyYQ-8U', 'Week 2 · Part 1 — Math Operations in Fractions')">▶</div>
                 <div class="slot-info">
-                  <div class="slot-title">Week 2 — Classroom Lesson</div>
-                  <div class="slot-meta">Fraction Operations · ~60–75 min</div>
+                  <div class="slot-title">Week 2 · Part 1 — Math Operations in Fractions</div>
+                  <div class="slot-meta">Simplifying Fractions and Mixed Fractions · ~1 hr 3 min</div>
                 </div>
-                <div class="slot-actions"><span class="slot-coming">Coming soon</span></div>
+                <div class="slot-actions">
+                  <button class="slot-btn primary" onclick="openVideo('3RKWkyYQ-8U', 'Week 2 · Part 1 — Math Operations in Fractions')">▶ Watch</button>
+                  <button class="slot-btn" onclick="openWorksheet('../../worksheets/algebra/Math_Operations_in_Fractions_Simplifying_Multiplying_and_Dividing.pdf', 'Week 2 · Part 1 — Math Operations in Fractions Worksheet')">📄 Worksheet</button>
+                </div>
+              </div>
+              <div class="lesson-slot" data-video-id="lbKpsz2fhmI">
+                <div class="slot-play has-video" onclick="openVideo('lbKpsz2fhmI', 'Week 2 · Part 2 — Mixed Fractions Add and Subtract')">▶</div>
+                <div class="slot-info">
+                  <div class="slot-title">Week 2 · Part 2 — Mixed Fractions Add and Subtract</div>
+                  <div class="slot-meta">Simplifying Fractions and Mixed Fractions · ~1 hr 30 min</div>
+                </div>
+                <div class="slot-actions">
+                  <button class="slot-btn primary" onclick="openVideo('lbKpsz2fhmI', 'Week 2 · Part 2 — Mixed Fractions Add and Subtract')">▶ Watch</button>
+                  <button class="slot-btn" onclick="openWorksheet('../../worksheets/algebra/Adding_and_Subtracting_Fractions_and_Mixed_Numbers.pdf', 'Week 2 · Part 2 — Adding &amp; Subtracting Fractions Worksheet')">📄 Worksheet</button>
+                </div>
               </div>
             </div>
           </div>
@@ -579,8 +728,8 @@
             <div class="week-header" onclick="toggleWeek('week-3')">
               <div class="week-num-badge">Week 3</div>
               <div class="week-info">
-                <div class="week-title">Exponents and Square Roots</div>
-                <div class="week-topics">Integer and zero exponents; square roots and cube roots; simplifying radical expressions</div>
+                <div class="week-title">Simplifying Radicals as Rational Exponents</div>
+                <div class="week-topics">Zero exponents; square roots; rational exponents; simplifying radical expressions and exponents</div>
               </div>
               <div class="week-toggle">▾</div>
             </div>
@@ -594,7 +743,7 @@
                 </div>
                 <p class="prep-intro">Watch these focused lessons first — then the classroom recording will click faster. Each one opens the Algebra Library where you can also toggle to Filipino and grab a practice worksheet.</p>
                 <div class="prep-links">
-                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-7" target="_blank" rel="noopener">
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-7-lesson-1" target="_blank" rel="noopener">
                     <div class="prep-play">▶</div>
                     <div class="prep-info">
                       <div class="prep-title">Laws of Exponents</div>
@@ -602,7 +751,7 @@
                     </div>
                     <span class="prep-arrow">→</span>
                   </a>
-                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-9" target="_blank" rel="noopener">
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-9-lesson-1" target="_blank" rel="noopener">
                     <div class="prep-play">▶</div>
                     <div class="prep-info">
                       <div class="prep-title">Simplifying Radicals</div>
@@ -610,7 +759,7 @@
                     </div>
                     <span class="prep-arrow">→</span>
                   </a>
-                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-9" target="_blank" rel="noopener">
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-9-lesson-2" target="_blank" rel="noopener">
                     <div class="prep-play">▶</div>
                     <div class="prep-info">
                       <div class="prep-title">Adding and Subtracting Radicals</div>
@@ -624,13 +773,27 @@
                 </div>
               </div>
 
-              <div class="lesson-slot" data-video-id="">
-                <div class="slot-play no-video">▶</div>
+              <div class="lesson-slot" data-video-id="5wh2MIEThrU">
+                <div class="slot-play has-video" onclick="openVideo('5wh2MIEThrU', 'Week 3 · Part 1 — Zero Exponents and Square Roots')">▶</div>
                 <div class="slot-info">
-                  <div class="slot-title">Week 3 — Classroom Lesson</div>
-                  <div class="slot-meta">Exponents and Square Roots · ~60–75 min</div>
+                  <div class="slot-title">Week 3 · Part 1 — Zero Exponents and Square Roots</div>
+                  <div class="slot-meta">Simplifying Radicals as Rational Exponents · ~1 hr 31 min</div>
                 </div>
-                <div class="slot-actions"><span class="slot-coming">Coming soon</span></div>
+                <div class="slot-actions">
+                  <button class="slot-btn primary" onclick="openVideo('5wh2MIEThrU', 'Week 3 · Part 1 — Zero Exponents and Square Roots')">▶ Watch</button>
+                  <button class="slot-btn" onclick="openWorksheet('../../worksheets/algebra/Zero_Exponents_Negative_Exponents_and_Square_Roots.pdf', 'Week 3 · Part 1 — Zero &amp; Negative Exponents Worksheet')">📄 Worksheet</button>
+                </div>
+              </div>
+              <div class="lesson-slot" data-video-id="HZ2wVZzNFLs">
+                <div class="slot-play has-video" onclick="openVideo('HZ2wVZzNFLs', 'Week 3 · Part 2 — Radical Exponents and Square Roots')">▶</div>
+                <div class="slot-info">
+                  <div class="slot-title">Week 3 · Part 2 — Radical Exponents and Square Roots</div>
+                  <div class="slot-meta">Simplifying Radicals as Rational Exponents · ~1 hr 24 min</div>
+                </div>
+                <div class="slot-actions">
+                  <button class="slot-btn primary" onclick="openVideo('HZ2wVZzNFLs', 'Week 3 · Part 2 — Radical Exponents and Square Roots')">▶ Watch</button>
+                  <button class="slot-btn" onclick="openWorksheet('../../worksheets/algebra/Radical_Exponents_and_Square_Roots.pdf', 'Week 3 · Part 2 — Radical Exponents &amp; Square Roots Worksheet')">📄 Worksheet</button>
+                </div>
               </div>
             </div>
           </div>
@@ -640,8 +803,8 @@
             <div class="week-header" onclick="toggleWeek('week-4')">
               <div class="week-num-badge">Week 4</div>
               <div class="week-info">
-                <div class="week-title">Solving and Simplifying Algebraic Expressions</div>
-                <div class="week-topics">Translating verbal phrases; combining like terms; distributive property; simplifying expressions</div>
+                <div class="week-title">Solving Linear Equations</div>
+                <div class="week-topics">One-step equations; solving linear and literal equations; isolating variables; applications</div>
               </div>
               <div class="week-toggle">▾</div>
             </div>
@@ -655,43 +818,57 @@
                 </div>
                 <p class="prep-intro">Watch these focused lessons first — then the classroom recording will click faster. Each one opens the Algebra Library where you can also toggle to Filipino and grab a practice worksheet.</p>
                 <div class="prep-links">
-                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-2" target="_blank" rel="noopener">
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-3-lesson-1" target="_blank" rel="noopener">
                     <div class="prep-play">▶</div>
                     <div class="prep-info">
-                      <div class="prep-title">Variables and Algebraic Expressions</div>
-                      <div class="prep-meta">Algebra Library · Unit 2 · Lesson 1</div>
+                      <div class="prep-title">One-Step Equations</div>
+                      <div class="prep-meta">Algebra Library · Unit 3 · Lesson 1</div>
                     </div>
                     <span class="prep-arrow">→</span>
                   </a>
-                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-2" target="_blank" rel="noopener">
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-3-lesson-2" target="_blank" rel="noopener">
                     <div class="prep-play">▶</div>
                     <div class="prep-info">
-                      <div class="prep-title">Combining Like Terms</div>
-                      <div class="prep-meta">Algebra Library · Unit 2 · Lesson 4</div>
+                      <div class="prep-title">Multi-Step Equations</div>
+                      <div class="prep-meta">Algebra Library · Unit 3 · Lesson 2</div>
                     </div>
                     <span class="prep-arrow">→</span>
                   </a>
-                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-2" target="_blank" rel="noopener">
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-3-lesson-4" target="_blank" rel="noopener">
                     <div class="prep-play">▶</div>
                     <div class="prep-info">
-                      <div class="prep-title">The Distributive Property</div>
-                      <div class="prep-meta">Algebra Library · Unit 2 · Lesson 5</div>
+                      <div class="prep-title">Equations with Fractions and Decimals</div>
+                      <div class="prep-meta">Algebra Library · Unit 3 · Lesson 4</div>
                     </div>
                     <span class="prep-arrow">→</span>
                   </a>
                 </div>
                 <div class="prep-footer">
-                  <a class="prep-view-all" href="../../subjects/algebra/index.html#unit-2" target="_blank" rel="noopener">View all of Unit 2 — Variables, Expressions &amp; Properties →</a>
+                  <a class="prep-view-all" href="../../subjects/algebra/index.html#unit-3" target="_blank" rel="noopener">View all of Unit 3 — Linear Equations →</a>
                 </div>
               </div>
 
-              <div class="lesson-slot" data-video-id="">
-                <div class="slot-play no-video">▶</div>
+              <div class="lesson-slot" data-video-id="pVsWT2Ay0oY">
+                <div class="slot-play has-video" onclick="openVideo('pVsWT2Ay0oY', 'Week 4 · Part 1 — Solving One-Step Equation')">▶</div>
                 <div class="slot-info">
-                  <div class="slot-title">Week 4 — Classroom Lesson</div>
-                  <div class="slot-meta">Solving and Simplifying Algebraic Expressions · ~60–75 min</div>
+                  <div class="slot-title">Week 4 · Part 1 — Solving One-Step Equation</div>
+                  <div class="slot-meta">Solving Linear Equations · ~60–75 min</div>
                 </div>
-                <div class="slot-actions"><span class="slot-coming">Coming soon</span></div>
+                <div class="slot-actions">
+                  <button class="slot-btn primary" onclick="openVideo('pVsWT2Ay0oY', 'Week 4 · Part 1 — Solving One-Step Equation')">▶ Watch</button>
+                  <button class="slot-btn" onclick="openWorksheet('../../worksheets/algebra/Solving_One_Step_and_Two_Step_Equations_with_Properties_of_Numbers.pdf', 'Week 4 · Part 1 — Solving One &amp; Two-Step Equations Worksheet')">📄 Worksheet</button>
+                </div>
+              </div>
+              <div class="lesson-slot" data-video-id="K_MjgvG6gqs">
+                <div class="slot-play has-video" onclick="openVideo('K_MjgvG6gqs', 'Week 4 · Part 2 — Solving Linear &amp; Literal Equations')">▶</div>
+                <div class="slot-info">
+                  <div class="slot-title">Week 4 · Part 2 — Solving Linear &amp; Literal Equations</div>
+                  <div class="slot-meta">Solving Linear Equations · ~60–75 min</div>
+                </div>
+                <div class="slot-actions">
+                  <button class="slot-btn primary" onclick="openVideo('K_MjgvG6gqs', 'Week 4 · Part 2 — Solving Linear &amp; Literal Equations')">▶ Watch</button>
+                  <button class="slot-btn" onclick="openWorksheet('../../worksheets/algebra/Solving_Linear_Literal_Equations_Ratios_and_Translating_Verbal_Expressions.pdf', 'Week 4 · Part 2 — Solving Linear &amp; Literal Equations Worksheet')">📄 Worksheet</button>
+                </div>
               </div>
             </div>
           </div>
@@ -716,7 +893,7 @@
                 </div>
                 <p class="prep-intro">Watch these focused lessons first — then the classroom recording will click faster. Each one opens the Algebra Library where you can also toggle to Filipino and grab a practice worksheet.</p>
                 <div class="prep-links">
-                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-3" target="_blank" rel="noopener">
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-3-lesson-1" target="_blank" rel="noopener">
                     <div class="prep-play">▶</div>
                     <div class="prep-info">
                       <div class="prep-title">One-Step Equations</div>
@@ -724,7 +901,7 @@
                     </div>
                     <span class="prep-arrow">→</span>
                   </a>
-                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-3" target="_blank" rel="noopener">
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-3-lesson-2" target="_blank" rel="noopener">
                     <div class="prep-play">▶</div>
                     <div class="prep-info">
                       <div class="prep-title">Multi-Step Equations</div>
@@ -732,7 +909,7 @@
                     </div>
                     <span class="prep-arrow">→</span>
                   </a>
-                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-3" target="_blank" rel="noopener">
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-3-lesson-4" target="_blank" rel="noopener">
                     <div class="prep-play">▶</div>
                     <div class="prep-info">
                       <div class="prep-title">Equations with Fractions and Decimals</div>
@@ -777,7 +954,7 @@
                 </div>
                 <p class="prep-intro">Watch these focused lessons first — then the classroom recording will click faster. Each one opens the Algebra Library where you can also toggle to Filipino and grab a practice worksheet.</p>
                 <div class="prep-links">
-                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-4" target="_blank" rel="noopener">
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-4-lesson-1" target="_blank" rel="noopener">
                     <div class="prep-play">▶</div>
                     <div class="prep-info">
                       <div class="prep-title">Solving Linear Inequalities</div>
@@ -785,7 +962,7 @@
                     </div>
                     <span class="prep-arrow">→</span>
                   </a>
-                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-4" target="_blank" rel="noopener">
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-4-lesson-2" target="_blank" rel="noopener">
                     <div class="prep-play">▶</div>
                     <div class="prep-info">
                       <div class="prep-title">Compound Inequalities — And / Or</div>
@@ -793,7 +970,7 @@
                     </div>
                     <span class="prep-arrow">→</span>
                   </a>
-                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-4" target="_blank" rel="noopener">
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-4-lesson-4" target="_blank" rel="noopener">
                     <div class="prep-play">▶</div>
                     <div class="prep-info">
                       <div class="prep-title">Absolute Value Equations</div>
@@ -862,7 +1039,7 @@
                 </div>
                 <p class="prep-intro">Watch these focused lessons first — then the classroom recording will click faster. Each one opens the Algebra Library where you can also toggle to Filipino and grab a practice worksheet.</p>
                 <div class="prep-links">
-                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-5" target="_blank" rel="noopener">
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-5-lesson-1" target="_blank" rel="noopener">
                     <div class="prep-play">▶</div>
                     <div class="prep-info">
                       <div class="prep-title">Plotting Points in the Coordinate Plane</div>
@@ -870,7 +1047,7 @@
                     </div>
                     <span class="prep-arrow">→</span>
                   </a>
-                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-5" target="_blank" rel="noopener">
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-5-lesson-2" target="_blank" rel="noopener">
                     <div class="prep-play">▶</div>
                     <div class="prep-info">
                       <div class="prep-title">Graphing Linear Equations</div>
@@ -878,7 +1055,7 @@
                     </div>
                     <span class="prep-arrow">→</span>
                   </a>
-                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-5" target="_blank" rel="noopener">
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-5-lesson-3" target="_blank" rel="noopener">
                     <div class="prep-play">▶</div>
                     <div class="prep-info">
                       <div class="prep-title">Finding X and Y Intercepts</div>
@@ -923,7 +1100,7 @@
                 </div>
                 <p class="prep-intro">Watch these focused lessons first — then the classroom recording will click faster. Each one opens the Algebra Library where you can also toggle to Filipino and grab a practice worksheet.</p>
                 <div class="prep-links">
-                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-5" target="_blank" rel="noopener">
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-5-lesson-4" target="_blank" rel="noopener">
                     <div class="prep-play">▶</div>
                     <div class="prep-info">
                       <div class="prep-title">Calculating Slope</div>
@@ -931,7 +1108,7 @@
                     </div>
                     <span class="prep-arrow">→</span>
                   </a>
-                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-5" target="_blank" rel="noopener">
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-5-lesson-5" target="_blank" rel="noopener">
                     <div class="prep-play">▶</div>
                     <div class="prep-info">
                       <div class="prep-title">Slope-Intercept Form</div>
@@ -939,7 +1116,7 @@
                     </div>
                     <span class="prep-arrow">→</span>
                   </a>
-                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-5" target="_blank" rel="noopener">
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-5-lesson-6" target="_blank" rel="noopener">
                     <div class="prep-play">▶</div>
                     <div class="prep-info">
                       <div class="prep-title">Point-Slope Form</div>
@@ -984,7 +1161,7 @@
                 </div>
                 <p class="prep-intro">Watch these focused lessons first — then the classroom recording will click faster. Each one opens the Algebra Library where you can also toggle to Filipino and grab a practice worksheet.</p>
                 <div class="prep-links">
-                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-5" target="_blank" rel="noopener">
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-5-lesson-9" target="_blank" rel="noopener">
                     <div class="prep-play">▶</div>
                     <div class="prep-info">
                       <div class="prep-title">Domain and Range of Functions</div>
@@ -992,7 +1169,7 @@
                     </div>
                     <span class="prep-arrow">→</span>
                   </a>
-                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-5" target="_blank" rel="noopener">
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-5-lesson-7" target="_blank" rel="noopener">
                     <div class="prep-play">▶</div>
                     <div class="prep-info">
                       <div class="prep-title">Writing Equations of Lines</div>
@@ -1000,7 +1177,7 @@
                     </div>
                     <span class="prep-arrow">→</span>
                   </a>
-                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-5" target="_blank" rel="noopener">
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-5-lesson-8" target="_blank" rel="noopener">
                     <div class="prep-play">▶</div>
                     <div class="prep-info">
                       <div class="prep-title">Parallel and Perpendicular Lines</div>
@@ -1045,7 +1222,7 @@
                 </div>
                 <p class="prep-intro">Watch these focused lessons first — then the classroom recording will click faster. Each one opens the Algebra Library where you can also toggle to Filipino and grab a practice worksheet.</p>
                 <div class="prep-links">
-                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-6" target="_blank" rel="noopener">
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-6-lesson-1" target="_blank" rel="noopener">
                     <div class="prep-play">▶</div>
                     <div class="prep-info">
                       <div class="prep-title">Solving Systems by Graphing</div>
@@ -1053,7 +1230,7 @@
                     </div>
                     <span class="prep-arrow">→</span>
                   </a>
-                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-6" target="_blank" rel="noopener">
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-6-lesson-2" target="_blank" rel="noopener">
                     <div class="prep-play">▶</div>
                     <div class="prep-info">
                       <div class="prep-title">Solving Systems by Substitution</div>
@@ -1061,7 +1238,7 @@
                     </div>
                     <span class="prep-arrow">→</span>
                   </a>
-                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-6" target="_blank" rel="noopener">
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-6-lesson-3" target="_blank" rel="noopener">
                     <div class="prep-play">▶</div>
                     <div class="prep-info">
                       <div class="prep-title">Solving Systems by Elimination</div>
@@ -1106,7 +1283,7 @@
                 </div>
                 <p class="prep-intro">Watch these focused lessons first — then the classroom recording will click faster. Each one opens the Algebra Library where you can also toggle to Filipino and grab a practice worksheet.</p>
                 <div class="prep-links">
-                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-7" target="_blank" rel="noopener">
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-7-lesson-1" target="_blank" rel="noopener">
                     <div class="prep-play">▶</div>
                     <div class="prep-info">
                       <div class="prep-title">Laws of Exponents</div>
@@ -1114,7 +1291,7 @@
                     </div>
                     <span class="prep-arrow">→</span>
                   </a>
-                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-7" target="_blank" rel="noopener">
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-7-lesson-2" target="_blank" rel="noopener">
                     <div class="prep-play">▶</div>
                     <div class="prep-info">
                       <div class="prep-title">Adding and Subtracting Polynomials</div>
@@ -1122,7 +1299,7 @@
                     </div>
                     <span class="prep-arrow">→</span>
                   </a>
-                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-7" target="_blank" rel="noopener">
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-7-lesson-3" target="_blank" rel="noopener">
                     <div class="prep-play">▶</div>
                     <div class="prep-info">
                       <div class="prep-title">Multiplying Polynomials — FOIL and Distributive</div>
@@ -1167,7 +1344,7 @@
                 </div>
                 <p class="prep-intro">Watch these focused lessons first — then the classroom recording will click faster. Each one opens the Algebra Library where you can also toggle to Filipino and grab a practice worksheet.</p>
                 <div class="prep-links">
-                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-7" target="_blank" rel="noopener">
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-7-lesson-3" target="_blank" rel="noopener">
                     <div class="prep-play">▶</div>
                     <div class="prep-info">
                       <div class="prep-title">Multiplying Polynomials — FOIL and Distributive</div>
@@ -1175,7 +1352,7 @@
                     </div>
                     <span class="prep-arrow">→</span>
                   </a>
-                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-7" target="_blank" rel="noopener">
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-7-lesson-4" target="_blank" rel="noopener">
                     <div class="prep-play">▶</div>
                     <div class="prep-info">
                       <div class="prep-title">Dividing Polynomials</div>
@@ -1183,7 +1360,7 @@
                     </div>
                     <span class="prep-arrow">→</span>
                   </a>
-                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-7" target="_blank" rel="noopener">
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-7-lesson-7" target="_blank" rel="noopener">
                     <div class="prep-play">▶</div>
                     <div class="prep-info">
                       <div class="prep-title">Zero Product Property and Special Patterns</div>
@@ -1228,7 +1405,7 @@
                 </div>
                 <p class="prep-intro">Watch these focused lessons first — then the classroom recording will click faster. Each one opens the Algebra Library where you can also toggle to Filipino and grab a practice worksheet.</p>
                 <div class="prep-links">
-                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-7" target="_blank" rel="noopener">
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-7-lesson-5" target="_blank" rel="noopener">
                     <div class="prep-play">▶</div>
                     <div class="prep-info">
                       <div class="prep-title">Factoring — Greatest Common Factor (GCF)</div>
@@ -1236,7 +1413,7 @@
                     </div>
                     <span class="prep-arrow">→</span>
                   </a>
-                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-7" target="_blank" rel="noopener">
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-7-lesson-6" target="_blank" rel="noopener">
                     <div class="prep-play">▶</div>
                     <div class="prep-info">
                       <div class="prep-title">Factoring Trinomials (a = 1)</div>
@@ -1244,7 +1421,7 @@
                     </div>
                     <span class="prep-arrow">→</span>
                   </a>
-                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-7" target="_blank" rel="noopener">
+                  <a class="prep-card" href="../../subjects/algebra/index.html#unit-7-lesson-7" target="_blank" rel="noopener">
                     <div class="prep-play">▶</div>
                     <div class="prep-info">
                       <div class="prep-title">Zero Product Property and Special Patterns</div>
@@ -1326,7 +1503,7 @@
             </div>
             <div class="sidebar-stat">
               <span class="label">Worksheets</span>
-              <span class="value">Coming soon</span>
+              <span class="value">7 worksheets</span>
             </div>
             <div class="sidebar-stat">
               <span class="label">Price</span>
@@ -1371,6 +1548,7 @@
 </section>
 
 <!-- FOOTER -->
+</main>
 <footer>
   <div class="container">
     <div class="foot-grid">
@@ -1408,6 +1586,18 @@
   </div>
 </footer>
 
+<!-- WORKSHEET MODAL -->
+<div id="ws-modal" style="display:none;position:fixed;inset:0;z-index:1200;background:rgba(15,23,42,.82);backdrop-filter:blur(6px);align-items:center;justify-content:center;padding:16px;" onclick="if(event.target===this)closeWorksheet()">
+  <div style="background:white;border-radius:16px;width:min(860px,96vw);height:min(90vh,800px);overflow:hidden;box-shadow:0 32px 80px rgba(15,23,42,.3);display:flex;flex-direction:column;">
+    <div style="display:flex;align-items:center;gap:12px;padding:13px 18px;border-bottom:1px solid var(--border);background:white;flex-shrink:0;">
+      <span style="flex:1;font-weight:700;font-size:0.95rem;color:var(--navy);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;" id="ws-modal-title">Worksheet</span>
+      <a id="ws-modal-download" href="" download style="display:inline-flex;align-items:center;gap:5px;font-size:0.82rem;font-weight:600;padding:7px 12px;border-radius:8px;border:1.5px solid var(--border);background:var(--surface);color:var(--navy);cursor:pointer;white-space:nowrap;text-decoration:none;transition:all .15s ease;" onmouseover="this.style.borderColor='var(--course)';this.style.color='var(--course)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--navy)'">⬇ Download PDF</a>
+      <button onclick="closeWorksheet()" style="background:none;border:none;cursor:pointer;color:#94a3b8;font-size:1.4rem;line-height:1;padding:6px 8px;border-radius:8px;flex-shrink:0;transition:color .15s,background .15s;" onmouseover="this.style.color='var(--navy)';this.style.background='#f1f5f9'" onmouseout="this.style.color='#94a3b8';this.style.background='none'" aria-label="Close worksheet">✕</button>
+    </div>
+    <iframe id="ws-modal-frame" style="flex:1;width:100%;border:none;" src="" title="Worksheet PDF Preview"></iframe>
+  </div>
+</div>
+
 <!-- VIDEO MODAL -->
 <div id="vid-modal" style="display:none;position:fixed;inset:0;z-index:1200;background:rgba(15,23,42,.82);backdrop-filter:blur(6px);align-items:center;justify-content:center;padding:16px;" onclick="if(event.target===this)closeVideo()">
   <div style="background:white;border-radius:16px;width:min(900px,96vw);overflow:hidden;box-shadow:0 32px 80px rgba(15,23,42,.3);">
@@ -1422,12 +1612,100 @@
 </div>
 
 <script>
+function toggleDD(btn){
+  var menu = btn.nextElementSibling;
+  var willOpen = !menu.classList.contains('open');
+  document.querySelectorAll('.nav-dropdown .dropdown-menu.open').forEach(function(m){
+    m.classList.remove('open');
+    var t = m.previousElementSibling;
+    if(t) t.setAttribute('aria-expanded','false');
+  });
+  if(willOpen){
+    menu.style.transition='none';
+    menu.classList.add('open');
+    menu.getBoundingClientRect();
+    menu.style.transition='';
+    btn.setAttribute('aria-expanded','true');
+  }
+}
+document.addEventListener('click', function(e){
+  if(!e.target.closest('.nav-dropdown')){
+    document.querySelectorAll('.nav-dropdown .dropdown-menu.open').forEach(function(m){
+      m.classList.remove('open');
+      var t = m.previousElementSibling;
+      if(t) t.setAttribute('aria-expanded','false');
+    });
+  }
+});
 function toggleWeek(id) {
   const block = document.getElementById(id);
   block.classList.toggle('open');
 }
 // Open week 1 by default
 document.getElementById('week-1').classList.add('open');
+
+// ── SEARCH ──────────────────────────────────────────────
+function filterWeeks(query) {
+  const q = query.trim().toLowerCase();
+  const blocks = document.querySelectorAll('#weeks-list .week-block');
+  const clearBtn = document.getElementById('search-clear');
+  const countEl  = document.getElementById('search-count');
+  const noRes    = document.getElementById('search-no-results');
+
+  // Show/hide the clear button
+  if (q) {
+    clearBtn.classList.add('visible');
+  } else {
+    clearBtn.classList.remove('visible');
+  }
+
+  // Empty query — reset everything
+  if (!q) {
+    blocks.forEach((block, i) => {
+      block.classList.remove('search-hidden');
+      if (i === 0) block.classList.add('open');
+      else block.classList.remove('open');
+    });
+    countEl.innerHTML = '';
+    noRes.classList.remove('visible');
+    return;
+  }
+
+  // Filter
+  let matches = 0;
+  blocks.forEach(block => {
+    const title  = block.querySelector('.week-title')?.textContent.toLowerCase()  || '';
+    const topics = block.querySelector('.week-topics')?.textContent.toLowerCase() || '';
+    const slots  = Array.from(block.querySelectorAll('.slot-title,.slot-meta'))
+                        .map(el => el.textContent.toLowerCase()).join(' ');
+
+    if (title.includes(q) || topics.includes(q) || slots.includes(q)) {
+      block.classList.remove('search-hidden');
+      block.classList.add('open');   // auto-expand matching weeks
+      matches++;
+    } else {
+      block.classList.add('search-hidden');
+      block.classList.remove('open');
+    }
+  });
+
+  // Update result count
+  if (matches > 0) {
+    countEl.innerHTML = `Showing <strong>${matches}</strong> week${matches !== 1 ? 's' : ''} matching "<strong>${query}</strong>"`;
+    noRes.classList.remove('visible');
+  } else {
+    countEl.innerHTML = '';
+    noRes.classList.add('visible');
+  }
+}
+
+function clearSearch() {
+  const input = document.getElementById('lesson-search');
+  input.value = '';
+  filterWeeks('');
+  input.focus();
+}
+// ── END SEARCH ───────────────────────────────────────────
 
 // Video modal
 function openVideo(videoId, title) {
@@ -1444,8 +1722,26 @@ function closeVideo() {
   document.body.style.overflow = '';
 }
 document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape' && document.getElementById('vid-modal').style.display === 'flex') closeVideo();
+  if (e.key === 'Escape') {
+    if (document.getElementById('vid-modal').style.display === 'flex') closeVideo();
+    if (document.getElementById('ws-modal').style.display === 'flex') closeWorksheet();
+  }
 });
+
+function openWorksheet(pdfUrl, title) {
+  document.getElementById('ws-modal-title').textContent = title || 'Worksheet';
+  document.getElementById('ws-modal-frame').src = pdfUrl;
+  document.getElementById('ws-modal-download').href = pdfUrl;
+  var modal = document.getElementById('ws-modal');
+  modal.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+function closeWorksheet() {
+  var modal = document.getElementById('ws-modal');
+  modal.style.display = 'none';
+  setTimeout(function(){ document.getElementById('ws-modal-frame').src = ''; }, 200);
+  document.body.style.overflow = '';
+}
 </script>
 
 </body>

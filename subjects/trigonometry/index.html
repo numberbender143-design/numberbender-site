@@ -255,6 +255,22 @@ footer{background:var(--navy);color:#94a3b8;padding:56px 0 28px;}
 .ws-iframe-wrap{border-top:1px solid var(--border);}
 .ws-iframe-wrap iframe{width:100%;height:clamp(380px,65vh,680px);border:none;display:block;background:var(--bg);}
 
+/* ── SEARCH BAR ── */
+.search-wrap{position:relative;margin-bottom:20px;}
+.search-icon{position:absolute;left:14px;top:50%;transform:translateY(-50%);font-size:1rem;pointer-events:none;}
+.lesson-search{width:100%;padding:13px 44px 13px 42px;border:2px solid var(--border);border-radius:10px;font-size:0.95rem;background:var(--surface);color:var(--navy);outline:none;transition:border-color .2s,box-shadow .2s;}
+.lesson-search:focus{border-color:var(--active);box-shadow:0 0 0 3px rgba(37,99,235,0.1);}
+.lesson-search::placeholder{color:var(--muted);}
+.search-clear{position:absolute;right:12px;top:50%;transform:translateY(-50%);width:26px;height:26px;border:none;background:var(--border);border-radius:50%;cursor:pointer;display:none;place-items:center;font-size:0.8rem;color:var(--muted);transition:background .2s,color .2s;}
+.search-clear:hover{background:var(--active);color:white;}
+.search-clear.visible{display:grid;}
+.search-count{font-size:0.83rem;color:var(--muted);margin-bottom:12px;min-height:1.2em;}
+.search-count strong{color:var(--active-dark);}
+.search-no-results{display:none;text-align:center;padding:40px 20px;color:var(--muted);}
+.search-no-results.visible{display:block;}
+.unit-block.search-hidden{display:none;}
+.lesson-item.search-hidden{display:none;}
+
 /* ── RESPONSIVE ── */
 @media(max-width:720px){
   .hero-inner{flex-direction:column;gap:18px;}
@@ -272,7 +288,7 @@ footer{background:var(--navy);color:#94a3b8;padding:56px 0 28px;}
   .lang-bar-inner{height:auto;padding:10px 0;}
   .lesson-ws-row{display:none;}
 }
-</style>
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}.skip-link:focus{position:fixed;top:0;left:0;width:auto;height:auto;padding:8px 16px;background:#0F2B3D;color:#fff;z-index:9999;font-size:14px;text-decoration:none;border-radius:0 0 4px 0;}</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -290,6 +306,8 @@ footer{background:var(--navy);color:#94a3b8;padding:56px 0 28px;}
 </script>
 </head>
 <body data-lang="en">
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
 
 <!-- ── NAV ── -->
 <header class="nav">
@@ -334,6 +352,7 @@ footer{background:var(--navy);color:#94a3b8;padding:56px 0 28px;}
     </nav>
   </div>
 </header>
+<main id="main-content">
 
 <!-- ── HERO ── -->
 <section class="subject-hero">
@@ -404,7 +423,24 @@ footer{background:var(--navy);color:#94a3b8;padding:56px 0 28px;}
 <section class="units-section">
   <div class="container">
     <div class="section-heading">6 Units · 15 Lessons</div>
-    <div class="unit-list">
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="lesson-search" class="lesson-search"
+        placeholder="Search lessons… e.g. 'sine', 'cosine', 'unit circle'"
+        oninput="filterLessons(this.value)" autocomplete="off" spellcheck="false">
+      <button class="search-clear" id="search-clear" onclick="clearSearch()" aria-label="Clear search">✕</button>
+    </div>
+    <div class="search-count" id="search-count"></div>
+    <div class="search-no-results" id="search-no-results">
+      <p style="font-size:2rem;margin-bottom:8px;">🔍</p>
+      <p style="font-weight:600;color:var(--navy);margin-bottom:4px;">No lessons found</p>
+      <p style="font-size:0.88rem;">Try a different keyword</p>
+    </div>
+    <!-- ⚠️  LESSON INDEX REMINDER
+     When adding new lessons here, also update LESSON_INDEX in courses.html
+     so the cross-subject search on the main courses page stays accurate.
+     Search for "LESSON_INDEX" in courses.html to find it quickly. -->
+<div class="unit-list">
 
       <!-- ═══ UNIT 1 ═══ -->
       <div class="unit-block open" id="unit-1">
@@ -424,13 +460,13 @@ footer{background:var(--navy);color:#94a3b8;padding:56px 0 28px;}
             <span class="lesson-badge both">EN + FIL</span>
           </a>
 
-          <a class="lesson-item" data-en-id="16HSLIhlQ2o" data-fil-id="OCEuP4Fzx3Q" data-worksheet="04-05-precalc-trig-solving-right-triangles-sohcahtoa.pdf" href="https://www.youtube.com/watch?v=16HSLIhlQ2o" target="_blank" rel="noopener">
+          <a class="lesson-item" data-en-id="16HSLIhlQ2o" data-fil-id="EPwkUT6t_5Q" data-worksheet="04-05-precalc-trig-solving-right-triangles-sohcahtoa.pdf" href="https://www.youtube.com/watch?v=16HSLIhlQ2o" target="_blank" rel="noopener">
             <div class="lesson-play">▶</div>
             <div class="lesson-meta"><div class="lesson-title">Introduction to SOH CAH TOA</div><div class="lesson-sub">Unit 1 · Lesson 2</div></div>
             <span class="lesson-badge both">EN + FIL</span>
           </a>
 
-          <a class="lesson-item" data-en-id="W4uKpRMoWxw" data-fil-id="FVHtJEGE118" data-worksheet="04-08-precalc-trig-missing-sides-sohcahtoa.pdf" href="https://www.youtube.com/watch?v=W4uKpRMoWxw" target="_blank" rel="noopener">
+          <a class="lesson-item" data-en-id="wzPnr4dpBKo" data-fil-id="FVHtJEGE118" data-worksheet="04-08-precalc-trig-missing-sides-sohcahtoa.pdf" href="https://www.youtube.com/watch?v=wzPnr4dpBKo" target="_blank" rel="noopener">
             <div class="lesson-play">▶</div>
             <div class="lesson-meta"><div class="lesson-title">Solving for Missing Sides</div><div class="lesson-sub">Unit 1 · Lesson 3</div></div>
             <span class="lesson-badge both">EN + FIL</span>
@@ -478,7 +514,7 @@ footer{background:var(--navy);color:#94a3b8;padding:56px 0 28px;}
         </div>
         <div class="unit-lessons"><div class="lessons-inner"><div class="lessons-divider"></div><div class="lesson-list">
 
-          <a class="lesson-item" data-en-id="PlAAlL16UvI" data-fil-id="ZOWRANP8pfM" data-worksheet="05-01-precalc-graphing-sine-cosine-secant-cosecant.pdf" href="https://www.youtube.com/watch?v=PlAAlL16UvI" target="_blank" rel="noopener">
+          <a class="lesson-item" data-en-id="PlAAlL16UvI" data-fil-id="rV2IXqA5D3o" data-worksheet="05-01-precalc-graphing-sine-cosine-secant-cosecant.pdf" href="https://www.youtube.com/watch?v=PlAAlL16UvI" target="_blank" rel="noopener">
             <div class="lesson-play">▶</div>
             <div class="lesson-meta"><div class="lesson-title">Graphing Sine and Cosine Functions</div><div class="lesson-sub">Unit 3 · Lesson 1</div></div>
             <span class="lesson-badge both">EN + FIL</span>
@@ -511,19 +547,19 @@ footer{background:var(--navy);color:#94a3b8;padding:56px 0 28px;}
             <span class="lesson-badge both">EN + FIL</span>
           </a>
 
-          <a class="lesson-item" data-en-id="tTuJCBUfmN4" data-fil-id="Wwgn9yY8Cic" data-worksheet="06-02-precalc-trig-proving-identities.pdf" href="https://www.youtube.com/watch?v=tTuJCBUfmN4" target="_blank" rel="noopener">
+          <a class="lesson-item" data-en-id="tTuJCBUfmN4" data-fil-id="c5ROBkfrSqA" data-worksheet="06-02-precalc-trig-proving-identities.pdf" href="https://www.youtube.com/watch?v=tTuJCBUfmN4" target="_blank" rel="noopener">
             <div class="lesson-play">▶</div>
             <div class="lesson-meta"><div class="lesson-title">Proving Trigonometric Identities</div><div class="lesson-sub">Unit 4 · Lesson 2</div></div>
             <span class="lesson-badge both">EN + FIL</span>
           </a>
 
-          <a class="lesson-item" data-en-id="rtfubzP5WxU" data-fil-id="3jR-6QZYRs8" data-worksheet="06-02-precalc-trig-proving-identities-b.pdf" href="https://www.youtube.com/watch?v=rtfubzP5WxU" target="_blank" rel="noopener">
+          <a class="lesson-item" data-en-id="rtfubzP5WxU" data-fil-id="YXRMepVjWl4" data-worksheet="06-02-precalc-trig-proving-identities-b.pdf" href="https://www.youtube.com/watch?v=rtfubzP5WxU" target="_blank" rel="noopener">
             <div class="lesson-play">▶</div>
             <div class="lesson-meta"><div class="lesson-title">Proving Trigonometric Identities (Advanced)</div><div class="lesson-sub">Unit 4 · Lesson 3</div></div>
             <span class="lesson-badge both">EN + FIL</span>
           </a>
 
-          <a class="lesson-item" data-en-id="NldO9STOBGo" data-fil-id="89qVX8BuLdA" data-worksheet="06-03-precalc-trig-sum-and-difference-formulas.pdf" href="https://www.youtube.com/watch?v=NldO9STOBGo" target="_blank" rel="noopener">
+          <a class="lesson-item" data-en-id="Yu_Rl-oEyHQ" data-fil-id="89qVX8BuLdA" data-worksheet="06-03-precalc-trig-sum-and-difference-formulas.pdf" href="https://www.youtube.com/watch?v=Yu_Rl-oEyHQ" target="_blank" rel="noopener">
             <div class="lesson-play">▶</div>
             <div class="lesson-meta"><div class="lesson-title">Sum and Difference Formulas</div><div class="lesson-sub">Unit 4 · Lesson 4</div></div>
             <span class="lesson-badge both">EN + FIL</span>
@@ -616,6 +652,7 @@ footer{background:var(--navy);color:#94a3b8;padding:56px 0 28px;}
 </section>
 
 <!-- ── FOOTER ── -->
+</main>
 <footer>
   <div class="container">
     <div class="foot-grid">
@@ -705,6 +742,48 @@ footer{background:var(--navy);color:#94a3b8;padding:56px 0 28px;}
 /* ── UNIT ACCORDION ── */
 function toggleUnit(id) {
   document.getElementById(id).classList.toggle('open');
+}
+
+/* ── SEARCH ── */
+function filterLessons(query) {
+  const q = query.trim().toLowerCase();
+  const clearBtn = document.getElementById('search-clear');
+  const countEl = document.getElementById('search-count');
+  const noResults = document.getElementById('search-no-results');
+  clearBtn.classList.toggle('visible', q.length > 0);
+  if (!q) {
+    document.querySelectorAll('.unit-list .unit-block').forEach(u => {
+      u.classList.remove('search-hidden');
+      u.querySelectorAll('.lesson-item').forEach(l => l.classList.remove('search-hidden'));
+    });
+    countEl.innerHTML = '';
+    noResults.classList.remove('visible');
+    return;
+  }
+  let totalLessons = 0, totalUnits = 0;
+  document.querySelectorAll('.unit-list .unit-block').forEach(unit => {
+    const unitTitle = (unit.querySelector('.unit-title') || unit.querySelector('.unit-name') || {innerText:''}).innerText.toLowerCase();
+    let unitHasMatch = false;
+    unit.querySelectorAll('.lesson-item').forEach(lesson => {
+      const title = (lesson.querySelector('.lesson-title') || {innerText:''}).innerText.toLowerCase();
+      const sub = (lesson.querySelector('.lesson-sub') || {innerText:''}).innerText.toLowerCase();
+      const matches = title.includes(q) || sub.includes(q) || unitTitle.includes(q);
+      lesson.classList.toggle('search-hidden', !matches);
+      if (matches) { unitHasMatch = true; totalLessons++; }
+    });
+    unit.classList.toggle('search-hidden', !unitHasMatch);
+    if (unitHasMatch) { totalUnits++; unit.classList.add('open'); }
+  });
+  countEl.innerHTML = totalLessons > 0
+    ? `Found <strong>${totalLessons} lesson${totalLessons!==1?'s':''}</strong> across <strong>${totalUnits} unit${totalUnits!==1?'s':''}</strong> matching "<strong>${query.trim()}</strong>"`
+    : '';
+  noResults.classList.toggle('visible', totalLessons === 0);
+}
+function clearSearch() {
+  const input = document.getElementById('lesson-search');
+  input.value = '';
+  filterLessons('');
+  input.focus();
 }
 
 /* ── LANGUAGE TOGGLE ── */

@@ -30,23 +30,23 @@
 /attachments/*                  /                               301
 
 # Old user/profile URLs
-/users/*                        /about.html                     301
-/profile/*                      /about.html                     301
+/users/*                        /about                          301
+/profile/*                      /about                          301
 
 # Old blog/post URLs → blog
-/posts/*                        /blog.html                      301
-/blog/posts/*                   /blog.html                      301
-/news/*                         /blog.html                      301
+/posts/*                        /blog                           301
+/blog/posts/*                   /blog                           301
+/news/*                         /blog                           301
 
 # Old contact/about URLs
-/contact-us                     /contact.html                   301
-/about-us                       /about.html                     301
+/contact-us                     /contact                        301
+/about-us                       /about                          301
 
 # Trailing slash normalization (Netlify handles this, but just in case)
 /courses/                       /courses                        301
-/about/                         /about.html                     301
-/contact/                       /contact.html                   301
-/blog/                          /blog.html                      301
-/speaking/                      /speaking.html                  301
+/about/                         /about                          301
+/contact/                       /contact                        301
+/blog/                          /blog                           301
+/speaking/                      /speaking                       301
 
 # Catch-all: anything else not found → custom 404 (Netlify does this automatically via 404.html)

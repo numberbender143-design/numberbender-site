@@ -1,8 +1,11 @@
 User-agent: *
 Allow: /
 
-# Keep internal/utility files out of search index
-Disallow: /ACTLA_Carousel.html
+# Keep internal/utility (thank-you / confirmation) pages out of search index
 Disallow: /thank-you.html
+Disallow: /bundle-thanks.html
+Disallow: /contact-thanks.html
+Disallow: /find-course-thanks.html
+Disallow: /newsletter-thanks.html
 
 Sitemap: https://numberbender.com/sitemap.xml
