@@ -1,0 +1,2137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P1M2WZD840"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-P1M2WZD840');</script>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Teach the Math — Dr. E's Teaching Methodology | Numberbender</title>
+  <meta name="description" content="How Dr. Peter Esperanza teaches algebra, calculus, trig, statistics, precalculus, and linear algebra. Bilingual teaching videos in English and Filipino — free for educators worldwide."/>
+  <meta name="author" content="Dr. Peter Esperanza"/>
+  <link rel="canonical" href="https://numberbender.com/teach-the-math"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Teach the Math — Dr. E's Teaching Methodology | Numberbender"/>
+  <meta property="og:description" content="Bilingual math teaching methodology by Dr. E — how he teaches derivatives, limits, trig identities, statistics, and more. Free for educators worldwide."/>
+  <meta property="og:url" content="https://numberbender.com/teach-the-math"/>
+  <meta property="og:image" content="https://numberbender.com/images/dr-e-hero.jpg"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@numberbender"/>
+  <link rel="icon" type="image/svg+xml" href="images/exports/numberbender-favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/exports/png/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/exports/png/favicon-180.png">
+  <meta name="theme-color" content="#1F6F6B">
+  <style>
+    :root{
+      --navy:#0F172A;--blue:#2563EB;--cyan:#06B6D4;--green:#22C55E;--yellow:#FACC15;
+      --bg:#F8FAFC;--surface:#FFFFFF;--muted:#64748B;--border:#E2E8F0;
+      --radius:12px;--teal:#0F6E56;--amber:#D97706;--amber-light:#FEF3C7;
+      --alg:#DBEAFE;--alg-t:#1E3A8A;
+      --cal:#EDE9FE;--cal-t:#4C1D95;
+      --tri:#D1FAE5;--tri-t:#064E3B;
+      --sta:#DCFCE7;--sta-t:#14532D;
+      --pre:#FEF3C7;--pre-t:#78350F;
+      --lin:#F1F5F9;--lin-t:#1E293B;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Inter",Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--navy);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;}
+    a{color:var(--blue);text-decoration:none;}
+    a:hover{text-decoration:underline;}
+    img{max-width:100%;display:block;}
+    .container{width:min(1100px,92%);margin-inline:auto;}
+
+    /* NAV */
+    .nav{background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:24px;}
+    .lockup-img{height:34px;width:auto;}
+    .menu-toggle{display:none;background:none;border:none;font-size:1.4rem;color:var(--navy);cursor:pointer;}
+    .nav-links{display:flex;align-items:center;gap:4px;}
+    .nav-links a{color:var(--navy);font-weight:500;font-size:0.93rem;padding:6px 10px;border-radius:8px;white-space:nowrap;}
+    .nav-links a:hover{color:var(--blue);text-decoration:none;}
+    .nav-cta{background:var(--navy);color:white!important;padding:8px 18px!important;border-radius:8px;font-weight:700!important;}
+    .nav-cta:hover{background:var(--blue)!important;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown .dropdown-trigger{display:flex;align-items:center;gap:4px;background:none;border:none;cursor:pointer;font:inherit;color:var(--navy);font-weight:500;font-size:0.93rem;padding:6px 10px;border-radius:8px;white-space:nowrap;}
+    .nav-dropdown .dropdown-trigger:hover{color:var(--blue);}
+    .caret{font-size:0.75em;transition:transform .2s;}
+    .nav-dropdown:hover .caret,.nav-dropdown .dropdown-trigger[aria-expanded="true"] .caret{transform:rotate(180deg);}
+    .dropdown-menu{position:absolute;top:calc(100% + 8px);left:0;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:8px;min-width:210px;opacity:0;visibility:hidden;transform:translateY(-8px);transition:all .2s;z-index:200;box-shadow:0 20px 50px rgba(15,23,42,.12);}
+    .dropdown-menu::before{content:'';position:absolute;top:-6px;left:20px;width:12px;height:12px;background:var(--surface);border-left:1px solid var(--border);border-top:1px solid var(--border);transform:rotate(45deg);}
+    .nav-dropdown:hover .dropdown-menu,.dropdown-menu.open{opacity:1;visibility:visible;transform:translateY(0);}
+    .dropdown-menu a{display:block;padding:8px 12px;border-radius:8px;color:var(--navy);font-weight:500;font-size:0.9rem;}
+    .dropdown-menu a:hover{background:rgba(37,99,235,.07);color:var(--blue);text-decoration:none;}
+    .dropdown-menu a.active-page{color:var(--blue);background:rgba(37,99,235,.07);}
+    @media(max-width:900px){
+      .menu-toggle{display:block;}
+      .nav-links{display:none;flex-direction:column;align-items:stretch;position:absolute;top:100%;left:0;right:0;background:var(--surface);border-bottom:1px solid var(--border);padding:12px 20px;gap:0;}
+      .nav-links.open{display:flex;}
+      .nav-dropdown{width:100%;}
+      .nav-dropdown .dropdown-trigger{width:100%;justify-content:space-between;padding:8px 0;}
+      .dropdown-menu{position:static;opacity:1;visibility:hidden;max-height:0;overflow:hidden;box-shadow:none;border:none;padding:0 0 0 16px;transform:none;transition:max-height .3s,visibility .3s;}
+      .dropdown-menu.open{visibility:visible;max-height:500px;}
+    }
+
+    /* PAGE HEADER */
+    .page-header{border-bottom:1px solid var(--border);padding:52px 0 44px;transition:background .3s;}
+    .hero-2col{display:grid;grid-template-columns:1fr auto;gap:52px;align-items:center;}
+    .hero-text-col{min-width:0;}
+    .hero-img-col{flex-shrink:0;}
+    .hero-img-col img{width:380px;max-width:380px;height:auto;border-radius:20px;filter:drop-shadow(0 24px 48px rgba(15,23,42,.13));display:block;}
+    @media(max-width:900px){
+      .hero-2col{grid-template-columns:1fr;gap:28px;}
+      .hero-img-col{order:-1;}
+      .hero-img-col img{width:200px;max-width:200px;margin:0 auto;}
+    }
+    .page-eyebrow{font-size:0.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);margin-bottom:10px;}
+    .page-header h1{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;letter-spacing:-0.03em;line-height:1.15;margin-bottom:12px;}
+    .page-header p{color:var(--muted);font-size:1rem;max-width:560px;line-height:1.7;margin-bottom:24px;}
+    .stat-pills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:0;}
+    .stat-pill{background:rgba(255,255,255,.7);border:1px solid var(--border);border-radius:999px;padding:5px 14px;font-size:0.83rem;font-weight:600;color:var(--navy);}
+    .stat-pill span{color:var(--amber);}
+
+    /* LANG TABS */
+    .lang-bar{background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:62px;z-index:90;}
+    .lang-bar .container{display:flex;gap:10px;align-items:center;padding:10px 0;}
+    .lang-tab{padding:8px 20px;font-weight:700;font-size:0.9rem;border:2px solid transparent;border-radius:999px;background:none;cursor:pointer;color:var(--muted);white-space:nowrap;transition:background .2s,color .2s,border-color .2s;}
+    #tab-en.active{background:var(--teal);color:#fff;border-color:var(--teal);}
+    #tab-fil.active{background:var(--amber);color:#fff;border-color:var(--amber);}
+    .lang-tab:hover:not(.active){background:var(--bg);color:var(--navy);}
+    /* Hero background shifts with language */
+    .page-header.lang-en{background:#E6FAF5;}
+    .page-header.lang-fil{background:#FFFBEB;}
+
+    /* JUMP NAV */
+    .jump-bar{background:var(--bg);border-bottom:1px solid var(--border);padding:10px 0;overflow-x:auto;}
+    .jump-bar .container{display:flex;gap:8px;flex-wrap:nowrap;}
+    .jump-chip{padding:5px 14px;border-radius:999px;font-size:0.8rem;font-weight:700;border:none;cursor:pointer;white-space:nowrap;background:var(--surface);border:1px solid var(--border);color:var(--muted);transition:all .15s;text-decoration:none;display:inline-block;}
+    .jump-chip:hover{text-decoration:none;}
+    .jump-chip.chip-alg{background:var(--alg);color:var(--alg-t);border-color:var(--alg);}
+    .jump-chip.chip-cal{background:var(--cal);color:var(--cal-t);border-color:var(--cal);}
+    .jump-chip.chip-tri{background:var(--tri);color:var(--tri-t);border-color:var(--tri);}
+    .jump-chip.chip-sta{background:var(--sta);color:var(--sta-t);border-color:var(--sta);}
+    .jump-chip.chip-pre{background:var(--pre);color:var(--pre-t);border-color:var(--pre);}
+    .jump-chip.chip-lin{background:var(--lin);color:var(--lin-t);border-color:var(--lin);}
+
+    /* PANELS */
+    .lang-panel{display:none;padding:40px 0 64px;}
+    .lang-panel.active{display:block;}
+
+    /* SUBJECT BLOCKS */
+    .subj-block{margin-bottom:40px;}
+    .subj-block-header{display:flex;align-items:center;gap:12px;margin-bottom:12px;}
+    .subj-chip{display:inline-flex;align-items:center;gap:6px;padding:5px 14px;border-radius:999px;font-weight:700;font-size:0.85rem;}
+    .subj-chip-count{font-size:0.82rem;color:var(--muted);font-weight:600;}
+    .chip-alg{background:var(--alg);color:var(--alg-t);}
+    .chip-cal{background:var(--cal);color:var(--cal-t);}
+    .chip-tri{background:var(--tri);color:var(--tri-t);}
+    .chip-sta{background:var(--sta);color:var(--sta-t);}
+    .chip-pre{background:var(--pre);color:var(--pre-t);}
+    .chip-lin{background:var(--lin);color:var(--lin-t);}
+
+    /* ACCORDION */
+    .acc-group{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:var(--surface);}
+    .acc-item{border-bottom:1px solid var(--border);}
+    .acc-item:last-child{border-bottom:none;}
+    .acc-trigger{width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 18px;background:none;border:none;cursor:pointer;text-align:left;transition:background .15s;}
+    .acc-trigger:hover{background:var(--bg);}
+    .acc-trigger[aria-expanded="true"]{background:var(--bg);}
+    .acc-topic{font-weight:600;font-size:0.95rem;color:var(--navy);flex:1;}
+    .acc-meta{display:flex;align-items:center;gap:10px;flex-shrink:0;}
+    .acc-dur{font-size:0.8rem;font-weight:600;color:var(--muted);}
+    .acc-caret{font-size:1.2rem;font-weight:300;color:var(--muted);line-height:1;width:18px;text-align:center;transition:transform .2s;}
+    .acc-trigger[aria-expanded="true"] .acc-caret{transform:rotate(45deg);}
+    .badge{display:inline-flex;align-items:center;font-size:0.72rem;font-weight:700;padding:3px 9px;border-radius:999px;white-space:nowrap;}
+    .badge-concept{background:var(--amber-light);color:#78350F;}
+    .badge-tech{background:#E1F5EE;color:#085041;}
+
+    /* ACCORDION BODY */
+    .acc-body{overflow:hidden;transition:max-height .3s ease;}
+    .acc-inner{display:grid;grid-template-columns:1.4fr 1fr;gap:0;border-top:1px solid var(--border);}
+    .acc-video-col{padding:20px 20px 20px 20px;border-right:1px solid var(--border);}
+    .acc-lesson-col{padding:20px;background:var(--bg);}
+    .vid-thumb-wrap{display:block;position:relative;border-radius:8px;overflow:hidden;background:#0f172a;aspect-ratio:16/9;cursor:pointer;text-decoration:none;}
+    .vid-thumb-wrap img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .25s;}
+    .vid-thumb-wrap:hover img{transform:scale(1.03);}
+    .vid-play-btn{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;}
+    .vid-play-btn span{width:60px;height:60px;border-radius:50%;background:rgba(15,110,86,.9);display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:white;transition:transform .2s,background .2s;}
+    .vid-thumb-wrap:hover .vid-play-btn span{transform:scale(1.1);background:rgba(15,110,86,1);}
+    .vid-thumb-wrap:focus-visible{outline:3px solid var(--amber);outline-offset:3px;}
+    .vid-cta-label{font-size:0.78rem;font-weight:600;color:var(--muted);margin-top:8px;text-align:center;}
+    .lesson-heading{font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:6px;}
+    .lesson-angle{font-size:0.9rem;color:var(--navy);line-height:1.6;font-style:italic;border-left:3px solid var(--amber);padding-left:12px;}
+    .lesson-links{list-style:none;display:flex;flex-direction:column;gap:8px;}
+    .res-link{display:inline-flex;align-items:center;gap:6px;font-size:0.86rem;font-weight:600;padding:8px 12px;border-radius:8px;border:1px solid var(--border);background:var(--surface);color:var(--navy);transition:all .15s;}
+    .res-link:hover{border-color:var(--blue);color:var(--blue);text-decoration:none;background:white;}
+    .share-url{font-size:0.78rem;font-family:monospace;background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:8px 10px;color:var(--muted);word-break:break-all;}
+
+    /* Bundle hero button */
+    .btn-bundle-hero{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:11px 22px; border-radius:10px; font-weight:700; font-size:0.93rem;
+      background:var(--teal); color:white; border:none; cursor:pointer;
+      text-decoration:none; transition:background .2s, transform .15s;
+      margin-top:18px;
+    }
+    .btn-bundle-hero:hover{ background:#0d5a48; transform:translateY(-2px); }
+
+    /* CTA */
+    .cta-band{background:var(--navy);color:white;padding:52px 0;text-align:center;}
+    .cta-band h2{font-size:clamp(1.5rem,3vw,2rem);font-weight:800;margin-bottom:10px;}
+    .cta-band p{color:#94a3b8;font-size:0.98rem;margin-bottom:24px;}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:11px 22px;border-radius:10px;font-weight:700;font-size:0.93rem;text-decoration:none;transition:all .2s;}
+    .btn-primary{background:var(--blue);color:white;}
+    .btn-primary:hover{background:#1d4ed8;text-decoration:none;color:white;}
+    .btn-ghost{background:transparent;color:white;border:2px solid rgba(255,255,255,.3);}
+    .btn-ghost:hover{border-color:rgba(255,255,255,.7);text-decoration:none;color:white;}
+    .cta-btns{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;}
+
+    /* FOOTER */
+    footer{background:#0F172A;color:#94a3b8;padding:52px 0 28px;}
+    .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:36px;}
+    .foot h4{color:white;font-size:0.85rem;font-weight:700;margin-bottom:12px;text-transform:uppercase;letter-spacing:.06em;}
+    .foot a{display:block;color:#94a3b8;font-size:0.88rem;margin-bottom:7px;}
+    .foot a:hover{color:white;text-decoration:none;}
+    .foot-brand .logo{display:flex;align-items:center;gap:10px;color:white;font-weight:800;font-size:1.05rem;margin-bottom:12px;}
+    .foot-brand p{font-size:0.88rem;line-height:1.65;margin-bottom:6px;}
+    .foot-bottom{border-top:1px solid #1e293b;padding-top:22px;font-size:0.8rem;}
+  .foot-bottom a{ color: #94a3b8; text-decoration: underline; }
+    .socials{display:flex;gap:14px;margin-top:14px;}
+    .socials a{color:#64748b;}
+    .socials a:hover{color:white;}
+    @media(max-width:768px){
+      .acc-inner{grid-template-columns:1fr;}
+      .acc-video-col{border-right:none;border-bottom:1px solid var(--border);}
+      .foot-grid{grid-template-columns:1fr 1fr;}
+      .foot-brand{grid-column:1/-1;}
+      .acc-meta .badge{display:none;}
+    }
+    @media(max-width:480px){
+      .foot-grid{grid-template-columns:1fr;}
+      .acc-trigger{padding:12px 14px;}
+    }
+  .skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}.skip-link:focus{position:fixed;top:0;left:0;width:auto;height:auto;padding:8px 16px;background:#0F2B3D;color:#fff;z-index:9999;font-size:14px;text-decoration:none;border-radius:0 0 4px 0;}</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+
+<!-- NAV -->
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="/" aria-label="Numberbender"><img src="images/numberbender_banner_only.svg" alt="Numberbender" class="lockup-img"></a>
+    <button class="menu-toggle" aria-label="Toggle menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
+    <nav class="nav-links" id="navlinks">
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Learn <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="/start-here">🎁 Free Starter Lesson</a>
+          <a href="/find-your-course">🧭 Where Do I Start?</a>
+          <a href="/courses">📚 Explore Math Lessons</a>
+          <a href="/math-worksheets">📝 Free Worksheets</a>
+          <a href="/for-filipino-students">🇵🇭 Para sa Filipino Students</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Teach <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="/for-teachers">🏫 For Teachers Hub</a>
+          <a href="/teach-the-math">🎓 Teach the Math</a>
+          <a href="/teach-it-like-you-stream-it">🎬 Teach It Like You Stream It</a>
+          <a href="/teacher-resources">📦 Teacher Resources</a>
+          <a href="/math-worksheets">📄 Printable Worksheets</a>
+          <a href="/courses">📚 Lesson &amp; Course Library</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">About <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="/about">👨‍🏫 About Dr. E</a>
+          <a href="/speaking">🎤 Speaking</a>
+          <a href="/press">📰 Press &amp; Media</a>
+          <a href="/blog">✍️ Blog</a>
+          <a href="/speaking-archive">📅 Past Engagements</a>
+        </div>
+      </div>
+      <a href="/contact" class="nav-cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- PAGE HEADER -->
+<div class="page-header lang-en" id="page-hero">
+  <div class="container">
+    <div class="hero-2col">
+      <div class="hero-text-col">
+        <p class="page-eyebrow">For Educators · Teaching Methodology</p>
+        <h1>Teach the Math — Dr. E's way.</h1>
+        <p>For teachers who want math that actually sticks. Watch how Dr. E teaches each topic in a real classroom — the pacing, the board work, the questions that land — then borrow it for your own lessons, or assign it as the flip. Bilingual in English and Filipino. Free for every educator, everywhere.</p>
+        <p style="font-size:0.92rem;color:var(--muted);margin:4px 0 0;">Backed by a peer-reviewed RCT, 340K+ YouTube subscribers, and an Apple Distinguished Educator badge.</p>
+        <div class="stat-pills">
+          <span class="stat-pill"><span>22</span> English videos</span>
+          <span class="stat-pill"><span>23</span> Filipino videos</span>
+          <span class="stat-pill"><span>23</span> topics covered</span>
+          <span class="stat-pill"><span>6</span> subject areas</span>
+          <span class="stat-pill">100% free · no login</span>
+        </div>
+        <a href="/math-worksheets#bundles" class="btn-bundle-hero">
+          📦 Get Free Worksheet Bundles
+        </a>
+      </div>
+      <div class="hero-img-col">
+        <img src="images/peter-hero-teach-math-image.webp"
+             alt="Dr. Peter Esperanza — math educator and teaching methodology"
+             loading="eager" width="380" height="380">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- LANG TABS -->
+<div class="lang-bar">
+  <div class="container">
+    <button class="lang-tab active" onclick="switchLang('en')" id="tab-en">🇺🇸 English — How To Teach (22 videos)</button>
+    <button class="lang-tab" onclick="switchLang('fil')" id="tab-fil">🇵🇭 Filipino — Paano Magturo (23 videos)</button>
+  </div>
+</div>
+
+<!-- JUMP BAR -->
+<div class="jump-bar" id="jump-bar-en">
+  <div class="container">
+    <a href="#en-algebra"    class="jump-chip chip-alg">🔢 Algebra</a>
+    <a href="#en-calculus"   class="jump-chip chip-cal">∫ Calculus</a>
+    <a href="#en-trigonometry" class="jump-chip chip-tri">📐 Trig</a>
+    <a href="#en-statistics" class="jump-chip chip-sta">📊 Statistics</a>
+    <a href="#en-precalculus" class="jump-chip chip-pre">📈 Precalculus</a>
+    <a href="#en-linear-algebra" class="jump-chip chip-lin">⬛ Linear Algebra</a>
+  </div>
+</div>
+<div class="jump-bar" id="jump-bar-fil" style="display:none;">
+  <div class="container">
+    <a href="#fil-algebra"    class="jump-chip chip-alg">🔢 Algebra</a>
+    <a href="#fil-calculus"   class="jump-chip chip-cal">∫ Calculus</a>
+    <a href="#fil-trigonometry" class="jump-chip chip-tri">📐 Trig</a>
+    <a href="#fil-statistics" class="jump-chip chip-sta">📊 Statistics</a>
+    <a href="#fil-precalculus" class="jump-chip chip-pre">📈 Precalculus</a>
+    <a href="#fil-linear-algebra" class="jump-chip chip-lin">⬛ Linear Algebra</a>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<main id="main-content">
+  <div id="panel-en" class="lang-panel active">
+    <div class="container"><section class="subj-block" id="en-algebra">
+  <div class="subj-block-header">
+    <span class="subj-chip chip-alg">🔢 Algebra</span>
+    <span class="subj-chip-count">5 topics</span>
+  </div>
+  <div class="acc-group">
+    <div class="acc-item" id="en-algebra-0">
+  <button class="acc-trigger" aria-expanded="false" onclick="toggleAcc(this)">
+    <span class="acc-topic">Solving Algebraic Equations</span>
+    <span class="acc-meta">
+      <span class="badge badge-concept">Conceptual bridge</span>
+      <span class="acc-dur">17:03</span>
+      <span class="acc-caret" aria-hidden="true">+</span>
+    </span>
+  </button>
+  <div class="acc-body" hidden>
+    <div class="acc-inner">
+      <div class="acc-video-col">
+        <a href="https://www.youtube.com/watch?v=0ycdog3Nxo8"
+           data-action="watch"
+           aria-label="Watch Solving Algebraic Equations on YouTube"
+           class="vid-thumb-wrap">
+          <img src="https://img.youtube.com/vi/0ycdog3Nxo8/mqdefault.jpg"
+               alt="Solving Algebraic Equations teaching video thumbnail" loading="lazy" width="320" height="180">
+          <div class="vid-play-btn"><span>&#9654;</span></div>
+        </a>
+        <p class="vid-cta-label">Click to watch on Numberbender</p>
+      </div>
+      <div class="acc-lesson-col">
+        <p class="lesson-heading">Teaching angle</p>
+        <p class="lesson-angle">Step-by-step modeling — build procedural fluency before moving to abstractions.</p>
+        <p class="lesson-heading" style="margin-top:20px;">Student lesson resources</p>
+        <ul class="lesson-links">
+          <li><a href="courses/algebra/algebra-english/worksheets/" class="res-link ws-link">📝 Student worksheets — Algebra</a></li>
+          <li><a href="/courses-playlist-v1" class="res-link yt-res-link">▶ Assign from YouTube playlist</a></li>
+        </ul>
+        <p class="lesson-heading" style="margin-top:20px;">Share this lesson URL</p>
+        <div class="share-url">https://www.youtube.com/watch?v=0ycdog3Nxo8</div>
+      </div>
+    </div>
+  </div>
+</div><div class="acc-item" id="en-algebra-1">
+  <button class="acc-trigger" aria-expanded="false" onclick="toggleAcc(this)">
+    <span class="acc-topic">Rational Expressions</span>
+    <span class="acc-meta">
+      <span class="badge badge-concept">Conceptual bridge</span>
+      <span class="acc-dur">7:12</span>
+      <span class="acc-caret" aria-hidden="true">+</span>
+    </span>
+  </button>
+  <div class="acc-body" hidden>
+    <div class="acc-inner">
+      <div class="acc-video-col">
+        <a href="https://www.youtube.com/watch?v=hMAv8yyeQH8"
+           data-action="watch"
+           aria-label="Watch Rational Expressions on YouTube"
+           class="vid-thumb-wrap">
+          <img src="https://img.youtube.com/vi/hMAv8yyeQH8/mqdefault.jpg"
+               alt="Rational Expressions teaching video thumbnail" loading="lazy" width="320" height="180">
+          <div class="vid-play-btn"><span>&#9654;</span></div>
+        </a>
+        <p class="vid-cta-label">Click to watch on Numberbender</p>
+      </div>
+      <div class="acc-lesson-col">
+        <p class="lesson-heading">Teaching angle</p>
+        <p class="lesson-angle">Connect to fraction rules students already know — reduce cognitive load.</p>
+        <p class="lesson-heading" style="margin-top:20px;">Student lesson resources</p>
+        <ul class="lesson-links">
+          <li><a href="courses/algebra/algebra-english/worksheets/" class="res-link ws-link">📝 Student worksheets — Algebra</a></li>
+          <li><a href="/courses-playlist-v1" class="res-link yt-res-link">▶ Assign from YouTube playlist</a></li>
+        </ul>
+        <p class="lesson-heading" style="margin-top:20px;">Share this lesson URL</p>
+        <div class="share-url">https://www.youtube.com/watch?v=hMAv8yyeQH8</div>
+      </div>
+    </div>
+  </div>
+</div><div class="acc-item" id="en-algebra-2">
+  <button class="acc-trigger" aria-expanded="false" onclick="toggleAcc(this)">
+    <span class="acc-topic">Solving Equations via Desmos</span>
+    <span class="acc-meta">
+      <span class="badge badge-tech">Technology-enhanced</span>
+      <span class="acc-dur">8:06</span>
+      <span class="acc-caret" aria-hidden="true">+</span>
+    </span>
+  </button>
+  <div class="acc-body" hidden>
+    <div class="acc-inner">
+      <div class="acc-video-col">
+        <a href="https://www.youtube.com/watch?v=hQzzWjSkRKE"
+           data-action="watch"
+           aria-label="Watch Solving Equations via Desmos on YouTube"
+           class="vid-thumb-wrap">
+          <img src="https://img.youtube.com/vi/hQzzWjSkRKE/mqdefault.jpg"
+               alt="Solving Equations via Desmos teaching video thumbnail" loading="lazy" width="320" height="180">
+          <div class="vid-play-btn"><span>&#9654;</span></div>
+        </a>
+        <p class="vid-cta-label">Click to watch on Numberbender</p>
+      </div>
+      <div class="acc-lesson-col">
+        <p class="lesson-heading">Teaching angle</p>
+        <p class="lesson-angle">Desmos as a checking tool — students verify answers graphically.</p>
+        <p class="lesson-heading" style="margin-top:20px;">Student lesson resources</p>
+        <ul class="lesson-links">
+          <li><a href="courses/algebra/algebra-english/worksheets/" class="res-link ws-link">📝 Student worksheets — Algebra</a></li>
+          <li><a href="/courses-playlist-v1" class="res-link yt-res-link">▶ Assign from YouTube playlist</a></li>
+        </ul>
+        <p class="lesson-heading" style="margin-top:20px;">Share this lesson URL</p>
+        <div class="share-url">https://www.youtube.com/watch?v=hQzzWjSkRKE</div>
+      </div>
+    </div>
+  </div>
+</div><div class="acc-item" id="en-algebra-3">
+  <button class="acc-trigger" aria-expanded="false" onclick="toggleAcc(this)">
+    <span class="acc-topic">Factoring via Desmos</span>
+    <span class="acc-meta">
+      <span class="badge badge-tech">Technology-enhanced</span>
+      <span class="acc-dur">11:53</span>
+      <span class="acc-caret" aria-hidden="true">+</span>
+    </span>
+  </button>
+  <div class="acc-body" hidden>
+    <div class="acc-inner">
+      <div class="acc-video-col">
+        <a href="https://www.youtube.com/watch?v=tiXlSAndRPk"
+           data-action="watch"
+           aria-label="Watch Factoring via Desmos on YouTube"
+           class="vid-thumb-wrap">
+          <img src="https://img.youtube.com/vi/tiXlSAndRPk/mqdefault.jpg"
+               alt="Factoring via Desmos teaching video thumbnail" loading="lazy" width="320" height="180">
+          <div class="vid-play-btn"><span>&#9654;</span></div>
+        </a>
+        <p class="vid-cta-label">Click to watch on Numberbender</p>
+      </div>
+      <div class="acc-lesson-col">
+        <p class="lesson-heading">Teaching angle</p>
+        <p class="lesson-angle">Graph-based verification of factored form — builds conceptual trust in the algebra.</p>
+        <p class="lesson-heading" style="margin-top:20px;">Student lesson resources</p>
+        <ul class="lesson-links">
+          <li><a href="courses/algebra/algebra-english/worksheets/" class="res-link ws-link">📝 Student worksheets — Algebra</a></li>
+          <li><a href="/courses-playlist-v1" class="res-link yt-res-link">▶ Assign from YouTube playlist</a></li>
+        </ul>
+        <p class="lesson-heading" style="margin-top:20px;">Share this lesson URL</p>
+        <div class="share-url">https://www.youtube.com/watch?v=tiXlSAndRPk</div>
+      </div>
+    </div>
+  </div>
+</div><div class="acc-item" id="en-algebra-4">
+  <button class="acc-trigger" aria-expanded="false" onclick="toggleAcc(this)">
+    <span class="acc-topic">Integers with Visuals</span>
+    <span class="acc-meta">
+      <span class="badge badge-concept">Conceptual bridge</span>
+      <span class="acc-dur">5:24</span>
+      <span class="acc-caret" aria-hidden="true">+</span>
+    </span>
+  </button>
+  <div class="acc-body" hidden>
+    <div class="acc-inner">
+      <div class="acc-video-col">
+        <a href="https://www.youtube.com/watch?v=lxeCpiTPWfI"
+           data-action="watch"
+           aria-label="Watch Integers with Visuals on YouTube"
+           class="vid-thumb-wrap">
+          <img src="https://img.youtube.com/vi/lxeCpiTPWfI/mqdefault.jpg"
+               alt="Integers with Visuals teaching video thumbnail" loading="lazy" width="320" height="180">
+          <div class="vid-play-btn"><span>&#9654;</span></div>
+        </a>
+        <p class="vid-cta-label">Click to watch on Numberbender</p>
+      </div>
+      <div class="acc-lesson-col">
+        <p class="lesson-heading">Teaching angle</p>
+        <p class="lesson-angle">Zero pairs and number lines make integer operations concrete before symbolic.</p>
+        <p class="lesson-heading" style="margin-top:20px;">Student lesson resources</p>
+        <ul class="lesson-links">
+          <li><a href="courses/algebra/algebra-english/worksheets/" class="res-link ws-link">📝 Student worksheets — Algebra</a></li>
+          <li><a href="/courses-playlist-v1" class="res-link yt-res-link">▶ Assign from YouTube playlist</a></li>
+        </ul>
+        <p class="lesson-heading" style="margin-top:20px;">Share this lesson URL</p>
+        <div class="share-url">https://www.youtube.com/watch?v=lxeCpiTPWfI</div>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</section>
+<section class="subj-block" id="en-calculus">
+  <div class="subj-block-header">
+    <span class="subj-chip chip-cal">∫ Calculus</span>
+    <span class="subj-chip-count">6 topics</span>
+  </div>
+  <div class="acc-group">
+    <div class="acc-item" id="en-calculus-0">
+  <button class="acc-trigger" aria-expanded="false" onclick="toggleAcc(this)">
+    <span class="acc-topic">Derivatives</span>
+    <span class="acc-meta">
+      <span class="badge badge-concept">Conceptual bridge</span>
+      <span class="acc-dur">8:12</span>
+      <span class="acc-caret" aria-hidden="true">+</span>
+    </span>
+  </button>
+  <div class="acc-body" hidden>
+    <div class="acc-inner">
+      <div class="acc-video-col">
+        <a href="https://www.youtube.com/watch?v=NI-diWtaEfw"
+           data-action="watch"
+           aria-label="Watch Derivatives on YouTube"
+           class="vid-thumb-wrap">
+          <img src="https://img.youtube.com/vi/NI-diWtaEfw/mqdefault.jpg"
+               alt="Derivatives teaching video thumbnail" loading="lazy" width="320" height="180">
+          <div class="vid-play-btn"><span>&#9654;</span></div>
+        </a>
+        <p class="vid-cta-label">Click to watch on Numberbender</p>
+      </div>
+      <div class="acc-lesson-col">
+        <p class="lesson-heading">Teaching angle</p>
+        <p class="lesson-angle">Anchor derivatives in algebra patterns — remove the notation barrier first.</p>
+        <p class="lesson-heading" style="margin-top:20px;">Student lesson resources</p>
+        <ul class="lesson-links">
+          <li><a href="courses/calculus/calculus-english/worksheets/" class="res-link ws-link">📝 Student worksheets — Calculus</a></li>
+          <li><a href="/courses-playlist-v1" class="res-link yt-res-link">▶ Assign from YouTube playlist</a></li>
+        </ul>
+        <p class="lesson-heading" style="margin-top:20px;">Share this lesson URL</p>
+        <div class="share-url">https://www.youtube.com/watch?v=NI-diWtaEfw</div>
+      </div>
+    </div>
+  </div>
+</div><div class="acc-item" id="en-calculus-1">
+  <button class="acc-trigger" aria-expanded="false" onclick="toggleAcc(this)">
+    <span class="acc-topic">Law of Exponents in Calculus</span>
+    <span class="acc-meta">
+      <span class="badge badge-concept">Conceptual bridge</span>
+      <span class="acc-dur">7:32</span>
+      <span class="acc-caret" aria-hidden="true">+</span>
+    </span>
+  </button>
+  <div class="acc-body" hidden>
+    <div class="acc-inner">
+      <div class="acc-video-col">
+        <a href="https://www.youtube.com/watch?v=3CzwzCZrC7k"
+           data-action="watch"
+           aria-label="Watch Law of Exponents in Calculus on YouTube"
+           class="vid-thumb-wrap">
+          <img src="https://img.youtube.com/vi/3CzwzCZrC7k/mqdefault.jpg"
+               alt="Law of Exponents in Calculus teaching video thumbnail" loading="lazy" width="320" height="180">
+          <div class="vid-play-btn"><span>&#9654;</span></div>
+        </a>
+        <p class="vid-cta-label">Click to watch on Numberbender</p>
+      </div>
+      <div class="acc-lesson-col">
+        <p class="lesson-heading">Teaching angle</p>
+        <p class="lesson-angle">Bridge algebra exponent rules to calculus notation before any new rules.</p>
+        <p class="lesson-heading" style="margin-top:20px;">Student lesson resources</p>
+        <ul class="lesson-links">
+          <li><a href="courses/calculus/calculus-english/worksheets/" class="res-link ws-link">📝 Student worksheets — Calculus</a></li>
+          <li><a href="/courses-playlist-v1" class="res-link yt-res-link">▶ Assign from YouTube playlist</a></li>
+        </ul>
+        <p class="lesson-heading" style="margin-top:20px;">Share this lesson URL</p>
+        <div class="share-url">https://www.youtube.com/watch?v=3CzwzCZrC7k</div>
+      </div>
+    </div>
+  </div>
+</div><div class="acc-item" id="en-calculus-2">
+  <button class="acc-trigger" aria-expanded="false" onclick="toggleAcc(this)">
+    <span class="acc-topic">Limits</span>
+    <span class="acc-meta">
+      <span class="badge badge-concept">Conceptual bridge</span>
+      <span class="acc-dur">9:40</span>
+      <span class="acc-caret" aria-hidden="true">+</span>
+    </span>
+  </button>
+  <div class="acc-body" hidden>
+    <div class="acc-inner">
+      <div class="acc-video-col">
+        <a href="https://www.youtube.com/watch?v=V6ZCqn4rLuc"
+           data-action="watch"
+           aria-label="Watch Limits on YouTube"
+           class="vid-thumb-wrap">
+          <img src="https://img.youtube.com/vi/V6ZCqn4rLuc/mqdefault.jpg"
+               alt="Limits teaching video thumbnail" loading="lazy" width="320" height="180">
+          <div class="vid-play-btn"><span>&#9654;</span></div>
+        </a>
+        <p class="vid-cta-label">Click to watch on Numberbender</p>
+      </div>
+      <div class="acc-lesson-col">
+        <p class="lesson-heading">Teaching angle</p>
+        <p class="lesson-angle">Graphical and analytical approaches taught side by side — depth through dual lenses.</p>
+        <p class="lesson-heading" style="margin-top:20px;">Student lesson resources</p>
+        <ul class="lesson-links">
+          <li><a href="courses/calculus/calculus-english/worksheets/" class="res-link ws-link">📝 Student worksheets — Calculus</a></li>
+          <li><a href="/courses-playlist-v1" class="res-link yt-res-link">▶ Assign from YouTube playlist</a></li>
+        </ul>
+        <p class="lesson-heading" style="margin-top:20px;">Share this lesson URL</p>
+        <div class="share-url">https://www.youtube.com/watch?v=V6ZCqn4rLuc</div>
+      </div>
+    </div>
+  </div>
+</div><div class="acc-item" id="en-calculus-3">
+  <button class="acc-trigger" aria-expanded="false" onclick="toggleAcc(this)">
+    <span class="acc-topic">Riemann Sums & Integration</span>
+    <span class="acc-meta">
+      <span class="badge badge-concept">Conceptual bridge</span>
+      <span class="acc-dur">10:25</span>
+      <span class="acc-caret" aria-hidden="true">+</span>
+    </span>
+  </button>
+  <div class="acc-body" hidden>
+    <div class="acc-inner">
+      <div class="acc-video-col">
+        <a href="https://www.youtube.com/watch?v=acZiCnAlCBA"
+           data-action="watch"
+           aria-label="Watch Riemann Sums & Integration on YouTube"
+           class="vid-thumb-wrap">
+          <img src="https://img.youtube.com/vi/acZiCnAlCBA/mqdefault.jpg"
+               alt="Riemann Sums & Integration teaching video thumbnail" loading="lazy" width="320" height="180">
+          <div class="vid-play-btn"><span>&#9654;</span></div>
+        </a>
+        <p class="vid-cta-label">Click to watch on Numberbender</p>
+      </div>
+      <div class="acc-lesson-col">
+        <p class="lesson-heading">Teaching angle</p>
+        <p class="lesson-angle">Use area estimation to build intuition before the formal integral definition.</p>
+        <p class="lesson-heading" style="margin-top:20px;">Student lesson resources</p>
+        <ul class="lesson-links">
+          <li><a href="courses/calculus/calculus-english/worksheets/" class="res-link ws-link">📝 Student worksheets — Calculus</a></li>
+          <li><a href="/courses-playlist-v1" class="res-link yt-res-link">▶ Assign from YouTube playlist</a></li>
+        </ul>
+        <p class="lesson-heading" style="margin-top:20px;">Share this lesson URL</p>
+        <div class="share-url">https://www.youtube.com/watch?v=acZiCnAlCBA</div>
+      </div>
+    </div>
+  </div>
+</div><div class="acc-item" id="en-calculus-4">
+  <button class="acc-trigger" aria-expanded="false" onclick="toggleAcc(this)">
+    <span class="acc-topic">Verify Derivative Rules via Desmos</span>
+    <span class="acc-meta">
+      <span class="badge badge-tech">Technology-enhanced</span>
+      <span class="acc-dur">9:07</span>
+      <span class="acc-caret" aria-hidden="true">+</span>
+    </span>
+  </button>
+  <div class="acc-body" hidden>
+    <div class="acc-inner">
+      <div class="acc-video-col">
+        <a href="https://www.youtube.com/watch?v=ze6DyBtJjzo"
+           data-action="watch"
+           aria-label="Watch Verify Derivative Rules via Desmos on YouTube"
+           class="vid-thumb-wrap">
+          <img src="https://img.youtube.com/vi/ze6DyBtJjzo/mqdefault.jpg"
+               alt="Verify Derivative Rules via Desmos teaching video thumbnail" loading="lazy" width="320" height="180">
+          <div class="vid-play-btn"><span>&#9654;</span></div>
+        </a>
+        <p class="vid-cta-label">Click to watch on Numberbender</p>
+      </div>
+      <div class="acc-lesson-col">
+        <p class="lesson-heading">Teaching angle</p>
+        <p class="lesson-angle">Desmos as immediate feedback — students check their own derivative work.</p>
+        <p class="lesson-heading" style="margin-top:20px;">Student lesson resources</p>
+        <ul class="lesson-links">
+          <li><a href="courses/calculus/calculus-english/worksheets/" class="res-link ws-link">📝 Student worksheets — Calculus</a></li>
+          <li><a href="/courses-playlist-v1" class="res-link yt-res-link">▶ Assign from YouTube playlist</a></li>
+        </ul>
+        <p class="lesson-heading" style="margin-top:20px;">Share this lesson URL</p>
+        <div class="share-url">https://www.youtube.com/watch?v=ze6DyBtJjzo</div>
+      </div>
+    </div>
+  </div>
+</div><div class="acc-item" id="en-calculus-5">
+  <button class="acc-trigger" aria-expanded="false" onclick="toggleAcc(this)">
+    <span class="acc-topic">Parabola — Analytical & Graphical</span>
+    <span class="acc-meta">
+      <span class="badge badge-tech">Technology-enhanced</span>
+      <span class="acc-dur">7:58</span>
+      <span class="acc-caret" aria-hidden="true">+</span>
+    </span>
+  </button>
+  <div class="acc-body" hidden>
+    <div class="acc-inner">
+      <div class="acc-video-col">
+        <a href="https://www.youtube.com/watch?v=5R0eIkA9pSI"
+           data-action="watch"
+           aria-label="Watch Parabola — Analytical & Graphical on YouTube"
+           class="vid-thumb-wrap">
+          <img src="https://img.youtube.com/vi/5R0eIkA9pSI/mqdefault.jpg"
+               alt="Parabola — Analytical & Graphical teaching video thumbnail" loading="lazy" width="320" height="180">
+          <div class="vid-play-btn"><span>&#9654;</span></div>
+        </a>
+        <p class="vid-cta-label">Click to watch on Numberbender</p>
+      </div>
+      <div class="acc-lesson-col">
+        <p class="lesson-heading">Teaching angle</p>
+        <p class="lesson-angle">Technology reveals the curve — analysis confirms what students see visually.</p>
+        <p class="lesson-heading" style="margin-top:20px;">Student lesson resources</p>
+        <ul class="lesson-links">
+          <li><a href="courses/calculus/calculus-english/worksheets/" class="res-link ws-link">📝 Student worksheets — Calculus</a></li>
+          <li><a href="/courses-playlist-v1" class="res-link yt-res-link">▶ Assign from YouTube playlist</a></li>
+        </ul>
+        <p class="lesson-heading" style="margin-top:20px;">Share this lesson URL</p>
+        <div class="share-url">https://www.youtube.com/watch?v=5R0eIkA9pSI</div>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</section>
+<section class="subj-block" id="en-trigonometry">
+  <div class="subj-block-header">
+    <span class="subj-chip chip-tri">📐 Trigonometry</span>
+    <span class="subj-chip-count">1 topic</span>
+  </div>
+  <div class="acc-group">
+    <div class="acc-item" id="en-trigonometry-0">
+  <button class="acc-trigger" aria-expanded="false" onclick="toggleAcc(this)">
+    <span class="acc-topic">Factoring in Trig Identities</span>
+    <span class="acc-meta">
+      <span class="badge badge-concept">Conceptual bridge</span>
+      <span class="acc-dur">7:39</span>
+      <span class="acc-caret" aria-hidden="true">+</span>
+    </span>
+  </button>
+  <div class="acc-body" hidden>
+    <div class="acc-inner">
+      <div class="acc-video-col">
+        <a href="https://www.youtube.com/watch?v=3Hb4uo4Gaow"
+           data-action="watch"
+           aria-label="Watch Factoring in Trig Identities on YouTube"
+           class="vid-thumb-wrap">
+          <img src="https://img.youtube.com/vi/3Hb4uo4Gaow/mqdefault.jpg"
+               alt="Factoring in Trig Identities teaching video thumbnail" loading="lazy" width="320" height="180">
+          <div class="vid-play-btn"><span>&#9654;</span></div>
+        </a>
+        <p class="vid-cta-label">Click to watch on Numberbender</p>
+      </div>
+      <div class="acc-lesson-col">
+        <p class="lesson-heading">Teaching angle</p>
+        <p class="lesson-angle">Reframe identities as factoring problems — familiar technique, unfamiliar context.</p>
+        <p class="lesson-heading" style="margin-top:20px;">Student lesson resources</p>
+        <ul class="lesson-links">
+          <li><a href="courses/trigonometry/trigonometry-english/worksheets/" class="res-link ws-link">📝 Student worksheets — Trigonometry</a></li>
+          <li><a href="/courses-playlist-v1" class="res-link yt-res-link">▶ Assign from YouTube playlist</a></li>
+        </ul>
+        <p class="lesson-heading" style="margin-top:20px;">Share this lesson URL</p>
+        <div class="share-url">https://www.youtube.com/watch?v=3Hb4uo4Gaow</div>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</section>
+<section class="subj-block" id="en-statistics">
+  <div class="subj-block-header">
+    <span class="subj-chip chip-sta">📊 Statistics</span>
+    <span class="subj-chip-count">4 topics</span>
+  </div>
+  <div class="acc-group">
+    <div class="acc-item" id="en-statistics-0">
+  <button class="acc-trigger" aria-expanded="false" onclick="toggleAcc(this)">
+    <span class="acc-topic">Two-Way Table & Probability</span>
+    <span class="acc-meta">
+      <span class="badge badge-concept">Conceptual bridge</span>
+      <span class="acc-dur">6:28</span>
+      <span class="acc-caret" aria-hidden="true">+</span>
+    </span>
+  </button>
+  <div class="acc-body" hidden>
+    <div class="acc-inner">
+      <div class="acc-video-col">
+        <a href="https://www.youtube.com/watch?v=i4my_Jv3vtc"
+           data-action="watch"
+           aria-label="Watch Two-Way Table & Probability on YouTube"
+           class="vid-thumb-wrap">
+          <img src="https://img.youtube.com/vi/i4my_Jv3vtc/mqdefault.jpg"
+               alt="Two-Way Table & Probability teaching video thumbnail" loading="lazy" width="320" height="180">
+          <div class="vid-play-btn"><span>&#9654;</span></div>
+        </a>
+        <p class="vid-cta-label">Click to watch on Numberbender</p>
+      </div>
+      <div class="acc-lesson-col">
+        <p class="lesson-heading">Teaching angle</p>
+        <p class="lesson-angle">Organized tables replace formula overload — students reason, not memorize.</p>
+        <p class="lesson-heading" style="margin-top:20px;">Student lesson resources</p>
+        <ul class="lesson-links">
+          <li><a href="courses/statistics/statistics-english/worksheets/" class="res-link ws-link">📝 Student worksheets — Statistics</a></li>
+          <li><a href="/courses-playlist-v1" class="res-link yt-res-link">▶ Assign from YouTube playlist</a></li>
+        </ul>
+        <p class="lesson-heading" style="margin-top:20px;">Share this lesson URL</p>
+        <div class="share-url">https://www.youtube.com/watch?v=i4my_Jv3vtc</div>
+      </div>
+    </div>
+  </div>
+</div><div class="acc-item" id="en-statistics-1">
+  <button class="acc-trigger" aria-expanded="false" onclick="toggleAcc(this)">
+    <span class="acc-topic">One-Variable Statistics App</span>
+    <span class="acc-meta">
+      <span class="badge badge-tech">Technology-enhanced</span>
+      <span class="acc-dur">9:38</span>
+      <span class="acc-caret" aria-hidden="true">+</span>
+    </span>
+  </button>
+  <div class="acc-body" hidden>
+    <div class="acc-inner">
+      <div class="acc-video-col">
+        <a href="https://www.youtube.com/watch?v=5YoFs4GEkNE"
+           data-action="watch"
+           aria-label="Watch One-Variable Statistics App on YouTube"
+           class="vid-thumb-wrap">
+          <img src="https://img.youtube.com/vi/5YoFs4GEkNE/mqdefault.jpg"
+               alt="One-Variable Statistics App teaching video thumbnail" loading="lazy" width="320" height="180">
+          <div class="vid-play-btn"><span>&#9654;</span></div>
+        </a>
+        <p class="vid-cta-label">Click to watch on Numberbender</p>
+      </div>
+      <div class="acc-lesson-col">
+        <p class="lesson-heading">Teaching angle</p>
+        <p class="lesson-angle">App handles the arithmetic — class time shifts to interpretation and meaning.</p>
+        <p class="lesson-heading" style="margin-top:20px;">Student lesson resources</p>
+        <ul class="lesson-links">
+          <li><a href="courses/statistics/statistics-english/worksheets/" class="res-link ws-link">📝 Student worksheets — Statistics</a></li>
+          <li><a href="/courses-playlist-v1" class="res-link yt-res-link">▶ Assign from YouTube playlist</a></li>
+        </ul>
+        <p class="lesson-heading" style="margin-top:20px;">Share this lesson URL</p>
+        <div class="share-url">https://www.youtube.com/watch?v=5YoFs4GEkNE</div>
+      </div>
+    </div>
+  </div>
+</div><div class="acc-item" id="en-statistics-2">
+  <button class="acc-trigger" aria-expanded="false" onclick="toggleAcc(this)">
+    <span class="acc-topic">Normal Probability App</span>
+    <span class="acc-meta">
+      <span class="badge badge-tech">Technology-enhanced</span>
+      <span class="acc-dur">10:34</span>
+      <span class="acc-caret" aria-hidden="true">+</span>
+    </span>
+  </button>
+  <div class="acc-body" hidden>
+    <div class="acc-inner">
+      <div class="acc-video-col">
+        <a href="https://www.youtube.com/watch?v=aAWuy3Yxt3w"
+           data-action="watch"
+           aria-label="Watch Normal Probability App on YouTube"
+           class="vid-thumb-wrap">
+          <img src="https://img.youtube.com/vi/aAWuy3Yxt3w/mqdefault.jpg"
+               alt="Normal Probability App teaching video thumbnail" loading="lazy" width="320" height="180">
+          <div class="vid-play-btn"><span>&#9654;</span></div>
+        </a>
+        <p class="vid-cta-label">Click to watch on Numberbender</p>
+      </div>
+      <div class="acc-lesson-col">
+        <p class="lesson-heading">Teaching angle</p>
+        <p class="lesson-angle">Web app computes — students focus on reasoning about the bell curve.</p>
+        <p class="lesson-heading" style="margin-top:20px;">Student lesson resources</p>
+        <ul class="lesson-links">
+          <li><a href="courses/statistics/statistics-english/worksheets/" class="res-link ws-link">📝 Student worksheets — Statistics</a></li>
+          <li><a href="/courses-playlist-v1" class="res-link yt-res-link">▶ Assign from YouTube playlist</a></li>
+        </ul>
+        <p class="lesson-heading" style="margin-top:20px;">Share this lesson URL</p>
+        <div class="share-url">https://www.youtube.com/watch?v=aAWuy3Yxt3w</div>
+      </div>
+    </div>
+  </div>
+</div><div class="acc-item" id="en-statistics-3">
+  <button class="acc-trigger" aria-expanded="false" onclick="toggleAcc(this)">
+    <span class="acc-topic">Least-Squares Regression via Desmos</span>
+    <span class="acc-meta">
+      <span class="badge badge-tech">Technology-enhanced</span>
+      <span class="acc-dur">11:46</span>
+      <span class="acc-caret" aria-hidden="true">+</span>
+    </span>
+  </button>
+  <div class="acc-body" hidden>
+    <div class="acc-inner">
+      <div class="acc-video-col">
+        <a href="https://www.youtube.com/watch?v=Brpyw-uNXBs"
+           data-action="watch"
+           aria-label="Watch Least-Squares Regression via Desmos on YouTube"
+           class="vid-thumb-wrap">
+          <img src="https://img.youtube.com/vi/Brpyw-uNXBs/mqdefault.jpg"
+               alt="Least-Squares Regression via Desmos teaching video thumbnail" loading="lazy" width="320" height="180">
+          <div class="vid-play-btn"><span>&#9654;</span></div>
+        </a>
+        <p class="vid-cta-label">Click to watch on Numberbender</p>
+      </div>
+      <div class="acc-lesson-col">
+        <p class="lesson-heading">Teaching angle</p>
+        <p class="lesson-angle">Desmos makes regression visual and instant — focus on the story in the data.</p>
+        <p class="lesson-heading" style="margin-top:20px;">Student lesson resources</p>
+        <ul class="lesson-links">
+          <li><a href="courses/statistics/statistics-english/worksheets/" class="res-link ws-link">📝 Student worksheets — Statistics</a></li>
+          <li><a href="/courses-playlist-v1" class="res-link yt-res-link">▶ Assign from YouTube playlist</a></li>
+        </ul>
+        <p class="lesson-heading" style="margin-top:20px;">Share this lesson URL</p>
+        <div class="share-url">https://www.youtube.com/watch?v=Brpyw-uNXBs</div>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</section>
+<section class="subj-block" id="en-precalculus">
+  <div class="subj-block-header">
+    <span class="subj-chip chip-pre">📈 Precalculus</span>
+    <span class="subj-chip-count">4 topics</span>
+  </div>
+  <div class="acc-group">
+    <div class="acc-item" id="en-precalculus-0">
+  <button class="acc-trigger" aria-expanded="false" onclick="toggleAcc(this)">
+    <span class="acc-topic">Completing the Square & Conics</span>
+    <span class="acc-meta">
+      <span class="badge badge-concept">Conceptual bridge</span>
+      <span class="acc-dur">9:51</span>
+      <span class="acc-caret" aria-hidden="true">+</span>
+    </span>
+  </button>
+  <div class="acc-body" hidden>
+    <div class="acc-inner">
+      <div class="acc-video-col">
+        <a href="https://www.youtube.com/watch?v=V40cad0EONM"
+           data-action="watch"
+           aria-label="Watch Completing the Square & Conics on YouTube"
+           class="vid-thumb-wrap">
+          <img src="https://img.youtube.com/vi/V40cad0EONM/mqdefault.jpg"
+               alt="Completing the Square & Conics teaching video thumbnail" loading="lazy" width="320" height="180">
+          <div class="vid-play-btn"><span>&#9654;</span></div>
+        </a>
+        <p class="vid-cta-label">Click to watch on Numberbender</p>
+      </div>
+      <div class="acc-lesson-col">
+        <p class="lesson-heading">Teaching angle</p>
+        <p class="lesson-angle">One technique unlocks conics, quadratics, and optimization — teach it deeply.</p>
+        <p class="lesson-heading" style="margin-top:20px;">Student lesson resources</p>
+        <ul class="lesson-links">
+          <li><a href="courses/precalculus/precalculus-english/worksheets/" class="res-link ws-link">📝 Student worksheets — Precalculus</a></li>
+          <li><a href="/courses-playlist-v1" class="res-link yt-res-link">▶ Assign from YouTube playlist</a></li>
+        </ul>
+        <p class="lesson-heading" style="margin-top:20px;">Share this lesson URL</p>
+        <div class="share-url">https://www.youtube.com/watch?v=V40cad0EONM</div>
+      </div>
+    </div>
+  </div>
+</div><div class="acc-item" id="en-precalculus-1">
+  <button class="acc-trigger" aria-expanded="false" onclick="toggleAcc(this)">
+    <span class="acc-topic">Sequences and Series</span>
+    <span class="acc-meta">
+      <span class="badge badge-concept">Conceptual bridge</span>
+      <span class="acc-dur">7:02</span>
+      <span class="acc-caret" aria-hidden="true">+</span>
+    </span>
+  </button>
+  <div class="acc-body" hidden>
+    <div class="acc-inner">
+      <div class="acc-video-col">
+        <a href="https://www.youtube.com/watch?v=aOYzVd5Dm2w"
+           data-action="watch"
+           aria-label="Watch Sequences and Series on YouTube"
+           class="vid-thumb-wrap">
+          <img src="https://img.youtube.com/vi/aOYzVd5Dm2w/mqdefault.jpg"
+               alt="Sequences and Series teaching video thumbnail" loading="lazy" width="320" height="180">
+          <div class="vid-play-btn"><span>&#9654;</span></div>
+        </a>
+        <p class="vid-cta-label">Click to watch on Numberbender</p>
+      </div>
+      <div class="acc-lesson-col">
+        <p class="lesson-heading">Teaching angle</p>
+        <p class="lesson-angle">Pattern recognition before formulas — let students discover the rule first.</p>
+        <p class="lesson-heading" style="margin-top:20px;">Student lesson resources</p>
+        <ul class="lesson-links">
+          <li><a href="courses/precalculus/precalculus-english/worksheets/" class="res-link ws-link">📝 Student worksheets — Precalculus</a></li>
+          <li><a href="/courses-playlist-v1" class="res-link yt-res-link">▶ Assign from YouTube playlist</a></li>
+        </ul>
+        <p class="lesson-heading" style="margin-top:20px;">Share this lesson URL</p>
+        <div class="share-url">https://www.youtube.com/watch?v=aOYzVd5Dm2w</div>
+      </div>
+    </div>
+  </div>
+</div><div class="acc-item" id="en-precalculus-2">
+  <button class="acc-trigger" aria-expanded="false" onclick="toggleAcc(this)">
+    <span class="acc-topic">Imaginary Numbers</span>
+    <span class="acc-meta">
+      <span class="badge badge-concept">Conceptual bridge</span>
+      <span class="acc-dur">9:10</span>
+      <span class="acc-caret" aria-hidden="true">+</span>
+    </span>
+  </button>
+  <div class="acc-body" hidden>
+    <div class="acc-inner">
+      <div class="acc-video-col">
+        <a href="https://www.youtube.com/watch?v=0MNpsUug8d0"
+           data-action="watch"
+           aria-label="Watch Imaginary Numbers on YouTube"
+           class="vid-thumb-wrap">
+          <img src="https://img.youtube.com/vi/0MNpsUug8d0/mqdefault.jpg"
+               alt="Imaginary Numbers teaching video thumbnail" loading="lazy" width="320" height="180">
+          <div class="vid-play-btn"><span>&#9654;</span></div>
+        </a>
+        <p class="vid-cta-label">Click to watch on Numberbender</p>
+      </div>
+      <div class="acc-lesson-col">
+        <p class="lesson-heading">Teaching angle</p>
+        <p class="lesson-angle">Make the imaginary geometric — it stops being abstract when students can see it.</p>
+        <p class="lesson-heading" style="margin-top:20px;">Student lesson resources</p>
+        <ul class="lesson-links">
+          <li><a href="courses/precalculus/precalculus-english/worksheets/" class="res-link ws-link">📝 Student worksheets — Precalculus</a></li>
+          <li><a href="/courses-playlist-v1" class="res-link yt-res-link">▶ Assign from YouTube playlist</a></li>
+        </ul>
+        <p class="lesson-heading" style="margin-top:20px;">Share this lesson URL</p>
+        <div class="share-url">https://www.youtube.com/watch?v=0MNpsUug8d0</div>
+      </div>
+    </div>
+  </div>
+</div><div class="acc-item" id="en-precalculus-3">
+  <button class="acc-trigger" aria-expanded="false" onclick="toggleAcc(this)">
+    <span class="acc-topic">Rational Functions via Technology</span>
+    <span class="acc-meta">
+      <span class="badge badge-tech">Technology-enhanced</span>
+      <span class="acc-dur">11:28</span>
+      <span class="acc-caret" aria-hidden="true">+</span>
+    </span>
+  </button>
+  <div class="acc-body" hidden>
+    <div class="acc-inner">
+      <div class="acc-video-col">
+        <a href="https://www.youtube.com/watch?v=vp3FG6NAtjg"
+           data-action="watch"
+           aria-label="Watch Rational Functions via Technology on YouTube"
+           class="vid-thumb-wrap">
+          <img src="https://img.youtube.com/vi/vp3FG6NAtjg/mqdefault.jpg"
+               alt="Rational Functions via Technology teaching video thumbnail" loading="lazy" width="320" height="180">
+          <div class="vid-play-btn"><span>&#9654;</span></div>
+        </a>
+        <p class="vid-cta-label">Click to watch on Numberbender</p>
+      </div>
+      <div class="acc-lesson-col">
+        <p class="lesson-heading">Teaching angle</p>
+        <p class="lesson-angle">Technology reveals asymptotes and behavior — analysis then confirms what students see.</p>
+        <p class="lesson-heading" style="margin-top:20px;">Student lesson resources</p>
+        <ul class="lesson-links">
+          <li><a href="courses/precalculus/precalculus-english/worksheets/" class="res-link ws-link">📝 Student worksheets — Precalculus</a></li>
+          <li><a href="/courses-playlist-v1" class="res-link yt-res-link">▶ Assign from YouTube playlist</a></li>
+        </ul>
+        <p class="lesson-heading" style="margin-top:20px;">Share this lesson URL</p>
+        <div class="share-url">https://www.youtube.com/watch?v=vp3FG6NAtjg</div>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</section>
+<section class="subj-block" id="en-linear-algebra">
+  <div class="subj-block-header">
+    <span class="subj-chip chip-lin">⬛ Linear Algebra</span>
+    <span class="subj-chip-count">2 topics</span>
+  </div>
+  <div class="acc-group">
+    <div class="acc-item" id="en-linear-algebra-0">
+  <button class="acc-trigger" aria-expanded="false" onclick="toggleAcc(this)">
+    <span class="acc-topic">Linear Systems — 3 Variables via Matrix</span>
+    <span class="acc-meta">
+      <span class="badge badge-concept">Conceptual bridge</span>
+      <span class="acc-dur">9:27</span>
+      <span class="acc-caret" aria-hidden="true">+</span>
+    </span>
+  </button>
+  <div class="acc-body" hidden>
+    <div class="acc-inner">
+      <div class="acc-video-col">
+        <a href="https://www.youtube.com/watch?v=iJ1agtA6eEM"
+           data-action="watch"
+           aria-label="Watch Linear Systems — 3 Variables via Matrix on YouTube"
+           class="vid-thumb-wrap">
+          <img src="https://img.youtube.com/vi/iJ1agtA6eEM/mqdefault.jpg"
+               alt="Linear Systems — 3 Variables via Matrix teaching video thumbnail" loading="lazy" width="320" height="180">
+          <div class="vid-play-btn"><span>&#9654;</span></div>
+        </a>
+        <p class="vid-cta-label">Click to watch on Numberbender</p>
+      </div>
+      <div class="acc-lesson-col">
+        <p class="lesson-heading">Teaching angle</p>
+        <p class="lesson-angle">Matrix notation organizes what students already know — new form, same logic.</p>
+        <p class="lesson-heading" style="margin-top:20px;">Student lesson resources</p>
+        <ul class="lesson-links">
+          <li><a href="courses/linear-algebra/linear-algebra-english/worksheets/" class="res-link ws-link">📝 Student worksheets — Linear Algebra</a></li>
+          <li><a href="/courses-playlist-v1" class="res-link yt-res-link">▶ Assign from YouTube playlist</a></li>
+        </ul>
+        <p class="lesson-heading" style="margin-top:20px;">Share this lesson URL</p>
+        <div class="share-url">https://www.youtube.com/watch?v=iJ1agtA6eEM</div>
+      </div>
+    </div>
+  </div>
+</div><div class="acc-item" id="en-linear-algebra-1">
+  <button class="acc-trigger" aria-expanded="false" onclick="toggleAcc(this)">
+    <span class="acc-topic">Matrix Operations Web App</span>
+    <span class="acc-meta">
+      <span class="badge badge-tech">Technology-enhanced</span>
+      <span class="acc-dur">8:40</span>
+      <span class="acc-caret" aria-hidden="true">+</span>
+    </span>
+  </button>
+  <div class="acc-body" hidden>
+    <div class="acc-inner">
+      <div class="acc-video-col">
+        <a href="https://www.youtube.com/watch?v=4K2CneBAiqI"
+           data-action="watch"
+           aria-label="Watch Matrix Operations Web App on YouTube"
+           class="vid-thumb-wrap">
+          <img src="https://img.youtube.com/vi/4K2CneBAiqI/mqdefault.jpg"
+               alt="Matrix Operations Web App teaching video thumbnail" loading="lazy" width="320" height="180">
+          <div class="vid-play-btn"><span>&#9654;</span></div>
+        </a>
+        <p class="vid-cta-label">Click to watch on Numberbender</p>
+      </div>
+      <div class="acc-lesson-col">
+        <p class="lesson-heading">Teaching angle</p>
+        <p class="lesson-angle">App handles the arithmetic — students focus entirely on setting up the matrix.</p>
+        <p class="lesson-heading" style="margin-top:20px;">Student lesson resources</p>
+        <ul class="lesson-links">
+          <li><a href="courses/linear-algebra/linear-algebra-english/worksheets/" class="res-link ws-link">📝 Student worksheets — Linear Algebra</a></li>
+          <li><a href="/courses-playlist-v1" class="res-link yt-res-link">▶ Assign from YouTube playlist</a></li>
+        </ul>
+        <p class="lesson-heading" style="margin-top:20px;">Share this lesson URL</p>
+        <div class="share-url">https://www.youtube.com/watch?v=4K2CneBAiqI</div>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</section></div>
+  </div>
+  <div id="panel-fil" class="lang-panel">
+    <div class="container"><section class="subj-block" id="fil-algebra">
+  <div class="subj-block-header">
+    <span class="subj-chip chip-alg">🔢 Algebra</span>
+    <span class="subj-chip-count">5 topics</span>
+  </div>
+  <div class="acc-group">
+    <div class="acc-item" id="fil-algebra-0">
+  <button class="acc-trigger" aria-expanded="false" onclick="toggleAcc(this)">
+    <span class="acc-topic">Solving Algebraic Equations</span>
+    <span class="acc-meta">
+      <span class="badge badge-concept">Conceptual bridge</span>
+      <span class="acc-dur">20:26</span>
+      <span class="acc-caret" aria-hidden="true">+</span>
+    </span>
+  </button>
+  <div class="acc-body" hidden>
+    <div class="acc-inner">
+      <div class="acc-video-col">
+        <a href="https://www.youtube.com/watch?v=ausztnAvctE"
+           data-action="watch"
+           aria-label="Watch Solving Algebraic Equations on YouTube"
+           class="vid-thumb-wrap">
+          <img src="https://img.youtube.com/vi/ausztnAvctE/mqdefault.jpg"
+               alt="Solving Algebraic Equations teaching video thumbnail" loading="lazy" width="320" height="180">
+          <div class="vid-play-btn"><span>&#9654;</span></div>
+        </a>
+        <p class="vid-cta-label">Click to watch on Numberbender</p>
+      </div>
+      <div class="acc-lesson-col">
+        <p class="lesson-heading">Teaching angle</p>
+        <p class="lesson-angle">Step-by-step modeling — build procedural fluency before moving to abstractions.</p>
+        <p class="lesson-heading" style="margin-top:20px;">Student lesson resources</p>
+        <ul class="lesson-links">
+          <li><a href="courses/algebra/algebra-filipino/worksheets/" class="res-link ws-link">📝 Student worksheets — Algebra</a></li>
+          <li><a href="/courses-playlist-v1" class="res-link yt-res-link">▶ Assign from YouTube playlist</a></li>
+        </ul>
+        <p class="lesson-heading" style="margin-top:20px;">Share this lesson URL</p>
+        <div class="share-url">https://www.youtube.com/watch?v=ausztnAvctE</div>
+      </div>
+    </div>
+  </div>
+</div><div class="acc-item" id="fil-algebra-1">
+  <button class="acc-trigger" aria-expanded="false" onclick="toggleAcc(this)">
+    <span class="acc-topic">Rational Expressions</span>
+    <span class="acc-meta">
+      <span class="badge badge-concept">Conceptual bridge</span>
+      <span class="acc-dur">7:37</span>
+      <span class="acc-caret" aria-hidden="true">+</span>
+    </span>
+  </button>
+  <div class="acc-body" hidden>
+    <div class="acc-inner">
+      <div class="acc-video-col">
+        <a href="https://www.youtube.com/watch?v=7Qcw-JRp2vM"
+           data-action="watch"
+           aria-label="Watch Rational Expressions on YouTube"
+           class="vid-thumb-wrap">
+          <img src="https://img.youtube.com/vi/7Qcw-JRp2vM/mqdefault.jpg"
+               alt="Rational Expressions teaching video thumbnail" loading="lazy" width="320" height="180">
+          <div class="vid-play-btn"><span>&#9654;</span></div>
+        </a>
+        <p class="vid-cta-label">Click to watch on Numberbender</p>
+      </div>
+      <div class="acc-lesson-col">
+        <p class="lesson-heading">Teaching angle</p>
+        <p class="lesson-angle">Connect to fraction rules students already know — reduce cognitive load.</p>
+        <p class="lesson-heading" style="margin-top:20px;">Student lesson resources</p>
+        <ul class="lesson-links">
+          <li><a href="courses/algebra/algebra-filipino/worksheets/" class="res-link ws-link">📝 Student worksheets — Algebra</a></li>
+          <li><a href="/courses-playlist-v1" class="res-link yt-res-link">▶ Assign from YouTube playlist</a></li>
+        </ul>
+        <p class="lesson-heading" style="margin-top:20px;">Share this lesson URL</p>
+        <div class="share-url">https://www.youtube.com/watch?v=7Qcw-JRp2vM</div>
+      </div>
+    </div>
+  </div>
+</div><div class="acc-item" id="fil-algebra-2">
+  <button class="acc-trigger" aria-expanded="false" onclick="toggleAcc(this)">
+    <span class="acc-topic">Solving Equations via Desmos</span>
+    <span class="acc-meta">
+      <span class="badge badge-tech">Technology-enhanced</span>
+      <span class="acc-dur">9:07</span>
+      <span class="acc-caret" aria-hidden="true">+</span>
+    </span>
+  </button>
+  <div class="acc-body" hidden>
+    <div class="acc-inner">
+      <div class="acc-video-col">
+        <a href="https://www.youtube.com/watch?v=L9vBbJY-GQ8"
+           data-action="watch"
+           aria-label="Watch Solving Equations via Desmos on YouTube"
+           class="vid-thumb-wrap">
+          <img src="https://img.youtube.com/vi/L9vBbJY-GQ8/mqdefault.jpg"
+               alt="Solving Equations via Desmos teaching video thumbnail" loading="lazy" width="320" height="180">
+          <div class="vid-play-btn"><span>&#9654;</span></div>
+        </a>
+        <p class="vid-cta-label">Click to watch on Numberbender</p>
+      </div>
+      <div class="acc-lesson-col">
+        <p class="lesson-heading">Teaching angle</p>
+        <p class="lesson-angle">Desmos as a checking tool — students verify answers graphically.</p>
+        <p class="lesson-heading" style="margin-top:20px;">Student lesson resources</p>
+        <ul class="lesson-links">
+          <li><a href="courses/algebra/algebra-filipino/worksheets/" class="res-link ws-link">📝 Student worksheets — Algebra</a></li>
+          <li><a href="/courses-playlist-v1" class="res-link yt-res-link">▶ Assign from YouTube playlist</a></li>
+        </ul>
+        <p class="lesson-heading" style="margin-top:20px;">Share this lesson URL</p>
+        <div class="share-url">https://www.youtube.com/watch?v=L9vBbJY-GQ8</div>
+      </div>
+    </div>
+  </div>
+</div><div class="acc-item" id="fil-algebra-3">
+  <button class="acc-trigger" aria-expanded="false" onclick="toggleAcc(this)">
+    <span class="acc-topic">Factoring via Desmos</span>
+    <span class="acc-meta">
+      <span class="badge badge-tech">Technology-enhanced</span>
+      <span class="acc-dur">12:36</span>
+      <span class="acc-caret" aria-hidden="true">+</span>
+    </span>
+  </button>
+  <div class="acc-body" hidden>
+    <div class="acc-inner">
+      <div class="acc-video-col">
+        <a href="https://www.youtube.com/watch?v=UXHAaGi-mTg"
+           data-action="watch"
+           aria-label="Watch Factoring via Desmos on YouTube"
+           class="vid-thumb-wrap">
+          <img src="https://img.youtube.com/vi/UXHAaGi-mTg/mqdefault.jpg"
+               alt="Factoring via Desmos teaching video thumbnail" loading="lazy" width="320" height="180">
+          <div class="vid-play-btn"><span>&#9654;</span></div>
+        </a>
+        <p class="vid-cta-label">Click to watch on Numberbender</p>
+      </div>
+      <div class="acc-lesson-col">
+        <p class="lesson-heading">Teaching angle</p>
+        <p class="lesson-angle">Graph-based verification of factored form — builds conceptual trust in the algebra.</p>
+        <p class="lesson-heading" style="margin-top:20px;">Student lesson resources</p>
+        <ul class="lesson-links">
+          <li><a href="courses/algebra/algebra-filipino/worksheets/" class="res-link ws-link">📝 Student worksheets — Algebra</a></li>
+          <li><a href="/courses-playlist-v1" class="res-link yt-res-link">▶ Assign from YouTube playlist</a></li>
+        </ul>
+        <p class="lesson-heading" style="margin-top:20px;">Share this lesson URL</p>
+        <div class="share-url">https://www.youtube.com/watch?v=UXHAaGi-mTg</div>
+      </div>
+    </div>
+  </div>
+</div><div class="acc-item" id="fil-algebra-4">
+  <button class="acc-trigger" aria-expanded="false" onclick="toggleAcc(this)">
+    <span class="acc-topic">Integers with Visuals</span>
+    <span class="acc-meta">
+      <span class="badge badge-concept">Conceptual bridge</span>
+      <span class="acc-dur">5:55</span>
+      <span class="acc-caret" aria-hidden="true">+</span>
+    </span>
+  </button>
+  <div class="acc-body" hidden>
+    <div class="acc-inner">
+      <div class="acc-video-col">
+        <a href="https://www.youtube.com/watch?v=dZ2hwfKMIrk"
+           data-action="watch"
+           aria-label="Watch Integers with Visuals on YouTube"
+           class="vid-thumb-wrap">
+          <img src="https://img.youtube.com/vi/dZ2hwfKMIrk/mqdefault.jpg"
+               alt="Integers with Visuals teaching video thumbnail" loading="lazy" width="320" height="180">
+          <div class="vid-play-btn"><span>&#9654;</span></div>
+        </a>
+        <p class="vid-cta-label">Click to watch on Numberbender</p>
+      </div>
+      <div class="acc-lesson-col">
+        <p class="lesson-heading">Teaching angle</p>
+        <p class="lesson-angle">Zero pairs and number lines make integer operations concrete before symbolic.</p>
+        <p class="lesson-heading" style="margin-top:20px;">Student lesson resources</p>
+        <ul class="lesson-links">
+          <li><a href="courses/algebra/algebra-filipino/worksheets/" class="res-link ws-link">📝 Student worksheets — Algebra</a></li>
+          <li><a href="/courses-playlist-v1" class="res-link yt-res-link">▶ Assign from YouTube playlist</a></li>
+        </ul>
+        <p class="lesson-heading" style="margin-top:20px;">Share this lesson URL</p>
+        <div class="share-url">https://www.youtube.com/watch?v=dZ2hwfKMIrk</div>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</section>
+<section class="subj-block" id="fil-calculus">
+  <div class="subj-block-header">
+    <span class="subj-chip chip-cal">∫ Calculus</span>
+    <span class="subj-chip-count">6 topics</span>
+  </div>
+  <div class="acc-group">
+    <div class="acc-item" id="fil-calculus-0">
+  <button class="acc-trigger" aria-expanded="false" onclick="toggleAcc(this)">
+    <span class="acc-topic">Derivatives</span>
+    <span class="acc-meta">
+      <span class="badge badge-concept">Conceptual bridge</span>
+      <span class="acc-dur">11:12</span>
+      <span class="acc-caret" aria-hidden="true">+</span>
+    </span>
+  </button>
+  <div class="acc-body" hidden>
+    <div class="acc-inner">
+      <div class="acc-video-col">
+        <a href="https://www.youtube.com/watch?v=8CSdXsTtoSw"
+           data-action="watch"
+           aria-label="Watch Derivatives on YouTube"
+           class="vid-thumb-wrap">
+          <img src="https://img.youtube.com/vi/8CSdXsTtoSw/mqdefault.jpg"
+               alt="Derivatives teaching video thumbnail" loading="lazy" width="320" height="180">
+          <div class="vid-play-btn"><span>&#9654;</span></div>
+        </a>
+        <p class="vid-cta-label">Click to watch on Numberbender</p>
+      </div>
+      <div class="acc-lesson-col">
+        <p class="lesson-heading">Teaching angle</p>
+        <p class="lesson-angle">Anchor derivatives in algebra patterns — remove the notation barrier first.</p>
+        <p class="lesson-heading" style="margin-top:20px;">Student lesson resources</p>
+        <ul class="lesson-links">
+          <li><a href="courses/calculus/calculus-filipino/worksheets/" class="res-link ws-link">📝 Student worksheets — Calculus</a></li>
+          <li><a href="/courses-playlist-v1" class="res-link yt-res-link">▶ Assign from YouTube playlist</a></li>
+        </ul>
+        <p class="lesson-heading" style="margin-top:20px;">Share this lesson URL</p>
+        <div class="share-url">https://www.youtube.com/watch?v=8CSdXsTtoSw</div>
+      </div>
+    </div>
+  </div>
+</div><div class="acc-item" id="fil-calculus-1">
+  <button class="acc-trigger" aria-expanded="false" onclick="toggleAcc(this)">
+    <span class="acc-topic">Law of Exponents in Calculus</span>
+    <span class="acc-meta">
+      <span class="badge badge-concept">Conceptual bridge</span>
+      <span class="acc-dur">8:01</span>
+      <span class="acc-caret" aria-hidden="true">+</span>
+    </span>
+  </button>
+  <div class="acc-body" hidden>
+    <div class="acc-inner">
+      <div class="acc-video-col">
+        <a href="https://www.youtube.com/watch?v=CTeWpAw8_GE"
+           data-action="watch"
+           aria-label="Watch Law of Exponents in Calculus on YouTube"
+           class="vid-thumb-wrap">
+          <img src="https://img.youtube.com/vi/CTeWpAw8_GE/mqdefault.jpg"
+               alt="Law of Exponents in Calculus teaching video thumbnail" loading="lazy" width="320" height="180">
+          <div class="vid-play-btn"><span>&#9654;</span></div>
+        </a>
+        <p class="vid-cta-label">Click to watch on Numberbender</p>
+      </div>
+      <div class="acc-lesson-col">
+        <p class="lesson-heading">Teaching angle</p>
+        <p class="lesson-angle">Bridge algebra exponent rules to calculus notation before any new rules.</p>
+        <p class="lesson-heading" style="margin-top:20px;">Student lesson resources</p>
+        <ul class="lesson-links">
+          <li><a href="courses/calculus/calculus-filipino/worksheets/" class="res-link ws-link">📝 Student worksheets — Calculus</a></li>
+          <li><a href="/courses-playlist-v1" class="res-link yt-res-link">▶ Assign from YouTube playlist</a></li>
+        </ul>
+        <p class="lesson-heading" style="margin-top:20px;">Share this lesson URL</p>
+        <div class="share-url">https://www.youtube.com/watch?v=CTeWpAw8_GE</div>
+      </div>
+    </div>
+  </div>
+</div><div class="acc-item" id="fil-calculus-2">
+  <button class="acc-trigger" aria-expanded="false" onclick="toggleAcc(this)">
+    <span class="acc-topic">Limits</span>
+    <span class="acc-meta">
+      <span class="badge badge-concept">Conceptual bridge</span>
+      <span class="acc-dur">12:45</span>
+      <span class="acc-caret" aria-hidden="true">+</span>
+    </span>
+  </button>
+  <div class="acc-body" hidden>
+    <div class="acc-inner">
+      <div class="acc-video-col">
+        <a href="https://www.youtube.com/watch?v=bw4vc3BU_-Q"
+           data-action="watch"
+           aria-label="Watch Limits on YouTube"
+           class="vid-thumb-wrap">
+          <img src="https://img.youtube.com/vi/bw4vc3BU_-Q/mqdefault.jpg"
+               alt="Limits teaching video thumbnail" loading="lazy" width="320" height="180">
+          <div class="vid-play-btn"><span>&#9654;</span></div>
+        </a>
+        <p class="vid-cta-label">Click to watch on Numberbender</p>
+      </div>
+      <div class="acc-lesson-col">
+        <p class="lesson-heading">Teaching angle</p>
+        <p class="lesson-angle">Graphical and analytical approaches taught side by side — depth through dual lenses.</p>
+        <p class="lesson-heading" style="margin-top:20px;">Student lesson resources</p>
+        <ul class="lesson-links">
+          <li><a href="courses/calculus/calculus-filipino/worksheets/" class="res-link ws-link">📝 Student worksheets — Calculus</a></li>
+          <li><a href="/courses-playlist-v1" class="res-link yt-res-link">▶ Assign from YouTube playlist</a></li>
+        </ul>
+        <p class="lesson-heading" style="margin-top:20px;">Share this lesson URL</p>
+        <div class="share-url">https://www.youtube.com/watch?v=bw4vc3BU_-Q</div>
+      </div>
+    </div>
+  </div>
+</div><div class="acc-item" id="fil-calculus-3">
+  <button class="acc-trigger" aria-expanded="false" onclick="toggleAcc(this)">
+    <span class="acc-topic">Riemann Sums & Integration</span>
+    <span class="acc-meta">
+      <span class="badge badge-concept">Conceptual bridge</span>
+      <span class="acc-dur">11:52</span>
+      <span class="acc-caret" aria-hidden="true">+</span>
+    </span>
+  </button>
+  <div class="acc-body" hidden>
+    <div class="acc-inner">
+      <div class="acc-video-col">
+        <a href="https://www.youtube.com/watch?v=fMfe_bKgwCI"
+           data-action="watch"
+           aria-label="Watch Riemann Sums & Integration on YouTube"
+           class="vid-thumb-wrap">
+          <img src="https://img.youtube.com/vi/fMfe_bKgwCI/mqdefault.jpg"
+               alt="Riemann Sums & Integration teaching video thumbnail" loading="lazy" width="320" height="180">
+          <div class="vid-play-btn"><span>&#9654;</span></div>
+        </a>
+        <p class="vid-cta-label">Click to watch on Numberbender</p>
+      </div>
+      <div class="acc-lesson-col">
+        <p class="lesson-heading">Teaching angle</p>
+        <p class="lesson-angle">Use area estimation to build intuition before the formal integral definition.</p>
+        <p class="lesson-heading" style="margin-top:20px;">Student lesson resources</p>
+        <ul class="lesson-links">
+          <li><a href="courses/calculus/calculus-filipino/worksheets/" class="res-link ws-link">📝 Student worksheets — Calculus</a></li>
+          <li><a href="/courses-playlist-v1" class="res-link yt-res-link">▶ Assign from YouTube playlist</a></li>
+        </ul>
+        <p class="lesson-heading" style="margin-top:20px;">Share this lesson URL</p>
+        <div class="share-url">https://www.youtube.com/watch?v=fMfe_bKgwCI</div>
+      </div>
+    </div>
+  </div>
+</div><div class="acc-item" id="fil-calculus-4">
+  <button class="acc-trigger" aria-expanded="false" onclick="toggleAcc(this)">
+    <span class="acc-topic">Verify Derivative Rules via Desmos</span>
+    <span class="acc-meta">
+      <span class="badge badge-tech">Technology-enhanced</span>
+      <span class="acc-dur">11:23</span>
+      <span class="acc-caret" aria-hidden="true">+</span>
+    </span>
+  </button>
+  <div class="acc-body" hidden>
+    <div class="acc-inner">
+      <div class="acc-video-col">
+        <a href="https://www.youtube.com/watch?v=QsNCLLC32fc"
+           data-action="watch"
+           aria-label="Watch Verify Derivative Rules via Desmos on YouTube"
+           class="vid-thumb-wrap">
+          <img src="https://img.youtube.com/vi/QsNCLLC32fc/mqdefault.jpg"
+               alt="Verify Derivative Rules via Desmos teaching video thumbnail" loading="lazy" width="320" height="180">
+          <div class="vid-play-btn"><span>&#9654;</span></div>
+        </a>
+        <p class="vid-cta-label">Click to watch on Numberbender</p>
+      </div>
+      <div class="acc-lesson-col">
+        <p class="lesson-heading">Teaching angle</p>
+        <p class="lesson-angle">Desmos as immediate feedback — students check their own derivative work.</p>
+        <p class="lesson-heading" style="margin-top:20px;">Student lesson resources</p>
+        <ul class="lesson-links">
+          <li><a href="courses/calculus/calculus-filipino/worksheets/" class="res-link ws-link">📝 Student worksheets — Calculus</a></li>
+          <li><a href="/courses-playlist-v1" class="res-link yt-res-link">▶ Assign from YouTube playlist</a></li>
+        </ul>
+        <p class="lesson-heading" style="margin-top:20px;">Share this lesson URL</p>
+        <div class="share-url">https://www.youtube.com/watch?v=QsNCLLC32fc</div>
+      </div>
+    </div>
+  </div>
+</div><div class="acc-item" id="fil-calculus-5">
+  <button class="acc-trigger" aria-expanded="false" onclick="toggleAcc(this)">
+    <span class="acc-topic">Parabola — Analytical & Graphical</span>
+    <span class="acc-meta">
+      <span class="badge badge-tech">Technology-enhanced</span>
+      <span class="acc-dur">9:19</span>
+      <span class="acc-caret" aria-hidden="true">+</span>
+    </span>
+  </button>
+  <div class="acc-body" hidden>
+    <div class="acc-inner">
+      <div class="acc-video-col">
+        <a href="https://www.youtube.com/watch?v=DRoN22VTp2E"
+           data-action="watch"
+           aria-label="Watch Parabola — Analytical & Graphical on YouTube"
+           class="vid-thumb-wrap">
+          <img src="https://img.youtube.com/vi/DRoN22VTp2E/mqdefault.jpg"
+               alt="Parabola — Analytical & Graphical teaching video thumbnail" loading="lazy" width="320" height="180">
+          <div class="vid-play-btn"><span>&#9654;</span></div>
+        </a>
+        <p class="vid-cta-label">Click to watch on Numberbender</p>
+      </div>
+      <div class="acc-lesson-col">
+        <p class="lesson-heading">Teaching angle</p>
+        <p class="lesson-angle">Technology reveals the curve — analysis confirms what students see visually.</p>
+        <p class="lesson-heading" style="margin-top:20px;">Student lesson resources</p>
+        <ul class="lesson-links">
+          <li><a href="courses/calculus/calculus-filipino/worksheets/" class="res-link ws-link">📝 Student worksheets — Calculus</a></li>
+          <li><a href="/courses-playlist-v1" class="res-link yt-res-link">▶ Assign from YouTube playlist</a></li>
+        </ul>
+        <p class="lesson-heading" style="margin-top:20px;">Share this lesson URL</p>
+        <div class="share-url">https://www.youtube.com/watch?v=DRoN22VTp2E</div>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</section>
+<section class="subj-block" id="fil-trigonometry">
+  <div class="subj-block-header">
+    <span class="subj-chip chip-tri">📐 Trigonometry</span>
+    <span class="subj-chip-count">2 topics</span>
+  </div>
+  <div class="acc-group">
+    <div class="acc-item" id="fil-trigonometry-0">
+  <button class="acc-trigger" aria-expanded="false" onclick="toggleAcc(this)">
+    <span class="acc-topic">Factoring in Trig Identities</span>
+    <span class="acc-meta">
+      <span class="badge badge-concept">Conceptual bridge</span>
+      <span class="acc-dur">8:04</span>
+      <span class="acc-caret" aria-hidden="true">+</span>
+    </span>
+  </button>
+  <div class="acc-body" hidden>
+    <div class="acc-inner">
+      <div class="acc-video-col">
+        <a href="https://www.youtube.com/watch?v=MCvalOC_m2k"
+           data-action="watch"
+           aria-label="Watch Factoring in Trig Identities on YouTube"
+           class="vid-thumb-wrap">
+          <img src="https://img.youtube.com/vi/MCvalOC_m2k/mqdefault.jpg"
+               alt="Factoring in Trig Identities teaching video thumbnail" loading="lazy" width="320" height="180">
+          <div class="vid-play-btn"><span>&#9654;</span></div>
+        </a>
+        <p class="vid-cta-label">Click to watch on Numberbender</p>
+      </div>
+      <div class="acc-lesson-col">
+        <p class="lesson-heading">Teaching angle</p>
+        <p class="lesson-angle">Reframe identities as factoring problems — familiar technique, unfamiliar context.</p>
+        <p class="lesson-heading" style="margin-top:20px;">Student lesson resources</p>
+        <ul class="lesson-links">
+          <li><a href="courses/trigonometry/trigonometry-filipino/worksheets/" class="res-link ws-link">📝 Student worksheets — Trigonometry</a></li>
+          <li><a href="/courses-playlist-v1" class="res-link yt-res-link">▶ Assign from YouTube playlist</a></li>
+        </ul>
+        <p class="lesson-heading" style="margin-top:20px;">Share this lesson URL</p>
+        <div class="share-url">https://www.youtube.com/watch?v=MCvalOC_m2k</div>
+      </div>
+    </div>
+  </div>
+</div><div class="acc-item" id="fil-trigonometry-1">
+  <button class="acc-trigger" aria-expanded="false" onclick="toggleAcc(this)">
+    <span class="acc-topic">Trig Equations via Algebra</span>
+    <span class="acc-meta">
+      <span class="badge badge-concept">Conceptual bridge</span>
+      <span class="acc-dur">9:21</span>
+      <span class="acc-caret" aria-hidden="true">+</span>
+    </span>
+  </button>
+  <div class="acc-body" hidden>
+    <div class="acc-inner">
+      <div class="acc-video-col">
+        <a href="https://www.youtube.com/watch?v=B279aV0jT5Q"
+           data-action="watch"
+           aria-label="Watch Trig Equations via Algebra on YouTube"
+           class="vid-thumb-wrap">
+          <img src="https://img.youtube.com/vi/B279aV0jT5Q/mqdefault.jpg"
+               alt="Trig Equations via Algebra teaching video thumbnail" loading="lazy" width="320" height="180">
+          <div class="vid-play-btn"><span>&#9654;</span></div>
+        </a>
+        <p class="vid-cta-label">Click to watch on Numberbender</p>
+      </div>
+      <div class="acc-lesson-col">
+        <p class="lesson-heading">Teaching angle</p>
+        <p class="lesson-angle">Treat trig equations as algebraic — substitution reduces unfamiliar complexity.</p>
+        <p class="lesson-heading" style="margin-top:20px;">Student lesson resources</p>
+        <ul class="lesson-links">
+          <li><a href="courses/trigonometry/trigonometry-filipino/worksheets/" class="res-link ws-link">📝 Student worksheets — Trigonometry</a></li>
+          <li><a href="/courses-playlist-v1" class="res-link yt-res-link">▶ Assign from YouTube playlist</a></li>
+        </ul>
+        <p class="lesson-heading" style="margin-top:20px;">Share this lesson URL</p>
+        <div class="share-url">https://www.youtube.com/watch?v=B279aV0jT5Q</div>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</section>
+<section class="subj-block" id="fil-statistics">
+  <div class="subj-block-header">
+    <span class="subj-chip chip-sta">📊 Statistics</span>
+    <span class="subj-chip-count">4 topics</span>
+  </div>
+  <div class="acc-group">
+    <div class="acc-item" id="fil-statistics-0">
+  <button class="acc-trigger" aria-expanded="false" onclick="toggleAcc(this)">
+    <span class="acc-topic">Two-Way Table & Probability</span>
+    <span class="acc-meta">
+      <span class="badge badge-concept">Conceptual bridge</span>
+      <span class="acc-dur">7:54</span>
+      <span class="acc-caret" aria-hidden="true">+</span>
+    </span>
+  </button>
+  <div class="acc-body" hidden>
+    <div class="acc-inner">
+      <div class="acc-video-col">
+        <a href="https://www.youtube.com/watch?v=MjYU22yHs7g"
+           data-action="watch"
+           aria-label="Watch Two-Way Table & Probability on YouTube"
+           class="vid-thumb-wrap">
+          <img src="https://img.youtube.com/vi/MjYU22yHs7g/mqdefault.jpg"
+               alt="Two-Way Table & Probability teaching video thumbnail" loading="lazy" width="320" height="180">
+          <div class="vid-play-btn"><span>&#9654;</span></div>
+        </a>
+        <p class="vid-cta-label">Click to watch on Numberbender</p>
+      </div>
+      <div class="acc-lesson-col">
+        <p class="lesson-heading">Teaching angle</p>
+        <p class="lesson-angle">Organized tables replace formula overload — students reason, not memorize.</p>
+        <p class="lesson-heading" style="margin-top:20px;">Student lesson resources</p>
+        <ul class="lesson-links">
+          <li><a href="courses/statistics/statistics-filipino/worksheets/" class="res-link ws-link">📝 Student worksheets — Statistics</a></li>
+          <li><a href="/courses-playlist-v1" class="res-link yt-res-link">▶ Assign from YouTube playlist</a></li>
+        </ul>
+        <p class="lesson-heading" style="margin-top:20px;">Share this lesson URL</p>
+        <div class="share-url">https://www.youtube.com/watch?v=MjYU22yHs7g</div>
+      </div>
+    </div>
+  </div>
+</div><div class="acc-item" id="fil-statistics-1">
+  <button class="acc-trigger" aria-expanded="false" onclick="toggleAcc(this)">
+    <span class="acc-topic">One-Variable Statistics App</span>
+    <span class="acc-meta">
+      <span class="badge badge-tech">Technology-enhanced</span>
+      <span class="acc-dur">9:43</span>
+      <span class="acc-caret" aria-hidden="true">+</span>
+    </span>
+  </button>
+  <div class="acc-body" hidden>
+    <div class="acc-inner">
+      <div class="acc-video-col">
+        <a href="https://www.youtube.com/watch?v=Fu0qvXMkq8s"
+           data-action="watch"
+           aria-label="Watch One-Variable Statistics App on YouTube"
+           class="vid-thumb-wrap">
+          <img src="https://img.youtube.com/vi/Fu0qvXMkq8s/mqdefault.jpg"
+               alt="One-Variable Statistics App teaching video thumbnail" loading="lazy" width="320" height="180">
+          <div class="vid-play-btn"><span>&#9654;</span></div>
+        </a>
+        <p class="vid-cta-label">Click to watch on Numberbender</p>
+      </div>
+      <div class="acc-lesson-col">
+        <p class="lesson-heading">Teaching angle</p>
+        <p class="lesson-angle">App handles the arithmetic — class time shifts to interpretation and meaning.</p>
+        <p class="lesson-heading" style="margin-top:20px;">Student lesson resources</p>
+        <ul class="lesson-links">
+          <li><a href="courses/statistics/statistics-filipino/worksheets/" class="res-link ws-link">📝 Student worksheets — Statistics</a></li>
+          <li><a href="/courses-playlist-v1" class="res-link yt-res-link">▶ Assign from YouTube playlist</a></li>
+        </ul>
+        <p class="lesson-heading" style="margin-top:20px;">Share this lesson URL</p>
+        <div class="share-url">https://www.youtube.com/watch?v=Fu0qvXMkq8s</div>
+      </div>
+    </div>
+  </div>
+</div><div class="acc-item" id="fil-statistics-2">
+  <button class="acc-trigger" aria-expanded="false" onclick="toggleAcc(this)">
+    <span class="acc-topic">Normal Probability App</span>
+    <span class="acc-meta">
+      <span class="badge badge-tech">Technology-enhanced</span>
+      <span class="acc-dur">11:03</span>
+      <span class="acc-caret" aria-hidden="true">+</span>
+    </span>
+  </button>
+  <div class="acc-body" hidden>
+    <div class="acc-inner">
+      <div class="acc-video-col">
+        <a href="https://www.youtube.com/watch?v=Sx58shTEClE"
+           data-action="watch"
+           aria-label="Watch Normal Probability App on YouTube"
+           class="vid-thumb-wrap">
+          <img src="https://img.youtube.com/vi/Sx58shTEClE/mqdefault.jpg"
+               alt="Normal Probability App teaching video thumbnail" loading="lazy" width="320" height="180">
+          <div class="vid-play-btn"><span>&#9654;</span></div>
+        </a>
+        <p class="vid-cta-label">Click to watch on Numberbender</p>
+      </div>
+      <div class="acc-lesson-col">
+        <p class="lesson-heading">Teaching angle</p>
+        <p class="lesson-angle">Web app computes — students focus on reasoning about the bell curve.</p>
+        <p class="lesson-heading" style="margin-top:20px;">Student lesson resources</p>
+        <ul class="lesson-links">
+          <li><a href="courses/statistics/statistics-filipino/worksheets/" class="res-link ws-link">📝 Student worksheets — Statistics</a></li>
+          <li><a href="/courses-playlist-v1" class="res-link yt-res-link">▶ Assign from YouTube playlist</a></li>
+        </ul>
+        <p class="lesson-heading" style="margin-top:20px;">Share this lesson URL</p>
+        <div class="share-url">https://www.youtube.com/watch?v=Sx58shTEClE</div>
+      </div>
+    </div>
+  </div>
+</div><div class="acc-item" id="fil-statistics-3">
+  <button class="acc-trigger" aria-expanded="false" onclick="toggleAcc(this)">
+    <span class="acc-topic">Least-Squares Regression via Desmos</span>
+    <span class="acc-meta">
+      <span class="badge badge-tech">Technology-enhanced</span>
+      <span class="acc-dur">12:29</span>
+      <span class="acc-caret" aria-hidden="true">+</span>
+    </span>
+  </button>
+  <div class="acc-body" hidden>
+    <div class="acc-inner">
+      <div class="acc-video-col">
+        <a href="https://www.youtube.com/watch?v=7AIC1XcT2-k"
+           data-action="watch"
+           aria-label="Watch Least-Squares Regression via Desmos on YouTube"
+           class="vid-thumb-wrap">
+          <img src="https://img.youtube.com/vi/7AIC1XcT2-k/mqdefault.jpg"
+               alt="Least-Squares Regression via Desmos teaching video thumbnail" loading="lazy" width="320" height="180">
+          <div class="vid-play-btn"><span>&#9654;</span></div>
+        </a>
+        <p class="vid-cta-label">Click to watch on Numberbender</p>
+      </div>
+      <div class="acc-lesson-col">
+        <p class="lesson-heading">Teaching angle</p>
+        <p class="lesson-angle">Desmos makes regression visual and instant — focus on the story in the data.</p>
+        <p class="lesson-heading" style="margin-top:20px;">Student lesson resources</p>
+        <ul class="lesson-links">
+          <li><a href="courses/statistics/statistics-filipino/worksheets/" class="res-link ws-link">📝 Student worksheets — Statistics</a></li>
+          <li><a href="/courses-playlist-v1" class="res-link yt-res-link">▶ Assign from YouTube playlist</a></li>
+        </ul>
+        <p class="lesson-heading" style="margin-top:20px;">Share this lesson URL</p>
+        <div class="share-url">https://www.youtube.com/watch?v=7AIC1XcT2-k</div>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</section>
+<section class="subj-block" id="fil-precalculus">
+  <div class="subj-block-header">
+    <span class="subj-chip chip-pre">📈 Precalculus</span>
+    <span class="subj-chip-count">4 topics</span>
+  </div>
+  <div class="acc-group">
+    <div class="acc-item" id="fil-precalculus-0">
+  <button class="acc-trigger" aria-expanded="false" onclick="toggleAcc(this)">
+    <span class="acc-topic">Completing the Square & Conics</span>
+    <span class="acc-meta">
+      <span class="badge badge-concept">Conceptual bridge</span>
+      <span class="acc-dur">9:46</span>
+      <span class="acc-caret" aria-hidden="true">+</span>
+    </span>
+  </button>
+  <div class="acc-body" hidden>
+    <div class="acc-inner">
+      <div class="acc-video-col">
+        <a href="https://www.youtube.com/watch?v=B_lAfSVZHFY"
+           data-action="watch"
+           aria-label="Watch Completing the Square & Conics on YouTube"
+           class="vid-thumb-wrap">
+          <img src="https://img.youtube.com/vi/B_lAfSVZHFY/mqdefault.jpg"
+               alt="Completing the Square & Conics teaching video thumbnail" loading="lazy" width="320" height="180">
+          <div class="vid-play-btn"><span>&#9654;</span></div>
+        </a>
+        <p class="vid-cta-label">Click to watch on Numberbender</p>
+      </div>
+      <div class="acc-lesson-col">
+        <p class="lesson-heading">Teaching angle</p>
+        <p class="lesson-angle">One technique unlocks conics, quadratics, and optimization — teach it deeply.</p>
+        <p class="lesson-heading" style="margin-top:20px;">Student lesson resources</p>
+        <ul class="lesson-links">
+          <li><a href="courses/precalculus/precalculus-filipino/worksheets/" class="res-link ws-link">📝 Student worksheets — Precalculus</a></li>
+          <li><a href="/courses-playlist-v1" class="res-link yt-res-link">▶ Assign from YouTube playlist</a></li>
+        </ul>
+        <p class="lesson-heading" style="margin-top:20px;">Share this lesson URL</p>
+        <div class="share-url">https://www.youtube.com/watch?v=B_lAfSVZHFY</div>
+      </div>
+    </div>
+  </div>
+</div><div class="acc-item" id="fil-precalculus-1">
+  <button class="acc-trigger" aria-expanded="false" onclick="toggleAcc(this)">
+    <span class="acc-topic">Sequences and Series</span>
+    <span class="acc-meta">
+      <span class="badge badge-concept">Conceptual bridge</span>
+      <span class="acc-dur">7:14</span>
+      <span class="acc-caret" aria-hidden="true">+</span>
+    </span>
+  </button>
+  <div class="acc-body" hidden>
+    <div class="acc-inner">
+      <div class="acc-video-col">
+        <a href="https://www.youtube.com/watch?v=b1ILM1QdT5U"
+           data-action="watch"
+           aria-label="Watch Sequences and Series on YouTube"
+           class="vid-thumb-wrap">
+          <img src="https://img.youtube.com/vi/b1ILM1QdT5U/mqdefault.jpg"
+               alt="Sequences and Series teaching video thumbnail" loading="lazy" width="320" height="180">
+          <div class="vid-play-btn"><span>&#9654;</span></div>
+        </a>
+        <p class="vid-cta-label">Click to watch on Numberbender</p>
+      </div>
+      <div class="acc-lesson-col">
+        <p class="lesson-heading">Teaching angle</p>
+        <p class="lesson-angle">Pattern recognition before formulas — let students discover the rule first.</p>
+        <p class="lesson-heading" style="margin-top:20px;">Student lesson resources</p>
+        <ul class="lesson-links">
+          <li><a href="courses/precalculus/precalculus-filipino/worksheets/" class="res-link ws-link">📝 Student worksheets — Precalculus</a></li>
+          <li><a href="/courses-playlist-v1" class="res-link yt-res-link">▶ Assign from YouTube playlist</a></li>
+        </ul>
+        <p class="lesson-heading" style="margin-top:20px;">Share this lesson URL</p>
+        <div class="share-url">https://www.youtube.com/watch?v=b1ILM1QdT5U</div>
+      </div>
+    </div>
+  </div>
+</div><div class="acc-item" id="fil-precalculus-2">
+  <button class="acc-trigger" aria-expanded="false" onclick="toggleAcc(this)">
+    <span class="acc-topic">Imaginary Numbers</span>
+    <span class="acc-meta">
+      <span class="badge badge-concept">Conceptual bridge</span>
+      <span class="acc-dur">9:59</span>
+      <span class="acc-caret" aria-hidden="true">+</span>
+    </span>
+  </button>
+  <div class="acc-body" hidden>
+    <div class="acc-inner">
+      <div class="acc-video-col">
+        <a href="https://www.youtube.com/watch?v=ydWftD2ssQ4"
+           data-action="watch"
+           aria-label="Watch Imaginary Numbers on YouTube"
+           class="vid-thumb-wrap">
+          <img src="https://img.youtube.com/vi/ydWftD2ssQ4/mqdefault.jpg"
+               alt="Imaginary Numbers teaching video thumbnail" loading="lazy" width="320" height="180">
+          <div class="vid-play-btn"><span>&#9654;</span></div>
+        </a>
+        <p class="vid-cta-label">Click to watch on Numberbender</p>
+      </div>
+      <div class="acc-lesson-col">
+        <p class="lesson-heading">Teaching angle</p>
+        <p class="lesson-angle">Make the imaginary geometric — it stops being abstract when students can see it.</p>
+        <p class="lesson-heading" style="margin-top:20px;">Student lesson resources</p>
+        <ul class="lesson-links">
+          <li><a href="courses/precalculus/precalculus-filipino/worksheets/" class="res-link ws-link">📝 Student worksheets — Precalculus</a></li>
+          <li><a href="/courses-playlist-v1" class="res-link yt-res-link">▶ Assign from YouTube playlist</a></li>
+        </ul>
+        <p class="lesson-heading" style="margin-top:20px;">Share this lesson URL</p>
+        <div class="share-url">https://www.youtube.com/watch?v=ydWftD2ssQ4</div>
+      </div>
+    </div>
+  </div>
+</div><div class="acc-item" id="fil-precalculus-3">
+  <button class="acc-trigger" aria-expanded="false" onclick="toggleAcc(this)">
+    <span class="acc-topic">Rational Functions via Technology</span>
+    <span class="acc-meta">
+      <span class="badge badge-tech">Technology-enhanced</span>
+      <span class="acc-dur">13:34</span>
+      <span class="acc-caret" aria-hidden="true">+</span>
+    </span>
+  </button>
+  <div class="acc-body" hidden>
+    <div class="acc-inner">
+      <div class="acc-video-col">
+        <a href="https://www.youtube.com/watch?v=smgOj1HX6_s"
+           data-action="watch"
+           aria-label="Watch Rational Functions via Technology on YouTube"
+           class="vid-thumb-wrap">
+          <img src="https://img.youtube.com/vi/smgOj1HX6_s/mqdefault.jpg"
+               alt="Rational Functions via Technology teaching video thumbnail" loading="lazy" width="320" height="180">
+          <div class="vid-play-btn"><span>&#9654;</span></div>
+        </a>
+        <p class="vid-cta-label">Click to watch on Numberbender</p>
+      </div>
+      <div class="acc-lesson-col">
+        <p class="lesson-heading">Teaching angle</p>
+        <p class="lesson-angle">Technology reveals asymptotes and behavior — analysis then confirms what students see.</p>
+        <p class="lesson-heading" style="margin-top:20px;">Student lesson resources</p>
+        <ul class="lesson-links">
+          <li><a href="courses/precalculus/precalculus-filipino/worksheets/" class="res-link ws-link">📝 Student worksheets — Precalculus</a></li>
+          <li><a href="/courses-playlist-v1" class="res-link yt-res-link">▶ Assign from YouTube playlist</a></li>
+        </ul>
+        <p class="lesson-heading" style="margin-top:20px;">Share this lesson URL</p>
+        <div class="share-url">https://www.youtube.com/watch?v=smgOj1HX6_s</div>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</section>
+<section class="subj-block" id="fil-linear-algebra">
+  <div class="subj-block-header">
+    <span class="subj-chip chip-lin">⬛ Linear Algebra</span>
+    <span class="subj-chip-count">2 topics</span>
+  </div>
+  <div class="acc-group">
+    <div class="acc-item" id="fil-linear-algebra-0">
+  <button class="acc-trigger" aria-expanded="false" onclick="toggleAcc(this)">
+    <span class="acc-topic">Linear Systems — 3 Variables via Matrix</span>
+    <span class="acc-meta">
+      <span class="badge badge-concept">Conceptual bridge</span>
+      <span class="acc-dur">10:22</span>
+      <span class="acc-caret" aria-hidden="true">+</span>
+    </span>
+  </button>
+  <div class="acc-body" hidden>
+    <div class="acc-inner">
+      <div class="acc-video-col">
+        <a href="https://www.youtube.com/watch?v=86YkRtZGIuU"
+           data-action="watch"
+           aria-label="Watch Linear Systems — 3 Variables via Matrix on YouTube"
+           class="vid-thumb-wrap">
+          <img src="https://img.youtube.com/vi/86YkRtZGIuU/mqdefault.jpg"
+               alt="Linear Systems — 3 Variables via Matrix teaching video thumbnail" loading="lazy" width="320" height="180">
+          <div class="vid-play-btn"><span>&#9654;</span></div>
+        </a>
+        <p class="vid-cta-label">Click to watch on Numberbender</p>
+      </div>
+      <div class="acc-lesson-col">
+        <p class="lesson-heading">Teaching angle</p>
+        <p class="lesson-angle">Matrix notation organizes what students already know — new form, same logic.</p>
+        <p class="lesson-heading" style="margin-top:20px;">Student lesson resources</p>
+        <ul class="lesson-links">
+          <li><a href="courses/linear-algebra/linear-algebra-filipino/worksheets/" class="res-link ws-link">📝 Student worksheets — Linear Algebra</a></li>
+          <li><a href="/courses-playlist-v1" class="res-link yt-res-link">▶ Assign from YouTube playlist</a></li>
+        </ul>
+        <p class="lesson-heading" style="margin-top:20px;">Share this lesson URL</p>
+        <div class="share-url">https://www.youtube.com/watch?v=86YkRtZGIuU</div>
+      </div>
+    </div>
+  </div>
+</div><div class="acc-item" id="fil-linear-algebra-1">
+  <button class="acc-trigger" aria-expanded="false" onclick="toggleAcc(this)">
+    <span class="acc-topic">Matrix Operations Web App</span>
+    <span class="acc-meta">
+      <span class="badge badge-tech">Technology-enhanced</span>
+      <span class="acc-dur">10:34</span>
+      <span class="acc-caret" aria-hidden="true">+</span>
+    </span>
+  </button>
+  <div class="acc-body" hidden>
+    <div class="acc-inner">
+      <div class="acc-video-col">
+        <a href="https://www.youtube.com/watch?v=gURNcWqe6zg"
+           data-action="watch"
+           aria-label="Watch Matrix Operations Web App on YouTube"
+           class="vid-thumb-wrap">
+          <img src="https://img.youtube.com/vi/gURNcWqe6zg/mqdefault.jpg"
+               alt="Matrix Operations Web App teaching video thumbnail" loading="lazy" width="320" height="180">
+          <div class="vid-play-btn"><span>&#9654;</span></div>
+        </a>
+        <p class="vid-cta-label">Click to watch on Numberbender</p>
+      </div>
+      <div class="acc-lesson-col">
+        <p class="lesson-heading">Teaching angle</p>
+        <p class="lesson-angle">App handles the arithmetic — students focus entirely on setting up the matrix.</p>
+        <p class="lesson-heading" style="margin-top:20px;">Student lesson resources</p>
+        <ul class="lesson-links">
+          <li><a href="courses/linear-algebra/linear-algebra-filipino/worksheets/" class="res-link ws-link">📝 Student worksheets — Linear Algebra</a></li>
+          <li><a href="/courses-playlist-v1" class="res-link yt-res-link">▶ Assign from YouTube playlist</a></li>
+        </ul>
+        <p class="lesson-heading" style="margin-top:20px;">Share this lesson URL</p>
+        <div class="share-url">https://www.youtube.com/watch?v=gURNcWqe6zg</div>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</section></div>
+  </div>
+</main>
+
+<!-- ========== FLIP KIT + EDUCATOR FUNNEL ========== -->
+<style>
+  #ttm-flipkit{padding:64px 0;background:var(--bg,#F8FAFC);}
+  .fk-head{text-align:center;max-width:680px;margin:0 auto 36px;}
+  .fk-head .eyebrow{display:inline-block;background:#E1F5EE;color:#085041;font-weight:700;font-size:.78rem;letter-spacing:.05em;text-transform:uppercase;padding:5px 14px;border-radius:999px;margin-bottom:14px;}
+  .fk-head h2{margin:0 0 10px;font-size:1.7rem;color:var(--navy,#0F172A);}
+  .fk-head p{color:var(--muted,#64748B);line-height:1.6;margin:0;}
+  .fk-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:980px;margin:0 auto;}
+  .fk-step{background:#fff;border:1.5px solid var(--border,#E2E8F0);border-radius:18px;padding:26px 24px;text-align:center;}
+  .fk-num{width:40px;height:40px;border-radius:50%;background:#1F6F6B;color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;}
+  .fk-step h3{margin:0 0 8px;font-size:1.02rem;color:var(--navy,#0F172A);}
+  .fk-step p{margin:0;font-size:.92rem;color:var(--muted,#64748B);line-height:1.5;}
+  .fk-step a{color:#1F6F6B;font-weight:700;text-decoration:none;}
+  .ttm-pd{margin-top:44px;background:linear-gradient(135deg,#0F172A,#1F6F6B);border-radius:22px;padding:40px 44px;
+    display:grid;grid-template-columns:1.3fr .7fr;gap:32px;align-items:center;color:#fff;max-width:980px;margin-left:auto;margin-right:auto;}
+  .ttm-pd h3{color:#fff;margin:0 0 10px;font-size:1.4rem;}
+  .ttm-pd p{color:rgba(255,255,255,.88);margin:0;line-height:1.55;}
+  .ttm-pd-cta{display:flex;flex-direction:column;gap:10px;}
+  .ttm-pd-cta a{text-align:center;text-decoration:none;font-weight:800;padding:13px 22px;border-radius:11px;}
+  .ttm-pd-cta .primary{background:#FACC15;color:#0F172A;}
+  .ttm-pd-cta .ghost{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);}
+  @media(max-width:768px){.fk-steps{grid-template-columns:1fr;}.ttm-pd{grid-template-columns:1fr;padding:30px 24px;}}
+</style>
+<section id="ttm-flipkit">
+  <div class="container">
+    <div class="fk-head">
+      <span class="eyebrow">🧰 Your Flip Kit</span>
+      <h2>One topic. Three ready-to-use pieces.</h2>
+      <p>Every model lesson connects to a complete teaching package — so you can flip a unit this week without building anything from scratch.</p>
+    </div>
+    <div class="fk-steps">
+      <div class="fk-step"><div class="fk-num">1</div><h3>Watch how to teach it</h3><p>See Dr. E model the topic in a real classroom — pacing, board work, and the questions that land.</p></div>
+      <div class="fk-step"><div class="fk-num">2</div><h3>Assign the student lesson</h3><p>Hand students the matching bilingual lesson from the <a href="/courses">student course library →</a></p></div>
+      <div class="fk-step"><div class="fk-num">3</div><h3>Print the worksheet</h3><p>Pair it with the free worksheet — <a href="/math-worksheets">browse all worksheets →</a></p></div>
+    </div>
+    <div class="ttm-pd">
+      <div>
+        <h3>Bring Dr. E to your school.</h3>
+        <p>Workshops, keynotes, and ongoing faculty development on the flipped classroom, bilingual math instruction, and teaching that engages. In-person or online, for departments and whole institutions.</p>
+      </div>
+      <div class="ttm-pd-cta">
+        <a class="primary" href="/speaking">See workshops &amp; keynotes →</a>
+        <a class="ghost" href="/contact">Invite Dr. E →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band">
+  <div class="container">
+    <h2>Every lesson pairs with a free student worksheet.</h2>
+    <p>Download, print, and assign — no signup, no paywall. Built for every classroom.</p>
+    <div class="cta-btns">
+      <a href="/math-worksheets" class="btn btn-primary">📝 Browse all worksheets →</a>
+      <a href="/courses" class="btn btn-ghost">📚 Student course library</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot foot-brand">
+        <div class="logo"><img src="images/numberbender_mark_teal_transparent.svg" alt="Numberbender" style="width:40px;height:40px;object-fit:contain;"><span>Numberbender</span></div>
+        <p>Helping students learn math with confidence and helping educators teach online with energy, clarity, and impact.</p>
+        <p style="font-style:italic;color:#64748b;font-size:0.85rem;">Math is hard. So we made it human.</p>
+        <div class="socials">
+          <a href="https://www.youtube.com/@numberbender" target="_blank" rel="noopener" aria-label="YouTube"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a2.997 2.997 0 0 0-2.108-2.119C19.42 3.5 12 3.5 12 3.5s-7.42 0-9.39.567A2.997 2.997 0 0 0 .502 6.186C0 8.176 0 12 0 12s0 3.824.502 5.814a2.997 2.997 0 0 0 2.108 2.119C4.58 20.5 12 20.5 12 20.5s7.42 0 9.39-.567a2.997 2.997 0 0 0 2.108-2.119C24 15.824 24 12 24 12s0-3.824-.502-5.814zM9.6 15.572V8.428L15.818 12 9.6 15.572z"/></svg></a>
+          <a href="https://www.facebook.com/thenumberbender" target="_blank" rel="noopener" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"/></svg></a>
+        </div>
+      </div>
+      <div class="foot"><h4>Students</h4><a href="/courses">Explore All Subjects</a><a href="/math-worksheets">Free Worksheets</a><a href="/find-your-course">Where Do I Start?</a><a href="/for-filipino-students">Filipino Students</a></div>
+      <div class="foot"><h4>Educators</h4><a href="/for-teachers">For Teachers Hub</a><a href="/teach-the-math">Teach the Math</a><a href="/teach-it-like-you-stream-it">Teach It Like You Stream It</a><a href="/teacher-resources">Teacher Resources</a><a href="/speaking">Workshops &amp; Keynotes</a></div>
+      <div class="foot"><h4>Connect</h4><a href="/about">About Dr. E</a><a href="/contact">Contact</a><a href="https://www.youtube.com/@numberbender" target="_blank" rel="noopener">YouTube (Filipino)</a><a href="https://www.youtube.com/@NumberbenderEN" target="_blank" rel="noopener">YouTube (English)</a><a href="/privacy">Privacy Policy</a></div>
+    </div>
+    <div class="foot-bottom">© 2026 Numberbender · Founded by Dr. Peter Esperanza · Numberbender Inc. is a 501(c)(3) nonprofit · EIN: 86-2952520</div>
+  </div>
+</footer>
+
+<script>
+  function switchLang(lang) {
+    ['en','fil'].forEach(function(l) {
+      document.getElementById('panel-' + l).classList.toggle('active', l === lang);
+      document.getElementById('tab-' + l).classList.toggle('active', l === lang);
+      document.getElementById('jump-bar-' + l).style.display = l === lang ? '' : 'none';
+    });
+    var hero = document.getElementById('page-hero');
+    if (hero) { hero.className = 'page-header lang-' + lang; }
+  }
+
+  function toggleAcc(btn) {
+    var body = btn.nextElementSibling;
+    var isOpen = btn.getAttribute('aria-expanded') === 'true';
+    if (isOpen) {
+      btn.setAttribute('aria-expanded', 'false');
+      body.hidden = true;
+    } else {
+      btn.setAttribute('aria-expanded', 'true');
+      body.hidden = false;
+    }
+  }
+
+  function toggleDD(btn) {
+    var menu = btn.nextElementSibling;
+    var willOpen = !menu.classList.contains('open');
+    document.querySelectorAll('.dropdown-menu.open').forEach(function(m) {
+      m.classList.remove('open');
+      if (m.previousElementSibling) m.previousElementSibling.setAttribute('aria-expanded','false');
+    });
+    if (willOpen) { menu.classList.add('open'); btn.setAttribute('aria-expanded','true'); }
+  }
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.nav-dropdown')) {
+      document.querySelectorAll('.dropdown-menu.open').forEach(function(m) {
+        m.classList.remove('open');
+        if (m.previousElementSibling) m.previousElementSibling.setAttribute('aria-expanded','false');
+      });
+    }
+  });
+</script>
+<script src="js/video-modal.js" defer></script>
+
+<!-- END -->
+
+</body>
+</html>

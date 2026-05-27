@@ -493,6 +493,7 @@
     }
     .foot-signup-form button:hover{ background: #1d4ed8; }
     .foot-bottom{ margin-top: 36px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.08); text-align: center; color: #94a3b8; font-size: 0.85rem; line-height: 1.6; }
+  .foot-bottom a{ color: #94a3b8; text-decoration: underline; }
 
     /* ========== RESPONSIVE ========== */
     @media (max-width: 900px){
@@ -525,7 +526,7 @@
       .unit-grid{ grid-template-columns: 1fr; }
       .foot-grid{ grid-template-columns: 1fr; gap: 28px; }
     }
-  </style>
+  .skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}.skip-link:focus{position:fixed;top:0;left:0;width:auto;height:auto;padding:8px 16px;background:#0F2B3D;color:#fff;z-index:9999;font-size:14px;text-decoration:none;border-radius:0 0 4px 0;}</style>
   <!-- Microsoft Clarity -->
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -549,6 +550,8 @@
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
 
 <!-- ========== NAVIGATION ========== -->
 <header class="nav">
@@ -559,43 +562,41 @@
     <button class="menu-toggle" aria-label="Toggle menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
     <nav class="nav-links" id="navlinks">
       <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">For Students <span class="caret" aria-hidden="true">▾</span></button>
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Learn <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
-          <a href="start-here.html">🎁 Free Starter Lesson</a>
-          <a href="find-your-course.html">🧭 Find My Course</a>
-          <a href="courses.html">📚 All Courses</a>
-          <a href="math-worksheets.html">📝 Free Worksheets</a>
-          <a href="for-filipino-students.html">🇵🇭 Para sa Filipino Students</a>
+          <a href="/start-here">🎁 Free Starter Lesson</a>
+          <a href="/find-your-course">🧭 Where Do I Start?</a>
+          <a href="/courses">📚 Explore Math Lessons</a>
+          <a href="/math-worksheets">📝 Free Worksheets</a>
+          <a href="/for-filipino-students">🇵🇭 Para sa Filipino Students</a>
         </div>
       </div>
       <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">For Educators <span class="caret" aria-hidden="true">▾</span></button>
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Teach <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
-          <a href="for-teachers.html">🏫 For Teachers Hub</a>
-          <a href="teach-it-like-you-stream-it.html">🎬 Teach It Like You Stream It</a>
-          <a href="teacher-resources.html">📦 Teacher Resources</a>
-          <a href="math-worksheets.html">📄 Printable Worksheets</a>
+          <a href="/for-teachers">🏫 For Teachers Hub</a>
+          <a href="/teach-the-math">🎓 Teach the Math</a>
+          <a href="/teach-it-like-you-stream-it">🎬 Teach It Like You Stream It</a>
+          <a href="/teacher-resources">📦 Teacher Resources</a>
+          <a href="/math-worksheets">📄 Printable Worksheets</a>
+          <a href="/courses">📚 Lesson &amp; Course Library</a>
         </div>
       </div>
       <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">About Dr. E <span class="caret" aria-hidden="true">▾</span></button>
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">About <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
-          <a href="about.html">👨‍🏫 About Dr. E</a>
-          <a href="speaking.html">🎤 Speaking</a>
-          <a href="press.html">📰 Press &amp; Media</a>
+          <a href="/about">👨‍🏫 About Dr. E</a>
+          <a href="/speaking">🎤 Speaking</a>
+          <a href="/press">📰 Press &amp; Media</a>
+          <a href="/blog">✍️ Blog</a>
+          <a href="/speaking-archive">📅 Past Engagements</a>
         </div>
       </div>
-      <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Blog <span class="caret" aria-hidden="true">▾</span></button>
-        <div class="dropdown-menu">
-          <a href="blog.html">✍️ Blog Posts</a>
-          <a href="speaking-archive.html">📅 Past Engagements</a>
-        </div>
-      </div>
-      <a href="contact.html" class="nav-cta">Contact</a>
+      <a href="/contact" class="nav-cta">Contact</a>
     </nav>
   </div>
 </header>
+<main id="main-content">
 
 <!-- ========== PAGE HEADER ========== -->
 <div class="page-head">
@@ -603,7 +604,7 @@
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href="/">Numberbender</a>
       <span class="sep">›</span>
-      <a href="flipped-classroom-math.html">Flipped Classroom</a>
+      <a href="/flipped-classroom-math">Flipped Classroom</a>
       <span class="sep">›</span>
       <span>AP Statistics</span>
     </nav>
@@ -770,7 +771,7 @@
         While that RCT focused on Algebra, the mechanisms driving the result — vocabulary exposure before class, more guided practice time, reduced passive lecture — apply just as directly to AP Statistics. The subject matter changes; the structural advantage of the flip remains.
       </p>
       <p>
-        A 2021 follow-up study I co-authored confirmed these findings in secondary mathematics broadly, noting that the flip's biggest gains came specifically in conceptually heavy units — exactly the territory AP Statistics occupies. See <a href="flipped-classroom-research.html">the full research page</a> for citations and summaries.
+        A 2021 follow-up study I co-authored confirmed these findings in secondary mathematics broadly, noting that the flip's biggest gains came specifically in conceptually heavy units — exactly the territory AP Statistics occupies. See <a href="/flipped-classroom-research">the full research page</a> for citations and summaries.
       </p>
 
       <div class="video-block">
@@ -805,13 +806,13 @@
         <li><span class="icon">5</span><span><strong>Days 6–7:</strong> Collect feedback from students. Adjust video length or entry ticket format based on what you hear. Record the next set of videos.</span></li>
       </ul>
       <p>
-        The full quickstart framework — including the templates I use for entry tickets, class structures, and parent communication — is available as a free download on the <a href="teacher-resources.html">Teacher Resource Library</a> page.
+        The full quickstart framework — including the templates I use for entry tickets, class structures, and parent communication — is available as a free download on the <a href="/teacher-resources">Teacher Resource Library</a> page.
       </p>
 
       <div class="cta-card">
         <h3>Ready to flip your AP Statistics class?</h3>
         <p>Get Dr. E's free Flipped Classroom Quickstart Guide — the 7-day framework that gets you from zero to your first flipped lesson, with templates included.</p>
-        <a href="flipped-classroom-quickstart.html" class="btn-white">📄 Get the Quickstart Guide →</a>
+        <a href="/flipped-classroom-quickstart" class="btn-white">📄 Get the Quickstart Guide →</a>
       </div>
 
       <div class="video-block">
@@ -883,13 +884,14 @@
     <h2>Go deeper on the flipped classroom</h2>
     <p>The full guide — 15 years of lessons from my math classroom, distilled into one long-form resource you can read in an afternoon.</p>
     <div class="cta-row">
-      <a href="flipped-classroom-math.html" class="btn btn-yellow">📖 Read the Full Flipped Classroom Guide</a>
-      <a href="teacher-resources.html" class="btn btn-outline">📦 Free Teacher Downloads</a>
+      <a href="/flipped-classroom-math" class="btn btn-yellow">📖 Read the Full Flipped Classroom Guide</a>
+      <a href="/teacher-resources" class="btn btn-outline">📦 Free Teacher Downloads</a>
     </div>
   </div>
 </section>
 
 <!-- ========== FOOTER ========== -->
+</main>
 <footer>
   <div class="container">
     <div class="foot-grid">
@@ -919,33 +921,34 @@
       </div>
       <div class="foot">
         <h4>Students</h4>
-        <a href="courses.html">All Courses</a>
-        <a href="courses.html#algebra-card">Algebra</a>
-        <a href="courses.html#statistics-card">Statistics</a>
-        <a href="courses.html">Calculus</a>
+        <a href="/courses">Explore All Subjects</a>
+        <a href="subjects/algebra/">Algebra</a>
+        <a href="subjects/statistics/">Statistics</a>
+        <a href="/courses">Calculus</a>
       </div>
       <div class="foot">
         <h4>Educators</h4>
-        <a href="teach-it-like-you-stream-it.html">Teach It Like You Stream It</a>
-        <a href="teacher-resources.html">Teacher Resources</a>
-        <a href="speaking.html">Workshops</a>
-        <a href="flipped-classroom-math.html">Flipped Learning</a>
-        <a href="flipped-classroom-ap-statistics.html">Flip AP Statistics</a>
+        <a href="/teach-it-like-you-stream-it">Teach It Like You Stream It</a>
+        <a href="/teach-the-math">Teach the Math</a>
+        <a href="/teacher-resources">Teacher Resources</a>
+        <a href="/speaking">Workshops</a>
+        <a href="/flipped-classroom-math">Flipped Learning</a>
+        <a href="/flipped-classroom-ap-statistics">Flip AP Statistics</a>
       </div>
       <div class="foot">
         <h4>Connect</h4>
-        <a href="about.html">About Dr. E</a>
-        <a href="speaking.html">Speaking</a>
-        <a href="speaking-archive.html">Speaking Archive</a>
-        <a href="press.html">Press &amp; Media</a>
-        <a href="contact.html">Contact</a>
+        <a href="/about">About Dr. E</a>
+        <a href="/speaking">Speaking</a>
+        <a href="/speaking-archive">Speaking Archive</a>
+        <a href="/press">Press &amp; Media</a>
+        <a href="/contact">Contact</a>
         <a href="https://www.youtube.com/@numberbender" target="_blank" rel="noopener">YouTube Channel</a>
-        <a href="privacy.html">Privacy Policy</a>
+        <a href="/privacy">Privacy Policy</a>
       </div>
     </div>
     <div class="foot-bottom">
-      © 2026 Numberbender · Founded by Dr. Peter Esperanza · Numberbender Inc. is a 501(c)(3) nonprofit organization · EIN: 86-2952520 · Made with care for learners and educators everywhere. · <a href="privacy.html" style="color:#94a3b8;">Privacy Policy</a>
-      <div style="margin-top:8px;font-size:0.78rem;color:#64748b;">
+      © 2026 Numberbender · Founded by Dr. Peter Esperanza · Numberbender Inc. is a 501(c)(3) nonprofit organization · EIN: 86-2952520 · Made with care for learners and educators everywhere. · <a href="/privacy" style="color:#94a3b8;">Privacy Policy</a>
+      <div style="margin-top:8px;font-size:0.78rem;color:#94a3b8;">
         <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener"><img src="https://licensebuttons.net/l/by/4.0/88x31.png" alt="CC BY 4.0" style="border:0;vertical-align:middle;margin-right:6px;"></a>
         Original content licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener" style="color:#94a3b8;">CC BY 4.0</a> &mdash; free to share and adapt with credit to Peter Esperanza / Numberbender.
       </div>
@@ -1019,7 +1022,7 @@
 <!-- ── Numberbender Sticky Bar — Back to School June 2026 ── -->
 <div id="nb-sticky-bar">
   <p>🇵🇭 Philippine schools open in June! Get FREE bilingual math worksheets:</p>
-  <input type="email" id="nb-email-input" placeholder="your@email.com" autocomplete="email" />
+  <input type="email" id="nb-email-input" placeholder="your@email.com" autocomplete="email" aria-label="Email address" />
   <button class="nb-submit" onclick="nbSubmit()">Get Free Worksheets →</button>
   <button class="nb-close" onclick="nbDismiss()" aria-label="Close">✕</button>
 </div>

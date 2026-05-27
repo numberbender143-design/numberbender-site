@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P1M2WZD840"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P1M2WZD840');
+</script>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Precalculus Lessons — 11 Units, 65 Lessons | Numberbender</title>
+<meta name="description" content="Free precalculus video lessons by Dr. E — functions, exponentials, trig, conics, matrices, and more. Every lesson paired with a free worksheet. Bilingual English &amp;."/>
+<link rel="canonical" href="https://numberbender.com/subjects/precalculus/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Precalculus Lessons | Numberbender"/>
+<meta property="og:description" content="11 units, 65 free lessons — functions to conic sections, taught by Dr. E in English and Filipino 🇵🇭"/>
+<meta property="og:url" content="https://numberbender.com/subjects/precalculus/"/>
+<meta property="og:site_name" content="Numberbender"/>
+<meta property="og:image" content="https://numberbender.com/images/dr-e-hero.jpg"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Precalculus Lessons | Numberbender"/>
+<meta name="twitter:description" content="Free precalculus video lessons by Dr. E — functions, exponentials, trig, conics, matrices, and more. Every lesson paired with a free worksheet. Bilingual Englis"/>
+<meta name="twitter:image" content="https://numberbender.com/images/dr-e-hero.jpg"/>
+<link rel="icon" type="image/svg+xml" href="../../images/exports/numberbender-favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../../images/exports/png/favicon-32.png">
+<link rel="icon" type="image/png" sizes="180x180" href="../../images/exports/png/favicon-180.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/exports/png/favicon-180.png">
+<meta name="theme-color" content="#2563EB">
+<style>
+:root{
+  --navy:#0F172A;
+  --blue:#2563EB; --blue-dark:#1d4ed8; --blue-light:#EFF6FF; --blue-mid:#93C5FD; --blue-xlight:#DBEAFE;
+  --red:#DC2626; --red-dark:#b91c1c; --red-light:#FEF2F2; --red-mid:#FCA5A5;
+  --teal:#1F6F6B; --teal-dark:#085041;
+  --bg:#F8FAFC; --surface:#FFFFFF;
+  --muted:#64748B; --border:#E2E8F0;
+  --green:#16a34a; --green-light:#f0fdf4; --green-mid:#86efac;
+  --amber:#92400e; --amber-light:#fef3c7; --amber-mid:#fde68a;
+  --radius:16px; --shadow:0 8px 24px rgba(15,23,42,0.09);
+  --active:#2563EB; --active-dark:#1d4ed8; --active-light:#EFF6FF; --active-mid:#93C5FD;
+}
+body[data-lang="fil"]{
+  --active:var(--red); --active-dark:var(--red-dark); --active-light:var(--red-light); --active-mid:var(--red-mid);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Inter",Roboto,Arial,sans-serif;color:var(--navy);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;}
+a{color:var(--blue);text-decoration:none;}
+a:hover{text-decoration:underline;}
+img{max-width:100%;display:block;}
+.container{width:min(1000px,92%);margin-inline:auto;}
+
+/* ── NAV ── */
+.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.94);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--border);}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0;}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.1rem;color:var(--navy);text-decoration:none;}
+.logo-lockup{padding:0;}
+.logo-lockup .lockup-img{height:52px;width:auto;display:block;max-width:280px;}
+.menu-toggle{display:none;background:none;border:none;cursor:pointer;font-size:1.4rem;color:var(--navy);}
+.nav-links{display:flex;gap:20px;align-items:center;flex-wrap:nowrap;}
+.nav-links a,.nav-links .dropdown-trigger{white-space:nowrap;}
+.nav-links a{color:var(--navy);font-weight:500;font-size:0.92rem;}
+.nav-links a:hover{color:var(--blue);text-decoration:none;}
+.nav-cta{background:var(--teal-dark);color:white!important;padding:8px 15px;border-radius:9px;font-weight:600;font-size:0.88rem;}
+.nav-cta:hover{background:var(--teal);text-decoration:none!important;}
+.nav-dropdown{position:relative;}
+.nav-dropdown .dropdown-trigger{background:none;border:none;padding:0;margin:0;font:inherit;color:var(--navy);font-weight:500;font-size:0.92rem;cursor:pointer;display:inline-flex;align-items:center;gap:4px;transition:color .15s ease;}
+.nav-dropdown .dropdown-trigger:hover{color:var(--blue);}
+.nav-dropdown .caret{font-size:.75em;display:inline-block;transition:transform .2s ease;}
+.nav-dropdown:hover .caret,.nav-dropdown .dropdown-trigger[aria-expanded="true"] .caret{transform:rotate(180deg);}
+.nav-dropdown .dropdown-menu{position:absolute;top:100%;left:0;margin-top:10px;background:white;border:1px solid var(--border);border-radius:14px;padding:6px;box-shadow:0 20px 50px rgba(15,23,42,.12);min-width:240px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .15s ease,transform .15s ease,visibility .15s ease;z-index:100;}
+.nav-dropdown .dropdown-menu::before{content:'';position:absolute;top:-10px;left:0;right:0;height:10px;}
+.nav-dropdown:hover .dropdown-menu,.nav-dropdown .dropdown-menu.open{opacity:1;visibility:visible;transform:translateY(0);}
+.nav-dropdown .dropdown-menu a{display:block;padding:10px 14px;border-radius:8px;color:var(--navy);font-weight:500;font-size:0.92rem;}
+.nav-dropdown .dropdown-menu a:hover{background:rgba(37,99,235,.08);color:var(--blue);text-decoration:none;}
+@media(max-width:900px){
+  .logo-lockup .lockup-img{height:42px;max-width:220px;}
+  .menu-toggle{display:block;}
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:white;flex-direction:column;padding:18px;border-bottom:1px solid var(--border);gap:14px;}
+  .nav-links.open{display:flex;}
+  .nav-dropdown{width:100%;}
+  .nav-dropdown .dropdown-trigger{width:100%;justify-content:space-between;padding:6px 0;}
+  .nav-dropdown .dropdown-menu{position:static;box-shadow:none;border:none;padding:0 0 4px 14px;margin-top:0;min-width:0;opacity:1;visibility:visible;transform:none;display:none;background:transparent;}
+  .nav-dropdown:hover .dropdown-menu{display:none;}
+  .nav-dropdown .dropdown-menu.open{display:block;}
+}
+
+/* ── HERO ── */
+.subject-hero{background:linear-gradient(135deg,#1d4ed8 0%,#2563EB 60%,#3b82f6 100%);color:white;padding:44px 0 0;}
+.breadcrumb-nav{font-size:0.82rem;margin-bottom:20px;color:rgba(255,255,255,0.65);}
+.breadcrumb-nav a{color:rgba(255,255,255,0.65);}
+.breadcrumb-nav a:hover{color:white;text-decoration:none;}
+.hero-inner{display:flex;align-items:flex-end;gap:28px;}
+.hero-content{flex:1;display:flex;align-items:flex-start;gap:20px;padding-bottom:48px;}
+.hero-icon{width:80px;height:80px;border-radius:18px;flex-shrink:0;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,0.25);}
+.hero-text h1{font-size:clamp(1.9rem,4vw,2.5rem);font-weight:900;letter-spacing:-0.025em;margin-bottom:10px;line-height:1.1;}
+.hero-text .tagline{font-size:1rem;color:rgba(255,255,255,0.78);max-width:540px;margin-bottom:22px;line-height:1.55;}
+.hero-stats{display:inline-flex;background:rgba(0,0,0,0.22);border:1px solid rgba(255,255,255,0.14);border-radius:12px;overflow:hidden;}
+.hstat{padding:11px 22px;text-align:center;border-right:1px solid rgba(255,255,255,0.1);}
+.hstat:last-child{border-right:none;}
+.hstat .n{display:block;font-size:1.25rem;font-weight:800;line-height:1.2;}
+.hstat .l{font-size:0.7rem;color:rgba(255,255,255,0.65);font-weight:500;text-transform:uppercase;letter-spacing:.05em;}
+.hero-pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px;}
+.hero-pill{font-size:0.75rem;font-weight:600;padding:4px 12px;border-radius:999px;background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.88);}
+
+/* ── LANG BAR ── */
+.lang-bar{background:var(--surface);border-bottom:2px solid var(--border);padding:0;position:sticky;top:71px;z-index:40;transition:border-color .3s;}
+body[data-lang="fil"] .lang-bar{border-bottom-color:var(--red-mid);}
+.lang-bar-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0;height:52px;}
+.lang-note{font-size:0.83rem;color:var(--muted);display:flex;align-items:center;gap:6px;}
+.lang-note strong{color:var(--navy);transition:color .2s;}
+body[data-lang="fil"] .lang-note strong{color:var(--red);}
+.lang-toggle{display:flex;background:var(--bg);border:1.5px solid var(--border);border-radius:9px;padding:3px;gap:2px;}
+.lang-btn{padding:6px 18px;border-radius:6px;font-size:0.85rem;font-weight:700;cursor:pointer;border:none;background:transparent;color:var(--muted);transition:all .18s;display:flex;align-items:center;gap:6px;}
+.lang-btn.active{background:var(--active);color:white;box-shadow:0 2px 6px rgba(37,99,235,0.3);}
+body[data-lang="fil"] .lang-btn.active{background:var(--red);box-shadow:0 2px 6px rgba(220,38,38,0.3);}
+
+/* ── UNITS SECTION ── */
+.units-section{padding:36px 0 64px;}
+.section-heading{font-size:0.78rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:18px;display:flex;align-items:center;gap:10px;}
+.section-heading::after{content:'';flex:1;height:1px;background:var(--border);}
+.unit-list{display:flex;flex-direction:column;gap:10px;}
+
+/* ── UNIT ACCORDION ── */
+.unit-block{background:var(--surface);border:1.5px solid var(--border);border-radius:14px;overflow:hidden;transition:border-color .2s,box-shadow .2s;}
+.unit-block.open{border-color:var(--active-mid);box-shadow:0 4px 16px rgba(37,99,235,0.08);}
+body[data-lang="fil"] .unit-block.open{box-shadow:0 4px 16px rgba(220,38,38,0.08);}
+.unit-header{display:flex;align-items:center;gap:14px;padding:18px 22px;cursor:pointer;user-select:none;transition:background .15s;}
+.unit-header:hover{background:var(--active-light);}
+.unit-num{height:42px;padding:0 16px;border-radius:10px;background:var(--blue-light);color:var(--blue);font-weight:800;font-size:0.8rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .2s;white-space:nowrap;letter-spacing:.01em;border:1.5px solid var(--blue-xlight);}
+.unit-block.open .unit-num{background:var(--active);color:white;border-color:var(--active-dark);}
+.unit-info{flex:1;min-width:0;}
+.unit-title{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:3px;}
+.unit-meta{font-size:0.78rem;color:var(--muted);}
+.unit-complete{color:var(--green);font-weight:700;}
+.unit-complete::before{content:'✓ ';}
+.unit-chevron{color:var(--muted);font-size:1rem;transition:transform .25s;line-height:1;flex-shrink:0;}
+.unit-block.open .unit-chevron{transform:rotate(180deg);}
+
+.unit-lessons{max-height:0;overflow:hidden;transition:max-height .38s cubic-bezier(.4,0,.2,1);}
+.unit-block.open .unit-lessons{max-height:5000px;}
+.lessons-inner{padding:4px 22px 18px;}
+.lessons-divider{height:1px;background:var(--border);margin-bottom:14px;}
+.lesson-list{display:flex;flex-direction:column;gap:6px;}
+
+/* ── LESSON CARD ── */
+.lesson-item{display:flex;align-items:center;gap:12px;padding:11px 14px;border-radius:10px;border:1px solid var(--border);background:var(--bg);transition:all .15s;text-decoration:none;color:inherit;}
+.lesson-item:hover:not(.no-video){border-color:var(--active-mid);background:var(--active-light);text-decoration:none;}
+.lesson-item.no-video{cursor:default;opacity:0.6;}
+.lesson-item.no-video:hover{border-color:var(--border);background:var(--bg);}
+
+.lesson-play{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;flex-shrink:0;font-size:0.72rem;transition:all .2s;}
+.lesson-item:not(.no-video) .lesson-play{background:var(--active);color:white;}
+.lesson-item:not(.no-video):hover .lesson-play{background:var(--active-dark);}
+.lesson-item.no-video .lesson-play{background:var(--border);color:var(--muted);}
+
+.lesson-meta{flex:1;min-width:0;}
+.lesson-title{font-size:0.93rem;font-weight:600;color:var(--navy);line-height:1.35;}
+.lesson-item.no-video .lesson-title{color:var(--muted);}
+.lesson-sub{font-size:0.75rem;color:var(--muted);margin-top:1px;}
+
+.lesson-badge{font-size:0.7rem;font-weight:700;padding:3px 9px;border-radius:999px;border:1px solid var(--border);color:var(--muted);background:white;white-space:nowrap;flex-shrink:0;letter-spacing:.02em;}
+.lesson-badge.both{background:var(--green-light);border-color:var(--green-mid);color:var(--green);}
+.lesson-badge.en{background:var(--blue-light);border-color:var(--blue-mid);color:var(--blue);}
+.lesson-badge.fil{background:var(--amber-light);border-color:var(--amber-mid);color:var(--amber);}
+
+/* ── BOTTOM CARDS ── */
+.bottom-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:48px;}
+.related-card{background:var(--surface);border:1.5px solid var(--border);border-radius:14px;padding:22px;}
+.related-card h4{font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:14px;}
+.subject-chips{display:flex;flex-wrap:wrap;gap:8px;}
+.subject-chip{display:inline-flex;align-items:center;gap:6px;padding:7px 14px;border:1.5px solid var(--border);border-radius:9px;font-weight:600;font-size:0.87rem;color:var(--navy);background:var(--bg);text-decoration:none;transition:all .15s;}
+.subject-chip:hover{border-color:var(--blue);color:var(--blue);background:var(--blue-light);text-decoration:none;}
+.subject-chip.all{border-color:var(--blue-mid);color:var(--blue);background:var(--blue-light);}
+.course-callout{background:linear-gradient(135deg,#085041,#1F6F6B);border-radius:14px;padding:22px 24px;display:flex;flex-direction:column;justify-content:space-between;gap:16px;}
+.course-callout .cal-label{font-size:0.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#9FE1CB;margin-bottom:6px;}
+.course-callout .cal-title{font-size:1rem;font-weight:800;color:white;margin-bottom:4px;}
+.course-callout .cal-sub{font-size:0.82rem;color:rgba(255,255,255,0.72);line-height:1.5;}
+.cal-links{display:flex;flex-direction:column;gap:8px;}
+.cal-link{display:block;text-align:center;padding:9px 16px;border-radius:9px;font-weight:700;font-size:0.85rem;text-decoration:none;transition:all .15s;}
+.cal-link.primary{background:white;color:#085041;}
+.cal-link.primary:hover{background:#f0fdf4;text-decoration:none;}
+.cal-link.secondary{background:rgba(255,255,255,0.14);color:white;border:1px solid rgba(255,255,255,0.25);}
+.cal-link.secondary:hover{background:rgba(255,255,255,0.22);text-decoration:none;}
+
+/* ── FOOTER ── */
+footer{background:var(--navy);color:#94a3b8;padding:56px 0 28px;}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:36px;}
+.foot h4{color:white;font-size:0.92rem;font-weight:700;margin-bottom:12px;}
+.foot a{display:block;color:#94a3b8;font-size:0.88rem;margin-bottom:8px;}
+.foot a:hover{color:white;text-decoration:none;}
+.foot-brand p{font-size:0.88rem;line-height:1.7;margin-top:12px;}
+.foot-bottom{border-top:1px solid #1e293b;padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:0.82rem;}
+.foot-logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.1rem;color:white;}
+.foot-logo-mark{width:42px;height:42px;border-radius:10px;display:grid;place-items:center;overflow:hidden;}
+
+/* ── HERO TRIO ── */
+.hero-trio{display:flex;align-items:stretch;margin-top:22px;background:rgba(0,0,0,0.22);border:1px solid rgba(255,255,255,0.15);border-radius:14px;overflow:hidden;}
+.hero-trio-step{display:flex;align-items:center;gap:13px;padding:15px 20px;flex:1;border-right:1px solid rgba(255,255,255,0.1);}
+.hero-trio-step:last-child{border-right:none;}
+.hero-trio-icon{font-size:1.5rem;line-height:1;flex-shrink:0;}
+.hero-trio-verb{font-size:0.68rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-bottom:3px;}
+.hero-trio-desc{font-size:0.84rem;font-weight:600;color:white;line-height:1.35;}
+
+/* ── HERO ARTWORK ── */
+.hero-text{flex:1;min-width:0;}
+.hero-artwork-wrap{
+  flex-shrink:0;
+  align-self:flex-end;
+  width:240px;
+  background:rgba(255,255,255,0.96);
+  border-radius:20px 20px 0 0;
+  padding:14px 14px 0;
+  overflow:hidden;
+  box-shadow:0 -4px 24px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.8);
+}
+.hero-artwork{width:100%;height:auto;display:block;}
+@media(max-width:760px){.hero-artwork-wrap{display:none;}}
+
+/* ── LESSON WORKSHEET BUTTONS ── */
+.lesson-right{display:flex;flex-direction:column;align-items:flex-end;gap:5px;flex-shrink:0;}
+.lesson-ws-row{display:flex;gap:4px;}
+.lesson-ws-btn{font-size:0.71rem;font-weight:700;padding:4px 10px;border-radius:7px;border:1.5px solid;cursor:pointer;white-space:nowrap;transition:all .15s;user-select:none;line-height:1.5;}
+.lesson-ws-btn.ws-view{background:var(--blue-light);color:var(--blue);border-color:var(--blue-mid);}
+.lesson-ws-btn.ws-view:hover{background:var(--blue);color:white;}
+.lesson-ws-btn.ws-dl{background:var(--green-light);color:var(--green);border-color:var(--green-mid);}
+.lesson-ws-btn.ws-dl:hover{background:var(--green);color:white;}
+
+/* ── VIDEO MODAL ── */
+.modal-overlay{position:fixed;inset:0;z-index:200;background:rgba(0,0,0,0.78);padding:24px 16px;overflow-y:auto;display:flex;align-items:flex-start;justify-content:center;visibility:hidden;opacity:0;transition:opacity .2s,visibility .2s;}
+.modal-overlay.active{visibility:visible;opacity:1;}
+.modal-box{background:var(--surface);border-radius:18px;width:min(820px,100%);margin:auto;overflow:hidden;box-shadow:0 24px 72px rgba(0,0,0,0.35);transform:translateY(8px);transition:transform .2s;}
+.modal-overlay.active .modal-box{transform:translateY(0);}
+.modal-header{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:20px 24px 16px;}
+.modal-lesson-title{font-size:1rem;font-weight:700;color:var(--navy);line-height:1.35;}
+.modal-lesson-sub{font-size:0.8rem;color:var(--muted);margin-top:3px;}
+.modal-close{background:var(--bg);border:1.5px solid var(--border);border-radius:8px;width:34px;height:34px;display:grid;place-items:center;cursor:pointer;font-size:0.9rem;color:var(--muted);flex-shrink:0;transition:all .15s;}
+.modal-close:hover{background:var(--border);color:var(--navy);}
+.modal-video-wrap{position:relative;padding-bottom:56.25%;height:0;background:#000;}
+.modal-video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:none;}
+.modal-footer{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 20px;border-top:1px solid var(--border);flex-wrap:wrap;}
+.ws-block{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.ws-label{font-size:0.8rem;font-weight:600;color:var(--muted);}
+.modal-btn-row{display:flex;gap:8px;flex-wrap:wrap;}
+.modal-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:9px;font-weight:700;font-size:0.85rem;text-decoration:none;border:1.5px solid;transition:all .15s;cursor:pointer;white-space:nowrap;}
+.modal-btn:hover{text-decoration:none;filter:brightness(.93);}
+.modal-btn.view{background:var(--blue-light);color:var(--blue);border-color:var(--blue-mid);}
+.modal-btn.dl{background:var(--green-light);color:var(--green);border-color:var(--green-mid);}
+.modal-btn.yt{background:var(--bg);color:var(--muted);border-color:var(--border);}
+
+/* ── WORKSHEET PREVIEW MODAL ── */
+.ws-iframe-wrap{border-top:1px solid var(--border);}
+.ws-iframe-wrap iframe{width:100%;height:clamp(380px,65vh,680px);border:none;display:block;background:var(--bg);}
+
+/* ── SEARCH BAR ── */
+.search-wrap{position:relative;margin-bottom:20px;}
+.search-icon{position:absolute;left:14px;top:50%;transform:translateY(-50%);font-size:1rem;pointer-events:none;}
+.lesson-search{width:100%;padding:13px 44px 13px 42px;border:2px solid var(--border);border-radius:10px;font-size:0.95rem;background:var(--surface);color:var(--navy);outline:none;transition:border-color .2s,box-shadow .2s;}
+.lesson-search:focus{border-color:var(--active);box-shadow:0 0 0 3px rgba(37,99,235,0.1);}
+.lesson-search::placeholder{color:var(--muted);}
+.search-clear{position:absolute;right:12px;top:50%;transform:translateY(-50%);width:26px;height:26px;border:none;background:var(--border);border-radius:50%;cursor:pointer;display:none;place-items:center;font-size:0.8rem;color:var(--muted);transition:background .2s,color .2s;}
+.search-clear:hover{background:var(--active);color:white;}
+.search-clear.visible{display:grid;}
+.search-count{font-size:0.83rem;color:var(--muted);margin-bottom:12px;min-height:1.2em;}
+.search-count strong{color:var(--active-dark);}
+.search-no-results{display:none;text-align:center;padding:40px 20px;color:var(--muted);}
+.search-no-results.visible{display:block;}
+.unit-block.search-hidden{display:none;}
+.lesson-item.search-hidden{display:none;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:720px){
+  .hero-inner{flex-direction:column;gap:18px;}
+  .hero-icon{width:60px;height:60px;font-size:1.3rem;}
+  .hero-trio{flex-direction:column;}
+  .hero-trio-step{border-right:none;border-bottom:1px solid rgba(255,255,255,0.1);}
+  .hero-trio-step:last-child{border-bottom:none;}
+  .bottom-grid{grid-template-columns:1fr;}
+  .foot-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:560px){
+  .nav-links{display:none;}
+  .foot-grid{grid-template-columns:1fr;}
+  .hstat{padding:9px 14px;}
+  .lang-bar-inner{height:auto;padding:10px 0;}
+  .lesson-ws-row{display:none;}
+}
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}.skip-link:focus{position:fixed;top:0;left:0;width:auto;height:auto;padding:8px 16px;background:#0F2B3D;color:#fff;z-index:9999;font-size:14px;text-decoration:none;border-radius:0 0 4px 0;}</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "Precalculus",
+  "description": "Free precalculus video lessons by Dr. E — functions, exponentials, trig, conics, matrices, and more. Every lesson paired with a free worksheet. Bilingual English &.",
+  "url": "https://numberbender.com/subjects/precalculus/",
+  "provider": {"@type": "Organization", "name": "Numberbender", "url": "https://numberbender.com"},
+  "instructor": {"@type": "Person", "name": "Dr. Peter Esperanza"},
+  "isAccessibleForFree": true,
+  "inLanguage": ["en", "fil"],
+  "numberOfLessons": 63,
+  "hasCourseInstance": {"@type": "CourseInstance", "courseMode": "online"}
+}
+</script>
+</head>
+<body data-lang="en">
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+
+<!-- ── NAV ── -->
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="../../" class="logo logo-lockup" aria-label="Numberbender — Master the Elements of Math">
+      <img src="../../images/numberbender_banner_only.svg" alt="Numberbender" class="lockup-img">
+    </a>
+    <button class="menu-toggle" aria-label="Toggle menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
+    <nav class="nav-links" id="navlinks">
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Learn <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="/start-here">🎁 Free Starter Lesson</a>
+          <a href="/find-your-course">🧭 Where Do I Start?</a>
+          <a href="/courses">📚 Explore Math Lessons</a>
+          <a href="/math-worksheets">📝 Free Worksheets</a>
+          <a href="/for-filipino-students">🇵🇭 Para sa Filipino Students</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Teach <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="/for-teachers">🏫 For Teachers Hub</a>
+          <a href="/teach-the-math">🎓 Teach the Math</a>
+          <a href="/teach-it-like-you-stream-it">🎬 Teach It Like You Stream It</a>
+          <a href="/teacher-resources">📦 Teacher Resources</a>
+          <a href="/math-worksheets">📄 Printable Worksheets</a>
+          <a href="/courses">📚 Lesson &amp; Course Library</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">About <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="/about">👨‍🏫 About Dr. E</a>
+          <a href="/speaking">🎤 Speaking</a>
+          <a href="/press">📰 Press &amp; Media</a>
+          <a href="/blog">✍️ Blog</a>
+          <a href="/speaking-archive">📅 Past Engagements</a>
+        </div>
+      </div>
+      <a href="/contact" class="nav-cta">Contact</a>
+    </nav>
+  </div>
+</header>
+<main id="main-content">
+
+<!-- ── HERO ── -->
+<section class="subject-hero">
+  <div class="container">
+    <div class="breadcrumb-nav">
+      <a href="/courses">Subjects</a>
+      <span style="margin:0 8px;">›</span>
+      <span style="color:rgba(255,255,255,0.9);font-weight:600;">Precalculus</span>
+    </div>
+    <div class="hero-inner">
+      <div class="hero-content">
+      <div class="hero-icon"><img src="../../images/playlist_icons/2_precalculus.png" alt="Precalculus" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+      <div class="hero-text">
+        <h1>Precalculus</h1>
+        <p class="tagline">Dr. E's complete precalculus video library — functions, exponentials, trigonometry, conics, matrices, and sequences. Every lesson paired with a free worksheet in English and Filipino 🇵🇭</p>
+        <div class="hero-stats">
+          <div class="hstat"><span class="n">11</span><span class="l">units</span></div>
+          <div class="hstat"><span class="n">65</span><span class="l">lessons</span></div>
+          <div class="hstat"><span class="n">EN · FIL</span><span class="l">bilingual 🇵🇭</span></div>
+          <div class="hstat"><span class="n">🆓</span><span class="l">always free</span></div>
+        </div>
+        <!-- v2.0 heart: Watch · Worksheet · Download -->
+        <div class="hero-trio">
+          <div class="hero-trio-step">
+            <div class="hero-trio-icon">🎬</div>
+            <div>
+              <div class="hero-trio-verb">Watch</div>
+              <div class="hero-trio-desc">Bilingual video lessons<br>English &amp; Filipino</div>
+            </div>
+          </div>
+          <div class="hero-trio-step">
+            <div class="hero-trio-icon">📄</div>
+            <div>
+              <div class="hero-trio-verb">Worksheet</div>
+              <div class="hero-trio-desc">Aligned practice problems<br>for every lesson</div>
+            </div>
+          </div>
+          <div class="hero-trio-step">
+            <div class="hero-trio-icon">⬇</div>
+            <div>
+              <div class="hero-trio-verb">Download</div>
+              <div class="hero-trio-desc">Free PDF — print it or<br>solve it digitally</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div><!-- /hero-content -->
+      <div class="hero-artwork-wrap">
+        <img class="hero-artwork" src="../../images/worksheet_page_artworks/4_precalculus.png" alt="" aria-hidden="true">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── LANG BAR ── -->
+<div class="lang-bar">
+  <div class="container">
+    <div class="lang-bar-inner">
+      <p class="lang-note">Watching in: <strong id="lang-label">English</strong> — toggle to switch video links</p>
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <button class="lang-btn active" id="btn-en" onclick="setLang('en')">🇺🇸 English</button>
+        <button class="lang-btn" id="btn-fil" onclick="setLang('fil')">🇵🇭 Filipino</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── UNITS ── -->
+<section class="units-section">
+  <div class="container">
+    <div class="section-heading">11 Units · 65 Lessons</div>
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="lesson-search" class="lesson-search"
+        placeholder="Search lessons… e.g. 'functions', 'polynomials', 'conic sections'"
+        oninput="filterLessons(this.value)" autocomplete="off" spellcheck="false">
+      <button class="search-clear" id="search-clear" onclick="clearSearch()" aria-label="Clear search">✕</button>
+    </div>
+    <div class="search-count" id="search-count"></div>
+    <div class="search-no-results" id="search-no-results">
+      <p style="font-size:2rem;margin-bottom:8px;">🔍</p>
+      <p style="font-weight:600;color:var(--navy);margin-bottom:4px;">No lessons found</p>
+      <p style="font-size:0.88rem;">Try a different keyword</p>
+    </div>
+    <!-- ⚠️  LESSON INDEX REMINDER
+     When adding new lessons here, also update LESSON_INDEX in courses.html
+     so the cross-subject search on the main courses page stays accurate.
+     Search for "LESSON_INDEX" in courses.html to find it quickly. -->
+<div class="unit-list">
+
+      <!-- ═══ UNIT 1 ═══ -->
+      <div class="unit-block open" id="unit-1">
+        <div class="unit-header" onclick="toggleUnit('unit-1')">
+          <div class="unit-num">Unit 1</div>
+          <div class="unit-info">
+            <div class="unit-title">Functions</div>
+            <div class="unit-meta"><span class="unit-complete">All 4 lessons available</span></div>
+          </div>
+          <div class="unit-chevron">▾</div>
+        </div>
+        <div class="unit-lessons"><div class="lessons-inner"><div class="lessons-divider"></div><div class="lesson-list">
+          <a class="lesson-item" data-en-id="9exMxUS-QGc" data-fil-id="fDlWPUEPqBM" data-worksheet="01-01-precalc-function-operations-and-composition.pdf" href="https://www.youtube.com/watch?v=9exMxUS-QGc" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Function Operations &amp; Composition</div><div class="lesson-sub">Unit 1 · Lesson 1</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="QNLM1AUFG2U" data-fil-id="_riXSeMPq1Y" data-worksheet="01-02-precalc-finding-the-inverse-of-a-function.pdf" href="https://www.youtube.com/watch?v=QNLM1AUFG2U" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Finding the Inverse of a Function</div><div class="lesson-sub">Unit 1 · Lesson 2</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="YjBrwsSv2Tw" data-fil-id="_riXSeMPq1Y" data-worksheet="01-03-precalc-finding-the-inverse-algebraically.pdf" href="https://www.youtube.com/watch?v=YjBrwsSv2Tw" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Finding the Inverse Algebraically</div><div class="lesson-sub">Unit 1 · Lesson 3</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="U4zwSs7-O3o" data-fil-id="-GxjyUcybOM" data-worksheet="../../worksheets/algebra/11-07-algebra-piecewise-functions.pdf" href="https://www.youtube.com/watch?v=U4zwSs7-O3o" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Solving Piecewise Defined Functions</div><div class="lesson-sub">Unit 1 · Lesson 4</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+        </div></div></div>
+      </div>
+
+      <!-- ═══ UNIT 2 ═══ -->
+      <div class="unit-block" id="unit-2">
+        <div class="unit-header" onclick="toggleUnit('unit-2')">
+          <div class="unit-num">Unit 2</div>
+          <div class="unit-info">
+            <div class="unit-title">Polynomial &amp; Rational Functions</div>
+            <div class="unit-meta"><span class="unit-complete">All 10 lessons available</span></div>
+          </div>
+          <div class="unit-chevron">▾</div>
+        </div>
+        <div class="unit-lessons"><div class="lessons-inner"><div class="lessons-divider"></div><div class="lesson-list">
+          <a class="lesson-item" data-en-id="5G_qrMRAT6o" data-fil-id="jgZG010wvAo" data-worksheet="02-01-precalc-solving-quadratic-equations.pdf" href="https://www.youtube.com/watch?v=5G_qrMRAT6o" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Solving Quadratic Equations</div><div class="lesson-sub">Unit 2 · Lesson 1</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="g_PFUB8O3uE" data-fil-id="ooAaWh0Ucv0" data-worksheet="02-02-precalc-remainder-theorem-factor-theorem.pdf" href="https://www.youtube.com/watch?v=g_PFUB8O3uE" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Remainder Theorem &amp; Factor Theorem</div><div class="lesson-sub">Unit 2 · Lesson 2</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="xxKVQ5rLkf8" data-fil-id="e2iOBjGtNqk" data-worksheet="02-03-precalc-rational-exponents-and-radical-expressions.pdf" href="https://www.youtube.com/watch?v=xxKVQ5rLkf8" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Rational Exponents &amp; Radical Expressions</div><div class="lesson-sub">Unit 2 · Lesson 3</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="Qh8CJ_AjPK8" data-fil-id="0g6g2OpboXU" data-worksheet="02-04-precalc-simplifying-radical-expressions.pdf" href="https://www.youtube.com/watch?v=Qh8CJ_AjPK8" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Simplifying Radical Expressions</div><div class="lesson-sub">Unit 2 · Lesson 4</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="lgd7DJ4E5rI" data-fil-id="v_WXIo2lefU" data-worksheet="02-05-precalc-solving-radical-equations.pdf" href="https://www.youtube.com/watch?v=lgd7DJ4E5rI" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Solving Radical Equations</div><div class="lesson-sub">Unit 2 · Lesson 5</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="LPJBm-sJC3s" data-fil-id="ryLusD-C2KA" data-worksheet="02-06-precalc-simplifying-rational-expressions.pdf" href="https://www.youtube.com/watch?v=LPJBm-sJC3s" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Simplifying Rational Expressions</div><div class="lesson-sub">Unit 2 · Lesson 6</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="43AQre6sIRU" data-fil-id="mEs3VUqmPGc" data-worksheet="02-07-precalc-adding-subtracting-rational-expressions.pdf" href="https://www.youtube.com/watch?v=43AQre6sIRU" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Adding &amp; Subtracting Rational Expressions</div><div class="lesson-sub">Unit 2 · Lesson 7</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="-PyfYtyo98E" data-fil-id="u5Zto5__9S0" data-worksheet="02-08-precalc-multiplying-dividing-rational-expressions.pdf" href="https://www.youtube.com/watch?v=-PyfYtyo98E" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Multiplying &amp; Dividing Rational Expressions</div><div class="lesson-sub">Unit 2 · Lesson 8</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="jMQRVs59Ydw" data-fil-id="m2NhXgWKj1s" data-worksheet="02-09-precalc-domain-of-rational-functions.pdf" href="https://www.youtube.com/watch?v=jMQRVs59Ydw" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Domain of Rational Functions</div><div class="lesson-sub">Unit 2 · Lesson 9</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="gEsuawMfBmY" data-fil-id="GgdGpjiJmkI" data-worksheet="02-10-precalc-asymptotes-of-rational-functions.pdf" href="https://www.youtube.com/watch?v=gEsuawMfBmY" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Asymptotes of Rational Functions</div><div class="lesson-sub">Unit 2 · Lesson 10</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+        </div></div></div>
+      </div>
+
+      <!-- ═══ UNIT 3 ═══ -->
+      <div class="unit-block" id="unit-3">
+        <div class="unit-header" onclick="toggleUnit('unit-3')">
+          <div class="unit-num">Unit 3</div>
+          <div class="unit-info">
+            <div class="unit-title">Exponential &amp; Logarithmic Functions</div>
+            <div class="unit-meta"><span class="unit-complete">All 6 lessons available</span></div>
+          </div>
+          <div class="unit-chevron">▾</div>
+        </div>
+        <div class="unit-lessons"><div class="lessons-inner"><div class="lessons-divider"></div><div class="lesson-list">
+          <a class="lesson-item" data-en-id="c_pKjcRY3EI" data-fil-id="WWf678070P0" data-worksheet="03-01-precalc-graphing-exponential-functions.pdf" href="https://www.youtube.com/watch?v=c_pKjcRY3EI" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Graphing Exponential Functions</div><div class="lesson-sub">Unit 3 · Lesson 1</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="z5bqapEjzCQ" data-fil-id="smSeRfHpG8U" data-worksheet="03-02-precalc-introduction-to-logarithmic-functions.pdf" href="https://www.youtube.com/watch?v=z5bqapEjzCQ" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Introduction to Logarithmic Functions</div><div class="lesson-sub">Unit 3 · Lesson 2</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="Ljf38D-sGUU" data-fil-id="f6p4P3whpao" data-worksheet="03-03-precalc-properties-of-logarithms.pdf" href="https://www.youtube.com/watch?v=Ljf38D-sGUU" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Properties of Logarithms</div><div class="lesson-sub">Unit 3 · Lesson 3</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="MUZx6vsnviQ" data-fil-id="Fe06wc5C6XM" data-worksheet="03-04-precalc-graphing-logarithmic-functions.pdf" href="https://www.youtube.com/watch?v=MUZx6vsnviQ" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Graphing Logarithmic Functions</div><div class="lesson-sub">Unit 3 · Lesson 4</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="s3bL4ZFVyls" data-fil-id="GfmyLztNY3E" data-worksheet="03-05-precalc-solving-exponential-equations-change-of-base.pdf" href="https://www.youtube.com/watch?v=s3bL4ZFVyls" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Solving Exponential Equations — Change of Base</div><div class="lesson-sub">Unit 3 · Lesson 5</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="Ljf38D-sGUU" data-fil-id="EArWf8MQtfs" data-worksheet="03-06-precalc-solving-logarithmic-equations.pdf" href="https://www.youtube.com/watch?v=Ljf38D-sGUU" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Solving Logarithmic Equations</div><div class="lesson-sub">Unit 3 · Lesson 6</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+        </div></div></div>
+      </div>
+
+      <!-- ═══ UNIT 4 ═══ -->
+      <div class="unit-block" id="unit-4">
+        <div class="unit-header" onclick="toggleUnit('unit-4')">
+          <div class="unit-num">Unit 4</div>
+          <div class="unit-info">
+            <div class="unit-title">Trigonometry Basics</div>
+            <div class="unit-meta">6 lessons</div>
+          </div>
+          <div class="unit-chevron">▾</div>
+        </div>
+        <div class="unit-lessons"><div class="lessons-inner"><div class="lessons-divider"></div><div class="lesson-list">
+          <a class="lesson-item" data-en-id="qQ7AqbGjTyI" data-fil-id="jLIwLKlWTZo" data-worksheet="04-01-precalc-trig-introduction-angles-measurement.pdf" href="https://www.youtube.com/watch?v=qQ7AqbGjTyI" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Angles &amp; Radian Measure</div><div class="lesson-sub">Unit 4 · Lesson 1</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="RpNQO3cmWd0" data-fil-id="gqWhVKoVCrM" data-worksheet="04-02-precalc-trig-six-ratios-pythagorean-theorem.pdf" href="https://www.youtube.com/watch?v=RpNQO3cmWd0" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">The Six Trig Ratios (SOH CAH TOA)</div><div class="lesson-sub">Unit 4 · Lesson 2</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="b8_QIFMvIjU" data-fil-id="diw70RFEWKo" data-worksheet="04-03-precalc-trig-unit-circle-special-right-triangles.pdf" href="https://www.youtube.com/watch?v=b8_QIFMvIjU" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">The Unit Circle &amp; Special Right Triangles</div><div class="lesson-sub">Unit 4 · Lesson 3</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="RpNQO3cmWd0" data-fil-id="5xtKS9Q75fE" data-worksheet="04-04-precalc-trig-right-triangle-rationalizing-fractions.pdf" href="https://www.youtube.com/watch?v=RpNQO3cmWd0" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Right Triangle Trig — Rationalizing Fractions</div><div class="lesson-sub">Unit 4 · Lesson 4</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="16HSLIhlQ2o" data-fil-id="EPwkUT6t_5Q" data-worksheet="04-05-precalc-trig-solving-right-triangles-sohcahtoa.pdf" href="https://www.youtube.com/watch?v=16HSLIhlQ2o" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Solving Right Triangles (SOH CAH TOA)</div><div class="lesson-sub">Unit 4 · Lesson 5</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="W4uKpRMoWxw" data-fil-id="LhkaY3vcEfo" data-worksheet="04-06-precalc-trig-word-problems-sohcahtoa.pdf" href="https://www.youtube.com/watch?v=W4uKpRMoWxw" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Trigonometry Word Problems</div><div class="lesson-sub">Unit 4 · Lesson 6</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+        </div></div></div>
+      </div>
+
+      <!-- ═══ UNIT 5 ═══ -->
+      <div class="unit-block" id="unit-5">
+        <div class="unit-header" onclick="toggleUnit('unit-5')">
+          <div class="unit-num">Unit 5</div>
+          <div class="unit-info">
+            <div class="unit-title">Graphing Trig Functions</div>
+            <div class="unit-meta">2 lessons</div>
+          </div>
+          <div class="unit-chevron">▾</div>
+        </div>
+        <div class="unit-lessons"><div class="lessons-inner"><div class="lessons-divider"></div><div class="lesson-list">
+          <a class="lesson-item" data-en-id="PlAAlL16UvI" data-fil-id="rV2IXqA5D3o" data-worksheet="05-01-precalc-graphing-sine-cosine-secant-cosecant.pdf" href="https://www.youtube.com/watch?v=PlAAlL16UvI" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Graphing Sine &amp; Cosine Functions</div><div class="lesson-sub">Unit 5 · Lesson 1</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="IdF_NGwINUY" data-fil-id="yfU6gY_7fLU" data-worksheet="05-02-precalc-graphing-cosecant-and-secant.pdf" href="https://www.youtube.com/watch?v=IdF_NGwINUY" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Graphing Cosecant &amp; Secant Functions</div><div class="lesson-sub">Unit 5 · Lesson 2</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+        </div></div></div>
+      </div>
+
+      <!-- ═══ UNIT 6 ═══ -->
+      <div class="unit-block" id="unit-6">
+        <div class="unit-header" onclick="toggleUnit('unit-6')">
+          <div class="unit-num">Unit 6</div>
+          <div class="unit-info">
+            <div class="unit-title">Trig Identities &amp; Laws</div>
+            <div class="unit-meta"><span class="unit-complete">All 7 lessons available</span></div>
+          </div>
+          <div class="unit-chevron">▾</div>
+        </div>
+        <div class="unit-lessons"><div class="lessons-inner"><div class="lessons-divider"></div><div class="lesson-list">
+          <a class="lesson-item" data-en-id="th9KIUQEq7Q" data-fil-id="hblJwdxua8s" data-worksheet="06-01-precalc-trig-simplifying-expressions.pdf" href="https://www.youtube.com/watch?v=th9KIUQEq7Q" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Simplifying Trig Expressions</div><div class="lesson-sub">Unit 6 · Lesson 1</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="VURwzdkHxHg" data-fil-id="Wwgn9yY8Cic" data-worksheet="06-02-precalc-trig-proving-identities.pdf" href="https://www.youtube.com/watch?v=VURwzdkHxHg" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Proving Trigonometric Identities</div><div class="lesson-sub">Unit 6 · Lesson 2</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="Yu_Rl-oEyHQ" data-fil-id="89qVX8BuLdA" data-worksheet="06-03-precalc-trig-sum-and-difference-formulas.pdf" href="https://www.youtube.com/watch?v=Yu_Rl-oEyHQ" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Sum &amp; Difference Formulas</div><div class="lesson-sub">Unit 6 · Lesson 3</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="bHAEjYJu5cE" data-fil-id="I2gy6J8WPsw" data-worksheet="06-04-precalc-trig-solving-equations.pdf" href="https://www.youtube.com/watch?v=bHAEjYJu5cE" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Solving Trig Equations</div><div class="lesson-sub">Unit 6 · Lesson 4</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="3Hb4uo4Gaow" data-fil-id="MCvalOC_m2k" data-worksheet="06-05-precalc-trig-solving-equations-pythagorean-identities.pdf" href="https://www.youtube.com/watch?v=3Hb4uo4Gaow" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Solving Trig Equations — Pythagorean Identities</div><div class="lesson-sub">Unit 6 · Lesson 5</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="Z8WowJtiJss" data-fil-id="cRH1xN871C4" data-worksheet="06-06-precalc-trig-law-of-sines.pdf" href="https://www.youtube.com/watch?v=Z8WowJtiJss" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Law of Sines</div><div class="lesson-sub">Unit 6 · Lesson 6</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="en56Op_s-AM" data-fil-id="ZPLJaXCmzfo" data-worksheet="06-07-precalc-trig-law-of-cosines.pdf" href="https://www.youtube.com/watch?v=en56Op_s-AM" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Law of Cosines</div><div class="lesson-sub">Unit 6 · Lesson 7</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+        </div></div></div>
+      </div>
+
+      <!-- ═══ UNIT 7 ═══ -->
+      <div class="unit-block" id="unit-7">
+        <div class="unit-header" onclick="toggleUnit('unit-7')">
+          <div class="unit-num">Unit 7</div>
+          <div class="unit-info">
+            <div class="unit-title">Complex Numbers &amp; Vectors</div>
+            <div class="unit-meta"><span class="unit-complete">All 6 lessons available</span></div>
+          </div>
+          <div class="unit-chevron">▾</div>
+        </div>
+        <div class="unit-lessons"><div class="lessons-inner"><div class="lessons-divider"></div><div class="lesson-list">
+          <a class="lesson-item" data-en-id="K1n227bAfRU" data-fil-id="jy5HoYcVCX0" data-worksheet="07-01-precalc-complex-numbers-operations.pdf" href="https://www.youtube.com/watch?v=K1n227bAfRU" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Operations with Complex Numbers</div><div class="lesson-sub">Unit 7 · Lesson 1</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="OQoVw1JeSAM" data-fil-id="sWnd6NmvdBA" data-worksheet="07-02-precalc-complex-numbers-absolute-value-trig-form.pdf" href="https://www.youtube.com/watch?v=OQoVw1JeSAM" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Absolute Value &amp; Trig Form of Complex Numbers</div><div class="lesson-sub">Unit 7 · Lesson 2</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="ioChkYjf2jI" data-fil-id="Ht637FGamXY" data-worksheet="07-03-precalc-complex-numbers-multiplying-dividing-trig-form.pdf" href="https://www.youtube.com/watch?v=ioChkYjf2jI" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Multiplying &amp; Dividing Complex Numbers in Trig Form</div><div class="lesson-sub">Unit 7 · Lesson 3</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="_4oM98XhBgM" data-fil-id="sWqGSz8XQgA" data-worksheet="07-04-precalc-de-moivres-theorem-powers-of-complex-numbers.pdf" href="https://www.youtube.com/watch?v=_4oM98XhBgM" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">De Moivre's Theorem</div><div class="lesson-sub">Unit 7 · Lesson 4</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="OhnYCJrYCZ8" data-fil-id="uzRo-ot9Z4g" data-worksheet="07-05-precalc-vectors-components-magnitude-unit-vectors.pdf" href="https://www.youtube.com/watch?v=OhnYCJrYCZ8" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Vectors — Components, Magnitude &amp; Unit Vectors</div><div class="lesson-sub">Unit 7 · Lesson 5</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="wWOKUUHyztw" data-fil-id="XNPVQcyZUO8" data-worksheet="07-06-precalc-vectors-dot-product.pdf" href="https://www.youtube.com/watch?v=wWOKUUHyztw" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Vectors — Dot Product</div><div class="lesson-sub">Unit 7 · Lesson 6</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+        </div></div></div>
+      </div>
+
+      <!-- ═══ UNIT 8 ═══ -->
+      <div class="unit-block" id="unit-8">
+        <div class="unit-header" onclick="toggleUnit('unit-8')">
+          <div class="unit-num">Unit 8</div>
+          <div class="unit-info">
+            <div class="unit-title">Conic Sections</div>
+            <div class="unit-meta"><span class="unit-complete">All 9 lessons available</span></div>
+          </div>
+          <div class="unit-chevron">▾</div>
+        </div>
+        <div class="unit-lessons"><div class="lessons-inner"><div class="lessons-divider"></div><div class="lesson-list">
+          <a class="lesson-item" data-en-id="fn6BfPxI1Co" data-fil-id="BUwZWutKxIg" data-worksheet="08-01-precalc-conics-parabolas.pdf" href="https://www.youtube.com/watch?v=fn6BfPxI1Co" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Introduction to Conic Sections &amp; Parabolas</div><div class="lesson-sub">Unit 8 · Lesson 1</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="FwXOucUqazk" data-fil-id="uASc6lFzvXo" data-worksheet="08-02-precalc-conics-parabolas-standard-form-key-features.pdf" href="https://www.youtube.com/watch?v=FwXOucUqazk" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Parabolas — Standard Form &amp; Key Features</div><div class="lesson-sub">Unit 8 · Lesson 2</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="29EhdOL4O8I" data-fil-id="4u-SJFoeAfA" data-worksheet="08-03-precalc-conics-writing-equation-of-a-parabola.pdf" href="https://www.youtube.com/watch?v=29EhdOL4O8I" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Writing the Equation of a Parabola</div><div class="lesson-sub">Unit 8 · Lesson 3</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="w4EIzA260UY" data-fil-id="wchenlxoTz8" data-worksheet="08-04-precalc-conics-circles.pdf" href="https://www.youtube.com/watch?v=w4EIzA260UY" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Conic Sections — Circles</div><div class="lesson-sub">Unit 8 · Lesson 4</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="hWA9G-jWi04" data-fil-id="EgWj6dCD9kY" data-worksheet="08-05-precalc-conics-ellipses-standard-form-key-parts.pdf" href="https://www.youtube.com/watch?v=hWA9G-jWi04" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Ellipses — Standard Form &amp; Key Parts</div><div class="lesson-sub">Unit 8 · Lesson 5</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="fdqdvIc4WcI" data-fil-id="yxxRHmcbRS0" data-worksheet="08-06-precalc-conics-ellipses-standard-form-and-graphing.pdf" href="https://www.youtube.com/watch?v=fdqdvIc4WcI" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Ellipses — Standard Form &amp; Graphing</div><div class="lesson-sub">Unit 8 · Lesson 6</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="iTCmw-GWGFk" data-fil-id="cTSaJSljYho" data-worksheet="08-07-precalc-conics-ellipses-equations-graphs-foci.pdf" href="https://www.youtube.com/watch?v=iTCmw-GWGFk" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Ellipses — Equations, Graphs &amp; Foci</div><div class="lesson-sub">Unit 8 · Lesson 7</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="i6Ns_yetNls" data-fil-id="yke3HrBLl6s" data-worksheet="08-08-precalc-conics-hyperbolas-graphing-and-analyzing.pdf" href="https://www.youtube.com/watch?v=i6Ns_yetNls" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Hyperbolas — Graphing &amp; Analyzing</div><div class="lesson-sub">Unit 8 · Lesson 8</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="lLEsB6U49Zw" data-fil-id="8gSPeAQgd-A" data-worksheet="08-09-precalc-conics-converting-to-standard-form.pdf" href="https://www.youtube.com/watch?v=lLEsB6U49Zw" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Converting Conics to Standard Form</div><div class="lesson-sub">Unit 8 · Lesson 9</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+        </div></div></div>
+      </div>
+
+      <!-- ═══ UNIT 9 ═══ -->
+      <div class="unit-block" id="unit-9">
+        <div class="unit-header" onclick="toggleUnit('unit-9')">
+          <div class="unit-num">Unit 9</div>
+          <div class="unit-info">
+            <div class="unit-title">Systems &amp; Matrices</div>
+            <div class="unit-meta">8 lessons</div>
+          </div>
+          <div class="unit-chevron">▾</div>
+        </div>
+        <div class="unit-lessons"><div class="lessons-inner"><div class="lessons-divider"></div><div class="lesson-list">
+          <div class="lesson-item no-video" data-worksheet="09-01-precalc-systems-solving-by-graphing.pdf">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Systems of Equations — Solving by Graphing</div><div class="lesson-sub">Unit 9 · Lesson 1</div></div>
+            <span class="lesson-badge">Coming Soon</span>
+          </div>
+          <a class="lesson-item" data-en-id="ELl_41Hr-dw" data-fil-id="yhTJOHsUZ8o" data-worksheet="09-02-precalc-systems-linear-inequalities.pdf" href="https://www.youtube.com/watch?v=ELl_41Hr-dw" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Systems of Linear Inequalities</div><div class="lesson-sub">Unit 9 · Lesson 2</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="0q_CDo0Mz3s" data-fil-id="pazo14trUf8" data-worksheet="09-03-precalc-matrices-elementary-row-operations.pdf" href="https://www.youtube.com/watch?v=0q_CDo0Mz3s" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Matrices — Elementary Row Operations</div><div class="lesson-sub">Unit 9 · Lesson 3</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="BEepwYg0qYs" data-fil-id="MYbRfdO-EJ0" data-worksheet="09-04-precalc-matrices-multiplication.pdf" href="https://www.youtube.com/watch?v=BEepwYg0qYs" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Matrix Multiplication</div><div class="lesson-sub">Unit 9 · Lesson 4</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="wUhUhfW-6dE" data-fil-id="ejnlkmBRC7o" data-worksheet="09-05-precalc-matrices-determinants-2x2-and-3x3.pdf" href="https://www.youtube.com/watch?v=wUhUhfW-6dE" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Determinants of 2×2 &amp; 3×3 Matrices</div><div class="lesson-sub">Unit 9 · Lesson 5</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="zJw-N7J1ndg" data-fil-id="c_eL_StOIxA" data-worksheet="09-06-precalc-matrices-determinants.pdf" href="https://www.youtube.com/watch?v=zJw-N7J1ndg" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Determinants — Advanced</div><div class="lesson-sub">Unit 9 · Lesson 6</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="M4FO1DN85KA" data-fil-id="Kk9DWYGbbWk" data-worksheet="09-07-precalc-matrices-inverse-2x2.pdf" href="https://www.youtube.com/watch?v=M4FO1DN85KA" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Finding the Inverse of a 2×2 Matrix</div><div class="lesson-sub">Unit 9 · Lesson 7</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="2UQf28YgpzE" data-fil-id="PAD6iVSqUZM" data-worksheet="09-08-precalc-matrices-cramers-rule.pdf" href="https://www.youtube.com/watch?v=2UQf28YgpzE" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Cramer's Rule</div><div class="lesson-sub">Unit 9 · Lesson 8</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+        </div></div></div>
+      </div>
+
+      <!-- ═══ UNIT 10 ═══ -->
+      <div class="unit-block" id="unit-10">
+        <div class="unit-header" onclick="toggleUnit('unit-10')">
+          <div class="unit-num">Unit 10</div>
+          <div class="unit-info">
+            <div class="unit-title">Sequences, Series &amp; Counting</div>
+            <div class="unit-meta"><span class="unit-complete">All 7 lessons available</span></div>
+          </div>
+          <div class="unit-chevron">▾</div>
+        </div>
+        <div class="unit-lessons"><div class="lessons-inner"><div class="lessons-divider"></div><div class="lesson-list">
+          <a class="lesson-item" data-en-id="V_T4o6upYfI" data-fil-id="Fc8rAjxEIvs" data-worksheet="10-01-precalc-sequences-and-factorial-notation.pdf" href="https://www.youtube.com/watch?v=V_T4o6upYfI" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Sequences &amp; Factorial Notation</div><div class="lesson-sub">Unit 10 · Lesson 1</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="9pa6dFedGTg" data-fil-id="OAhJuftIoEM" data-worksheet="10-02-precalc-arithmetic-sequences.pdf" href="https://www.youtube.com/watch?v=9pa6dFedGTg" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Arithmetic Sequences</div><div class="lesson-sub">Unit 10 · Lesson 2</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="1eZpN9_T3n8" data-fil-id="93X6Up32Peg" data-worksheet="10-03-precalc-geometric-sequences.pdf" href="https://www.youtube.com/watch?v=1eZpN9_T3n8" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Geometric Sequences</div><div class="lesson-sub">Unit 10 · Lesson 3</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="775ubcycKmc" data-fil-id="PrrV22vIuvg" data-worksheet="10-04-precalc-summation-sigma-notation.pdf" href="https://www.youtube.com/watch?v=775ubcycKmc" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Summation &amp; Sigma Notation</div><div class="lesson-sub">Unit 10 · Lesson 4</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="cyT7R354kiQ" data-fil-id="-k1WMcCTUko" data-worksheet="10-05-precalc-mathematical-induction.pdf" href="https://www.youtube.com/watch?v=cyT7R354kiQ" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Mathematical Induction</div><div class="lesson-sub">Unit 10 · Lesson 5</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="3FN4ldzY5n0" data-fil-id="hTNiMm1UrcU" data-worksheet="10-06-precalc-expanding-binomials-pascal-triangle.pdf" href="https://www.youtube.com/watch?v=3FN4ldzY5n0" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Binomial Theorem &amp; Pascal's Triangle</div><div class="lesson-sub">Unit 10 · Lesson 6</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+          <a class="lesson-item" data-en-id="DZPgDCWpGxE" data-fil-id="K_mC6eQzkrI" data-worksheet="10-07-precalc-combinations.pdf" href="https://www.youtube.com/watch?v=DZPgDCWpGxE" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Combinations</div><div class="lesson-sub">Unit 10 · Lesson 7</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+        </div></div></div>
+      </div>
+
+      <!-- ═══ UNIT 11 ═══ -->
+      <div class="unit-block" id="unit-11">
+        <div class="unit-header" onclick="toggleUnit('unit-11')">
+          <div class="unit-num">Unit 11</div>
+          <div class="unit-info">
+            <div class="unit-title">Preview of Calculus</div>
+            <div class="unit-meta"><span class="unit-complete">1 lesson available</span></div>
+          </div>
+          <div class="unit-chevron">▾</div>
+        </div>
+        <div class="unit-lessons"><div class="lessons-inner"><div class="lessons-divider"></div><div class="lesson-list">
+          <a class="lesson-item" data-en-id="bD4gt6UAj5Q" data-fil-id="TkwIZKmrI_o" data-worksheet="11-01-precalc-intro-calculus-power-rule-derivatives.pdf" href="https://www.youtube.com/watch?v=bD4gt6UAj5Q" target="_blank" rel="noopener">
+            <div class="lesson-play">▶</div>
+            <div class="lesson-meta"><div class="lesson-title">Introduction to Derivatives — Power Rule</div><div class="lesson-sub">Unit 11 · Lesson 1</div></div>
+            <span class="lesson-badge both">EN + FIL</span>
+          </a>
+        </div></div></div>
+      </div>
+
+    </div><!-- /unit-list -->
+
+    <!-- ── BOTTOM CARDS ── -->
+    <div class="bottom-grid">
+      <div class="related-card">
+        <h4>Related Subjects</h4>
+        <div class="subject-chips">
+          <a href="/courses" class="subject-chip all">📚 All Subjects</a>
+          <a href="../algebra/" class="subject-chip">Algebra</a>
+          <a href="../calculus/" class="subject-chip">Calculus</a>
+        </div>
+      </div>
+      <div class="course-callout">
+        <div>
+          <div class="cal-label">Full Course</div>
+          <div class="cal-title">Intermediate Algebra</div>
+          <div class="cal-sub">Structured lessons with quizzes — a step before Precalculus.</div>
+        </div>
+        <div class="cal-links">
+          <a href="../../learn/intermediate-algebra/" class="cal-link primary">View Course →</a>
+          <a href="/courses" class="cal-link secondary">Explore All Subjects</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+</main>
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot foot-brand">
+        <div class="foot-logo">
+          <div class="foot-logo-mark">
+            <img src="../../images/numberbender-mark-teal-transparent.svg" alt="Numberbender" style="width:100%;height:100%;object-fit:contain;">
+          </div>
+          <span>Numberbender</span>
+        </div>
+        <p>Helping students learn math with confidence and helping educators teach online with energy, clarity, and impact.</p>
+      </div>
+      <div class="foot">
+        <h4>Subjects</h4>
+        <a href="/courses">All Subjects</a>
+        <a href="../algebra/">Algebra</a>
+        <a href="../precalculus/">Precalculus</a>
+        <a href="../calculus/">Calculus</a>
+      </div>
+      <div class="foot">
+        <h4>Full Courses</h4>
+        <a href="../../learn/elementary-algebra/">Elementary Algebra</a>
+        <a href="../../learn/intermediate-algebra/">Intermediate Algebra</a>
+      </div>
+      <div class="foot">
+        <h4>Connect</h4>
+        <a href="../../about.html">About Dr. E</a>
+        <a href="../../math-worksheets.html">Worksheets</a>
+        <a href="../../contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Numberbender · Dr. Peter Esperanza</span>
+      <span>Free bilingual math — English &amp; Filipino 🇵🇭</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ── VIDEO MODAL ── -->
+<div id="video-modal" class="modal-overlay" onclick="modalBackdropClick(event)" role="dialog" aria-modal="true" aria-labelledby="modal-lesson-title">
+  <div class="modal-box">
+    <div class="modal-header">
+      <div>
+        <div class="modal-lesson-title" id="modal-lesson-title"></div>
+        <div class="modal-lesson-sub" id="modal-lesson-sub"></div>
+      </div>
+      <button class="modal-close" onclick="closeModal()" aria-label="Close video">✕</button>
+    </div>
+    <div class="modal-video-wrap">
+      <iframe id="modal-iframe" src="" allow="autoplay; accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="modal-footer">
+      <div class="ws-block" id="modal-ws-block" style="display:none;">
+        <div class="ws-label">📄 Practice Worksheet</div>
+        <div class="modal-btn-row">
+          <button id="modal-view-btn" onclick="openWsFromVideo()" class="modal-btn view">👁 View PDF</button>
+          <a id="modal-dl-btn" href="#" target="_blank" rel="noopener" class="modal-btn dl">⬇ Download</a>
+        </div>
+      </div>
+      <div class="modal-btn-row" style="margin-left:auto;">
+        <a id="modal-yt-btn" href="#" target="_blank" rel="noopener" class="modal-btn yt">↗ Open on YouTube</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── WORKSHEET PREVIEW MODAL ── -->
+<div id="ws-modal" class="modal-overlay" onclick="wsBackdropClick(event)" role="dialog" aria-modal="true" aria-labelledby="ws-modal-title">
+  <div class="modal-box">
+    <div class="modal-header">
+      <div>
+        <div class="modal-lesson-title" id="ws-modal-title">Practice Worksheet</div>
+        <div class="modal-lesson-sub" id="ws-modal-sub"></div>
+      </div>
+      <div class="modal-btn-row" style="align-items:center;gap:8px;">
+        <a id="ws-dl-link" href="#" target="_blank" rel="noopener" class="modal-btn yt" style="font-size:0.8rem;padding:6px 14px;">↗ Open to Download</a>
+        <button class="modal-close" onclick="closeWsModal()" aria-label="Close worksheet">✕</button>
+      </div>
+    </div>
+    <div class="ws-iframe-wrap">
+      <iframe id="ws-iframe" src="" title="Worksheet preview"></iframe>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ── UNIT ACCORDION ── */
+function toggleUnit(id) {
+  document.getElementById(id).classList.toggle('open');
+}
+
+/* ── SEARCH ── */
+function filterLessons(query) {
+  const q = query.trim().toLowerCase();
+  const clearBtn = document.getElementById('search-clear');
+  const countEl = document.getElementById('search-count');
+  const noResults = document.getElementById('search-no-results');
+  clearBtn.classList.toggle('visible', q.length > 0);
+  if (!q) {
+    document.querySelectorAll('.unit-list .unit-block').forEach(u => {
+      u.classList.remove('search-hidden');
+      u.querySelectorAll('.lesson-item').forEach(l => l.classList.remove('search-hidden'));
+    });
+    countEl.innerHTML = '';
+    noResults.classList.remove('visible');
+    return;
+  }
+  let totalLessons = 0, totalUnits = 0;
+  document.querySelectorAll('.unit-list .unit-block').forEach(unit => {
+    const unitTitle = (unit.querySelector('.unit-title') || unit.querySelector('.unit-name') || {innerText:''}).innerText.toLowerCase();
+    let unitHasMatch = false;
+    unit.querySelectorAll('.lesson-item').forEach(lesson => {
+      const title = (lesson.querySelector('.lesson-title') || {innerText:''}).innerText.toLowerCase();
+      const sub = (lesson.querySelector('.lesson-sub') || {innerText:''}).innerText.toLowerCase();
+      const matches = title.includes(q) || sub.includes(q) || unitTitle.includes(q);
+      lesson.classList.toggle('search-hidden', !matches);
+      if (matches) { unitHasMatch = true; totalLessons++; }
+    });
+    unit.classList.toggle('search-hidden', !unitHasMatch);
+    if (unitHasMatch) { totalUnits++; unit.classList.add('open'); }
+  });
+  countEl.innerHTML = totalLessons > 0
+    ? `Found <strong>${totalLessons} lesson${totalLessons!==1?'s':''}</strong> across <strong>${totalUnits} unit${totalUnits!==1?'s':''}</strong> matching "<strong>${query.trim()}</strong>"`
+    : '';
+  noResults.classList.toggle('visible', totalLessons === 0);
+}
+function clearSearch() {
+  const input = document.getElementById('lesson-search');
+  input.value = '';
+  filterLessons('');
+  input.focus();
+}
+
+/* ── LANGUAGE TOGGLE ── */
+function setLang(lang) {
+  document.body.setAttribute('data-lang', lang);
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-fil').classList.toggle('active', lang === 'fil');
+  document.getElementById('lang-label').textContent = lang === 'en' ? 'English' : 'Filipino 🇵🇭';
+  document.querySelectorAll('.lesson-item').forEach(function(item) {
+    var enId = item.dataset.enId || '';
+    var filId = item.dataset.filId || '';
+    var activeId = lang === 'en' ? enId : filId;
+    if (activeId) {
+      item.href = 'https://www.youtube.com/watch?v=' + activeId;
+      item.classList.remove('no-video');
+    } else {
+      item.href = '#';
+      item.classList.add('no-video');
+    }
+  });
+}
+
+/* ── INJECT WORKSHEET BUTTONS ── */
+document.querySelectorAll('.lesson-item[data-worksheet]').forEach(function(item) {
+  var ws   = item.dataset.worksheet;
+  var href = ws.startsWith('../../') ? ws : '../../worksheets/precalculus/' + ws;
+  var badge = item.querySelector('.lesson-badge');
+  var right = document.createElement('div');
+  right.className = 'lesson-right';
+  badge.parentNode.insertBefore(right, badge);
+  right.appendChild(badge);
+  var wsRow = document.createElement('div');
+  wsRow.className = 'lesson-ws-row';
+  wsRow.innerHTML =
+    '<span class="lesson-ws-btn ws-view" data-href="' + href + '" data-title="' + item.querySelector('.lesson-title').textContent + '" data-sub="' + item.querySelector('.lesson-sub').textContent + '" role="button" tabindex="0">👁 View</span>' +
+    '<span class="lesson-ws-btn ws-dl"   data-href="' + href + '" role="button" tabindex="0">⬇ Download</span>';
+  right.appendChild(wsRow);
+});
+
+/* ── VIDEO MODAL ── */
+var _wsHref = '';
+
+function openModal(item) {
+  var lang = document.body.dataset.lang || 'en';
+  var enId  = item.dataset.enId  || '';
+  var filId = item.dataset.filId || '';
+  var activeId = lang === 'en' ? enId : filId;
+  if (!activeId) return;
+  var title     = item.querySelector('.lesson-title').textContent;
+  var sub       = item.querySelector('.lesson-sub').textContent;
+  var worksheet = item.dataset.worksheet || '';
+  var ytUrl     = 'https://www.youtube.com/watch?v=' + activeId;
+  document.getElementById('modal-lesson-title').textContent = title;
+  document.getElementById('modal-lesson-sub').textContent   = sub;
+  document.getElementById('modal-iframe').src = 'https://www.youtube.com/embed/' + activeId + '?autoplay=1&rel=0';
+  document.getElementById('modal-yt-btn').href = ytUrl;
+  var wsBlock = document.getElementById('modal-ws-block');
+  if (worksheet) {
+    var wsBase = '../../worksheets/precalculus/';
+    _wsHref = worksheet.startsWith('../../') ? worksheet : wsBase + worksheet;
+    document.getElementById('modal-dl-btn').href = _wsHref;
+    wsBlock.style.display = 'block';
+  } else {
+    _wsHref = '';
+    wsBlock.style.display = 'none';
+  }
+  document.getElementById('video-modal').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('modal-iframe').src = '';
+  document.getElementById('video-modal').classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+function modalBackdropClick(e) {
+  if (e.target === document.getElementById('video-modal')) closeModal();
+}
+
+function openWsFromVideo() {
+  if (!_wsHref) return;
+  var title = document.getElementById('modal-lesson-title').textContent;
+  var sub   = document.getElementById('modal-lesson-sub').textContent;
+  closeModal();
+  openWsModal(_wsHref, title, sub);
+}
+
+function openWsModal(href, title, sub) {
+  document.getElementById('ws-modal-title').textContent = title || 'Practice Worksheet';
+  document.getElementById('ws-modal-sub').textContent   = sub ? sub + ' · Worksheet' : 'Practice Worksheet';
+  document.getElementById('ws-iframe').src = href;
+  document.getElementById('ws-dl-link').href = href;
+  document.getElementById('ws-modal').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeWsModal() {
+  document.getElementById('ws-iframe').src = '';
+  document.getElementById('ws-modal').classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+function wsBackdropClick(e) {
+  if (e.target === document.getElementById('ws-modal')) closeWsModal();
+}
+
+/* ── CLICK DELEGATION ── */
+document.addEventListener('click', function(e) {
+  var wsBtn = e.target.closest('.lesson-ws-btn');
+  if (wsBtn) {
+    e.stopPropagation();
+    e.preventDefault();
+    var href  = wsBtn.dataset.href;
+    var title = wsBtn.dataset.title || '';
+    var sub   = wsBtn.dataset.sub   || '';
+    if (wsBtn.classList.contains('ws-dl')) {
+      window.open(href, '_blank', 'noopener noreferrer');
+    } else {
+      openWsModal(href, title, sub);
+    }
+    return;
+  }
+  var item = e.target.closest('.lesson-item');
+  if (!item) return;
+  e.preventDefault();
+  if (item.classList.contains('no-video')) return;
+  openModal(item);
+});
+
+/* ── ESC KEY ── */
+document.addEventListener('keydown', function(e) {
+  if (e.key !== 'Escape') return;
+  if (document.getElementById('ws-modal').classList.contains('active')) closeWsModal();
+  else if (document.getElementById('video-modal').classList.contains('active')) closeModal();
+});
+
+
+/* ── DROPDOWN NAV ── */
+function toggleDD(btn){
+  var menu=btn.nextElementSibling;
+  var willOpen=!menu.classList.contains('open');
+  document.querySelectorAll('.nav-dropdown .dropdown-menu.open').forEach(function(m){
+    m.classList.remove('open');
+    var t=m.previousElementSibling;
+    if(t)t.setAttribute('aria-expanded','false');
+  });
+  if(willOpen){
+    menu.style.transition='none';
+    menu.classList.add('open');
+    menu.getBoundingClientRect();
+    menu.style.transition='';
+    btn.setAttribute('aria-expanded','true');
+  }
+}
+document.addEventListener('click',function(e){
+  if(!e.target.closest('.nav-dropdown')){
+    document.querySelectorAll('.nav-dropdown .dropdown-menu.open').forEach(function(m){
+      m.classList.remove('open');
+      var t=m.previousElementSibling;
+      if(t)t.setAttribute('aria-expanded','false');
+    });
+  }
+});
+
+/* ── AUTO-LANGUAGE FROM URL PARAM (?lang=fil) ── */
+(function(){
+  var p = new URLSearchParams(window.location.search);
+  if (p.get('lang') === 'fil') setLang('fil');
+})();
+
+/* ── DEEP-LINK ROUTING (e.g. #unit-7 or #unit-7-lesson-5) ──
+   Closes the default-open unit, opens the targeted one, and (if a lesson
+   is named) scrolls to and briefly highlights that specific lesson. */
+(function(){
+  document.querySelectorAll('.lesson-item').forEach(function(item){
+    var subEl = item.querySelector('.lesson-sub');
+    if (!subEl) return;
+    var m = subEl.textContent.match(/Unit\s+(\d+)\s*[·•:.\-]\s*Lesson\s+(\d+)/i);
+    if (!m) return;
+    var lessonId = 'unit-' + m[1] + '-lesson-' + m[2];
+    if (!document.getElementById(lessonId)) item.id = lessonId;
+  });
+
+  if (!document.getElementById('lesson-highlight-style')) {
+    var s = document.createElement('style');
+    s.id = 'lesson-highlight-style';
+    s.textContent =
+      '.lesson-item.is-target{animation:lessonPulse 2.4s ease-out 1;box-shadow:0 0 0 3px rgba(234,88,12,.45);border-radius:8px;}' +
+      '@keyframes lessonPulse{0%{box-shadow:0 0 0 0 rgba(234,88,12,.55);}50%{box-shadow:0 0 0 6px rgba(234,88,12,.25);}100%{box-shadow:0 0 0 3px rgba(234,88,12,.45);}}';
+    document.head.appendChild(s);
+  }
+
+  function applyHashRouting(){
+    var raw = (location.hash || '').replace(/^#/, '');
+    if (!raw) return;
+    var lessonMatch = raw.match(/^unit-(\d+)-lesson-(\d+)$/i);
+    var unitMatch   = raw.match(/^unit-(\d+)$/i);
+    var unitId, lessonId;
+    if (lessonMatch) {
+      unitId   = 'unit-' + lessonMatch[1];
+      lessonId = 'unit-' + lessonMatch[1] + '-lesson-' + lessonMatch[2];
+    } else if (unitMatch) {
+      unitId = 'unit-' + unitMatch[1];
+    } else {
+      return;
+    }
+    var unit = document.getElementById(unitId);
+    if (!unit) return;
+    document.querySelectorAll('.unit-block.open').forEach(function(u){
+      if (u !== unit) u.classList.remove('open');
+    });
+    unit.classList.add('open');
+    document.querySelectorAll('.lesson-item.is-target').forEach(function(li){ li.classList.remove('is-target'); });
+    setTimeout(function(){
+      var headerOffset = 90;
+      var target = lessonId ? document.getElementById(lessonId) : unit;
+      if (!target) target = unit;
+      var top = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+      if (lessonId) {
+        var lessonEl = document.getElementById(lessonId);
+        if (lessonEl) lessonEl.classList.add('is-target');
+      }
+    }, 80);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', applyHashRouting);
+  } else {
+    applyHashRouting();
+  }
+  window.addEventListener('hashchange', applyHashRouting);
+})();
+</script>
+</body>
+</html>

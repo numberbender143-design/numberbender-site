@@ -123,7 +123,7 @@
     .ws-breadcrumb .sep{ margin: 0 8px; color: #cbd5e1; }
     .ws-eyebrow{
       display:inline-flex; align-items:center; gap:8px;
-      color: var(--accent-color); background: var(--accent-bg);
+      color: var(--accent-dark); background: var(--accent-bg);
       padding: 6px 14px; border-radius: 999px;
       font-size: 0.85rem; font-weight: 700; margin-bottom: 14px;
       text-transform: uppercase; letter-spacing: .06em;
@@ -172,7 +172,7 @@
     }
     .ws-card .ws-lesson{
       font-size: 0.78rem; font-weight: 700;
-      color: var(--accent-color); background: var(--accent-bg);
+      color: var(--accent-dark); background: var(--accent-bg);
       padding: 3px 10px; border-radius: 999px;
       text-transform: uppercase; letter-spacing: .06em;
     }
@@ -210,7 +210,7 @@
     .ws-card .ws-btn.primary:hover{ background:#2563EB; color:white; text-decoration:none; }
     .ws-card .ws-btn.download{ background:#F0FDFA; color:#1F6F6B; }
     .ws-card .ws-btn.download:hover{ background:#1F6F6B; color:white; text-decoration:none; }
-    .ws-card .ws-btn.watch{ background:#FEF2F2; color:#dc2626; }
+    .ws-card .ws-btn.watch{ background:#FEF2F2; color:#b91c1c; }
     .ws-card .ws-btn.watch:hover{ background:#dc2626; color:white; text-decoration:none; }
     /* PDF Modal */
     .pdf-modal-overlay{
@@ -349,61 +349,61 @@
     .ws-no-results.visible{display:block;}
   </style>
 </head>
-    <body style="--accent-color: #7c3aed; --accent-bg: rgba(124,58,237,0.10);">
+    <body style="--accent-color: #7c3aed; --accent-bg: rgba(124,58,237,0.10); --accent-dark: #6d28d9">
 
-    <header class="nav">
+    <style>.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}.skip-link:focus{position:fixed;top:0;left:0;width:auto;height:auto;padding:8px 16px;background:#0F2B3D;color:#fff;z-index:9999;font-size:14px;text-decoration:none;border-radius:0 0 4px 0;}</style>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="nav">
   <div class="container nav-inner">
-    <a href="../../../../index.html" class="logo logo-lockup" aria-label="Numberbender — Master the Elements of Math">
+    <a href="/" class="logo logo-lockup" aria-label="Numberbender — Master the Elements of Math">
       <img src="../../../../images/numberbender_banner_only.svg" alt="Numberbender" class="lockup-img">
     </a>
     <button class="menu-toggle" aria-label="Toggle menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
     <nav class="nav-links" id="navlinks">
       <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">For Students <span class="caret" aria-hidden="true">▾</span></button>
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Learn <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
-          <a href="../../../../start-here.html">🎁 Free Starter Lesson</a>
-          <a href="../../../../find-your-course.html">🧭 Find My Course</a>
-          <a href="../../../../courses.html">📚 All Courses</a>
-          <a href="../../../../math-worksheets.html">📝 Free Worksheets</a>
-          <a href="../../../../for-filipino-students.html">🇵🇭 Para sa Filipino Students</a>
+          <a href="/start-here">🎁 Free Starter Lesson</a>
+          <a href="/find-your-course">🧭 Where Do I Start?</a>
+          <a href="/courses">📚 Explore Math Lessons</a>
+          <a href="/math-worksheets">📝 Free Worksheets</a>
+          <a href="/for-filipino-students">🇵🇭 Para sa Filipino Students</a>
         </div>
       </div>
       <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">For Educators <span class="caret" aria-hidden="true">▾</span></button>
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Teach <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
-          <a href="../../../../for-teachers.html">🏫 For Teachers Hub</a>
-          <a href="../../../../teach-it-like-you-stream-it.html">🎬 Teach It Like You Stream It</a>
-          <a href="../../../../teacher-resources.html">📦 Teacher Resources</a>
-          <a href="../../../../math-worksheets.html">📄 Printable Worksheets</a>
+          <a href="/for-teachers">🏫 For Teachers Hub</a>
+          <a href="/teach-the-math">🎓 Teach the Math</a>
+          <a href="/teach-it-like-you-stream-it">🎬 Teach It Like You Stream It</a>
+          <a href="/teacher-resources">📦 Teacher Resources</a>
+          <a href="/math-worksheets">📄 Printable Worksheets</a>
+          <a href="/courses">📚 Lesson &amp; Course Library</a>
         </div>
       </div>
       <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">About Dr. E <span class="caret" aria-hidden="true">▾</span></button>
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">About <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
-          <a href="../../../../about.html">👨‍🏫 About Dr. E</a>
-          <a href="../../../../speaking.html">🎤 Speaking</a>
-          <a href="../../../../press.html">📰 Press &amp; Media</a>
+          <a href="/about">👨‍🏫 About Dr. E</a>
+          <a href="/speaking">🎤 Speaking</a>
+          <a href="/press">📰 Press &amp; Media</a>
+          <a href="/blog">✍️ Blog</a>
+          <a href="/speaking-archive">📅 Past Engagements</a>
         </div>
       </div>
-      <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Blog <span class="caret" aria-hidden="true">▾</span></button>
-        <div class="dropdown-menu">
-          <a href="../../../../blog.html">✍️ Blog Posts</a>
-          <a href="../../../../speaking-archive.html">📅 Past Engagements</a>
-        </div>
-      </div>
-      <a href="../../../../contact.html" class="nav-cta">Contact</a>
+      <a href="/contact" class="nav-cta">Contact</a>
     </nav>
   </div>
 </header>
 
-    <section class="ws-hero">
+    <main id="main-content">
+<section class="ws-hero">
       <div class="container ws-hero-inner">
         <div class="ws-hero-text">
 
         <nav class="ws-breadcrumb" aria-label="Breadcrumb">
-          <a href="../../../../index.html">Home</a><span class="sep">›</span>
-          <a href="../../../../courses.html">Courses</a><span class="sep">›</span>
+          <a href="/">Home</a><span class="sep">›</span>
+          <a href="/courses">Courses</a><span class="sep">›</span>
           <span>Limits (English)</span>
         </nav>
         <span class="ws-eyebrow">Calculus · English</span>
@@ -439,7 +439,7 @@
   <h3>Solving Basic Limits</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/calculus/limits/worksheet-limits-solving-basic.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="worksheet-limits-solving-basic.pdf" data-action="open"
        aria-label="View Solving Basic Limits worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/limits/worksheet-limits-solving-basic.pdf" download
@@ -462,7 +462,7 @@
   <h3>Limits Approaching a Number</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/calculus/limits/worksheet-limits-approaching-a-number.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="worksheet-limits-approaching-a-number.pdf" data-action="open"
        aria-label="View Limits Approaching a Number worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/limits/worksheet-limits-approaching-a-number.pdf" download
@@ -485,7 +485,7 @@
   <h3>Evaluating Limits — Algebraic Techniques</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/calculus/limits/worksheet-limits-algebraic-techniques.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="worksheet-limits-algebraic-techniques.pdf" data-action="open"
        aria-label="View Evaluating Limits — Algebraic Techniques worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/limits/worksheet-limits-algebraic-techniques.pdf" download
@@ -508,7 +508,7 @@
   <h3>Limits to Infinity</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/calculus/limits/worksheet-limits-to-infinity.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="worksheet-limits-to-infinity.pdf" data-action="open"
        aria-label="View Limits to Infinity worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/limits/worksheet-limits-to-infinity.pdf" download
@@ -528,7 +528,7 @@
   <h3>Solving Limits to Infinity</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/calculus/limits/worksheet-limits-solving-to-infinity.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="worksheet-limits-solving-to-infinity.pdf" data-action="open"
        aria-label="View Solving Limits to Infinity worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/limits/worksheet-limits-solving-to-infinity.pdf" download
@@ -551,7 +551,7 @@
   <h3>Limits of Trigonometric Functions</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/calculus/limits/worksheet-limits-of-trig-functions.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="worksheet-limits-of-trig-functions.pdf" data-action="open"
        aria-label="View Limits of Trigonometric Functions worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/limits/worksheet-limits-of-trig-functions.pdf" download
@@ -571,7 +571,7 @@
   <h3>Solving Limits of Trig Functions</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/calculus/limits/worksheet-limits-solving-trig-functions.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="worksheet-limits-solving-trig-functions.pdf" data-action="open"
        aria-label="View Solving Limits of Trig Functions worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/limits/worksheet-limits-solving-trig-functions.pdf" download
@@ -594,7 +594,7 @@
   <h3>L&#x27;Hôpital&#x27;s Rule</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/calculus/limits/worksheet-limits-lhopitals-rule.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="worksheet-limits-lhopitals-rule.pdf" data-action="open"
        aria-label="View L&#x27;Hôpital&#x27;s Rule worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/limits/worksheet-limits-lhopitals-rule.pdf" download
@@ -617,7 +617,8 @@
       </div>
     </section>
 
-    <footer>
+    </main>
+<footer>
   <div class="container">
     <div class="foot-grid">
       <div class="foot foot-brand">
@@ -632,14 +633,15 @@
       </div>
       <div class="foot">
         <h4>Students</h4>
-        <a href="../../../../courses.html">All Courses</a>
+        <a href="/courses">Explore All Subjects</a>
         <a href="../../../../courses.html#algebra-card">Algebra</a>
         <a href="../../../../courses.html#statistics-card">Statistics</a>
-        <a href="../../../../courses.html">Calculus</a>
+        <a href="/courses">Calculus</a>
       </div>
       <div class="foot">
         <h4>Educators</h4>
         <a href="../../../../teach-it-like-you-stream-it.html">Teach It Like You Stream It</a>
+        <a href="../../../../teach-the-math.html">Teach the Math</a>
         <a href="../../../../teacher-resources.html">Teacher Resources</a>
         <a href="../../../../ap-calculus-frq-books.html">AP Calculus FRQ Books</a>
         <a href="../../../../speaking.html">Speaking</a>

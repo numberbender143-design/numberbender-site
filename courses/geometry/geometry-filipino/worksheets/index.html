@@ -75,7 +75,7 @@
     .ws-breadcrumb a{ color:var(--muted); }
     .ws-breadcrumb a:hover{ color:var(--blue); text-decoration:underline; }
     .ws-breadcrumb .sep{ margin:0 8px; color:#cbd5e1; }
-    .ws-eyebrow{ display:inline-flex; align-items:center; gap:8px; color:var(--accent-color); background:var(--accent-bg); padding:6px 14px; border-radius:999px; font-size:0.85rem; font-weight:700; margin-bottom:14px; text-transform:uppercase; letter-spacing:.06em; }
+    .ws-eyebrow{ display:inline-flex; align-items:center; gap:8px; color:var(--accent-dark); background:var(--accent-bg); padding:6px 14px; border-radius:999px; font-size:0.85rem; font-weight:700; margin-bottom:14px; text-transform:uppercase; letter-spacing:.06em; }
     .ws-hero h1{ font-size:clamp(2rem,4.2vw,3rem); line-height:1.1; letter-spacing:-0.02em; font-weight:800; margin-bottom:14px; max-width:900px; }
     .ws-hero h1 .accent{ color:var(--accent-color); }
     .ws-hero .lead{ font-size:1.1rem; color:var(--muted); max-width:720px; margin-bottom:22px; }
@@ -94,7 +94,7 @@
     .ws-card{ background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:22px 22px 20px; display:flex; flex-direction:column; gap:12px; transition:transform .15s ease,box-shadow .15s ease,border-color .15s ease; }
     .ws-card:hover{ transform:translateY(-3px); box-shadow:var(--shadow); border-color:rgba(37,99,235,.25); }
     .ws-card .ws-card-meta{ display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
-    .ws-card .ws-lesson{ font-size:0.78rem; font-weight:700; color:var(--accent-color); background:var(--accent-bg); padding:3px 10px; border-radius:999px; text-transform:uppercase; letter-spacing:.06em; }
+    .ws-card .ws-lesson{ font-size:0.78rem; font-weight:700; color:var(--accent-dark); background:var(--accent-bg); padding:3px 10px; border-radius:999px; text-transform:uppercase; letter-spacing:.06em; }
     .ws-card .ws-diff{ font-size:0.78rem; font-weight:600; color:var(--muted); padding:3px 10px; border-radius:999px; background:#f1f5f9; text-transform:uppercase; letter-spacing:.06em; }
     .ws-card .ws-diff.beg{ background:#dcfce7; color:#15803d; }
     .ws-card .ws-diff.int{ background:#fef9c3; color:#a16207; }
@@ -114,7 +114,7 @@
     .ws-card .ws-btn.primary:hover{ background:#2563EB; color:white; text-decoration:none; }
     .ws-card .ws-btn.download{ background:#F0FDFA; color:#1F6F6B; }
     .ws-card .ws-btn.download:hover{ background:#1F6F6B; color:white; text-decoration:none; }
-    .ws-card .ws-btn.watch{ background:#FEF2F2; color:#dc2626; }
+    .ws-card .ws-btn.watch{ background:#FEF2F2; color:#b91c1c; }
     .ws-card .ws-btn.watch:hover{ background:#dc2626; color:white; text-decoration:none; }
     /* PDF Modal */
     .pdf-modal-overlay{
@@ -194,59 +194,59 @@
     .ws-no-results.visible{display:block;}
   </style>
 </head>
-<body style="--accent-color:#0d9488;--accent-bg:rgba(13,148,136,0.10);">
+<body style="--accent-color:#0d9488;--accent-bg:rgba(13,148,136,0.10); --accent-dark: #115e59">
+<style>.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}.skip-link:focus{position:fixed;top:0;left:0;width:auto;height:auto;padding:8px 16px;background:#0F2B3D;color:#fff;z-index:9999;font-size:14px;text-decoration:none;border-radius:0 0 4px 0;}</style>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="nav">
   <div class="container nav-inner">
-    <a href="../../../../index.html" class="logo logo-lockup" aria-label="Numberbender — Master the Elements of Math">
+    <a href="/" class="logo logo-lockup" aria-label="Numberbender — Master the Elements of Math">
       <img src="../../../../images/numberbender_banner_only.svg" alt="Numberbender" class="lockup-img">
     </a>
     <button class="menu-toggle" aria-label="Toggle menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
     <nav class="nav-links" id="navlinks">
       <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">For Students <span class="caret" aria-hidden="true">▾</span></button>
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Learn <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
-          <a href="../../../../start-here.html">🎁 Free Starter Lesson</a>
-          <a href="../../../../find-your-course.html">🧭 Find My Course</a>
-          <a href="../../../../courses.html">📚 All Courses</a>
-          <a href="../../../../math-worksheets.html">📝 Free Worksheets</a>
-          <a href="../../../../for-filipino-students.html">🇵🇭 Para sa Filipino Students</a>
+          <a href="/start-here">🎁 Free Starter Lesson</a>
+          <a href="/find-your-course">🧭 Where Do I Start?</a>
+          <a href="/courses">📚 Explore Math Lessons</a>
+          <a href="/math-worksheets">📝 Free Worksheets</a>
+          <a href="/for-filipino-students">🇵🇭 Para sa Filipino Students</a>
         </div>
       </div>
       <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">For Educators <span class="caret" aria-hidden="true">▾</span></button>
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Teach <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
-          <a href="../../../../for-teachers.html">🏫 For Teachers Hub</a>
-          <a href="../../../../teach-it-like-you-stream-it.html">🎬 Teach It Like You Stream It</a>
-          <a href="../../../../teacher-resources.html">📦 Teacher Resources</a>
-          <a href="../../../../math-worksheets.html">📄 Printable Worksheets</a>
+          <a href="/for-teachers">🏫 For Teachers Hub</a>
+          <a href="/teach-the-math">🎓 Teach the Math</a>
+          <a href="/teach-it-like-you-stream-it">🎬 Teach It Like You Stream It</a>
+          <a href="/teacher-resources">📦 Teacher Resources</a>
+          <a href="/math-worksheets">📄 Printable Worksheets</a>
+          <a href="/courses">📚 Lesson &amp; Course Library</a>
         </div>
       </div>
       <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">About Dr. E <span class="caret" aria-hidden="true">▾</span></button>
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">About <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
-          <a href="../../../../about.html">👨‍🏫 About Dr. E</a>
-          <a href="../../../../speaking.html">🎤 Speaking</a>
-          <a href="../../../../press.html">📰 Press &amp; Media</a>
+          <a href="/about">👨‍🏫 About Dr. E</a>
+          <a href="/speaking">🎤 Speaking</a>
+          <a href="/press">📰 Press &amp; Media</a>
+          <a href="/blog">✍️ Blog</a>
+          <a href="/speaking-archive">📅 Past Engagements</a>
         </div>
       </div>
-      <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Blog <span class="caret" aria-hidden="true">▾</span></button>
-        <div class="dropdown-menu">
-          <a href="../../../../blog.html">✍️ Blog Posts</a>
-          <a href="../../../../speaking-archive.html">📅 Past Engagements</a>
-        </div>
-      </div>
-      <a href="../../../../contact.html" class="nav-cta">Contact</a>
+      <a href="/contact" class="nav-cta">Contact</a>
     </nav>
   </div>
 </header>
+<main id="main-content">
 <section class="ws-hero">
   <div class="container ws-hero-inner">
     <div class="ws-hero-text">
 
     <nav class="ws-breadcrumb" aria-label="Breadcrumb">
-      <a href="../../../../index.html">Home</a><span class="sep">›</span>
-      <a href="../../../../courses.html">Courses</a><span class="sep">›</span>
+      <a href="/">Home</a><span class="sep">›</span>
+      <a href="/courses">Courses</a><span class="sep">›</span>
       <span>Geometry (Filipino)</span>
     </nav>
     <span class="ws-eyebrow">Geometry · Filipino</span>
@@ -281,7 +281,7 @@
   <h3>Deductive vs. Inductive Reasoning</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/geometry/01-01-geometry-deductive-vs-inductive-reasoning.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="01-01-geometry-deductive-vs-inductive-reasoning.pdf" data-action="open"
        aria-label="View Deductive vs. Inductive Reasoning worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/geometry/01-01-geometry-deductive-vs-inductive-reasoning.pdf" download
@@ -301,7 +301,7 @@
   <h3>Mathematical Systems and Inductive Reasoning</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/geometry/01-02-geometry-mathematical-systems-inductive-reasoning.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="01-02-geometry-mathematical-systems-inductive-reasoning.pdf" data-action="open"
        aria-label="View Mathematical Systems and Inductive Reasoning worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/geometry/01-02-geometry-mathematical-systems-inductive-reasoning.pdf" download
@@ -321,7 +321,7 @@
   <h3>Analytical Thinking, Patterns, and Sequences</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/geometry/01-03-geometry-analytical-thinking-patterns-sequences.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="01-03-geometry-analytical-thinking-patterns-sequences.pdf" data-action="open"
        aria-label="View Analytical Thinking, Patterns, and Sequences worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/geometry/01-03-geometry-analytical-thinking-patterns-sequences.pdf" download
@@ -342,7 +342,7 @@
   <h3>Conditional Statements</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/geometry/01-04-geometry-conditional-statements.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="01-04-geometry-conditional-statements.pdf" data-action="open"
        aria-label="View Conditional Statements worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/geometry/01-04-geometry-conditional-statements.pdf" download
@@ -362,7 +362,7 @@
   <h3>Biconditional Statements</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/geometry/01-05-geometry-biconditional-statements.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="01-05-geometry-biconditional-statements.pdf" data-action="open"
        aria-label="View Biconditional Statements worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/geometry/01-05-geometry-biconditional-statements.pdf" download
@@ -383,7 +383,7 @@
   <h3>Writing Two-Column Proofs</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/geometry/01-06-geometry-writing-two-column-proofs.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="01-06-geometry-writing-two-column-proofs.pdf" data-action="open"
        aria-label="View Writing Two-Column Proofs worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/geometry/01-06-geometry-writing-two-column-proofs.pdf" download
@@ -403,7 +403,7 @@
   <h3>CPCTC and Triangle Congruence Proofs</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/geometry/03-05-geometry-cpctc-triangle-congruence-proofs.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="03-05-geometry-cpctc-triangle-congruence-proofs.pdf" data-action="open"
        aria-label="View CPCTC and Triangle Congruence Proofs worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/geometry/03-05-geometry-cpctc-triangle-congruence-proofs.pdf" download
@@ -423,7 +423,7 @@
   <h3>Hinge Theorem and Converse</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/geometry/03-07-geometry-hinge-theorem-and-converse.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="03-07-geometry-hinge-theorem-and-converse.pdf" data-action="open"
        aria-label="View Hinge Theorem and Converse worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/geometry/03-07-geometry-hinge-theorem-and-converse.pdf" download
@@ -443,7 +443,7 @@
   <h3>Triangle Inequality Proofs and Hinge Theorem</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/geometry/03-08-geometry-triangle-inequality-proofs-hinge-theorem.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="03-08-geometry-triangle-inequality-proofs-hinge-theorem.pdf" data-action="open"
        aria-label="View Triangle Inequality Proofs and Hinge Theorem worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/geometry/03-08-geometry-triangle-inequality-proofs-hinge-theorem.pdf" download
@@ -463,7 +463,7 @@
   <h3>Two-Column Proof — Kite and Trapezoid</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/geometry/05-10-geometry-two-column-proof-kite-and-trapezoid.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="05-10-geometry-two-column-proof-kite-and-trapezoid.pdf" data-action="open"
        aria-label="View Two-Column Proof — Kite and Trapezoid worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/geometry/05-10-geometry-two-column-proof-kite-and-trapezoid.pdf" download
@@ -484,7 +484,7 @@
   <h3>Parallel and Perpendicular Lines</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/geometry/02-01-geometry-parallel-and-perpendicular-lines.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="02-01-geometry-parallel-and-perpendicular-lines.pdf" data-action="open"
        aria-label="View Parallel and Perpendicular Lines worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/geometry/02-01-geometry-parallel-and-perpendicular-lines.pdf" download
@@ -504,7 +504,7 @@
   <h3>Parallel Lines Cut by a Transversal</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/geometry/02-02-geometry-parallel-lines-cut-by-transversal.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="02-02-geometry-parallel-lines-cut-by-transversal.pdf" data-action="open"
        aria-label="View Parallel Lines Cut by a Transversal worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/geometry/02-02-geometry-parallel-lines-cut-by-transversal.pdf" download
@@ -524,7 +524,7 @@
   <h3>Parallel Lines and Transversal</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/geometry/02-03-geometry-parallel-lines-transversal.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="02-03-geometry-parallel-lines-transversal.pdf" data-action="open"
        aria-label="View Parallel Lines and Transversal worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/geometry/02-03-geometry-parallel-lines-transversal.pdf" download
@@ -545,7 +545,7 @@
   <h3>Angle Measures with Intersecting Lines</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/geometry/02-04-geometry-angle-measures-intersecting-lines.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="02-04-geometry-angle-measures-intersecting-lines.pdf" data-action="open"
        aria-label="View Angle Measures with Intersecting Lines worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/geometry/02-04-geometry-angle-measures-intersecting-lines.pdf" download
@@ -565,7 +565,7 @@
   <h3>Angle Bisectors and Perpendicular Bisectors</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/geometry/02-05-geometry-angle-bisectors-perpendicular-bisectors.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="02-05-geometry-angle-bisectors-perpendicular-bisectors.pdf" data-action="open"
        aria-label="View Angle Bisectors and Perpendicular Bisectors worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/geometry/02-05-geometry-angle-bisectors-perpendicular-bisectors.pdf" download
@@ -586,7 +586,7 @@
   <h3>Classifying Triangles and Angle Theorems</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/geometry/03-01-geometry-classifying-triangles-angle-theorems.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="03-01-geometry-classifying-triangles-angle-theorems.pdf" data-action="open"
        aria-label="View Classifying Triangles and Angle Theorems worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/geometry/03-01-geometry-classifying-triangles-angle-theorems.pdf" download
@@ -606,7 +606,7 @@
   <h3>Triangle Inequalities and Theorems</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/geometry/03-06-geometry-triangle-inequalities-and-theorems.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="03-06-geometry-triangle-inequalities-and-theorems.pdf" data-action="open"
        aria-label="View Triangle Inequalities and Theorems worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/geometry/03-06-geometry-triangle-inequalities-and-theorems.pdf" download
@@ -627,7 +627,7 @@
   <h3>Triangle Congruence — SSS and SAS</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/geometry/03-02-geometry-triangle-congruence-sss-sas.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="03-02-geometry-triangle-congruence-sss-sas.pdf" data-action="open"
        aria-label="View Triangle Congruence — SSS and SAS worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/geometry/03-02-geometry-triangle-congruence-sss-sas.pdf" download
@@ -647,7 +647,7 @@
   <h3>Triangle Congruence — ASA and AAS</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/geometry/03-03-geometry-triangle-congruence-asa-aas.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="03-03-geometry-triangle-congruence-asa-aas.pdf" data-action="open"
        aria-label="View Triangle Congruence — ASA and AAS worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/geometry/03-03-geometry-triangle-congruence-asa-aas.pdf" download
@@ -667,7 +667,7 @@
   <h3>Congruency — Triangles and Polygons</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/geometry/03-04-geometry-congruency-triangles-and-polygons.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="03-04-geometry-congruency-triangles-and-polygons.pdf" data-action="open"
        aria-label="View Congruency — Triangles and Polygons worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/geometry/03-04-geometry-congruency-triangles-and-polygons.pdf" download
@@ -688,7 +688,7 @@
   <h3>Determining Similarity in Polygons</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/geometry/04-01-geometry-determining-similarity-in-polygons.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="04-01-geometry-determining-similarity-in-polygons.pdf" data-action="open"
        aria-label="View Determining Similarity in Polygons worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/geometry/04-01-geometry-determining-similarity-in-polygons.pdf" download
@@ -708,7 +708,7 @@
   <h3>Similarity in Polygons</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/geometry/04-02-geometry-similarity-in-polygons.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="04-02-geometry-similarity-in-polygons.pdf" data-action="open"
        aria-label="View Similarity in Polygons worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/geometry/04-02-geometry-similarity-in-polygons.pdf" download
@@ -728,7 +728,7 @@
   <h3>Proving Triangle Similarity</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/geometry/04-03-geometry-proving-triangle-similarity.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="04-03-geometry-proving-triangle-similarity.pdf" data-action="open"
        aria-label="View Proving Triangle Similarity worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/geometry/04-03-geometry-proving-triangle-similarity.pdf" download
@@ -748,7 +748,7 @@
   <h3>Similarity in Right Triangles and Geometric Mean</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/geometry/04-04-geometry-similarity-right-triangles-geometric-mean.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="04-04-geometry-similarity-right-triangles-geometric-mean.pdf" data-action="open"
        aria-label="View Similarity in Right Triangles and Geometric Mean worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/geometry/04-04-geometry-similarity-right-triangles-geometric-mean.pdf" download
@@ -769,7 +769,7 @@
   <h3>Ratio, Proportion, and Similarity</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/geometry/04-05-geometry-ratio-proportion-similarity.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="04-05-geometry-ratio-proportion-similarity.pdf" data-action="open"
        aria-label="View Ratio, Proportion, and Similarity worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/geometry/04-05-geometry-ratio-proportion-similarity.pdf" download
@@ -789,7 +789,7 @@
   <h3>Proportion Properties</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/geometry/04-06-geometry-proportion-properties.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="04-06-geometry-proportion-properties.pdf" data-action="open"
        aria-label="View Proportion Properties worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/geometry/04-06-geometry-proportion-properties.pdf" download
@@ -810,7 +810,7 @@
   <h3>Parallelogram Properties</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/geometry/05-01-geometry-parallelogram-properties.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="05-01-geometry-parallelogram-properties.pdf" data-action="open"
        aria-label="View Parallelogram Properties worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/geometry/05-01-geometry-parallelogram-properties.pdf" download
@@ -830,7 +830,7 @@
   <h3>Solving Parallelograms</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/geometry/05-02-geometry-solving-parallelograms.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="05-02-geometry-solving-parallelograms.pdf" data-action="open"
        aria-label="View Solving Parallelograms worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/geometry/05-02-geometry-solving-parallelograms.pdf" download
@@ -850,7 +850,7 @@
   <h3>Solving Parallelograms Vol. 2</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/geometry/05-03-geometry-solving-parallelograms-vol2.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="05-03-geometry-solving-parallelograms-vol2.pdf" data-action="open"
        aria-label="View Solving Parallelograms Vol. 2 worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/geometry/05-03-geometry-solving-parallelograms-vol2.pdf" download
@@ -870,7 +870,7 @@
   <h3>Conditions for a Parallelogram</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/geometry/05-04-geometry-conditions-for-a-parallelogram.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="05-04-geometry-conditions-for-a-parallelogram.pdf" data-action="open"
        aria-label="View Conditions for a Parallelogram worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/geometry/05-04-geometry-conditions-for-a-parallelogram.pdf" download
@@ -891,7 +891,7 @@
   <h3>Square, Rhombus, and Rectangle</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/geometry/05-05-geometry-square-rhombus-rectangle.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="05-05-geometry-square-rhombus-rectangle.pdf" data-action="open"
        aria-label="View Square, Rhombus, and Rectangle worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/geometry/05-05-geometry-square-rhombus-rectangle.pdf" download
@@ -912,7 +912,7 @@
   <h3>Trapezoids</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/geometry/05-06-geometry-trapezoids.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="05-06-geometry-trapezoids.pdf" data-action="open"
        aria-label="View Trapezoids worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/geometry/05-06-geometry-trapezoids.pdf" download
@@ -932,7 +932,7 @@
   <h3>Trapezoid Midsegment</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/geometry/05-07-geometry-trapezoid-midsegment.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="05-07-geometry-trapezoid-midsegment.pdf" data-action="open"
        aria-label="View Trapezoid Midsegment worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/geometry/05-07-geometry-trapezoid-midsegment.pdf" download
@@ -953,7 +953,7 @@
   <h3>Trapezoid Midsegment and Kite</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/geometry/05-08-geometry-trapezoid-midsegment-and-kite.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="05-08-geometry-trapezoid-midsegment-and-kite.pdf" data-action="open"
        aria-label="View Trapezoid Midsegment and Kite worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/geometry/05-08-geometry-trapezoid-midsegment-and-kite.pdf" download
@@ -974,7 +974,7 @@
   <h3>Kites</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/geometry/05-09-geometry-kites.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="05-09-geometry-kites.pdf" data-action="open"
        aria-label="View Kites worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/geometry/05-09-geometry-kites.pdf" download
@@ -995,7 +995,7 @@
   <h3>Circles, Chords, Arcs, and Central Angles</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/geometry/06-01-geometry-circles-chords-arcs-central-angles.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="06-01-geometry-circles-chords-arcs-central-angles.pdf" data-action="open"
        aria-label="View Circles, Chords, Arcs, and Central Angles worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/geometry/06-01-geometry-circles-chords-arcs-central-angles.pdf" download
@@ -1016,7 +1016,7 @@
   <h3>Trig Word Problems — Right Triangles</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/geometry/07-01-geometry-trig-word-problems-right-triangles.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="07-01-geometry-trig-word-problems-right-triangles.pdf" data-action="open"
        aria-label="View Trig Word Problems — Right Triangles worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/geometry/07-01-geometry-trig-word-problems-right-triangles.pdf" download
@@ -1037,7 +1037,7 @@
   <h3>Solving Oblique Triangles — Law of Cosines</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/geometry/07-02-geometry-solving-oblique-triangles-law-of-cosines.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="07-02-geometry-solving-oblique-triangles-law-of-cosines.pdf" data-action="open"
        aria-label="View Solving Oblique Triangles — Law of Cosines worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/geometry/07-02-geometry-solving-oblique-triangles-law-of-cosines.pdf" download
@@ -1058,7 +1058,7 @@
   <h3>Word Problems — Law of Sines</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/geometry/07-03-geometry-word-problems-law-of-sines.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="07-03-geometry-word-problems-law-of-sines.pdf" data-action="open"
        aria-label="View Word Problems — Law of Sines worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/geometry/07-03-geometry-word-problems-law-of-sines.pdf" download
@@ -1079,6 +1079,7 @@
     </div>
   </div>
 </section>
+</main>
 <footer>
   <div class="container">
     <div class="foot-grid">
@@ -1094,7 +1095,7 @@
       </div>
       <div class="foot">
         <h4>Students</h4>
-        <a href="../../../../courses.html">All Courses</a>
+        <a href="/courses">Explore All Subjects</a>
         <a href="../../../../courses.html#algebra-card">Algebra</a>
         <a href="../../../../courses.html#precalculus-card">Precalculus</a>
         <a href="../../../../courses.html#geometry-card">Geometry</a>
@@ -1102,6 +1103,7 @@
       <div class="foot">
         <h4>Educators</h4>
         <a href="../../../../teach-it-like-you-stream-it.html">Teach It Like You Stream It</a>
+        <a href="../../../../teach-the-math.html">Teach the Math</a>
         <a href="../../../../teacher-resources.html">Teacher Resources</a>
         <a href="../../../../ap-calculus-frq-books.html">AP Calculus FRQ Books</a>
         <a href="../../../../speaking.html">Speaking</a>

@@ -94,8 +94,8 @@
     text-decoration: none !important; }
   .btn:hover{ transform: translateY(-2px); box-shadow: var(--shadow); }
   .btn-primary{ background: var(--blue); color: white; }
-  .btn-cyan{ background: var(--cyan); color: white; }
-  .btn-cyan:hover{ background: #0891b2; }
+  .btn-cyan{ background: #0e7490; color: white; }
+  .btn-cyan:hover{ background: #155e75; }
   .btn-yellow{ background: var(--yellow); color: var(--navy); }
   .btn-red{ background: #ff0000; color: white; }
   .btn-red:hover{ background: #cc0000; }
@@ -538,6 +538,7 @@
   .socials a[aria-label="Facebook"]:hover{ background: #1877f2; }
   .socials a[aria-label="LinkedIn"]:hover{ background: #0a66c2; }
   .foot-bottom{ border-top: 1px solid #1e293b; padding-top: 20px; text-align: center; font-size: 0.88rem; }
+  .foot-bottom a{ color: #94a3b8; text-decoration: underline; }
 
   /* RESPONSIVE */
   @media (max-width: 900px){
@@ -554,6 +555,45 @@
   }
   @media (max-width: 600px){
     section{ padding: 50px 0; } .foot-grid{ grid-template-columns: 1fr; }
+  }
+
+  /* VIDEO MODAL */
+  .vid-modal-overlay{
+    display: none;
+    position: fixed; inset: 0; z-index: 9000;
+    background: rgba(0,0,0,.85);
+    align-items: center; justify-content: center;
+    padding: 20px;
+  }
+  .vid-modal-overlay.open{ display: flex; }
+  .vid-modal{
+    position: relative;
+    width: min(960px, 100%);
+    aspect-ratio: 16/9;
+    background: #000;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 40px 100px rgba(0,0,0,.6);
+  }
+  .vid-modal iframe{
+    width: 100%; height: 100%; border: 0; display: block;
+  }
+  .vid-modal-close{
+    position: absolute; top: -48px; right: 0;
+    background: rgba(255,255,255,.15);
+    border: 1.5px solid rgba(255,255,255,.3);
+    color: white; font-size: 1.3rem;
+    width: 40px; height: 40px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; transition: background .15s ease;
+    line-height: 1;
+  }
+  .vid-modal-close:hover{ background: rgba(255,255,255,.3); }
+
+  /* make ep-thumb clickable as a button */
+  .ep-thumb-btn{
+    display: block; width: 100%; padding: 0; border: none;
+    background: none; cursor: pointer; text-align: left;
   }
 
   /* Header lockup (full Numberbender mark + wordmark + tagline SVG) */
@@ -662,7 +702,7 @@
   }
   .foot-signup-form button:hover{ background: #0891b2; }
 
-</style>
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}.skip-link:focus{position:fixed;top:0;left:0;width:auto;height:auto;padding:8px 16px;background:#0F2B3D;color:#fff;z-index:9999;font-size:14px;text-decoration:none;border-radius:0 0 4px 0;}</style>
 
 <script type="application/ld+json">
 {
@@ -708,6 +748,8 @@
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
 
 <!-- NAV -->
 <header class="nav">
@@ -718,43 +760,41 @@
     <button class="menu-toggle" aria-label="Toggle menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
         <nav class="nav-links" id="navlinks">
       <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">For Students <span class="caret" aria-hidden="true">▾</span></button>
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Learn <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
-          <a href="start-here.html">🎁 Free Starter Lesson</a>
-          <a href="find-your-course.html">🧭 Find My Course</a>
-          <a href="courses.html">📚 All Courses</a>
-          <a href="math-worksheets.html">📝 Free Worksheets</a>
-          <a href="for-filipino-students.html">🇵🇭 Para sa Filipino Students</a>
+          <a href="/start-here">🎁 Free Starter Lesson</a>
+          <a href="/find-your-course">🧭 Where Do I Start?</a>
+          <a href="/courses">📚 Explore Math Lessons</a>
+          <a href="/math-worksheets">📝 Free Worksheets</a>
+          <a href="/for-filipino-students">🇵🇭 Para sa Filipino Students</a>
         </div>
       </div>
       <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">For Educators <span class="caret" aria-hidden="true">▾</span></button>
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Teach <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
-          <a href="for-teachers.html">🏫 For Teachers Hub</a>
-          <a href="teach-it-like-you-stream-it.html">🎬 Teach It Like You Stream It</a>
-          <a href="teacher-resources.html">📦 Teacher Resources</a>
-          <a href="math-worksheets.html">📄 Printable Worksheets</a>
+          <a href="/for-teachers">🏫 For Teachers Hub</a>
+          <a href="/teach-the-math">🎓 Teach the Math</a>
+          <a href="/teach-it-like-you-stream-it">🎬 Teach It Like You Stream It</a>
+          <a href="/teacher-resources">📦 Teacher Resources</a>
+          <a href="/math-worksheets">📄 Printable Worksheets</a>
+          <a href="/courses">📚 Lesson &amp; Course Library</a>
         </div>
       </div>
       <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">About Dr. E <span class="caret" aria-hidden="true">▾</span></button>
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">About <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
-          <a href="about.html">👨‍🏫 About Dr. E</a>
-          <a href="speaking.html">🎤 Speaking</a>
-          <a href="press.html">📰 Press &amp; Media</a>
+          <a href="/about">👨‍🏫 About Dr. E</a>
+          <a href="/speaking">🎤 Speaking</a>
+          <a href="/press">📰 Press &amp; Media</a>
+          <a href="/blog">✍️ Blog</a>
+          <a href="/speaking-archive">📅 Past Engagements</a>
         </div>
       </div>
-      <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Blog <span class="caret" aria-hidden="true">▾</span></button>
-        <div class="dropdown-menu">
-          <a href="blog.html">✍️ Blog Posts</a>
-          <a href="speaking-archive.html">📅 Past Engagements</a>
-        </div>
-      </div>
-      <a href="contact.html" class="nav-cta">Contact</a>
+      <a href="/contact" class="nav-cta">Contact</a>
     </nav>
   </div>
 </header>
+<main id="main-content">
 
 <!-- HERO -->
 <section class="page-hero">
@@ -815,13 +855,13 @@
 
       <!-- START HERE -->
       <article class="ep-card">
-        <a href="https://youtu.be/5WLu5kFdthQ" target="_blank" rel="noopener">
+        <button class="ep-thumb-btn" onclick="openVideoModal('5WLu5kFdthQ')" aria-label="Play Start Here episode">
           <div class="ep-thumb">
             <img src="https://img.youtube.com/vi/5WLu5kFdthQ/hqdefault.jpg" alt="Start Here episode thumbnail">
             <div class="ep-num start">★ Start Here</div>
             <div class="ep-play"><div class="pi">▶</div></div>
           </div>
-        </a>
+        </button>
         <div class="ep-body">
           <h3>Start Here: Teach It Like You Stream It</h3>
           <p>The series intro — what this is, who it's for, and why your online classroom needs streamer-style energy.</p>
@@ -831,13 +871,13 @@
 
       <!-- EP 1 -->
       <article class="ep-card">
-        <a href="https://youtu.be/f27lqgAJoDE" target="_blank" rel="noopener">
+        <button class="ep-thumb-btn" onclick="openVideoModal('f27lqgAJoDE')" aria-label="Play Episode 1">
           <div class="ep-thumb">
             <img src="https://img.youtube.com/vi/f27lqgAJoDE/hqdefault.jpg" alt="Episode 1 thumbnail">
             <div class="ep-num">Episode 1</div>
             <div class="ep-play"><div class="pi">▶</div></div>
           </div>
-        </a>
+        </button>
         <div class="ep-body">
           <h3>Why Your Zoom Feels Boring</h3>
           <p>The hidden reasons online classes lose energy fast — and how to diagnose what's killing engagement in yours.</p>
@@ -847,13 +887,13 @@
 
       <!-- EP 2 -->
       <article class="ep-card">
-        <a href="https://youtu.be/52TBV0og3nw" target="_blank" rel="noopener">
+        <button class="ep-thumb-btn" onclick="openVideoModal('52TBV0og3nw')" aria-label="Play Episode 2">
           <div class="ep-thumb">
             <img src="https://img.youtube.com/vi/52TBV0og3nw/hqdefault.jpg" alt="Episode 2 thumbnail">
             <div class="ep-num">Episode 2</div>
             <div class="ep-play"><div class="pi">▶</div></div>
           </div>
-        </a>
+        </button>
         <div class="ep-body">
           <h3>The 3-Layer Rule for Engaging Online Teaching</h3>
           <p>A simple framework — voice, visual, and interaction — that transforms how students experience your class.</p>
@@ -863,13 +903,13 @@
 
       <!-- EP 3 -->
       <article class="ep-card">
-        <a href="https://youtu.be/9SLA6G9l1qU" target="_blank" rel="noopener">
+        <button class="ep-thumb-btn" onclick="openVideoModal('9SLA6G9l1qU')" aria-label="Play Episode 3">
           <div class="ep-thumb">
             <img src="https://img.youtube.com/vi/9SLA6G9l1qU/hqdefault.jpg" alt="Episode 3 thumbnail">
             <div class="ep-num">Episode 3</div>
             <div class="ep-play"><div class="pi">▶</div></div>
           </div>
-        </a>
+        </button>
         <div class="ep-body">
           <h3>Make Student Thinking Visible Online</h3>
           <p>Practical techniques to surface how students are thinking — even when you can't read the room.</p>
@@ -879,13 +919,13 @@
 
       <!-- EP 4 -->
       <article class="ep-card">
-        <a href="https://youtu.be/q3OHN_TafqU" target="_blank" rel="noopener">
+        <button class="ep-thumb-btn" onclick="openVideoModal('q3OHN_TafqU')" aria-label="Play Episode 4">
           <div class="ep-thumb">
             <img src="https://img.youtube.com/vi/q3OHN_TafqU/hqdefault.jpg" alt="Episode 4 thumbnail">
             <div class="ep-num">Episode 4</div>
             <div class="ep-play"><div class="pi">▶</div></div>
           </div>
-        </a>
+        </button>
         <div class="ep-body">
           <h3>Build Trust and Presence on Zoom</h3>
           <p>How to show up authentically on camera — small shifts that make students feel seen and connected.</p>
@@ -895,13 +935,13 @@
 
       <!-- EP 5 -->
       <article class="ep-card">
-        <a href="https://youtu.be/m-NcSqXCI18" target="_blank" rel="noopener">
+        <button class="ep-thumb-btn" onclick="openVideoModal('m-NcSqXCI18')" aria-label="Play Episode 5">
           <div class="ep-thumb">
             <img src="https://img.youtube.com/vi/m-NcSqXCI18/hqdefault.jpg" alt="Episode 5 thumbnail">
             <div class="ep-num">Episode 5</div>
             <div class="ep-play"><div class="pi">▶</div></div>
           </div>
-        </a>
+        </button>
         <div class="ep-body">
           <h3>Turn Zoom Into a Studio Workflow</h3>
           <p>Tools, layouts, and habits that turn your Zoom room into a creator-grade teaching studio.</p>
@@ -1088,7 +1128,7 @@
           Watch a quick preview from a TILYSI workshop session. The same energy and clarity Dr. E
           brings on YouTube is exactly what you'll get in a live faculty workshop or PD session.
         </p>
-        <a href="speaking.html" class="btn btn-cyan">Book a workshop for your school →</a>
+        <a href="/speaking" class="btn btn-cyan">Book a workshop for your school →</a>
       </div>
       <div class="workshop-clip-video">
         <div onclick="var f=document.createElement('iframe');f.src='https://www.youtube.com/embed/OZRmNV7C5bY?autoplay=1';f.allow='autoplay;encrypted-media;picture-in-picture';f.allowFullscreen=true;f.style.cssText='width:100%;height:100%;border:0;display:block;';this.innerHTML='';this.appendChild(f);" style="cursor:pointer;position:relative;width:100%;height:100%;">
@@ -1131,12 +1171,13 @@
     <p>Subscribe on YouTube to follow new episodes, or book Dr. E for a faculty workshop at your school or conference.</p>
     <div class="final-ctas">
       <a href="https://www.youtube.com/@numberbender" target="_blank" rel="noopener" class="btn btn-red btn-lg">▶ Subscribe on YouTube</a>
-      <a href="speaking.html" class="btn btn-yellow btn-lg">Book a Workshop</a>
+      <a href="/speaking" class="btn btn-yellow btn-lg">Book a Workshop</a>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
+</main>
 <footer>
   <div class="container">
     <div class="foot-grid">
@@ -1167,33 +1208,34 @@
 </div>
       <div class="foot">
         <h4>Students</h4>
-        <a href="courses.html">All Courses</a>
-        <a href="courses.html#algebra-card">Algebra</a>
-        <a href="courses.html#statistics-card">Statistics</a>
-        <a href="courses.html">Calculus</a>
+        <a href="/courses">Explore All Subjects</a>
+        <a href="subjects/algebra/">Algebra</a>
+        <a href="subjects/statistics/">Statistics</a>
+        <a href="/courses">Calculus</a>
       </div>
       <div class="foot">
         <h4>Educators</h4>
-        <a href="teach-it-like-you-stream-it.html">Teach It Like You Stream It</a>
-        <a href="teacher-resources.html">Teacher Resources</a>
-        <a href="speaking.html">Workshops</a>
-        <a href="speaking.html">AI in Education</a>
-        <a href="speaking.html">Flipped Learning</a>
+        <a href="/teach-it-like-you-stream-it">Teach It Like You Stream It</a>
+        <a href="/teach-the-math">Teach the Math</a>
+        <a href="/teacher-resources">Teacher Resources</a>
+        <a href="/speaking">Workshops</a>
+        <a href="/speaking">AI in Education</a>
+        <a href="/speaking">Flipped Learning</a>
       </div>
       <div class="foot">
         <h4>Connect</h4>
-        <a href="about.html">About Dr. E</a>
-        <a href="speaking.html">Speaking</a>
-        <a href="speaking-archive.html">Speaking Archive</a>
-        <a href="press.html">Press &amp; Media</a>
-        <a href="contact.html">Contact</a>
+        <a href="/about">About Dr. E</a>
+        <a href="/speaking">Speaking</a>
+        <a href="/speaking-archive">Speaking Archive</a>
+        <a href="/press">Press &amp; Media</a>
+        <a href="/contact">Contact</a>
         <a href="https://www.youtube.com/@numberbender" target="_blank" rel="noopener">YouTube Channel</a>
-        <a href="privacy.html">Privacy Policy</a>
+        <a href="/privacy">Privacy Policy</a>
       </div>
     </div>
     <div class="foot-bottom">
-      © 2026 Numberbender · Founded by Dr. Peter Esperanza · Numberbender Inc. is a 501(c)(3) nonprofit organization · EIN: 86-2952520 · Made with care for learners and educators everywhere. · <a href="privacy.html" style="color:#94a3b8;">Privacy Policy</a>
-      <div style="margin-top:8px;font-size:0.78rem;color:#64748b;">
+      © 2026 Numberbender · Founded by Dr. Peter Esperanza · Numberbender Inc. is a 501(c)(3) nonprofit organization · EIN: 86-2952520 · Made with care for learners and educators everywhere. · <a href="/privacy" style="color:#94a3b8;">Privacy Policy</a>
+      <div style="margin-top:8px;font-size:0.78rem;color:#94a3b8;">
         <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener"><img src="https://licensebuttons.net/l/by/4.0/88x31.png" alt="CC BY 4.0" style="border:0;vertical-align:middle;margin-right:6px;"></a>
         Original content licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener" style="color:#94a3b8;">CC BY 4.0</a> &mdash; free to share and adapt with credit to Peter Esperanza / Numberbender.
       </div>
@@ -1252,6 +1294,26 @@
 </script>
 
 <script>
+  // Video modal
+  function openVideoModal(videoId) {
+    var modal = document.getElementById('vidModal');
+    var frame = document.getElementById('vidModalFrame');
+    frame.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0';
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeVideoModal(e) {
+    if (e && e.target !== document.getElementById('vidModal')) return;
+    var modal = document.getElementById('vidModal');
+    var frame = document.getElementById('vidModalFrame');
+    modal.classList.remove('open');
+    frame.src = '';
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeVideoModal(null);
+  });
+
   // GA4 event tracking: email signups + outbound clicks
   document.querySelectorAll('form').forEach(function(form) {
     if (form.querySelector('input[type="email"]')) {
@@ -1268,10 +1330,18 @@
 </script>
 
 
+<!-- VIDEO MODAL -->
+<div class="vid-modal-overlay" id="vidModal" role="dialog" aria-modal="true" aria-label="Video player" onclick="closeVideoModal(event)">
+  <div class="vid-modal">
+    <button class="vid-modal-close" onclick="closeVideoModal(null)" aria-label="Close video">✕</button>
+    <iframe id="vidModalFrame" src="" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen title="Episode video"></iframe>
+  </div>
+</div>
+
 <!-- ── Numberbender Sticky Bar — Back to School June 2026 ── -->
 <div id="nb-sticky-bar">
   <p>🇵🇭 Philippine schools open in June! Get FREE bilingual math worksheets:</p>
-  <input type="email" id="nb-email-input" placeholder="your@email.com" autocomplete="email" />
+  <input type="email" id="nb-email-input" placeholder="your@email.com" autocomplete="email" aria-label="Email address" />
   <button class="nb-submit" onclick="nbSubmit()">Get Free Worksheets →</button>
   <button class="nb-close" onclick="nbDismiss()" aria-label="Close">✕</button>
 </div>

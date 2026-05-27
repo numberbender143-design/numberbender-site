@@ -1,1733 +1,1019 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-P1M2WZD840"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-P1M2WZD840');
 </script>
-
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Free Math Courses | Algebra, Calculus & More | Numberbender</title>
-<meta name="description" content="Free online math video lessons for students — Algebra, Precalculus, Calculus, Statistics & more in English and Filipino. By Dr. Peter Esperanza." />
-<!-- SEO: Canonical + Open Graph + Twitter Card -->
-<link rel="canonical" href="https://numberbender.com/courses" />
-<meta property="og:type" content="website" />
-<meta property="og:title" content="Math Courses by Dr. E — Algebra, Calculus, Statistics & More | Numberbender" />
-<meta property="og:description" content="Free curriculum-based math video lessons in English and Filipino — Algebra, Statistics, Calculus, Precalculus, Geometry, Discrete Math, and Linear Algebra. Taught by Dr. Peter Esperanza." />
-<meta property="og:url" content="https://numberbender.com/courses" />
-<meta property="og:site_name" content="Numberbender" />
-<meta property="og:image" content="https://numberbender.com/images/dr-e-hero.jpg" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:site" content="@numberbender" />
-<meta name="twitter:title" content="Math Courses by Dr. E — Algebra, Calculus, Statistics & More | Numberbender" />
-<meta name="twitter:description" content="Free curriculum-based math video lessons in English and Filipino — Algebra, Statistics, Calculus, Precalculus, Geometry, Discrete Math, and Linear Algebra. Taught by Dr. Peter Esperanza." />
-<meta name="twitter:image" content="https://numberbender.com/images/dr-e-hero.jpg" />
-
-<!-- Favicon (Numberbender brand by Claude Design) -->
-<link rel="icon" type="image/svg+xml" href="images/exports/numberbender-favicon.svg">
-<link rel="icon" type="image/png" sizes="32x32" href="images/exports/png/favicon-32.png">
-<link rel="icon" type="image/png" sizes="180x180" href="images/exports/png/favicon-180.png">
-<link rel="apple-touch-icon" sizes="180x180" href="images/exports/png/favicon-180.png">
-
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Free Math Courses &amp; Lessons | Algebra, Calculus &amp; More | Numberbender</title>
+<meta name="description" content="Free math courses and video lessons — Algebra, Precalculus, Calculus, Statistics and more — in English and Filipino. 10 subjects, full 15-week classroom courses, and a free worksheet for every lesson. By Dr. E."/>
+<link rel="canonical" href="https://numberbender.com/courses"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Free Math Courses &amp; Lessons — Algebra to Calculus, EN &amp; Filipino | Numberbender"/>
+<meta property="og:description" content="10 math subjects, 59 units, and full 15-week college algebra courses — all free, taught by Dr. E."/>
+<meta property="og:url" content="https://numberbender.com/courses"/>
+<meta property="og:site_name" content="Numberbender"/>
+<meta property="og:image" content="https://numberbender.com/images/dr-e-hero.jpg"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Free Math Courses &amp; Lessons — Algebra to Calculus, EN &amp; Filipino | Numberbender"/>
+<meta name="twitter:description" content="10 math subjects, 59 units, and full 15-week college algebra courses — all free, taught by Dr. E."/>
+<meta name="twitter:image" content="https://numberbender.com/images/dr-e-hero.jpg"/>
+<link rel="icon" type="image/svg+xml" href="/images/exports/numberbender-favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/exports/png/favicon-32.png">
+<link rel="icon" type="image/png" sizes="180x180" href="/images/exports/png/favicon-180.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/exports/png/favicon-180.png">
 <meta name="theme-color" content="#1F6F6B">
 <style>
   :root{
-    --navy:#0F172A;
-    --blue:#2563EB;
-    --yellow:#FACC15;
-    --cyan:#06B6D4;
-    --green:#22C55E;
-    --bg:#F8FAFC;
-    --surface:#FFFFFF;
-    --muted:#64748B;
-    --border:#E2E8F0;
-    --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
-    --shadow-lg: 0 20px 50px rgba(15, 23, 42, 0.12);
-    --radius: 16px;
+    --navy:#0F172A; --blue:#2563EB; --blue-light:#EFF6FF; --blue-mid:#93C5FD;
+    --teal:#1F6F6B; --teal-light:#E1F5EE; --teal-mid:#5DCAA5; --teal-dark:#085041;
+    --yellow:#FACC15; --bg:#F8FAFC; --surface:#FFFFFF;
+    --muted:#64748B; --border:#E2E8F0;
+    --radius:16px; --shadow:0 10px 30px rgba(15,23,42,0.08);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Inter",Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--navy);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;}
+  a{color:var(--teal);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  img{max-width:100%;display:block;}
+  .container{width:min(1100px,92%);margin-inline:auto;}
+
+  /* NAV */
+  .nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.92);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid var(--border);}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0;}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.15rem;color:var(--navy);text-decoration:none;}
+  .logo-lockup{padding:0;}
+  .logo-lockup .lockup-img{height:52px;width:auto;display:block;max-width:280px;}
+  .menu-toggle{display:none;background:none;border:none;cursor:pointer;font-size:1.4rem;color:var(--navy);}
+  .nav-links{display:flex;gap:22px;align-items:center;flex-wrap:nowrap;}
+  .nav-links a,.nav-links .dropdown-trigger{color:var(--navy);font-weight:500;font-size:0.95rem;white-space:nowrap;}
+  .nav-links a:hover{color:var(--blue);text-decoration:none;}
+  .nav-links a.active{color:var(--blue);}
+  .nav-cta{background:var(--navy);color:white!important;padding:9px 16px;border-radius:10px;font-weight:600;}
+  .nav-cta:hover{background:var(--blue);text-decoration:none!important;}
+  .nav-dropdown{position:relative;}
+  .nav-dropdown .dropdown-trigger{background:none;border:none;padding:0;margin:0;font:inherit;color:var(--navy);font-weight:500;font-size:0.95rem;cursor:pointer;display:inline-flex;align-items:center;gap:4px;transition:color .15s ease;}
+  .nav-dropdown .dropdown-trigger:hover{color:var(--blue);}
+  .nav-dropdown .caret{font-size:0.75em;display:inline-block;transition:transform .2s ease;}
+  .nav-dropdown:hover .caret,.nav-dropdown .dropdown-trigger[aria-expanded="true"] .caret{transform:rotate(180deg);}
+  .nav-dropdown .dropdown-menu{position:absolute;top:100%;left:0;margin-top:10px;background:white;border:1px solid var(--border);border-radius:14px;padding:6px;box-shadow:0 20px 50px rgba(15,23,42,.12);min-width:240px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .15s ease,transform .15s ease,visibility .15s ease;z-index:100;}
+  .nav-dropdown .dropdown-menu::before{content:'';position:absolute;top:-10px;left:0;right:0;height:10px;}
+  .nav-dropdown:hover .dropdown-menu,.nav-dropdown .dropdown-menu.open{opacity:1;visibility:visible;transform:translateY(0);}
+  .nav-dropdown .dropdown-menu a{display:block;padding:10px 14px;border-radius:8px;color:var(--navy);font-weight:500;font-size:0.95rem;}
+  .nav-dropdown .dropdown-menu a:hover{background:rgba(37,99,235,.08);color:var(--blue);text-decoration:none;}
+  @media(max-width:900px){
+    .menu-toggle{display:block;}
+    .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:white;flex-direction:column;padding:18px;border-bottom:1px solid var(--border);gap:14px;}
+    .nav-links.open{display:flex;}
+    .nav-dropdown{width:100%;}
+    .nav-dropdown .dropdown-trigger{width:100%;justify-content:space-between;padding:6px 0;}
+    .nav-dropdown .dropdown-menu{position:static;box-shadow:none;border:none;padding:0 0 4px 14px;margin-top:0;min-width:0;opacity:1;visibility:visible;transform:none;display:none;background:transparent;}
+    .nav-dropdown:hover .dropdown-menu{display:none;}
+    .nav-dropdown .dropdown-menu.open{display:block;}
+    .logo-lockup .lockup-img{height:44px;max-width:220px;}
   }
 
-  *{ box-sizing: border-box; margin:0; padding:0; }
-  html{ scroll-behavior:smooth; }
-  body{
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", Roboto, "Helvetica Neue", Arial, sans-serif;
-    color: var(--navy);
-    background: var(--bg);
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-  }
-  a{ color: var(--blue); text-decoration:none; }
-  a:hover{ text-decoration: underline; }
-  img{ max-width:100%; display:block; }
+  /* PAGE HERO */
+  .page-hero{background:var(--navy);padding:56px 0 48px;color:white;text-align:center;}
+  .page-hero .eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.1);color:#94a3b8;padding:6px 14px;border-radius:999px;font-size:0.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:16px;}
+  .page-hero h1{font-size:clamp(2rem,4vw,2.8rem);font-weight:800;letter-spacing:-0.02em;margin-bottom:12px;}
+  .page-hero p{font-size:1.05rem;color:#94a3b8;max-width:560px;margin:0 auto 28px;}
+  .hero-counts{display:inline-flex;gap:0;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);border-radius:12px;overflow:hidden;}
+  .hero-count{padding:14px 24px;text-align:center;border-right:1px solid rgba(255,255,255,0.1);}
+  .hero-count:last-child{border-right:none;}
+  .hero-count .n{font-size:1.5rem;font-weight:800;color:white;display:block;}
+  .hero-count .l{font-size:0.78rem;color:#94a3b8;font-weight:500;}
 
-  .container{
-    width: min(1200px, 92%);
-    margin-inline: auto;
-  }
+  /* SECTION DIVIDERS */
+  .track-section{padding:64px 0;}
+  .track-header{display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:36px;}
+  .track-label{display:inline-flex;align-items:center;gap:8px;font-size:0.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:999px;margin-bottom:10px;}
+  .track-label.blue{background:var(--blue-light);color:var(--blue);}
+  .track-label.teal{background:var(--teal-light);color:var(--teal-dark);}
+  .track-title{font-size:clamp(1.5rem,3vw,2rem);font-weight:800;margin-bottom:6px;}
+  .track-sub{color:var(--muted);font-size:0.95rem;max-width:520px;}
 
-  /* ========== NAVIGATION ========== */
-  .nav{
-    position: sticky; top: 0; z-index: 50;
-    background: rgba(255,255,255,0.92);
-    backdrop-filter: saturate(180%) blur(10px);
-    border-bottom: 1px solid var(--border);
-  }
-  .nav-inner{
-    display:flex; align-items:center; justify-content:space-between;
-    padding: 14px 0;
-  }
-  .logo{
-    display:flex; align-items:center; gap:10px;
-    font-weight: 800; font-size: 1.15rem; color: var(--navy);
-  }
-  .logo-mark{
-    width: 56px; height: 56px; border-radius: 12px;
-    background: transparent;
-    display: grid; place-items: center;
-    color: white; font-weight: 800; font-size: 1rem;
-    overflow: hidden;
-  }
-  .nav-links{ display:flex; gap: 22px; align-items:center; }
-  .nav-links a{ color: var(--navy); font-weight: 500; font-size: 0.95rem; }
-  .nav-links a:hover{ color: var(--blue); text-decoration: none; }
-  .nav-links a.active{ color: var(--blue); }
-  .nav-cta{
-    background: var(--navy); color: white !important;
-    padding: 9px 16px; border-radius: 10px; font-weight: 600;
-  }
-  .nav-cta:hover{ background: var(--blue); text-decoration: none; }
-  .menu-toggle{
-    display:none; background:none; border:none; cursor:pointer;
-    font-size: 1.4rem; color: var(--navy);
-  }
+  /* LANGUAGE TOGGLE */
+  .lang-toggle{display:flex;align-items:center;gap:8px;background:var(--surface);border:1.5px solid var(--border);border-radius:10px;padding:4px;flex-shrink:0;}
+  .lang-btn{padding:6px 14px;border-radius:7px;font-size:0.85rem;font-weight:700;cursor:pointer;border:none;background:transparent;color:var(--muted);transition:all .15s;}
+  .lang-btn.active{background:var(--blue);color:white;}
 
-  /* ========== BUTTONS ========== */
-  .btn{
-    display:inline-flex; align-items:center; justify-content:center; gap:8px;
-    padding: 13px 22px; border-radius: 12px;
-    font-weight: 600; font-size: 1rem;
-    cursor: pointer; border: 2px solid transparent;
-    transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
-    text-decoration: none !important;
-  }
-  .btn:hover{ transform: translateY(-2px); box-shadow: var(--shadow); }
-  .btn-primary{ background: var(--blue); color: white; }
-  .btn-primary:hover{ background: #1d4ed8; }
-  .btn-yellow{ background: var(--yellow); color: var(--navy); }
-  .btn-yellow:hover{ background: #eab308; }
-  .btn-cyan{ background: var(--cyan); color: white; }
-  .btn-cyan:hover{ background: #0891b2; }
-  .btn-red{ background: #ff0000; color: white; }
-  .btn-red:hover{ background: #cc0000; }
-  .btn-outline{ background: transparent; color: var(--navy); border: 2px solid var(--border); }
-  .btn-outline:hover{ border-color: var(--blue); color: var(--blue); }
-  .btn-lg{ padding: 16px 28px; font-size: 1.05rem; }
+  /* SUBJECT GRID */
+  .subject-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;}
+  .subject-card{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);padding:24px;display:flex;flex-direction:column;gap:14px;transition:all .2s ease;cursor:pointer;text-decoration:none;color:inherit;}
+  .subject-card:hover{border-color:var(--blue);box-shadow:var(--shadow);transform:translateY(-2px);text-decoration:none;}
+  .subject-icon{width:56px;height:56px;border-radius:14px;overflow:hidden;flex-shrink:0;box-shadow:0 2px 8px rgba(0,0,0,0.14);}
+  .subject-icon img{width:100%;height:100%;object-fit:cover;display:block;}
+  .subject-name{font-size:1.05rem;font-weight:700;color:var(--navy);}
+  .subject-meta{display:flex;gap:8px;flex-wrap:wrap;}
+  .subject-tag{font-size:0.75rem;font-weight:600;padding:3px 9px;border-radius:999px;background:var(--bg);border:1px solid var(--border);color:var(--muted);}
+  .subject-arrow{margin-top:auto;font-size:0.85rem;font-weight:700;color:var(--blue);display:flex;align-items:center;gap:4px;}
+  .subject-card.coming .subject-icon{opacity:.5;}
+  .subject-card.coming .subject-name{color:var(--muted);}
+  .subject-card.coming:hover{border-color:var(--border);box-shadow:none;transform:none;cursor:default;}
+  .subject-card.coming .subject-arrow{color:var(--muted);}
 
-  /* ========== PAGE HEADER ========== */
-  .page-hero{
-    padding: 70px 0 40px;
-    background:
-      radial-gradient(900px 400px at 90% 0%, rgba(6,182,212,.18), transparent 60%),
-      radial-gradient(700px 400px at 0% 0%, rgba(37,99,235,.13), transparent 60%),
-      linear-gradient(180deg, #ffffff 0%, var(--bg) 100%);
-    text-align: center;
-  }
-  .page-hero .eyebrow{
-    display:inline-flex; align-items:center; gap:8px;
-    background: rgba(37,99,235,.1); color: var(--blue);
-    padding: 6px 14px; border-radius: 999px;
-    font-size: 0.85rem; font-weight: 600; margin-bottom: 18px;
-  }
-  .page-hero h1{
-    font-size: clamp(2rem, 4.2vw, 3.2rem);
-    line-height: 1.1; letter-spacing: -0.02em;
-    font-weight: 800; margin-bottom: 16px;
-  }
-  .page-hero h1 .accent{ color: var(--blue); }
-  .page-hero p.lead{
-    font-size: 1.15rem; color: var(--muted);
-    max-width: 660px; margin: 0 auto 26px;
-  }
-  .page-hero .meta{
-    display:inline-flex; gap: 18px; flex-wrap:wrap; justify-content:center;
-    color: var(--muted); font-size: 0.95rem;
-    background: var(--surface); border: 1px solid var(--border);
-    padding: 10px 20px; border-radius: 999px;
-  }
-  .page-hero .meta strong{ color: var(--navy); }
+  /* DIVIDER */
+  .section-divider{border:none;border-top:2px solid var(--border);margin:0;}
 
-  /* ========== FEATURED VIDEO ========== */
-  .featured{
-    padding: 30px 0 60px;
-  }
-  .video-frame{
-    max-width: 960px; margin: 0 auto;
-    border-radius: 20px; overflow: hidden;
-    box-shadow: var(--shadow-lg);
-    background: #000;
-    aspect-ratio: 16 / 9;
-  }
-  .video-frame iframe,
-  .video-frame video{
-    width: 100%; height: 100%; border: 0; display:block;
-    object-fit: cover;
-  }
+  /* COURSE CARDS */
+  .course-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;}
+  .course-card{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:all .2s ease;}
+  .course-card:hover{box-shadow:var(--shadow);transform:translateY(-2px);}
+  .course-card.coming{opacity:0.65;}
+  .course-card.coming:hover{box-shadow:none;transform:none;}
+  .course-card-top{padding:24px 24px 20px;background:linear-gradient(135deg,#085041,#1F6F6B);color:white;position:relative;}
+  .course-card-top.blue-top{background:linear-gradient(135deg,#1d4ed8,#1e40af,#2563EB);}
+  .course-card-top.blue-top .badge{color:#BFDBFE;}
+  .course-card-top.purple-top{background:linear-gradient(135deg,#4c1d95,#5b21b6,#7c3aed);}
+  .course-card-top.purple-top .badge{color:#DDD6FE;}
+  .course-card-top .badge{font-size:0.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#9FE1CB;margin-bottom:10px;display:block;}
+  .course-card-top h3{font-size:1.2rem;font-weight:800;margin-bottom:4px;}
+  .course-card-top .tagline{font-size:0.85rem;color:rgba(255,255,255,0.75);}
+  .course-card-top .coming-ribbon{position:absolute;top:16px;right:16px;background:rgba(255,255,255,0.15);color:rgba(255,255,255,0.8);font-size:0.72rem;font-weight:700;padding:4px 10px;border-radius:999px;letter-spacing:.06em;text-transform:uppercase;}
+  .course-card-body{padding:20px 24px;}
+  .course-stat-row{display:flex;gap:20px;margin-bottom:16px;}
+.course-stat .val{font-size:1.2rem;font-weight:800;color:var(--navy);}
+  .course-stat .lbl{font-size:0.75rem;color:var(--muted);font-weight:500;}
+  .course-cta{display:block;text-align:center;padding:11px;background:var(--teal-dark);color:white;border-radius:10px;font-weight:700;font-size:0.9rem;transition:background .15s;text-decoration:none;}
+  .course-cta:hover{background:var(--teal);text-decoration:none;color:white;}
+  .course-cta.blue{background:#1e40af;}.course-cta.blue:hover{background:#2563EB;}
+  .course-cta.purple{background:#5b21b6;}.course-cta.purple:hover{background:#7C3AED;}
+  .course-cta.disabled{background:var(--border);color:var(--muted);cursor:not-allowed;pointer-events:none;}
 
-  /* ========== WHERE TO START ========== */
-  .start-guide{
-    padding: 60px 0;
-    background: var(--surface);
-  }
-  .start-grid{
-    display:grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
-    margin-top: 40px;
-  }
-  .start-card{
-    background: var(--bg);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 24px;
-    transition: transform .15s ease, box-shadow .15s ease;
-  }
-  .start-card:hover{ transform: translateY(-3px); box-shadow: var(--shadow); }
-  .start-card .badge{
-    display:inline-block;
-    background: rgba(250,204,21,.25);
-    color: #92400e;
-    font-size: 0.78rem; font-weight: 700;
-    padding: 4px 10px; border-radius: 999px;
-    margin-bottom: 10px;
-    text-transform: uppercase; letter-spacing: .06em;
-  }
-  .start-card h3{ font-size: 1.1rem; margin-bottom: 8px; }
-  .start-card p{ font-size: 0.95rem; color: var(--muted); margin-bottom: 14px; }
-  .start-card .start-link{ font-weight: 600; color: var(--blue); }
+  /* FOOTER */
+  footer{background:var(--navy);color:#94a3b8;padding:60px 0 30px;}
+  .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px;}
+  .foot h4{color:white;font-size:0.95rem;font-weight:700;margin-bottom:14px;}
+  .foot a{display:block;color:#94a3b8;font-size:0.9rem;margin-bottom:8px;}
+  .foot a:hover{color:white;text-decoration:none;}
+  .foot-brand p{font-size:0.9rem;line-height:1.7;margin-top:12px;}
+  .foot-bottom{border-top:1px solid #1e293b;padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:0.85rem;}
+  .foot-bottom a{ color: #94a3b8; text-decoration: underline; }
+  .foot-logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.15rem;color:white;}
+  .foot-logo-mark{width:48px;height:48px;border-radius:10px;display:grid;place-items:center;overflow:hidden;}
 
-  /* ========== SECTION BASE ========== */
-  section{ padding: 70px 0; }
-  .section-head{
-    text-align: center; max-width: 720px;
-    margin: 0 auto 40px;
-  }
-  .section-eyebrow{
-    text-transform: uppercase; letter-spacing: .12em;
-    font-size: 0.8rem; font-weight: 700;
-    color: var(--blue); margin-bottom: 12px;
-  }
-  .section-head h2{
-    font-size: clamp(1.8rem, 3.2vw, 2.4rem);
-    line-height: 1.2; margin-bottom: 12px;
-  }
-  .section-head p{ color: var(--muted); font-size: 1.05rem; }
+  /* CROSS-SUBJECT SEARCH */
+  .subject-search-wrap{position:relative;margin-bottom:24px;}
+  .subject-search-icon{position:absolute;left:16px;top:50%;transform:translateY(-50%);font-size:1.05rem;pointer-events:none;}
+  .subject-search-input{width:100%;padding:14px 48px 14px 46px;border:2px solid var(--border);border-radius:12px;font-size:1rem;background:var(--surface);color:var(--navy);outline:none;transition:border-color .2s,box-shadow .2s;font-family:inherit;}
+  .subject-search-input:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(37,99,235,0.12);}
+  .subject-search-input::placeholder{color:var(--muted);}
+  .subject-search-clear{position:absolute;right:14px;top:50%;transform:translateY(-50%);width:28px;height:28px;border:none;background:var(--border);border-radius:50%;cursor:pointer;display:none;place-items:center;font-size:0.85rem;color:var(--muted);transition:background .2s,color .2s;}
+  .subject-search-clear:hover{background:var(--blue);color:white;}
+  .subject-search-clear.visible{display:grid;}
+  .subject-search-status{font-size:0.85rem;color:var(--muted);margin-bottom:16px;min-height:1.3em;}
+  .subject-search-status strong{color:var(--blue);}
+  .subject-search-no-results{display:none;text-align:center;padding:48px 20px;color:var(--muted);}
+  .subject-search-no-results.visible{display:block;}
+  .subject-card.search-dim{opacity:0.22;pointer-events:none;}
+  .subject-card.search-match{border-color:var(--blue);box-shadow:0 0 0 3px rgba(37,99,235,0.10);}
+  .subject-card.search-hidden{display:none;}
 
-  /* ========== LANGUAGE TOGGLE ========== */
-  .lang-toggle{
-    display:flex; justify-content:center; gap: 8px;
-    margin-bottom: 36px;
-  }
-  .lang-btn{
-    background: var(--surface); border: 2px solid var(--border);
-    padding: 8px 18px; border-radius: 999px;
-    font-weight: 600; cursor: pointer;
-    color: var(--navy); font-size: 0.95rem;
-    transition: all .15s ease;
-  }
-  .lang-btn:hover{ border-color: var(--blue); color: var(--blue); }
-  .lang-btn.active{
-    background: var(--blue); color: white; border-color: var(--blue);
-  }
-
-  /* ========== COURSES GRID ========== */
-  .courses-grid{
-    display:grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-  }
-  .course-card{
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    overflow: hidden;
-    transition: transform .2s ease, box-shadow .2s ease;
-    display: flex; flex-direction: column;
-  }
-  .course-card.hidden{ display: none; }
-  .course-card:hover{ transform: translateY(-4px); box-shadow: var(--shadow-lg); }
-  .course-thumb{
-    aspect-ratio: 16 / 9;
-    position: relative; overflow: hidden;
-    background: linear-gradient(135deg, #2563EB, #06B6D4);
-  }
-  .course-thumb img{
-    width: 100%; height: 100%;
-    object-fit: cover; display: block;
-    transition: transform .3s ease;
-  }
-  .course-card:hover .course-thumb img{ transform: scale(1.04); }
-  .course-thumb .thumb-fallback{
-    position: absolute; inset: 0;
-    display:grid; place-items:center;
-    font-size: 4rem;
-    color: rgba(255,255,255,.85);
-    filter: drop-shadow(0 8px 16px rgba(0,0,0,.25));
-    z-index: 0;
-  }
-  .course-thumb img{ position: relative; z-index: 1; }
-  .course-thumb img:not([src]){ display: none; }
-  .course-thumb img.failed{ display: none; }
-  .course-thumb .thumb-link{
-    position: absolute; inset: 0;
-    z-index: 3;
-    display: block;
-    background: transparent;
-  }
-  .course-thumb .play-overlay{
-    position: absolute; inset: 0;
-    display:grid; place-items:center;
-    background: linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0,0,0,.35) 100%);
-    z-index: 2;
-    transition: background .15s ease;
-  }
-  .course-card:hover .play-overlay{
-    background: linear-gradient(180deg, rgba(0,0,0,.15) 0%, rgba(0,0,0,.5) 100%);
-  }
-  .play-overlay .play-icon{
-    width: 64px; height: 64px;
-    background: rgba(255,0,0,.92);
-    border-radius: 50%;
-    display:grid; place-items:center;
-    color: white; font-size: 1.6rem;
-    box-shadow: 0 10px 30px rgba(0,0,0,.4);
-    transform: scale(.85);
-    transition: transform .15s ease;
-  }
-  .course-card:hover .play-icon{ transform: scale(1); }
-  .lang-tag{
-    position: absolute; top: 12px; right: 12px;
-    background: rgba(0,0,0,.65);
-    color: white; font-size: 0.72rem; font-weight: 700;
-    padding: 4px 10px; border-radius: 999px;
-    backdrop-filter: blur(6px);
-    letter-spacing: .04em;
-  }
-  .course-body{
-    padding: 20px 22px 22px;
-    display:flex; flex-direction: column; flex: 1;
-  }
-  .course-subject{
-    font-size: 0.78rem; font-weight: 700;
-    color: var(--blue);
-    text-transform: uppercase; letter-spacing: .08em;
-    margin-bottom: 6px;
-  }
-  .course-card h3{
-    font-size: 1.15rem; margin-bottom: 8px; line-height: 1.3;
-  }
-  .course-card p{
-    color: var(--muted); font-size: 0.93rem;
-    margin-bottom: 16px; flex: 1;
-  }
-  .course-card .btn{
-    width: 100%; padding: 11px 16px; font-size: 0.95rem;
-  }
-  /* Course outcomes block */
-  .course-outcomes{
-    background: #f8fafc;
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 12px 14px;
-    margin-bottom: 14px;
-    font-size: 0.85rem;
-  }
-  .course-outcomes-title{
-    font-weight: 700;
-    color: var(--navy);
-    font-size: 0.78rem;
-    text-transform: uppercase;
-    letter-spacing: .06em;
-    margin-bottom: 8px;
-    display: flex; align-items: center; gap: 6px;
-  }
-  .course-outcomes ul{
-    list-style: none;
-    padding: 0; margin: 0;
-  }
-  .course-outcomes li{
-    display: flex; align-items: flex-start; gap: 8px;
-    padding: 3px 0;
-    color: #334155;
-    line-height: 1.4;
-  }
-  .course-outcomes li::before{
-    content: "✓";
-    flex-shrink: 0;
-    width: 16px; height: 16px;
-    border-radius: 50%;
-    background: rgba(34,197,94,.15);
-    color: var(--green);
-    display: grid; place-items: center;
-    font-weight: 700; font-size: 0.7rem;
-    margin-top: 2px;
-  }
-
-  /* Subject gradient fallbacks (used while thumbnails load or if they fail) */
-
-  /* New subject color accents */
-  .course-card.trigonometry .course-thumb{ background: linear-gradient(135deg, #f97316, #ec4899); }
-  .course-card.trigonometry .course-subject{ color: #db2777; }
-  .course-card.anageom .course-thumb{ background: linear-gradient(135deg, #06B6D4, #2563EB); }
-  .course-card.anageom .course-subject{ color: #0891b2; }
-  .course-card.logs .course-thumb{ background: linear-gradient(135deg, #7c3aed, #ec4899); }
-  .course-card.logs .course-subject{ color: #7c3aed; }
-  .course-card.minute .course-thumb{ background: linear-gradient(135deg, #FACC15, #f97316); }
-  .course-card.minute .course-subject{ color: #b45309; }
-
-    .course-card.algebra .course-thumb{ background: linear-gradient(135deg, #2563EB, #06B6D4); }
-  .course-card.statistics .course-thumb{ background: linear-gradient(135deg, #06B6D4, #22C55E); }
-  .course-card.calculus .course-thumb{ background: linear-gradient(135deg, #7c3aed, #2563EB); }
-  .course-card.precalculus .course-thumb{ background: linear-gradient(135deg, #f97316, #FACC15); }
-  .course-card.geometry .course-thumb{ background: linear-gradient(135deg, #22C55E, #06B6D4); }
-  .course-card.discrete .course-thumb{ background: linear-gradient(135deg, #ec4899, #7c3aed); }
-  .course-card.linear .course-thumb{ background: linear-gradient(135deg, #0F172A, #2563EB); }
-
-  /* Subject color accents */
-  .course-card.algebra .course-subject{ color: #2563EB; }
-  .course-card.statistics .course-subject{ color: #06B6D4; }
-  .course-card.calculus .course-subject{ color: #7c3aed; }
-  .course-card.precalculus .course-subject{ color: #b45309; }
-  .course-card.geometry .course-subject{ color: #15803d; }
-  .course-card.discrete .course-subject{ color: #db2777; }
-  .course-card.linear .course-subject{ color: #0F172A; }
-
-  /* ========== SUBSCRIBE CTA ========== */
-  .subscribe-cta{
-    background:
-      radial-gradient(800px 400px at 80% 0%, rgba(255,0,0,.18), transparent 60%),
-      radial-gradient(800px 400px at 20% 100%, rgba(6,182,212,.18), transparent 60%),
-      linear-gradient(135deg, var(--navy) 0%, #1e293b 100%);
-    color: white; text-align: center;
-  }
-  .subscribe-cta h2{
-    font-size: clamp(1.8rem, 3.4vw, 2.5rem);
-    margin-bottom: 14px;
-  }
-  .subscribe-cta p{
-    color: #cbd5e1; max-width: 580px;
-    margin: 0 auto 28px; font-size: 1.08rem;
-  }
-  .yt-icon{
-    display:inline-grid; place-items:center;
-    width: 28px; height: 28px;
-    background: white; color: #ff0000;
-    border-radius: 6px; font-size: 0.9rem; font-weight: 800;
-    margin-right: 4px;
-  }
-
-  /* ========== FOOTER ========== */
-  footer{
-    background: #0b1220; color: #94a3b8;
-    padding: 50px 0 24px;
-  }
-  .foot-grid{
-    display:grid;
-    grid-template-columns: 1.4fr 1fr 1fr 1fr;
-    gap: 32px; margin-bottom: 32px;
-  }
-  .foot h4{
-    color: white; margin-bottom: 14px;
-    font-size: 0.95rem; letter-spacing: .05em;
-    text-transform: uppercase;
-  }
-  .foot a{
-    color: #94a3b8; display: block;
-    padding: 4px 0; font-size: 0.95rem;
-  }
-  .foot a:hover{ color: white; text-decoration: none; }
-  .foot-brand p{ margin-top: 12px; font-size: 0.95rem; }
-  .footer-tagline{
-    color: var(--cyan);
-    font-style: italic;
-    font-weight: 600;
-    margin-top: 8px !important;
-    font-size: 0.95rem !important;
-  }
-
-  .socials{ display:flex; gap: 10px; margin-top: 14px; }
-  .socials a{
-    width: 38px; height: 38px;
-    border-radius: 10px;
-    background: #1e293b;
-    display: inline-flex; align-items: center; justify-content: center;
-    color: white;
-    transition: background .15s ease, transform .15s ease;
-  }
-  .socials a:hover{ transform: translateY(-2px); }
-  .socials a svg{ display: block; }
-  /* Brand colors on hover */
-  .socials a[aria-label="YouTube"]:hover{ background: #ff0000; }
-  .socials a[aria-label="TikTok"]:hover{ background: #000000; }
-  .socials a[aria-label="Facebook"]:hover{ background: #1877f2; }
-  .socials a[aria-label="LinkedIn"]:hover{ background: #0a66c2; }
-  .foot-bottom{
-    border-top: 1px solid #1e293b;
-    padding-top: 20px; text-align: center;
-    font-size: 0.88rem;
-  }
-
-  /* ========== RESPONSIVE ========== */
-  @media (max-width: 900px){
-    .courses-grid{ grid-template-columns: repeat(2, 1fr); }
-    .start-grid{ grid-template-columns: 1fr; }
-    .foot-grid{ grid-template-columns: 1fr 1fr; }
-    .nav-links{
-      display:none; position: absolute; top: 100%; left:0; right:0;
-      background: white; flex-direction: column;
-      padding: 18px; border-bottom: 1px solid var(--border);
-      gap: 14px;
-    }
-    .nav-links.open{ display:flex; }
-    .menu-toggle{ display:block; }
-  }
-  @media (max-width: 600px){
-    .courses-grid{ grid-template-columns: 1fr; }
-    .foot-grid{ grid-template-columns: 1fr; }
-    section{ padding: 50px 0; }
-  }
-
-  /* Header lockup (full Numberbender mark + wordmark + tagline SVG) */
-  .logo-lockup{ padding: 0; }
-  .logo-lockup .lockup-img{
-    height: 100px; width: auto; display: block;
-    max-width: 360px;
-  }
-  @media (max-width: 900px){
-    .logo-lockup .lockup-img{ height: 82px; max-width: 360px; }
-  }
-  @media (max-width: 600px){
-    .logo-lockup .lockup-img{ height: 68px; max-width: 300px; }
-  }
-
-  /* ===== Dropdown nav (added for consolidation) ===== */
-  .nav-links{ flex-wrap: nowrap; }
-  .nav-links a, .nav-links .dropdown-trigger{ white-space: nowrap; }
-  .nav-dropdown{ position: relative; }
-  .nav-dropdown .dropdown-trigger{
-    background: none; border: none; padding: 0; margin: 0;
-    font: inherit; color: var(--navy); font-weight: 500; font-size: 0.95rem;
-    cursor: pointer; display: inline-flex; align-items: center; gap: 4px;
-    transition: color .15s ease;
-  }
-  .nav-dropdown .dropdown-trigger:hover{ color: var(--blue); }
-  .nav-dropdown .caret{
-    font-size: 0.75em; display: inline-block;
-    transition: transform .2s ease;
-  }
-  .nav-dropdown:hover .caret,
-  .nav-dropdown .dropdown-trigger[aria-expanded="true"] .caret{ transform: rotate(180deg); }
-  .nav-dropdown .dropdown-menu{
-    position: absolute; top: 100%; left: 0;
-    margin-top: 10px;
-    background: white;
-    border: 1px solid var(--border); border-radius: 14px;
-    padding: 6px;
-    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
-    min-width: 240px;
-    opacity: 0; visibility: hidden;
-    transform: translateY(-6px);
-    transition: opacity .15s ease, transform .15s ease, visibility .15s ease;
-    z-index: 100;
-  }
-  .nav-dropdown .dropdown-menu::before{
-    content: ''; position: absolute; top: -10px; left: 0; right: 0; height: 10px;
-  }
-  .nav-dropdown:hover .dropdown-menu,
-  .nav-dropdown .dropdown-menu.open{
-    opacity: 1; visibility: visible; transform: translateY(0);
-  }
-  .nav-dropdown .dropdown-menu a{
-    display: block;
-    padding: 10px 14px;
-    border-radius: 8px;
-    color: var(--navy);
-    font-weight: 500; font-size: 0.95rem;
-  }
-  .nav-dropdown .dropdown-menu a:hover{
-    background: rgba(37,99,235,.08);
-    color: var(--blue);
-    text-decoration: none;
-  }
-  @media (max-width: 900px){
-    .nav-dropdown{ width: 100%; }
-    .nav-dropdown .dropdown-trigger{ width: 100%; justify-content: space-between; padding: 6px 0; }
-    .nav-dropdown .dropdown-menu{
-      position: static;
-      box-shadow: none; border: none;
-      padding: 0 0 4px 14px;
-      margin-top: 0;
-      min-width: 0;
-      opacity: 1; visibility: visible; transform: none;
-      display: none;
-      background: transparent;
-    }
-    .nav-dropdown:hover .dropdown-menu{ display: none; }
-    .nav-dropdown .dropdown-menu.open{ display: block; }
-  }
-
-
-  /* Footer compact email signup */
-  .foot-signup-block{ margin-top: 18px; }
-  .foot-signup-block label{
-    display:block; font-size: 0.8rem; color: #cbd5e1;
-    margin-bottom: 8px; font-weight: 600;
-  }
-  .foot-signup-form{ display:flex; gap: 8px; max-width: 320px; }
-  .foot-signup-form input[type="email"]{
-    flex: 1; min-width: 0;
-    padding: 10px 12px; border-radius: 8px;
-    border: 1px solid #334155;
-    background: #0f172a; color: white;
-    font-size: 0.9rem; font-family: inherit;
-  }
-  .foot-signup-form input[type="email"]::placeholder{ color: #64748b; }
-  .foot-signup-form input[type="email"]:focus{ outline: none; border-color: #06B6D4; }
-  .foot-signup-form button{
-    background: #06B6D4; color: white;
-    border: none; padding: 10px 14px;
-    border-radius: 8px; font-weight: 600;
-    font-size: 0.9rem; cursor: pointer;
-    transition: background .15s ease;
-    white-space: nowrap;
-  }
-  .foot-signup-form button:hover{ background: #0891b2; }
-
-
-  /* ===== Course card CTA row (Watch + Worksheets) ===== */
-  .card-cta-row{
-    display:flex; gap: 8px; margin-top: auto;
-  }
-  .card-cta-row .btn{
-    flex: 1; width: auto;
-    padding: 11px 12px; font-size: 0.92rem;
-  }
-  .card-cta-row .btn-img{
-    flex: 0 0 auto; padding: 0; background: none; border: none; box-shadow: none;
-  }
-  .card-cta-row .btn-img img{
-    height: 52px; width: auto; display: block;
-  }
-  @media (max-width: 420px){
-    .card-cta-row{ flex-direction: column; }
-  }
-
-  /* ===== AP FRQ featured card (full-width banner) ===== */
-  .frq-featured-card{
-    grid-column: 1 / -1;
-    background: linear-gradient(135deg, #7c3aed 0%, #2563EB 100%);
-    color: white;
-    border-radius: var(--radius);
-    padding: 32px;
-    display: grid; grid-template-columns: 1.5fr 1fr; gap: 28px;
-    align-items: center;
-    box-shadow: var(--shadow-lg);
-    position: relative;
-    overflow: hidden;
-  }
-  .frq-featured-card::before{
-    content: ""; position: absolute; right: -40px; top: -40px;
-    width: 240px; height: 240px; border-radius: 50%;
-    background: rgba(255,255,255,.06);
-    pointer-events: none;
-  }
-  .frq-featured-card .frq-eyebrow{
-    display:inline-block; background: rgba(255,255,255,.15);
-    color: #fde68a; padding: 5px 12px; border-radius: 999px;
-    font-size: 0.78rem; font-weight: 700;
-    text-transform: uppercase; letter-spacing: .08em;
-    margin-bottom: 14px;
-  }
-  .frq-featured-card h3{
-    font-size: clamp(1.3rem, 2.4vw, 1.8rem);
-    line-height: 1.2; margin-bottom: 10px;
-    color: white;
-  }
-  .frq-featured-card p{
-    color: rgba(255,255,255,.88);
-    font-size: 0.98rem;
-    margin-bottom: 18px;
-  }
-  .frq-featured-card .frq-actions{ display:flex; gap: 10px; flex-wrap: wrap; }
-  .frq-featured-card .btn-primary{
-    background: white; color: var(--navy);
-  }
-  .frq-featured-card .btn-primary:hover{ background: #fef9c3; }
-  .frq-featured-card .btn-outline{
-    background: transparent; color: white; border-color: rgba(255,255,255,.5);
-  }
-  .frq-featured-card .btn-outline:hover{ background: rgba(255,255,255,.1); color: white; border-color: white; }
-  .frq-featured-card .frq-illust{
-    text-align: center; position: relative; z-index: 1;
-  }
-  .frq-featured-card .frq-illust .frq-glyph{
-    font-size: 4.5rem; line-height: 1;
-    color: rgba(255,255,255,.92);
-    filter: drop-shadow(0 8px 16px rgba(0,0,0,.25));
-    margin-bottom: 10px;
-  }
-  .frq-featured-card .frq-stats{
-    display:inline-flex; gap: 18px;
-    background: rgba(255,255,255,.12);
-    padding: 12px 18px; border-radius: 14px;
-    font-size: 0.88rem; color: white;
-  }
-  .frq-featured-card .frq-stats strong{ display:block; font-size: 1.1rem; }
-  @media (max-width: 900px){
-    .frq-featured-card{ grid-template-columns: 1fr; text-align: center; }
-    .frq-featured-card .frq-actions{ justify-content: center; }
-  }
-</style>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  "name": "Math Courses by Dr. E \u2014 Numberbender",
-  "url": "https://numberbender.com/courses",
-  "description": "Free curriculum-based math video courses by Dr. Peter Esperanza, covering Algebra through Linear Algebra.",
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "item": { "@type": "Course", "name": "Algebra", "url": "https://numberbender.com/courses#algebra", "description": "Free Algebra video lessons by Dr. Peter Esperanza \u2014 covering linear equations, functions, systems, and more.", "provider": { "@type": "Organization", "name": "Numberbender", "url": "https://numberbender.com" }, "instructor": { "@type": "Person", "name": "Dr. Peter Esperanza" }, "isAccessibleForFree": true, "inLanguage": ["en", "fil"] } },
-    { "@type": "ListItem", "position": 2, "item": { "@type": "Course", "name": "Statistics", "url": "https://numberbender.com/courses#statistics", "description": "Free Statistics video lessons by Dr. Peter Esperanza \u2014 AP Statistics, data analysis, probability, and inference.", "provider": { "@type": "Organization", "name": "Numberbender", "url": "https://numberbender.com" }, "instructor": { "@type": "Person", "name": "Dr. Peter Esperanza" }, "isAccessibleForFree": true, "inLanguage": ["en", "fil"] } },
-    { "@type": "ListItem", "position": 3, "item": { "@type": "Course", "name": "Precalculus", "url": "https://numberbender.com/courses#precalculus", "description": "Free Precalculus video lessons by Dr. Peter Esperanza \u2014 trigonometry, conic sections, sequences, and more.", "provider": { "@type": "Organization", "name": "Numberbender", "url": "https://numberbender.com" }, "instructor": { "@type": "Person", "name": "Dr. Peter Esperanza" }, "isAccessibleForFree": true, "inLanguage": ["en", "fil"] } },
-    { "@type": "ListItem", "position": 4, "item": { "@type": "Course", "name": "Calculus", "url": "https://numberbender.com/courses#calculus", "description": "Free Calculus video lessons by Dr. Peter Esperanza \u2014 limits, derivatives, integrals, AP Calculus AB and BC.", "provider": { "@type": "Organization", "name": "Numberbender", "url": "https://numberbender.com" }, "instructor": { "@type": "Person", "name": "Dr. Peter Esperanza" }, "isAccessibleForFree": true, "inLanguage": ["en", "fil"] } },
-    { "@type": "ListItem", "position": 5, "item": { "@type": "Course", "name": "Geometry", "url": "https://numberbender.com/courses#geometry", "description": "Free Geometry video lessons by Dr. Peter Esperanza \u2014 proofs, similarity, circles, and coordinate geometry.", "provider": { "@type": "Organization", "name": "Numberbender", "url": "https://numberbender.com" }, "instructor": { "@type": "Person", "name": "Dr. Peter Esperanza" }, "isAccessibleForFree": true, "inLanguage": ["en", "fil"] } },
-    { "@type": "ListItem", "position": 6, "item": { "@type": "Course", "name": "Discrete Math", "url": "https://numberbender.com/courses#discrete-math", "description": "Free Discrete Mathematics video lessons by Dr. Peter Esperanza \u2014 logic, sets, graph theory, and combinatorics.", "provider": { "@type": "Organization", "name": "Numberbender", "url": "https://numberbender.com" }, "instructor": { "@type": "Person", "name": "Dr. Peter Esperanza" }, "isAccessibleForFree": true, "inLanguage": ["en", "fil"] } },
-    { "@type": "ListItem", "position": 7, "item": { "@type": "Course", "name": "Linear Algebra", "url": "https://numberbender.com/courses#linear-algebra", "description": "Free Linear Algebra video lessons by Dr. Peter Esperanza \u2014 vectors, matrices, transformations, and eigenvalues.", "provider": { "@type": "Organization", "name": "Numberbender", "url": "https://numberbender.com" }, "instructor": { "@type": "Person", "name": "Dr. Peter Esperanza" }, "isAccessibleForFree": true, "inLanguage": ["en", "fil"] } }
-  ]
-}
-</script>
-  <!-- Microsoft Clarity -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "wnr3kox01b");
-  </script>
-
-<!-- ── Numberbender Sticky Bar CSS ── -->
-<style>
-#nb-sticky-bar{position:fixed;bottom:0;left:0;right:0;background:#1F6F6B;color:#fff;padding:12px 20px;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;z-index:9999;box-shadow:0 -2px 12px rgba(0,0,0,.15);font-family:'Plus Jakarta Sans',sans-serif;}
-#nb-sticky-bar p{margin:0;font-size:14px;font-weight:500;color:#fff;white-space:nowrap;}
-#nb-sticky-bar input[type="email"]{padding:8px 14px;border-radius:6px;border:none;font-size:14px;width:240px;outline:none;color:#0F2B3D;}
-#nb-sticky-bar button.nb-submit{background:#F4A922;color:#0F2B3D;border:none;padding:9px 18px;border-radius:6px;font-size:14px;font-weight:700;cursor:pointer;white-space:nowrap;transition:background .2s;}
-#nb-sticky-bar button.nb-submit:hover{background:#e09910;}
-#nb-sticky-bar button.nb-close{background:transparent;border:1.5px solid rgba(255,255,255,.4);color:#fff;width:28px;height:28px;border-radius:50%;font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .2s;}
-#nb-sticky-bar button.nb-close:hover{background:rgba(255,255,255,.15);}
-#nb-sticky-bar .nb-success{font-size:15px;font-weight:600;color:#fff;}
-@media(max-width:640px){#nb-sticky-bar{flex-direction:column;gap:8px;padding:14px 16px;text-align:center;}#nb-sticky-bar p{white-space:normal;font-size:13px;}#nb-sticky-bar input[type="email"]{width:100%;}#nb-sticky-bar button.nb-submit{width:100%;}}
-</style>
+  /* RESPONSIVE */
+  @media(max-width:860px){
+    .track-header{flex-direction:column;}
+    .foot-grid{grid-template-columns:1fr 1fr;}
+    .hero-counts{flex-direction:column;}
+    .hero-count{border-right:none;border-bottom:1px solid rgba(255,255,255,0.1);}
+    .hero-count:last-child{border-bottom:none;}
+  }
+  @media(max-width:560px){
+    .nav-links{display:none;}
+    .foot-grid{grid-template-columns:1fr;}
+    .subject-grid{grid-template-columns:1fr 1fr;}
+    .course-grid{grid-template-columns:1fr;}
+  }
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}.skip-link:focus{position:fixed;top:0;left:0;width:auto;height:auto;padding:8px 16px;background:#0F2B3D;color:#fff;z-index:9999;font-size:14px;text-decoration:none;border-radius:0 0 4px 0;}</style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
-<!-- ========== NAVIGATION ========== -->
+
+<!-- NAV -->
 <header class="nav">
   <div class="container nav-inner">
     <a href="/" class="logo logo-lockup" aria-label="Numberbender — Master the Elements of Math">
-      <img src="images/numberbender_banner_only.svg" alt="Numberbender" class="lockup-img">
+      <img src="/images/numberbender_banner_only.svg" alt="Numberbender" class="lockup-img">
     </a>
     <button class="menu-toggle" aria-label="Toggle menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
-        <nav class="nav-links" id="navlinks">
+    <nav class="nav-links" id="navlinks" aria-label="Main navigation">
       <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">For Students <span class="caret" aria-hidden="true">▾</span></button>
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Learn <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
-          <a href="start-here.html">🎁 Free Starter Lesson</a>
-          <a href="find-your-course.html">🧭 Find My Course</a>
-          <a href="courses.html">📚 All Courses</a>
-          <a href="math-worksheets.html">📝 Free Worksheets</a>
-          <a href="for-filipino-students.html">🇵🇭 Para sa Filipino Students</a>
+          <a href="/start-here">🎁 Free Starter Lesson</a>
+          <a href="/find-your-course">🧭 Where Do I Start?</a>
+          <a href="/courses">📚 Explore Math Lessons</a>
+          <a href="/math-worksheets">📝 Free Worksheets</a>
+          <a href="/for-filipino-students">🇵🇭 Para sa Filipino Students</a>
         </div>
       </div>
       <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">For Educators <span class="caret" aria-hidden="true">▾</span></button>
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Teach <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
-          <a href="for-teachers.html">🏫 For Teachers Hub</a>
-          <a href="teach-it-like-you-stream-it.html">🎬 Teach It Like You Stream It</a>
-          <a href="teacher-resources.html">📦 Teacher Resources</a>
-          <a href="math-worksheets.html">📄 Printable Worksheets</a>
+          <a href="/for-teachers">🏫 For Teachers Hub</a>
+          <a href="/teach-the-math">🎓 Teach the Math</a>
+          <a href="/teach-it-like-you-stream-it">🎬 Teach It Like You Stream It</a>
+          <a href="/teacher-resources">📦 Teacher Resources</a>
+          <a href="/math-worksheets">📄 Printable Worksheets</a>
+          <a href="/courses">📚 Lesson &amp; Course Library</a>
         </div>
       </div>
       <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">About Dr. E <span class="caret" aria-hidden="true">▾</span></button>
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">About <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
-          <a href="about.html">👨‍🏫 About Dr. E</a>
-          <a href="speaking.html">🎤 Speaking</a>
-          <a href="press.html">📰 Press &amp; Media</a>
+          <a href="/about">👨‍🏫 About Dr. E</a>
+          <a href="/speaking">🎤 Speaking</a>
+          <a href="/press">📰 Press &amp; Media</a>
+          <a href="/blog">✍️ Blog</a>
+          <a href="/speaking-archive">📅 Past Engagements</a>
         </div>
       </div>
-      <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Blog <span class="caret" aria-hidden="true">▾</span></button>
-        <div class="dropdown-menu">
-          <a href="blog.html">✍️ Blog Posts</a>
-          <a href="speaking-archive.html">📅 Past Engagements</a>
-        </div>
-      </div>
-      <a href="contact.html" class="nav-cta">Contact</a>
+      <a href="/contact" class="nav-cta">Contact</a>
     </nav>
   </div>
 </header>
+<main id="main-content">
 
-<!-- ========== PAGE HEADER ========== -->
+<!-- PAGE HERO -->
 <section class="page-hero">
   <div class="container">
-    <div class="eyebrow">📚 Free Math Video Courses</div>
-    <h1>Learn math with <span class="accent">Dr. E</span> — anytime, anywhere.</h1>
-    <p class="lead">
-      Watch. Practice. Master. Free video lessons and matching worksheets across Algebra, Calculus, Statistics, and more — in English and Filipino. No textbook needed.
-    </p>
-    <div class="meta">
-      <span><strong>30</strong> playlists</span>
-      <span>·</span>
-      <span><strong>400</strong> <a href="math-worksheets.html" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">free worksheets</a></span>
-      <span>·</span>
-      <span><strong>2</strong> languages</span>
-      <span>·</span>
-      <span><strong>100%</strong> free on YouTube</span>
-    </div>
-  </div>
-</section>
-
-<!-- ========== FEATURED VIDEO ========== -->
-<section class="featured">
-  <div class="container">
-    <div class="video-frame">
-      <div onclick="var f=document.createElement('iframe');f.src='https://www.youtube.com/embed/FxCakYaSiI8?autoplay=1';f.allow='autoplay;encrypted-media;picture-in-picture';f.allowFullscreen=true;f.style.cssText='width:100%;height:100%;border:0;display:block;';this.innerHTML='';this.appendChild(f);" style="cursor:pointer;position:relative;width:100%;height:100%;">
-        <img src="images/peter_presenting_in_Berlin_2.jpg" alt="Sample algebra lesson — Dr. E presenting online" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
-        <div aria-hidden="true" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;">
-          <svg width="68" height="48" viewBox="0 0 68 48" xmlns="http://www.w3.org/2000/svg"><rect width="68" height="48" rx="12" fill="rgba(0,0,0,0.75)"/><polygon points="27,16 27,32 45,24" fill="white"/></svg>
-        </div>
+    <div class="eyebrow">📚 Numberbender v2.0</div>
+    <h1>Find Your Math</h1>
+    <p>Whatever math you're facing right now — it's in here.</p>
+    <div class="hero-counts">
+      <div class="hero-count">
+        <span class="n">10</span>
+        <span class="l">subjects</span>
+      </div>
+      <div class="hero-count">
+        <span class="n">59</span>
+        <span class="l">units</span>
+      </div>
+      <div class="hero-count">
+        <span class="n">400+</span>
+        <span class="l">lessons</span>
+      </div>
+      <div class="hero-count">
+        <span class="n">2</span>
+        <span class="l">full courses</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ========== WHERE TO START ========== -->
-<section class="start-guide">
+<!-- ═══════════════════════════════════════════ -->
+<!-- TRACK 1 — SUBJECT LIBRARY                  -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="track-section">
   <div class="container">
-    <div class="section-head">
-      <div class="section-eyebrow">Where to start</div>
-      <h2>Not sure which course to take?</h2>
-      <p>Pick the path that matches what you're studying right now.</p>
+
+    <div class="track-header">
+      <div>
+        <div class="track-label blue">📖 Subject Library</div>
+        <h2 class="track-title">Browse by Math Subject</h2>
+        <p class="track-sub">Dr. E's flipped classroom lesson library — pick a subject, pick a unit, and start learning. Every lesson available in English and Filipino 🇵🇭</p>
+      </div>
+      <div class="lang-toggle" role="group" aria-label="Language toggle">
+        <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" id="btn-fil" onclick="setLang('fil')">FIL</button>
+      </div>
     </div>
-    <div class="start-grid">
-      <div class="start-card">
-        <span class="badge">High School</span>
-        <h3>Building your foundation</h3>
-        <p>Start with <strong>Algebra</strong>, then move into <strong>Geometry</strong> and <strong>Precalculus</strong>. These three give you everything you need before tackling Calculus or college math.</p>
-        <a href="#algebra-card" class="start-link">Jump to Algebra →</a>
-      </div>
-      <div class="start-card">
-        <span class="badge">College</span>
-        <h3>Tackling college math</h3>
-        <p>Most college students start with <strong>Statistics</strong> or <strong>Calculus</strong>. If you're in a STEM major, add <strong>Linear Algebra</strong> and <strong>Discrete Math</strong> as you progress.</p>
-        <a href="#statistics-card" class="start-link">Jump to Statistics →</a>
-      </div>
-      <div class="start-card">
-        <span class="badge">Need a refresher</span>
-        <h3>Getting back into math</h3>
-        <p>If it's been a while, start with <strong>Precalculus</strong> — it bridges algebra and the higher-level courses. Filipino-language versions are available for every subject.</p>
-        <a href="#precalculus-card" class="start-link">Jump to Precalculus →</a>
-      </div>
+
+    <div class="subject-search-wrap">
+      <span class="subject-search-icon">🔍</span>
+      <input type="text" id="subject-search" class="subject-search-input"
+        placeholder="Search any topic… e.g. 'chain rule', 'fractions', 'standard deviation'"
+        oninput="filterSubjects(this.value)" autocomplete="off" spellcheck="false"
+        aria-label="Search lessons across all subjects">
+      <button class="subject-search-clear" id="subject-search-clear" onclick="clearSubjectSearch()" aria-label="Clear search">✕</button>
+    </div>
+    <div class="subject-search-status" id="subject-search-status"></div>
+    <div class="subject-search-no-results" id="subject-search-no-results">
+      <p style="font-size:2rem;margin-bottom:8px;">🔍</p>
+      <p style="font-weight:700;color:var(--navy);margin-bottom:6px;">No subjects found</p>
+      <p style="font-size:0.9rem;">Try a different keyword — or browse all subjects below.</p>
+    </div>
+
+    <div class="subject-grid">
+
+      <!-- Pre-Algebra -->
+      <a href="/subjects/pre-algebra/" class="subject-card" data-subject="pre-algebra">
+        <div class="subject-icon"><img src="/images/playlist_icons/13_elementary_algebra.png" alt="Pre-Algebra" style="object-fit:contain;"></div>
+        <div>
+          <div class="subject-name">Pre-Algebra</div>
+          <div class="subject-meta">
+            <span class="subject-tag">3 units</span>
+            <span class="subject-tag">13 lessons</span>
+          </div>
+        </div>
+        <div class="subject-arrow">Explore lessons →</div>
+      </a>
+
+      <!-- Algebra -->
+      <a href="/subjects/algebra/" class="subject-card" data-subject="algebra">
+        <div class="subject-icon"><img src="/images/playlist_icons/1_algebra.png" alt="Algebra"></div>
+        <div>
+          <div class="subject-name">Algebra</div>
+          <div class="subject-meta">
+            <span class="subject-tag">10 units</span>
+            <span class="subject-tag">67 lessons</span>
+          </div>
+        </div>
+        <div class="subject-arrow">Explore lessons →</div>
+      </a>
+
+      <!-- Geometry -->
+      <a href="/subjects/geometry/" class="subject-card" data-subject="geometry">
+        <div class="subject-icon"><img src="/images/playlist_icons/10_geomtery.png" alt="Geometry"></div>
+        <div>
+          <div class="subject-name">Geometry</div>
+          <div class="subject-meta">
+            <span class="subject-tag">6 units</span>
+            <span class="subject-tag">22 lessons</span>
+          </div>
+        </div>
+        <div class="subject-arrow">Explore lessons →</div>
+      </a>
+
+      <!-- Trigonometry -->
+      <a href="/subjects/trigonometry/" class="subject-card" data-subject="trigonometry">
+        <div class="subject-icon"><img src="/images/playlist_icons/8_trigonometry.png" alt="Trigonometry"></div>
+        <div>
+          <div class="subject-name">Trigonometry</div>
+          <div class="subject-meta">
+            <span class="subject-tag">5 units</span>
+            <span class="subject-tag">15 lessons</span>
+          </div>
+        </div>
+        <div class="subject-arrow">Explore lessons →</div>
+      </a>
+
+      <!-- Precalculus -->
+      <a href="/subjects/precalculus/" class="subject-card" data-subject="precalculus">
+        <div class="subject-icon"><img src="/images/playlist_icons/2_precalculus.png" alt="Precalculus"></div>
+        <div>
+          <div class="subject-name">Precalculus</div>
+          <div class="subject-meta">
+            <span class="subject-tag">10 units</span>
+            <span class="subject-tag">63 lessons</span>
+          </div>
+        </div>
+        <div class="subject-arrow">Explore lessons →</div>
+      </a>
+
+      <!-- Calculus -->
+      <a href="/subjects/calculus/" class="subject-card" data-subject="calculus">
+        <div class="subject-icon"><img src="/images/playlist_icons/4_Calculus.png" alt="Calculus"></div>
+        <div>
+          <div class="subject-name">Calculus</div>
+          <div class="subject-meta">
+            <span class="subject-tag">7 units</span>
+            <span class="subject-tag">92 lessons</span>
+          </div>
+        </div>
+        <div class="subject-arrow">Explore lessons →</div>
+      </a>
+
+      <!-- Statistics -->
+      <a href="/subjects/statistics/" class="subject-card" data-subject="statistics">
+        <div class="subject-icon"><img src="/images/playlist_icons/3_statistics.png" alt="Statistics"></div>
+        <div>
+          <div class="subject-name">Statistics</div>
+          <div class="subject-meta">
+            <span class="subject-tag">8 units</span>
+            <span class="subject-tag">70 lessons</span>
+          </div>
+        </div>
+        <div class="subject-arrow">Explore lessons →</div>
+      </a>
+
+      <!-- Linear Algebra -->
+      <a href="/subjects/linear-algebra/" class="subject-card" data-subject="linear-algebra">
+        <div class="subject-icon"><img src="/images/playlist_icons/6_linear_algebra.png" alt="Linear Algebra"></div>
+        <div>
+          <div class="subject-name">Linear Algebra</div>
+          <div class="subject-meta">
+            <span class="subject-tag">3 units</span>
+            <span class="subject-tag">15 lessons</span>
+          </div>
+        </div>
+        <div class="subject-arrow">Explore lessons →</div>
+      </a>
+
+      <!-- Discrete Mathematics -->
+      <a href="/subjects/discrete-math/" class="subject-card" data-subject="discrete-math">
+        <div class="subject-icon"><img src="/images/playlist_icons/5_discrete_math.png" alt="Discrete Mathematics"></div>
+        <div>
+          <div class="subject-name">Discrete Mathematics</div>
+          <div class="subject-meta">
+            <span class="subject-tag">3 units</span>
+            <span class="subject-tag">18 lessons</span>
+          </div>
+        </div>
+        <div class="subject-arrow">Explore lessons →</div>
+      </a>
+
+      <!-- Test Prep -->
+      <a href="/subjects/test-prep/" class="subject-card" data-subject="test-prep">
+        <div class="subject-icon"><img src="/images/playlist_icons/15_test_prep.png" alt="Test Prep"></div>
+        <div>
+          <div class="subject-name">Test Prep</div>
+          <div class="subject-meta">
+            <span class="subject-tag">5 units</span>
+            <span class="subject-tag">69 lessons</span>
+          </div>
+        </div>
+        <div class="subject-arrow">Explore lessons →</div>
+      </a>
+
     </div>
   </div>
 </section>
 
-<!-- ========== COURSES GRID ========== -->
-<section id="courses">
+<hr class="section-divider">
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- TRACK 2 — FULL COURSES                     -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="track-section">
   <div class="container">
-    <div class="section-head">
-      <div class="section-eyebrow">All courses</div>
-      <h2>Browse by subject</h2>
-      <p>Every course links directly to a curated YouTube playlist. Watch on the website or open in YouTube.</p>
+
+    <div class="track-header">
+      <div>
+        <div class="track-label teal">🎓 Full Courses</div>
+        <h2 class="track-title">Semester-Length Classroom Recordings</h2>
+        <p class="track-sub">Real students, real classroom, real math. Dr. E teaches full 15-week college courses — the same ones his students take every semester.</p>
+      </div>
     </div>
 
-    <div class="lang-toggle" role="tablist" aria-label="Filter by language">
-      <button class="lang-btn active" data-lang="all" onclick="filterLang('all')">All Courses</button>
-      <button class="lang-btn" data-lang="english" onclick="filterLang('english')">🇺🇸 English</button>
-      <button class="lang-btn" data-lang="filipino" onclick="filterLang('filipino')">🇵🇭 Filipino</button>
-    </div>
+    <div class="course-grid">
 
-    <div class="courses-grid">
-
-      <!-- ALGEBRA EN -->
-      <article class="course-card algebra" data-lang="english" id="algebra-card">
-        <div class="course-thumb">
-          <div class="thumb-fallback">➕</div>
-          <img class="yt-thumb" data-playlist="PLIQh59u-CUouYxpCF2ypKrf6h73YDl09k" alt="English playlist preview" loading="lazy">
-          <a class="thumb-link" href="https://youtube.com/playlist?list=PLIQh59u-CUouYxpCF2ypKrf6h73YDl09k" target="_blank" rel="noopener"  aria-label="Open English playlist on YouTube"></a>
-          <div class="lang-tag">English</div>
-          <div class="play-overlay"><div class="play-icon">▶</div>
+      <!-- Elementary Algebra -->
+      <div class="course-card">
+        <div class="course-card-top blue-top">
+          <span class="badge">📚 15-Week Course</span>
+          <h3>Elementary Algebra</h3>
+          <div class="tagline">Algebra for Future STEM Students</div>
         </div>
-        </div>
-        <div class="course-body">
-          <div class="course-subject">Algebra</div>
-          <h3>Algebra (English)</h3>
-          <p>Variables, equations, functions, and graphing — the foundation for every math course that follows.</p>
-          <div class="course-outcomes">
-            <div class="course-outcomes-title">🎯 You'll be able to:</div>
-            <ul>
-              <li>Solve linear and quadratic equations</li>
-              <li>Graph functions and read information from graphs</li>
-              <li>Factor and simplify polynomial expressions</li>
-              <li>Translate word problems into algebraic equations</li>
-            </ul>
+        <div class="course-card-body">
+          <div class="course-stat-row">
+            <div class="course-stat">
+              <div class="val">15</div>
+              <div class="lbl">weeks</div>
+            </div>
+            <div class="course-stat">
+              <div class="val">13</div>
+              <div class="lbl">lessons</div>
+            </div>
+            <div class="course-stat">
+              <div class="val">2</div>
+              <div class="lbl">exams</div>
+            </div>
+            <div class="course-stat">
+              <div class="val">Free</div>
+              <div class="lbl">always</div>
+            </div>
           </div>
-          <div class="card-cta-row"><a href="https://youtube.com/playlist?list=PLIQh59u-CUouYxpCF2ypKrf6h73YDl09k" target="_blank" rel="noopener" class="btn btn-img"><img src="images/worksheets_button/btn-watch-youtube.svg" alt="Watch on YouTube" style="height:52px;display:block;"></a><a data-worksheet-button href="courses/algebra/algebra-english/worksheets/" class="btn btn-img"><img src="images/worksheets_button/btn-worksheets.png" alt="Worksheets" style="height:52px;display:block;"></a></div>
+          <a href="/learn/elementary-algebra/" class="course-cta blue">Start Course →</a>
         </div>
-      </article>
+      </div>
 
-      <!-- ALGEBRA FIL -->
-      <article class="course-card algebra" data-lang="filipino">
-        <div class="course-thumb">
-          <div class="thumb-fallback">➕</div>
-          <img class="yt-thumb" data-playlist="PLIQh59u-CUouhqTtby330OGpTGOhu3I4Q" alt="Filipino playlist preview" loading="lazy">
-          <a class="thumb-link" href="https://youtube.com/playlist?list=PLIQh59u-CUouhqTtby330OGpTGOhu3I4Q" target="_blank" rel="noopener"  aria-label="Open Filipino playlist on YouTube"></a>
-          <div class="lang-tag">Filipino</div>
-          <div class="play-overlay"><div class="play-icon">▶</div>
+      <!-- Intermediate Algebra -->
+      <div class="course-card">
+        <div class="course-card-top purple-top">
+          <span class="badge">📚 15-Week Course</span>
+          <h3>Intermediate Algebra</h3>
+          <div class="tagline">The Bridge to Precalculus &amp; STEM</div>
         </div>
-        </div>
-        <div class="course-body">
-          <div class="course-subject">Algebra</div>
-          <h3>Algebra (Filipino)</h3>
-          <p>Mga variable, equation, at function — itinuturo sa wikang Filipino para mas madaling intindihin.</p>
-          <div class="card-cta-row"><a href="https://youtube.com/playlist?list=PLIQh59u-CUouhqTtby330OGpTGOhu3I4Q" target="_blank" rel="noopener" class="btn btn-img"><img src="images/worksheets_button/btn-watch-youtube.svg" alt="Watch on YouTube" style="height:52px;display:block;"></a><a data-worksheet-button href="courses/algebra/algebra-filipino/worksheets/" class="btn btn-img"><img src="images/worksheets_button/btn-worksheets.png" alt="Worksheets" style="height:52px;display:block;"></a></div>
-        </div>
-      </article>
-
-      <!-- ELEMENTARY ALGEBRA EN -->
-      <article class="course-card algebra" data-lang="english">
-        <div class="course-thumb">
-          <div class="thumb-fallback">➕</div>
-          <img class="yt-thumb" data-playlist="PLIQh59u-CUouYxpCF2ypKrf6h73YDl09k" alt="English playlist preview" loading="lazy">
-          <a class="thumb-link" href="https://youtube.com/playlist?list=PLIQh59u-CUouYxpCF2ypKrf6h73YDl09k" target="_blank" rel="noopener" aria-label="Open English playlist on YouTube"></a>
-          <div class="lang-tag">English</div>
-          <div class="play-overlay"><div class="play-icon">▶</div></div>
-        </div>
-        <div class="course-body">
-          <div class="course-subject">Algebra</div>
-          <h3>Elementary Algebra (English)</h3>
-          <p>Real numbers, expressions, inequalities, graphing, systems, and polynomials — Units 1–6 of the Algebra course.</p>
-          <div class="card-cta-row"><a href="https://youtube.com/playlist?list=PLIQh59u-CUouYxpCF2ypKrf6h73YDl09k" target="_blank" rel="noopener" class="btn btn-img"><img src="images/worksheets_button/btn-watch-youtube.svg" alt="Watch on YouTube" style="height:52px;display:block;"></a><a data-worksheet-button href="courses/algebra/elementary-algebra/worksheets/" class="btn btn-img"><img src="images/worksheets_button/btn-worksheets.png" alt="Worksheets" style="height:52px;display:block;"></a></div>
-        </div>
-      </article>
-
-      <!-- ELEMENTARY ALGEBRA FIL -->
-      <article class="course-card algebra" data-lang="filipino">
-        <div class="course-thumb">
-          <div class="thumb-fallback">➕</div>
-          <img class="yt-thumb" data-playlist="PLIQh59u-CUouhqTtby330OGpTGOhu3I4Q" alt="Filipino playlist preview" loading="lazy">
-          <a class="thumb-link" href="https://youtube.com/playlist?list=PLIQh59u-CUouhqTtby330OGpTGOhu3I4Q" target="_blank" rel="noopener" aria-label="Open Filipino playlist on YouTube"></a>
-          <div class="lang-tag">Filipino</div>
-          <div class="play-overlay"><div class="play-icon">▶</div></div>
-        </div>
-        <div class="course-body">
-          <div class="course-subject">Algebra</div>
-          <h3>Elementary Algebra (Filipino)</h3>
-          <p>Real numbers, expressions, at inequalities — Units 1–6 ng Algebra course, sa Filipino.</p>
-          <div class="card-cta-row"><a href="https://youtube.com/playlist?list=PLIQh59u-CUouhqTtby330OGpTGOhu3I4Q" target="_blank" rel="noopener" class="btn btn-img"><img src="images/worksheets_button/btn-watch-youtube.svg" alt="Watch on YouTube" style="height:52px;display:block;"></a><a data-worksheet-button href="courses/algebra/elementary-algebra/worksheets/" class="btn btn-img"><img src="images/worksheets_button/btn-worksheets.png" alt="Worksheets" style="height:52px;display:block;"></a></div>
-        </div>
-      </article>
-
-      <!-- INTERMEDIATE ALGEBRA EN -->
-      <article class="course-card algebra" data-lang="english">
-        <div class="course-thumb">
-          <div class="thumb-fallback">➕</div>
-          <img class="yt-thumb" data-playlist="PLIQh59u-CUouYxpCF2ypKrf6h73YDl09k" alt="English playlist preview" loading="lazy">
-          <a class="thumb-link" href="https://youtube.com/playlist?list=PLIQh59u-CUouYxpCF2ypKrf6h73YDl09k" target="_blank" rel="noopener" aria-label="Open English playlist on YouTube"></a>
-          <div class="lang-tag">English</div>
-          <div class="play-overlay"><div class="play-icon">▶</div></div>
-        </div>
-        <div class="course-body">
-          <div class="course-subject">Algebra</div>
-          <h3>Intermediate Algebra (English)</h3>
-          <p>Factoring, quadratics, radicals, rational expressions, functions, and complex numbers — Units 7–13 of the Algebra course.</p>
-          <div class="card-cta-row"><a href="https://youtube.com/playlist?list=PLIQh59u-CUouYxpCF2ypKrf6h73YDl09k" target="_blank" rel="noopener" class="btn btn-img"><img src="images/worksheets_button/btn-watch-youtube.svg" alt="Watch on YouTube" style="height:52px;display:block;"></a><a data-worksheet-button href="courses/algebra/intermediate-algebra/worksheets/" class="btn btn-img"><img src="images/worksheets_button/btn-worksheets.png" alt="Worksheets" style="height:52px;display:block;"></a></div>
-        </div>
-      </article>
-
-      <!-- INTERMEDIATE ALGEBRA FIL -->
-      <article class="course-card algebra" data-lang="filipino">
-        <div class="course-thumb">
-          <div class="thumb-fallback">➕</div>
-          <img class="yt-thumb" data-playlist="PLIQh59u-CUouhqTtby330OGpTGOhu3I4Q" alt="Filipino playlist preview" loading="lazy">
-          <a class="thumb-link" href="https://youtube.com/playlist?list=PLIQh59u-CUouhqTtby330OGpTGOhu3I4Q" target="_blank" rel="noopener" aria-label="Open Filipino playlist on YouTube"></a>
-          <div class="lang-tag">Filipino</div>
-          <div class="play-overlay"><div class="play-icon">▶</div></div>
-        </div>
-        <div class="course-body">
-          <div class="course-subject">Algebra</div>
-          <h3>Intermediate Algebra (Filipino)</h3>
-          <p>Factoring, quadratics, radicals, at rational expressions — Units 7–13 ng Algebra course, sa Filipino.</p>
-          <div class="card-cta-row"><a href="https://youtube.com/playlist?list=PLIQh59u-CUouhqTtby330OGpTGOhu3I4Q" target="_blank" rel="noopener" class="btn btn-img"><img src="images/worksheets_button/btn-watch-youtube.svg" alt="Watch on YouTube" style="height:52px;display:block;"></a><a data-worksheet-button href="courses/algebra/intermediate-algebra/worksheets/" class="btn btn-img"><img src="images/worksheets_button/btn-worksheets.png" alt="Worksheets" style="height:52px;display:block;"></a></div>
-        </div>
-      </article>
-
-      <!-- GEOMETRY EN -->
-      <article class="course-card geometry" data-lang="english">
-        <div class="course-thumb">
-          <div class="thumb-fallback">📏</div>
-          <img class="yt-thumb" data-playlist="PLmnIr_qavptQl6bJpa4fQL5FHow5YvqCw" alt="English playlist preview" loading="lazy">
-          <a class="thumb-link" href="https://youtube.com/playlist?list=PLmnIr_qavptQl6bJpa4fQL5FHow5YvqCw" target="_blank" rel="noopener"  aria-label="Open English playlist on YouTube"></a>
-          <div class="lang-tag">English</div>
-          <div class="play-overlay"><div class="play-icon">▶</div>
-        </div>
-        </div>
-        <div class="course-body">
-          <div class="course-subject">Geometry</div>
-          <h3>Geometry (English)</h3>
-          <p>Shapes, proofs, angles, and theorems — the visual side of math, taught with clear diagrams and examples.</p>
-          <div class="course-outcomes">
-            <div class="course-outcomes-title">🎯 You'll be able to:</div>
-            <ul>
-              <li>Construct and read geometric proofs</li>
-              <li>Apply the Pythagorean theorem and trigonometric ratios</li>
-              <li>Calculate area, surface area, and volume of 2D and 3D shapes</li>
-              <li>Work with congruence, similarity, and transformations</li>
-            </ul>
+        <div class="course-card-body">
+          <div class="course-stat-row">
+            <div class="course-stat">
+              <div class="val">15</div>
+              <div class="lbl">weeks</div>
+            </div>
+            <div class="course-stat">
+              <div class="val">12</div>
+              <div class="lbl">lessons</div>
+            </div>
+            <div class="course-stat">
+              <div class="val">3</div>
+              <div class="lbl">exams</div>
+            </div>
+            <div class="course-stat">
+              <div class="val">Free</div>
+              <div class="lbl">always</div>
+            </div>
           </div>
-          <div class="card-cta-row"><a href="https://youtube.com/playlist?list=PLmnIr_qavptQl6bJpa4fQL5FHow5YvqCw" target="_blank" rel="noopener" class="btn btn-img"><img src="images/worksheets_button/btn-watch-youtube.svg" alt="Watch on YouTube" style="height:52px;display:block;"></a><a data-worksheet-button href="courses/geometry/geometry-english/worksheets/" class="btn btn-img"><img src="images/worksheets_button/btn-worksheets.png" alt="Worksheets" style="height:52px;display:block;"></a></div>
+          <a href="/learn/intermediate-algebra/" class="course-cta purple">Start Course →</a>
         </div>
-      </article>
+      </div>
 
-      <!-- GEOMETRY FIL -->
-      <article class="course-card geometry" data-lang="filipino">
-        <div class="course-thumb">
-          <div class="thumb-fallback">📏</div>
-          <img class="yt-thumb" data-playlist="PLIQh59u-CUotEVCMuIVmEmBxI5JSByLgX" alt="Filipino playlist preview" loading="lazy">
-          <a class="thumb-link" href="https://youtube.com/playlist?list=PLIQh59u-CUotEVCMuIVmEmBxI5JSByLgX" target="_blank" rel="noopener"  aria-label="Open Filipino playlist on YouTube"></a>
-          <div class="lang-tag">Filipino</div>
-          <div class="play-overlay"><div class="play-icon">▶</div>
+      <!-- Statistics — Coming Soon -->
+      <div class="course-card coming">
+        <div class="course-card-top">
+          <span class="coming-ribbon">Coming 2027</span>
+          <span class="badge">📚 Full Course</span>
+          <h3>Statistics</h3>
+          <div class="tagline">Data, probability, and inference</div>
         </div>
-        </div>
-        <div class="course-body">
-          <div class="course-subject">Geometry</div>
-          <h3>Geometry (Filipino)</h3>
-          <p>Mga hugis, proofs, anggulo, at theorem — itinuturo sa Filipino na may malinaw na paliwanag.</p>
-          <div class="card-cta-row"><a href="https://youtube.com/playlist?list=PLIQh59u-CUotEVCMuIVmEmBxI5JSByLgX" target="_blank" rel="noopener" class="btn btn-img"><img src="images/worksheets_button/btn-watch-youtube.svg" alt="Watch on YouTube" style="height:52px;display:block;"></a><a data-worksheet-button href="courses/geometry/geometry-filipino/worksheets/" class="btn btn-img"><img src="images/worksheets_button/btn-worksheets.png" alt="Worksheets" style="height:52px;display:block;"></a></div>
-        </div>
-      </article>
-
-      <!-- TRIGONOMETRY EN -->
-      <article class="course-card trigonometry" data-lang="english">
-        <div class="course-thumb">
-          <div class="thumb-fallback">📐</div>
-          <img class="yt-thumb" data-playlist="PLIQh59u-CUou6thrAuZg6Exz3AdPTo-Iu" alt="English playlist preview" loading="lazy">
-          <a class="thumb-link" href="https://youtube.com/playlist?list=PLIQh59u-CUou6thrAuZg6Exz3AdPTo-Iu" target="_blank" rel="noopener" aria-label="Open English playlist on YouTube"></a>
-          <div class="lang-tag">English</div>
-          <div class="play-overlay"><div class="play-icon">▶</div></div>
-        </div>
-        <div class="course-body">
-          <div class="course-subject">Trigonometry</div>
-          <h3>Trigonometry (English)</h3>
-          <p>Sine, cosine, tangent, identities, and the unit circle — the math of triangles and waves.</p>
-          <div class="card-cta-row"><a href="https://youtube.com/playlist?list=PLIQh59u-CUou6thrAuZg6Exz3AdPTo-Iu" target="_blank" rel="noopener" class="btn btn-img"><img src="images/worksheets_button/btn-watch-youtube.svg" alt="Watch on YouTube" style="height:52px;display:block;"></a><a data-worksheet-button href="courses/trigonometry/trigonometry-english/worksheets/" class="btn btn-img"><img src="images/worksheets_button/btn-worksheets.png" alt="Worksheets" style="height:52px;display:block;"></a></div>
-        </div>
-      </article>
-
-      <!-- TRIGONOMETRY FIL -->
-      <article class="course-card trigonometry" data-lang="filipino">
-        <div class="course-thumb">
-          <div class="thumb-fallback">📐</div>
-          <img class="yt-thumb" data-playlist="PLIQh59u-CUosjeemNAeffIiMnLk9ZVQDt" alt="Filipino playlist preview" loading="lazy">
-          <a class="thumb-link" href="https://youtube.com/playlist?list=PLIQh59u-CUosjeemNAeffIiMnLk9ZVQDt" target="_blank" rel="noopener" aria-label="Open Filipino playlist on YouTube"></a>
-          <div class="lang-tag">Filipino</div>
-          <div class="play-overlay"><div class="play-icon">▶</div></div>
-        </div>
-        <div class="course-body">
-          <div class="course-subject">Trigonometry</div>
-          <h3>Trigonometry (Filipino)</h3>
-          <p>Sine, cosine, tangent, at unit circle — sa Filipino, perfect para sa STEM students.</p>
-          <div class="card-cta-row"><a href="https://youtube.com/playlist?list=PLIQh59u-CUosjeemNAeffIiMnLk9ZVQDt" target="_blank" rel="noopener" class="btn btn-img"><img src="images/worksheets_button/btn-watch-youtube.svg" alt="Watch on YouTube" style="height:52px;display:block;"></a><a data-worksheet-button href="courses/trigonometry/trigonometry-filipino/worksheets/" class="btn btn-img"><img src="images/worksheets_button/btn-worksheets.png" alt="Worksheets" style="height:52px;display:block;"></a></div>
-        </div>
-      </article>
-
-      <!-- PRECALCULUS EN -->
-      <article class="course-card precalculus" data-lang="english" id="precalculus-card">
-        <div class="course-thumb">
-          <div class="thumb-fallback">📐</div>
-          <img class="yt-thumb" data-playlist="PLIQh59u-CUos974OGEOXNskpmtQ-5SYI0" alt="English playlist preview" loading="lazy">
-          <a class="thumb-link" href="https://youtube.com/playlist?list=PLIQh59u-CUos974OGEOXNskpmtQ-5SYI0" target="_blank" rel="noopener"  aria-label="Open English playlist on YouTube"></a>
-          <div class="lang-tag">English</div>
-          <div class="play-overlay"><div class="play-icon">▶</div>
-        </div>
-        </div>
-        <div class="course-body">
-          <div class="course-subject">Precalculus</div>
-          <h3>Precalculus (English)</h3>
-          <p>Functions, trigonometry, and analytic geometry — the bridge between algebra and calculus.</p>
-          <div class="course-outcomes">
-            <div class="course-outcomes-title">🎯 You'll be able to:</div>
-            <ul>
-              <li>Work fluently with function notation, transformations, and inverses</li>
-              <li>Master trigonometric identities and the unit circle</li>
-              <li>Solve exponential and logarithmic equations</li>
-              <li>Be ready for AP Calculus or college calculus</li>
-            </ul>
+        <div class="course-card-body">
+          <div class="course-stat-row">
+            <div class="course-stat">
+              <div class="val">15</div>
+              <div class="lbl">weeks</div>
+            </div>
+            <div class="course-stat">
+              <div class="val">—</div>
+              <div class="lbl">lessons</div>
+            </div>
+            <div class="course-stat">
+              <div class="val">Free</div>
+              <div class="lbl">always</div>
+            </div>
           </div>
-          <div class="card-cta-row"><a href="https://youtube.com/playlist?list=PLIQh59u-CUos974OGEOXNskpmtQ-5SYI0" target="_blank" rel="noopener" class="btn btn-img"><img src="images/worksheets_button/btn-watch-youtube.svg" alt="Watch on YouTube" style="height:52px;display:block;"></a><a data-worksheet-button href="courses/precalculus/precalculus-english/worksheets/" class="btn btn-img"><img src="images/worksheets_button/btn-worksheets.png" alt="Worksheets" style="height:52px;display:block;"></a></div>
+          <span class="course-cta disabled">Coming 2027</span>
         </div>
-      </article>
+      </div>
 
-      <!-- PRECALCULUS FIL -->
-      <article class="course-card precalculus" data-lang="filipino">
-        <div class="course-thumb">
-          <div class="thumb-fallback">📐</div>
-          <img class="yt-thumb" data-playlist="PLIQh59u-CUosHtZ7JtgYoWXoqn8xHTPvd" alt="Filipino playlist preview" loading="lazy">
-          <a class="thumb-link" href="https://youtube.com/playlist?list=PLIQh59u-CUosHtZ7JtgYoWXoqn8xHTPvd" target="_blank" rel="noopener"  aria-label="Open Filipino playlist on YouTube"></a>
-          <div class="lang-tag">Filipino</div>
-          <div class="play-overlay"><div class="play-icon">▶</div>
+      <!-- Calculus — Coming Soon -->
+      <div class="course-card coming">
+        <div class="course-card-top">
+          <span class="coming-ribbon">Coming 2027</span>
+          <span class="badge">📚 Full Course</span>
+          <h3>Calculus</h3>
+          <div class="tagline">Limits, derivatives, and integrals</div>
         </div>
-        </div>
-        <div class="course-body">
-          <div class="course-subject">Precalculus</div>
-          <h3>Precalculus (Filipino)</h3>
-          <p>Functions, trigonometry, at analytic geometry — sa Filipino, para sa mga estudyanteng nag-prepare para sa calculus.</p>
-          <div class="card-cta-row"><a href="https://youtube.com/playlist?list=PLIQh59u-CUosHtZ7JtgYoWXoqn8xHTPvd" target="_blank" rel="noopener" class="btn btn-img"><img src="images/worksheets_button/btn-watch-youtube.svg" alt="Watch on YouTube" style="height:52px;display:block;"></a><a data-worksheet-button href="courses/precalculus/precalculus-filipino/worksheets/" class="btn btn-img"><img src="images/worksheets_button/btn-worksheets.png" alt="Worksheets" style="height:52px;display:block;"></a></div>
-        </div>
-      </article>
-
-      <!-- LOGARITHMS EN -->
-      <article class="course-card logs" data-lang="english">
-        <div class="course-thumb">
-          <div class="thumb-fallback">🔢</div>
-          <img class="yt-thumb" data-playlist="PLmnIr_qavptQJoOGQ_3XvNcb1B9kAqSa9" alt="English playlist preview" loading="lazy">
-          <a class="thumb-link" href="https://youtube.com/playlist?list=PLmnIr_qavptQJoOGQ_3XvNcb1B9kAqSa9" target="_blank" rel="noopener" aria-label="Open English playlist on YouTube"></a>
-          <div class="lang-tag">English</div>
-          <div class="play-overlay"><div class="play-icon">▶</div></div>
-        </div>
-        <div class="course-body">
-          <div class="course-subject">Logarithms</div>
-          <h3>Lessons on Logarithms (English)</h3>
-          <p>Logarithm rules, exponential equations, and applications — the math behind growth and decay.</p>
-          <div class="card-cta-row"><a href="https://youtube.com/playlist?list=PLmnIr_qavptQJoOGQ_3XvNcb1B9kAqSa9" target="_blank" rel="noopener" class="btn btn-img"><img src="images/worksheets_button/btn-watch-youtube.svg" alt="Watch on YouTube" style="height:52px;display:block;"></a><a data-worksheet-button href="courses/logarithms/logarithms-english/worksheets/" class="btn btn-img"><img src="images/worksheets_button/btn-worksheets.png" alt="Worksheets" style="height:52px;display:block;"></a></div>
-        </div>
-      </article>
-
-      <!-- LOGARITHMS FIL -->
-      <article class="course-card logs" data-lang="filipino">
-        <div class="course-thumb">
-          <div class="thumb-fallback">🔢</div>
-          <img class="yt-thumb" data-playlist="PLIQh59u-CUovIqQw55o5rv5xUwm3WNbE9" alt="Filipino playlist preview" loading="lazy">
-          <a class="thumb-link" href="https://youtube.com/playlist?list=PLIQh59u-CUovIqQw55o5rv5xUwm3WNbE9" target="_blank" rel="noopener" aria-label="Open Filipino playlist on YouTube"></a>
-          <div class="lang-tag">Filipino</div>
-          <div class="play-overlay"><div class="play-icon">▶</div></div>
-        </div>
-        <div class="course-body">
-          <div class="course-subject">Logarithms</div>
-          <h3>Lessons on Logarithms (Filipino)</h3>
-          <p>Logarithm rules at exponential equations — sa Filipino, para sa precalculus students.</p>
-          <div class="card-cta-row"><a href="https://youtube.com/playlist?list=PLIQh59u-CUovIqQw55o5rv5xUwm3WNbE9" target="_blank" rel="noopener" class="btn btn-img"><img src="images/worksheets_button/btn-watch-youtube.svg" alt="Watch on YouTube" style="height:52px;display:block;"></a><a data-worksheet-button href="courses/logarithms/logarithms-filipino/worksheets/" class="btn btn-img"><img src="images/worksheets_button/btn-worksheets.png" alt="Worksheets" style="height:52px;display:block;"></a></div>
-        </div>
-      </article>
-
-      <!-- AP CALCULUS FRQ FEATURED CARD (Teacher Resources) -->
-      <article class="frq-featured-card" data-lang="english" id="ap-calculus-frq-card">
-        <div class="frq-content">
-          <span class="frq-eyebrow">Teacher Resources · Featured</span>
-          <h3>AP Calculus FRQ Practice — Free Apple Books</h3>
-          <p>Six multi-touch Apple Books by Dr. Peter Esperanza covering every major AP Calculus FRQ topic — Accumulation Problems, Implicit Differentiation, Particle in Motion, Areas &amp; Volumes, Differential Equations, and Function Analysis. About 29 pages each, with embedded video. Free for students and teachers.</p>
-          <div class="frq-actions">
-            <a href="ap-calculus-frq-books.html" class="btn btn-primary">View FRQ Books →</a>
-            <a href="teacher-resources.html" class="btn btn-outline">All Teacher Resources</a>
+        <div class="course-card-body">
+          <div class="course-stat-row">
+            <div class="course-stat">
+              <div class="val">15</div>
+              <div class="lbl">weeks</div>
+            </div>
+            <div class="course-stat">
+              <div class="val">—</div>
+              <div class="lbl">lessons</div>
+            </div>
+            <div class="course-stat">
+              <div class="val">Free</div>
+              <div class="lbl">always</div>
+            </div>
           </div>
+          <span class="course-cta disabled">Coming 2027</span>
         </div>
-        <div class="frq-illust" aria-hidden="true">
-          <div class="frq-glyph">📚</div>
-          <div class="frq-stats">
-            <span><strong>6</strong>books</span>
-            <span><strong>Free</strong>on Apple Books</span>
-          </div>
-        </div>
-      </article>
+      </div>
 
-      <!-- CALCULUS EN -->
-      <article class="course-card calculus" data-lang="english">
-        <div class="course-thumb">
-          <div class="thumb-fallback">∫</div>
-          <img class="yt-thumb" data-playlist="PLIQh59u-CUov_ibDP0sJ7YVHQEQ4_1ra_" alt="English playlist preview" loading="lazy">
-          <a class="thumb-link" href="https://youtube.com/playlist?list=PLIQh59u-CUov_ibDP0sJ7YVHQEQ4_1ra_" target="_blank" rel="noopener"  aria-label="Open English playlist on YouTube"></a>
-          <div class="lang-tag">English</div>
-          <div class="play-overlay"><div class="play-icon">▶</div>
-        </div>
-        </div>
-        <div class="course-body">
-          <div class="course-subject">Calculus</div>
-          <h3>Calculus (English)</h3>
-          <p>Limits, derivatives, integrals, and applications — broken down step by step for students who feel stuck.</p>
-          <div class="course-outcomes">
-            <div class="course-outcomes-title">🎯 You'll be able to:</div>
-            <ul>
-              <li>Evaluate limits and understand continuity</li>
-              <li>Take derivatives using power, product, quotient, and chain rules</li>
-              <li>Apply derivatives to optimization and related-rates problems</li>
-              <li>Integrate functions and apply the Fundamental Theorem</li>
-            </ul>
-          </div>
-          <div class="card-cta-row"><a href="https://youtube.com/playlist?list=PLIQh59u-CUov_ibDP0sJ7YVHQEQ4_1ra_" target="_blank" rel="noopener" class="btn btn-img"><img src="images/worksheets_button/btn-watch-youtube.svg" alt="Watch on YouTube" style="height:52px;display:block;"></a><a data-worksheet-button href="courses/calculus/calculus-english/worksheets/" class="btn btn-img"><img src="images/worksheets_button/btn-worksheets.png" alt="Worksheets" style="height:52px;display:block;"></a></div>
-        </div>
-      </article>
-
-      <!-- CALCULUS FIL -->
-      <article class="course-card calculus" data-lang="filipino">
-        <div class="course-thumb">
-          <div class="thumb-fallback">∫</div>
-          <img class="yt-thumb" data-playlist="PLIQh59u-CUotO-TRuUe0iJBL-y2bsfLmk" alt="Filipino playlist preview" loading="lazy">
-          <a class="thumb-link" href="https://youtube.com/playlist?list=PLIQh59u-CUotO-TRuUe0iJBL-y2bsfLmk" target="_blank" rel="noopener"  aria-label="Open Filipino playlist on YouTube"></a>
-          <div class="lang-tag">Filipino</div>
-          <div class="play-overlay"><div class="play-icon">▶</div>
-        </div>
-        </div>
-        <div class="course-body">
-          <div class="course-subject">Calculus</div>
-          <h3>Calculus (Filipino)</h3>
-          <p>Limits, derivatives, at integrals — ipinapaliwanag sa Filipino para mas malinaw para sa local students.</p>
-          <div class="card-cta-row"><a href="https://youtube.com/playlist?list=PLIQh59u-CUotO-TRuUe0iJBL-y2bsfLmk" target="_blank" rel="noopener" class="btn btn-img"><img src="images/worksheets_button/btn-watch-youtube.svg" alt="Watch on YouTube" style="height:52px;display:block;"></a><a data-worksheet-button href="courses/calculus/calculus-filipino/worksheets/" class="btn btn-img"><img src="images/worksheets_button/btn-worksheets.png" alt="Worksheets" style="height:52px;display:block;"></a></div>
-        </div>
-      </article>
-
-      <!-- SOLVING LIMITS EN -->
-      <article class="course-card calculus" data-lang="english">
-        <div class="course-thumb">
-          <div class="thumb-fallback">∫</div>
-          <img class="yt-thumb" data-playlist="PLmnIr_qavptToyz2gohIAPKI4RbQ4j1a5" alt="English playlist preview" loading="lazy">
-          <a class="thumb-link" href="https://youtube.com/playlist?list=PLmnIr_qavptToyz2gohIAPKI4RbQ4j1a5" target="_blank" rel="noopener" aria-label="Open English playlist on YouTube"></a>
-          <div class="lang-tag">English</div>
-          <div class="play-overlay"><div class="play-icon">▶</div></div>
-        </div>
-        <div class="course-body">
-          <div class="course-subject">Calculus</div>
-          <h3>Solving Limits (English)</h3>
-          <p>How to evaluate limits — direct substitution, factoring, L'Hôpital, and limits at infinity.</p>
-          <div class="card-cta-row"><a href="https://youtube.com/playlist?list=PLmnIr_qavptToyz2gohIAPKI4RbQ4j1a5" target="_blank" rel="noopener" class="btn btn-img"><img src="images/worksheets_button/btn-watch-youtube.svg" alt="Watch on YouTube" style="height:52px;display:block;"></a><a data-worksheet-button href="courses/calculus/limits-english/worksheets/" class="btn btn-img"><img src="images/worksheets_button/btn-worksheets.png" alt="Worksheets" style="height:52px;display:block;"></a></div>
-        </div>
-      </article>
-
-      <!-- SOLVING LIMITS FIL -->
-      <article class="course-card calculus" data-lang="filipino">
-        <div class="course-thumb">
-          <div class="thumb-fallback">∫</div>
-          <img class="yt-thumb" data-playlist="PLIQh59u-CUosUalsTKJm2M9ruvwRAR28E" alt="Filipino playlist preview" loading="lazy">
-          <a class="thumb-link" href="https://youtube.com/playlist?list=PLIQh59u-CUosUalsTKJm2M9ruvwRAR28E" target="_blank" rel="noopener" aria-label="Open Filipino playlist on YouTube"></a>
-          <div class="lang-tag">Filipino</div>
-          <div class="play-overlay"><div class="play-icon">▶</div></div>
-        </div>
-        <div class="course-body">
-          <div class="course-subject">Calculus</div>
-          <h3>Solving Limits (Filipino)</h3>
-          <p>Paano mag-evaluate ng limits — direct substitution, factoring, at L'Hôpital, sa Filipino.</p>
-          <div class="card-cta-row"><a href="https://youtube.com/playlist?list=PLIQh59u-CUosUalsTKJm2M9ruvwRAR28E" target="_blank" rel="noopener" class="btn btn-img"><img src="images/worksheets_button/btn-watch-youtube.svg" alt="Watch on YouTube" style="height:52px;display:block;"></a><a data-worksheet-button href="courses/calculus/limits-filipino/worksheets/" class="btn btn-img"><img src="images/worksheets_button/btn-worksheets.png" alt="Worksheets" style="height:52px;display:block;"></a></div>
-        </div>
-      </article>
-
-      <!-- DERIVATIVE RULES EN -->
-      <article class="course-card calculus" data-lang="english">
-        <div class="course-thumb">
-          <div class="thumb-fallback">∫</div>
-          <img class="yt-thumb" data-playlist="PLmnIr_qavptSJj_DR3PbzjjSXDWMUk3Px" alt="English playlist preview" loading="lazy">
-          <a class="thumb-link" href="https://youtube.com/playlist?list=PLmnIr_qavptSJj_DR3PbzjjSXDWMUk3Px" target="_blank" rel="noopener" aria-label="Open English playlist on YouTube"></a>
-          <div class="lang-tag">English</div>
-          <div class="play-overlay"><div class="play-icon">▶</div></div>
-        </div>
-        <div class="course-body">
-          <div class="course-subject">Calculus</div>
-          <h3>Derivative Rules (English)</h3>
-          <p>Power rule, product rule, quotient rule, and chain rule — the toolkit for differentiation.</p>
-          <div class="card-cta-row"><a href="https://youtube.com/playlist?list=PLmnIr_qavptSJj_DR3PbzjjSXDWMUk3Px" target="_blank" rel="noopener" class="btn btn-img"><img src="images/worksheets_button/btn-watch-youtube.svg" alt="Watch on YouTube" style="height:52px;display:block;"></a><a data-worksheet-button href="courses/calculus/derivatives-english/worksheets/" class="btn btn-img"><img src="images/worksheets_button/btn-worksheets.png" alt="Worksheets" style="height:52px;display:block;"></a></div>
-        </div>
-      </article>
-
-      <!-- DERIVATIVE RULES FIL -->
-      <article class="course-card calculus" data-lang="filipino">
-        <div class="course-thumb">
-          <div class="thumb-fallback">∫</div>
-          <img class="yt-thumb" data-playlist="PLIQh59u-CUoubs4WeOggDoyxcAXu2VuN1" alt="Filipino playlist preview" loading="lazy">
-          <a class="thumb-link" href="https://youtube.com/playlist?list=PLIQh59u-CUoubs4WeOggDoyxcAXu2VuN1" target="_blank" rel="noopener" aria-label="Open Filipino playlist on YouTube"></a>
-          <div class="lang-tag">Filipino</div>
-          <div class="play-overlay"><div class="play-icon">▶</div></div>
-        </div>
-        <div class="course-body">
-          <div class="course-subject">Calculus</div>
-          <h3>Derivative Rules (Filipino)</h3>
-          <p>Power, product, quotient, at chain rule — derivative essentials sa Filipino.</p>
-          <div class="card-cta-row"><a href="https://youtube.com/playlist?list=PLIQh59u-CUoubs4WeOggDoyxcAXu2VuN1" target="_blank" rel="noopener" class="btn btn-img"><img src="images/worksheets_button/btn-watch-youtube.svg" alt="Watch on YouTube" style="height:52px;display:block;"></a><a data-worksheet-button href="courses/calculus/derivatives-filipino/worksheets/" class="btn btn-img"><img src="images/worksheets_button/btn-worksheets.png" alt="Worksheets" style="height:52px;display:block;"></a></div>
-        </div>
-      </article>
-
-      <!-- INTEGRALS EN -->
-      <article class="course-card calculus" data-lang="english">
-        <div class="course-thumb">
-          <div class="thumb-fallback">∫</div>
-          <img class="yt-thumb" data-playlist="PLmnIr_qavptQsMt23deyDFhGREbNV5bKP" alt="English playlist preview" loading="lazy">
-          <a class="thumb-link" href="https://youtube.com/playlist?list=PLmnIr_qavptQsMt23deyDFhGREbNV5bKP" target="_blank" rel="noopener" aria-label="Open English playlist on YouTube"></a>
-          <div class="lang-tag">English</div>
-          <div class="play-overlay"><div class="play-icon">▶</div></div>
-        </div>
-        <div class="course-body">
-          <div class="course-subject">Calculus</div>
-          <h3>Integrals (English)</h3>
-          <p>Antiderivatives, definite integrals, and integration techniques — the second half of calculus.</p>
-          <div class="card-cta-row"><a href="https://youtube.com/playlist?list=PLmnIr_qavptQsMt23deyDFhGREbNV5bKP" target="_blank" rel="noopener" class="btn btn-img"><img src="images/worksheets_button/btn-watch-youtube.svg" alt="Watch on YouTube" style="height:52px;display:block;"></a><a data-worksheet-button href="courses/calculus/integrals-english/worksheets/" class="btn btn-img"><img src="images/worksheets_button/btn-worksheets.png" alt="Worksheets" style="height:52px;display:block;"></a></div>
-        </div>
-      </article>
-
-      <!-- INTEGRALS FIL -->
-      <article class="course-card calculus" data-lang="filipino">
-        <div class="course-thumb">
-          <div class="thumb-fallback">∫</div>
-          <img class="yt-thumb" data-playlist="PLIQh59u-CUoufCfjdqXXS9_XtygA4K-U3" alt="Filipino playlist preview" loading="lazy">
-          <a class="thumb-link" href="https://youtube.com/playlist?list=PLIQh59u-CUoufCfjdqXXS9_XtygA4K-U3" target="_blank" rel="noopener" aria-label="Open Filipino playlist on YouTube"></a>
-          <div class="lang-tag">Filipino</div>
-          <div class="play-overlay"><div class="play-icon">▶</div></div>
-        </div>
-        <div class="course-body">
-          <div class="course-subject">Calculus</div>
-          <h3>Integrals (Filipino)</h3>
-          <p>Antiderivatives at definite integrals — integration techniques sa Filipino.</p>
-          <div class="card-cta-row"><a href="https://youtube.com/playlist?list=PLIQh59u-CUoufCfjdqXXS9_XtygA4K-U3" target="_blank" rel="noopener" class="btn btn-img"><img src="images/worksheets_button/btn-watch-youtube.svg" alt="Watch on YouTube" style="height:52px;display:block;"></a><a data-worksheet-button href="courses/calculus/integrals-filipino/worksheets/" class="btn btn-img"><img src="images/worksheets_button/btn-worksheets.png" alt="Worksheets" style="height:52px;display:block;"></a></div>
-        </div>
-      </article>
-
-      <!-- STATISTICS EN -->
-      <article class="course-card statistics" data-lang="english" id="statistics-card">
-        <div class="course-thumb">
-          <div class="thumb-fallback">📊</div>
-          <img class="yt-thumb" data-playlist="PLIQh59u-CUot6i3GD-mghy8-ZJsV3UnJo" alt="English playlist preview" loading="lazy">
-          <a class="thumb-link" href="https://youtube.com/playlist?list=PLIQh59u-CUot6i3GD-mghy8-ZJsV3UnJo" target="_blank" rel="noopener"  aria-label="Open English playlist on YouTube"></a>
-          <div class="lang-tag">English</div>
-          <div class="play-overlay"><div class="play-icon">▶</div>
-        </div>
-        </div>
-        <div class="course-body">
-          <div class="course-subject">Statistics</div>
-          <h3>Statistics (English)</h3>
-          <p>Descriptive stats, probability, distributions, and inference — taught in plain language with real examples.</p>
-          <div class="course-outcomes">
-            <div class="course-outcomes-title">🎯 You'll be able to:</div>
-            <ul>
-              <li>Calculate and interpret mean, median, and standard deviation</li>
-              <li>Read and build histograms, box plots, and scatter plots</li>
-              <li>Use the normal distribution and z-scores</li>
-              <li>Run hypothesis tests and confidence intervals</li>
-            </ul>
-          </div>
-          <div class="card-cta-row"><a href="https://youtube.com/playlist?list=PLIQh59u-CUot6i3GD-mghy8-ZJsV3UnJo" target="_blank" rel="noopener" class="btn btn-img"><img src="images/worksheets_button/btn-watch-youtube.svg" alt="Watch on YouTube" style="height:52px;display:block;"></a><a data-worksheet-button href="courses/statistics/statistics-english/worksheets/" class="btn btn-img"><img src="images/worksheets_button/btn-worksheets.png" alt="Worksheets" style="height:52px;display:block;"></a></div>
-        </div>
-      </article>
-
-      <!-- STATISTICS FIL -->
-      <article class="course-card statistics" data-lang="filipino">
-        <div class="course-thumb">
-          <div class="thumb-fallback">📊</div>
-          <img class="yt-thumb" data-playlist="PLIQh59u-CUovE7tK4FlLJNgcuTIMo0mlQ" alt="Filipino playlist preview" loading="lazy">
-          <a class="thumb-link" href="https://youtube.com/playlist?list=PLIQh59u-CUovE7tK4FlLJNgcuTIMo0mlQ" target="_blank" rel="noopener"  aria-label="Open Filipino playlist on YouTube"></a>
-          <div class="lang-tag">Filipino</div>
-          <div class="play-overlay"><div class="play-icon">▶</div>
-        </div>
-        </div>
-        <div class="course-body">
-          <div class="course-subject">Statistics</div>
-          <h3>Statistics (Filipino)</h3>
-          <p>Statistics na ipinapaliwanag sa Filipino — mula sa basics hanggang sa probability at inference.</p>
-          <div class="card-cta-row"><a href="https://youtube.com/playlist?list=PLIQh59u-CUovE7tK4FlLJNgcuTIMo0mlQ" target="_blank" rel="noopener" class="btn btn-img"><img src="images/worksheets_button/btn-watch-youtube.svg" alt="Watch on YouTube" style="height:52px;display:block;"></a><a data-worksheet-button href="courses/statistics/statistics-filipino/worksheets/" class="btn btn-img"><img src="images/worksheets_button/btn-worksheets.png" alt="Worksheets" style="height:52px;display:block;"></a></div>
-        </div>
-      </article>
-
-      <!-- INFERENTIAL STATISTICS EN -->
-      <article class="course-card statistics" data-lang="english">
-        <div class="course-thumb">
-          <div class="thumb-fallback">📊</div>
-          <img class="yt-thumb" data-playlist="PLmnIr_qavptRVGGLGaNUjjem-UxzASw-O" alt="English playlist preview" loading="lazy">
-          <a class="thumb-link" href="https://youtube.com/playlist?list=PLmnIr_qavptRVGGLGaNUjjem-UxzASw-O" target="_blank" rel="noopener" aria-label="Open English playlist on YouTube"></a>
-          <div class="lang-tag">English</div>
-          <div class="play-overlay"><div class="play-icon">▶</div></div>
-        </div>
-        <div class="course-body">
-          <div class="course-subject">Statistics</div>
-          <h3>Inferential Statistics (English)</h3>
-          <p>Hypothesis testing, confidence intervals, and statistical inference — drawing conclusions from data.</p>
-          <div class="card-cta-row"><a href="https://youtube.com/playlist?list=PLmnIr_qavptRVGGLGaNUjjem-UxzASw-O" target="_blank" rel="noopener" class="btn btn-img"><img src="images/worksheets_button/btn-watch-youtube.svg" alt="Watch on YouTube" style="height:52px;display:block;"></a><a data-worksheet-button href="courses/statistics/inferential-statistics-english/worksheets/" class="btn btn-img"><img src="images/worksheets_button/btn-worksheets.png" alt="Worksheets" style="height:52px;display:block;"></a></div>
-        </div>
-      </article>
-
-      <!-- INFERENTIAL STATISTICS FIL -->
-      <article class="course-card statistics" data-lang="filipino">
-        <div class="course-thumb">
-          <div class="thumb-fallback">📊</div>
-          <img class="yt-thumb" data-playlist="PLIQh59u-CUovDqqIgxJQZkb6FmTuhebLN" alt="Filipino playlist preview" loading="lazy">
-          <a class="thumb-link" href="https://youtube.com/playlist?list=PLIQh59u-CUovDqqIgxJQZkb6FmTuhebLN" target="_blank" rel="noopener" aria-label="Open Filipino playlist on YouTube"></a>
-          <div class="lang-tag">Filipino</div>
-          <div class="play-overlay"><div class="play-icon">▶</div></div>
-        </div>
-        <div class="course-body">
-          <div class="course-subject">Statistics</div>
-          <h3>Inferential Statistics (Filipino)</h3>
-          <p>Hypothesis testing at confidence intervals — statistical inference sa Filipino.</p>
-          <div class="card-cta-row"><a href="https://youtube.com/playlist?list=PLIQh59u-CUovDqqIgxJQZkb6FmTuhebLN" target="_blank" rel="noopener" class="btn btn-img"><img src="images/worksheets_button/btn-watch-youtube.svg" alt="Watch on YouTube" style="height:52px;display:block;"></a><a data-worksheet-button href="courses/statistics/inferential-statistics-filipino/worksheets/" class="btn btn-img"><img src="images/worksheets_button/btn-worksheets.png" alt="Worksheets" style="height:52px;display:block;"></a></div>
-        </div>
-      </article>
-
-      <!-- ANALYTIC GEOMETRY EN -->
-      <article class="course-card anageom" data-lang="english">
-        <div class="course-thumb">
-          <div class="thumb-fallback">🧭</div>
-          <img class="yt-thumb" data-playlist="PLmnIr_qavptSP1xzIexoB2NYTsZ6S5JFN" alt="English playlist preview" loading="lazy">
-          <a class="thumb-link" href="https://youtube.com/playlist?list=PLmnIr_qavptSP1xzIexoB2NYTsZ6S5JFN" target="_blank" rel="noopener" aria-label="Open English playlist on YouTube"></a>
-          <div class="lang-tag">English</div>
-          <div class="play-overlay"><div class="play-icon">▶</div></div>
-        </div>
-        <div class="course-body">
-          <div class="course-subject">Analytic Geometry</div>
-          <h3>Analytic Geometry (English)</h3>
-          <p>Lines, circles, parabolas, ellipses, and hyperbolas — geometry meets algebra on the coordinate plane.</p>
-          <div class="card-cta-row"><a href="https://youtube.com/playlist?list=PLmnIr_qavptSP1xzIexoB2NYTsZ6S5JFN" target="_blank" rel="noopener" class="btn btn-img"><img src="images/worksheets_button/btn-watch-youtube.svg" alt="Watch on YouTube" style="height:52px;display:block;"></a><a data-worksheet-button href="courses/analytic-geometry/analytic-geometry-english/worksheets/" class="btn btn-img"><img src="images/worksheets_button/btn-worksheets.png" alt="Worksheets" style="height:52px;display:block;"></a></div>
-        </div>
-      </article>
-
-      <!-- ANALYTIC GEOMETRY FIL -->
-      <article class="course-card anageom" data-lang="filipino">
-        <div class="course-thumb">
-          <div class="thumb-fallback">🧭</div>
-          <img class="yt-thumb" data-playlist="PLIQh59u-CUos_7rfqtg9tLp_GgJubvBHr" alt="Filipino playlist preview" loading="lazy">
-          <a class="thumb-link" href="https://youtube.com/playlist?list=PLIQh59u-CUos_7rfqtg9tLp_GgJubvBHr" target="_blank" rel="noopener" aria-label="Open Filipino playlist on YouTube"></a>
-          <div class="lang-tag">Filipino</div>
-          <div class="play-overlay"><div class="play-icon">▶</div></div>
-        </div>
-        <div class="course-body">
-          <div class="course-subject">Analytic Geometry</div>
-          <h3>Analytic Geometry (Filipino)</h3>
-          <p>Mga linya, bilog, parabola, at ellipse — geometry sa coordinate plane, sa Filipino.</p>
-          <div class="card-cta-row"><a href="https://youtube.com/playlist?list=PLIQh59u-CUos_7rfqtg9tLp_GgJubvBHr" target="_blank" rel="noopener" class="btn btn-img"><img src="images/worksheets_button/btn-watch-youtube.svg" alt="Watch on YouTube" style="height:52px;display:block;"></a><a data-worksheet-button href="courses/analytic-geometry/analytic-geometry-filipino/worksheets/" class="btn btn-img"><img src="images/worksheets_button/btn-worksheets.png" alt="Worksheets" style="height:52px;display:block;"></a></div>
-        </div>
-      </article>
-
-      <!-- LINEAR ALGEBRA EN -->
-      <article class="course-card linear" data-lang="english">
-        <div class="course-thumb">
-          <div class="thumb-fallback">🧮</div>
-          <img class="yt-thumb" data-playlist="PLIQh59u-CUourwjh37hrLYuX6oqntpJVF" alt="English playlist preview" loading="lazy">
-          <a class="thumb-link" href="https://youtube.com/playlist?list=PLIQh59u-CUourwjh37hrLYuX6oqntpJVF" target="_blank" rel="noopener"  aria-label="Open English playlist on YouTube"></a>
-          <div class="lang-tag">English</div>
-          <div class="play-overlay"><div class="play-icon">▶</div>
-        </div>
-        </div>
-        <div class="course-body">
-          <div class="course-subject">Linear Algebra</div>
-          <h3>Linear Algebra (English)</h3>
-          <p>Vectors, matrices, linear transformations, and eigenvalues — essential for engineering, AI, and data science.</p>
-          <div class="card-cta-row"><a href="https://youtube.com/playlist?list=PLIQh59u-CUourwjh37hrLYuX6oqntpJVF" target="_blank" rel="noopener" class="btn btn-img"><img src="images/worksheets_button/btn-watch-youtube.svg" alt="Watch on YouTube" style="height:52px;display:block;"></a><a data-worksheet-button href="courses/linear-algebra/linear-algebra-english/worksheets/" class="btn btn-img"><img src="images/worksheets_button/btn-worksheets.png" alt="Worksheets" style="height:52px;display:block;"></a></div>
-        </div>
-      </article>
-
-      <!-- LINEAR ALGEBRA FIL -->
-      <article class="course-card linear" data-lang="filipino">
-        <div class="course-thumb">
-          <div class="thumb-fallback">🧮</div>
-          <img class="yt-thumb" data-playlist="PLIQh59u-CUovL2b0RRYjGls0ihkPZ9cam" alt="Filipino playlist preview" loading="lazy">
-          <a class="thumb-link" href="https://youtube.com/playlist?list=PLIQh59u-CUovL2b0RRYjGls0ihkPZ9cam" target="_blank" rel="noopener"  aria-label="Open Filipino playlist on YouTube"></a>
-          <div class="lang-tag">Filipino</div>
-          <div class="play-overlay"><div class="play-icon">▶</div>
-        </div>
-        </div>
-        <div class="course-body">
-          <div class="course-subject">Linear Algebra</div>
-          <h3>Linear Algebra (Filipino)</h3>
-          <p>Vectors, matrices, at linear transformations — para sa engineering, AI, at data science students.</p>
-          <div class="card-cta-row"><a href="https://youtube.com/playlist?list=PLIQh59u-CUovL2b0RRYjGls0ihkPZ9cam" target="_blank" rel="noopener" class="btn btn-img"><img src="images/worksheets_button/btn-watch-youtube.svg" alt="Watch on YouTube" style="height:52px;display:block;"></a><a data-worksheet-button href="courses/linear-algebra/linear-algebra-filipino/worksheets/" class="btn btn-img"><img src="images/worksheets_button/btn-worksheets.png" alt="Worksheets" style="height:52px;display:block;"></a></div>
-        </div>
-      </article>
-
-      <!-- DISCRETE MATH EN -->
-      <article class="course-card discrete" data-lang="english">
-        <div class="course-thumb">
-          <div class="thumb-fallback">🔢</div>
-          <img class="yt-thumb" data-playlist="PLIQh59u-CUottFfEo8QEWy7a1_yitOTHk" alt="English playlist preview" loading="lazy">
-          <a class="thumb-link" href="https://youtube.com/playlist?list=PLIQh59u-CUottFfEo8QEWy7a1_yitOTHk" target="_blank" rel="noopener"  aria-label="Open English playlist on YouTube"></a>
-          <div class="lang-tag">English</div>
-          <div class="play-overlay"><div class="play-icon">▶</div>
-        </div>
-        </div>
-        <div class="course-body">
-          <div class="course-subject">Discrete Math</div>
-          <h3>Discrete Math (English)</h3>
-          <p>Logic, sets, combinatorics, graphs, and proof techniques — the math behind computer science.</p>
-          <div class="card-cta-row"><a href="https://youtube.com/playlist?list=PLIQh59u-CUottFfEo8QEWy7a1_yitOTHk" target="_blank" rel="noopener" class="btn btn-img"><img src="images/worksheets_button/btn-watch-youtube.svg" alt="Watch on YouTube" style="height:52px;display:block;"></a><a data-worksheet-button href="courses/discrete-math/discrete-math-english/worksheets/" class="btn btn-img"><img src="images/worksheets_button/btn-worksheets.png" alt="Worksheets" style="height:52px;display:block;"></a></div>
-        </div>
-      </article>
-
-      <!-- DISCRETE MATH FIL -->
-      <article class="course-card discrete" data-lang="filipino">
-        <div class="course-thumb">
-          <div class="thumb-fallback">🔢</div>
-          <img class="yt-thumb" data-playlist="PLIQh59u-CUot_hBGW7_nYplCMUgkdtFTA" alt="Filipino playlist preview" loading="lazy">
-          <a class="thumb-link" href="https://youtube.com/playlist?list=PLIQh59u-CUot_hBGW7_nYplCMUgkdtFTA" target="_blank" rel="noopener"  aria-label="Open Filipino playlist on YouTube"></a>
-          <div class="lang-tag">Filipino</div>
-          <div class="play-overlay"><div class="play-icon">▶</div>
-        </div>
-        </div>
-        <div class="course-body">
-          <div class="course-subject">Discrete Math</div>
-          <h3>Discrete Math (Filipino)</h3>
-          <p>Logic, sets, combinatorics, at graphs — sa Filipino, perfect para sa CS at IT students.</p>
-          <div class="card-cta-row"><a href="https://youtube.com/playlist?list=PLIQh59u-CUot_hBGW7_nYplCMUgkdtFTA" target="_blank" rel="noopener" class="btn btn-img"><img src="images/worksheets_button/btn-watch-youtube.svg" alt="Watch on YouTube" style="height:52px;display:block;"></a><a data-worksheet-button href="courses/discrete-math/discrete-math-filipino/worksheets/" class="btn btn-img"><img src="images/worksheets_button/btn-worksheets.png" alt="Worksheets" style="height:52px;display:block;"></a></div>
-        </div>
-      </article>
-
-      <!-- MATH IN A MINUTE EN -->
-      <article class="course-card minute" data-lang="english">
-        <div class="course-thumb">
-          <div class="thumb-fallback">⚡</div>
-          <img class="yt-thumb" data-playlist="PLmnIr_qavptQQsmleUhaxu8IF6AuHFj1-" alt="English playlist preview" loading="lazy">
-          <a class="thumb-link" href="https://youtube.com/playlist?list=PLmnIr_qavptQQsmleUhaxu8IF6AuHFj1-" target="_blank" rel="noopener" aria-label="Open English playlist on YouTube"></a>
-          <div class="lang-tag">English</div>
-          <div class="play-overlay"><div class="play-icon">▶</div></div>
-        </div>
-        <div class="course-body">
-          <div class="course-subject">Math in a Minute</div>
-          <h3>Math in a Minute (English)</h3>
-          <p>Quick, focused math concepts in 60 seconds or less — perfect for review or a quick refresher.</p>
-          <div class="card-cta-row"><a href="https://youtube.com/playlist?list=PLmnIr_qavptQQsmleUhaxu8IF6AuHFj1-" target="_blank" rel="noopener" class="btn btn-img"><img src="images/worksheets_button/btn-watch-youtube.svg" alt="Watch on YouTube" style="height:52px;display:block;"></a><a data-worksheet-button href="courses/math-in-a-minute/math-in-a-minute-english/worksheets/" class="btn btn-img"><img src="images/worksheets_button/btn-worksheets.png" alt="Worksheets" style="height:52px;display:block;"></a></div>
-        </div>
-      </article>
-
-      <!-- MATH IN A MINUTE FIL -->
-      <article class="course-card minute" data-lang="filipino">
-        <div class="course-thumb">
-          <div class="thumb-fallback">⚡</div>
-          <img class="yt-thumb" data-playlist="PLIQh59u-CUosK9LdsRV4Zl2R-LeCz7JH2" alt="Filipino playlist preview" loading="lazy">
-          <a class="thumb-link" href="https://youtube.com/playlist?list=PLIQh59u-CUosK9LdsRV4Zl2R-LeCz7JH2" target="_blank" rel="noopener" aria-label="Open Filipino playlist on YouTube"></a>
-          <div class="lang-tag">Filipino</div>
-          <div class="play-overlay"><div class="play-icon">▶</div></div>
-        </div>
-        <div class="course-body">
-          <div class="course-subject">Math in a Minute</div>
-          <h3>Math in a Minute (Filipino)</h3>
-          <p>Mabilis at focused na math concepts sa 60 seconds — perfect para sa quick review.</p>
-          <div class="card-cta-row"><a href="https://youtube.com/playlist?list=PLIQh59u-CUosK9LdsRV4Zl2R-LeCz7JH2" target="_blank" rel="noopener" class="btn btn-img"><img src="images/worksheets_button/btn-watch-youtube.svg" alt="Watch on YouTube" style="height:52px;display:block;"></a><a data-worksheet-button href="courses/math-in-a-minute/math-in-a-minute-filipino/worksheets/" class="btn btn-img"><img src="images/worksheets_button/btn-worksheets.png" alt="Worksheets" style="height:52px;display:block;"></a></div>
-        </div>
-      </article>
     </div>
   </div>
 </section>
 
-<!-- ========== SUBSCRIBE CTA ========== -->
-<section class="subscribe-cta">
-  <div class="container">
-    <div class="section-eyebrow" style="color: var(--yellow);">Stay connected</div>
-    <h2>New lessons every week.</h2>
-    <p>Subscribe to Numberbender on YouTube and never miss a new course, walkthrough, or behind-the-scenes math moment.</p>
-    <a href="https://www.youtube.com/@numberbender" target="_blank" rel="noopener" class="btn btn-red btn-lg">
-      <span class="yt-icon">▶</span> Subscribe on YouTube
-    </a>
-  </div>
-</section>
-
-<!-- ========== FOOTER ========== -->
+<!-- FOOTER -->
+</main>
 <footer>
   <div class="container">
     <div class="foot-grid">
       <div class="foot foot-brand">
-        <div class="logo" style="color:white;">
-          <div class="logo-mark" style="background:transparent;overflow:hidden;">
-            <img src="images/numberbender-mark-teal-transparent.svg" alt="Numberbender" style="width:100%;height:100%;object-fit:contain;display:block;">
+        <div class="foot-logo">
+          <div class="foot-logo-mark">
+            <img src="/images/numberbender-mark-teal-transparent.svg" alt="Numberbender" style="width:100%;height:100%;object-fit:contain;">
           </div>
           <span>Numberbender</span>
         </div>
         <p>Helping students learn math with confidence and helping educators teach online with energy, clarity, and impact.</p>
-        <p class="footer-tagline">Math is hard. So we made it human.</p>
-        <div class="socials">
-          <a href="https://www.youtube.com/@numberbender" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a2.997 2.997 0 0 0-2.108-2.119C19.42 3.5 12 3.5 12 3.5s-7.42 0-9.39.567A2.997 2.997 0 0 0 .502 6.186C0 8.176 0 12 0 12s0 3.824.502 5.814a2.997 2.997 0 0 0 2.108 2.119C4.58 20.5 12 20.5 12 20.5s7.42 0 9.39-.567a2.997 2.997 0 0 0 2.108-2.119C24 15.824 24 12 24 12s0-3.824-.502-5.814zM9.6 15.572V8.428L15.818 12 9.6 15.572z"/></svg></a>
-          <a href="https://www.tiktok.com/@numberbender" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.74a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.17z"/></svg></a>
-          <a href="https://www.facebook.com/thenumberbender" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"/></svg></a>
-          <a href="https://www.linkedin.com/in/numberbender/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.063 2.063 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
-        </div>
-      
-        <div class="foot-signup-block">
-          <label for="foot-email">📬 Join the movement — 1,000+ students and teachers already in</label>
-          <form class="foot-signup-form" action="https://numberbender.us17.list-manage.com/subscribe/post?u=65e30fe527dde6fb604f6760a&amp;id=ad0977e0cc&amp;f_id=003058e0f0" method="post" target="_blank">
-            <input id="foot-email" type="email" name="EMAIL" placeholder="your@email.com" required aria-label="Your email address">
-            <div style="position:absolute; left:-5000px;" aria-hidden="true"><input type="text" name="b_65e30fe527dde6fb604f6760a_ad0977e0cc" tabindex="-1" value=""></div>
-            <button type="submit">Join</button>
-          </form>
-        </div>
-</div>
-      <div class="foot">
-        <h4>Students</h4>
-        <a href="courses.html">All Courses</a>
-        <a href="courses.html#algebra-card">Algebra</a>
-        <a href="courses.html#statistics-card">Statistics</a>
-        <a href="courses.html">Calculus</a>
       </div>
       <div class="foot">
-        <h4>Educators</h4>
-        <a href="teach-it-like-you-stream-it.html">Teach It Like You Stream It</a>
-        <a href="teacher-resources.html">Teacher Resources</a>
-        <a href="speaking.html">Workshops</a>
-        <a href="speaking.html">AI in Education</a>
-        <a href="speaking.html">Flipped Learning</a>
+        <h4>Courses</h4>
+        <a href="/courses">All Subjects</a>
+        <a href="/learn/elementary-algebra/">Elementary Algebra</a>
+        <a href="/learn/intermediate-algebra/">Intermediate Algebra</a>
+      </div>
+      <div class="foot">
+        <h4>Students</h4>
+        <a href="/math-worksheets">Free Worksheets</a>
+        <a href="/courses">Video Lessons</a>
       </div>
       <div class="foot">
         <h4>Connect</h4>
-        <a href="about.html">About Dr. E</a>
-        <a href="speaking.html">Speaking</a>
-        <a href="speaking-archive.html">Speaking Archive</a>
-        <a href="press.html">Press &amp; Media</a>
-        <a href="contact.html">Contact</a>
-        <a href="https://www.youtube.com/@numberbender" target="_blank" rel="noopener">YouTube Channel</a>
-        <a href="privacy.html">Privacy Policy</a>
+        <a href="/about">About Dr. E</a>
+        <a href="/speaking">Speaking</a>
+        <a href="/contact">Contact</a>
       </div>
     </div>
     <div class="foot-bottom">
-      © 2026 Numberbender · Founded by Dr. Peter Esperanza · Numberbender Inc. is a 501(c)(3) nonprofit organization · EIN: 86-2952520 · Made with care for learners and educators everywhere. · <a href="privacy.html" style="color:#94a3b8;">Privacy Policy</a>
-      <div style="margin-top:8px;font-size:0.78rem;color:#64748b;">
-        <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener"><img src="https://licensebuttons.net/l/by/4.0/88x31.png" alt="CC BY 4.0" style="border:0;vertical-align:middle;margin-right:6px;"></a>
-        Original content licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener" style="color:#94a3b8;">CC BY 4.0</a> &mdash; free to share and adapt with credit to Peter Esperanza / Numberbender.
-      </div>
+      <span>© 2026 Numberbender · Dr. Peter Esperanza</span>
+      <span>Free bilingual math — English &amp; Filipino</span>
     </div>
   </div>
 </footer>
 
 <script>
-  function filterLang(lang){
-    const cards = document.querySelectorAll('.course-card');
-    const buttons = document.querySelectorAll('.lang-btn');
-    buttons.forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
-    cards.forEach(c => {
-      const show = (lang === 'all') || (c.dataset.lang === lang);
-      c.classList.toggle('hidden', !show);
+/* ═══════════════════════════════════════════════════════════════════
+   LESSON SEARCH INDEX — courses.html
+
+   ⚠️  MAINTENANCE REQUIRED: Whenever you add new lessons to any
+   subject page, update the matching array below so the cross-subject
+   search stays accurate.
+
+   Each array contains lesson titles + unit titles for that subject.
+   Last updated: May 2026 · 448 lessons across 10 subjects
+   ═══════════════════════════════════════════════════════════════════ */
+
+const LESSON_INDEX = {
+  'pre-algebra': [
+    'The Number Line','Absolute Value','Operations on Integers',
+    'The Coordinate System','Prime Factorization','Percent and Decimals',
+    'Ratio and Proportion','Square Roots','Laws of Exponents',
+    'Scientific Notation','Direct Variation','Inverse Variation',
+    'Joint Variation','Number Sense','Fractions, Percent & Ratios',
+    'Roots & Exponents','Variation'
+  ],
+  'algebra': [
+    'Adding and Subtracting Integers','Multiplying and Dividing Integers',
+    'Fractions and Mixed Numbers','Rational Numbers and Decimals',
+    'Order of Operations (PEMDAS)','Variables and Algebraic Expressions',
+    'Translating Verbal to Algebraic Expressions','Properties of Real Numbers',
+    'Combining Like Terms','The Distributive Property',
+    'One-Step Equations','Multi-Step Equations','Solving Linear Equations',
+    'Equations with Fractions and Decimals','Literal Equations and Formulas',
+    'Word Problems — Setting Up Equations','Solving Linear Inequalities',
+    'Compound Inequalities — And / Or','Solving and Graphing Inequalities',
+    'Absolute Value Equations','Absolute Value Inequalities',
+    'Plotting Points in the Coordinate Plane','Graphing Linear Equations',
+    'Finding X and Y Intercepts','Calculating Slope','Slope-Intercept Form',
+    'Point-Slope Form','Writing Equations of Lines',
+    'Parallel and Perpendicular Lines','Domain and Range of Functions',
+    'Solving Systems by Graphing','Solving Systems by Substitution',
+    'Solving Systems by Elimination','Systems of Linear Inequalities',
+    'Applications and Word Problems','Laws of Exponents',
+    'Adding and Subtracting Polynomials',
+    'Multiplying Polynomials — FOIL and Distributive','Dividing Polynomials',
+    'Factoring — Greatest Common Factor (GCF)','Factoring Trinomials (a = 1)',
+    'Zero Product Property and Special Patterns',
+    'Simplifying Rational Expressions',
+    'Multiplying and Dividing Rational Expressions',
+    'Adding and Subtracting Rational Expressions','Complex Fractions',
+    'Rational Equations and Applications','Simplifying Radicals',
+    'Adding and Subtracting Radicals','Radical Equations',
+    'Solving Quadratics — Missing Linear Term',
+    'Solving Quadratic Equations by Factoring','Completing the Square',
+    'The Quadratic Formula','Quadratic Functions and Parabolas',
+    'Exponential Functions — Graphs and Properties',
+    'Introduction to Logarithms','Properties of Logarithms',
+    'Change of Base Formula','Graphing Logarithmic Functions',
+    'Arithmetic Sequences','Geometric Sequences',
+    'Sequences and Series Notation','Summation Notation',
+    'Permutations','Combinations','Factorials',
+    'Number Systems & Operations','Variables, Expressions & Properties',
+    'Linear Equations','Linear Inequalities & Absolute Value',
+    'Graphing & Functions','Systems of Equations',
+    'Polynomials & Factoring','Rational Expressions & Equations',
+    'Radicals & Quadratic Equations','Exponential & Logarithmic Functions',
+    'Sequences, Series & Counting','Solving Piecewise Defined Functions'
+  ],
+  'geometry': [
+    'Naming Points, Lines, and Planes','Naming and Writing Angle Notations',
+    'Classifying and Naming Polygons',
+    'Measuring Interior Angles of Polygons Using Diagonals',
+    'Deductive and Inductive Reasoning',
+    'Axiomatic Structure of a Mathematical System',
+    'Theorems and Postulates on Parallel and Perpendicular Lines',
+    'Properties of Parallel Lines Cut by a Transversal',
+    'Using Properties of Parallel Lines Cut by a Transversal',
+    'Solving Angle Measures of Intersecting Lines',
+    'Constructing Parallel and Perpendicular Lines with a Compass',
+    'Constructing Triangles Using a Compass',
+    'Triangle Congruence — SSS and SAS Postulates',
+    'Triangle Congruence — AAS and ASA Postulates',
+    'Determining Similarity in Polygons',
+    'Proving Triangle Similarity — AA, SSS, and SAS',
+    'Ratio and Proportion in Similarity',
+    'Conditions That Make a Quadrilateral a Parallelogram',
+    'Trapezoids and the Midsegment Theorem',
+    'Writing Two-Column Proofs on Kite and Trapezoid',
+    'Finding Arc Measure and Arc Length of a Circle',
+    'Theorems on Chords and Arcs in Congruent Circles',
+    'Foundations of Geometry','Logic, Reasoning & Proofs',
+    'Parallel & Perpendicular Lines','Triangle Congruence',
+    'Similarity','Quadrilaterals','Circles'
+  ],
+  'trigonometry': [
+    'The Pythagorean Theorem','Introduction to SOH CAH TOA',
+    'Solving for Missing Sides','Right Triangle Word Problems',
+    'The Unit Circle','Graphing Sine and Cosine Functions',
+    'Graphing Cosecant and Secant Functions',
+    'Simplifying Trigonometric Expressions',
+    'Proving Trigonometric Identities',
+    'Proving Trigonometric Identities (Advanced)',
+    'Sum and Difference Formulas','Solving Trigonometric Equations',
+    'Solving Trig Equations Using Identities',
+    'Law of Sines — Oblique Triangles','Law of Cosines — Oblique Triangles',
+    'Right Triangle Trigonometry','Angles & the Unit Circle',
+    'Graphing Trigonometric Functions','Trigonometric Identities',
+    'Oblique Triangles'
+  ],
+  'precalculus': [
+    'Function Operations & Composition','Finding the Inverse of a Function',
+    'Finding the Inverse Algebraically','Solving Quadratic Equations',
+    'Remainder Theorem & Factor Theorem',
+    'Rational Exponents & Radical Expressions',
+    'Simplifying Radical Expressions','Solving Radical Equations',
+    'Simplifying Rational Expressions',
+    'Adding & Subtracting Rational Expressions',
+    'Multiplying & Dividing Rational Expressions',
+    'Domain of Rational Functions','Asymptotes of Rational Functions',
+    'Graphing Exponential Functions','Introduction to Logarithmic Functions',
+    'Properties of Logarithms','Graphing Logarithmic Functions',
+    'Solving Exponential Equations — Change of Base',
+    'Solving Logarithmic Equations','Angles & Radian Measure',
+    'The Six Trig Ratios (SOH CAH TOA)',
+    'The Unit Circle & Special Right Triangles',
+    'Right Triangle Trig — Rationalizing Fractions',
+    'Solving Right Triangles (SOH CAH TOA)','Trigonometry Word Problems',
+    'Graphing Sine & Cosine Functions','Graphing Cosecant & Secant Functions',
+    'Simplifying Trig Expressions','Proving Trigonometric Identities',
+    'Sum & Difference Formulas','Solving Trig Equations',
+    'Solving Trig Equations — Pythagorean Identities',
+    'Law of Sines','Law of Cosines','Operations with Complex Numbers',
+    'Absolute Value & Trig Form of Complex Numbers',
+    'Multiplying & Dividing Complex Numbers in Trig Form',
+    "De Moivre's Theorem",
+    'Vectors — Components, Magnitude & Unit Vectors','Vectors — Dot Product',
+    'Introduction to Conic Sections & Parabolas',
+    'Parabolas — Standard Form & Key Features',
+    'Writing the Equation of a Parabola','Conic Sections — Circles',
+    'Ellipses — Standard Form & Key Parts',
+    'Ellipses — Standard Form & Graphing',
+    'Ellipses — Equations, Graphs & Foci',
+    'Hyperbolas — Graphing & Analyzing',
+    'Converting Conics to Standard Form',
+    'Systems of Equations — Solving by Graphing',
+    'Systems of Linear Inequalities','Matrices — Elementary Row Operations',
+    'Matrix Multiplication','Determinants of 2×2 & 3×3 Matrices',
+    'Determinants — Advanced','Finding the Inverse of a 2×2 Matrix',
+    "Cramer's Rule",'Sequences & Factorial Notation',
+    'Arithmetic Sequences','Geometric Sequences',
+    'Summation & Sigma Notation','Mathematical Induction',
+    "Binomial Theorem & Pascal's Triangle",'Combinations',
+    'Introduction to Derivatives — Power Rule',
+    'Solving Piecewise Defined Functions',
+    'Functions','Polynomial & Rational Functions',
+    'Exponential & Logarithmic Functions','Trigonometry Basics',
+    'Graphing Trig Functions','Trig Identities & Laws',
+    'Complex Numbers & Vectors','Conic Sections','Systems & Matrices',
+    'Sequences, Series & Counting','Preview of Calculus'
+  ],
+  'calculus': [
+    'Introduction to Limits',
+    'Solving Limits — Direct Substitution & Factoring',
+    'Evaluating Limits — Multiple Techniques',
+    'One-Sided Limits & Piecewise Functions','Limits at Infinity',
+    "L'Hôpital's Rule",'Definition of Derivative',
+    'Power Rule & Constant Rule','Product Rule','Quotient Rule',
+    'Chain Rule','Derivatives from a Table of Values',
+    'Derivatives of Trig Functions','Derivatives of Exponential Functions',
+    'Derivative of ln and Logarithmic Functions',
+    'Derivative of Inverse Trig Functions',
+    'Differentiating Transcendental Functions','Implicit Differentiation',
+    'Implicit Differentiation — Trig Functions & 2nd Derivative',
+    'Higher-Order Derivatives','Equation of a Tangent Line',
+    'Related Rates — Circles & Balloons','Related Rates — Ladder & Cone',
+    "Mean Value Theorem & Rolle's Theorem",'Critical Numbers',
+    'Extreme Value Theorem','First Derivative Test — Local Extrema',
+    'Second Derivative Test — Concavity & Inflection',
+    "Analyzing f(x) Using the Graph of f'(x)",'Optimization Problems',
+    'Velocity, Acceleration & Sign Chart','Introduction to Antiderivatives',
+    'Antiderivatives of Transcendental Functions',
+    'Riemann Sums — Area Under the Curve',
+    'Riemann Sums — Distance & Displacement','Definite Integrals',
+    'Fundamental Theorem of Calculus','Net Change Applications',
+    'U-Substitution','Area Between Curves',
+    'Area with Subregions (WRT x and WRT y)','Volume — Disk Method',
+    'Volume — Washer Method','Volume — Cross Sections',
+    'Average Value of a Function',
+    'Slope Fields & Separable Differential Equations',
+    'TI-84 Strategies for the AP FRQ',
+    'Limits','Basic Derivative Rules','Transcendental Function Derivatives',
+    'Derivative Applications','Integration Fundamentals',
+    'Integral Applications','AP Calculus AB/BC Exam Prep — FRQ Practice'
+  ],
+  'statistics': [
+    'Identifying Population and Sample','Parameters vs Statistics',
+    'Categorical vs Quantitative Variables','Discrete vs Continuous Variables',
+    'Sampling Techniques — Random Number Generator',
+    'Simple Random Sampling — Table D',
+    'Simulating Experiments — Random Digit Table',
+    'Bias, Lurking & Confounding Variables','Constructing Dot Plots',
+    'Frequency Distribution Tables & Histograms','Stem-and-Leaf Plots',
+    'Measures of Center — Mean vs Median',
+    'Percentile Rank from Raw Data',
+    'Percentile Rank & the Normal Distribution',
+    'Finding Area Under the Normal Curve — Z-Table',
+    'Quartiles and Box-and-Whisker Plots',
+    'Standard Deviation & Sigma Notation',
+    'Z-Scores and Standard Normal Distribution',
+    'The Empirical Rule — 68-95-99.7',
+    'Normal Distribution Probability — Z-Table',
+    'Finding Area Under Normal Curve — Ti-84',
+    'Continuous Random Variables & Normal Distribution',
+    'Explanatory & Response Variables — Scatterplots',
+    'Graphing & Interpreting Scatterplots','Interpreting Correlation — FODS',
+    'Least Squares Regression Line (LSRL)',
+    'LSRL from Computer Output','LSRL Predictions — Desmos',
+    'Linear Transformation of Bivariate Data',
+    'Transforming Data to Achieve Linearity',
+    'Introduction to Probability — Sample Spaces','Probability Rules — Events',
+    'Classical Probability','Independent vs Dependent Events',
+    'Probability Models','Two-Way Tables & Venn Diagrams',
+    'Two-Way Tables, Venn Diagrams & Tree Diagrams',
+    'Conditional Probability','Conditional Probability — Using Tables',
+    'Combinations & Counting Methods',
+    'Probability of Discrete Random Variables',
+    'Mean & Standard Deviation of Discrete Random Variables',
+    'Binomial Probability',
+    'Mean & Standard Deviation of Binomial Distribution',
+    'Geometric Distribution',
+    'Uniform Distribution — Continuous Random Variables',
+    'Sampling Distributions','Introduction to Confidence Intervals',
+    'Computing CI for Population Mean (Z-interval)',
+    'CI for Population Mean — t-Distribution',
+    'Solving Problems — CI for Population Mean',
+    'Determining Sample Size for CI',
+    'Confidence Interval for Population Proportion',
+    'Solving Problems — CI for Proportion',
+    'Matched Pairs — Confidence Interval',
+    'Introduction to Hypothesis Testing','Type I and Type II Errors',
+    'Hypothesis Testing — One Sample Mean (Z-Test)',
+    'Hypothesis Testing — One Sample Proportion',
+    'Hypothesis Testing — Two Sample Means',
+    'Hypothesis Testing — Two Sample Proportions',
+    'Hypothesis Testing — Matched Pairs',
+    'Chi-Square Goodness of Fit','Chi-Square Test for Independence',
+    'Exploring Data & Study Design','Representing & Summarizing Data',
+    'The Normal Distribution','Linear Regression & Correlation',
+    'Probability','Random Variables & Distributions',
+    'Confidence Intervals','Hypothesis Testing',
+    'AP Statistics Exam Prep — FRQ Practice'
+  ],
+  'linear-algebra': [
+    'Introduction to Matrices',
+    'Matrix Addition, Subtraction & Scalar Multiplication',
+    'Matrix Multiplication','Elementary Row Operations',
+    'Converting to Augmented Matrices','Back Substitution',
+    'Describing Solutions of a Linear System',
+    'Solving 3-Variable Linear Systems with Matrices',
+    'Matrix Operations with Technology','Determinants of Matrices',
+    'Inverse of a 2×2 Matrix',"Cramer's Rule — 2×2 Systems",
+    "Cramer's Rule — Larger Systems",'Introduction to Vectors',
+    'Vector Dot Product','Linear Systems with Matrices',
+    'Determinants, Inverses & Cramer\'s Rule','Vectors'
+  ],
+  'discrete-math': [
+    'Statements & Negations','Compound Statements & Logical Connectives',
+    'Truth Tables — Conjunction & Disjunction',
+    'Translating Compound Statements to Symbolic Form',
+    'Basic Set Notation','Subsets','Venn Diagrams & Set Operations',
+    'Venn Diagrams — Reading Survey Problems',
+    'Venn Diagrams — Solving Survey Problems',
+    'Conditional Statements','Inverse, Converse & Contrapositive',
+    'Deductive Reasoning & Law of Detachment','Writing a Two-Column Proof',
+    'Arithmetic & Geometric Sequences (Part 1)',
+    'Arithmetic & Geometric Sequences (Part 2)',
+    'Summation Notation','Mathematical Induction',
+    'Fundamental Counting Principle','Logic & Symbolic Reasoning',
+    'Set Theory','Conditional Reasoning & Proof',
+    'Sequences, Counting & Induction'
+  ],
+  'test-prep': [
+    'Solving Equations — Algebraic Problem-Solving','Solving for x',
+    'Y-Intercept Problems — Decoding X-Y Tables',
+    'Calculating Slope of a Line',
+    'Graphing Linear Equations — Slope-Intercept',
+    'Mastering Linear Systems','Solutions of Linear Inequalities',
+    'Systems of Linear Inequalities',
+    'Quadratic Equations — Real Solutions & Imaginary Numbers',
+    'Graphing Quadratics — Vertex Form of Parabolas',
+    'Function Operations','Function Evaluation — Simplify with f(x)',
+    'Arithmetic Sequences — Step-by-Step',
+    'Logarithmic Equations — Converting Logs to Exponential',
+    'Equations with the Change of Base Formula',
+    'Decimal Problem Solving with Fraction Skills',
+    'Percentage Word Problems',
+    'Law of Exponents — Entrance Exam Strategies',
+    'Multiplying Radical Expressions — Distributive Property',
+    'Adding Radicals by Factoring',
+    'Multiplying Polynomials — Distributive Property',
+    'Addition of Rational Expressions','Complex Numbers',
+    'Data Analysis — Using Scatterplots (SAT & UPCAT)',
+    'Calculating Mean from a Graph',
+    'Interior Angle Theorem (SAT & UPCAT)',
+    'Volume — Rectangular Solids & Cubes','Congruence & Equations',
+    'Trig Ratios — SOH-CAH-TOA','Order of Operations (PEMDAS)',
+    'Adding & Subtracting Integers','Simplifying Fractions',
+    'Multiplying Fractions Using Prime Factors',
+    'Dividing Fractions Using Prime Factors',
+    'Dividing Fractions Using Factoring',
+    'Comparing Fractions — Which is Bigger?','Comparing Fractions',
+    'Simplifying Complex Fractions','Factoring Quadratics',
+    'Factoring — Difference of Two Squares','Geometric Sequences',
+    'Solving Probability Problems','Probability — 2-Way Table',
+    'Algebra & Linear Equations','Functions, Quadratics & Sequences',
+    'Number Sense, Radicals & Exponents',
+    'Statistics, Geometry & Word Problems','Quick Drills — Math in a Minute',
+    'LET','UPCAT','SAT','CBEST','PRAXIS'
+  ]
+};
+
+/* ═══════════════════════════════════════════════════════════════════
+   CROSS-SUBJECT SEARCH LOGIC
+   Searches lesson titles across all subjects and highlights cards.
+   Non-matching cards are dimmed (not hidden) so the full library
+   remains visible — students see WHERE the topic is, and WHERE it isn't.
+   ═══════════════════════════════════════════════════════════════════ */
+
+function filterSubjects(query) {
+  const q = query.trim().toLowerCase();
+  const clearBtn = document.getElementById('subject-search-clear');
+  const statusEl = document.getElementById('subject-search-status');
+  const noResults = document.getElementById('subject-search-no-results');
+  clearBtn.classList.toggle('visible', q.length > 0);
+
+  const cards = document.querySelectorAll('.subject-grid .subject-card');
+
+  if (!q) {
+    cards.forEach(card => {
+      card.classList.remove('search-match', 'search-dim');
     });
+    statusEl.innerHTML = '';
+    noResults.classList.remove('visible');
+    return;
   }
-</script>
 
+  let matchCount = 0;
+  cards.forEach(card => {
+    const subject = card.dataset.subject;
+    const lessons = LESSON_INDEX[subject] || [];
+    const subjectName = (card.querySelector('.subject-name') || {innerText:''}).innerText.toLowerCase();
+    const hasMatch = subjectName.includes(q) || lessons.some(l => l.toLowerCase().includes(q));
+    if (hasMatch) {
+      card.classList.add('search-match');
+      card.classList.remove('search-dim');
+      matchCount++;
+    } else {
+      card.classList.add('search-dim');
+      card.classList.remove('search-match');
+    }
+  });
 
-<script>
-  // Fetch actual playlist thumbnails via YouTube Data API v3.
-  // This returns the real custom thumbnail set in YouTube Studio — not just the first video.
-  // Key is restricted to: numberbender.com/* | YouTube Data API v3 only.
-  (function(){
-    const YT_API_KEY = 'AIzaSyApHeJvJ15Nhe4bLv0ntt8WFPENcMag11Q';
+  if (matchCount > 0) {
+    statusEl.innerHTML = `<strong>${matchCount} subject${matchCount !== 1 ? 's' : ''}</strong> have lessons matching "<strong>${query.trim()}</strong>"`;
+    noResults.classList.remove('visible');
+  } else {
+    statusEl.innerHTML = '';
+    noResults.classList.add('visible');
+  }
+}
 
-    const imgs   = document.querySelectorAll('img.yt-thumb[data-playlist]');
-    const ids    = [...new Set([...imgs].map(img => img.dataset.playlist))];
+function clearSubjectSearch() {
+  const input = document.getElementById('subject-search');
+  input.value = '';
+  filterSubjects('');
+  input.focus();
+}
 
-    // Batch into groups of 50 (API max per request)
-    const chunks = [];
-    for (let i = 0; i < ids.length; i += 50) chunks.push(ids.slice(i, i + 50));
-
-    const thumbMap = {};
-
-    Promise.all(chunks.map(batch => {
-      const url = `https://www.googleapis.com/youtube/v3/playlists?part=snippet&id=${batch.join(',')}&maxResults=50&key=${YT_API_KEY}`;
-      return fetch(url, { cache: 'no-cache' })
-        .then(r => r.ok ? r.json() : Promise.reject('yt-api failed'));
-    }))
-    .then(results => {
-      results.forEach(data => {
-        (data.items || []).forEach(item => {
-          const t = item.snippet.thumbnails;
-          const url = (t.maxres || t.standard || t.high || t.medium || t.default || {}).url;
-          if (url) thumbMap[item.id] = url;
-        });
-      });
-      imgs.forEach(img => {
-        const url = thumbMap[img.dataset.playlist];
-        if (url) img.src = url;
-        else img.classList.add('failed');
-      });
-    })
-    .catch(() => imgs.forEach(img => img.classList.add('failed')));
-  })();
-</script>
-<script>
-  function toggleDD(btn){
-    var menu = btn.nextElementSibling;
-    var willOpen = !menu.classList.contains('open');
+function setLang(lang) {
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-fil').classList.toggle('active', lang === 'fil');
+}
+function toggleDD(btn){
+  var menu = btn.nextElementSibling;
+  var willOpen = !menu.classList.contains('open');
+  document.querySelectorAll('.nav-dropdown .dropdown-menu.open').forEach(function(m){
+    m.classList.remove('open');
+    var t = m.previousElementSibling;
+    if(t) t.setAttribute('aria-expanded','false');
+  });
+  if(willOpen){
+    menu.classList.add('open');
+    btn.setAttribute('aria-expanded','true');
+  }
+}
+document.addEventListener('click', function(e){
+  if(!e.target.closest('.nav-dropdown')){
     document.querySelectorAll('.nav-dropdown .dropdown-menu.open').forEach(function(m){
       m.classList.remove('open');
       var t = m.previousElementSibling;
-      if (t) t.setAttribute('aria-expanded','false');
+      if(t) t.setAttribute('aria-expanded','false');
     });
-    if (willOpen){
-      menu.style.transition='none';
-      menu.classList.add('open');
-      menu.getBoundingClientRect();
-      menu.style.transition='';
-      btn.setAttribute('aria-expanded','true');
-    }
   }
-  document.addEventListener('click', function(e){
-    if (!e.target.closest('.nav-dropdown')){
-      document.querySelectorAll('.nav-dropdown .dropdown-menu.open').forEach(function(m){
-        m.classList.remove('open');
-        var t = m.previousElementSibling;
-        if (t) t.setAttribute('aria-expanded','false');
-      });
-    }
-  });
-</script>
-
-<script>
-  // GA4 event tracking: email signups + outbound clicks
-  document.querySelectorAll('form').forEach(function(form) {
-    if (form.querySelector('input[type="email"]')) {
-      form.addEventListener('submit', function() {
-        gtag('event', 'email_signup', { event_category: 'engagement', event_label: window.location.pathname });
-      });
-    }
-  });
-  document.querySelectorAll('a[target="_blank"]').forEach(function(link) {
-    link.addEventListener('click', function() {
-      gtag('event', 'outbound_click', { event_category: 'outbound', link_url: link.href });
-    });
-  });
-</script>
-
-
-<!-- ── Numberbender Sticky Bar — Back to School June 2026 ── -->
-<div id="nb-sticky-bar">
-  <p>🇵🇭 Philippine schools open in June! Get FREE bilingual math worksheets:</p>
-  <input type="email" id="nb-email-input" placeholder="your@email.com" autocomplete="email" />
-  <button class="nb-submit" onclick="nbSubmit()">Get Free Worksheets →</button>
-  <button class="nb-close" onclick="nbDismiss()" aria-label="Close">✕</button>
-</div>
-<script>
-(function(){
-  var d = localStorage.getItem('nb_bar_dismissed');
-  if(d && (Date.now()-parseInt(d))/(1000*60*60*24)<7){
-    document.getElementById('nb-sticky-bar').style.display='none';
-  }
-})();
-function nbDismiss(){
-  document.getElementById('nb-sticky-bar').style.display='none';
-  localStorage.setItem('nb_bar_dismissed',Date.now());
-}
-function nbSubmit(){
-  var email=document.getElementById('nb-email-input').value.trim();
-  if(!email||!email.includes('@')){document.getElementById('nb-email-input').focus();return;}
-  // Show success immediately
-  var bar=document.getElementById('nb-sticky-bar');
-  bar.innerHTML='<p class="nb-success">✅ You’re in! Check your inbox for your free worksheets. — Dr. E 🇵🇭</p><button class="nb-close" onclick="nbDismiss()" aria-label="Close">✕</button>';
-  localStorage.setItem('nb_bar_dismissed',Date.now()+(7*24*60*60*1000));
-  // Submit to Mailchimp via JSONP
-  window.nbMcCb=function(){};
-  var s=document.createElement('script');
-  s.src='https://numberbender.us17.list-manage.com/subscribe/post-json?u=65e30fe527dde6fb604f6760a&id=ad0977e0cc&f_id=003758e0f0&EMAIL='+encodeURIComponent(email)+'&b_65e30fe527dde6fb604f6760a_ad0977e0cc=&c=nbMcCb';
-  document.body.appendChild(s);
-}
+});
 </script>
 </body>
 </html>

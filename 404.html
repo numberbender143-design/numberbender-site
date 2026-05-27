@@ -157,7 +157,7 @@
     .error-number{ font-size: 5rem; }
     nav .nav-links{ display: none; }
   }
-</style>
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}.skip-link:focus{position:fixed;top:0;left:0;width:auto;height:auto;padding:8px 16px;background:#0F2B3D;color:#fff;z-index:9999;font-size:14px;text-decoration:none;border-radius:0 0 4px 0;}</style>
 
 <!-- ── Numberbender Sticky Bar CSS ── -->
 <style>
@@ -173,20 +173,22 @@
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
 
 <nav>
   <a href="/" class="logo">
     <img src="images/numberbender_banner.svg" alt="Numberbender — Master the Elements of Math" />
   </a>
   <div class="nav-links">
-    <a href="courses.html">Courses</a>
-    <a href="teacher-resources.html">For Teachers</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
+    <a href="/courses">Courses</a>
+    <a href="/teacher-resources">For Teachers</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
   </div>
 </nav>
 
-<main>
+<main id="main-content">
   <div class="error-card">
     <div class="error-number">404</div>
     <h1>This page doesn't exist (yet)</h1>
@@ -194,26 +196,26 @@
 
     <div class="error-links">
       <a href="/" class="btn-primary">← Back to Homepage</a>
-      <a href="courses.html" class="btn-outline">Browse Free Math Lessons</a>
-      <a href="teacher-resources.html" class="btn-outline">Flipped Classroom Resources</a>
-      <a href="find-your-course.html" class="btn-outline">Find Your Course</a>
+      <a href="/courses" class="btn-outline">Browse Free Math Lessons</a>
+      <a href="/teacher-resources" class="btn-outline">Flipped Classroom Resources</a>
+      <a href="/find-your-course" class="btn-outline">Find Your Course</a>
     </div>
 
     <hr class="divider">
 
-    <p class="small-note">Looking for a specific math video? Try searching on <a href="https://www.youtube.com/@numberbender" target="_blank" rel="noopener">YouTube</a> or <a href="contact.html">contact Dr. E</a>.</p>
+    <p class="small-note">Looking for a specific math video? Try searching on <a href="https://www.youtube.com/@numberbender" target="_blank" rel="noopener">YouTube</a> or <a href="/contact">contact Dr. E</a>.</p>
   </div>
 </main>
 
 <footer>
-  <p>&copy; 2026 Numberbender by Dr. Peter Esperanza &nbsp;|&nbsp; <a href="privacy.html">Privacy Policy</a></p>
+  <p>&copy; 2026 Numberbender by Dr. Peter Esperanza &nbsp;|&nbsp; <a href="/privacy">Privacy Policy</a></p>
 </footer>
 
 
 <!-- ── Numberbender Sticky Bar — Back to School June 2026 ── -->
 <div id="nb-sticky-bar">
   <p>🇵🇭 Philippine schools open in June! Get FREE bilingual math worksheets:</p>
-  <input type="email" id="nb-email-input" placeholder="your@email.com" autocomplete="email" />
+  <input type="email" id="nb-email-input" placeholder="your@email.com" autocomplete="email" aria-label="Email address" />
   <button class="nb-submit" onclick="nbSubmit()">Get Free Worksheets →</button>
   <button class="nb-close" onclick="nbDismiss()" aria-label="Close">✕</button>
 </div>

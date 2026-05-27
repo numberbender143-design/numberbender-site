@@ -123,7 +123,7 @@
     .ws-breadcrumb .sep{ margin: 0 8px; color: #cbd5e1; }
     .ws-eyebrow{
       display:inline-flex; align-items:center; gap:8px;
-      color: var(--accent-color); background: var(--accent-bg);
+      color: var(--accent-dark); background: var(--accent-bg);
       padding: 6px 14px; border-radius: 999px;
       font-size: 0.85rem; font-weight: 700; margin-bottom: 14px;
       text-transform: uppercase; letter-spacing: .06em;
@@ -172,7 +172,7 @@
     }
     .ws-card .ws-lesson{
       font-size: 0.78rem; font-weight: 700;
-      color: var(--accent-color); background: var(--accent-bg);
+      color: var(--accent-dark); background: var(--accent-bg);
       padding: 3px 10px; border-radius: 999px;
       text-transform: uppercase; letter-spacing: .06em;
     }
@@ -210,7 +210,7 @@
     .ws-card .ws-btn.primary:hover{ background:#2563EB; color:white; text-decoration:none; }
     .ws-card .ws-btn.download{ background:#F0FDFA; color:#1F6F6B; }
     .ws-card .ws-btn.download:hover{ background:#1F6F6B; color:white; text-decoration:none; }
-    .ws-card .ws-btn.watch{ background:#FEF2F2; color:#dc2626; }
+    .ws-card .ws-btn.watch{ background:#FEF2F2; color:#b91c1c; }
     .ws-card .ws-btn.watch:hover{ background:#dc2626; color:white; text-decoration:none; }
     /* PDF Modal */
     .pdf-modal-overlay{
@@ -350,61 +350,61 @@
     .ws-no-results.visible{display:block;}
   </style>
 </head>
-    <body style="--accent-color: #2563EB; --accent-bg: rgba(37,99,235,0.10);">
+    <body style="--accent-color: #2563EB; --accent-bg: rgba(37,99,235,0.10); --accent-dark: #1d4ed8">
 
-    <header class="nav">
+    <style>.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}.skip-link:focus{position:fixed;top:0;left:0;width:auto;height:auto;padding:8px 16px;background:#0F2B3D;color:#fff;z-index:9999;font-size:14px;text-decoration:none;border-radius:0 0 4px 0;}</style>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="nav">
   <div class="container nav-inner">
-    <a href="../../../../index.html" class="logo logo-lockup" aria-label="Numberbender — Master the Elements of Math">
+    <a href="/" class="logo logo-lockup" aria-label="Numberbender — Master the Elements of Math">
       <img src="../../../../images/numberbender_banner_only.svg" alt="Numberbender" class="lockup-img">
     </a>
     <button class="menu-toggle" aria-label="Toggle menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
     <nav class="nav-links" id="navlinks">
       <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">For Students <span class="caret" aria-hidden="true">▾</span></button>
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Learn <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
-          <a href="../../../../start-here.html">🎁 Free Starter Lesson</a>
-          <a href="../../../../find-your-course.html">🧭 Find My Course</a>
-          <a href="../../../../courses.html">📚 All Courses</a>
-          <a href="../../../../math-worksheets.html">📝 Free Worksheets</a>
-          <a href="../../../../for-filipino-students.html">🇵🇭 Para sa Filipino Students</a>
+          <a href="/start-here">🎁 Free Starter Lesson</a>
+          <a href="/find-your-course">🧭 Where Do I Start?</a>
+          <a href="/courses">📚 Explore Math Lessons</a>
+          <a href="/math-worksheets">📝 Free Worksheets</a>
+          <a href="/for-filipino-students">🇵🇭 Para sa Filipino Students</a>
         </div>
       </div>
       <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">For Educators <span class="caret" aria-hidden="true">▾</span></button>
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Teach <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
-          <a href="../../../../for-teachers.html">🏫 For Teachers Hub</a>
-          <a href="../../../../teach-it-like-you-stream-it.html">🎬 Teach It Like You Stream It</a>
-          <a href="../../../../teacher-resources.html">📦 Teacher Resources</a>
-          <a href="../../../../math-worksheets.html">📄 Printable Worksheets</a>
+          <a href="/for-teachers">🏫 For Teachers Hub</a>
+          <a href="/teach-the-math">🎓 Teach the Math</a>
+          <a href="/teach-it-like-you-stream-it">🎬 Teach It Like You Stream It</a>
+          <a href="/teacher-resources">📦 Teacher Resources</a>
+          <a href="/math-worksheets">📄 Printable Worksheets</a>
+          <a href="/courses">📚 Lesson &amp; Course Library</a>
         </div>
       </div>
       <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">About Dr. E <span class="caret" aria-hidden="true">▾</span></button>
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">About <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
-          <a href="../../../../about.html">👨‍🏫 About Dr. E</a>
-          <a href="../../../../speaking.html">🎤 Speaking</a>
-          <a href="../../../../press.html">📰 Press &amp; Media</a>
+          <a href="/about">👨‍🏫 About Dr. E</a>
+          <a href="/speaking">🎤 Speaking</a>
+          <a href="/press">📰 Press &amp; Media</a>
+          <a href="/blog">✍️ Blog</a>
+          <a href="/speaking-archive">📅 Past Engagements</a>
         </div>
       </div>
-      <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Blog <span class="caret" aria-hidden="true">▾</span></button>
-        <div class="dropdown-menu">
-          <a href="../../../../blog.html">✍️ Blog Posts</a>
-          <a href="../../../../speaking-archive.html">📅 Past Engagements</a>
-        </div>
-      </div>
-      <a href="../../../../contact.html" class="nav-cta">Contact</a>
+      <a href="/contact" class="nav-cta">Contact</a>
     </nav>
   </div>
 </header>
 
-    <section class="ws-hero">
+    <main id="main-content">
+<section class="ws-hero">
       <div class="container ws-hero-inner">
         <div class="ws-hero-text">
 
         <nav class="ws-breadcrumb" aria-label="Breadcrumb">
-          <a href="../../../../index.html">Home</a><span class="sep">›</span>
-          <a href="../../../../courses.html">Courses</a><span class="sep">›</span>
+          <a href="/">Home</a><span class="sep">›</span>
+          <a href="/courses">Courses</a><span class="sep">›</span>
           <span>Algebra (Filipino)</span>
         </nav>
         <span class="ws-eyebrow">Algebra · Filipino</span>
@@ -441,7 +441,7 @@
   <h3>Integers</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/01-01-algebra-integers.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="01-01-algebra-integers.pdf" data-action="open"
        aria-label="View Integers worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/01-01-algebra-integers.pdf" download
@@ -461,7 +461,7 @@
   <h3>Number Properties</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/01-02-algebra-number-properties.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="01-02-algebra-number-properties.pdf" data-action="open"
        aria-label="View Number Properties worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/01-02-algebra-number-properties.pdf" download
@@ -481,7 +481,7 @@
   <h3>Order of Operations</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/01-03-algebra-order-of-operations.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="01-03-algebra-order-of-operations.pdf" data-action="open"
        aria-label="View Order of Operations worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/01-03-algebra-order-of-operations.pdf" download
@@ -501,7 +501,7 @@
   <h3>Fraction Arithmetic</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/01-04-algebra-fraction-arithmetic.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="01-04-algebra-fraction-arithmetic.pdf" data-action="open"
        aria-label="View Fraction Arithmetic worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/01-04-algebra-fraction-arithmetic.pdf" download
@@ -521,7 +521,7 @@
   <h3>Fractions</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/01-05-algebra-fractions.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="01-05-algebra-fractions.pdf" data-action="open"
        aria-label="View Fractions worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/01-05-algebra-fractions.pdf" download
@@ -542,7 +542,7 @@
   <h3>Word Problems with Real Numbers</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/01-06-algebra-word-problems-real-numbers.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="01-06-algebra-word-problems-real-numbers.pdf" data-action="open"
        aria-label="View Word Problems with Real Numbers worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/01-06-algebra-word-problems-real-numbers.pdf" download
@@ -563,7 +563,7 @@
   <h3>Evaluating Expressions</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/02-01-algebra-evaluating-expressions.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="02-01-algebra-evaluating-expressions.pdf" data-action="open"
        aria-label="View Evaluating Expressions worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/02-01-algebra-evaluating-expressions.pdf" download
@@ -583,7 +583,7 @@
   <h3>Evaluating Expressions, Part 2</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/02-02-algebra-evaluating-expressions-2.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="02-02-algebra-evaluating-expressions-2.pdf" data-action="open"
        aria-label="View Evaluating Expressions, Part 2 worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/02-02-algebra-evaluating-expressions-2.pdf" download
@@ -603,7 +603,7 @@
   <h3>Evaluating Expressions, Part 3</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/02-03-algebra-evaluating-expressions-3.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="02-03-algebra-evaluating-expressions-3.pdf" data-action="open"
        aria-label="View Evaluating Expressions, Part 3 worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/02-03-algebra-evaluating-expressions-3.pdf" download
@@ -624,7 +624,7 @@
   <h3>Inequalities</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/03-01-algebra-inequalities.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="03-01-algebra-inequalities.pdf" data-action="open"
        aria-label="View Inequalities worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/03-01-algebra-inequalities.pdf" download
@@ -644,7 +644,7 @@
   <h3>Compound Inequalities</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/03-02-algebra-compound-inequalities.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="03-02-algebra-compound-inequalities.pdf" data-action="open"
        aria-label="View Compound Inequalities worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/03-02-algebra-compound-inequalities.pdf" download
@@ -665,7 +665,7 @@
   <h3>Plotting Points on the XY-Plane</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/04-01-algebra-plotting-points-xy-plane.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="04-01-algebra-plotting-points-xy-plane.pdf" data-action="open"
        aria-label="View Plotting Points on the XY-Plane worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/04-01-algebra-plotting-points-xy-plane.pdf" download
@@ -685,7 +685,7 @@
   <h3>Graphing Equations by Plotting Points</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/04-02-algebra-graphing-equations-plotting-points.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="04-02-algebra-graphing-equations-plotting-points.pdf" data-action="open"
        aria-label="View Graphing Equations by Plotting Points worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/04-02-algebra-graphing-equations-plotting-points.pdf" download
@@ -705,7 +705,7 @@
   <h3>Slope-Intercept Form</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/04-03-algebra-slope-intercept-form.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="04-03-algebra-slope-intercept-form.pdf" data-action="open"
        aria-label="View Slope-Intercept Form worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/04-03-algebra-slope-intercept-form.pdf" download
@@ -725,7 +725,7 @@
   <h3>Point-Slope Form</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/04-04-algebra-point-slope-form.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="04-04-algebra-point-slope-form.pdf" data-action="open"
        aria-label="View Point-Slope Form worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/04-04-algebra-point-slope-form.pdf" download
@@ -745,7 +745,7 @@
   <h3>Parallel and Perpendicular Lines</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/04-05-algebra-parallel-and-perpendicular-lines.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="04-05-algebra-parallel-and-perpendicular-lines.pdf" data-action="open"
        aria-label="View Parallel and Perpendicular Lines worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/04-05-algebra-parallel-and-perpendicular-lines.pdf" download
@@ -765,7 +765,7 @@
   <h3>Distance Formula</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/04-06-algebra-distance-formula.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="04-06-algebra-distance-formula.pdf" data-action="open"
        aria-label="View Distance Formula worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/04-06-algebra-distance-formula.pdf" download
@@ -785,7 +785,7 @@
   <h3>Midpoint of a Line</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/04-07-algebra-midpoint-of-a-line.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="04-07-algebra-midpoint-of-a-line.pdf" data-action="open"
        aria-label="View Midpoint of a Line worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/04-07-algebra-midpoint-of-a-line.pdf" download
@@ -806,7 +806,7 @@
   <h3>Solving Systems by Graphing</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/05-01-algebra-systems-graphing.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="05-01-algebra-systems-graphing.pdf" data-action="open"
        aria-label="View Solving Systems by Graphing worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/05-01-algebra-systems-graphing.pdf" download
@@ -826,7 +826,7 @@
   <h3>Substitution Method</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/05-02-algebra-systems-substitution-method.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="05-02-algebra-systems-substitution-method.pdf" data-action="open"
        aria-label="View Substitution Method worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/05-02-algebra-systems-substitution-method.pdf" download
@@ -846,7 +846,7 @@
   <h3>Elimination Method</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/05-03-algebra-systems-elimination-method.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="05-03-algebra-systems-elimination-method.pdf" data-action="open"
        aria-label="View Elimination Method worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/05-03-algebra-systems-elimination-method.pdf" download
@@ -866,7 +866,7 @@
   <h3>Systems of Linear Inequalities</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/05-04-algebra-systems-linear-inequalities.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="05-04-algebra-systems-linear-inequalities.pdf" data-action="open"
        aria-label="View Systems of Linear Inequalities worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/05-04-algebra-systems-linear-inequalities.pdf" download
@@ -887,7 +887,7 @@
   <h3>Laws of Exponents</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/06-01-algebra-laws-of-exponents.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="06-01-algebra-laws-of-exponents.pdf" data-action="open"
        aria-label="View Laws of Exponents worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/06-01-algebra-laws-of-exponents.pdf" download
@@ -907,7 +907,7 @@
   <h3>Classifying Polynomials</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/06-02-algebra-classifying-polynomials.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="06-02-algebra-classifying-polynomials.pdf" data-action="open"
        aria-label="View Classifying Polynomials worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/06-02-algebra-classifying-polynomials.pdf" download
@@ -927,7 +927,7 @@
   <h3>Polynomial Operations</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/06-03-algebra-polynomial-operations.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="06-03-algebra-polynomial-operations.pdf" data-action="open"
        aria-label="View Polynomial Operations worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/06-03-algebra-polynomial-operations.pdf" download
@@ -947,7 +947,7 @@
   <h3>Polynomial Division</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/06-04-algebra-polynomial-division.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="06-04-algebra-polynomial-division.pdf" data-action="open"
        aria-label="View Polynomial Division worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/06-04-algebra-polynomial-division.pdf" download
@@ -968,7 +968,7 @@
   <h3>Factoring by GCF</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/07-01-algebra-factoring-gcf.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="07-01-algebra-factoring-gcf.pdf" data-action="open"
        aria-label="View Factoring by GCF worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/07-01-algebra-factoring-gcf.pdf" download
@@ -988,7 +988,7 @@
   <h3>Essential Factoring Techniques</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/07-02-algebra-factoring-essential-techniques.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="07-02-algebra-factoring-essential-techniques.pdf" data-action="open"
        aria-label="View Essential Factoring Techniques worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/07-02-algebra-factoring-essential-techniques.pdf" download
@@ -1008,7 +1008,7 @@
   <h3>Factoring Quadratics (a = 1)</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/07-03-algebra-factoring-quadratics-a-equals-1.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="07-03-algebra-factoring-quadratics-a-equals-1.pdf" data-action="open"
        aria-label="View Factoring Quadratics (a = 1) worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/07-03-algebra-factoring-quadratics-a-equals-1.pdf" download
@@ -1028,7 +1028,7 @@
   <h3>Factoring Quadratics (a &gt; 1)</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/07-04-algebra-factoring-quadratics-a-greater-than-1.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="07-04-algebra-factoring-quadratics-a-greater-than-1.pdf" data-action="open"
        aria-label="View Factoring Quadratics (a &gt; 1) worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/07-04-algebra-factoring-quadratics-a-greater-than-1.pdf" download
@@ -1048,7 +1048,7 @@
   <h3>Zero Product Property</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/07-05-algebra-zero-product-property.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="07-05-algebra-zero-product-property.pdf" data-action="open"
        aria-label="View Zero Product Property worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/07-05-algebra-zero-product-property.pdf" download
@@ -1068,7 +1068,7 @@
   <h3>Special Cases of Quadratics</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/07-06-algebra-special-cases-quadratics.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="07-06-algebra-special-cases-quadratics.pdf" data-action="open"
        aria-label="View Special Cases of Quadratics worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/07-06-algebra-special-cases-quadratics.pdf" download
@@ -1089,7 +1089,7 @@
   <h3>Quadratic Formula &amp; Completing the Square</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/08-01-algebra-quadratic-formula-completing-the-square.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="08-01-algebra-quadratic-formula-completing-the-square.pdf" data-action="open"
        aria-label="View Quadratic Formula &amp; Completing the Square worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/08-01-algebra-quadratic-formula-completing-the-square.pdf" download
@@ -1109,7 +1109,7 @@
   <h3>Factor and Remainder Theorem</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/08-02-algebra-factor-remainder-theorem.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="08-02-algebra-factor-remainder-theorem.pdf" data-action="open"
        aria-label="View Factor and Remainder Theorem worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/08-02-algebra-factor-remainder-theorem.pdf" download
@@ -1129,7 +1129,7 @@
   <h3>Factor, Root, and Remainder Theorem</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/08-03-algebra-factor-root-remainder-theorem.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="08-03-algebra-factor-root-remainder-theorem.pdf" data-action="open"
        aria-label="View Factor, Root, and Remainder Theorem worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/08-03-algebra-factor-root-remainder-theorem.pdf" download
@@ -1150,7 +1150,7 @@
   <h3>Simplify Radical Expressions</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/09-01-algebra-simplify-radical-expressions.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="09-01-algebra-simplify-radical-expressions.pdf" data-action="open"
        aria-label="View Simplify Radical Expressions worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/09-01-algebra-simplify-radical-expressions.pdf" download
@@ -1170,7 +1170,7 @@
   <h3>Simplifying Radical Expressions</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/09-02-algebra-simplifying-radical-expressions.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="09-02-algebra-simplifying-radical-expressions.pdf" data-action="open"
        aria-label="View Simplifying Radical Expressions worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/09-02-algebra-simplifying-radical-expressions.pdf" download
@@ -1190,7 +1190,7 @@
   <h3>Adding &amp; Subtracting Radical Expressions</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/09-03-algebra-adding-subtracting-radical-expressions.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="09-03-algebra-adding-subtracting-radical-expressions.pdf" data-action="open"
        aria-label="View Adding &amp; Subtracting Radical Expressions worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/09-03-algebra-adding-subtracting-radical-expressions.pdf" download
@@ -1210,7 +1210,7 @@
   <h3>Rationalizing Radicals</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/09-04-algebra-rationalizing-radicals.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="09-04-algebra-rationalizing-radicals.pdf" data-action="open"
        aria-label="View Rationalizing Radicals worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/09-04-algebra-rationalizing-radicals.pdf" download
@@ -1230,7 +1230,7 @@
   <h3>Equations with Square Roots</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/09-05-algebra-equations-with-square-roots.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="09-05-algebra-equations-with-square-roots.pdf" data-action="open"
        aria-label="View Equations with Square Roots worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/09-05-algebra-equations-with-square-roots.pdf" download
@@ -1250,7 +1250,7 @@
   <h3>Radical Equations</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/09-06-algebra-radical-equations.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="09-06-algebra-radical-equations.pdf" data-action="open"
        aria-label="View Radical Equations worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/09-06-algebra-radical-equations.pdf" download
@@ -1270,7 +1270,7 @@
   <h3>Rational Exponents and Radicals</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/09-07-algebra-rational-exponents-and-radicals.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="09-07-algebra-rational-exponents-and-radicals.pdf" data-action="open"
        aria-label="View Rational Exponents and Radicals worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/09-07-algebra-rational-exponents-and-radicals.pdf" download
@@ -1291,7 +1291,7 @@
   <h3>Rational Expressions</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/10-01-algebra-rational-expressions.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="10-01-algebra-rational-expressions.pdf" data-action="open"
        aria-label="View Rational Expressions worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/10-01-algebra-rational-expressions.pdf" download
@@ -1311,7 +1311,7 @@
   <h3>Simplifying Rational Expressions</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/10-02-algebra-simplifying-rational-expressions.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="10-02-algebra-simplifying-rational-expressions.pdf" data-action="open"
        aria-label="View Simplifying Rational Expressions worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/10-02-algebra-simplifying-rational-expressions.pdf" download
@@ -1331,7 +1331,7 @@
   <h3>Simplifying by Factoring</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/10-03-algebra-simplifying-rational-expressions-factoring.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="10-03-algebra-simplifying-rational-expressions-factoring.pdf" data-action="open"
        aria-label="View Simplifying by Factoring worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/10-03-algebra-simplifying-rational-expressions-factoring.pdf" download
@@ -1351,7 +1351,7 @@
   <h3>Multiplying &amp; Dividing Rational Expressions</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/10-04-algebra-multiplying-dividing-rational-expressions.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="10-04-algebra-multiplying-dividing-rational-expressions.pdf" data-action="open"
        aria-label="View Multiplying &amp; Dividing Rational Expressions worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/10-04-algebra-multiplying-dividing-rational-expressions.pdf" download
@@ -1371,7 +1371,7 @@
   <h3>Adding &amp; Subtracting Rational Expressions</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/10-05-algebra-adding-subtracting-rational-expressions.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="10-05-algebra-adding-subtracting-rational-expressions.pdf" data-action="open"
        aria-label="View Adding &amp; Subtracting Rational Expressions worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/10-05-algebra-adding-subtracting-rational-expressions.pdf" download
@@ -1391,7 +1391,7 @@
   <h3>Horizontal and Vertical Asymptotes</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/10-06-algebra-horizontal-vertical-asymptotes.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="10-06-algebra-horizontal-vertical-asymptotes.pdf" data-action="open"
        aria-label="View Horizontal and Vertical Asymptotes worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/10-06-algebra-horizontal-vertical-asymptotes.pdf" download
@@ -1412,7 +1412,7 @@
   <h3>Domain and Range</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/11-01-algebra-domain-and-range.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="11-01-algebra-domain-and-range.pdf" data-action="open"
        aria-label="View Domain and Range worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/11-01-algebra-domain-and-range.pdf" download
@@ -1432,7 +1432,7 @@
   <h3>Function Operations</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/11-02-algebra-function-operations.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="11-02-algebra-function-operations.pdf" data-action="open"
        aria-label="View Function Operations worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/11-02-algebra-function-operations.pdf" download
@@ -1452,7 +1452,7 @@
   <h3>Composite Function Operations</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/11-03-algebra-function-operations-composite.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="11-03-algebra-function-operations-composite.pdf" data-action="open"
        aria-label="View Composite Function Operations worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/11-03-algebra-function-operations-composite.pdf" download
@@ -1472,7 +1472,7 @@
   <h3>Composition of Functions</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/11-04-algebra-composition-of-functions.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="11-04-algebra-composition-of-functions.pdf" data-action="open"
        aria-label="View Composition of Functions worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/11-04-algebra-composition-of-functions.pdf" download
@@ -1492,7 +1492,7 @@
   <h3>Inverse Functions</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/11-05-algebra-inverse-functions.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="11-05-algebra-inverse-functions.pdf" data-action="open"
        aria-label="View Inverse Functions worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/11-05-algebra-inverse-functions.pdf" download
@@ -1512,7 +1512,7 @@
   <h3>Finding the Inverse of a Function</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/11-06-algebra-inverse-of-a-function.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="11-06-algebra-inverse-of-a-function.pdf" data-action="open"
        aria-label="View Finding the Inverse of a Function worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/11-06-algebra-inverse-of-a-function.pdf" download
@@ -1532,7 +1532,7 @@
   <h3>Piecewise Functions</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/11-07-algebra-piecewise-functions.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="11-07-algebra-piecewise-functions.pdf" data-action="open"
        aria-label="View Piecewise Functions worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/11-07-algebra-piecewise-functions.pdf" download
@@ -1553,7 +1553,7 @@
   <h3>Complex Numbers</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/12-01-algebra-complex-numbers.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="12-01-algebra-complex-numbers.pdf" data-action="open"
        aria-label="View Complex Numbers worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/12-01-algebra-complex-numbers.pdf" download
@@ -1573,7 +1573,7 @@
   <h3>Multiplying Complex Numbers</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/12-02-algebra-multiplying-complex-numbers.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="12-02-algebra-multiplying-complex-numbers.pdf" data-action="open"
        aria-label="View Multiplying Complex Numbers worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/12-02-algebra-multiplying-complex-numbers.pdf" download
@@ -1593,7 +1593,7 @@
   <h3>Rationalizing Complex Numbers</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/12-03-algebra-rationalizing-complex-numbers.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="12-03-algebra-rationalizing-complex-numbers.pdf" data-action="open"
        aria-label="View Rationalizing Complex Numbers worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/12-03-algebra-rationalizing-complex-numbers.pdf" download
@@ -1614,7 +1614,7 @@
   <h3>Graphing Exponential Functions</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/13-01-algebra-graphing-exponential-functions.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="13-01-algebra-graphing-exponential-functions.pdf" data-action="open"
        aria-label="View Graphing Exponential Functions worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/13-01-algebra-graphing-exponential-functions.pdf" download
@@ -1634,7 +1634,7 @@
   <h3>Log/Exponential Conversion</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/13-02-algebra-log-exponential-conversion.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="13-02-algebra-log-exponential-conversion.pdf" data-action="open"
        aria-label="View Log/Exponential Conversion worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/13-02-algebra-log-exponential-conversion.pdf" download
@@ -1654,7 +1654,7 @@
   <h3>Properties of Logarithms</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/13-03-algebra-properties-of-logarithms.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="13-03-algebra-properties-of-logarithms.pdf" data-action="open"
        aria-label="View Properties of Logarithms worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/13-03-algebra-properties-of-logarithms.pdf" download
@@ -1674,7 +1674,7 @@
   <h3>Log Equations Using Properties</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/13-04-algebra-log-equations-properties.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="13-04-algebra-log-equations-properties.pdf" data-action="open"
        aria-label="View Log Equations Using Properties worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/13-04-algebra-log-equations-properties.pdf" download
@@ -1694,7 +1694,7 @@
   <h3>Expand and Condense Log Equations</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/13-05-algebra-log-equations-expand-and-condense.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="13-05-algebra-log-equations-expand-and-condense.pdf" data-action="open"
        aria-label="View Expand and Condense Log Equations worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/13-05-algebra-log-equations-expand-and-condense.pdf" download
@@ -1714,7 +1714,7 @@
   <h3>Graphing Logarithmic Functions</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/13-06-algebra-graphing-logarithmic-functions.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="13-06-algebra-graphing-logarithmic-functions.pdf" data-action="open"
        aria-label="View Graphing Logarithmic Functions worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/13-06-algebra-graphing-logarithmic-functions.pdf" download
@@ -1734,7 +1734,7 @@
   <h3>Solving Logarithmic Expressions</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/13-07-algebra-solving-log-expressions.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="13-07-algebra-solving-log-expressions.pdf" data-action="open"
        aria-label="View Solving Logarithmic Expressions worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/13-07-algebra-solving-log-expressions.pdf" download
@@ -1754,7 +1754,7 @@
   <h3>Change of Base Formula</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/13-08-algebra-change-of-base-formula.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="13-08-algebra-change-of-base-formula.pdf" data-action="open"
        aria-label="View Change of Base Formula worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/13-08-algebra-change-of-base-formula.pdf" download
@@ -1775,7 +1775,7 @@
   <h3>Algebra Review</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/algebra/14-01-algebra-review.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="14-01-algebra-review.pdf" data-action="open"
        aria-label="View Algebra Review worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/algebra/14-01-algebra-review.pdf" download
@@ -1798,7 +1798,8 @@
       </div>
     </section>
 
-    <footer>
+    </main>
+<footer>
   <div class="container">
     <div class="foot-grid">
       <div class="foot foot-brand">
@@ -1813,14 +1814,15 @@
       </div>
       <div class="foot">
         <h4>Students</h4>
-        <a href="../../../../courses.html">All Courses</a>
+        <a href="/courses">Explore All Subjects</a>
         <a href="../../../../courses.html#algebra-card">Algebra</a>
         <a href="../../../../courses.html#statistics-card">Statistics</a>
-        <a href="../../../../courses.html">Calculus</a>
+        <a href="/courses">Calculus</a>
       </div>
       <div class="foot">
         <h4>Educators</h4>
         <a href="../../../../teach-it-like-you-stream-it.html">Teach It Like You Stream It</a>
+        <a href="../../../../teach-the-math.html">Teach the Math</a>
         <a href="../../../../teacher-resources.html">Teacher Resources</a>
         <a href="../../../../ap-calculus-frq-books.html">AP Calculus FRQ Books</a>
         <a href="../../../../speaking.html">Speaking</a>

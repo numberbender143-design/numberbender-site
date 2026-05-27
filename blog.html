@@ -201,7 +201,7 @@
     .footer-bottom{ flex-direction:column; text-align:center; }
     .blog-grid{ grid-template-columns:1fr; }
   }
-</style>
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}.skip-link:focus{position:fixed;top:0;left:0;width:auto;height:auto;padding:8px 16px;background:#0F2B3D;color:#fff;z-index:9999;font-size:14px;text-decoration:none;border-radius:0 0 4px 0;}</style>
 
 <!-- ── Numberbender Sticky Bar CSS ── -->
 <style>
@@ -217,6 +217,8 @@
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
 
 <!-- ── HEADER ── -->
 <header>
@@ -227,43 +229,41 @@
     <button class="menu-toggle" aria-label="Toggle menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
     <nav class="nav-links" id="navlinks">
       <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">For Students <span class="caret" aria-hidden="true">▾</span></button>
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Learn <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
-          <a href="start-here.html">🎁 Free Starter Lesson</a>
-          <a href="find-your-course.html">🧭 Find My Course</a>
-          <a href="courses.html">📚 All Courses</a>
-          <a href="math-worksheets.html">📝 Free Worksheets</a>
-          <a href="for-filipino-students.html">🇵🇭 Para sa Filipino Students</a>
+          <a href="/start-here">🎁 Free Starter Lesson</a>
+          <a href="/find-your-course">🧭 Where Do I Start?</a>
+          <a href="/courses">📚 Explore Math Lessons</a>
+          <a href="/math-worksheets">📝 Free Worksheets</a>
+          <a href="/for-filipino-students">🇵🇭 Para sa Filipino Students</a>
         </div>
       </div>
       <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">For Educators <span class="caret" aria-hidden="true">▾</span></button>
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Teach <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
-          <a href="for-teachers.html">🏫 For Teachers Hub</a>
-          <a href="teach-it-like-you-stream-it.html">🎬 Teach It Like You Stream It</a>
-          <a href="teacher-resources.html">📦 Teacher Resources</a>
-          <a href="math-worksheets.html">📄 Printable Worksheets</a>
+          <a href="/for-teachers">🏫 For Teachers Hub</a>
+          <a href="/teach-the-math">🎓 Teach the Math</a>
+          <a href="/teach-it-like-you-stream-it">🎬 Teach It Like You Stream It</a>
+          <a href="/teacher-resources">📦 Teacher Resources</a>
+          <a href="/math-worksheets">📄 Printable Worksheets</a>
+          <a href="/courses">📚 Lesson &amp; Course Library</a>
         </div>
       </div>
       <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">About Dr. E <span class="caret" aria-hidden="true">▾</span></button>
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">About <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
-          <a href="about.html">👨‍🏫 About Dr. E</a>
-          <a href="speaking.html">🎤 Speaking</a>
-          <a href="press.html">📰 Press &amp; Media</a>
+          <a href="/about">👨‍🏫 About Dr. E</a>
+          <a href="/speaking">🎤 Speaking</a>
+          <a href="/press">📰 Press &amp; Media</a>
+          <a href="/blog">✍️ Blog</a>
+          <a href="/speaking-archive">📅 Past Engagements</a>
         </div>
       </div>
-      <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;" style="color:var(--blue);font-weight:700;">Blog <span class="caret" aria-hidden="true">▾</span></button>
-        <div class="dropdown-menu">
-          <a href="blog.html" style="color:var(--blue);font-weight:600;">✍️ Blog Posts</a>
-          <a href="speaking-archive.html">📅 Past Engagements</a>
-        </div>
-      </div>
-      <a href="contact.html" class="nav-cta">Contact</a>
+      <a href="/contact" class="nav-cta">Contact</a>
     </nav>
   </div>
 </header>
+<main id="main-content">
 
 <!-- ── HERO ── -->
 <section class="page-hero">
@@ -289,7 +289,7 @@
   <div class="container">
 
     <div class="section-label">Featured Post</div>
-    <a href="blog-flipped-first-class.html" style="text-decoration:none;color:inherit;display:block;">
+    <a href="/blog-flipped-first-class" style="text-decoration:none;color:inherit;display:block;">
     <div class="featured-post" style="cursor:pointer;">
       <div class="featured-thumb" style="background:none; padding:0; overflow:hidden;">
         <picture><source srcset="images/blog_post_banner/featured_blog_real.webp" type="image/webp"><img src="images/blog_post_banner/featured_blog_real.jpg" alt="How I Flipped My First Math Class" style="width:100%;height:100%;object-fit:cover;display:block;"></picture>
@@ -315,7 +315,7 @@
     <div class="blog-grid">
 
       <!-- Post 4 (newest) -->
-      <a href="blog-flipped-mistakes.html" style="text-decoration:none;color:inherit;">
+      <a href="/blog-flipped-mistakes" style="text-decoration:none;color:inherit;">
       <div class="post-card">
         <div class="post-thumb" style="background:none; padding:0; overflow:hidden;">
           <picture><source srcset="images/blog_post_banner/blog_1.webp" type="image/webp"><img src="images/blog_post_banner/blog_1.png" alt="5 Flipped Classroom Mistakes I Made" style="width:100%;height:100%;object-fit:cover;display:block;"></picture>
@@ -333,7 +333,7 @@
       </a>
 
       <!-- Post 3 -->
-      <a href="blog-become-edutuber.html" style="text-decoration:none;color:inherit;">
+      <a href="/blog-become-edutuber" style="text-decoration:none;color:inherit;">
       <div class="post-card">
         <div class="post-thumb" style="background:none; padding:0; overflow:hidden;">
           <picture><source srcset="images/blog_post_banner/Blog_2.webp" type="image/webp"><img src="images/blog_post_banner/Blog_2.png" alt="How to Become an EduTuber" style="width:100%;height:100%;object-fit:cover;display:block;"></picture>
@@ -351,7 +351,7 @@
       </a>
 
       <!-- Post 2 -->
-      <a href="blog-five-minute-rule.html" style="text-decoration:none;color:inherit;">
+      <a href="/blog-five-minute-rule" style="text-decoration:none;color:inherit;">
       <div class="post-card">
         <div class="post-thumb" style="background:none; padding:0; overflow:hidden;">
           <picture><source srcset="images/blog_post_banner/Blog_3.webp" type="image/webp"><img src="images/blog_post_banner/Blog_3.png" alt="The 5-Minute Rule for Teaching Videos" style="width:100%;height:100%;object-fit:cover;display:block;"></picture>
@@ -477,6 +477,7 @@
 </section>
 
 <!-- ── FOOTER ── -->
+</main>
 <footer>
   <div class="container">
     <div class="footer-grid">
@@ -486,31 +487,32 @@
       </div>
       <div class="footer-col">
         <h4>For Educators</h4>
-        <a href="for-teachers.html">For Teachers Hub</a>
-        <a href="teach-it-like-you-stream-it.html">TILYSI</a>
-        <a href="teacher-resources.html">Teacher Resources</a>
-        <a href="flipped-classroom-math.html">Flipped Classroom</a>
-        <a href="speaking-archive.html">Past Engagements</a>
+        <a href="/for-teachers">For Teachers Hub</a>
+        <a href="/teach-it-like-you-stream-it">TILYSI</a>
+        <a href="/teach-the-math">Teach the Math</a>
+        <a href="/teacher-resources">Teacher Resources</a>
+        <a href="/flipped-classroom-math">Flipped Classroom</a>
+        <a href="/speaking-archive">Past Engagements</a>
       </div>
       <div class="footer-col">
         <h4>For Students</h4>
-        <a href="start-here.html">Free Starter Lesson</a>
-        <a href="find-your-course.html">Find My Course</a>
-        <a href="courses.html">All Courses</a>
+        <a href="/start-here">Free Starter Lesson</a>
+        <a href="/find-your-course">Where Do I Start?</a>
+        <a href="/courses">Explore All Subjects</a>
       </div>
       <div class="footer-col">
         <h4>Numberbender</h4>
-        <a href="about.html">About Dr. E</a>
+        <a href="/about">About Dr. E</a>
         <div class="nav-dropdown">
         <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Blog <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
-          <a href="blog.html">✍️ Blog Posts</a>
+          <a href="/blog">✍️ Blog Posts</a>
         </div>
       </div>
-        <a href="speaking.html">Speaking</a>
-        <a href="press.html">Press &amp; Media</a>
-        <a href="contact.html">Contact</a>
-        <a href="privacy.html">Privacy Policy</a>
+        <a href="/speaking">Speaking</a>
+        <a href="/press">Press &amp; Media</a>
+        <a href="/contact">Contact</a>
+        <a href="/privacy">Privacy Policy</a>
       </div>
     </div>
     <div class="footer-bottom">
@@ -568,7 +570,7 @@
 <!-- ── Numberbender Sticky Bar — Back to School June 2026 ── -->
 <div id="nb-sticky-bar">
   <p>🇵🇭 Philippine schools open in June! Get FREE bilingual math worksheets:</p>
-  <input type="email" id="nb-email-input" placeholder="your@email.com" autocomplete="email" />
+  <input type="email" id="nb-email-input" placeholder="your@email.com" autocomplete="email" aria-label="Email address" />
   <button class="nb-submit" onclick="nbSubmit()">Get Free Worksheets →</button>
   <button class="nb-close" onclick="nbDismiss()" aria-label="Close">✕</button>
 </div>

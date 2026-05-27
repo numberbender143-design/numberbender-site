@@ -13,12 +13,12 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Free Printable Math Worksheets with Answer Keys | Numberbender</title>
-<meta name="description" content="415 free printable math worksheets with full answer keys — Algebra, Geometry, Trigonometry, Precalculus, Calculus, Statistics and more. Every worksheet pairs with a video lesson. No signup. 100% free." />
+<meta name="description" content="482 free printable math worksheets with full answer keys — Algebra, Geometry, Trigonometry, Precalculus, Calculus, Statistics and more. Every worksheet pairs with a video lesson. No signup. 100% free." />
 <!-- SEO: Canonical + Open Graph + Twitter Card -->
 <link rel="canonical" href="https://numberbender.com/math-worksheets" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Free Printable Math Worksheets with Answer Keys | Numberbender" />
-<meta property="og:description" content="415 free printable math worksheets with full answer keys across 11 subjects — every sheet paired with a video lesson. Print and assign in seconds. No signup, 100% free." />
+<meta property="og:description" content="482 free printable math worksheets with full answer keys across 13 subjects — every sheet paired with a video lesson. Print and assign in seconds. No signup, 100% free." />
 <meta property="og:url" content="https://numberbender.com/math-worksheets" />
 <meta property="og:site_name" content="Numberbender" />
 <meta property="og:image" content="https://numberbender.com/images/dr-e-hero.jpg" />
@@ -27,13 +27,13 @@
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@numberbender" />
 <meta name="twitter:title" content="Free Printable Math Worksheets with Answer Keys | Numberbender" />
-<meta name="twitter:description" content="415 free printable math worksheets with full answer keys — every sheet paired with a video lesson. No signup, 100% free." />
+<meta name="twitter:description" content="482 free printable math worksheets with full answer keys — every sheet paired with a video lesson. No signup, 100% free." />
 <meta name="twitter:image" content="https://numberbender.com/images/dr-e-hero.jpg" />
 
-<link rel="icon" type="image/svg+xml" href="images/exports/numberbender-favicon.svg">
-<link rel="icon" type="image/png" sizes="32x32" href="images/exports/png/favicon-32.png">
-<link rel="icon" type="image/png" sizes="180x180" href="images/exports/png/favicon-180.png">
-<link rel="apple-touch-icon" sizes="180x180" href="images/exports/png/favicon-180.png">
+<link rel="icon" type="image/svg+xml" href="/images/exports/numberbender-favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/exports/png/favicon-32.png">
+<link rel="icon" type="image/png" sizes="180x180" href="/images/exports/png/favicon-180.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/exports/png/favicon-180.png">
 
 <meta name="theme-color" content="#1F6F6B">
 <style>
@@ -118,8 +118,8 @@
   .btn:hover{ transform: translateY(-2px); box-shadow: var(--shadow); }
   .btn-primary{ background: var(--blue); color: white; }
   .btn-primary:hover{ background: #1d4ed8; }
-  .btn-cyan{ background: var(--cyan); color: white; }
-  .btn-cyan:hover{ background: #0891b2; }
+  .btn-cyan{ background: #0e7490; color: white; }
+  .btn-cyan:hover{ background: #155e75; }
   .btn-yellow{ background: var(--yellow); color: var(--navy); }
   .btn-yellow:hover{ background: #eab308; }
   .btn-outline{ background: transparent; color: var(--navy); border: 2px solid var(--border); }
@@ -196,8 +196,8 @@
     color: var(--navy); margin-bottom: 6px;
   }
   .stat-box.c1 .num{ color: var(--blue); }
-  .stat-box.c2 .num{ color: var(--cyan); }
-  .stat-box.c3 .num{ color: var(--green); }
+  .stat-box.c2 .num{ color: #0891b2; }
+  .stat-box.c3 .num{ color: #15803d; }
   .stat-box.c4 .num{ color: #b45309; }
   .stat-box .lbl{ font-size: 0.92rem; color: var(--muted); font-weight: 500; }
   @media (max-width: 760px){
@@ -429,6 +429,58 @@
   @media(max-width:760px){ .bundle-grid{ grid-template-columns:1fr 1fr; } }
   @media(max-width:480px){ .bundle-grid{ grid-template-columns:1fr; } }
 
+  /* ── PDF PREVIEW MODAL ── */
+  .pdf-modal-overlay{
+    display:none; position:fixed; inset:0; z-index:1100;
+    background:rgba(15,23,42,.72); backdrop-filter:blur(6px);
+    align-items:center; justify-content:center; padding:16px;
+  }
+  .pdf-modal-overlay.open{ display:flex; }
+  .pdf-modal-box{
+    background:white; border-radius:16px;
+    width:min(980px,96vw); height:min(90vh,920px);
+    display:flex; flex-direction:column;
+    box-shadow:0 32px 80px rgba(15,23,42,.28);
+    overflow:hidden;
+  }
+  .pdf-modal-header{
+    display:flex; align-items:center; gap:12px;
+    padding:13px 18px; border-bottom:1px solid var(--border);
+    flex-shrink:0; background:white;
+  }
+  .pdf-modal-eyebrow{
+    font-size:0.72rem; font-weight:700; text-transform:uppercase;
+    letter-spacing:.08em; color:var(--blue); white-space:nowrap; flex-shrink:0;
+  }
+  .pdf-modal-title{
+    flex:1; font-weight:700; font-size:0.95rem; color:var(--navy);
+    white-space:nowrap; overflow:hidden; text-overflow:ellipsis; min-width:0;
+  }
+  .pdf-modal-dl{
+    display:inline-flex; align-items:center; gap:6px;
+    background:var(--blue); color:white !important; padding:8px 14px;
+    border-radius:8px; font-size:0.83rem; font-weight:700;
+    text-decoration:none !important; white-space:nowrap; flex-shrink:0;
+    transition:background .15s;
+  }
+  .pdf-modal-dl:hover{ background:#1d4ed8; }
+  .pdf-modal-close{
+    background:none; border:none; cursor:pointer;
+    color:#94a3b8; font-size:1.4rem; line-height:1; padding:6px;
+    border-radius:8px; flex-shrink:0; transition:color .15s, background .15s;
+  }
+  .pdf-modal-close:hover{ color:var(--navy); background:#f1f5f9; }
+  .pdf-modal-frame{
+    flex:1; width:100%; border:none; display:block; min-height:0;
+    background:#f8fafc;
+  }
+  @media(max-width:600px){
+    .pdf-modal-box{ height:94vh; border-radius:12px; }
+    .pdf-modal-title{ font-size:0.84rem; }
+    .pdf-modal-dl{ padding:7px 10px; font-size:0.79rem; }
+    .pdf-modal-eyebrow{ display:none; }
+  }
+
   /* FOOTER */
   footer{ background: #0b1220; color: #94a3b8; padding: 50px 0 24px; }
   .foot-grid{ display:grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 32px; margin-bottom: 32px; }
@@ -438,6 +490,7 @@
   .foot-brand p{ margin-top: 12px; font-size: 0.95rem; }
   .footer-tagline{ color: var(--cyan); font-style: italic; font-weight: 600; margin-top: 8px !important; font-size: 0.95rem !important; }
   .foot-bottom{ border-top: 1px solid #1e293b; padding-top: 20px; text-align: center; font-size: 0.88rem; }
+  .foot-bottom a{ color: #94a3b8; text-decoration: underline; }
 
   /* RESPONSIVE NAV */
   @media (max-width: 980px){
@@ -553,7 +606,7 @@
   .sr-no-results h3{ font-size:1.15rem; margin-bottom:8px; }
   .sr-no-results p{ color:var(--muted); }
   .sr-more{ font-size:0.88rem; color:var(--muted); margin-top:16px; text-align:center; }
-</style>
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}.skip-link:focus{position:fixed;top:0;left:0;width:auto;height:auto;padding:8px 16px;background:#0F2B3D;color:#fff;z-index:9999;font-size:14px;text-decoration:none;border-radius:0 0 4px 0;}</style>
 
 <script type="application/ld+json">
 {
@@ -561,7 +614,7 @@
   "@type": "CollectionPage",
   "name": "Free Printable Math Worksheets — Numberbender",
   "url": "https://numberbender.com/math-worksheets",
-  "description": "415 free printable math worksheets with full answer keys across 11 subjects. Every worksheet is paired with a Numberbender video lesson.",
+  "description": "482 free printable math worksheets with full answer keys across 13 subjects. Every worksheet is paired with a Numberbender video lesson.",
   "author": {
     "@type": "Person",
     "@id": "https://numberbender.com/about#dr-e",
@@ -583,7 +636,7 @@
     {
       "@type": "Question",
       "name": "Are the Numberbender math worksheets really free?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes. All 415 worksheets are 100% free to download, print, and use in your classroom. There is no subscription, no paywall, and no signup required." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. All 482 worksheets are 100% free to download, print, and use in your classroom. There is no subscription, no paywall, and no signup required." }
     },
     {
       "@type": "Question",
@@ -626,53 +679,53 @@
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
 
 <!-- ========== NAVIGATION ========== -->
 <header class="nav">
   <div class="container nav-inner">
     <a href="/" class="logo-lockup" aria-label="Numberbender — Home">
-      <img src="images/numberbender_banner_only.svg" alt="Numberbender" class="lockup-img">
+      <img src="/images/numberbender_banner_only.svg" alt="Numberbender" class="lockup-img">
     </a>
     <button class="menu-toggle" aria-label="Toggle menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
     <nav class="nav-links" id="navlinks">
       <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">For Students <span class="caret" aria-hidden="true">▾</span></button>
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Learn <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
-          <a href="start-here.html">🎁 Free Starter Lesson</a>
-          <a href="find-your-course.html">🧭 Find My Course</a>
-          <a href="courses.html">📚 All Courses</a>
-          <a href="math-worksheets.html">📝 Free Worksheets</a>
-          <a href="for-filipino-students.html">🇵🇭 Para sa Filipino Students</a>
+          <a href="/start-here">🎁 Free Starter Lesson</a>
+          <a href="/find-your-course">🧭 Where Do I Start?</a>
+          <a href="/courses">📚 Explore Math Lessons</a>
+          <a href="/math-worksheets">📝 Free Worksheets</a>
+          <a href="/for-filipino-students">🇵🇭 Para sa Filipino Students</a>
         </div>
       </div>
       <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">For Educators <span class="caret" aria-hidden="true">▾</span></button>
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Teach <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
-          <a href="for-teachers.html">🏫 For Teachers Hub</a>
-          <a href="teach-it-like-you-stream-it.html">🎬 Teach It Like You Stream It</a>
-          <a href="teacher-resources.html">📦 Teacher Resources</a>
-          <a href="math-worksheets.html">📄 Printable Worksheets</a>
+          <a href="/for-teachers">🏫 For Teachers Hub</a>
+          <a href="/teach-the-math">🎓 Teach the Math</a>
+          <a href="/teach-it-like-you-stream-it">🎬 Teach It Like You Stream It</a>
+          <a href="/teacher-resources">📦 Teacher Resources</a>
+          <a href="/math-worksheets">📄 Printable Worksheets</a>
+          <a href="/courses">📚 Lesson &amp; Course Library</a>
         </div>
       </div>
       <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">About Dr. E <span class="caret" aria-hidden="true">▾</span></button>
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">About <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
-          <a href="about.html">👨‍🏫 About Dr. E</a>
-          <a href="speaking.html">🎤 Speaking</a>
-          <a href="press.html">📰 Press &amp; Media</a>
+          <a href="/about">👨‍🏫 About Dr. E</a>
+          <a href="/speaking">🎤 Speaking</a>
+          <a href="/press">📰 Press &amp; Media</a>
+          <a href="/blog">✍️ Blog</a>
+          <a href="/speaking-archive">📅 Past Engagements</a>
         </div>
       </div>
-      <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Blog <span class="caret" aria-hidden="true">▾</span></button>
-        <div class="dropdown-menu">
-          <a href="blog.html">✍️ Blog Posts</a>
-          <a href="speaking-archive.html">📅 Past Engagements</a>
-        </div>
-      </div>
-      <a href="contact.html" class="nav-cta">Contact</a>
+      <a href="/contact" class="nav-cta">Contact</a>
     </nav>
   </div>
 </header>
+<main id="main-content">
 
 <!-- ========== HERO ========== -->
 <section class="page-head">
@@ -680,7 +733,7 @@
     <div class="page-head-split">
       <div class="page-head-text">
         <div class="eyebrow">📝 Free Printable Math Worksheets</div>
-        <h1><span class="accent">415 free worksheets</span> — every one paired with a <span class="accent-cyan">video lesson</span>.</h1>
+        <h1><span class="accent">482 free worksheets</span> — every one paired with a <span class="accent-cyan">video lesson</span>.</h1>
         <p class="lead">
           Print-ready PDF practice sheets for Algebra through Calculus, each one lesson-ordered, classroom-tested,
           and packaged with a full answer key. Pick a subject, download, and assign in seconds — no signup, no paywall, no catch.
@@ -690,9 +743,9 @@
           <a href="#why" class="btn btn-outline btn-lg">What makes them different</a>
         </div>
         <div class="meta-pill">
-          <span><strong>415</strong> worksheets</span>
+          <span><strong>482</strong> worksheets</span>
           <span class="dot">·</span>
-          <span><strong>11</strong> subjects</span>
+          <span><strong>13</strong> subjects</span>
           <span class="dot">·</span>
           <span><strong>Answer keys</strong> included</span>
           <span class="dot">·</span>
@@ -702,7 +755,7 @@
         </div>
       </div>
       <div class="page-head-art">
-        <img src="images/stack_of_worksheets.png" alt="Stack of free printable math worksheets" loading="eager">
+        <img src="/images/stack_of_worksheets.png" alt="Stack of free printable math worksheets" loading="eager">
       </div>
     </div>
 
@@ -739,19 +792,19 @@
 <section class="stat-band">
   <div class="container">
     <div class="stat-box c1">
-      <div class="num">415</div>
+      <div class="num">482</div>
       <div class="lbl">Printable worksheets</div>
     </div>
     <div class="stat-box c2">
-      <div class="num">10</div>
-      <div class="lbl">Subjects, Algebra → Linear Algebra</div>
+      <div class="num">13</div>
+      <div class="lbl">Subjects, Pre-Algebra → Linear Algebra</div>
     </div>
     <div class="stat-box c3">
       <div class="num">100%</div>
       <div class="lbl">Free — no login, no paywall</div>
     </div>
     <div class="stat-box c4">
-      <div class="num">415</div>
+      <div class="num">482</div>
       <div class="lbl">Answer keys — one per worksheet</div>
     </div>
   </div>
@@ -762,14 +815,14 @@
   <div class="container">
     <div class="section-head">
       <div class="section-eyebrow">Browse the library</div>
-      <h2>415 worksheets across 11 math subjects</h2>
+      <h2>482 worksheets across 13 math subjects</h2>
       <p>Each subject opens a lesson-ordered hub of print-ready PDFs. Every sheet includes a worked answer key and links back to the matching video lesson.</p>
     </div>
     <div class="subj-grid">
 
-      <a class="subj-card s-elm" href="courses/algebra/elementary-algebra/worksheets/">
+      <a class="subj-card s-elm" href="/courses/algebra/elementary-algebra/worksheets/">
         <div class="subj-top">
-          <div class="subj-ic"><img src="images/playlist_icons/13_elementary_algebra.png" alt="" aria-hidden="true"></div>
+          <div class="subj-ic"><img src="/images/playlist_icons/13_elementary_algebra.png" alt="" aria-hidden="true"></div>
           <div>
             <h3>Elementary Algebra</h3>
             <div class="subj-count"><b>26</b> worksheets</div>
@@ -779,9 +832,9 @@
         <span class="subj-cta">Open Elementary Algebra worksheets →</span>
       </a>
 
-      <a class="subj-card s-imd" href="courses/algebra/intermediate-algebra/worksheets/">
+      <a class="subj-card s-imd" href="/courses/algebra/intermediate-algebra/worksheets/">
         <div class="subj-top">
-          <div class="subj-ic"><img src="images/playlist_icons/12_intermediate_algebra.png" alt="" aria-hidden="true"></div>
+          <div class="subj-ic"><img src="/images/playlist_icons/12_intermediate_algebra.png" alt="" aria-hidden="true"></div>
           <div>
             <h3>Intermediate Algebra</h3>
             <div class="subj-count"><b>40</b> worksheets</div>
@@ -791,9 +844,9 @@
         <span class="subj-cta">Open Intermediate Algebra worksheets →</span>
       </a>
 
-      <a class="subj-card s-alg" href="courses/algebra/algebra-english/worksheets/">
+      <a class="subj-card s-alg" href="/courses/algebra/algebra-english/worksheets/">
         <div class="subj-top">
-          <div class="subj-ic"><img src="images/playlist_icons/1_algebra.png" alt="" aria-hidden="true"></div>
+          <div class="subj-ic"><img src="/images/playlist_icons/1_algebra.png" alt="" aria-hidden="true"></div>
           <div>
             <h3>Algebra</h3>
             <div class="subj-count"><b>67</b> worksheets</div>
@@ -803,9 +856,9 @@
         <span class="subj-cta">Open Algebra worksheets →</span>
       </a>
 
-      <a class="subj-card s-geo" href="courses/geometry/geometry-english/worksheets/">
+      <a class="subj-card s-geo" href="/courses/geometry/geometry-english/worksheets/">
         <div class="subj-top">
-          <div class="subj-ic"><img src="images/playlist_icons/10_geomtery.png" alt="" aria-hidden="true"></div>
+          <div class="subj-ic"><img src="/images/playlist_icons/10_geomtery.png" alt="" aria-hidden="true"></div>
           <div>
             <h3>Geometry</h3>
             <div class="subj-count"><b>39</b> worksheets</div>
@@ -815,9 +868,9 @@
         <span class="subj-cta">Open Geometry worksheets →</span>
       </a>
 
-      <a class="subj-card s-tri" href="courses/trigonometry/trigonometry-english/worksheets/">
+      <a class="subj-card s-tri" href="/courses/trigonometry/trigonometry-english/worksheets/">
         <div class="subj-top">
-          <div class="subj-ic"><img src="images/playlist_icons/8_trigonometry.png" alt="" aria-hidden="true"></div>
+          <div class="subj-ic"><img src="/images/playlist_icons/8_trigonometry.png" alt="" aria-hidden="true"></div>
           <div>
             <h3>Trigonometry</h3>
             <div class="subj-count"><b>40</b> worksheets</div>
@@ -827,9 +880,9 @@
         <span class="subj-cta">Open Trigonometry worksheets →</span>
       </a>
 
-      <a class="subj-card s-pre" href="courses/precalculus/precalculus-english/worksheets/">
+      <a class="subj-card s-pre" href="/courses/precalculus/precalculus-english/worksheets/">
         <div class="subj-top">
-          <div class="subj-ic"><img src="images/playlist_icons/2_precalculus.png" alt="" aria-hidden="true"></div>
+          <div class="subj-ic"><img src="/images/playlist_icons/2_precalculus.png" alt="" aria-hidden="true"></div>
           <div>
             <h3>Precalculus</h3>
             <div class="subj-count"><b>65</b> worksheets</div>
@@ -839,9 +892,9 @@
         <span class="subj-cta">Open Precalculus worksheets →</span>
       </a>
 
-      <a class="subj-card s-log" href="courses/logarithms/logarithms-english/worksheets/">
+      <a class="subj-card s-log" href="/courses/logarithms/logarithms-english/worksheets/">
         <div class="subj-top">
-          <div class="subj-ic"><img src="images/playlist_icons/11_logarithm.png" alt="" aria-hidden="true"></div>
+          <div class="subj-ic"><img src="/images/playlist_icons/11_logarithm.png" alt="" aria-hidden="true"></div>
           <div>
             <h3>Logarithms</h3>
             <div class="subj-count"><b>6</b> worksheets</div>
@@ -851,9 +904,9 @@
         <span class="subj-cta">Open Logarithms worksheets →</span>
       </a>
 
-      <a class="subj-card s-cal" href="courses/calculus/calculus-english/worksheets/">
+      <a class="subj-card s-cal" href="/courses/calculus/calculus-english/worksheets/">
         <div class="subj-top">
-          <div class="subj-ic"><img src="images/playlist_icons/4_Calculus.png" alt="" aria-hidden="true"></div>
+          <div class="subj-ic"><img src="/images/playlist_icons/4_Calculus.png" alt="" aria-hidden="true"></div>
           <div>
             <h3>Calculus</h3>
             <div class="subj-count"><b>91</b> worksheets</div>
@@ -863,9 +916,9 @@
         <span class="subj-cta">Open Calculus worksheets →</span>
       </a>
 
-      <a class="subj-card s-sta" href="courses/statistics/statistics-english/worksheets/">
+      <a class="subj-card s-sta" href="/courses/statistics/statistics-english/worksheets/">
         <div class="subj-top">
-          <div class="subj-ic"><img src="images/playlist_icons/3_statistics.png" alt="" aria-hidden="true"></div>
+          <div class="subj-ic"><img src="/images/playlist_icons/3_statistics.png" alt="" aria-hidden="true"></div>
           <div>
             <h3>Statistics</h3>
             <div class="subj-count"><b>41</b> worksheets</div>
@@ -875,9 +928,9 @@
         <span class="subj-cta">Open Statistics worksheets →</span>
       </a>
 
-      <a class="subj-card s-inf" href="courses/statistics/inferential-statistics-english/worksheets/">
+      <a class="subj-card s-inf" href="/courses/statistics/inferential-statistics-english/worksheets/">
         <div class="subj-top">
-          <div class="subj-ic"><img src="images/playlist_icons/7_Inferential-Stats.png" alt="" aria-hidden="true"></div>
+          <div class="subj-ic"><img src="/images/playlist_icons/7_Inferential-Stats.png" alt="" aria-hidden="true"></div>
           <div>
             <h3>Inferential Statistics</h3>
             <div class="subj-count"><b>34</b> worksheets</div>
@@ -887,9 +940,9 @@
         <span class="subj-cta">Open Inferential Stats worksheets →</span>
       </a>
 
-      <a class="subj-card s-ana" href="courses/analytic-geometry/analytic-geometry-english/worksheets/">
+      <a class="subj-card s-ana" href="/courses/analytic-geometry/analytic-geometry-english/worksheets/">
         <div class="subj-top">
-          <div class="subj-ic"><img src="images/playlist_icons/9_analytic_geometry.png" alt="" aria-hidden="true"></div>
+          <div class="subj-ic"><img src="/images/playlist_icons/9_analytic_geometry.png" alt="" aria-hidden="true"></div>
           <div>
             <h3>Analytic Geometry</h3>
             <div class="subj-count"><b>13</b> worksheets</div>
@@ -899,9 +952,9 @@
         <span class="subj-cta">Open Analytic Geometry worksheets →</span>
       </a>
 
-      <a class="subj-card s-lin" href="courses/linear-algebra/linear-algebra-english/worksheets/">
+      <a class="subj-card s-lin" href="/courses/linear-algebra/linear-algebra-english/worksheets/">
         <div class="subj-top">
-          <div class="subj-ic"><img src="images/playlist_icons/6_linear_algebra.png" alt="" aria-hidden="true"></div>
+          <div class="subj-ic"><img src="/images/playlist_icons/6_linear_algebra.png" alt="" aria-hidden="true"></div>
           <div>
             <h3>Linear Algebra</h3>
             <div class="subj-count"><b>8</b> worksheets</div>
@@ -911,9 +964,9 @@
         <span class="subj-cta">Open Linear Algebra worksheets →</span>
       </a>
 
-      <a class="subj-card s-dis" href="courses/discrete-math/discrete-math-english/worksheets/">
+      <a class="subj-card s-dis" href="/courses/discrete-math/discrete-math-english/worksheets/">
         <div class="subj-top">
-          <div class="subj-ic"><img src="images/playlist_icons/5_discrete_math.png" alt="" aria-hidden="true"></div>
+          <div class="subj-ic"><img src="/images/playlist_icons/5_discrete_math.png" alt="" aria-hidden="true"></div>
           <div>
             <h3>Discrete Math</h3>
             <div class="subj-count"><b>9</b> worksheets</div>
@@ -928,30 +981,30 @@
     <div class="subj-index" style="margin-top: 40px; padding-top: 32px; border-top: 1px solid var(--line, #e5e7eb);">
       <h3 style="font-size: 1.05rem; margin: 0 0 10px;">Calculus by strand &amp; more hubs (English)</h3>
       <p style="margin: 0 0 22px; color: var(--muted); font-size: 0.97rem; line-height: 1.9;">
-        <a href="courses/calculus/limits-english/worksheets/">Limits worksheets</a> ·
-        <a href="courses/calculus/derivatives-english/worksheets/">Derivatives worksheets</a> ·
-        <a href="courses/calculus/integrals-english/worksheets/">Integrals worksheets</a> ·
-        <a href="courses/logarithms/logarithms-english/worksheets/">Logarithms worksheets</a> ·
-        <a href="courses/math-in-a-minute/math-in-a-minute-english/worksheets/">Math in a Minute worksheets</a>
+        <a href="/courses/calculus/limits-english/worksheets/">Limits worksheets</a> ·
+        <a href="/courses/calculus/derivatives-english/worksheets/">Derivatives worksheets</a> ·
+        <a href="/courses/calculus/integrals-english/worksheets/">Integrals worksheets</a> ·
+        <a href="/courses/logarithms/logarithms-english/worksheets/">Logarithms worksheets</a> ·
+        <a href="/courses/math-in-a-minute/math-in-a-minute-english/worksheets/">Math in a Minute worksheets</a>
       </p>
 
       <h3 style="font-size: 1.05rem; margin: 0 0 10px;">Filipino editions — Mga worksheet sa Filipino</h3>
       <p style="margin: 0; color: var(--muted); font-size: 0.97rem; line-height: 1.9;">
-        <a href="courses/algebra/algebra-filipino/worksheets/">Algebra</a> ·
-        <a href="courses/precalculus/precalculus-filipino/worksheets/">Precalculus</a> ·
-        <a href="courses/statistics/statistics-filipino/worksheets/">Statistics</a> ·
-        <a href="courses/calculus/calculus-filipino/worksheets/">Calculus</a> ·
-        <a href="courses/calculus/limits-filipino/worksheets/">Limits</a> ·
-        <a href="courses/calculus/derivatives-filipino/worksheets/">Derivatives</a> ·
-        <a href="courses/calculus/integrals-filipino/worksheets/">Integrals</a> ·
-        <a href="courses/geometry/geometry-filipino/worksheets/">Geometry</a> ·
-        <a href="courses/statistics/inferential-statistics-filipino/worksheets/">Inferential Statistics</a> ·
-        <a href="courses/trigonometry/trigonometry-filipino/worksheets/">Trigonometry</a> ·
-        <a href="courses/analytic-geometry/analytic-geometry-filipino/worksheets/">Analytic Geometry</a> ·
-        <a href="courses/discrete-math/discrete-math-filipino/worksheets/">Discrete Math</a> ·
-        <a href="courses/linear-algebra/linear-algebra-filipino/worksheets/">Linear Algebra</a> ·
-        <a href="courses/logarithms/logarithms-filipino/worksheets/">Logarithms</a> ·
-        <a href="courses/math-in-a-minute/math-in-a-minute-filipino/worksheets/">Math in a Minute</a>
+        <a href="/courses/algebra/algebra-filipino/worksheets/">Algebra</a> ·
+        <a href="/courses/precalculus/precalculus-filipino/worksheets/">Precalculus</a> ·
+        <a href="/courses/statistics/statistics-filipino/worksheets/">Statistics</a> ·
+        <a href="/courses/calculus/calculus-filipino/worksheets/">Calculus</a> ·
+        <a href="/courses/calculus/limits-filipino/worksheets/">Limits</a> ·
+        <a href="/courses/calculus/derivatives-filipino/worksheets/">Derivatives</a> ·
+        <a href="/courses/calculus/integrals-filipino/worksheets/">Integrals</a> ·
+        <a href="/courses/geometry/geometry-filipino/worksheets/">Geometry</a> ·
+        <a href="/courses/statistics/inferential-statistics-filipino/worksheets/">Inferential Statistics</a> ·
+        <a href="/courses/trigonometry/trigonometry-filipino/worksheets/">Trigonometry</a> ·
+        <a href="/courses/analytic-geometry/analytic-geometry-filipino/worksheets/">Analytic Geometry</a> ·
+        <a href="/courses/discrete-math/discrete-math-filipino/worksheets/">Discrete Math</a> ·
+        <a href="/courses/linear-algebra/linear-algebra-filipino/worksheets/">Linear Algebra</a> ·
+        <a href="/courses/logarithms/logarithms-filipino/worksheets/">Logarithms</a> ·
+        <a href="/courses/math-in-a-minute/math-in-a-minute-filipino/worksheets/">Math in a Minute</a>
       </p>
     </div>
   </div>
@@ -969,7 +1022,7 @@
 
       <div class="bundle-card">
         <div class="bundle-card-top">
-          <div class="bundle-card-ic"><img src="images/playlist_icons/13_elementary_algebra.png" alt=""></div>
+          <div class="bundle-card-ic"><img src="/images/playlist_icons/13_elementary_algebra.png" alt=""></div>
           <div><h3>Elementary Algebra</h3><div class="bundle-count">26 worksheets</div></div>
         </div>
         <button class="btn-bundle" onclick="openBundleModal('elementary-algebra','Elementary Algebra','26')">Get Bundle →</button>
@@ -977,7 +1030,7 @@
 
       <div class="bundle-card">
         <div class="bundle-card-top">
-          <div class="bundle-card-ic"><img src="images/playlist_icons/12_intermediate_algebra.png" alt=""></div>
+          <div class="bundle-card-ic"><img src="/images/playlist_icons/12_intermediate_algebra.png" alt=""></div>
           <div><h3>Intermediate Algebra</h3><div class="bundle-count">40 worksheets</div></div>
         </div>
         <button class="btn-bundle" onclick="openBundleModal('intermediate-algebra','Intermediate Algebra','40')">Get Bundle →</button>
@@ -985,7 +1038,7 @@
 
       <div class="bundle-card">
         <div class="bundle-card-top">
-          <div class="bundle-card-ic"><img src="images/playlist_icons/1_algebra.png" alt=""></div>
+          <div class="bundle-card-ic"><img src="/images/playlist_icons/1_algebra.png" alt=""></div>
           <div><h3>Algebra</h3><div class="bundle-count">67 worksheets</div></div>
         </div>
         <button class="btn-bundle" onclick="openBundleModal('algebra','Algebra','67')">Get Bundle →</button>
@@ -993,7 +1046,7 @@
 
       <div class="bundle-card">
         <div class="bundle-card-top">
-          <div class="bundle-card-ic"><img src="images/playlist_icons/10_geomtery.png" alt=""></div>
+          <div class="bundle-card-ic"><img src="/images/playlist_icons/10_geomtery.png" alt=""></div>
           <div><h3>Geometry</h3><div class="bundle-count">39 worksheets</div></div>
         </div>
         <button class="btn-bundle" onclick="openBundleModal('geometry','Geometry','39')">Get Bundle →</button>
@@ -1001,7 +1054,7 @@
 
       <div class="bundle-card">
         <div class="bundle-card-top">
-          <div class="bundle-card-ic"><img src="images/playlist_icons/8_trigonometry.png" alt=""></div>
+          <div class="bundle-card-ic"><img src="/images/playlist_icons/8_trigonometry.png" alt=""></div>
           <div><h3>Trigonometry</h3><div class="bundle-count">40 worksheets</div></div>
         </div>
         <button class="btn-bundle" onclick="openBundleModal('trigonometry','Trigonometry','40')">Get Bundle →</button>
@@ -1009,7 +1062,7 @@
 
       <div class="bundle-card">
         <div class="bundle-card-top">
-          <div class="bundle-card-ic"><img src="images/playlist_icons/2_precalculus.png" alt=""></div>
+          <div class="bundle-card-ic"><img src="/images/playlist_icons/2_precalculus.png" alt=""></div>
           <div><h3>Precalculus</h3><div class="bundle-count">65 worksheets</div></div>
         </div>
         <button class="btn-bundle" onclick="openBundleModal('precalculus','Precalculus','65')">Get Bundle →</button>
@@ -1017,7 +1070,7 @@
 
       <div class="bundle-card">
         <div class="bundle-card-top">
-          <div class="bundle-card-ic"><img src="images/playlist_icons/11_logarithm.png" alt=""></div>
+          <div class="bundle-card-ic"><img src="/images/playlist_icons/11_logarithm.png" alt=""></div>
           <div><h3>Logarithms</h3><div class="bundle-count">6 worksheets</div></div>
         </div>
         <button class="btn-bundle" onclick="openBundleModal('logarithms','Logarithms','6')">Get Bundle →</button>
@@ -1025,7 +1078,7 @@
 
       <div class="bundle-card">
         <div class="bundle-card-top">
-          <div class="bundle-card-ic"><img src="images/playlist_icons/4_Calculus.png" alt=""></div>
+          <div class="bundle-card-ic"><img src="/images/playlist_icons/4_Calculus.png" alt=""></div>
           <div><h3>Calculus</h3><div class="bundle-count">91 worksheets</div></div>
         </div>
         <button class="btn-bundle" onclick="openBundleModal('calculus','Calculus','91')">Get Bundle →</button>
@@ -1033,7 +1086,7 @@
 
       <div class="bundle-card">
         <div class="bundle-card-top">
-          <div class="bundle-card-ic"><img src="images/playlist_icons/3_statistics.png" alt=""></div>
+          <div class="bundle-card-ic"><img src="/images/playlist_icons/3_statistics.png" alt=""></div>
           <div><h3>Statistics</h3><div class="bundle-count">41 worksheets</div></div>
         </div>
         <button class="btn-bundle" onclick="openBundleModal('statistics','Statistics','41')">Get Bundle →</button>
@@ -1041,7 +1094,7 @@
 
       <div class="bundle-card">
         <div class="bundle-card-top">
-          <div class="bundle-card-ic"><img src="images/playlist_icons/7_Inferential-Stats.png" alt=""></div>
+          <div class="bundle-card-ic"><img src="/images/playlist_icons/7_Inferential-Stats.png" alt=""></div>
           <div><h3>Inferential Statistics</h3><div class="bundle-count">34 worksheets</div></div>
         </div>
         <button class="btn-bundle" onclick="openBundleModal('inferential-statistics','Inferential Statistics','34')">Get Bundle →</button>
@@ -1049,7 +1102,7 @@
 
       <div class="bundle-card">
         <div class="bundle-card-top">
-          <div class="bundle-card-ic"><img src="images/playlist_icons/9_analytic_geometry.png" alt=""></div>
+          <div class="bundle-card-ic"><img src="/images/playlist_icons/9_analytic_geometry.png" alt=""></div>
           <div><h3>Analytic Geometry</h3><div class="bundle-count">13 worksheets</div></div>
         </div>
         <button class="btn-bundle" onclick="openBundleModal('analytic-geometry','Analytic Geometry','13')">Get Bundle →</button>
@@ -1057,7 +1110,7 @@
 
       <div class="bundle-card">
         <div class="bundle-card-top">
-          <div class="bundle-card-ic"><img src="images/playlist_icons/6_linear_algebra.png" alt=""></div>
+          <div class="bundle-card-ic"><img src="/images/playlist_icons/6_linear_algebra.png" alt=""></div>
           <div><h3>Linear Algebra</h3><div class="bundle-count">8 worksheets</div></div>
         </div>
         <button class="btn-bundle" onclick="openBundleModal('linear-algebra','Linear Algebra','8')">Get Bundle →</button>
@@ -1065,7 +1118,7 @@
 
       <div class="bundle-card">
         <div class="bundle-card-top">
-          <div class="bundle-card-ic"><img src="images/playlist_icons/5_discrete_math.png" alt=""></div>
+          <div class="bundle-card-ic"><img src="/images/playlist_icons/5_discrete_math.png" alt=""></div>
           <div><h3>Discrete Math</h3><div class="bundle-count">9 worksheets</div></div>
         </div>
         <button class="btn-bundle" onclick="openBundleModal('discrete-math','Discrete Math','9')">Get Bundle →</button>
@@ -1202,6 +1255,19 @@
   </div>
 </div>
 
+<!-- ========== PDF PREVIEW MODAL ========== -->
+<div class="pdf-modal-overlay" id="pdf-preview-modal" role="dialog" aria-modal="true" aria-labelledby="pdf-modal-title">
+  <div class="pdf-modal-box">
+    <div class="pdf-modal-header">
+      <span class="pdf-modal-eyebrow">👁 Preview</span>
+      <span class="pdf-modal-title" id="pdf-modal-title">Worksheet Preview</span>
+      <a id="pdf-modal-dl-btn" href="#" download class="pdf-modal-dl">⬇ Download PDF</a>
+      <button class="pdf-modal-close" onclick="closePdfModal()" aria-label="Close preview">✕</button>
+    </div>
+    <iframe class="pdf-modal-frame" id="pdf-modal-frame" src="" title="Worksheet PDF Preview"></iframe>
+  </div>
+</div>
+
 <!-- ========== WHY THESE WORKSHEETS ========== -->
 <section id="why">
   <div class="container">
@@ -1229,7 +1295,7 @@
       <div class="why-card">
         <div class="why-ic" aria-hidden="true">🆓</div>
         <h3>Free, with no login wall</h3>
-        <p>All 415 worksheets download instantly. No subscription, no per-sheet credits, no account, no "free trial." Bookmark a subject hub and use it for the whole year.</p>
+        <p>All 482 worksheets download instantly. No subscription, no per-sheet credits, no account, no "free trial." Bookmark a subject hub and use it for the whole year.</p>
       </div>
 
       <div class="why-card">
@@ -1276,7 +1342,7 @@
       <div class="compare-col us">
         <h3>📝 Numberbender worksheets</h3>
         <ul>
-          <li><span class="mk">✓</span> 415 worksheets, completely free — no paywall, ever</li>
+          <li><span class="mk">✓</span> 482 worksheets, completely free — no paywall, ever</li>
           <li><span class="mk">✓</span> A worked answer key inside every single PDF</li>
           <li><span class="mk">✓</span> Each sheet paired with a video lesson that teaches it</li>
           <li><span class="mk">✓</span> Download and print instantly — no account needed</li>
@@ -1323,12 +1389,13 @@
     <p>Pick a subject, grab the worksheets you need, and pair them with the video lessons. Built by a math professor, free for every classroom.</p>
     <div class="final-ctas">
       <a href="#subjects" class="btn btn-yellow btn-lg">Browse worksheets by subject</a>
-      <a href="courses.html" class="btn btn-outline btn-lg">Explore the video courses</a>
+      <a href="/courses" class="btn btn-outline btn-lg">Explore the video courses</a>
     </div>
   </div>
 </section>
 
 <!-- ========== FOOTER ========== -->
+</main>
 <footer>
   <div class="container">
     <div class="foot-grid">
@@ -1339,30 +1406,31 @@
       </div>
       <div class="foot">
         <h4>Students</h4>
-        <a href="courses.html">All Courses</a>
-        <a href="math-worksheets.html">Free Worksheets</a>
-        <a href="find-your-course.html">Find My Course</a>
-        <a href="start-here.html">Free Starter Lesson</a>
+        <a href="/courses">Explore All Subjects</a>
+        <a href="/math-worksheets">Free Worksheets</a>
+        <a href="/find-your-course">Where Do I Start?</a>
+        <a href="/start-here">Free Starter Lesson</a>
       </div>
       <div class="foot">
         <h4>Educators</h4>
-        <a href="for-teachers.html">For Teachers Hub</a>
-        <a href="teacher-resources.html">Teacher Resources</a>
-        <a href="flipped-classroom-math.html">Flipped Classroom Guide</a>
-        <a href="teach-it-like-you-stream-it.html">Teach It Like You Stream It</a>
+        <a href="/for-teachers">For Teachers Hub</a>
+        <a href="/teach-the-math">Teach the Math</a>
+        <a href="/teacher-resources">Teacher Resources</a>
+        <a href="/flipped-classroom-math">Flipped Classroom Guide</a>
+        <a href="/teach-it-like-you-stream-it">Teach It Like You Stream It</a>
       </div>
       <div class="foot">
         <h4>Connect</h4>
-        <a href="about.html">About Dr. E</a>
-        <a href="speaking.html">Speaking</a>
-        <a href="press.html">Press &amp; Media</a>
-        <a href="contact.html">Contact</a>
+        <a href="/about">About Dr. E</a>
+        <a href="/speaking">Speaking</a>
+        <a href="/press">Press &amp; Media</a>
+        <a href="/contact">Contact</a>
         <a href="https://www.youtube.com/@numberbender" target="_blank" rel="noopener">YouTube Channel</a>
       </div>
     </div>
     <div class="foot-bottom">
-      © 2026 Numberbender · Founded by Dr. Peter Esperanza · <a href="/">Home</a> · <a href="contact.html">Contact</a>
-      <div style="margin-top:8px;font-size:0.78rem;color:#64748b;">
+      © 2026 Numberbender · Founded by Dr. Peter Esperanza · <a href="/">Home</a> · <a href="/contact">Contact</a>
+      <div style="margin-top:8px;font-size:0.78rem;color:#94a3b8;">
         <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener"><img src="https://licensebuttons.net/l/by/4.0/88x31.png" alt="CC BY 4.0" style="border:0;vertical-align:middle;margin-right:6px;"></a>
         Original content licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener" style="color:#94a3b8;">CC BY 4.0</a> &mdash; free to share and adapt with credit to Peter Esperanza / Numberbender.
       </div>
@@ -1437,6 +1505,34 @@
 </script>
 
 <script>
+  // ── PDF PREVIEW MODAL ──
+  function openPdfPreview(btn) {
+    var url   = btn.getAttribute('data-pdf');
+    var title = btn.getAttribute('data-title') || 'Worksheet Preview';
+    document.getElementById('pdf-modal-title').textContent = title;
+    document.getElementById('pdf-modal-frame').src = url;
+    document.getElementById('pdf-modal-dl-btn').href = url;
+    document.getElementById('pdf-modal-dl-btn').setAttribute('download', title + '.pdf');
+    document.getElementById('pdf-preview-modal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closePdfModal() {
+    document.getElementById('pdf-preview-modal').classList.remove('open');
+    // Clear src after transition so browser stops loading/rendering the PDF
+    setTimeout(function(){ document.getElementById('pdf-modal-frame').src = ''; }, 200);
+    document.body.style.overflow = '';
+  }
+  document.getElementById('pdf-preview-modal').addEventListener('click', function(e) {
+    if (e.target === this) closePdfModal();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && document.getElementById('pdf-preview-modal').classList.contains('open')) {
+      closePdfModal();
+    }
+  });
+</script>
+
+<script>
 (function(){
   var INDEX = null, loading = false, activeQ = '', activeLang = 'en';
 
@@ -1474,8 +1570,9 @@
   var STYLE_ACTIONS = 'style="display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin-top:12px;"';
   var BTN_BASE      = 'display:block;text-align:center;padding:7px 4px;border-radius:8px;font-size:0.78rem;font-weight:600;text-decoration:none;white-space:nowrap;';
   var STYLE_BTN     = 'style="'+BTN_BASE+'border:1px solid #E2E8F0;color:#0F172A;background:white;"';
-  var STYLE_BTN_PRI = 'style="'+BTN_BASE+'border:1px solid #2563EB;color:white;background:#2563EB;"';
-  var STYLE_BTN_YT  = 'style="'+BTN_BASE+'border:1px solid rgba(220,38,38,.3);color:#dc2626;background:white;"';
+  var STYLE_BTN_PRI     = 'style="'+BTN_BASE+'border:1px solid #2563EB;color:white;background:#2563EB;"';
+  var STYLE_BTN_PRI_BTN = 'style="'+BTN_BASE+'border:1px solid #2563EB;color:white;background:#2563EB;cursor:pointer;font-family:inherit;"';
+  var STYLE_BTN_YT      = 'style="'+BTN_BASE+'border:1px solid rgba(220,38,38,.3);color:#dc2626;background:white;"';
 
   function diffStyle(d){ return d==='beg'?STYLE_DIFF_BEG:d==='int'?STYLE_DIFF_INT:d==='adv'?STYLE_DIFF_ADV:STYLE_DIFF; }
 
@@ -1494,7 +1591,7 @@
       +(w.topic?'<div class="sr-topic" '+STYLE_TOPIC+'>'+hl(w.topic,q)+'</div>':'')
       +'<h3 class="sr-title" '+STYLE_TITLE+'>'+hl(w.title,q)+'</h3>'
       +'<div class="sr-actions" '+STYLE_ACTIONS+'>'
-        +(w.pdfUrl?'<a class="sr-btn primary" '+STYLE_BTN_PRI+' href="'+esc(w.pdfUrl)+'" target="_blank" rel="noopener">&#128065; View PDF</a>':'<span></span>')
+        +(w.pdfUrl?'<button '+STYLE_BTN_PRI_BTN+' onclick="openPdfPreview(this)" data-pdf="'+esc(w.pdfUrl)+'" data-title="'+esc(w.title)+'">'+SVG_EYE+' View</button>':'<span></span>')
         +(w.pdfUrl?'<a class="sr-btn" '+STYLE_BTN+' href="'+esc(w.pdfUrl)+'" download>&#8595; Download</a>':'<span></span>')
         +watch
       +'</div>'
@@ -1589,7 +1686,7 @@
 <!-- ── Numberbender Sticky Bar — Back to School June 2026 ── -->
 <div id="nb-sticky-bar">
   <p>🇵🇭 Philippine schools open in June! Get FREE bilingual math worksheets:</p>
-  <input type="email" id="nb-email-input" placeholder="your@email.com" autocomplete="email" />
+  <input type="email" id="nb-email-input" placeholder="your@email.com" autocomplete="email" aria-label="Email address" />
   <button class="nb-submit" onclick="nbSubmit()">Get Free Worksheets →</button>
   <button class="nb-close" onclick="nbDismiss()" aria-label="Close">✕</button>
 </div>

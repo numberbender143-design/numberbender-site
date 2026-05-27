@@ -73,7 +73,7 @@
     .ws-breadcrumb a{ color:var(--muted); }
     .ws-breadcrumb a:hover{ color:var(--blue); text-decoration:underline; }
     .ws-breadcrumb .sep{ margin:0 8px; color:#cbd5e1; }
-    .ws-eyebrow{ display:inline-flex; align-items:center; gap:8px; color:var(--accent-color); background:var(--accent-bg); padding:6px 14px; border-radius:999px; font-size:0.85rem; font-weight:700; margin-bottom:14px; text-transform:uppercase; letter-spacing:.06em; }
+    .ws-eyebrow{ display:inline-flex; align-items:center; gap:8px; color:var(--accent-dark); background:var(--accent-bg); padding:6px 14px; border-radius:999px; font-size:0.85rem; font-weight:700; margin-bottom:14px; text-transform:uppercase; letter-spacing:.06em; }
     .ws-hero h1{ font-size:clamp(2rem,4.2vw,3rem); line-height:1.1; letter-spacing:-0.02em; font-weight:800; margin-bottom:14px; max-width:900px; }
     .ws-hero h1 .accent{ color:var(--accent-color); }
     .ws-hero .lead{ font-size:1.1rem; color:var(--muted); max-width:720px; margin-bottom:22px; }
@@ -91,7 +91,7 @@
     .ws-card{ background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:22px 22px 20px; display:flex; flex-direction:column; gap:12px; transition:transform .15s ease,box-shadow .15s ease,border-color .15s ease; }
     .ws-card:hover{ transform:translateY(-3px); box-shadow:var(--shadow); border-color:rgba(37,99,235,.25); }
     .ws-card .ws-card-meta{ display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
-    .ws-card .ws-lesson{ font-size:0.78rem; font-weight:700; color:var(--accent-color); background:var(--accent-bg); padding:3px 10px; border-radius:999px; text-transform:uppercase; letter-spacing:.06em; }
+    .ws-card .ws-lesson{ font-size:0.78rem; font-weight:700; color:var(--accent-dark); background:var(--accent-bg); padding:3px 10px; border-radius:999px; text-transform:uppercase; letter-spacing:.06em; }
     .ws-card .ws-diff{ font-size:0.78rem; font-weight:600; color:var(--muted); padding:3px 10px; border-radius:999px; background:#f1f5f9; text-transform:uppercase; letter-spacing:.06em; }
     .ws-card .ws-diff.beg{ background:#dcfce7; color:#15803d; }
     .ws-card .ws-diff.int{ background:#fef9c3; color:#a16207; }
@@ -111,7 +111,7 @@
     .ws-card .ws-btn.primary:hover{ background:#2563EB; color:white; text-decoration:none; }
     .ws-card .ws-btn.download{ background:#F0FDFA; color:#1F6F6B; }
     .ws-card .ws-btn.download:hover{ background:#1F6F6B; color:white; text-decoration:none; }
-    .ws-card .ws-btn.watch{ background:#FEF2F2; color:#dc2626; }
+    .ws-card .ws-btn.watch{ background:#FEF2F2; color:#b91c1c; }
     .ws-card .ws-btn.watch:hover{ background:#dc2626; color:white; text-decoration:none; }
     /* PDF Modal */
     .pdf-modal-overlay{
@@ -188,59 +188,59 @@
     .ws-no-results.visible{display:block;}
   </style>
 </head>
-<body style="--accent-color:#0891b2;--accent-bg:rgba(8,145,178,0.10);">
+<body style="--accent-color:#0891b2;--accent-bg:rgba(8,145,178,0.10); --accent-dark: #155e75">
+<style>.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}.skip-link:focus{position:fixed;top:0;left:0;width:auto;height:auto;padding:8px 16px;background:#0F2B3D;color:#fff;z-index:9999;font-size:14px;text-decoration:none;border-radius:0 0 4px 0;}</style>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="nav">
   <div class="container nav-inner">
-    <a href="../../../../index.html" class="logo logo-lockup" aria-label="Numberbender — Master the Elements of Math">
+    <a href="/" class="logo logo-lockup" aria-label="Numberbender — Master the Elements of Math">
       <img src="../../../../images/numberbender_banner_only.svg" alt="Numberbender" class="lockup-img">
     </a>
     <button class="menu-toggle" aria-label="Toggle menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
     <nav class="nav-links" id="navlinks">
       <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">For Students <span class="caret" aria-hidden="true">▾</span></button>
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Learn <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
-          <a href="../../../../start-here.html">🎁 Free Starter Lesson</a>
-          <a href="../../../../find-your-course.html">🧭 Find My Course</a>
-          <a href="../../../../courses.html">📚 All Courses</a>
-          <a href="../../../../math-worksheets.html">📝 Free Worksheets</a>
-          <a href="../../../../for-filipino-students.html">🇵🇭 Para sa Filipino Students</a>
+          <a href="/start-here">🎁 Free Starter Lesson</a>
+          <a href="/find-your-course">🧭 Where Do I Start?</a>
+          <a href="/courses">📚 Explore Math Lessons</a>
+          <a href="/math-worksheets">📝 Free Worksheets</a>
+          <a href="/for-filipino-students">🇵🇭 Para sa Filipino Students</a>
         </div>
       </div>
       <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">For Educators <span class="caret" aria-hidden="true">▾</span></button>
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Teach <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
-          <a href="../../../../for-teachers.html">🏫 For Teachers Hub</a>
-          <a href="../../../../teach-it-like-you-stream-it.html">🎬 Teach It Like You Stream It</a>
-          <a href="../../../../teacher-resources.html">📦 Teacher Resources</a>
-          <a href="../../../../math-worksheets.html">📄 Printable Worksheets</a>
+          <a href="/for-teachers">🏫 For Teachers Hub</a>
+          <a href="/teach-the-math">🎓 Teach the Math</a>
+          <a href="/teach-it-like-you-stream-it">🎬 Teach It Like You Stream It</a>
+          <a href="/teacher-resources">📦 Teacher Resources</a>
+          <a href="/math-worksheets">📄 Printable Worksheets</a>
+          <a href="/courses">📚 Lesson &amp; Course Library</a>
         </div>
       </div>
       <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">About Dr. E <span class="caret" aria-hidden="true">▾</span></button>
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">About <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
-          <a href="../../../../about.html">👨‍🏫 About Dr. E</a>
-          <a href="../../../../speaking.html">🎤 Speaking</a>
-          <a href="../../../../press.html">📰 Press &amp; Media</a>
+          <a href="/about">👨‍🏫 About Dr. E</a>
+          <a href="/speaking">🎤 Speaking</a>
+          <a href="/press">📰 Press &amp; Media</a>
+          <a href="/blog">✍️ Blog</a>
+          <a href="/speaking-archive">📅 Past Engagements</a>
         </div>
       </div>
-      <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Blog <span class="caret" aria-hidden="true">▾</span></button>
-        <div class="dropdown-menu">
-          <a href="../../../../blog.html">✍️ Blog Posts</a>
-          <a href="../../../../speaking-archive.html">📅 Past Engagements</a>
-        </div>
-      </div>
-      <a href="../../../../contact.html" class="nav-cta">Contact</a>
+      <a href="/contact" class="nav-cta">Contact</a>
     </nav>
   </div>
 </header>
+<main id="main-content">
 <section class="ws-hero">
   <div class="container ws-hero-inner">
     <div class="ws-hero-text">
 
     <nav class="ws-breadcrumb" aria-label="Breadcrumb">
-      <a href="../../../../index.html">Home</a><span class="sep">›</span>
-      <a href="../../../../courses.html">Courses</a><span class="sep">›</span>
+      <a href="/">Home</a><span class="sep">›</span>
+      <a href="/courses">Courses</a><span class="sep">›</span>
       <span>Analytic Geometry (Filipino)</span>
     </nav>
     <span class="ws-eyebrow">Analytic Geometry · Filipino</span>
@@ -275,7 +275,7 @@
   <h3>Ratio and Proportion</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/analytic-geometry/01-analytic-geometry-ratio-and-proportion.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="01-analytic-geometry-ratio-and-proportion.pdf" data-action="open"
        aria-label="View Ratio and Proportion worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/analytic-geometry/01-analytic-geometry-ratio-and-proportion.pdf" download
@@ -296,7 +296,7 @@
   <h3>Conic Sections Introduction — Parabolas</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/analytic-geometry/02-analytic-geometry-conic-sections-introduction-parabolas.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="02-analytic-geometry-conic-sections-introduction-parabolas.pdf" data-action="open"
        aria-label="View Conic Sections Introduction — Parabolas worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/analytic-geometry/02-analytic-geometry-conic-sections-introduction-parabolas.pdf" download
@@ -316,7 +316,7 @@
   <h3>Conic Sections — Parabolas</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/analytic-geometry/03-analytic-geometry-conic-sections-parabolas.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="03-analytic-geometry-conic-sections-parabolas.pdf" data-action="open"
        aria-label="View Conic Sections — Parabolas worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/analytic-geometry/03-analytic-geometry-conic-sections-parabolas.pdf" download
@@ -336,7 +336,7 @@
   <h3>Parabolas in Conic Sections</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/analytic-geometry/04-analytic-geometry-parabolas-in-conic-sections.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="04-analytic-geometry-parabolas-in-conic-sections.pdf" data-action="open"
        aria-label="View Parabolas in Conic Sections worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/analytic-geometry/04-analytic-geometry-parabolas-in-conic-sections.pdf" download
@@ -356,7 +356,7 @@
   <h3>Parabolas — Parts, Equations, and Analysis</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/analytic-geometry/05-analytic-geometry-parabolas-parts-equations-analysis.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="05-analytic-geometry-parabolas-parts-equations-analysis.pdf" data-action="open"
        aria-label="View Parabolas — Parts, Equations, and Analysis worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/analytic-geometry/05-analytic-geometry-parabolas-parts-equations-analysis.pdf" download
@@ -377,7 +377,7 @@
   <h3>Ellipses — Standard Form and Graphing</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/analytic-geometry/06-analytic-geometry-ellipses-standard-form-graphing.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="06-analytic-geometry-ellipses-standard-form-graphing.pdf" data-action="open"
        aria-label="View Ellipses — Standard Form and Graphing worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/analytic-geometry/06-analytic-geometry-ellipses-standard-form-graphing.pdf" download
@@ -397,7 +397,7 @@
   <h3>Ellipses — Foci, Axes, and Standard Form</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/analytic-geometry/07-analytic-geometry-ellipses-foci-axes-and-standard-form.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="07-analytic-geometry-ellipses-foci-axes-and-standard-form.pdf" data-action="open"
        aria-label="View Ellipses — Foci, Axes, and Standard Form worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/analytic-geometry/07-analytic-geometry-ellipses-foci-axes-and-standard-form.pdf" download
@@ -417,7 +417,7 @@
   <h3>Ellipses — Standard Form, Vertices, and Foci</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/analytic-geometry/08-analytic-geometry-ellipses-standard-form-vertices-foci.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="08-analytic-geometry-ellipses-standard-form-vertices-foci.pdf" data-action="open"
        aria-label="View Ellipses — Standard Form, Vertices, and Foci worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/analytic-geometry/08-analytic-geometry-ellipses-standard-form-vertices-foci.pdf" download
@@ -437,7 +437,7 @@
   <h3>Ellipses — Standard Equation Given Its Parts</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/analytic-geometry/09-analytic-geometry-ellipses-standard-equation-given-its-parts.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="09-analytic-geometry-ellipses-standard-equation-given-its-parts.pdf" data-action="open"
        aria-label="View Ellipses — Standard Equation Given Its Parts worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/analytic-geometry/09-analytic-geometry-ellipses-standard-equation-given-its-parts.pdf" download
@@ -458,7 +458,7 @@
   <h3>Hyperbolas — Graphing and Analyzing</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/analytic-geometry/10-analytic-geometry-hyperbolas-graphing-and-analyzing.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="10-analytic-geometry-hyperbolas-graphing-and-analyzing.pdf" data-action="open"
        aria-label="View Hyperbolas — Graphing and Analyzing worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/analytic-geometry/10-analytic-geometry-hyperbolas-graphing-and-analyzing.pdf" download
@@ -478,7 +478,7 @@
   <h3>Hyperbolas — Graphing and Analyzing Vol. 2</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/analytic-geometry/11-analytic-geometry-hyperbolas-graphing-and-analyzing-2.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="11-analytic-geometry-hyperbolas-graphing-and-analyzing-2.pdf" data-action="open"
        aria-label="View Hyperbolas — Graphing and Analyzing Vol. 2 worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/analytic-geometry/11-analytic-geometry-hyperbolas-graphing-and-analyzing-2.pdf" download
@@ -499,7 +499,7 @@
   <h3>Converting Conic Sections to Standard Form</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/analytic-geometry/12-analytic-geometry-converting-conic-sections-to-standard-form.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="12-analytic-geometry-converting-conic-sections-to-standard-form.pdf" data-action="open"
        aria-label="View Converting Conic Sections to Standard Form worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/analytic-geometry/12-analytic-geometry-converting-conic-sections-to-standard-form.pdf" download
@@ -519,7 +519,7 @@
   <h3>Converting General Form to Standard Form</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/analytic-geometry/13-analytic-geometry-converting-general-form-to-standard-form.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="13-analytic-geometry-converting-general-form-to-standard-form.pdf" data-action="open"
        aria-label="View Converting General Form to Standard Form worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/analytic-geometry/13-analytic-geometry-converting-general-form-to-standard-form.pdf" download
@@ -540,6 +540,7 @@
     </div>
   </div>
 </section>
+</main>
 <footer>
   <div class="container">
     <div class="foot-grid">
@@ -555,7 +556,7 @@
       </div>
       <div class="foot">
         <h4>Students</h4>
-        <a href="../../../../courses.html">All Courses</a>
+        <a href="/courses">Explore All Subjects</a>
         <a href="../../../../courses.html#algebra-card">Algebra</a>
         <a href="../../../../courses.html#statistics-card">Statistics</a>
         <a href="../../../../courses.html#calculus-card">Calculus</a>
@@ -563,6 +564,7 @@
       <div class="foot">
         <h4>Educators</h4>
         <a href="../../../../teach-it-like-you-stream-it.html">Teach It Like You Stream It</a>
+        <a href="../../../../teach-the-math.html">Teach the Math</a>
         <a href="../../../../teacher-resources.html">Teacher Resources</a>
         <a href="../../../../ap-calculus-frq-books.html">AP Calculus FRQ Books</a>
         <a href="../../../../speaking.html">Speaking</a>

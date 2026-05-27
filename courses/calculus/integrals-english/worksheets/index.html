@@ -123,7 +123,7 @@
     .ws-breadcrumb .sep{ margin: 0 8px; color: #cbd5e1; }
     .ws-eyebrow{
       display:inline-flex; align-items:center; gap:8px;
-      color: var(--accent-color); background: var(--accent-bg);
+      color: var(--accent-dark); background: var(--accent-bg);
       padding: 6px 14px; border-radius: 999px;
       font-size: 0.85rem; font-weight: 700; margin-bottom: 14px;
       text-transform: uppercase; letter-spacing: .06em;
@@ -172,7 +172,7 @@
     }
     .ws-card .ws-lesson{
       font-size: 0.78rem; font-weight: 700;
-      color: var(--accent-color); background: var(--accent-bg);
+      color: var(--accent-dark); background: var(--accent-bg);
       padding: 3px 10px; border-radius: 999px;
       text-transform: uppercase; letter-spacing: .06em;
     }
@@ -210,7 +210,7 @@
     .ws-card .ws-btn.primary:hover{ background:#2563EB; color:white; text-decoration:none; }
     .ws-card .ws-btn.download{ background:#F0FDFA; color:#1F6F6B; }
     .ws-card .ws-btn.download:hover{ background:#1F6F6B; color:white; text-decoration:none; }
-    .ws-card .ws-btn.watch{ background:#FEF2F2; color:#dc2626; }
+    .ws-card .ws-btn.watch{ background:#FEF2F2; color:#b91c1c; }
     .ws-card .ws-btn.watch:hover{ background:#dc2626; color:white; text-decoration:none; }
     /* PDF Modal */
     .pdf-modal-overlay{
@@ -349,61 +349,61 @@
     .ws-no-results.visible{display:block;}
   </style>
 </head>
-    <body style="--accent-color: #7c3aed; --accent-bg: rgba(124,58,237,0.10);">
+    <body style="--accent-color: #7c3aed; --accent-bg: rgba(124,58,237,0.10); --accent-dark: #6d28d9">
 
-    <header class="nav">
+    <style>.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}.skip-link:focus{position:fixed;top:0;left:0;width:auto;height:auto;padding:8px 16px;background:#0F2B3D;color:#fff;z-index:9999;font-size:14px;text-decoration:none;border-radius:0 0 4px 0;}</style>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="nav">
   <div class="container nav-inner">
-    <a href="../../../../index.html" class="logo logo-lockup" aria-label="Numberbender — Master the Elements of Math">
+    <a href="/" class="logo logo-lockup" aria-label="Numberbender — Master the Elements of Math">
       <img src="../../../../images/numberbender_banner_only.svg" alt="Numberbender" class="lockup-img">
     </a>
     <button class="menu-toggle" aria-label="Toggle menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
     <nav class="nav-links" id="navlinks">
       <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">For Students <span class="caret" aria-hidden="true">▾</span></button>
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Learn <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
-          <a href="../../../../start-here.html">🎁 Free Starter Lesson</a>
-          <a href="../../../../find-your-course.html">🧭 Find My Course</a>
-          <a href="../../../../courses.html">📚 All Courses</a>
-          <a href="../../../../math-worksheets.html">📝 Free Worksheets</a>
-          <a href="../../../../for-filipino-students.html">🇵🇭 Para sa Filipino Students</a>
+          <a href="/start-here">🎁 Free Starter Lesson</a>
+          <a href="/find-your-course">🧭 Where Do I Start?</a>
+          <a href="/courses">📚 Explore Math Lessons</a>
+          <a href="/math-worksheets">📝 Free Worksheets</a>
+          <a href="/for-filipino-students">🇵🇭 Para sa Filipino Students</a>
         </div>
       </div>
       <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">For Educators <span class="caret" aria-hidden="true">▾</span></button>
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Teach <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
-          <a href="../../../../for-teachers.html">🏫 For Teachers Hub</a>
-          <a href="../../../../teach-it-like-you-stream-it.html">🎬 Teach It Like You Stream It</a>
-          <a href="../../../../teacher-resources.html">📦 Teacher Resources</a>
-          <a href="../../../../math-worksheets.html">📄 Printable Worksheets</a>
+          <a href="/for-teachers">🏫 For Teachers Hub</a>
+          <a href="/teach-the-math">🎓 Teach the Math</a>
+          <a href="/teach-it-like-you-stream-it">🎬 Teach It Like You Stream It</a>
+          <a href="/teacher-resources">📦 Teacher Resources</a>
+          <a href="/math-worksheets">📄 Printable Worksheets</a>
+          <a href="/courses">📚 Lesson &amp; Course Library</a>
         </div>
       </div>
       <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">About Dr. E <span class="caret" aria-hidden="true">▾</span></button>
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">About <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
-          <a href="../../../../about.html">👨‍🏫 About Dr. E</a>
-          <a href="../../../../speaking.html">🎤 Speaking</a>
-          <a href="../../../../press.html">📰 Press &amp; Media</a>
+          <a href="/about">👨‍🏫 About Dr. E</a>
+          <a href="/speaking">🎤 Speaking</a>
+          <a href="/press">📰 Press &amp; Media</a>
+          <a href="/blog">✍️ Blog</a>
+          <a href="/speaking-archive">📅 Past Engagements</a>
         </div>
       </div>
-      <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Blog <span class="caret" aria-hidden="true">▾</span></button>
-        <div class="dropdown-menu">
-          <a href="../../../../blog.html">✍️ Blog Posts</a>
-          <a href="../../../../speaking-archive.html">📅 Past Engagements</a>
-        </div>
-      </div>
-      <a href="../../../../contact.html" class="nav-cta">Contact</a>
+      <a href="/contact" class="nav-cta">Contact</a>
     </nav>
   </div>
 </header>
 
-    <section class="ws-hero">
+    <main id="main-content">
+<section class="ws-hero">
       <div class="container ws-hero-inner">
         <div class="ws-hero-text">
 
         <nav class="ws-breadcrumb" aria-label="Breadcrumb">
-          <a href="../../../../index.html">Home</a><span class="sep">›</span>
-          <a href="../../../../courses.html">Courses</a><span class="sep">›</span>
+          <a href="/">Home</a><span class="sep">›</span>
+          <a href="/courses">Courses</a><span class="sep">›</span>
           <span>Integrals (English)</span>
         </nav>
         <span class="ws-eyebrow">Calculus · English</span>
@@ -439,7 +439,7 @@
   <h3>Basic Integration</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/calculus/integrals/worksheet-integrals-basic-integration.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="worksheet-integrals-basic-integration.pdf" data-action="open"
        aria-label="View Basic Integration worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/integrals/worksheet-integrals-basic-integration.pdf" download
@@ -459,7 +459,7 @@
   <h3>Antiderivatives — Exponential, Trig, and Radical</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/calculus/integrals/worksheet-integrals-antiderivatives-exponential-trig-radical.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="worksheet-integrals-antiderivatives-exponential-trig-radical.pdf" data-action="open"
        aria-label="View Antiderivatives — Exponential, Trig, and Radical worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/integrals/worksheet-integrals-antiderivatives-exponential-trig-radical.pdf" download
@@ -482,7 +482,7 @@
   <h3>Special Case Integration</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/calculus/integrals/worksheet-integrals-special-case-integration.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="worksheet-integrals-special-case-integration.pdf" data-action="open"
        aria-label="View Special Case Integration worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/integrals/worksheet-integrals-special-case-integration.pdf" download
@@ -502,7 +502,7 @@
   <h3>Integration by Substitution (U-Substitution)</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/calculus/integrals/worksheet-integrals-u-substitution.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="worksheet-integrals-u-substitution.pdf" data-action="open"
        aria-label="View Integration by Substitution (U-Substitution) worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/integrals/worksheet-integrals-u-substitution.pdf" download
@@ -525,7 +525,7 @@
   <h3>Integrating Powers of Sine and Cosine</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/calculus/integrals/worksheet-integrals-sine-cosine-powers.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="worksheet-integrals-sine-cosine-powers.pdf" data-action="open"
        aria-label="View Integrating Powers of Sine and Cosine worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/integrals/worksheet-integrals-sine-cosine-powers.pdf" download
@@ -548,7 +548,7 @@
   <h3>Riemann Sums: Approximating Area Under a Curve</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/calculus/integrals/worksheet-integrals-riemann-sums-area.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="worksheet-integrals-riemann-sums-area.pdf" data-action="open"
        aria-label="View Riemann Sums: Approximating Area Under a Curve worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/integrals/worksheet-integrals-riemann-sums-area.pdf" download
@@ -568,7 +568,7 @@
   <h3>Riemann Sums: Estimating Distance Traveled</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/calculus/integrals/worksheet-integrals-riemann-sums-distance.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="worksheet-integrals-riemann-sums-distance.pdf" data-action="open"
        aria-label="View Riemann Sums: Estimating Distance Traveled worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/integrals/worksheet-integrals-riemann-sums-distance.pdf" download
@@ -591,7 +591,7 @@
   <h3>Definite Integrals</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/calculus/integrals/worksheet-integrals-definite-integrals.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="worksheet-integrals-definite-integrals.pdf" data-action="open"
        aria-label="View Definite Integrals worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/integrals/worksheet-integrals-definite-integrals.pdf" download
@@ -611,7 +611,7 @@
   <h3>Properties of Definite Integrals</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/calculus/integrals/worksheet-integrals-properties-definite-integrals.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="worksheet-integrals-properties-definite-integrals.pdf" data-action="open"
        aria-label="View Properties of Definite Integrals worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/integrals/worksheet-integrals-properties-definite-integrals.pdf" download
@@ -634,7 +634,7 @@
   <h3>Exact Area with Definite Integrals</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/calculus/integrals/worksheet-integrals-exact-area-definite-integrals.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="worksheet-integrals-exact-area-definite-integrals.pdf" data-action="open"
        aria-label="View Exact Area with Definite Integrals worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/integrals/worksheet-integrals-exact-area-definite-integrals.pdf" download
@@ -654,7 +654,7 @@
   <h3>Area Under the Curve — Absolute Value Functions</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/calculus/integrals/worksheet-integrals-area-under-curve-absolute-value.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="worksheet-integrals-area-under-curve-absolute-value.pdf" data-action="open"
        aria-label="View Area Under the Curve — Absolute Value Functions worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/integrals/worksheet-integrals-area-under-curve-absolute-value.pdf" download
@@ -674,7 +674,7 @@
   <h3>Area Between Curves</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/calculus/integrals/worksheet-integrals-area-between-curves.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="worksheet-integrals-area-between-curves.pdf" data-action="open"
        aria-label="View Area Between Curves worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/integrals/worksheet-integrals-area-between-curves.pdf" download
@@ -694,7 +694,7 @@
   <h3>Areas Between Curves — Sub-Regions</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/calculus/integrals/worksheet-integrals-area-between-curves-sub-regions.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="worksheet-integrals-area-between-curves-sub-regions.pdf" data-action="open"
        aria-label="View Areas Between Curves — Sub-Regions worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/integrals/worksheet-integrals-area-between-curves-sub-regions.pdf" download
@@ -717,7 +717,7 @@
   <h3>Average Value of a Function</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/calculus/integrals/worksheet-integrals-average-value.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="worksheet-integrals-average-value.pdf" data-action="open"
        aria-label="View Average Value of a Function worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/integrals/worksheet-integrals-average-value.pdf" download
@@ -737,7 +737,7 @@
   <h3>Average Value of a Function — Set B</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/calculus/integrals/worksheet-integrals-average-value-b.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="worksheet-integrals-average-value-b.pdf" data-action="open"
        aria-label="View Average Value of a Function — Set B worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/integrals/worksheet-integrals-average-value-b.pdf" download
@@ -757,7 +757,7 @@
   <h3>Rectilinear Motion: Particle Problem</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/calculus/integrals/worksheet-integrals-rectilinear-motion-particle-problem.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="worksheet-integrals-rectilinear-motion-particle-problem.pdf" data-action="open"
        aria-label="View Rectilinear Motion: Particle Problem worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/integrals/worksheet-integrals-rectilinear-motion-particle-problem.pdf" download
@@ -777,7 +777,7 @@
   <h3>Rectilinear Motion: Position, Velocity, Acceleration</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/calculus/integrals/worksheet-integrals-rectilinear-motion-position-velocity-acceleration.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="worksheet-integrals-rectilinear-motion-position-velocity-acceleration.pdf" data-action="open"
        aria-label="View Rectilinear Motion: Position, Velocity, Acceleration worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/integrals/worksheet-integrals-rectilinear-motion-position-velocity-acceleration.pdf" download
@@ -800,7 +800,7 @@
   <h3>Volume by Disks</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/calculus/integrals/worksheet-integrals-volume-disks.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="worksheet-integrals-volume-disks.pdf" data-action="open"
        aria-label="View Volume by Disks worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/integrals/worksheet-integrals-volume-disks.pdf" download
@@ -820,7 +820,7 @@
   <h3>Volume by Disks (Not on Axis)</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/calculus/integrals/worksheet-integrals-volume-disks-not-on-axis.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="worksheet-integrals-volume-disks-not-on-axis.pdf" data-action="open"
        aria-label="View Volume by Disks (Not on Axis) worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/integrals/worksheet-integrals-volume-disks-not-on-axis.pdf" download
@@ -840,7 +840,7 @@
   <h3>Volume by Washers</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/calculus/integrals/worksheet-integrals-volume-washers.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="worksheet-integrals-volume-washers.pdf" data-action="open"
        aria-label="View Volume by Washers worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/integrals/worksheet-integrals-volume-washers.pdf" download
@@ -860,7 +860,7 @@
   <h3>Volume by Cross Sections</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/calculus/integrals/worksheet-integrals-volume-cross-sections.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="worksheet-integrals-volume-cross-sections.pdf" data-action="open"
        aria-label="View Volume by Cross Sections worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/integrals/worksheet-integrals-volume-cross-sections.pdf" download
@@ -883,7 +883,7 @@
   <h3>Volumes of Revolution — Disk Method — Set B</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/calculus/integrals/worksheet-integrals-volume-disks-b.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="worksheet-integrals-volume-disks-b.pdf" data-action="open"
        aria-label="View Volumes of Revolution — Disk Method — Set B worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/integrals/worksheet-integrals-volume-disks-b.pdf" download
@@ -903,7 +903,7 @@
   <h3>Volumes of Revolution — Washer Method — Set B</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/calculus/integrals/worksheet-integrals-volume-washers-b.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="worksheet-integrals-volume-washers-b.pdf" data-action="open"
        aria-label="View Volumes of Revolution — Washer Method — Set B worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/integrals/worksheet-integrals-volume-washers-b.pdf" download
@@ -923,7 +923,7 @@
   <h3>Volume — Cross Sections — Set B</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/calculus/integrals/worksheet-integrals-volume-cross-sections-b.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="worksheet-integrals-volume-cross-sections-b.pdf" data-action="open"
        aria-label="View Volume — Cross Sections — Set B worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/integrals/worksheet-integrals-volume-cross-sections-b.pdf" download
@@ -946,7 +946,7 @@
   <h3>Evaluating Differential Equations</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/calculus/integrals/worksheet-integrals-evaluating-differential-equations.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="worksheet-integrals-evaluating-differential-equations.pdf" data-action="open"
        aria-label="View Evaluating Differential Equations worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/integrals/worksheet-integrals-evaluating-differential-equations.pdf" download
@@ -966,7 +966,7 @@
   <h3>Separable Differential Equations</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/calculus/integrals/worksheet-integrals-separable-differential-equations.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="worksheet-integrals-separable-differential-equations.pdf" data-action="open"
        aria-label="View Separable Differential Equations worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/integrals/worksheet-integrals-separable-differential-equations.pdf" download
@@ -989,7 +989,7 @@
   <h3>Integration Practice</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/calculus/integrals/worksheet-integrals-integration-practice.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="worksheet-integrals-integration-practice.pdf" data-action="open"
        aria-label="View Integration Practice worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/integrals/worksheet-integrals-integration-practice.pdf" download
@@ -1012,7 +1012,7 @@
   <h3>Integrals Review</h3>
   <div class="ws-actions">
     <a class="ws-btn primary" href="/worksheets/calculus/integrals/worksheet-integrals-review.pdf"
-       onclick="openPdfModal(this.href, this.closest(\'.ws-card\').querySelector(\'h3\').textContent.trim()); return false;"
+       onclick="event.preventDefault(); openPdfModal(this.href, this.closest('.ws-card').querySelector('h3').textContent.trim());"
        data-worksheet="worksheet-integrals-review.pdf" data-action="open"
        aria-label="View Integrals Review worksheet PDF inline"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View PDF</a>
     <a class="ws-btn download" href="/worksheets/calculus/integrals/worksheet-integrals-review.pdf" download
@@ -1035,7 +1035,8 @@
       </div>
     </section>
 
-    <footer>
+    </main>
+<footer>
   <div class="container">
     <div class="foot-grid">
       <div class="foot foot-brand">
@@ -1050,14 +1051,15 @@
       </div>
       <div class="foot">
         <h4>Students</h4>
-        <a href="../../../../courses.html">All Courses</a>
+        <a href="/courses">Explore All Subjects</a>
         <a href="../../../../courses.html#algebra-card">Algebra</a>
         <a href="../../../../courses.html#statistics-card">Statistics</a>
-        <a href="../../../../courses.html">Calculus</a>
+        <a href="/courses">Calculus</a>
       </div>
       <div class="foot">
         <h4>Educators</h4>
         <a href="../../../../teach-it-like-you-stream-it.html">Teach It Like You Stream It</a>
+        <a href="../../../../teach-the-math.html">Teach the Math</a>
         <a href="../../../../teacher-resources.html">Teacher Resources</a>
         <a href="../../../../ap-calculus-frq-books.html">AP Calculus FRQ Books</a>
         <a href="../../../../speaking.html">Speaking</a>

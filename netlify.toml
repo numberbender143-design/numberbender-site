@@ -175,10 +175,69 @@
   status = 301
   force  = true
 
+# Blog pages
+[[redirects]]
+  from = "/blog.html"
+  to   = "/blog"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/blog-flipped-first-class.html"
+  to   = "/blog-flipped-first-class"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/blog-flipped-mistakes.html"
+  to   = "/blog-flipped-mistakes"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/blog-become-edutuber.html"
+  to   = "/blog-become-edutuber"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/blog-five-minute-rule.html"
+  to   = "/blog-five-minute-rule"
+  status = 301
+  force  = true
+
+# Teacher & educator pages
+[[redirects]]
+  from = "/for-teachers.html"
+  to   = "/for-teachers"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/teach-the-math.html"
+  to   = "/teach-the-math"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/courses-playlist-v1.html"
+  to   = "/courses-playlist-v1"
+  status = 301
+  force  = true
+
+# Worksheets hub
+[[redirects]]
+  from = "/math-worksheets.html"
+  to   = "/math-worksheets"
+  status = 301
+  force  = true
+
 # 404 catch-all (must be last)
+# Serve the custom 404 page (not the homepage) on unknown URLs, with a
+# real 404 status so search engines treat missing pages correctly.
 [[redirects]]
   from   = "/*"
-  to     = "/index.html"
+  to     = "/404.html"
   status = 404
 
 # --------------- Cache Headers ---------------

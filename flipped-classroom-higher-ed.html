@@ -25,6 +25,7 @@
 <meta property="og:url" content="https://numberbender.com/flipped-classroom-higher-ed" />
 <meta property="og:site_name" content="Numberbender" />
 <meta property="og:image" content="https://numberbender.com/images/dr-e-hero.jpg" />
+<meta name="twitter:card" content="summary_large_image">
 
 <!-- Favicon -->
 <link rel="icon" type="image/svg+xml" href="images/exports/numberbender-favicon.svg">
@@ -452,6 +453,7 @@
     margin-top: 36px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.08);
     text-align: center; color: #94a3b8; font-size: 0.85rem; line-height: 1.6;
   }
+  .foot-bottom a{ color: #94a3b8; text-decoration: underline; }
 
   /* RESPONSIVE */
   @media (max-width: 900px){
@@ -484,7 +486,7 @@
     .key-finding{ padding: 18px 20px; }
     .foot-grid{ grid-template-columns: 1fr; gap: 28px; }
   }
-</style>
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}.skip-link:focus{position:fixed;top:0;left:0;width:auto;height:auto;padding:8px 16px;background:#0F2B3D;color:#fff;z-index:9999;font-size:14px;text-decoration:none;border-radius:0 0 4px 0;}</style>
   <!-- Microsoft Clarity -->
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -508,6 +510,8 @@
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
 
 <!-- ========== NAVIGATION ========== -->
 <header class="nav">
@@ -518,40 +522,37 @@
     <button class="menu-toggle" aria-label="Toggle menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
     <nav class="nav-links" id="navlinks">
       <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">For Students <span class="caret" aria-hidden="true">▾</span></button>
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Learn <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
-          <a href="start-here.html">🎁 Free Starter Lesson</a>
-          <a href="find-your-course.html">🧭 Find My Course</a>
-          <a href="courses.html">📚 All Courses</a>
-          <a href="math-worksheets.html">📝 Free Worksheets</a>
-          <a href="for-filipino-students.html">🇵🇭 Para sa Filipino Students</a>
+          <a href="/start-here">🎁 Free Starter Lesson</a>
+          <a href="/find-your-course">🧭 Where Do I Start?</a>
+          <a href="/courses">📚 Explore Math Lessons</a>
+          <a href="/math-worksheets">📝 Free Worksheets</a>
+          <a href="/for-filipino-students">🇵🇭 Para sa Filipino Students</a>
         </div>
       </div>
       <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">For Educators <span class="caret" aria-hidden="true">▾</span></button>
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Teach <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
-          <a href="for-teachers.html">🏫 For Teachers Hub</a>
-          <a href="teach-it-like-you-stream-it.html">🎬 Teach It Like You Stream It</a>
-          <a href="teacher-resources.html">📦 Teacher Resources</a>
-          <a href="math-worksheets.html">📄 Printable Worksheets</a>
+          <a href="/for-teachers">🏫 For Teachers Hub</a>
+          <a href="/teach-the-math">🎓 Teach the Math</a>
+          <a href="/teach-it-like-you-stream-it">🎬 Teach It Like You Stream It</a>
+          <a href="/teacher-resources">📦 Teacher Resources</a>
+          <a href="/math-worksheets">📄 Printable Worksheets</a>
+          <a href="/courses">📚 Lesson &amp; Course Library</a>
         </div>
       </div>
       <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">About Dr. E <span class="caret" aria-hidden="true">▾</span></button>
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">About <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
-          <a href="about.html">👨‍🏫 About Dr. E</a>
-          <a href="speaking.html">🎤 Speaking</a>
-          <a href="press.html">📰 Press &amp; Media</a>
+          <a href="/about">👨‍🏫 About Dr. E</a>
+          <a href="/speaking">🎤 Speaking</a>
+          <a href="/press">📰 Press &amp; Media</a>
+          <a href="/blog">✍️ Blog</a>
+          <a href="/speaking-archive">📅 Past Engagements</a>
         </div>
       </div>
-      <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Blog <span class="caret" aria-hidden="true">▾</span></button>
-        <div class="dropdown-menu">
-          <a href="blog.html">✍️ Blog Posts</a>
-          <a href="speaking-archive.html">📅 Past Engagements</a>
-        </div>
-      </div>
-      <a href="contact.html" class="nav-cta">Contact</a>
+      <a href="/contact" class="nav-cta">Contact</a>
     </nav>
   </div>
 </header>
@@ -562,9 +563,9 @@
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href="/">Home</a>
       <span class="sep">›</span>
-      <a href="teacher-resources.html">For Educators</a>
+      <a href="/teacher-resources">For Educators</a>
       <span class="sep">›</span>
-      <a href="flipped-classroom-math.html">Flipped Classroom Math</a>
+      <a href="/flipped-classroom-math">Flipped Classroom Math</a>
       <span class="sep">›</span>
       <span aria-current="page">Higher Ed</span>
     </nav>
@@ -577,7 +578,7 @@
 </section>
 
 <!-- ========== ARTICLE ========== -->
-<main class="article">
+<main id="main-content" class="article">
   <div class="container-narrow">
 
     <!-- TOC -->
@@ -598,9 +599,9 @@
     <!-- §1 -->
     <section id="s1">
       <h2><span class="num">§1</span>From high school to college — what changed</h2>
-      <p>I started flipping my math classroom in 2012 at Barstow High School. For the first few years, everything I learned about the model came from a secondary setting — 30 teenagers in a room, bell schedules, mandatory attendance, parents who could push back if grades slipped. The research I co-authored through 2016 reflected that context. The <a href="flipped-classroom-research.html">2016 Springer RCT</a> was a high-school algebra study. The ICME paper was about AP-level high school students. My data was K–12 data.</p>
+      <p>I started flipping my math classroom in 2012 at Barstow High School. For the first few years, everything I learned about the model came from a secondary setting — 30 teenagers in a room, bell schedules, mandatory attendance, parents who could push back if grades slipped. The research I co-authored through 2016 reflected that context. The <a href="/flipped-classroom-research">2016 Springer RCT</a> was a high-school algebra study. The ICME paper was about AP-level high school students. My data was K–12 data.</p>
       <p>In 2018, I left Barstow High School and became a full-time math professor at Barstow Community College. And I brought the flipped model with me. What I discovered quickly was that the model didn't break at the college level — if anything, it became easier to implement. College students are more mature. They have more agency over their learning. The habits and systems I had spent years refining at the high school level transferred cleanly, and the friction was lower. Here's what I tell every K-12 teacher thinking about making the jump: if you can make the flipped classroom work in a high school, you will be a rockstar in college teaching. The challenge is highest when your students are youngest. Build the model there, and the rest becomes a natural evolution.</p>
-      <p>This page is about what happens when you take the flipped classroom from a high school hallway into a college classroom, online section, or hybrid course. What the research supports, what it doesn't yet, and what I'm collecting data on right now. It's the companion to the <a href="flipped-classroom-research.html">research spoke</a> and the <a href="flipped-classroom-math.html">pillar guide</a>, focused specifically on the higher-education context.</p>
+      <p>This page is about what happens when you take the flipped classroom from a high school hallway into a college classroom, online section, or hybrid course. What the research supports, what it doesn't yet, and what I'm collecting data on right now. It's the companion to the <a href="/flipped-classroom-research">research spoke</a> and the <a href="/flipped-classroom-math">pillar guide</a>, focused specifically on the higher-education context.</p>
     </section>
 
     <!-- §2 -->
@@ -668,7 +669,7 @@
     <!-- §5 -->
     <section id="s5">
       <h2><span class="num">§5</span>What the K–12 research does and doesn't transfer</h2>
-      <p>The <a href="flipped-classroom-research.html#s3">2016 Springer RCT</a> was conducted with high school algebra students. Before treating its findings as applicable to community college math, a researcher should ask: what's similar, what's different, and what moderates the effect?</p>
+      <p>The <a href="/flipped-classroom-research#s3">2016 Springer RCT</a> was conducted with high school algebra students. Before treating its findings as applicable to community college math, a researcher should ask: what's similar, what's different, and what moderates the effect?</p>
       <p><strong>What likely transfers:</strong> The core mechanism — pre-class video creates a floor of preparation that makes the in-class session more efficient — is not specific to age or institutional level. The rewatch-and-pause behavior has been observed in undergraduate and graduate settings by other researchers, not just mine. The shift in teacher role from deliverer to facilitator scales to any classroom that has contact time. And the attitude effects — students feeling more in control of their learning — are likely to be even stronger in a population that chose to be there.</p>
       <p><strong>What doesn't transfer cleanly:</strong> The accountability structures. High school students have parents, mandatory attendance, and counselors. Community college students have autonomy. If the pre-class video is not watched, there's no parent email, no detention, no counselor referral. The model has to create its own accountability — a warm-up problem at the start of the session that makes it obvious who came prepared, and an explicit norm that the session assumes preparation. Some students test this. How you respond in the first two weeks sets the culture for the rest of the semester.</p>
       <p><strong>What needs more research:</strong> The performance effect specifically. The 2016 RCT found a statistically significant performance gain in a high school algebra class. I believe that effect is present at the community college level, but believing is not finding. That's the gap the 2025–2026 study is designed to close.</p>
@@ -688,7 +689,7 @@
       </div>
 
       <p>Three questions I'm asking. First: does the performance effect from the K–12 RCT replicate in an adult community college population? Second: does the model hold up in fully online and hybrid formats, where the in-class session is replaced by a synchronous Zoom session or an asynchronous discussion structure? Third: does the pre-class video produce the same rewatch-and-recover behavior in college students that drove the effect in high schoolers?</p>
-      <p>The qualitative signal so far is consistent with the K–12 work — students who engage with the pre-class material arrive to the synchronous session more prepared, and the session does more targeted work as a result. But "qualitative signal" is not a result. The formal claim waits for the data, and the data waits for peer review. When the paper lands, it will be added to the references on the <a href="flipped-classroom-research.html">research spoke</a>.</p>
+      <p>The qualitative signal so far is consistent with the K–12 work — students who engage with the pre-class material arrive to the synchronous session more prepared, and the session does more targeted work as a result. But "qualitative signal" is not a result. The formal claim waits for the data, and the data waits for peer review. When the paper lands, it will be added to the references on the <a href="/flipped-classroom-research">research spoke</a>.</p>
 
       <div class="callout-teal">
         <span class="label">📋 Status: In progress</span>
@@ -702,7 +703,7 @@
       <p>RateMyProfessors is not a research instrument. Its samples are self-selected, its scale is not validated, and the students who leave reviews are not representative of all students. I want to be clear about that before saying anything drawn from it.</p>
       <p>With that caveat fully in place: the pattern in student comments about my courses — across institutions and course types — is consistent enough to be worth noting as a qualitative signal, not a finding. Students who engage with the pre-class video consistently describe the in-class or synchronous session as feeling different from their other courses. The phrases that recur: "he actually helps you during class instead of just lecturing," "I could pause and rewind the video when I got confused," "felt like I had a tutor, not just a teacher."</p>
       <p>What's notable is what students don't say. They don't describe the model as easier. They describe it as cleaner — the confusion has a place to go. The video is where the confusion forms. The session is where it gets resolved. Students who come from traditional lecture courses sometimes find the warm-up problem at the start of the session uncomfortable, because it makes visible whether they watched the video. That discomfort usually resolves by week three. The ones who stay through week three almost always finish the course.</p>
-      <p>I'm drawing on this qualitative signal here because it's honest — it reflects what students actually experience — and because it points toward what the 2025–2026 data will eventually quantify. But I am not citing student reviews as evidence that the model works. That's what the <a href="flipped-classroom-research.html">peer-reviewed papers</a> are for.</p>
+      <p>I'm drawing on this qualitative signal here because it's honest — it reflects what students actually experience — and because it points toward what the 2025–2026 data will eventually quantify. But I am not citing student reviews as evidence that the model works. That's what the <a href="/flipped-classroom-research">peer-reviewed papers</a> are for.</p>
     </section>
 
     <!-- §8 FAQ -->
@@ -761,8 +762,8 @@
     <h2>The model works at every level. The design has to match the student.</h2>
     <p>If you want the full practice guide — how to start, which unit to flip first, the video rules, the seven-day plan — the pillar is the place. If you want the peer-reviewed research base, the research spoke has it. If you want to talk about flipping your college course, the contact page is open.</p>
     <div class="cta-row">
-      <a href="flipped-classroom-math.html" class="btn btn-yellow btn-lg">Read the pillar guide →</a>
-      <a href="flipped-classroom-research.html" class="btn btn-outline btn-lg">See the research →</a>
+      <a href="/flipped-classroom-math" class="btn btn-yellow btn-lg">Read the pillar guide →</a>
+      <a href="/flipped-classroom-research" class="btn btn-outline btn-lg">See the research →</a>
     </div>
   </div>
 </section>
@@ -797,33 +798,34 @@
       </div>
       <div class="foot">
         <h4>Students</h4>
-        <a href="courses.html">All Courses</a>
-        <a href="courses.html#algebra-card">Algebra</a>
-        <a href="courses.html#statistics-card">Statistics</a>
-        <a href="courses.html">Calculus</a>
+        <a href="/courses">Explore All Subjects</a>
+        <a href="subjects/algebra/">Algebra</a>
+        <a href="subjects/statistics/">Statistics</a>
+        <a href="/courses">Calculus</a>
       </div>
       <div class="foot">
         <h4>Educators</h4>
-        <a href="teach-it-like-you-stream-it.html">Teach It Like You Stream It</a>
-        <a href="teacher-resources.html">Teacher Resources</a>
-        <a href="speaking.html">Workshops</a>
-        <a href="flipped-classroom-math.html">Flipped Learning</a>
-        <a href="flipped-classroom-research.html">Research</a>
+        <a href="/teach-it-like-you-stream-it">Teach It Like You Stream It</a>
+        <a href="/teach-the-math">Teach the Math</a>
+        <a href="/teacher-resources">Teacher Resources</a>
+        <a href="/speaking">Workshops</a>
+        <a href="/flipped-classroom-math">Flipped Learning</a>
+        <a href="/flipped-classroom-research">Research</a>
       </div>
       <div class="foot">
         <h4>Connect</h4>
-        <a href="about.html">About Dr. E</a>
-        <a href="speaking.html">Speaking</a>
-        <a href="speaking-archive.html">Speaking Archive</a>
-        <a href="press.html">Press &amp; Media</a>
-        <a href="contact.html">Contact</a>
+        <a href="/about">About Dr. E</a>
+        <a href="/speaking">Speaking</a>
+        <a href="/speaking-archive">Speaking Archive</a>
+        <a href="/press">Press &amp; Media</a>
+        <a href="/contact">Contact</a>
         <a href="https://www.youtube.com/@numberbender" target="_blank" rel="noopener">YouTube Channel</a>
-        <a href="privacy.html">Privacy Policy</a>
+        <a href="/privacy">Privacy Policy</a>
       </div>
     </div>
     <div class="foot-bottom">
-      © 2026 Numberbender · Founded by Dr. Peter Esperanza · Numberbender Inc. is a 501(c)(3) nonprofit organization · EIN: 86-2952520 · Made with care for learners and educators everywhere. · <a href="privacy.html" style="color:#94a3b8;">Privacy Policy</a>
-      <div style="margin-top:8px;font-size:0.78rem;color:#64748b;">
+      © 2026 Numberbender · Founded by Dr. Peter Esperanza · Numberbender Inc. is a 501(c)(3) nonprofit organization · EIN: 86-2952520 · Made with care for learners and educators everywhere. · <a href="/privacy" style="color:#94a3b8;">Privacy Policy</a>
+      <div style="margin-top:8px;font-size:0.78rem;color:#94a3b8;">
         <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener"><img src="https://licensebuttons.net/l/by/4.0/88x31.png" alt="CC BY 4.0" style="border:0;vertical-align:middle;margin-right:6px;"></a>
         Original content licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener" style="color:#94a3b8;">CC BY 4.0</a> &mdash; free to share and adapt with credit to Peter Esperanza / Numberbender.
       </div>
@@ -873,7 +875,7 @@ document.addEventListener('click', function(e){
 <!-- ── Numberbender Sticky Bar — Back to School June 2026 ── -->
 <div id="nb-sticky-bar">
   <p>🇵🇭 Philippine schools open in June! Get FREE bilingual math worksheets:</p>
-  <input type="email" id="nb-email-input" placeholder="your@email.com" autocomplete="email" />
+  <input type="email" id="nb-email-input" placeholder="your@email.com" autocomplete="email" aria-label="Email address" />
   <button class="nb-submit" onclick="nbSubmit()">Get Free Worksheets →</button>
   <button class="nb-close" onclick="nbDismiss()" aria-label="Close">✕</button>
 </div>

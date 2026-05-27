@@ -84,7 +84,7 @@
     text-decoration: none !important; }
   .btn:hover{ transform: translateY(-2px); box-shadow: var(--shadow); }
   .btn-primary{ background: var(--blue); color: white; }
-  .btn-cyan{ background: var(--cyan); color: white; }
+  .btn-cyan{ background: #0e7490; color: white; }
   .btn-yellow{ background: var(--yellow); color: var(--navy); }
   .btn-outline{ background: transparent; color: var(--navy); border: 2px solid var(--border); }
   .btn-outline:hover{ border-color: var(--blue); color: var(--blue); }
@@ -346,6 +346,7 @@
   .socials a[aria-label="Facebook"]:hover{ background: #1877f2; }
   .socials a[aria-label="LinkedIn"]:hover{ background: #0a66c2; }
   .foot-bottom{ border-top: 1px solid #1e293b; padding-top: 20px; text-align: center; font-size: 0.88rem; }
+  .foot-bottom a{ color: #94a3b8; text-decoration: underline; }
 
   @media (max-width: 900px){
     .topics-grid, .formats-grid{ grid-template-columns: 1fr; }
@@ -465,7 +466,7 @@
   }
   .foot-signup-form button:hover{ background: #0891b2; }
 
-</style>
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}.skip-link:focus{position:fixed;top:0;left:0;width:auto;height:auto;padding:8px 16px;background:#0F2B3D;color:#fff;z-index:9999;font-size:14px;text-decoration:none;border-radius:0 0 4px 0;}</style>
 
 <script type="application/ld+json">
 {
@@ -512,6 +513,8 @@
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
 
 <header class="nav">
   <div class="container nav-inner">
@@ -521,43 +524,41 @@
     <button class="menu-toggle" aria-label="Toggle menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
         <nav class="nav-links" id="navlinks">
       <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">For Students <span class="caret" aria-hidden="true">▾</span></button>
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Learn <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
-          <a href="start-here.html">🎁 Free Starter Lesson</a>
-          <a href="find-your-course.html">🧭 Find My Course</a>
-          <a href="courses.html">📚 All Courses</a>
-          <a href="math-worksheets.html">📝 Free Worksheets</a>
-          <a href="for-filipino-students.html">🇵🇭 Para sa Filipino Students</a>
+          <a href="/start-here">🎁 Free Starter Lesson</a>
+          <a href="/find-your-course">🧭 Where Do I Start?</a>
+          <a href="/courses">📚 Explore Math Lessons</a>
+          <a href="/math-worksheets">📝 Free Worksheets</a>
+          <a href="/for-filipino-students">🇵🇭 Para sa Filipino Students</a>
         </div>
       </div>
       <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">For Educators <span class="caret" aria-hidden="true">▾</span></button>
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Teach <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
-          <a href="for-teachers.html">🏫 For Teachers Hub</a>
-          <a href="teach-it-like-you-stream-it.html">🎬 Teach It Like You Stream It</a>
-          <a href="teacher-resources.html">📦 Teacher Resources</a>
-          <a href="math-worksheets.html">📄 Printable Worksheets</a>
+          <a href="/for-teachers">🏫 For Teachers Hub</a>
+          <a href="/teach-the-math">🎓 Teach the Math</a>
+          <a href="/teach-it-like-you-stream-it">🎬 Teach It Like You Stream It</a>
+          <a href="/teacher-resources">📦 Teacher Resources</a>
+          <a href="/math-worksheets">📄 Printable Worksheets</a>
+          <a href="/courses">📚 Lesson &amp; Course Library</a>
         </div>
       </div>
       <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">About Dr. E <span class="caret" aria-hidden="true">▾</span></button>
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">About <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
-          <a href="about.html">👨‍🏫 About Dr. E</a>
-          <a href="speaking.html">🎤 Speaking</a>
-          <a href="press.html">📰 Press &amp; Media</a>
+          <a href="/about">👨‍🏫 About Dr. E</a>
+          <a href="/speaking">🎤 Speaking</a>
+          <a href="/press">📰 Press &amp; Media</a>
+          <a href="/blog">✍️ Blog</a>
+          <a href="/speaking-archive">📅 Past Engagements</a>
         </div>
       </div>
-      <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Blog <span class="caret" aria-hidden="true">▾</span></button>
-        <div class="dropdown-menu">
-          <a href="blog.html">✍️ Blog Posts</a>
-          <a href="speaking-archive.html">📅 Past Engagements</a>
-        </div>
-      </div>
-      <a href="contact.html" class="nav-cta">Contact</a>
+      <a href="/contact" class="nav-cta">Contact</a>
     </nav>
   </div>
 </header>
+<main id="main-content">
 
 <section class="page-hero">
   <div class="container">
@@ -568,9 +569,9 @@
       flipped learning, AI in education, and student engagement — designed for real classrooms.
     </p>
     <div class="hero-ctas">
-      <a href="contact.html" class="btn btn-yellow btn-lg">Book Dr. E</a>
+      <a href="/contact" class="btn btn-yellow btn-lg">Book Dr. E</a>
       <a href="#sample-keynote" class="btn btn-cyan btn-lg">▶ Watch a Sample Keynote</a>
-      <a href="speaking-archive.html" class="btn btn-outline btn-lg">📚 Past Engagements</a>
+      <a href="/speaking-archive" class="btn btn-outline btn-lg">📚 Past Engagements</a>
     </div>
   </div>
 </section>
@@ -610,7 +611,7 @@
         course content but also establish a consistent, relatable presence in the online classroom.
       </p>
       <div class="keynote-cta">
-        <a href="contact.html" class="btn btn-yellow">Book a similar keynote at your event →</a>
+        <a href="/contact" class="btn btn-yellow">Book a similar keynote at your event →</a>
       </div>
     </div>
   </div>
@@ -695,7 +696,7 @@
           <dt>Outcome</dt>
           <dd>Participants walk away with a recorded sample lesson, a refined Zoom workflow, or a flipped lesson plan they can use immediately.</dd>
         </dl>
-        <a href="contact.html?topic=workshop" class="format-cta">Inquire about a workshop →</a>
+        <a href="/contact?topic=workshop" class="format-cta">Inquire about a workshop →</a>
       </div>
 
       <!-- KEYNOTE -->
@@ -711,7 +712,7 @@
           <dt>Outcome</dt>
           <dd>The room leaves energized, aligned around a clear idea (AI in education, flipped learning, online presence), and ready to act.</dd>
         </dl>
-        <a href="contact.html?topic=keynote" class="format-cta">Inquire about a keynote →</a>
+        <a href="/contact?topic=keynote" class="format-cta">Inquire about a keynote →</a>
       </div>
 
       <!-- ONGOING PD -->
@@ -727,7 +728,7 @@
           <dt>Outcome</dt>
           <dd>Faculty build a shared online-teaching toolkit, ship real lessons, and shift institutional culture around online and hybrid instruction.</dd>
         </dl>
-        <a href="contact.html?topic=pd" class="format-cta">Inquire about ongoing PD →</a>
+        <a href="/contact?topic=pd" class="format-cta">Inquire about ongoing PD →</a>
       </div>
 
     </div>
@@ -758,7 +759,7 @@
       <p>A glimpse into the past few months — keynotes, workshops, and faculty development across the U.S. and Southeast Asia.</p>
     </div>
     <div class="recent-grid">
-      <a href="speaking-2026-04-actla-51.html" class="rec-card">
+      <a href="/speaking-2026-04-actla-51" class="rec-card">
         <div class="rec-thumb t2"><span class="rec-tag">Webinar</span><picture><source srcset="images/ACTLA_Cover.webp" type="image/webp"><img src="images/ACTLA_Cover.png" alt="Tutor Like a Streamer at ACTLA 51"></picture></div>
         <div class="rec-body">
           <div class="rec-meta">April 15–17, 2026 · California (online)</div>
@@ -767,7 +768,7 @@
           <span class="rec-readmore">Read recap →</span>
         </div>
       </a>
-      <a href="speaking-2026-03-site-philadelphia.html" class="rec-card">
+      <a href="/speaking-2026-03-site-philadelphia" class="rec-card">
         <div class="rec-thumb"><span class="rec-tag">Plenary</span><picture><source srcset="images/SITE_Cover.webp" type="image/webp"><img src="images/SITE_Cover.png" alt="Teach It Like You Stream It at SITE 2026"></picture></div>
         <div class="rec-body">
           <div class="rec-meta">March 23–27, 2026 · Philadelphia, PA</div>
@@ -776,7 +777,7 @@
           <span class="rec-readmore">Read recap →</span>
         </div>
       </a>
-      <a href="speaking-2025-08-seameo-indonesia.html" class="rec-card">
+      <a href="/speaking-2025-08-seameo-indonesia" class="rec-card">
         <div class="rec-thumb t3"><span class="rec-tag">Workshop</span><picture><source srcset="images/SEAMEAO_Indonesia_blog.webp" type="image/webp"><img src="images/SEAMEAO_Indonesia_blog.png" alt="Differentiating Math Across Southeast Asia — SEAMEO QITEP"></picture></div>
         <div class="rec-body">
           <div class="rec-meta">Aug 14–16, 2025 · Yogyakarta, Indonesia</div>
@@ -787,7 +788,7 @@
       </a>
     </div>
     <div class="recent-cta-row">
-      <a href="speaking-archive.html" class="btn btn-outline btn-lg">📚 Browse the full archive →</a>
+      <a href="/speaking-archive" class="btn btn-outline btn-lg">📚 Browse the full archive →</a>
     </div>
   </div>
 </section>
@@ -798,12 +799,13 @@
     <h2>Ready to book Dr. E for your event?</h2>
     <p>Send a quick note with your event date, audience, and topic. Dr. E personally reviews every inquiry.</p>
     <div class="final-ctas">
-      <a href="contact.html" class="btn btn-yellow btn-lg">Send a Booking Inquiry</a>
-      <a href="teach-it-like-you-stream-it.html" class="btn btn-cyan btn-lg">Watch a Sample Session</a>
+      <a href="/contact" class="btn btn-yellow btn-lg">Send a Booking Inquiry</a>
+      <a href="/teach-it-like-you-stream-it" class="btn btn-cyan btn-lg">Watch a Sample Session</a>
     </div>
   </div>
 </section>
 
+</main>
 <footer>
   <div class="container">
     <div class="foot-grid">
@@ -834,33 +836,34 @@
 </div>
       <div class="foot">
         <h4>Students</h4>
-        <a href="courses.html">All Courses</a>
-        <a href="courses.html#algebra-card">Algebra</a>
-        <a href="courses.html#statistics-card">Statistics</a>
-        <a href="courses.html">Calculus</a>
+        <a href="/courses">Explore All Subjects</a>
+        <a href="subjects/algebra/">Algebra</a>
+        <a href="subjects/statistics/">Statistics</a>
+        <a href="/courses">Calculus</a>
       </div>
       <div class="foot">
         <h4>Educators</h4>
-        <a href="teach-it-like-you-stream-it.html">Teach It Like You Stream It</a>
-        <a href="teacher-resources.html">Teacher Resources</a>
-        <a href="speaking.html">Workshops</a>
-        <a href="speaking.html">AI in Education</a>
-        <a href="speaking.html">Flipped Learning</a>
+        <a href="/teach-it-like-you-stream-it">Teach It Like You Stream It</a>
+        <a href="/teach-the-math">Teach the Math</a>
+        <a href="/teacher-resources">Teacher Resources</a>
+        <a href="/speaking">Workshops</a>
+        <a href="/speaking">AI in Education</a>
+        <a href="/speaking">Flipped Learning</a>
       </div>
       <div class="foot">
         <h4>Connect</h4>
-        <a href="about.html">About Dr. E</a>
-        <a href="speaking.html">Speaking</a>
-        <a href="speaking-archive.html">Speaking Archive</a>
-        <a href="press.html">Press &amp; Media</a>
-        <a href="contact.html">Contact</a>
+        <a href="/about">About Dr. E</a>
+        <a href="/speaking">Speaking</a>
+        <a href="/speaking-archive">Speaking Archive</a>
+        <a href="/press">Press &amp; Media</a>
+        <a href="/contact">Contact</a>
         <a href="https://www.youtube.com/@numberbender" target="_blank" rel="noopener">YouTube Channel</a>
-        <a href="privacy.html">Privacy Policy</a>
+        <a href="/privacy">Privacy Policy</a>
       </div>
     </div>
     <div class="foot-bottom">
-      © 2026 Numberbender · Founded by Dr. Peter Esperanza · Numberbender Inc. is a 501(c)(3) nonprofit organization · EIN: 86-2952520 · Made with care for learners and educators everywhere. · <a href="privacy.html" style="color:#94a3b8;">Privacy Policy</a>
-      <div style="margin-top:8px;font-size:0.78rem;color:#64748b;">
+      © 2026 Numberbender · Founded by Dr. Peter Esperanza · Numberbender Inc. is a 501(c)(3) nonprofit organization · EIN: 86-2952520 · Made with care for learners and educators everywhere. · <a href="/privacy" style="color:#94a3b8;">Privacy Policy</a>
+      <div style="margin-top:8px;font-size:0.78rem;color:#94a3b8;">
         <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener"><img src="https://licensebuttons.net/l/by/4.0/88x31.png" alt="CC BY 4.0" style="border:0;vertical-align:middle;margin-right:6px;"></a>
         Original content licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener" style="color:#94a3b8;">CC BY 4.0</a> &mdash; free to share and adapt with credit to Peter Esperanza / Numberbender.
       </div>
@@ -916,7 +919,7 @@
 <!-- ── Numberbender Sticky Bar — Back to School June 2026 ── -->
 <div id="nb-sticky-bar">
   <p>🇵🇭 Philippine schools open in June! Get FREE bilingual math worksheets:</p>
-  <input type="email" id="nb-email-input" placeholder="your@email.com" autocomplete="email" />
+  <input type="email" id="nb-email-input" placeholder="your@email.com" autocomplete="email" aria-label="Email address" />
   <button class="nb-submit" onclick="nbSubmit()">Get Free Worksheets →</button>
   <button class="nb-close" onclick="nbDismiss()" aria-label="Close">✕</button>
 </div>

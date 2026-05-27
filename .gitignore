@@ -20,3 +20,30 @@
 
 # ZIP bundles (hosted on Google Drive, not Netlify)
 bundles/*.zip
+
+# ------------------------------------------------------------
+# Internal planning docs & working data — must NOT be deployed
+# publicly (publish root = repo root, so anything committed is
+# reachable at numberbender.com/<filename>).
+# ------------------------------------------------------------
+*.md
+*.docx
+*.csv
+*.command
+*.sh
+
+# Large internal data dump (the SITE itself only fetches
+# /worksheet-index.json at runtime — that file is kept.)
+yt_inventory.json
+
+# Archive folder — holding pen for non-deployment files (docs, data,
+# scripts, spreadsheets, old reports). Never deploy this to Netlify.
+_archive/
+
+# Editor / build junk
+__pycache__/
+.~lock.*
+
+# Internal creative/brand assets — not part of the deployed site
+BLOG_VIDEO_POST/
+School_logo/
