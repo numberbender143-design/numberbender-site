@@ -116,20 +116,20 @@ h1{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:900;line-height:1.15;margin-bo
 .lesson-badge.fil{background:var(--amber-light);border-color:var(--amber-mid);color:var(--amber);}
 .lesson-badge.drill{background:#f1f5f9;border-color:#cbd5e1;color:#64748b;font-size:0.65rem;}
 
-/* ── VIDEO MODAL ── */
-.modal-overlay{display:none;position:fixed;inset:0;z-index:200;background:rgba(0,0,0,0.72);align-items:center;justify-content:center;padding:16px;}
+/* ── VIDEO MODAL (vertical/portrait layout for test-prep long-form videos) ── */
+.modal-overlay{display:none;position:fixed;inset:0;z-index:200;background:rgba(0,0,0,0.72);align-items:center;justify-content:center;padding:12px;}
 .modal-overlay.open{display:flex;}
-.modal-card{background:white;border-radius:20px;width:min(760px,100%);max-height:90vh;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,0.35);display:flex;flex-direction:column;}
-.modal-top{display:flex;align-items:flex-start;gap:12px;padding:18px 20px 14px;}
+.modal-card{background:white;border-radius:20px;width:min(420px,100%);max-height:94vh;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,0.35);display:flex;flex-direction:column;}
+.modal-top{display:flex;align-items:flex-start;gap:10px;padding:14px 16px 10px;}
 .modal-lang-badge{font-size:0.7rem;font-weight:700;padding:3px 10px;border-radius:999px;flex-shrink:0;margin-top:2px;}
 .modal-lang-badge.en{background:var(--blue-light);color:var(--blue);border:1px solid var(--blue-mid);}
 .modal-lang-badge.fil{background:var(--amber-light);color:var(--amber);border:1px solid var(--amber-mid);}
-.modal-lesson-title{font-size:1.05rem;font-weight:700;color:var(--navy);line-height:1.3;flex:1;}
+.modal-lesson-title{font-size:0.95rem;font-weight:700;color:var(--navy);line-height:1.3;flex:1;}
 .modal-close{background:var(--bg);border:none;border-radius:8px;width:32px;height:32px;font-size:1.1rem;cursor:pointer;color:var(--muted);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .15s;}
 .modal-close:hover{background:var(--border);}
 .modal-video-wrap{position:relative;width:100%;padding-top:56.25%;background:#000;flex-shrink:0;}
 .modal-video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:none;}
-.modal-actions{padding:16px 20px;display:flex;gap:10px;align-items:center;}
+.modal-actions{padding:12px 16px;display:flex;gap:10px;align-items:center;}
 .btn-yt{display:inline-flex;align-items:center;gap:8px;background:#FF0000;color:white;font-weight:700;font-size:0.85rem;padding:9px 18px;border-radius:10px;text-decoration:none;transition:opacity .15s;}
 .btn-yt:hover{opacity:.9;color:white;text-decoration:none;}
 .modal-exam-note{font-size:0.75rem;color:var(--muted);margin-left:auto;}
