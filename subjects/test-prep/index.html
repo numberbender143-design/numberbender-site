@@ -223,6 +223,11 @@ h1{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:900;line-height:1.15;margin-bo
   .hero-content{gap:14px;}
   .hero-icon{width:60px;height:60px;}
 }
+/* ── MOBILE FULL-VIEWPORT MODAL (iOS fallback — fills screen without fullscreen API) ── */
+@media(max-width:600px){
+  .modal-overlay{padding:0;}
+  .modal-card{width:100%;max-height:100dvh;border-radius:0;}
+}
 .skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}.skip-link:focus{position:fixed;top:0;left:0;width:auto;height:auto;padding:8px 16px;background:#0F2B3D;color:#fff;z-index:9999;font-size:14px;text-decoration:none;border-radius:0 0 4px 0;}</style>
 <script type="application/ld+json">
 {
@@ -1160,9 +1165,21 @@ function openModal(videoId, title, lang) {
   ytLink.href = 'https://www.youtube.com/watch?v=' + videoId;
   modal.classList.add('open');
   document.body.style.overflow = 'hidden';
+  // Request fullscreen (Android & desktop) — silently ignored on iOS Safari
+  if (modal.requestFullscreen) {
+    modal.requestFullscreen().catch(function(){});
+  } else if (modal.webkitRequestFullscreen) {
+    modal.webkitRequestFullscreen();
+  }
 }
 
 function closeModal() {
+  if (!modal.classList.contains('open')) return; // guard against double-call
+  // Exit fullscreen if we're in it
+  if (document.fullscreenElement || document.webkitFullscreenElement) {
+    if (document.exitFullscreen) document.exitFullscreen().catch(function(){});
+    else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+  }
   modal.classList.remove('open');
   iframe.src = '';
   document.body.style.overflow = '';
@@ -1174,6 +1191,13 @@ modal.addEventListener('click', function(e) {
 });
 document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape') closeModal();
+});
+// Close modal if user exits fullscreen via browser UI or device back button
+document.addEventListener('fullscreenchange', function() {
+  if (!document.fullscreenElement) closeModal();
+});
+document.addEventListener('webkitfullscreenchange', function() {
+  if (!document.webkitFullscreenElement) closeModal();
 });
 
 // ── QUESTION BANK ──
