@@ -271,6 +271,16 @@
   for = "/*.pdf"
   [headers.values]
     Cache-Control = "public, max-age=2592000"
+    # Tell Google not to index PDFs directly — the worksheet HTML pages
+    # are the canonical versions. Prevents "duplicate without canonical" in GSC.
+    X-Robots-Tag = "noindex, nofollow"
+
+# Worksheet PDFs served from /worksheets/ subdirectory
+[[headers]]
+  for = "/worksheets/*.pdf"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+    X-Robots-Tag = "noindex, nofollow"
 
 # ZIP bundles: force download instead of opening in browser
 [[headers]]
