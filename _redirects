@@ -50,11 +50,19 @@
 /worksheets/algebra/_archive        /subjects/algebra/          301
 /worksheets/algebra/_archive/       /subjects/algebra/          301
 
-# Old Wix course catalog URLs (/subjects/view/ is NOT a real v2 directory — safe to wildcard)
+# Old Wix course catalog URLs — with and without spaces/encoded characters
 /subjects/view/*                /courses                        301
 
 # Malformed URL — Google discovered this from an old Wix link with missing # separator
 /teach-it-like-you-stream-it.htmlTopics  /teach-it-like-you-stream-it  301
+
+# Old www + http versions — redirect to canonical https non-www
+# (Primary domain should also be set in Netlify dashboard for full coverage)
+http://www.numberbender.com/*   https://numberbender.com/:splat  301!
+https://www.numberbender.com/*  https://numberbender.com/:splat  301!
+
+# Old Wix lesson URLs — redirect to courses hub
+/lessons/view/*                 /courses                        301
 
 # Hub canonical = /courses. The v2 hub content now lives at courses.html, served
 # at /courses (netlify.toml: /courses.html -> /courses). The old courses-v2.html

@@ -47,3 +47,6 @@ __pycache__/
 # Internal creative/brand assets — not part of the deployed site
 BLOG_VIDEO_POST/
 School_logo/
+
+# v3.0 development folder — not ready for deployment
+numberbender v3.0/

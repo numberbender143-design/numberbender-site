@@ -1,7 +1,50 @@
 User-agent: *
 Allow: /
 
-# Keep internal/utility (thank-you / confirmation) pages out of search index
+# ── Redirect pages: block .html versions so Google doesn't waste crawl budget
+# on redirect chains. The canonical clean-URL versions are fully crawlable.
+Disallow: /about.html
+Disallow: /courses.html
+Disallow: /contact.html
+Disallow: /speaking.html
+Disallow: /speaking-archive.html
+Disallow: /teacher-resources.html
+Disallow: /teach-it-like-you-stream-it.html
+Disallow: /start-here.html
+Disallow: /find-your-course.html
+Disallow: /flipped-classroom-math.html
+Disallow: /flipped-classroom-research.html
+Disallow: /flipped-classroom-videos.html
+Disallow: /flipped-classroom-books.html
+Disallow: /flipped-classroom-distance-learning.html
+Disallow: /flipped-classroom-higher-ed.html
+Disallow: /flipped-classroom-mistakes.html
+Disallow: /flipped-classroom-quickstart.html
+Disallow: /ap-calculus-frq-books.html
+Disallow: /privacy.html
+Disallow: /flipped-classroom-ap-statistics.html
+Disallow: /for-filipino-students.html
+Disallow: /press.html
+Disallow: /blog.html
+Disallow: /blog-flipped-first-class.html
+Disallow: /blog-flipped-mistakes.html
+Disallow: /blog-become-edutuber.html
+Disallow: /blog-five-minute-rule.html
+Disallow: /for-teachers.html
+Disallow: /teach-the-math.html
+Disallow: /math-worksheets.html
+Disallow: /index.html
+Disallow: /speaking-2025-06-otc.html
+Disallow: /speaking-2025-07-luisiana.html
+Disallow: /speaking-2025-08-seameo-indonesia.html
+Disallow: /speaking-2026-03-site-philadelphia.html
+Disallow: /speaking-2026-04-actla-51.html
+
+# ── Block malformed/template URLs from being indexed
+Disallow: /courses?s=
+Disallow: /courses-playlist-v1.html
+
+# ── Keep internal/utility (thank-you / confirmation) pages out of index
 Disallow: /thank-you.html
 Disallow: /bundle-thanks.html
 Disallow: /contact-thanks.html
