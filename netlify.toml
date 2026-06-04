@@ -275,9 +275,9 @@
     # are the canonical versions. Prevents "duplicate without canonical" in GSC.
     X-Robots-Tag = "noindex, nofollow"
 
-# Worksheet PDFs served from /worksheets/ subdirectory
+# Worksheet PDFs served from /worksheets/ and all subdirectories (algebra, calculus, precalculus, etc.)
 [[headers]]
-  for = "/worksheets/*.pdf"
+  for = "/worksheets/**"
   [headers.values]
     Cache-Control = "public, max-age=2592000"
     X-Robots-Tag = "noindex, nofollow"

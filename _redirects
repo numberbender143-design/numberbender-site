@@ -81,7 +81,8 @@ https://www.numberbender.com/*  https://numberbender.com/:splat  301!
 /uploads/*                      /                               301
 /attachments/*                  /                               301
 
-# Old user/profile URLs
+# Old user/profile URLs (both /user/ singular and /users/ plural — Wix used both)
+/user/*                         /about                          301
 /users/*                        /about                          301
 /profile/*                      /about                          301
 
