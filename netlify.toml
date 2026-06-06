@@ -359,6 +359,76 @@
   status = 301
   force  = true
 
+# ── Old /worksheets/[subject]/ URLs (previous site structure) ──
+[[redirects]]
+  from = "/worksheets/algebra/"
+  to   = "/subjects/algebra/"
+  status = 301
+
+[[redirects]]
+  from = "/worksheets/calculus/"
+  to   = "/subjects/calculus/"
+  status = 301
+
+[[redirects]]
+  from = "/worksheets/precalculus/"
+  to   = "/subjects/precalculus/"
+  status = 301
+
+[[redirects]]
+  from = "/worksheets/statistics/"
+  to   = "/subjects/statistics/"
+  status = 301
+
+[[redirects]]
+  from = "/worksheets/trigonometry/"
+  to   = "/subjects/trigonometry/"
+  status = 301
+
+[[redirects]]
+  from = "/worksheets/geometry/"
+  to   = "/subjects/geometry/"
+  status = 301
+
+[[redirects]]
+  from = "/worksheets/linear-algebra/"
+  to   = "/subjects/linear-algebra/"
+  status = 301
+
+[[redirects]]
+  from = "/worksheets/discrete-math/"
+  to   = "/subjects/discrete-math/"
+  status = 301
+
+[[redirects]]
+  from = "/worksheets/pre-algebra/"
+  to   = "/subjects/pre-algebra/"
+  status = 301
+
+# Catch-all for any other old /worksheets/* paths
+[[redirects]]
+  from = "/worksheets/*"
+  to   = "/math-worksheets"
+  status = 301
+
+# ── Malformed concatenated URL (missing # before anchor) ──
+[[redirects]]
+  from = "/teach-it-like-you-stream-it.htmlTopics"
+  to   = "/teach-it-like-you-stream-it"
+  status = 301
+
+# ── Old v2 subject/view/* URLs ──
+[[redirects]]
+  from = "/subjects/view/*"
+  to   = "/math-worksheets"
+  status = 301
+
+# ── Old v1 lesson URLs (www.numberbender.com/lessons/view/*) ──
+[[redirects]]
+  from = "/lessons/view/*"
+  to   = "/courses"
+  status = 301
+
 # 404 catch-all (must be last)
 # Serve the custom 404 page (not the homepage) on unknown URLs, with a
 # real 404 status so search engines treat missing pages correctly.
