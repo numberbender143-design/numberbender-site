@@ -429,6 +429,12 @@
   to   = "/courses"
   status = 301
 
+# ── Old v1 uploaded PDF attachments ──
+[[redirects]]
+  from = "/uploads/attachments/*"
+  to   = "/math-worksheets"
+  status = 301
+
 # 404 catch-all (must be last)
 # Serve the custom 404 page (not the homepage) on unknown URLs, with a
 # real 404 status so search engines treat missing pages correctly.
