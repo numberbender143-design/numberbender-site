@@ -1,0 +1,39 @@
+{
+  "id": "mathteach-ratio_simplify-001",
+  "cid": "MATHTEACH",
+  "topic": "Fractions and Proportional Reasoning",
+  "subtopic": "Writing and simplifying ratios",
+  "difficulty": 1,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Write the ratio {full_a} to {full_b} in simplest form.",
+  "params": {
+    "n": {
+      "type": "int",
+      "min": 1,
+      "max": 8
+    },
+    "d": {
+      "type": "int",
+      "min": 2,
+      "max": 9
+    },
+    "k": {
+      "type": "int",
+      "min": 2,
+      "max": 5
+    }
+  },
+  "answer_expr": "ratio_simplify",
+  "steps": [
+    "Write as a ratio: {full_a}:{full_b}.",
+    "Find the GCF of {full_a} and {full_b}: GCF = {k}.",
+    "Divide both parts by {k}: {answer_ratio_simplify}."
+  ],
+  "tags": [
+    "pre-algebra",
+    "ratio",
+    "simplify",
+    "GCF"
+  ],
+  "source": "adapted-from:ratio-001.json"
+}

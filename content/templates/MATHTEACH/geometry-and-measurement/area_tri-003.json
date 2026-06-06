@@ -1,0 +1,34 @@
+{
+  "id": "mathteach-area_tri-003",
+  "cid": "MATHTEACH",
+  "topic": "Geometry and Measurement",
+  "subtopic": "Area of a triangle",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "A triangular sail has a base of {b} ft and a height of {h} ft. What is the area of the sail?",
+  "params": {
+    "b": {
+      "type": "int",
+      "min": 6,
+      "max": 20
+    },
+    "h": {
+      "type": "int",
+      "min": 4,
+      "max": 16
+    }
+  },
+  "answer_expr": "area_tri",
+  "steps": [
+    "A = (1/2) x base x height = (1/2) x {b} x {h}.",
+    "A = {bh}/2 = {answer_area_tri} ft^2."
+  ],
+  "tags": [
+    "pre-algebra",
+    "geometry",
+    "area",
+    "triangle",
+    "word-problem"
+  ],
+  "source": "adapted-from:area-tri-003.json"
+}

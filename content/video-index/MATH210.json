@@ -1,0 +1,416 @@
+{
+  "cid": "MATH 210",
+  "course": "Calculus I",
+  "topics": [
+    {
+      "slug": "limits",
+      "title": "Limits",
+      "desc": "Evaluating limits by substitution, factoring, one-sided limits, and determining continuity.",
+      "videos": [
+        {
+          "id": "1vZTMS8xHAs",
+          "title": "Introduction to Limits",
+          "url": "https://www.youtube.com/watch?v=1vZTMS8xHAs",
+          "dur": "11m 14s",
+          "views": 24646,
+          "fil": "j7Fs4eTjunA"
+        },
+        {
+          "id": "d-Ze9yP2Iwk",
+          "title": "Calculus - Finding the Limit of a Function Given a Graph",
+          "url": "https://www.youtube.com/watch?v=d-Ze9yP2Iwk",
+          "dur": "12m 34s",
+          "views": 4710,
+          "fil": "BVu39lH6a6g"
+        },
+        {
+          "id": "zEgMBKtxDaE",
+          "title": "CALCULUS: Different Techniques on Evaluating Limits",
+          "url": "https://www.youtube.com/watch?v=zEgMBKtxDaE",
+          "dur": "10m 7s",
+          "views": 13482,
+          "fil": "zEgMBKtxDaE"
+        },
+        {
+          "id": "FVmjI7wi_Dw",
+          "title": "Evaluating Limits — Multiple Techniques",
+          "url": "https://www.youtube.com/watch?v=FVmjI7wi_Dw",
+          "dur": "48m 17s",
+          "views": 1091,
+          "fil": "0sYj5PFIPFY"
+        },
+        {
+          "id": "LBewgSAfvsI",
+          "title": "CAL One-sided Limits",
+          "url": "https://www.youtube.com/watch?v=LBewgSAfvsI",
+          "dur": "10m 12s",
+          "views": 4665,
+          "fil": "tXxQpGFOdiI"
+        },
+        {
+          "id": "V6ZCqn4rLuc",
+          "title": "CALCULUS  Limits at Infinity HA and VA",
+          "url": "https://www.youtube.com/watch?v=V6ZCqn4rLuc",
+          "dur": "9m 40s",
+          "views": 247,
+          "fil": "bw4vc3BU_-Q"
+        },
+        {
+          "id": "JdC5S5N6Fwo",
+          "title": "Limits at Infinity",
+          "url": "https://www.youtube.com/watch?v=JdC5S5N6Fwo",
+          "dur": "5m 16s",
+          "views": 3888,
+          "fil": "bw4vc3BU_-Q"
+        },
+        {
+          "id": "jmNzLMeMQcs",
+          "title": "How to Use L'Hopital's Rule for Indeterminate Limits",
+          "url": "https://www.youtube.com/watch?v=jmNzLMeMQcs",
+          "dur": "48s",
+          "views": 658
+        }
+      ]
+    },
+    {
+      "slug": "derivatives-fundamentals",
+      "title": "Derivatives — Fundamentals",
+      "desc": "Definition of the derivative, power rule, sum and difference rules, and evaluating derivatives at a point.",
+      "videos": [
+        {
+          "id": "qHpoiHnqHfc",
+          "title": "Calculus: Definition of Derivatives",
+          "url": "https://www.youtube.com/watch?v=qHpoiHnqHfc",
+          "dur": "7m 56s",
+          "views": 11231,
+          "fil": "d-wg-Ft1MMw"
+        },
+        {
+          "id": "Sq40TTKQJhE",
+          "title": "Calculus - Finding the Derivative of a Function Using Power and Constant Rules",
+          "url": "https://www.youtube.com/watch?v=Sq40TTKQJhE",
+          "dur": "8m 31s",
+          "views": 5150,
+          "fil": "146TO6lLJ9Q"
+        },
+        {
+          "id": "wut95XJZWjQ",
+          "title": "FINDING THE DERIVATIVE OF A FUNCTION USING THE PRODUCT RULE (BASIC)",
+          "url": "https://www.youtube.com/watch?v=wut95XJZWjQ",
+          "dur": "4m 42s",
+          "views": 1642,
+          "fil": "vVUMeCDA__g"
+        },
+        {
+          "id": "9I3woMLEg4U",
+          "title": "Mastering the Quotient Rule in Calculus",
+          "url": "https://www.youtube.com/watch?v=9I3woMLEg4U",
+          "dur": "6m 34s",
+          "views": 2157,
+          "fil": "hIJyt1qpEG4"
+        },
+        {
+          "id": "T_3aZFs2xZE",
+          "title": "Quotient Rule",
+          "url": "https://www.youtube.com/watch?v=T_3aZFs2xZE",
+          "dur": "10m 57s",
+          "views": 402,
+          "fil": "hIJyt1qpEG4"
+        },
+        {
+          "id": "9y6ym_2Wvrk",
+          "title": "Calculus - Chain Rule",
+          "url": "https://www.youtube.com/watch?v=9y6ym_2Wvrk",
+          "dur": "9m 19s",
+          "views": 1330,
+          "fil": "bU-uZ6cEFVM"
+        },
+        {
+          "id": "IZ2J-5zgOII",
+          "title": "Calculus -  Evaluating Derivatives Given the Function in Table Form",
+          "url": "https://www.youtube.com/watch?v=IZ2J-5zgOII",
+          "dur": "8m 58s",
+          "views": 495,
+          "fil": "xNbUWmymSk4"
+        }
+      ]
+    },
+    {
+      "slug": "derivatives-rules",
+      "title": "Derivatives — Rules",
+      "desc": "Product rule, quotient rule, chain rule, and derivatives of trig, exponential, and logarithmic functions.",
+      "videos": [
+        {
+          "id": "Gdagw9cEIfw",
+          "title": "Calculus - Differentiating Trigonometric functions",
+          "url": "https://www.youtube.com/watch?v=Gdagw9cEIfw",
+          "dur": "10m 51s",
+          "views": 1665,
+          "fil": "yowCXBcH-HA"
+        },
+        {
+          "id": "5igdbse4zpY",
+          "title": "Calculus -  Finding the Derivatives of Exponential Functions",
+          "url": "https://www.youtube.com/watch?v=5igdbse4zpY",
+          "dur": "9m 26s",
+          "views": 4478,
+          "fil": "jCG_vOOTe_0"
+        },
+        {
+          "id": "97anKlvekgM",
+          "title": "Calculus - Derivative of Ln Functions",
+          "url": "https://www.youtube.com/watch?v=97anKlvekgM",
+          "dur": "12m 39s",
+          "views": 10364,
+          "fil": "hVu67HOxONk"
+        },
+        {
+          "id": "71zSmpmglUM",
+          "title": "Calculus -  Finding the Derivative of Inverse Trigonometric  Function",
+          "url": "https://www.youtube.com/watch?v=71zSmpmglUM",
+          "dur": "5m 29s",
+          "views": 1906,
+          "fil": "glEBX8DZBUQ"
+        },
+        {
+          "id": "ph9fVthL22w",
+          "title": "COMPUTING FOR THE DERIVATIVES OF TRANSCENDENTAL FUNCTIONS",
+          "url": "https://www.youtube.com/watch?v=ph9fVthL22w",
+          "dur": "9m 46s",
+          "views": 25,
+          "fil": "QRY4HIjnqgY"
+        },
+        {
+          "id": "9NiEN1TIcaE",
+          "title": "Using Implicit Differentiation",
+          "url": "https://www.youtube.com/watch?v=9NiEN1TIcaE",
+          "dur": "13m 44s",
+          "views": 3479,
+          "fil": "RtIvHYte93c"
+        },
+        {
+          "id": "OWmjfuTPBQE",
+          "title": "Implicit Differentiation — Trig Functions & 2nd Derivative",
+          "url": "https://www.youtube.com/watch?v=OWmjfuTPBQE",
+          "dur": "20m 47s",
+          "views": 8257,
+          "fil": "Xa04Wb_7PBI"
+        },
+        {
+          "id": "W-9WzZEZYnc",
+          "title": "Higher-Order Derivatives",
+          "url": "https://www.youtube.com/watch?v=W-9WzZEZYnc",
+          "dur": "12m 55s",
+          "views": 1756,
+          "fil": "0gFrINGh4IY"
+        }
+      ]
+    },
+    {
+      "slug": "applications-of-derivatives",
+      "title": "Applications of Derivatives",
+      "desc": "Critical points, increasing/decreasing intervals, local extrema, related rates, and optimization.",
+      "videos": [
+        {
+          "id": "xN52Wf5AaCc",
+          "title": "How to Write The Equation of a Tangent Line - Application of Derivatives",
+          "url": "https://www.youtube.com/watch?v=xN52Wf5AaCc",
+          "dur": "9m 3s",
+          "views": 623,
+          "fil": "a6tXt1VlfyE"
+        },
+        {
+          "id": "Xc2qlgYfM4I",
+          "title": "Calculus -  Related Rates Problem on Circle and Balloons",
+          "url": "https://www.youtube.com/watch?v=Xc2qlgYfM4I",
+          "dur": "15m 58s",
+          "views": 1828,
+          "fil": "KIKn_paRFV4"
+        },
+        {
+          "id": "4rHR3WNtGB0",
+          "title": "Calculus -  Related Rates Problem Ladder and Cone Problem",
+          "url": "https://www.youtube.com/watch?v=4rHR3WNtGB0",
+          "dur": "16m 27s",
+          "views": 1376,
+          "fil": "ZajqpFJn7Q8"
+        },
+        {
+          "id": "mUJZREI5yXc",
+          "title": "Calculus -  Finding the Critical Numbers Using Derivatives",
+          "url": "https://www.youtube.com/watch?v=mUJZREI5yXc",
+          "dur": "7m 48s",
+          "views": 1235,
+          "fil": "ecX9GlJHwbw"
+        },
+        {
+          "id": "65zTpPwzZHY",
+          "title": "Lesson on Using the Extreme Value Theorem EVT",
+          "url": "https://www.youtube.com/watch?v=65zTpPwzZHY",
+          "dur": "4m 46s",
+          "views": 28110,
+          "fil": "l7WwAFpMQm0"
+        },
+        {
+          "id": "rSGwwf9voL8",
+          "title": "Calculus - Using  The Mean Value Theorem",
+          "url": "https://www.youtube.com/watch?v=rSGwwf9voL8",
+          "dur": "8m 28s",
+          "views": 1170,
+          "fil": "fcovR_9sa18"
+        },
+        {
+          "id": "1DKKUoFUDyk",
+          "title": "First Derivative Test — Local Extrema",
+          "url": "https://www.youtube.com/watch?v=1DKKUoFUDyk",
+          "dur": "12m 39s",
+          "views": 3420,
+          "fil": "S9jf9kEMMck"
+        },
+        {
+          "id": "cUPN9j-p04Y",
+          "title": "Second Derivative Test — Concavity & Inflection",
+          "url": "https://www.youtube.com/watch?v=cUPN9j-p04Y",
+          "dur": "7m 57s",
+          "views": 2010,
+          "fil": "dxmRbbc1etI"
+        },
+        {
+          "id": "WGEiXm9Qofk",
+          "title": "Analyzing f(x) Using the Graph of f'(x)",
+          "url": "https://www.youtube.com/watch?v=WGEiXm9Qofk",
+          "dur": "9m 40s",
+          "views": 13027,
+          "fil": "7r871U0jaaM"
+        },
+        {
+          "id": "U-jUWoebKZc",
+          "title": "Optimization Problems",
+          "url": "https://www.youtube.com/watch?v=U-jUWoebKZc",
+          "dur": "15m 6s",
+          "views": 8668,
+          "fil": "-kzvsog_7O8"
+        },
+        {
+          "id": "VM9LBPnnan8",
+          "title": "Velocity, Acceleration & Sign Chart",
+          "url": "https://www.youtube.com/watch?v=VM9LBPnnan8",
+          "dur": "6m 0s",
+          "views": 2010,
+          "fil": "IIbl0b_YCO0"
+        }
+      ]
+    },
+    {
+      "slug": "integrals",
+      "title": "Integrals",
+      "desc": "Antiderivatives, indefinite integrals, power rule for integration, definite integrals, and the Fundamental Theorem of Calculus.",
+      "videos": [
+        {
+          "id": "dzXQYjDvFfM",
+          "title": "Calculus - Solving  Antiderivatives of a function",
+          "url": "https://www.youtube.com/watch?v=dzXQYjDvFfM",
+          "dur": "7m 31s",
+          "views": 1433,
+          "fil": "ODd4K-tEBpQ"
+        },
+        {
+          "id": "0fNHhILpCiA",
+          "title": "Calculus: Performing Antiderivative to Some Transcendental Functions",
+          "url": "https://www.youtube.com/watch?v=0fNHhILpCiA",
+          "dur": "5m 49s",
+          "views": 2377,
+          "fil": "iBvE5Fs-ags"
+        },
+        {
+          "id": "LrMHnkqg0zQ",
+          "title": "Calculus: Estimating the Area Under the Curve Using Reimann Sums",
+          "url": "https://www.youtube.com/watch?v=LrMHnkqg0zQ",
+          "dur": "12m 40s",
+          "views": 2885,
+          "fil": "MrgoAYlTUBA"
+        },
+        {
+          "id": "YFJ0hD1JIBA",
+          "title": "Using Riemann Sums in Estimating Distance",
+          "url": "https://www.youtube.com/watch?v=YFJ0hD1JIBA",
+          "dur": "10m 27s",
+          "views": 6742,
+          "fil": "6hN3-VRkndo"
+        },
+        {
+          "id": "6P8Y4rso_8U",
+          "title": "Calculus - How To Solve  Definite Integral",
+          "url": "https://www.youtube.com/watch?v=6P8Y4rso_8U",
+          "dur": "4m 54s",
+          "views": 7591,
+          "fil": "gS46GllBLMk"
+        },
+        {
+          "id": "XHtZBGyADHc",
+          "title": "Calculus: Using the Fundamental Theorem of Calculus",
+          "url": "https://www.youtube.com/watch?v=XHtZBGyADHc",
+          "dur": "5m 57s",
+          "views": 1204,
+          "fil": "6ArPsBlDLmU"
+        },
+        {
+          "id": "jmN4-l-6Uhk",
+          "title": "U-Substitution",
+          "url": "https://www.youtube.com/watch?v=jmN4-l-6Uhk",
+          "dur": "58m 25s",
+          "views": 1500,
+          "fil": "qVf2XVGpLfc"
+        },
+        {
+          "id": "FdLCZQUV3q8",
+          "title": "Net Change Applications",
+          "url": "https://www.youtube.com/watch?v=FdLCZQUV3q8",
+          "dur": "6m 58s",
+          "views": 3882,
+          "fil": "sXr0bfHH5IM"
+        },
+        {
+          "id": "SxxUUjkxeiQ",
+          "title": "Area Between Curves",
+          "url": "https://www.youtube.com/watch?v=SxxUUjkxeiQ",
+          "dur": "14m 39s",
+          "views": 2804,
+          "fil": "q_HR89n0TG0"
+        },
+        {
+          "id": "3bVtOlrYLp8",
+          "title": "Volume — Disk Method",
+          "url": "https://www.youtube.com/watch?v=3bVtOlrYLp8",
+          "dur": "9m 36s",
+          "views": 5222,
+          "fil": "2EvrU_go1a4"
+        },
+        {
+          "id": "5KtMivJK0DA",
+          "title": "Volume — Washer Method",
+          "url": "https://www.youtube.com/watch?v=5KtMivJK0DA",
+          "dur": "8m 40s",
+          "views": 1793,
+          "fil": "BrZxb4YeIKs"
+        },
+        {
+          "id": "_N90KUkRmoY",
+          "title": "Volume — Cross Sections",
+          "url": "https://www.youtube.com/watch?v=_N90KUkRmoY",
+          "dur": "12m 56s",
+          "views": 2534,
+          "fil": "-fqJgZwJQHA"
+        },
+        {
+          "id": "KNTn9INJ3ZE",
+          "title": "Average Value of a Function",
+          "url": "https://www.youtube.com/watch?v=KNTn9INJ3ZE",
+          "dur": "4m 20s",
+          "views": 559,
+          "fil": "zVb8yVW6_7U"
+        }
+      ]
+    }
+  ]
+}

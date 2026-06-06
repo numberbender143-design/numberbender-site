@@ -1,0 +1,279 @@
+{
+  "cid": "MATH 155",
+  "course": "Precalculus",
+  "topics": [
+    {
+      "slug": "functions-graphs",
+      "title": "Functions & Graphs",
+      "desc": "Function operations, composition, inverse functions, and piecewise-defined functions.",
+      "videos": [
+        {
+          "id": "9exMxUS-QGc",
+          "title": "Function Operations & Composition",
+          "url": "https://www.youtube.com/watch?v=9exMxUS-QGc",
+          "dur": "10m 47s",
+          "views": 2004,
+          "fil": "fDlWPUEPqBM"
+        },
+        {
+          "id": "QNLM1AUFG2U",
+          "title": "Finding the Inverse of a Function",
+          "url": "https://www.youtube.com/watch?v=QNLM1AUFG2U",
+          "dur": "8m 53s",
+          "views": 7552,
+          "fil": "_riXSeMPq1Y"
+        },
+        {
+          "id": "oHXDXWROZ4o",
+          "title": "Finding the Inverse Algebraically",
+          "url": "https://www.youtube.com/watch?v=oHXDXWROZ4o",
+          "dur": "12m 17s",
+          "views": 1715,
+          "fil": "_riXSeMPq1Y"
+        },
+        {
+          "id": "U4zwSs7-O3o",
+          "title": "Solving Piecewise Defined Functions",
+          "url": "https://www.youtube.com/watch?v=U4zwSs7-O3o",
+          "dur": "8m 24s",
+          "views": 4568,
+          "fil": "-GxjyUcybOM"
+        }
+      ]
+    },
+    {
+      "slug": "polynomial-rational",
+      "title": "Polynomial & Rational Functions",
+      "desc": "Quadratic equations, vertex form, rational expressions, domain, and asymptotes.",
+      "videos": [
+        {
+          "id": "5G_qrMRAT6o",
+          "title": "Solving Quadratic Equations",
+          "url": "https://www.youtube.com/watch?v=5G_qrMRAT6o",
+          "dur": "13m 12s",
+          "views": 2412,
+          "fil": "F--HDJtzmi8"
+        },
+        {
+          "id": "g_PFUB8O3uE",
+          "title": "Remainder Theorem & Factor Theorem",
+          "url": "https://www.youtube.com/watch?v=g_PFUB8O3uE",
+          "dur": "16m 29s",
+          "views": 10789,
+          "fil": "ooAaWh0Ucv0"
+        },
+        {
+          "id": "LPJBm-sJC3s",
+          "title": "Simplifying Rational Expressions",
+          "url": "https://www.youtube.com/watch?v=LPJBm-sJC3s",
+          "dur": "5m 52s",
+          "views": 1736,
+          "fil": "PINV8RCbxrs"
+        },
+        {
+          "id": "jMQRVs59Ydw",
+          "title": "Domain of Rational Functions",
+          "url": "https://www.youtube.com/watch?v=jMQRVs59Ydw",
+          "dur": "5m 58s",
+          "views": 3446,
+          "fil": "m2NhXgWKj1s"
+        },
+        {
+          "id": "gEsuawMfBmY",
+          "title": "Asymptotes of Rational Functions",
+          "url": "https://www.youtube.com/watch?v=gEsuawMfBmY",
+          "dur": "9m 44s",
+          "views": 13649,
+          "fil": "GgdGpjiJmkI"
+        }
+      ]
+    },
+    {
+      "slug": "exponential-logarithmic",
+      "title": "Exponential & Logarithmic Functions",
+      "desc": "Graphing, properties of logarithms, change of base, and solving exponential/log equations.",
+      "videos": [
+        {
+          "id": "c_pKjcRY3EI",
+          "title": "Graphing Exponential Functions",
+          "url": "https://www.youtube.com/watch?v=c_pKjcRY3EI",
+          "dur": "7m 59s",
+          "views": 741,
+          "fil": "WWf678070P0"
+        },
+        {
+          "id": "z5bqapEjzCQ",
+          "title": "Introduction to Logarithmic Functions",
+          "url": "https://www.youtube.com/watch?v=z5bqapEjzCQ",
+          "dur": "7m 42s",
+          "views": 5219,
+          "fil": "smSeRfHpG8U"
+        },
+        {
+          "id": "Ljf38D-sGUU",
+          "title": "Properties of Logarithms",
+          "url": "https://www.youtube.com/watch?v=Ljf38D-sGUU",
+          "dur": "10m 47s",
+          "views": 4999,
+          "fil": "EArWf8MQtfs"
+        },
+        {
+          "id": "MUZx6vsnviQ",
+          "title": "Graphing Logarithmic Functions",
+          "url": "https://www.youtube.com/watch?v=MUZx6vsnviQ",
+          "dur": "10m 3s",
+          "views": 550,
+          "fil": "Fe06wc5C6XM"
+        },
+        {
+          "id": "s3bL4ZFVyls",
+          "title": "Solving Exponential Equations — Change of Base",
+          "url": "https://www.youtube.com/watch?v=s3bL4ZFVyls",
+          "dur": "10m 41s",
+          "views": 389,
+          "fil": "GfmyLztNY3E"
+        }
+      ]
+    },
+    {
+      "slug": "trigonometry-basics",
+      "title": "Trigonometry Basics",
+      "desc": "Angles, radian measure, the six trig ratios, the unit circle, and solving right triangles.",
+      "videos": [
+        {
+          "id": "qQ7AqbGjTyI",
+          "title": "Angles & Radian Measure",
+          "url": "https://www.youtube.com/watch?v=qQ7AqbGjTyI",
+          "dur": "10m 6s",
+          "views": 5198,
+          "fil": "jLIwLKlWTZo"
+        },
+        {
+          "id": "RpNQO3cmWd0",
+          "title": "The Six Trig Ratios (SOH CAH TOA)",
+          "url": "https://www.youtube.com/watch?v=RpNQO3cmWd0",
+          "dur": "6m 13s",
+          "views": 1949,
+          "fil": "5xtKS9Q75fE"
+        },
+        {
+          "id": "b8_QIFMvIjU",
+          "title": "The Unit Circle & Special Right Triangles",
+          "url": "https://www.youtube.com/watch?v=b8_QIFMvIjU",
+          "dur": "9m 13s",
+          "views": 32802
+        },
+        {
+          "id": "16HSLIhlQ2o",
+          "title": "Solving Right Triangles (SOH CAH TOA)",
+          "url": "https://www.youtube.com/watch?v=16HSLIhlQ2o",
+          "dur": "14m 23s",
+          "views": 1137,
+          "fil": "EPwkUT6t_5Q"
+        },
+        {
+          "id": "W4uKpRMoWxw",
+          "title": "Trigonometry Word Problems",
+          "url": "https://www.youtube.com/watch?v=W4uKpRMoWxw",
+          "dur": "7m 36s",
+          "views": 1918,
+          "fil": "FVHtJEGE118"
+        },
+        {
+          "id": "PlAAlL16UvI",
+          "title": "Graphing Sine & Cosine Functions",
+          "url": "https://www.youtube.com/watch?v=PlAAlL16UvI",
+          "dur": "11m 47s",
+          "views": 3978,
+          "fil": "ZOWRANP8pfM"
+        }
+      ]
+    },
+    {
+      "slug": "analytic-trigonometry",
+      "title": "Analytic Trigonometry",
+      "desc": "Trig identities, sum and difference formulas, solving trig equations, Law of Sines and Cosines.",
+      "videos": [
+        {
+          "id": "th9KIUQEq7Q",
+          "title": "Simplifying Trig Expressions",
+          "url": "https://www.youtube.com/watch?v=th9KIUQEq7Q",
+          "dur": "9m 31s",
+          "views": 2623,
+          "fil": "c5ROBkfrSqA"
+        },
+        {
+          "id": "bHAEjYJu5cE",
+          "title": "Solving Trig Equations",
+          "url": "https://www.youtube.com/watch?v=bHAEjYJu5cE",
+          "dur": "6m 7s",
+          "views": 274,
+          "fil": "I2gy6J8WPsw"
+        },
+        {
+          "id": "Yu_Rl-oEyHQ",
+          "title": "Sum & Difference Formulas",
+          "url": "https://www.youtube.com/watch?v=Yu_Rl-oEyHQ",
+          "dur": "11m 56s",
+          "views": 4091,
+          "fil": "89qVX8BuLdA"
+        },
+        {
+          "id": "Z8WowJtiJss",
+          "title": "Law of Sines",
+          "url": "https://www.youtube.com/watch?v=Z8WowJtiJss",
+          "dur": "10m 29s",
+          "views": 1407,
+          "fil": "cRH1xN871C4"
+        },
+        {
+          "id": "en56Op_s-AM",
+          "title": "Law of Cosines",
+          "url": "https://www.youtube.com/watch?v=en56Op_s-AM",
+          "dur": "6m 8s",
+          "views": 1250,
+          "fil": "ZPLJaXCmzfo"
+        }
+      ]
+    },
+    {
+      "slug": "sequences-series",
+      "title": "Sequences & Series",
+      "desc": "Arithmetic and geometric sequences, sigma notation, and the Binomial Theorem.",
+      "videos": [
+        {
+          "id": "9pa6dFedGTg",
+          "title": "Arithmetic Sequences",
+          "url": "https://www.youtube.com/watch?v=9pa6dFedGTg",
+          "dur": "5m 41s",
+          "views": 14996,
+          "fil": "OAhJuftIoEM"
+        },
+        {
+          "id": "1eZpN9_T3n8",
+          "title": "Geometric Sequences",
+          "url": "https://www.youtube.com/watch?v=1eZpN9_T3n8",
+          "dur": "3m 11s",
+          "views": 6666,
+          "fil": "93X6Up32Peg"
+        },
+        {
+          "id": "775ubcycKmc",
+          "title": "Summation & Sigma Notation",
+          "url": "https://www.youtube.com/watch?v=775ubcycKmc",
+          "dur": "1m 15s",
+          "views": 40,
+          "fil": "PrrV22vIuvg"
+        },
+        {
+          "id": "3FN4ldzY5n0",
+          "title": "Binomial Theorem & Pascal's Triangle",
+          "url": "https://www.youtube.com/watch?v=3FN4ldzY5n0",
+          "dur": "8m 56s",
+          "views": 4613,
+          "fil": "hTNiMm1UrcU"
+        }
+      ]
+    }
+  ]
+}

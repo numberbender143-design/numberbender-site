@@ -1,0 +1,41 @@
+{
+  "id": "math155-radmeas2-001",
+  "cid": "MATH 155",
+  "topic": "Trigonometry Basics",
+  "subtopic": "Radian and degree conversion",
+  "difficulty": 1,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Convert the radian measure {rad_num}*pi/{rad_den} to degrees.",
+  "params": {
+    "mult2": {
+      "type": "choice",
+      "choices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "denom2": {
+      "type": "choice",
+      "choices": [
+        6,
+        4,
+        3,
+        2
+      ]
+    }
+  },
+  "answer_expr": "radmeas2",
+  "steps": [
+    "Multiply by 180/pi: ({rad_num}pi/{rad_den}) * (180/pi) = {rad_num} * 180 / {rad_den}.",
+    "= {numer2} / {rad_den} = {answer_radmeas2}\u00b0."
+  ],
+  "tags": [
+    "radians",
+    "degrees",
+    "conversion",
+    "angle-measure"
+  ]
+}

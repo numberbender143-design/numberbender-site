@@ -1,0 +1,32 @@
+{
+  "id": "mathteach-comb160-002",
+  "cid": "MATHTEACH",
+  "topic": "Statistics and Probability",
+  "subtopic": "Combinations C(n,r)",
+  "difficulty": 1,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "A student must choose {r} questions to answer from a test that has {n} questions. How many ways can the student select the questions?",
+  "params": {
+    "n": {
+      "type": "int",
+      "min": 8,
+      "max": 14
+    },
+    "r": {
+      "type": "int",
+      "min": 3,
+      "max": 5
+    }
+  },
+  "answer_expr": "comb160",
+  "steps": [
+    "Selecting questions where order doesn't matter uses combinations.",
+    "C({n},{r}) = {n}!/({r}! * {n_minus_r}!) = {answer_comb160}."
+  ],
+  "tags": [
+    "counting",
+    "combinations",
+    "selection"
+  ],
+  "source": "adapted-from:comb002.json"
+}

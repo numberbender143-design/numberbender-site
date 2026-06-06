@@ -1,0 +1,20 @@
+{
+  "id": "math160-setcard160-002",
+  "cid": "MATH 160",
+  "topic": "Sets",
+  "subtopic": "Inclusion-exclusion principle",
+  "difficulty": 1,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "In a survey of {a_size} + {b_size} - {inter_size} people: {a_size} like math, {b_size} like science, and {inter_size} like both. How many like at least one subject?",
+  "params": {
+    "a_size":    { "type": "int", "min": 15, "max": 50 },
+    "b_size":    { "type": "int", "min": 15, "max": 50 },
+    "inter_size":{ "type": "int", "min": 3,  "max": 12 }
+  },
+  "answer_expr": "setcard160",
+  "steps": [
+    "|A union B| = |A| + |B| - |A cap B|.",
+    "= {a_size} + {b_size} - {inter_size} = {union_size}."
+  ],
+  "tags": ["sets", "union", "inclusion-exclusion", "survey"]
+}

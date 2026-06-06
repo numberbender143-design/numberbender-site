@@ -1,0 +1,30 @@
+{
+  "id": "math130-ratdom2-001",
+  "cid": "MATH 130",
+  "topic": "Rational Expressions and Equations",
+  "subtopic": "Domain of a rational expression",
+  "difficulty": 1,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Find the excluded value from the domain of g(x) = {num_a} / (x - {excl}).",
+  "params": {
+    "num_a": {
+      "type": "int",
+      "min": 1,
+      "max": 9
+    },
+    "excl": {
+      "type": "int",
+      "min": -8,
+      "max": 8
+    }
+  },
+  "answer_expr": "ratdom2",
+  "steps": [
+    "Set x - {excl} = 0 => x = {excl}.",
+    "Domain: all real numbers except x = {excl}."
+  ],
+  "tags": [
+    "rational-expression",
+    "domain"
+  ]
+}

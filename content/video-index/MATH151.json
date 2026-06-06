@@ -1,0 +1,272 @@
+{
+  "cid": "MATH 151",
+  "course": "College Algebra for STEM (alternate)",
+  "topics": [
+    {
+      "slug": "linear-equations-functions",
+      "title": "Linear Equations and Functions",
+      "desc": "Solving linear equations and inequalities, slope, graphing, domain and range.",
+      "videos": [
+        {
+          "id": "A2btQVNRFIU",
+          "title": "Solving Linear Equations",
+          "url": "https://www.youtube.com/watch?v=A2btQVNRFIU",
+          "dur": "12m 44s",
+          "views": 9208,
+          "fil": "oRhyDgCkIqM"
+        },
+        {
+          "id": "AwuXXdjzZrk",
+          "title": "Calculating Slope",
+          "url": "https://www.youtube.com/watch?v=AwuXXdjzZrk",
+          "dur": "4m 12s",
+          "views": 1483,
+          "fil": "Ac5-9MNPYvk"
+        },
+        {
+          "id": "9tMSRf8pcRs",
+          "title": "Slope-Intercept Form",
+          "url": "https://www.youtube.com/watch?v=9tMSRf8pcRs",
+          "dur": "7m 33s",
+          "views": 1840,
+          "fil": "e0pgfD66bZY"
+        },
+        {
+          "id": "xcOkFUZi2xU",
+          "title": "Point-Slope Form",
+          "url": "https://www.youtube.com/watch?v=xcOkFUZi2xU",
+          "dur": "5m 47s",
+          "views": 2183,
+          "fil": "efLCemgaTj0"
+        },
+        {
+          "id": "J9sPV1jczN8",
+          "title": "Solving Linear Inequalities",
+          "url": "https://www.youtube.com/watch?v=J9sPV1jczN8",
+          "dur": "5m 59s",
+          "views": 1838,
+          "fil": "BGX27UYSiUY"
+        },
+        {
+          "id": "CXkjM33MXww",
+          "title": "Domain and Range of Functions",
+          "url": "https://www.youtube.com/watch?v=CXkjM33MXww",
+          "dur": "6m 18s",
+          "views": 17151,
+          "fil": "0NVqydqyzV4"
+        }
+      ]
+    },
+    {
+      "slug": "systems-of-equations",
+      "title": "Systems of Equations",
+      "desc": "Solving systems by substitution, elimination, and graphing; systems of inequalities.",
+      "videos": [
+        {
+          "id": "daL82LCYivM",
+          "title": "Solving Systems by Substitution",
+          "url": "https://www.youtube.com/watch?v=daL82LCYivM",
+          "dur": "9m 1s",
+          "views": 2656,
+          "fil": "X_fJDYl4mZ4"
+        },
+        {
+          "id": "lLuM2y88fTc",
+          "title": "Solving Systems by Elimination",
+          "url": "https://www.youtube.com/watch?v=lLuM2y88fTc",
+          "dur": "9m 39s",
+          "views": 1490,
+          "fil": "dSVeOE8dzKw"
+        },
+        {
+          "id": "ELl_41Hr-dw",
+          "title": "Systems of Linear Inequalities",
+          "url": "https://www.youtube.com/watch?v=ELl_41Hr-dw",
+          "dur": "9m 5s",
+          "views": 12816,
+          "fil": "yhTJOHsUZ8o"
+        },
+        {
+          "id": "xae19D-7J8k",
+          "title": "Applications and Word Problems",
+          "url": "https://www.youtube.com/watch?v=xae19D-7J8k",
+          "dur": "20m 22s",
+          "views": 2395,
+          "fil": "gi540Nt-LU4"
+        }
+      ]
+    },
+    {
+      "slug": "polynomials-and-factoring",
+      "title": "Polynomials and Factoring",
+      "desc": "Laws of exponents, multiplying polynomials (FOIL), factoring, and the zero product property.",
+      "videos": [
+        {
+          "id": "56Kq-RG6KBs",
+          "title": "Laws of Exponents",
+          "url": "https://www.youtube.com/watch?v=56Kq-RG6KBs",
+          "dur": "15m 32s",
+          "views": 35555,
+          "fil": "PSf_iZ4B_6Q"
+        },
+        {
+          "id": "Z1miPkVBHPM",
+          "title": "Multiplying Polynomials — FOIL and Distributive",
+          "url": "https://www.youtube.com/watch?v=Z1miPkVBHPM",
+          "dur": "14m 52s",
+          "views": 343,
+          "fil": "45RC3IN7Un8"
+        },
+        {
+          "id": "r4sRAR1kKis",
+          "title": "Factoring — Greatest Common Factor (GCF)",
+          "url": "https://www.youtube.com/watch?v=r4sRAR1kKis",
+          "dur": "6m 5s",
+          "views": 5491,
+          "fil": "u05e33HwIBk"
+        },
+        {
+          "id": "t9iwbRRpm2Y",
+          "title": "Factoring Trinomials (a = 1)",
+          "url": "https://www.youtube.com/watch?v=t9iwbRRpm2Y",
+          "dur": "7m 17s",
+          "views": 2351,
+          "fil": "6PTt9BoIfHg"
+        },
+        {
+          "id": "BuOrHLgdKas",
+          "title": "Zero Product Property and Special Patterns",
+          "url": "https://www.youtube.com/watch?v=BuOrHLgdKas",
+          "dur": "5m 52s",
+          "views": 2509,
+          "fil": "F--HDJtzmi8"
+        }
+      ]
+    },
+    {
+      "slug": "quadratic-functions",
+      "title": "Quadratic Functions",
+      "desc": "Completing the square, the quadratic formula, vertex, discriminant, and parabolas.",
+      "videos": [
+        {
+          "id": "zbyHbvWaXZQ",
+          "title": "Solving Quadratic Equations by Factoring",
+          "url": "https://www.youtube.com/watch?v=zbyHbvWaXZQ",
+          "dur": "18m 4s",
+          "views": 2048,
+          "fil": "jgZG010wvAo"
+        },
+        {
+          "id": "UdLuw5BNQY8",
+          "title": "Completing the Square",
+          "url": "https://www.youtube.com/watch?v=UdLuw5BNQY8",
+          "dur": "6m 59s",
+          "views": 11549,
+          "fil": "F--HDJtzmi8"
+        },
+        {
+          "id": "gTu4iKykemM",
+          "title": "Quadratic Functions and Parabolas",
+          "url": "https://www.youtube.com/watch?v=gTu4iKykemM",
+          "dur": "25m 9s",
+          "views": 159,
+          "fil": "U6iyvl0ZW_0"
+        },
+        {
+          "id": "nY_WeBeXAsQ",
+          "title": "Absolute Value Equations",
+          "url": "https://www.youtube.com/watch?v=nY_WeBeXAsQ",
+          "dur": "5m 15s",
+          "views": 1328,
+          "fil": "Hk09Hazc1bU"
+        }
+      ]
+    },
+    {
+      "slug": "rational-expressions",
+      "title": "Rational Expressions and Equations",
+      "desc": "Simplifying, multiplying, dividing, adding, and solving rational expressions and equations.",
+      "videos": [
+        {
+          "id": "QMeF_OEBzWM",
+          "title": "Simplifying Rational Expressions",
+          "url": "https://www.youtube.com/watch?v=QMeF_OEBzWM",
+          "dur": "5m 50s",
+          "views": 3446,
+          "fil": "ryLusD-C2KA"
+        },
+        {
+          "id": "-PyfYtyo98E",
+          "title": "Multiplying and Dividing Rational Expressions",
+          "url": "https://www.youtube.com/watch?v=-PyfYtyo98E",
+          "dur": "7m 11s",
+          "views": 2376,
+          "fil": "u5Zto5__9S0"
+        },
+        {
+          "id": "24iEx_9wSUQ",
+          "title": "Adding and Subtracting Rational Expressions",
+          "url": "https://www.youtube.com/watch?v=24iEx_9wSUQ",
+          "dur": "4m 32s",
+          "views": 2258,
+          "fil": "24iEx_9wSUQ"
+        },
+        {
+          "id": "4JhPTVF7JDw",
+          "title": "Rational Equations and Applications",
+          "url": "https://www.youtube.com/watch?v=4JhPTVF7JDw",
+          "dur": "9m 17s",
+          "views": 87117,
+          "fil": "BrLb-jZRmio"
+        }
+      ]
+    },
+    {
+      "slug": "exponential-and-logarithmic",
+      "title": "Exponential and Logarithmic Functions",
+      "desc": "Graphs and properties of exponential and logarithmic functions, change of base, and solving equations.",
+      "videos": [
+        {
+          "id": "c_pKjcRY3EI",
+          "title": "Exponential Functions — Graphs and Properties",
+          "url": "https://www.youtube.com/watch?v=c_pKjcRY3EI",
+          "dur": "7m 59s",
+          "views": 741,
+          "fil": "WWf678070P0"
+        },
+        {
+          "id": "z5bqapEjzCQ",
+          "title": "Introduction to Logarithms",
+          "url": "https://www.youtube.com/watch?v=z5bqapEjzCQ",
+          "dur": "7m 42s",
+          "views": 5219,
+          "fil": "smSeRfHpG8U"
+        },
+        {
+          "id": "EDwKZas35Aw",
+          "title": "Properties of Logarithms",
+          "url": "https://www.youtube.com/watch?v=EDwKZas35Aw",
+          "dur": "14m 36s",
+          "views": 2187,
+          "fil": "f6p4P3whpao"
+        },
+        {
+          "id": "s3bL4ZFVyls",
+          "title": "Change of Base Formula",
+          "url": "https://www.youtube.com/watch?v=s3bL4ZFVyls",
+          "dur": "10m 41s",
+          "views": 389,
+          "fil": "GfmyLztNY3E"
+        },
+        {
+          "id": "MUZx6vsnviQ",
+          "title": "Graphing Logarithmic Functions",
+          "url": "https://www.youtube.com/watch?v=MUZx6vsnviQ",
+          "dur": "10m 3s",
+          "views": 550,
+          "fil": "Fe06wc5C6XM"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "id": "math210-limit_sub210-002",
+  "cid": "MATH 210",
+  "topic": "Limits",
+  "subtopic": "Direct substitution",
+  "difficulty": 1,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Find the limit: lim(x->\\1) ({a}x^2 - {b}x + {d}). Plug in x = {c_val}.",
+  "params": {
+    "a": {
+      "type": "int",
+      "min": 1,
+      "max": 5
+    },
+    "b": {
+      "type": "int",
+      "min": 1,
+      "max": 6
+    },
+    "d": {
+      "type": "int",
+      "min": 0,
+      "max": 8
+    },
+    "c_val": {
+      "type": "int",
+      "min": 2,
+      "max": 6
+    }
+  },
+  "answer_expr": "limit_sub210",
+  "steps": [
+    "Direct substitution: {a}({c_val})^2 - {b}({c_val}) + {d} = {ac2} - {bc} + {d} = {answer_limit_sub210}."
+  ],
+  "tags": [
+    "calculus",
+    "limits",
+    "substitution"
+  ]
+}

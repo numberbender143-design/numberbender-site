@@ -1,0 +1,21 @@
+{
+  "id": "math155-geomseq-001",
+  "cid": "MATH 155",
+  "topic": "Sequences and Series",
+  "subtopic": "Geometric sequences",
+  "difficulty": 1,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "A geometric sequence has first term a_1 = {a1} and common ratio r = {r}. Find the {n_term}th term.",
+  "params": {
+    "a1": { "type": "int", "min": 1, "max": 5 },
+    "r":  { "type": "int", "min": 2, "max": 4 },
+    "n_term": { "type": "int", "min": 3, "max": 7 }
+  },
+  "answer_expr": "geomseq",
+  "steps": [
+    "Use the formula a_n = a_1 * r^(n - 1).",
+    "a_{n_term} = {a1} * {r}^({n_term} - 1) = {a1} * {r}^{n_minus_1}.",
+    "= {a1} * {r_pow} = {answer_geomseq}."
+  ],
+  "tags": ["geometric-sequence", "explicit-formula", "common-ratio"]
+}

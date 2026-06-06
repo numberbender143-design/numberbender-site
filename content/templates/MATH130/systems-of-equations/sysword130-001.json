@@ -1,0 +1,22 @@
+{
+  "id": "math130-sysword130-001",
+  "cid": "MATH 130",
+  "topic": "Systems of Equations",
+  "subtopic": "Word problems (systems)",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Tickets cost ${adult} for adults and ${child} for children. A total of {total_tickets} tickets were sold for ${revenue}. How many adult tickets were sold?",
+  "params": {
+    "adult": {"type": "int", "min": 8, "max": 15},
+    "child": {"type": "int", "min": 3, "max": 7},
+    "x_sol": {"type": "int", "min": 10, "max": 30},
+    "y_sol": {"type": "int", "min": 10, "max": 30}
+  },
+  "answer_expr": "sysword130",
+  "steps": [
+    "Let x = adult tickets, y = child tickets.",
+    "x + y = {total_tickets} and {adult}x + {child}y = {revenue}.",
+    "Solve: x = {x_sol}."
+  ],
+  "tags": ["systems", "word-problem"]
+}

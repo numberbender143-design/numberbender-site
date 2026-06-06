@@ -1,0 +1,32 @@
+{
+  "id": "mathteach-perm160-001",
+  "cid": "MATHTEACH",
+  "topic": "Statistics and Probability",
+  "subtopic": "Permutations P(n,r)",
+  "difficulty": 1,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "In how many ways can {r} students be chosen from a group of {n} students and arranged in a line (order matters)?",
+  "params": {
+    "n": {
+      "type": "int",
+      "min": 6,
+      "max": 12
+    },
+    "r": {
+      "type": "int",
+      "min": 2,
+      "max": 4
+    }
+  },
+  "answer_expr": "perm160",
+  "steps": [
+    "Since order matters, use permutations: P(n,r) = n!/(n-r)!",
+    "P({n},{r}) = {n}!/({n_minus_r})! = {answer_perm160}."
+  ],
+  "tags": [
+    "counting",
+    "permutations",
+    "ordered-arrangement"
+  ],
+  "source": "adapted-from:perm001.json"
+}

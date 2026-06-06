@@ -1,0 +1,36 @@
+{
+  "id": "math151-quadsolve2-001",
+  "cid": "MATH 151",
+  "topic": "Quadratic Functions",
+  "subtopic": "Solving quadratic equations",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Solve by factoring: {a}x^2 + {b_coef}x + {c_coef} = 0.",
+  "params": {
+    "root1": {
+      "type": "int",
+      "min": -5,
+      "max": 5
+    },
+    "root2": {
+      "type": "int",
+      "min": -5,
+      "max": 5
+    },
+    "a": {
+      "type": "int",
+      "min": 1,
+      "max": 2
+    }
+  },
+  "answer_expr": "quadsolve",
+  "steps": [
+    "Factor: {a}(x - ({root1}))(x - ({root2})) = 0.",
+    "x = {answer_q1} or x = {answer_q2}."
+  ],
+  "tags": [
+    "factoring",
+    "quadratic",
+    "roots"
+  ]
+}

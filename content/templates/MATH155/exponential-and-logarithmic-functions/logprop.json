@@ -1,0 +1,40 @@
+{
+  "id": "math155-logprop-001",
+  "cid": "MATH 155",
+  "topic": "Exponential and Logarithmic Functions",
+  "subtopic": "Properties of logarithms \u2014 product rule",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Condense to a single logarithm: log_{base}({p}) + log_{base}({q}).",
+  "params": {
+    "base": {
+      "type": "choice",
+      "choices": [
+        2,
+        3,
+        10
+      ]
+    },
+    "exp_p": {
+      "type": "int",
+      "min": 1,
+      "max": 3
+    },
+    "exp_q": {
+      "type": "int",
+      "min": 1,
+      "max": 3
+    }
+  },
+  "answer_expr": "logprop",
+  "steps": [
+    "Apply the product rule: log_b(A) + log_b(B) = log_b(A*B).",
+    "log_{base}({p}) + log_{base}({q}) = log_{base}({p} * {q}) = log_{base}({pq}).",
+    "Since {base}^{answer_logprop} = {pq}, the result simplifies to {answer_logprop}."
+  ],
+  "tags": [
+    "logarithm",
+    "product-rule",
+    "condensing"
+  ]
+}

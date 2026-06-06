@@ -1,0 +1,22 @@
+{
+  "id": "math110-prob-classical-001",
+  "cid": "MATH 110",
+  "topic": "Probability",
+  "subtopic": "Classical (theoretical) probability",
+  "difficulty": 1,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "source": "original-template",
+  "params": {
+    "red":   { "type": "int", "min": 2, "max": 9 },
+    "blue":  { "type": "int", "min": 2, "max": 9 },
+    "green": { "type": "int", "min": 2, "max": 9 }
+  },
+  "instruction": "A bag contains {red} red, {blue} blue, and {green} green marbles. One marble is drawn at random. Find P(red).",
+  "answer_expr": "red / (red + blue + green)",
+  "steps": [
+    "Count the total outcomes: {red} + {blue} + {green} = {total}.",
+    "P(red) = favorable / total = {red}/{total} = {prob_frac}.",
+    "As a decimal: P(red) = {prob_dec} (approx)."
+  ],
+  "tags": ["probability", "classical", "sample-space"]
+}

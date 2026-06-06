@@ -1,0 +1,21 @@
+{
+  "id": "math220-areacrv-001",
+  "cid": "MATH 220",
+  "topic": "Applications of Integration",
+  "subtopic": "Area between curves",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Find the area enclosed between f(x) = {c} and g(x) = {c2}x over the interval [0, {b}].",
+  "params": {
+    "c":  { "type": "int", "min": 4, "max": 10 },
+    "c2": { "type": "int", "min": 1, "max": 3 },
+    "b":  { "type": "int", "min": 2, "max": 4 }
+  },
+  "answer_expr": "areacrv",
+  "steps": [
+    "Area = integral from 0 to {b} of |f(x) - g(x)| dx = integral of ({c} - {c2}x) dx (if f > g on [0,{b}]).",
+    "= [{c}x - {c2}x^2/2] from 0 to {b}.",
+    "= {c}({b}) - {c2}({b}^2)/2 = {cb} - {c2b2_half} = {answer_areacrv}."
+  ],
+  "tags": ["area-between-curves", "definite-integral", "applications"]
+}

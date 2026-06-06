@@ -1,0 +1,36 @@
+{
+  "id": "math220-polyint-003",
+  "cid": "MATH 220",
+  "topic": "Integration Applications and Rates",
+  "subtopic": "Definite integral \u2014 accumulation",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "A population grows at rate P'(t) = {c}t^{n}. Find the total growth from t = 0 to t = {b}.",
+  "params": {
+    "c": {
+      "type": "int",
+      "min": 1,
+      "max": 4
+    },
+    "n": {
+      "type": "int",
+      "min": 1,
+      "max": 3
+    },
+    "b": {
+      "type": "int",
+      "min": 2,
+      "max": 5
+    }
+  },
+  "answer_expr": "polyint",
+  "steps": [
+    "Total growth = integral from 0 to {b} of {c}t^{n} dt = [{c}t^{n_plus_1}/{n_plus_1}] from 0 to {b}.",
+    "= {c}*{b}^{n_plus_1}/{n_plus_1} = {b_pow}*{c}/{n_plus_1} = {answer_polyint}."
+  ],
+  "tags": [
+    "accumulation",
+    "net-change",
+    "definite-integral"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "math160-countmult160-001",
+  "cid": "MATH 160",
+  "topic": "Counting Methods",
+  "subtopic": "Multiplication counting principle",
+  "difficulty": 1,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "A restaurant offers {a} types of entrees and {b} types of desserts. How many different two-course meals (one entree + one dessert) are possible?",
+  "params": {
+    "a": { "type": "int", "min": 3, "max": 9 },
+    "b": { "type": "int", "min": 3, "max": 9 }
+  },
+  "answer_expr": "countmult160",
+  "steps": [
+    "By the multiplication principle, multiply the number of choices at each stage.",
+    "Total = {a} entrees x {b} desserts = {answer_countmult160}."
+  ],
+  "tags": ["counting", "multiplication-principle", "fundamental-theorem"]
+}

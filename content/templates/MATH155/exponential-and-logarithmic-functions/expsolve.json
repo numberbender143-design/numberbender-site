@@ -1,0 +1,34 @@
+{
+  "id": "math155-logeval-002",
+  "cid": "MATH 155",
+  "topic": "Exponential and Logarithmic Functions",
+  "subtopic": "Solving simple exponential equations",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Solve for x: {base}^x = {val}. (Express the answer as an integer.)",
+  "params": {
+    "base": {
+      "type": "choice",
+      "choices": [
+        2,
+        3,
+        5
+      ]
+    },
+    "exp_n": {
+      "type": "int",
+      "min": 1,
+      "max": 5
+    }
+  },
+  "answer_expr": "logeval",
+  "steps": [
+    "Rewrite in logarithmic form: x = log_{base}({val}).",
+    "Ask: {base}^? = {val}. Since {base}^{exp_n} = {val}, x = {answer_logeval}."
+  ],
+  "tags": [
+    "exponential-equation",
+    "solving",
+    "logarithm"
+  ]
+}

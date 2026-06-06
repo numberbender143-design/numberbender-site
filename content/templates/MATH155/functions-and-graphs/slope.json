@@ -1,0 +1,21 @@
+{
+  "id": "math155-slope-001",
+  "cid": "MATH 155",
+  "topic": "Functions and Graphs",
+  "subtopic": "Slope between two points",
+  "difficulty": 1,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Find the slope of the line passing through ({x1}, {y1}) and ({x2}, {y2}).",
+  "params": {
+    "x1": { "type": "int", "min": -5, "max": 3 },
+    "y1": { "type": "int", "min": -8, "max": 8 },
+    "dx": { "type": "int", "min": 1, "max": 8 },
+    "dy": { "type": "int", "min": -8, "max": 8 }
+  },
+  "answer_expr": "slope",
+  "steps": [
+    "Use the slope formula: m = (y2 - y1) / (x2 - x1).",
+    "m = ({y2} - {y1}) / ({x2} - {x1}) = {rise} / {run} = {answer_slope}."
+  ],
+  "tags": ["slope", "linear-function", "coordinate-geometry"]
+}

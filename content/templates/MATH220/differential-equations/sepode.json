@@ -1,0 +1,22 @@
+{
+  "id": "math220-sepode-001",
+  "cid": "MATH 220",
+  "topic": "Differential Equations",
+  "subtopic": "Separable differential equations",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Solve the separable ODE: dy/dx = {m}y, y(0) = {y0}. Find y({x_val}). (Express as y0 * e^(kx).)",
+  "params": {
+    "m":     { "type": "int", "min": 1, "max": 3 },
+    "y0":    { "type": "int", "min": 1, "max": 6 },
+    "x_val": { "type": "int", "min": 1, "max": 4 }
+  },
+  "answer_expr": "sepode",
+  "steps": [
+    "Separate: dy/y = {m} dx.",
+    "Integrate both sides: ln|y| = {m}x + C.",
+    "Apply y(0) = {y0}: C = ln({y0}), so y = {y0} * e^({m}x).",
+    "y({x_val}) = {y0} * e^({m_times_x}) (exact form)."
+  ],
+  "tags": ["separable-ode", "differential-equations", "exponential"]
+}

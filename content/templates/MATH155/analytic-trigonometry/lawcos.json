@@ -1,0 +1,22 @@
+{
+  "id": "math155-lawcos-001",
+  "cid": "MATH 155",
+  "topic": "Analytic Trigonometry",
+  "subtopic": "Law of Cosines",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "In triangle ABC, a = {side_a}, b = {side_b}, and angle C = {ang_C}°. Use the Law of Cosines to find side c (round to 2 decimal places).",
+  "params": {
+    "side_a": { "type": "int", "min": 3, "max": 10 },
+    "side_b": { "type": "int", "min": 3, "max": 10 },
+    "ang_C": { "type": "choice", "choices": [30, 45, 60, 90, 120] }
+  },
+  "answer_expr": "lawcos",
+  "steps": [
+    "Law of Cosines: c^2 = a^2 + b^2 - 2ab*cos(C).",
+    "c^2 = {side_a}^2 + {side_b}^2 - 2({side_a})({side_b})*cos({ang_C}°).",
+    "c^2 = {a2} + {b2} - {two_ab}*{cos_C} = {c2}.",
+    "c = sqrt({c2}) = {answer_lawcos}."
+  ],
+  "tags": ["law-of-cosines", "triangle", "trigonometry"]
+}

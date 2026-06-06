@@ -1,0 +1,33 @@
+{
+  "id": "mathteach-comb160-001",
+  "cid": "MATHTEACH",
+  "topic": "Statistics and Probability",
+  "subtopic": "Combinations C(n,r)",
+  "difficulty": 1,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "A committee of {r} people is to be chosen from a group of {n} people. Order does not matter. How many committees are possible?",
+  "params": {
+    "n": {
+      "type": "int",
+      "min": 7,
+      "max": 15
+    },
+    "r": {
+      "type": "int",
+      "min": 2,
+      "max": 4
+    }
+  },
+  "answer_expr": "comb160",
+  "steps": [
+    "Order does not matter, so use combinations: C(n,r) = n!/(r!(n-r)!).",
+    "C({n},{r}) = {n}!/({r}! * {n_minus_r}!) = {answer_comb160}."
+  ],
+  "tags": [
+    "counting",
+    "combinations",
+    "committee",
+    "unordered"
+  ],
+  "source": "adapted-from:comb001.json"
+}

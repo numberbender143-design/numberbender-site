@@ -1,0 +1,23 @@
+{
+  "id": "math220-polyint2-001",
+  "cid": "MATH 220",
+  "topic": "Integration Techniques",
+  "subtopic": "Definite integral — power rule",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Evaluate the definite integral: integral from {a} to {b} of {c}x^{n} dx.",
+  "params": {
+    "c": { "type": "int", "min": 1, "max": 5 },
+    "n": { "type": "int", "min": 1, "max": 3 },
+    "a": { "type": "int", "min": 0, "max": 2 },
+    "extra": { "type": "int", "min": 1, "max": 4 }
+  },
+  "answer_expr": "polyint2",
+  "steps": [
+    "Antiderivative of {c}x^{n} is {c}x^({n}+1)/({n}+1) = {coef_str}x^{n_plus_1}.",
+    "Evaluate at {b}: {coef_str}*{b}^{n_plus_1} = {upper_val}.",
+    "Evaluate at {a}: {coef_str}*{a}^{n_plus_1} = {lower_val}.",
+    "Result: {upper_val} - {lower_val} = {answer_polyint2}."
+  ],
+  "tags": ["definite-integral", "power-rule", "fundamental-theorem"]
+}

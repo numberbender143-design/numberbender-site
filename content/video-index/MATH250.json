@@ -1,0 +1,161 @@
+{
+  "cid": "MATH 250",
+  "course": "Linear Algebra",
+  "topics": [
+    {
+      "slug": "matrices-and-operations",
+      "title": "Matrices & Operations",
+      "desc": "Matrix notation, addition, scalar multiplication, matrix multiplication, transpose, and properties of matrix operations.",
+      "videos": [
+        {
+          "id": "3kMFcjJbXuk",
+          "title": "Introduction to Linear Algebra: Matrix",
+          "url": "https://www.youtube.com/watch?v=3kMFcjJbXuk",
+          "dur": "9m 45s",
+          "views": 1350,
+          "fil": "_5tgtEEF2s0"
+        },
+        {
+          "id": "phGvEB3mua8",
+          "title": "Matrix Arithmetic  - Linear Algebra",
+          "url": "https://www.youtube.com/watch?v=phGvEB3mua8",
+          "dur": "58s",
+          "views": 884,
+          "fil": "MYbRfdO-EJ0"
+        },
+        {
+          "id": "BEepwYg0qYs",
+          "title": "Lesson on Matrix Operation: Rules of Arithmetic Operation",
+          "url": "https://www.youtube.com/watch?v=BEepwYg0qYs",
+          "dur": "9m 46s",
+          "views": 746,
+          "fil": "E94PQqYsp6o"
+        },
+        {
+          "id": "27wlERirsqo",
+          "title": "Matrix Operations",
+          "url": "https://www.youtube.com/watch?v=27wlERirsqo",
+          "dur": "4m 49s",
+          "views": 937,
+          "fil": "MYbRfdO-EJ0"
+        }
+      ]
+    },
+    {
+      "slug": "determinants",
+      "title": "Determinants",
+      "desc": "Computing 2x2 and 3x3 determinants, cofactor expansion, and geometric interpretation.",
+      "videos": [
+        {
+          "id": "zJw-N7J1ndg",
+          "title": "PRECALCULUS: Finding the Determinant of a 2x2 and 3x3 Matrices",
+          "url": "https://www.youtube.com/watch?v=zJw-N7J1ndg",
+          "dur": "6m 16s",
+          "views": 3008,
+          "fil": "c_eL_StOIxA"
+        },
+        {
+          "id": "M4FO1DN85KA",
+          "title": "PRECALCULUS: Finding the Inverse of a Matrix",
+          "url": "https://www.youtube.com/watch?v=M4FO1DN85KA",
+          "dur": "6m 45s",
+          "views": 1668,
+          "fil": "Kk9DWYGbbWk"
+        },
+        {
+          "id": "hgkAYEIM8aE",
+          "title": "USING CRAMER'S RULE IN SOLVING LINEAR SYSTEMS",
+          "url": "https://www.youtube.com/watch?v=hgkAYEIM8aE",
+          "dur": "32m 16s",
+          "views": 1060,
+          "fil": "2UQf28YgpzE"
+        },
+        {
+          "id": "aJ1G74lAb2s",
+          "title": "SOLVING SYSTEM OF LINEAR EQUATION USING CRAMER'S RULE",
+          "url": "https://www.youtube.com/watch?v=aJ1G74lAb2s",
+          "dur": "13m 20s",
+          "views": 1728,
+          "fil": "lSo5at2n164"
+        }
+      ]
+    },
+    {
+      "slug": "systems-and-row-reduction",
+      "title": "Systems & Row Reduction",
+      "desc": "Augmented matrices, row operations, RREF, Cramer's Rule, and classifying linear systems.",
+      "videos": [
+        {
+          "id": "2UQf28YgpzE",
+          "title": "Mastering Linear Algebra: Convert Linear Systems to Augmented Matrices",
+          "url": "https://www.youtube.com/watch?v=2UQf28YgpzE",
+          "dur": "8m 3s",
+          "views": 2646,
+          "fil": "2NaKeGsQ_nk"
+        },
+        {
+          "id": "8GHxfPS65bs",
+          "title": "PRECALCULUS Back Substitution in Solving a Matrix",
+          "url": "https://www.youtube.com/watch?v=8GHxfPS65bs",
+          "dur": "3m 19s",
+          "views": 2615,
+          "fil": "TLXamKJwa5s"
+        },
+        {
+          "id": "cOOL77M53TA",
+          "title": "HOW TO DESCRIBE THE SOLUTIONS OF A LINEAR SYSTEM",
+          "url": "https://www.youtube.com/watch?v=cOOL77M53TA",
+          "dur": "22m 54s",
+          "views": 116,
+          "fil": "1ASw5FSEYa4"
+        },
+        {
+          "id": "iJ1agtA6eEM",
+          "title": "HOW TO SOLVE LINEAR SYSTEMS WITH 3 VARIABLES USING LINEAR ALGEBRA",
+          "url": "https://www.youtube.com/watch?v=iJ1agtA6eEM",
+          "dur": "9m 27s",
+          "views": 18,
+          "fil": "86YkRtZGIuU"
+        },
+        {
+          "id": "4K2CneBAiqI",
+          "title": "WEB APPLICATION TO USE IN SOLVING LINEAR SYSTEMS IN MATRIX FORM",
+          "url": "https://www.youtube.com/watch?v=4K2CneBAiqI",
+          "dur": "8m 40s",
+          "views": 69,
+          "fil": "gURNcWqe6zg"
+        }
+      ]
+    },
+    {
+      "slug": "vector-spaces",
+      "title": "Vector Spaces",
+      "desc": "Vector spaces and subspaces, linear independence, span, basis, dimension, and the Rank-Nullity Theorem.",
+      "videos": [
+        {
+          "id": "OhnYCJrYCZ8",
+          "title": "PRECALCULUS: Vector Operations",
+          "url": "https://www.youtube.com/watch?v=OhnYCJrYCZ8",
+          "dur": "7m 12s",
+          "views": 2119,
+          "fil": "uzRo-ot9Z4g"
+        },
+        {
+          "id": "wWOKUUHyztw",
+          "title": "PRECALCULUS: Dot Product of Vectors",
+          "url": "https://www.youtube.com/watch?v=wWOKUUHyztw",
+          "dur": "3m 31s",
+          "views": 2645,
+          "fil": "XNPVQcyZUO8"
+        }
+      ]
+    },
+    {
+      "slug": "eigenvalues-eigenvectors",
+      "title": "Eigenvalues & Eigenvectors",
+      "desc": "Characteristic polynomial, computing eigenvalues and eigenvectors of 2x2 matrices, and diagonalization.",
+      "videos": [],
+      "soon": true
+    }
+  ]
+}

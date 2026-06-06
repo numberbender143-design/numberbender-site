@@ -1,0 +1,22 @@
+{
+  "id": "math250-dotprod250-002",
+  "cid": "MATH 250",
+  "topic": "Matrices and Operations",
+  "subtopic": "Dot product",
+  "difficulty": 1,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Two forces are represented by vectors u = ({u1}, {u2}, {u3}) and v = ({v1}, {v2}, {v3}). Find u dot v.",
+  "params": {
+    "u1": { "type": "int", "min": -4, "max": 4 },
+    "u2": { "type": "int", "min": -4, "max": 4 },
+    "u3": { "type": "int", "min": -4, "max": 4 },
+    "v1": { "type": "int", "min": -4, "max": 4 },
+    "v2": { "type": "int", "min": -4, "max": 4 },
+    "v3": { "type": "int", "min": -4, "max": 4 }
+  },
+  "answer_expr": "dotprod250",
+  "steps": [
+    "u dot v = u1*v1 + u2*v2 + u3*v3 = {u1}*{v1} + {u2}*{v2} + {u3}*{v3} = {answer_dotprod250}."
+  ],
+  "tags": ["linear-algebra", "dot-product", "applied"]
+}

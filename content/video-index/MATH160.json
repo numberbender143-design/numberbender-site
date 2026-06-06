@@ -1,0 +1,153 @@
+{
+  "cid": "MATH 160",
+  "course": "Discrete Mathematics",
+  "topics": [
+    {
+      "slug": "logic",
+      "title": "Logic",
+      "desc": "Propositions, truth tables, logical connectives (AND, OR, NOT), conditionals, biconditionals, and logical equivalence.",
+      "videos": [
+        {
+          "id": "teERQdghX9U",
+          "title": "HOW TO FORM SIMPLE STATEMENTS AND ITS NEGATIONS IN SET LOGIC",
+          "url": "https://www.youtube.com/watch?v=teERQdghX9U",
+          "dur": "9m 2s",
+          "views": 50,
+          "fil": "hXL3ijD8j0Q"
+        },
+        {
+          "id": "g66BNlNhrDI",
+          "title": "HOW TO FORM COMPOUND STATEMENTS IN SYMBOLIC LOGIC",
+          "url": "https://www.youtube.com/watch?v=g66BNlNhrDI",
+          "dur": "11m 9s",
+          "views": 55,
+          "fil": "-C1Za5wBeb4"
+        },
+        {
+          "id": "esywilk1eSQ",
+          "title": "How to Construct a Truth Table for Conjunction & Disjunction",
+          "url": "https://www.youtube.com/watch?v=esywilk1eSQ",
+          "dur": "11m 39s",
+          "views": 44519,
+          "fil": "1LUOJqlu81c"
+        },
+        {
+          "id": "LojjlWfPY8o",
+          "title": "Math - How to Translate Compound Statements to Symbolic Form",
+          "url": "https://www.youtube.com/watch?v=LojjlWfPY8o",
+          "dur": "10m 9s",
+          "views": 57390,
+          "fil": "2g3L9Y-gZ-8"
+        }
+      ]
+    },
+    {
+      "slug": "sets",
+      "title": "Sets",
+      "desc": "Set notation, operations (union, intersection, complement, difference), Venn diagrams, and the inclusion-exclusion principle.",
+      "videos": [
+        {
+          "id": "yTB-UlpwV1E",
+          "title": "HOW TO WRITE SET NOTATIONS IN DISCRETE MATH",
+          "url": "https://www.youtube.com/watch?v=yTB-UlpwV1E",
+          "dur": "11m 57s",
+          "views": 42,
+          "fil": "vYiIUALMuP0"
+        },
+        {
+          "id": "REp5bXqS3S4",
+          "title": "HOW TO IDENTIFY SUBSETS IN SET LOGIC",
+          "url": "https://www.youtube.com/watch?v=REp5bXqS3S4",
+          "dur": "6m 16s",
+          "views": 37,
+          "fil": "6rxAY7L-mLQ"
+        },
+        {
+          "id": "OY3CKdZt_7A",
+          "title": "HOW TO INTERPRET AND CONSTRUCT A VENN DIAGRAM",
+          "url": "https://www.youtube.com/watch?v=OY3CKdZt_7A",
+          "dur": "13m 14s",
+          "views": 298,
+          "fil": "cayRsvYkLqY"
+        },
+        {
+          "id": "6Sde1IJjeeM",
+          "title": "Math - Solving Survey Problems Involving Set Operations",
+          "url": "https://www.youtube.com/watch?v=6Sde1IJjeeM",
+          "dur": "4m 56s",
+          "views": 5612,
+          "fil": "-543UnnrYro"
+        },
+        {
+          "id": "w6OPEXqxPHY",
+          "title": "HOW TO ANSWER SURVEY PROBLEMS IN SET LOGIC",
+          "url": "https://www.youtube.com/watch?v=w6OPEXqxPHY",
+          "dur": "4m 56s",
+          "views": 72,
+          "fil": "cayRsvYkLqY"
+        }
+      ]
+    },
+    {
+      "slug": "counting-methods",
+      "title": "Counting Methods",
+      "desc": "Multiplication principle, permutations P(n,r), combinations C(n,r), and real-world counting problems.",
+      "videos": [
+        {
+          "id": "aK6HycuCA0c",
+          "title": "LECTURE: SEQUENCES AND SERIES: ARITHMETIC AND GEOMETRIC (PART 1)",
+          "url": "https://www.youtube.com/watch?v=aK6HycuCA0c",
+          "dur": "35m 39s",
+          "views": 181,
+          "fil": "hpe1E5F-MP0"
+        },
+        {
+          "id": "tkDJFVCh0sQ",
+          "title": "LECTURE: SEQUENCES AND SERIES: ARITHMETIC AND GEOMETRIC (PART 2)",
+          "url": "https://www.youtube.com/watch?v=tkDJFVCh0sQ",
+          "dur": "25m 43s",
+          "views": 101,
+          "fil": "h8Umnw4h47s"
+        },
+        {
+          "id": "Zgi26X_TK0Y",
+          "title": "STATISTICS: Evaluating Summation Notation",
+          "url": "https://www.youtube.com/watch?v=Zgi26X_TK0Y",
+          "dur": "2m 56s",
+          "views": 70200,
+          "fil": "Xjq_Cn9AONw"
+        },
+        {
+          "id": "cyT7R354kiQ",
+          "title": "Adrina's Lesson on Method Of Mathematical Induction",
+          "url": "https://www.youtube.com/watch?v=cyT7R354kiQ",
+          "dur": "7m 14s",
+          "views": 15041,
+          "fil": "-k1WMcCTUko"
+        },
+        {
+          "id": "kUZvAP9W76M",
+          "title": "ALGEBRA Using PERMUTATION  AND FUNDAMENTAL COUNTING PRINCIPLE",
+          "url": "https://www.youtube.com/watch?v=kUZvAP9W76M",
+          "dur": "6m 5s",
+          "views": 2258,
+          "fil": "kQmtvAKUXew"
+        }
+      ]
+    },
+    {
+      "slug": "number-theory",
+      "title": "Number Theory",
+      "desc": "Divisibility, modular arithmetic, the Euclidean algorithm for GCD, and LCM.",
+      "videos": [],
+      "soon": true
+    },
+    {
+      "slug": "graph-theory",
+      "title": "Graph Theory",
+      "desc": "Vertices, edges, degree sequences, the Handshaking Theorem, Euler paths and circuits, and basic graph types.",
+      "videos": [],
+      "soon": true
+    }
+  ]
+}

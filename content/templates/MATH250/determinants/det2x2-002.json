@@ -1,0 +1,21 @@
+{
+  "id": "math250-matdet2-002",
+  "cid": "MATH 250",
+  "topic": "Determinants",
+  "subtopic": "2x2 determinant",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Is the matrix A = [[{a}, {b}], [{c}, {d}]] invertible? Find det(A) to decide.",
+  "params": {
+    "a": { "type": "int", "min": -6, "max": 6 },
+    "b": { "type": "int", "min": -6, "max": 6 },
+    "c": { "type": "int", "min": -6, "max": 6 },
+    "d": { "type": "int", "min": -6, "max": 6 }
+  },
+  "answer_expr": "matdet2",
+  "steps": [
+    "Compute det(A) = ad - bc = ({a})({d}) - ({b})({c}) = {ad} - {bc} = {answer_matdet2}.",
+    "A is invertible if and only if det(A) != 0."
+  ],
+  "tags": ["linear-algebra", "determinant", "invertibility", "2x2"]
+}

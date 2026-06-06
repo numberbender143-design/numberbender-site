@@ -1,0 +1,22 @@
+{
+  "id": "math130-slopeint130-001",
+  "cid": "MATH 130",
+  "topic": "Linear Equations and Functions",
+  "subtopic": "Slope-intercept form",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Write the equation of the line passing through ({x1}, {y1}) and ({x2}, {y2}) in slope-intercept form y = mx + b.",
+  "params": {
+    "x1": {"type": "int", "min": -4, "max": 2},
+    "y1": {"type": "int", "min": -5, "max": 5},
+    "dx": {"type": "int", "min": 1, "max": 6},
+    "dy": {"type": "int", "min": -6, "max": 6}
+  },
+  "answer_expr": "slopeint130",
+  "steps": [
+    "Slope m = (y2 - y1)/(x2 - x1) = {rise}/{run} = {m_str}.",
+    "Use y - y1 = m(x - x1): y - {y1} = {m_str}(x - {x1}).",
+    "Solve for y: y = {m_str}x + {b_str}."
+  ],
+  "tags": ["slope-intercept", "linear-equation"]
+}

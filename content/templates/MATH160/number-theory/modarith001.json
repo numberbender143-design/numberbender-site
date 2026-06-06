@@ -1,0 +1,20 @@
+{
+  "id": "math160-modarith160-001",
+  "cid": "MATH 160",
+  "topic": "Number Theory",
+  "subtopic": "Modular arithmetic",
+  "difficulty": 1,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Find the remainder when {a} is divided by {n}. That is, compute {a} mod {n}.",
+  "params": {
+    "a": { "type": "int", "min": 20, "max": 150 },
+    "n": { "type": "int", "min": 5,  "max": 17  }
+  },
+  "answer_expr": "modarith160",
+  "steps": [
+    "Divide: {a} / {n} = {quotient} remainder {remainder}.",
+    "So {a} = {quotient} * {n} + {remainder}.",
+    "{a} mod {n} = {answer_modarith160}."
+  ],
+  "tags": ["number-theory", "modular-arithmetic", "remainder", "division"]
+}

@@ -1,0 +1,41 @@
+{
+  "id": "math155-lawsines2-001",
+  "cid": "MATH 155",
+  "topic": "Analytic Trigonometry",
+  "subtopic": "Law of Sines \u2014 find missing angle",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "In triangle ABC, angle A = {ang_A}\u00b0, side a = {side_a}, and side b = {side_b}. Use the Law of Sines to find angle B in degrees (round to 1 decimal place).",
+  "params": {
+    "ang_A": {
+      "type": "choice",
+      "choices": [
+        30,
+        45,
+        60
+      ]
+    },
+    "side_a": {
+      "type": "int",
+      "min": 5,
+      "max": 14
+    },
+    "side_b": {
+      "type": "int",
+      "min": 3,
+      "max": 10
+    }
+  },
+  "answer_expr": "lawsines2",
+  "steps": [
+    "Law of Sines: sin(A)/a = sin(B)/b.",
+    "sin(B) = b*sin(A)/a = {side_b}*sin({ang_A}\u00b0)/{side_a} = {sin_B_val}.",
+    "B = arcsin({sin_B_val}) = {answer_lawsines2}\u00b0."
+  ],
+  "tags": [
+    "law-of-sines",
+    "triangle",
+    "inverse-trig",
+    "angle"
+  ]
+}

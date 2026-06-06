@@ -1,0 +1,34 @@
+{
+  "id": "mathteach-descstat-mean-001",
+  "cid": "MATHTEACH",
+  "topic": "Statistics and Probability",
+  "subtopic": "Mean of a data set",
+  "difficulty": 1,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "source": "adapted-from:mean.json",
+  "params": {
+    "n": {
+      "type": "int",
+      "min": 5,
+      "max": 8
+    },
+    "values": {
+      "type": "int_array",
+      "len": "n",
+      "min": 1,
+      "max": 40
+    }
+  },
+  "instruction": "Find the mean of the data set:",
+  "math_expr": "set(values)",
+  "answer_expr": "round(sum(values)/n, 4)",
+  "answer_latex_tmpl": "\\bar{x} = {answer}",
+  "steps": [
+    "Add all {n} values: {sum_values}.",
+    "Divide by n = {n}: {sum_values} \u00f7 {n} = {answer}."
+  ],
+  "tags": [
+    "mean",
+    "central-tendency"
+  ]
+}

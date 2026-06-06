@@ -1,0 +1,31 @@
+{
+  "id": "math160-graphdeg160-003",
+  "cid": "MATH 160",
+  "topic": "Graph Theory",
+  "subtopic": "Handshaking theorem",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "A network has 5 computers with the following number of connections (degree) each: {deg_list}. How many total connection cables are used (i.e., how many edges)?",
+  "params": {
+    "degrees": {
+      "type": "choice",
+      "choices": [
+        [2,3,3,4,2],
+        [4,4,3,3,2],
+        [1,2,3,4,2],
+        [3,2,2,2,3],
+        [4,3,2,3,2],
+        [2,2,3,3,4],
+        [1,3,4,4,2],
+        [2,4,4,2,2]
+      ]
+    }
+  },
+  "answer_expr": "graphdeg160",
+  "steps": [
+    "Each cable (edge) contributes 1 to each endpoint's degree, so it counts twice.",
+    "Total degree sum = {deg_sum}.",
+    "Number of cables = {deg_sum} / 2 = {answer_graphdeg160}."
+  ],
+  "tags": ["graph-theory", "handshaking-theorem", "network", "applied"]
+}

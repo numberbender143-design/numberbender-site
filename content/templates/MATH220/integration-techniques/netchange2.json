@@ -1,0 +1,20 @@
+{
+  "id": "math220-netchange2-001",
+  "cid": "MATH 220",
+  "topic": "Integration Techniques",
+  "subtopic": "Net change — constant rate",
+  "difficulty": 1,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Water flows into a tank at rate r(t) = {a} + {b}t gallons per minute. Find the total gallons added from t = 0 to t = {T} minutes.",
+  "params": {
+    "a": { "type": "int", "min": 2, "max": 10 },
+    "b": { "type": "int", "min": 1, "max": 4 },
+    "T": { "type": "int", "min": 2, "max": 6 }
+  },
+  "answer_expr": "netchange",
+  "steps": [
+    "Total = integral from 0 to {T} of ({a} + {b}t) dt = [{a}t + {b}t^2/2] from 0 to {T}.",
+    "= {a}({T}) + {b}({T}^2)/2 = {aT} + {bT2_half} = {answer_netchange} gallons."
+  ],
+  "tags": ["net-change", "accumulation", "rate", "definite-integral"]
+}

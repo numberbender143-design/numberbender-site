@@ -1,0 +1,38 @@
+{
+  "id": "mathteach-volume_rect-002",
+  "cid": "MATHTEACH",
+  "topic": "Geometry and Measurement",
+  "subtopic": "Volume of a rectangular prism",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "source": "original-template",
+  "instruction": "A rectangular prism (box) measures {l} by {w} by {h} units. Find its volume.",
+  "params": {
+    "l": {
+      "type": "int",
+      "min": 3,
+      "max": 12
+    },
+    "w": {
+      "type": "int",
+      "min": 2,
+      "max": 10
+    },
+    "h": {
+      "type": "int",
+      "min": 2,
+      "max": 8
+    }
+  },
+  "answer_expr": "volume_rect",
+  "steps": [
+    "Volume of a box = length x width x height.",
+    "V = {l} x {w} x {h} = {answer_volume_rect} cubic units."
+  ],
+  "tags": [
+    "geometry",
+    "volume",
+    "rectangular-prism",
+    "measurement"
+  ]
+}

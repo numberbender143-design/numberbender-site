@@ -1,0 +1,36 @@
+{
+  "id": "math220-geomseq-010",
+  "cid": "MATH 220",
+  "topic": "Differential Equations",
+  "subtopic": "Exponential growth and decay",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "A population doubles every period. If P(0) = {a1} and the growth factor is r = {r}, find P({n_term}).",
+  "params": {
+    "a1": {
+      "type": "int",
+      "min": 1,
+      "max": 5
+    },
+    "r": {
+      "type": "int",
+      "min": 2,
+      "max": 3
+    },
+    "n_term": {
+      "type": "int",
+      "min": 3,
+      "max": 6
+    }
+  },
+  "answer_expr": "geomseq",
+  "steps": [
+    "Discrete growth model: P(t) = P(0) * r^t.",
+    "P({n_term}) = {a1} * {r}^{n_term} = {a1} * {r_pow} = {answer_geomseq}."
+  ],
+  "tags": [
+    "exponential-growth",
+    "differential-equations",
+    "growth-model"
+  ]
+}

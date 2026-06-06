@@ -1,0 +1,19 @@
+{
+  "id": "math130-sysineq130-003",
+  "cid": "MATH 130",
+  "topic": "Systems of Equations",
+  "subtopic": "Systems of inequalities",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "A system graphs y <= {a}x + {c} and y <= -{b}x + {d}. Which region is the solution set?",
+  "params": {
+    "a": {"type": "int", "min": 1, "max": 3},
+    "b": {"type": "int", "min": 1, "max": 3},
+    "c": {"type": "int", "min": 1, "max": 5},
+    "d": {"type": "int", "min": 3, "max": 8},
+    "answer_key": {"type": "choice", "choices": ["below both lines"]}
+  },
+  "answer_expr": "sysineq130",
+  "steps": ["Graph y <= {a}x + {c} (shade below) and y <= -{b}x + {d} (shade below).", "The overlap is below both lines."],
+  "tags": ["systems", "inequalities"]
+}

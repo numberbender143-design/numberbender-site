@@ -1,0 +1,19 @@
+{
+  "id": "math155-radmeas-001",
+  "cid": "MATH 155",
+  "topic": "Trigonometry Basics",
+  "subtopic": "Radian and degree conversion",
+  "difficulty": 1,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Convert {deg}° to radians. Express your answer as a fraction times pi.",
+  "params": {
+    "mult": { "type": "choice", "choices": [1, 2, 3, 4, 5, 6] },
+    "denom": { "type": "choice", "choices": [6, 4, 3, 2] }
+  },
+  "answer_expr": "radmeas",
+  "steps": [
+    "Multiply by pi/180: {deg}° * (pi / 180) = {num_pi} * pi / {den_pi}.",
+    "Simplify the fraction: {answer_radmeas_num}*pi / {answer_radmeas_den}."
+  ],
+  "tags": ["radians", "degrees", "conversion", "angle-measure"]
+}

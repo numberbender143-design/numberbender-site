@@ -1,0 +1,34 @@
+{
+  "id": "mathteach-onestep_mul-001",
+  "cid": "MATHTEACH",
+  "topic": "Algebraic Thinking",
+  "subtopic": "Solving one-step equations",
+  "difficulty": 1,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Solve for x: {a}x = {b}",
+  "params": {
+    "a": {
+      "type": "int",
+      "min": 2,
+      "max": 8
+    },
+    "b": {
+      "type": "int",
+      "min": 4,
+      "max": 9
+    }
+  },
+  "answer_expr": "onestep_mul",
+  "steps": [
+    "Divide both sides by {a} to isolate x.",
+    "x = {b} / {a} = {answer_onestep_mul}."
+  ],
+  "tags": [
+    "pre-algebra",
+    "algebra",
+    "equation",
+    "one-step",
+    "multiplication"
+  ],
+  "source": "adapted-from:equation-002.json"
+}

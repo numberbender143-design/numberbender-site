@@ -1,0 +1,37 @@
+{
+  "id": "mathteach-proportion-002",
+  "cid": "MATHTEACH",
+  "topic": "Fractions and Proportional Reasoning",
+  "subtopic": "Solving proportions",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "A car travels {b} miles on {a} gallons of gas. How many miles can it travel on {c} gallons? Set up a proportion {a}/{b} = {c}/x and solve.",
+  "params": {
+    "a": {
+      "type": "int",
+      "min": 1,
+      "max": 3
+    },
+    "b": {
+      "type": "int",
+      "min": 10,
+      "max": 40
+    },
+    "c": {
+      "type": "int",
+      "min": 2,
+      "max": 6
+    }
+  },
+  "answer_expr": "proportion",
+  "steps": [
+    "x = ({b} x {c}) / {a} = {bc} / {a} = {answer_proportion} miles."
+  ],
+  "tags": [
+    "pre-algebra",
+    "proportion",
+    "applied",
+    "unit-rate"
+  ],
+  "source": "adapted-from:proportion-002.json"
+}

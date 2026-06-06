@@ -1,0 +1,19 @@
+{
+  "id": "math130-factorgcf130-001",
+  "cid": "MATH 130",
+  "topic": "Polynomials and Factoring",
+  "subtopic": "Factoring out the GCF",
+  "difficulty": 1,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Factor: {a}x^2 + {ab}x.",
+  "params": {
+    "a": {"type": "int", "min": 2, "max": 9},
+    "b": {"type": "int", "min": 1, "max": 8}
+  },
+  "answer_expr": "factorgcf130",
+  "steps": [
+    "GCF = {a}x.",
+    "Factor: {a}x(x + {b})."
+  ],
+  "tags": ["factoring", "GCF"]
+}

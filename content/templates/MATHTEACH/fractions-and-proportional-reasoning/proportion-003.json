@@ -1,0 +1,39 @@
+{
+  "id": "mathteach-proportion-003",
+  "cid": "MATHTEACH",
+  "topic": "Fractions and Proportional Reasoning",
+  "subtopic": "Solving proportions",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "If {a} shirts cost ${b}, how much do {c} shirts cost? Set up and solve a proportion.",
+  "params": {
+    "a": {
+      "type": "int",
+      "min": 2,
+      "max": 6
+    },
+    "b": {
+      "type": "int",
+      "min": 10,
+      "max": 40
+    },
+    "c": {
+      "type": "int",
+      "min": 4,
+      "max": 12
+    }
+  },
+  "answer_expr": "proportion",
+  "steps": [
+    "Set up the proportion: {a}/{b} = {c}/x.",
+    "Cross-multiply: {a}x = {bc}.",
+    "Divide both sides by {a}: x = {bc}/{a} = {answer_proportion}."
+  ],
+  "tags": [
+    "pre-algebra",
+    "proportion",
+    "word-problem",
+    "unit-rate"
+  ],
+  "source": "adapted-from:proportion-003.json"
+}

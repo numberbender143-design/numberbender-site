@@ -1,0 +1,24 @@
+{
+  "id": "math250-matrref-003",
+  "cid": "MATH 250",
+  "topic": "Systems and Row Reduction",
+  "subtopic": "Cramer's Rule",
+  "difficulty": 3,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Apply Cramer's Rule to solve: {a}x + {b}y = {e},  {c}x + {d}y = {f}. Express x and y as fractions if necessary.",
+  "params": {
+    "a": { "type": "int", "min": 2, "max": 7 },
+    "b": { "type": "int", "min": 1, "max": 5 },
+    "c": { "type": "int", "min": 1, "max": 5 },
+    "d": { "type": "int", "min": 2, "max": 7 },
+    "e": { "type": "int", "min": -12, "max": 12 },
+    "f": { "type": "int", "min": -12, "max": 12 }
+  },
+  "answer_expr": "matrref",
+  "steps": [
+    "D = ad - bc = {det}.",
+    "x = ({e}*{d} - {b}*{f}) / {det} = {dx}/{det} = {answer_matrref[x]}.",
+    "y = ({a}*{f} - {c}*{e}) / {det} = {dy}/{det} = {answer_matrref[y]}."
+  ],
+  "tags": ["linear-algebra", "cramer-rule", "fractions"]
+}

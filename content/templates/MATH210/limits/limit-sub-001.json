@@ -1,0 +1,41 @@
+{
+  "id": "math210-limit_sub210-001",
+  "cid": "MATH 210",
+  "topic": "Limits",
+  "subtopic": "Direct substitution",
+  "difficulty": 1,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Evaluate the limit by direct substitution: lim(x->\\1) ({a}x^2 + {b}x + {d}).",
+  "params": {
+    "a": {
+      "type": "int",
+      "min": 1,
+      "max": 4
+    },
+    "b": {
+      "type": "int",
+      "min": -4,
+      "max": 4
+    },
+    "d": {
+      "type": "int",
+      "min": -5,
+      "max": 5
+    },
+    "c_val": {
+      "type": "int",
+      "min": 1,
+      "max": 5
+    }
+  },
+  "answer_expr": "limit_sub210",
+  "steps": [
+    "Substitute x = {c_val} directly: {a}({c_val})^2 + {b}({c_val}) + {d}.",
+    "= {ac2} + {bc} + {d} = {answer_limit_sub210}."
+  ],
+  "tags": [
+    "calculus",
+    "limits",
+    "direct-substitution"
+  ]
+}

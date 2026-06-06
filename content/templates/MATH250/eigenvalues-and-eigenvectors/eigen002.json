@@ -1,0 +1,22 @@
+{
+  "id": "math250-eigenval2-002",
+  "cid": "MATH 250",
+  "topic": "Eigenvalues and Eigenvectors",
+  "subtopic": "Eigenvalues of a 2x2 matrix",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Find the eigenvalues of A = [[{a}, {b}], [{c}, {d}]]. Use the characteristic equation lambda^2 - (trace)*lambda + (det) = 0.",
+  "params": {
+    "a": { "type": "int", "min": -3, "max": 3 },
+    "b": { "type": "int", "min": 1,  "max": 4 },
+    "c": { "type": "int", "min": 1,  "max": 4 },
+    "d": { "type": "int", "min": -3, "max": 3 }
+  },
+  "answer_expr": "eigenval2",
+  "steps": [
+    "trace = {tr},  det = {det2},  discriminant = {disc}.",
+    "lambda = (tr +/- sqrt(disc)) / 2.",
+    "lambda_1 = {answer_eigenval2[l1]},  lambda_2 = {answer_eigenval2[l2]}."
+  ],
+  "tags": ["linear-algebra", "eigenvalues", "trace", "determinant"]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "math151-linineq-001",
+  "cid": "MATH 151",
+  "topic": "Linear Equations and Functions",
+  "subtopic": "Solving linear inequalities",
+  "difficulty": 1,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Solve the inequality: {m}x + {b} < {rhs}. Express the answer as x < k.",
+  "params": {
+    "m": {
+      "type": "int",
+      "min": 1,
+      "max": 6
+    },
+    "b": {
+      "type": "int",
+      "min": -9,
+      "max": 9
+    },
+    "rhs": {
+      "type": "int",
+      "min": -9,
+      "max": 9
+    }
+  },
+  "answer_expr": "linineq",
+  "steps": [
+    "Subtract {b} from both sides: {m}x < {rhs} - {b} = {diff}.",
+    "Divide both sides by {m}: x < {diff} / {m} = {answer_linineq}."
+  ],
+  "tags": [
+    "linear-inequality",
+    "solving"
+  ]
+}

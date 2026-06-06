@@ -1,0 +1,24 @@
+{
+  "id": "math250-matrref-001",
+  "cid": "MATH 250",
+  "topic": "Systems and Row Reduction",
+  "subtopic": "Cramer's Rule",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Use Cramer's Rule to solve the system: {a}x + {b}y = {e},  {c}x + {d}y = {f}.",
+  "params": {
+    "a": { "type": "int", "min": 1, "max": 5 },
+    "b": { "type": "int", "min": 1, "max": 4 },
+    "c": { "type": "int", "min": 1, "max": 4 },
+    "d": { "type": "int", "min": 1, "max": 5 },
+    "e": { "type": "int", "min": -10, "max": 10 },
+    "f": { "type": "int", "min": -10, "max": 10 }
+  },
+  "answer_expr": "matrref",
+  "steps": [
+    "Compute D = det([[a,b],[c,d]]) = {a}*{d} - {b}*{c} = {det}.",
+    "Dx = det([[e,b],[f,d]]) = {dx};  Dy = det([[a,e],[c,f]]) = {dy}.",
+    "x = Dx/D = {answer_matrref[x]},  y = Dy/D = {answer_matrref[y]}."
+  ],
+  "tags": ["linear-algebra", "cramer-rule", "systems", "row-reduction"]
+}

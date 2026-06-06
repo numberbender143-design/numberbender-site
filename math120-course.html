@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- nb-build: 20260604-1610 -->
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>Survey of Calculus (C-ID MATH 120) — Free OER Lessons &amp; Practice | Numberbender</title>
+<meta name="description" content="C-ID MATH 120 Survey of Calculus (Non-STEM) — free video lessons, verified practice worksheets, and a test generator for CCC business and social science students and instructors. Also known locally as MATH 52 at California community colleges.">
+<link rel="canonical" href="https://numberbender.com/math120-course">
+<meta property="og:title" content="Survey of Calculus (C-ID MATH 120) — Free OER Lessons &amp; Practice | Numberbender">
+<meta property="og:description" content="Free OER Survey of Calculus for CCC — functions, limits, derivatives, optimization, and integrals with business applications. Videos, verified worksheets, and a randomized test generator.">
+<meta property="og:url" content="https://numberbender.com/math120-course">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Survey of Calculus (C-ID MATH 120) — Free OER | Numberbender">
+<meta name="twitter:description" content="Free CCC Survey of Calculus: C-ID MATH 120 aligned lessons, worksheets &amp; test generator.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Course",
+      "name": "Survey of Calculus (Non-STEM)",
+      "courseCode": "C-ID MATH 120",
+      "description": "C-ID MATH 120 Survey of Calculus — functions and graphs, intuitive limits, derivatives and differentiation rules, optimization, antiderivatives, and definite integrals with business applications. Free video lessons, verified practice worksheets, and a randomized test generator for CCC students and instructors.",
+      "provider": { "@id": "https://numberbender.com/#org" },
+      "url": "https://numberbender.com/math120-course",
+      "inLanguage": "en",
+      "isAccessibleForFree": true,
+      "educationalLevel": "College Level — Transfer",
+      "hasCourseInstance": { "@type": "CourseInstance", "courseMode": "online" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Numberbender", "item": "https://numberbender.com" },
+        { "@type": "ListItem", "position": 2, "name": "Math CCC", "item": "https://numberbender.com/ccc-atlas.html" },
+        { "@type": "ListItem", "position": 3, "name": "Survey of Calculus (MATH 120)", "item": "https://numberbender.com/math120-course" }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal:#11a3a3;--teal-dark:#0c7d7d;--teal-deep:#075e5e;--teal-soft:#eafafa;
+    --gold:#e8a93b;--gold-deep:#9a6400;
+    --ink:#10242b;--slate:#4a6068;--line:#dce8e8;--bg:#f4faf9;
+    --shadow-soft:0 2px 14px rgba(7,94,94,.07);--shadow-lg:0 14px 40px rgba(7,94,94,.14);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Space Grotesk',sans-serif;line-height:1.2}
+  a{color:inherit}
+  .wrap{max-width:1020px;margin:0 auto;padding:0 22px}
+
+  .topbar{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50}
+  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+  .brand{font-family:'Space Grotesk';font-weight:700;font-size:20px;color:var(--teal-deep);letter-spacing:-.02em}
+  .brand span{color:var(--gold-deep)}
+  .nav{display:flex;gap:26px;font-weight:500;font-size:15px;color:var(--slate)}
+  .nav a{text-decoration:none}.nav a.active{color:var(--teal-deep);font-weight:600}.nav a:hover{color:var(--teal-deep)}
+  @media(max-width:640px){.nav{display:none}}
+
+  .crumb{font-size:13px;color:var(--slate);padding:14px 0 0}
+  .crumb a{color:var(--teal-deep);text-decoration:none;font-weight:600}
+
+  .hero{padding:18px 0 26px}
+  .cid{display:inline-block;font-family:'Space Grotesk';font-weight:700;font-size:14px;color:#fff;background:var(--teal-dark);padding:5px 12px;border-radius:8px}
+  .hero h1{font-size:clamp(26px,4vw,38px);font-weight:700;letter-spacing:-.02em;margin-top:12px}
+  .aliases{font-size:15px;color:var(--slate);margin-top:9px}
+  .aliases b{color:var(--teal-deep);font-weight:600}
+  .herovalue{font-size:15px;line-height:1.55;color:var(--ink);margin-top:12px;max-width:70ch}
+  .herovalue>b:first-child{color:var(--teal-deep)}
+  .herovalue .hv-stu{color:var(--teal-deep)}
+  .herovalue .hv-ins{color:var(--gold-deep)}
+  .chips{display:flex;gap:8px;margin-top:11px;flex-wrap:wrap}
+  .chip{font-size:12px;font-weight:600;padding:3px 10px;border-radius:999px;background:var(--teal-soft);color:var(--teal-deep);border:1px solid #bfe9e9}
+
+  .toolbar{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;
+    background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-top:20px;box-shadow:var(--shadow-soft)}
+  .toolbar .lbl{font-size:14px;color:var(--slate)}
+  .switch{display:inline-flex;background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:4px}
+  .switch button{border:none;background:none;font-family:inherit;font-weight:600;font-size:14px;color:var(--slate);
+    padding:8px 18px;border-radius:999px;cursor:pointer}
+  .switch button.on{background:var(--teal);color:#fff}
+  .fitmodes{display:none;align-items:center;gap:11px;margin-top:12px;padding:11px 15px;
+    border-radius:11px;background:linear-gradient(135deg,#fff6e6,#fdeccd);border:1px solid #f0dcae;
+    font-size:13.5px;line-height:1.45;color:#7a5410}
+  body.teacher .fitmodes{display:flex}
+  .fitmodes svg{width:20px;height:20px;flex:none;color:#9a6400}
+  .fitmodes b{color:#5e3f08;font-weight:700}
+
+  .topics{margin-top:22px;display:flex;flex-direction:column;gap:14px}
+  .topic{background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow-soft);overflow:hidden}
+  .topic-main{display:flex;gap:16px;align-items:flex-start;padding:18px}
+  .tnum{flex:none;width:34px;height:34px;border-radius:9px;background:var(--teal-soft);color:var(--teal-deep);
+    font-family:'Space Grotesk';font-weight:700;display:flex;align-items:center;justify-content:center;font-size:15px;margin-top:2px}
+  .tbody{flex:1;min-width:0}
+  .tbody h3{font-size:18px}
+  .tbody p{font-size:14px;color:var(--slate);margin-top:3px}
+  .subchips{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px}
+  .subchip{font-size:11.5px;font-weight:600;color:var(--teal-deep);background:var(--teal-soft);
+    border:1px solid #cdeaea;border-radius:999px;padding:3px 9px;white-space:nowrap}
+  .actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:13px}
+  .btn{display:inline-flex;align-items:center;gap:7px;font-family:inherit;font-weight:600;font-size:14px;
+    border-radius:9px;padding:9px 15px;cursor:pointer;border:1px solid transparent;text-decoration:none}
+  .btn-watch{background:var(--teal);color:#fff}
+  .btn-watch:hover{background:var(--teal-dark)}
+  .btn-sheet{background:#fff;color:var(--teal-deep);border-color:var(--teal)}
+  .btn-dl{background:var(--teal-deep);color:#fff;border-color:var(--teal-deep);text-decoration:none}
+  .btn-dl:hover{background:var(--teal-dark);border-color:var(--teal-dark)}
+  .btn-sheet:hover{background:var(--teal-soft)}
+  .btn-test{background:#fff;color:var(--gold-deep);border-color:var(--gold)}
+  .btn-test:hover{background:#fff6e8}
+  .btn-quiz{background:#fff;color:var(--teal-deep);border-color:var(--teal)}
+  .btn-quiz:hover{background:var(--teal-soft)}
+  .teacherOnly{display:none}
+  body.teacher .teacherOnly{display:inline-flex}
+  body.teacher .studentOnly{display:none}
+  .vcount{font-size:12px;color:var(--slate);align-self:center;margin-left:2px}
+  .filbadge{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:600;color:#0c7d7d;background:#eafafa;border:1px solid #cfe6e4;border-radius:999px;padding:2px 9px;align-self:center}
+  .filchip{font-size:10.5px;font-weight:700;color:#0c7d7d;background:#eafafa;border:1px solid #cfe6e4;border-radius:4px;padding:1px 5px;letter-spacing:.04em;margin-left:4px}
+
+  .kit{display:none;border-top:1px solid var(--line);background:#fbfdfd;padding:16px 18px}
+  body.teacher .kit{display:block}
+  .kit h4{font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--teal-deep);margin-bottom:8px;font-family:'Inter';font-weight:700}
+  .kit .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+  .kit-note{font-size:13.5px;color:var(--slate);margin-top:10px;background:#fff;border:1px solid var(--line);border-radius:9px;padding:10px 12px}
+  .kit-note b{color:var(--ink)}
+  .align{margin-top:10px;border:1px solid #f0dcae;border-radius:10px;background:#fffdf8;overflow:hidden}
+  .align>summary{list-style:none;cursor:pointer;padding:10px 13px;display:flex;align-items:center;gap:8px;
+    font-size:13px;font-weight:700;color:#7a5410;background:linear-gradient(135deg,#fff6e6,#fdeccd)}
+  .align>summary::-webkit-details-marker{display:none}
+  .align>summary .chev{margin-left:auto;transition:transform .25s ease;color:#9a6400}
+  .align[open]>summary .chev{transform:rotate(90deg)}
+  .align .body{padding:12px 14px}
+  .align ul{margin:4px 0 0;padding-left:20px}
+  .align li{font-size:13px;color:var(--ink);margin-bottom:4px;line-height:1.4}
+  .align .crosswalk{font-size:12px;color:var(--slate);margin-top:9px;font-style:italic}
+  .align .alignbtn{margin-top:11px;font-size:12.5px;font-weight:600;padding:7px 12px;border-radius:8px;
+    border:1px solid #f0dcae;background:#fff;color:#7a5410;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+  .align .alignbtn:hover{background:#fff6e6}
+  .align .alignbtn svg{width:14px;height:14px}
+  .cvrow{margin-top:10px;border:1px solid #f0dcae;border-radius:10px;background:#fffdf8;padding:11px 13px}
+  .cvrow .cvh{font-size:12px;font-weight:700;color:#7a5410;text-transform:uppercase;letter-spacing:.03em;display:flex;align-items:center;gap:7px;margin-bottom:8px}
+  .cvrow .cvh svg{width:15px;height:15px;color:#9a6400}
+  .cvrow .cvbtns{display:flex;gap:9px;flex-wrap:wrap}
+  .cvrow .cvb{font-size:12.5px;font-weight:600;padding:7px 12px;border-radius:8px;cursor:pointer;
+    border:1px solid #f0dcae;background:#fff;color:#7a5410;display:inline-flex;align-items:center;gap:6px}
+  .cvrow .cvb:hover{background:#fff6e6}
+  .cvrow .cvb.key{background:linear-gradient(135deg,#fff6e6,#fdeccd)}
+  .cvrow .cvb svg{width:14px;height:14px}
+  .cvrow .cvnote{font-size:11.5px;color:var(--slate);margin-top:8px;line-height:1.4}
+  .mini{font-size:13px;font-weight:600;padding:7px 12px;border-radius:8px;border:1px solid var(--line);background:#fff;color:var(--teal-deep);cursor:pointer}
+  .mini:hover{background:var(--teal-soft)}
+  .help{font-size:12px;color:var(--slate);margin-top:9px}
+  .help a{color:var(--teal-deep);font-weight:600}
+
+  .overlay{position:fixed;inset:0;background:rgba(10,36,43,.74);display:none;z-index:100;padding:24px}
+  .overlay.show{display:flex;align-items:center;justify-content:center}
+  .modal{background:#fff;border-radius:16px;max-width:1000px;width:100%;max-height:90vh;overflow:hidden;display:flex;flex-direction:column}
+  .modal-head{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;border-bottom:1px solid var(--line)}
+  .modal-head h3{font-size:16px;flex:1 1 auto;min-width:0;margin:0;padding-right:10px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .modal-head button{border:none;flex:0 0 auto;background:var(--bg);width:32px;height:32px;border-radius:8px;font-size:18px;cursor:pointer;color:var(--slate)}
+  .langtog{display:inline-flex;flex:0 0 auto;align-items:center;gap:2px;background:#eafafa;border:1px solid #cfe6e4;border-radius:8px;padding:3px;margin-left:auto;margin-right:10px}
+  .langtog button{border:none;flex:0 0 auto;width:46px;height:28px;background:transparent;color:#0c7d7d;font-family:inherit;font-weight:500;font-size:13px;letter-spacing:.02em;border-radius:6px;cursor:pointer;transition:background .18s ease,color .18s ease}
+  .langtog button.on{background:#0c7d7d;color:#fff}
+  .langtog button:not(.on):hover{background:#dcf2ef}
+  .pl .enonly{font-size:11px;color:var(--slate);background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:1px 6px;margin-left:6px}
+  .modal-body{display:flex;gap:0;flex:1;min-height:0}
+  .player{flex:1;background:#000;min-width:0}
+  .player .ratio{position:relative;padding-bottom:56.25%;height:0}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .urlbar{display:none;align-items:center;gap:9px;padding:11px 14px;background:#0c2227;flex-wrap:wrap}
+  body.teacher .urlbar{display:flex}
+  .urlbar .ulabel{font-size:12.5px;font-weight:600;color:rgba(255,255,255,.78);flex:none}
+  .urlbar input{flex:1;min-width:160px;font-family:inherit;font-size:13px;color:#10242b;background:#fff;border:none;border-radius:7px;padding:8px 10px}
+  .urlbar button{flex:none;font-family:inherit;font-weight:600;font-size:13px;color:#fff;background:var(--teal);border:none;border-radius:7px;padding:8px 13px;cursor:pointer}
+  .urlbar button:hover{background:var(--teal-dark)}
+  .playlist{width:264px;flex:none;border-left:1px solid var(--line);overflow-y:auto;background:#fff}
+  .playlist .pl{padding:11px 14px;border-bottom:1px solid var(--line);cursor:pointer;font-size:13.5px;line-height:1.35}
+  .playlist .pl:hover{background:var(--teal-soft)}
+  .playlist .pl.on{background:var(--teal-soft);border-left:3px solid var(--teal)}
+  .playlist .pl .d{font-size:12px;color:var(--slate);margin-top:2px}
+  @media(max-width:760px){.modal-body{flex-direction:column}.playlist{width:100%;border-left:none;border-top:1px solid var(--line);max-height:200px}}
+
+  .wsmodal{max-width:880px;height:90vh}
+  .wshead-actions{display:flex;align-items:center;gap:10px}
+  .wsdl{display:inline-flex;align-items:center;gap:6px;background:var(--teal);color:#fff;text-decoration:none;
+    font-weight:600;font-size:14px;padding:8px 15px;border-radius:8px}
+  .wsdl:hover{background:var(--teal-dark)}
+  .wsframe{flex:1;width:100%;border:0;background:#525659}
+
+  .qzmodal,.tgmodal{max-width:720px;max-height:90vh}
+  .modal-scroll{overflow-y:auto;padding:18px 20px;flex:1}
+  .qz-meta{font-size:13px;color:var(--slate);margin-bottom:14px}
+  .qz-q{border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:14px;background:#fff}
+  .qz-q .qhead{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+  .qz-q .qsub{font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.03em;color:var(--teal-deep)}
+  .qz-q .qnum{font-weight:700}
+  .qz-q .qinstr{margin:7px 0 4px;font-size:14.5px}
+  .qz-q .qgiven{font-family:'Space Grotesk',monospace;background:var(--teal-soft);border-radius:8px;padding:8px 11px;font-size:15px;margin:6px 0 10px;display:inline-block}
+  .qz-q input.qans{font-family:inherit;font-size:14px;padding:9px 11px;border:1.5px solid var(--line);border-radius:8px;width:100%;max-width:340px}
+  .qz-q .qfb{margin-top:9px;font-size:13.5px;font-weight:600;display:none}
+  .qz-q.correct .qfb.ok{display:block;color:#0c7d7d}
+  .qz-q.wrong .qfb.no{display:block;color:#c0533b}
+  .qz-q .qreveal{margin-top:6px;font-size:13px;color:var(--slate);display:none}
+  .qz-q.wrong .qreveal,.qz-q.revealed .qreveal{display:block}
+  .qz-foot{display:flex;gap:10px;align-items:center;flex-wrap:wrap;padding:14px 20px;border-top:1px solid var(--line)}
+  .qz-score{font-weight:700;color:var(--teal-deep);margin-right:auto}
+  .btn-primary{background:var(--teal);color:#fff;border:none;border-radius:9px;padding:10px 17px;font-family:inherit;font-weight:600;font-size:14px;cursor:pointer}
+  .btn-primary:hover{background:var(--teal-dark)}
+  .btn-ghost{background:#fff;color:var(--teal-deep);border:1px solid var(--teal);border-radius:9px;padding:10px 17px;font-family:inherit;font-weight:600;font-size:14px;cursor:pointer}
+  .btn-ghost:hover{background:var(--teal-soft)}
+  .tg-field{margin-bottom:15px}
+  .tg-field label{display:block;font-size:13px;font-weight:600;color:var(--ink);margin-bottom:6px}
+  .tg-field select,.tg-field input{font-family:inherit;font-size:14px;padding:8px 10px;border:1.5px solid var(--line);border-radius:8px}
+  .tg-subs{display:flex;flex-direction:column;gap:7px;max-height:200px;overflow-y:auto;border:1px solid var(--line);border-radius:9px;padding:10px 12px}
+  .tg-subs label{display:flex;align-items:center;gap:8px;font-weight:500;font-size:13.5px;color:var(--ink);margin:0}
+  .tg-row{display:flex;gap:18px;flex-wrap:wrap}
+  .toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(20px);opacity:0;
+    background:var(--ink);color:#fff;padding:11px 18px;border-radius:10px;font-size:14px;font-weight:500;
+    transition:all .25s ease;z-index:120;pointer-events:none}
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+  .foot{margin-top:46px;background:var(--teal-deep);color:rgba(255,255,255,.86);padding:30px 0 38px}
+  .foot .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center}
+  .foot .stamp{font-size:13px;max-width:60ch}.foot b{color:#fff}
+  .oer{font-size:12px;border:1px solid rgba(255,255,255,.3);border-radius:8px;padding:8px 12px;font-weight:600}
+
+  :root{
+    --teal-grad:linear-gradient(135deg,#11a3a3 0%,#0c7d7d 100%);
+    --teal-grad-soft:linear-gradient(135deg,#eafafa 0%,#dff5f4 100%);
+    --ring:0 0 0 3px rgba(17,163,163,.18);
+    --ease:cubic-bezier(.22,.61,.36,1);
+    --shadow-hover:0 18px 44px rgba(7,94,94,.20);
+  }
+  body{
+    background:
+      radial-gradient(1100px 480px at 82% -8%, rgba(17,163,163,.10), transparent 60%),
+      radial-gradient(900px 420px at -6% 8%, rgba(232,169,59,.10), transparent 55%),
+      var(--bg);
+    background-attachment:fixed;
+  }
+  .topbar{backdrop-filter:saturate(1.4) blur(8px);background:rgba(255,255,255,.82);
+    box-shadow:0 1px 0 rgba(7,94,94,.06),0 6px 20px rgba(7,94,94,.05)}
+  .brand{position:relative}
+  .brand::after{content:"";position:absolute;left:0;bottom:-5px;height:2px;width:0;
+    background:var(--teal-grad);border-radius:2px;transition:width .4s var(--ease)}
+  .topbar:hover .brand::after{width:100%}
+  .cid{background:var(--teal-grad);box-shadow:0 6px 16px rgba(12,125,125,.28);letter-spacing:.02em}
+  .hero h1{background:linear-gradient(92deg,#0b3f3f,#0c7d7d 60%,#11a3a3);
+    -webkit-background-clip:text;background-clip:text;color:transparent}
+  .chip{transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .25s}
+  .chip:hover{transform:translateY(-2px);box-shadow:0 6px 14px rgba(12,125,125,.18);background:#dff5f4}
+  .toolbar{background:linear-gradient(180deg,#ffffff,#fbfffe);border-color:#d3e9e8}
+  .switch{position:relative;box-shadow:inset 0 1px 3px rgba(7,94,94,.06)}
+  .switch button{position:relative;z-index:1;transition:color .3s var(--ease)}
+  .switch button.on{background:var(--teal-grad);box-shadow:0 4px 12px rgba(12,125,125,.30)}
+  .topic{position:relative;transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s;will-change:transform}
+  .topic::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;
+    background:var(--teal-grad);opacity:0;transition:opacity .3s var(--ease)}
+  .topic:hover{transform:translateY(-4px);box-shadow:var(--shadow-hover);border-color:#bfe6e4}
+  .topic:hover::before{opacity:1}
+  .tnum{background:var(--teal-grad-soft);box-shadow:inset 0 0 0 1px #cdeaea;transition:transform .3s var(--ease)}
+  .topic:hover .tnum{transform:scale(1.08) rotate(-3deg)}
+  .tbody h3{transition:color .25s}
+  .topic:hover .tbody h3{color:var(--teal-deep)}
+  .btn{transition:transform .18s var(--ease),box-shadow .22s var(--ease),background .22s,filter .22s;will-change:transform}
+  .btn:focus-visible{outline:none;box-shadow:var(--ring)}
+  .btn:active{transform:translateY(1px) scale(.99)}
+  .btn-watch{background:var(--teal-grad);box-shadow:0 6px 16px rgba(12,125,125,.26)}
+  .btn-watch:hover{transform:translateY(-2px);box-shadow:0 12px 24px rgba(12,125,125,.34);filter:brightness(1.04)}
+  .btn-sheet:hover,.btn-quiz:hover{transform:translateY(-2px);box-shadow:0 10px 20px rgba(12,125,125,.16)}
+  .btn-test:hover{transform:translateY(-2px);box-shadow:0 10px 20px rgba(201,138,31,.20)}
+  .mini{transition:transform .18s var(--ease),box-shadow .2s,background .2s}
+  .mini:hover{transform:translateY(-1px);box-shadow:0 6px 14px rgba(7,94,94,.10)}
+  .btn-primary{background:var(--teal-grad);box-shadow:0 6px 16px rgba(12,125,125,.28)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 24px rgba(12,125,125,.36)}
+  .btn-primary:active{transform:translateY(1px)}
+  .qz-q{transition:border-color .3s,box-shadow .3s,transform .3s var(--ease)}
+  .qz-q.correct{border-color:#7fcfc8;box-shadow:0 0 0 2px rgba(17,163,163,.14);animation:pop .35s var(--ease)}
+  .qz-q.wrong{border-color:#e7b3a3;box-shadow:0 0 0 2px rgba(192,83,59,.12)}
+  @keyframes pop{0%{transform:scale(1)}40%{transform:scale(1.012)}100%{transform:scale(1)}}
+  .overlay.show .modal{animation:modalIn .32s var(--ease)}
+  @keyframes modalIn{from{opacity:0;transform:translateY(14px) scale(.985)}to{opacity:1;transform:none}}
+  .topic{opacity:0;transform:translateY(14px);animation:cardIn .5s var(--ease) forwards}
+  .topic:nth-child(1){animation-delay:.04s}.topic:nth-child(2){animation-delay:.10s}
+  .topic:nth-child(3){animation-delay:.16s}.topic:nth-child(4){animation-delay:.22s}
+  .topic:nth-child(5){animation-delay:.28s}.topic:nth-child(6){animation-delay:.34s}
+  @keyframes cardIn{to{opacity:1;transform:none}}
+  .hero,.toolbar{animation:cardIn .55s var(--ease) both}
+  .toolbar{animation-delay:.06s}
+  .foot{background:linear-gradient(135deg,#075e5e,#0c7d7d)}
+  .oer{background:rgba(255,255,255,.06);backdrop-filter:blur(4px)}
+  .btn .ic,.mini .ic,.urlbar .ic{width:16px;height:16px;flex:none;vertical-align:-3px;transition:transform .25s var(--ease)}
+  .btn-watch:hover .ic{transform:scale(1.18)}
+  .btn-sheet:hover .ic,.btn-quiz:hover .ic,.btn-test:hover .ic{transform:translateY(-1px)}
+  .vcount{display:inline-flex;align-items:center;gap:5px}
+  .vcount .ic{width:14px;height:14px;opacity:.75}
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none !important;transition:none !important}
+    .topic{opacity:1;transform:none}
+  }
+
+  :root{--amber:#d8941f;--amber-deep:#b5790f;
+    --amber-grad:linear-gradient(135deg,#e8a93b 0%,#c98a1f 100%);
+    --amber-soft:linear-gradient(135deg,#fff6e6 0%,#fdeccd 100%);}
+  .mode-tag{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;
+    letter-spacing:.02em;padding:4px 11px;border-radius:999px;margin-left:2px;
+    background:var(--teal-soft);color:var(--teal-deep);border:1px solid #bfe9e9;transition:all .3s var(--ease)}
+  body.teacher .mode-tag{background:#fff3df;color:var(--amber-deep);border-color:#f0d8a8}
+  body.teacher .switch button.on{background:var(--amber-grad);box-shadow:0 4px 12px rgba(201,138,31,.32)}
+  body.teacher .topic::before{background:var(--amber-grad)}
+  body.teacher .topic:hover{border-color:#f0dcae}
+  body.teacher .topic:hover .tbody h3{color:var(--amber-deep)}
+  body.teacher .tnum{background:var(--amber-soft);box-shadow:inset 0 0 0 1px #f0dcae;color:var(--amber-deep)}
+  body.teacher .kit{background:linear-gradient(180deg,#fffdf8,#fff8ec)}
+  body.teacher .kit h4{color:var(--amber-deep)}
+  body.teacher .mini{color:var(--amber-deep);border-color:#f0dcae}
+  body.teacher .mini:hover{background:#fff6e6;box-shadow:0 6px 14px rgba(181,121,15,.12)}
+  body.teacher .urlbar button{background:var(--amber-grad)}
+  body.teacher .subchip{background:#fff5e3;color:var(--amber-deep);border-color:#f1ddb2}
+</style>
+<style id="nbnav-style">
+.nbnav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.92);backdrop-filter:saturate(180%) blur(10px);-webkit-backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid #E2E8F0;font-family:'Inter',system-ui,-apple-system,sans-serif}
+.nbnav *{box-sizing:border-box}
+.nbnav-inner{width:min(1200px,92%);margin-inline:auto;display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+.nbnav-logo{display:flex;align-items:center;padding:0;text-decoration:none}
+.nbnav-logo-img{height:54px;width:auto;display:block;max-width:320px}
+.nbnav-toggle{display:none;background:none;border:none;cursor:pointer;font-size:1.4rem;color:#0F172A;line-height:1}
+.nbnav-links{display:flex;gap:22px;align-items:center;flex-wrap:nowrap}
+.nbnav-links a{color:#0F172A;font-weight:500;font-size:0.95rem;text-decoration:none;white-space:nowrap}
+.nbnav-links a:hover{color:#2563EB}
+.nbnav-mathccc.active{color:#2563EB;font-weight:600}
+.nbnav-cta{background:#0F172A;color:#fff !important;padding:9px 16px;border-radius:10px;font-weight:600}
+.nbnav-cta:hover{background:#2563EB}
+.nbnav-dd{position:relative}
+.nbnav-trigger{background:none;border:none;padding:0;margin:0;font:inherit;color:#0F172A;font-weight:500;font-size:0.95rem;cursor:pointer;display:inline-flex;align-items:center;gap:4px;white-space:nowrap;transition:color .15s ease}
+.nbnav-trigger:hover{color:#2563EB}
+.nbnav-caret{font-size:0.75em;display:inline-block;transition:transform .2s ease}
+.nbnav-dd:hover .nbnav-caret,.nbnav-trigger[aria-expanded="true"] .nbnav-caret{transform:rotate(180deg)}
+.nbnav-menu{position:absolute;top:100%;left:0;margin-top:10px;background:#fff;border:1px solid #E2E8F0;border-radius:14px;padding:6px;box-shadow:0 20px 50px rgba(15,23,42,0.12);min-width:240px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .15s ease,transform .15s ease,visibility .15s ease;z-index:115}
+.nbnav-menu::before{content:'';position:absolute;top:-10px;left:0;right:0;height:10px}
+.nbnav-dd:hover .nbnav-menu,.nbnav-menu.open{opacity:1;visibility:visible;transform:translateY(0)}
+.nbnav-menu a{display:block;padding:10px 14px;border-radius:8px;color:#0F172A;font-weight:500;font-size:0.95rem;white-space:nowrap}
+.nbnav-menu a:hover{background:rgba(37,99,235,.08);color:#2563EB}
+@media (max-width:900px){
+  .nbnav-toggle{display:block}
+  .nbnav-links{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;align-items:flex-start;padding:18px;border-bottom:1px solid #E2E8F0;gap:14px}
+  .nbnav-links.open{display:flex}
+  .nbnav-dd{width:100%}
+  .nbnav-trigger{width:100%;justify-content:space-between;padding:6px 0}
+  .nbnav-menu{position:static;box-shadow:none;border:none;padding:0 0 4px 14px;margin-top:0;min-width:0;opacity:1;visibility:visible;transform:none;display:none;background:transparent}
+  .nbnav-dd:hover .nbnav-menu{display:none}
+  .nbnav-menu.open{display:block}
+}
+</style>
+<style>
+.skip-link{position:absolute;left:-9999px;top:0;z-index:2000;background:#075e5e;color:#fff;padding:10px 16px;border-radius:0 0 8px 0;font-weight:700;text-decoration:none}
+.skip-link:focus{left:8px;top:8px;border-radius:8px;outline:3px solid #e8a93b}
+:focus-visible{outline:3px solid #e8a93b;outline-offset:2px}
+#content:focus{outline:none}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#content">Skip to main content</a>
+<header class="nbnav">
+  <div class="nbnav-inner">
+    <a href="/" class="nbnav-logo" aria-label="Numberbender — home">
+      <img src="images/numberbender_banner_only.svg" alt="Numberbender" class="nbnav-logo-img">
+    </a>
+    <button class="nbnav-toggle" aria-label="Toggle menu" onclick="document.getElementById('nbnavlinks').classList.toggle('open')">☰</button>
+    <nav class="nbnav-links" id="nbnavlinks">
+      <div class="nbnav-dd">
+        <button type="button" class="nbnav-trigger" aria-haspopup="true" aria-expanded="false" onclick="nbToggleDD(this);return false;">Learn <span class="nbnav-caret" aria-hidden="true">▾</span></button>
+        <div class="nbnav-menu">
+          <a href="/start-here">🎁 Free Starter Lesson</a>
+          <a href="/find-your-course">🧭 Where Do I Start?</a>
+          <a href="/courses">📚 Explore Math Lessons</a>
+          <a href="/math-worksheets">📝 Free Worksheets</a>
+          <a href="/for-filipino-students">🇵🇭 Para sa Filipino Students</a>
+        </div>
+      </div>
+      <div class="nbnav-dd">
+        <button type="button" class="nbnav-trigger" aria-haspopup="true" aria-expanded="false" onclick="nbToggleDD(this);return false;">Teach <span class="nbnav-caret" aria-hidden="true">▾</span></button>
+        <div class="nbnav-menu">
+          <a href="/for-teachers">🏫 For Teachers Hub</a>
+          <a href="/teach-the-math">🎓 Teach the Math</a>
+          <a href="/teach-it-like-you-stream-it">🎬 Teach It Like You Stream It</a>
+          <a href="/teacher-resources">📦 Teacher Resources</a>
+          <a href="/math-worksheets">📄 Printable Worksheets</a>
+          <a href="/courses">📚 Lesson &amp; Course Library</a>
+        </div>
+      </div>
+      <div class="nbnav-dd">
+        <button type="button" class="nbnav-trigger nbnav-mathccc active" aria-haspopup="true" aria-expanded="false" onclick="nbToggleDD(this);return false;">Math CCC <span class="nbnav-caret" aria-hidden="true">▾</span></button>
+        <div class="nbnav-menu">
+          <a href="ccc-atlas.html">📚 Browse All Courses</a>
+          <a href="ab1705-corequisite-math.html">🧭 AB 1705 Corequisite Support</a>
+        </div>
+      </div>
+      <div class="nbnav-dd">
+        <button type="button" class="nbnav-trigger" aria-haspopup="true" aria-expanded="false" onclick="nbToggleDD(this);return false;">About <span class="nbnav-caret" aria-hidden="true">▾</span></button>
+        <div class="nbnav-menu">
+          <a href="/about">👨‍🏫 About Dr. E</a>
+          <a href="/speaking">🎤 Speaking</a>
+          <a href="/press">📰 Press &amp; Media</a>
+          <a href="/blog">✍️ Blog</a>
+          <a href="/speaking-archive">📅 Past Engagements</a>
+        </div>
+      </div>
+      <a href="/contact" class="nbnav-cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="crumb"><a href="ccc-atlas.html">All Courses</a> &nbsp;›&nbsp; SLAM Pathway &nbsp;›&nbsp; MATH 120</div>
+  <section class="hero" id="content" tabindex="-1">
+    <span class="cid">C-ID MATH 120</span>
+    <h1>Survey of Calculus (Non-STEM)</h1>
+    <div class="aliases">Your college may call this: <b>MATH 52</b>, <b>MATH 120</b>, <b>MATH 130</b>, or <b>Business Calculus</b>.</div>
+    <p class="herovalue"><b>Everything for this course — free.</b> <b class="hv-stu">Studying?</b> Watch the lessons, practice with instant-feedback quizzes, and download worksheets with answer keys. <b class="hv-ins">Teaching?</b> Grab ready-made worksheets, generate randomized tests with verified keys, and drop the materials straight into Canvas.</p>
+    <div class="chips"><span class="chip">✓ Transfer-Level</span><span class="chip">SLAM Pathway</span><span class="chip">Prereq: College Algebra</span><span class="chip">Free · OER · C-ID aligned</span></div>
+  </section>
+
+  <div class="toolbar">
+    <div class="lbl">Choose your view: <span class="mode-tag" id="modeTag">🎓 Student view</span></div>
+    <div class="switch">
+      <button id="bStudent" class="on" onclick="setMode(false)">🎓 Student</button>
+      <button id="bTeacher" onclick="setMode(true)">🏫 Instructor</button>
+    </div>
+  </div>
+  <div class="fitmodes" id="fitmodes">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h20v14H2z"/><path d="M8 21h8M12 17v4"/></svg>
+    <span><b>Built for every format.</b> Whether you teach <b>in person</b>, <b>online</b>, or <b>hybrid / flipped</b>, these lessons, worksheets, and verified tests drop right into your course to support student success.</span>
+  </div>
+
+  <h2 style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0">Lessons by topic</h2>
+  <div class="topics" id="topics"></div>
+</div>
+
+<div class="overlay" id="overlay" onclick="if(event.target===this)closeModal()">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+    <div class="modal-head"><h3 id="mTitle">Lesson</h3><div class="langtog" id="langtog" role="group" aria-label="Caption language"><button id="langEn" class="on" aria-pressed="true" onclick="setLang('en')">EN</button><button id="langFil" aria-pressed="false" onclick="setLang('fil')">FIL</button></div><button onclick="closeModal()" aria-label="Close">✕</button></div>
+    <div class="modal-body">
+      <div class="player">
+        <div class="ratio"><iframe id="mFrame" title="Lesson video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+        <div class="urlbar" id="urlbar">
+          <span class="ulabel">Share with your class:</span>
+          <input id="mUrl" type="text" readonly aria-label="Video link to share with your class" onclick="this.select()">
+          <button id="mCopy" onclick="copyVideoUrl()"><svg aria-hidden="true" class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg> Copy link</button>
+        </div>
+      </div>
+      <div class="playlist" id="mList"></div>
+    </div>
+  </div>
+</div>
+<div class="overlay" id="wsOverlay" onclick="if(event.target===this)closeWorksheet()">
+  <div class="modal wsmodal" role="dialog" aria-modal="true" aria-labelledby="wsTitle">
+    <div class="modal-head">
+      <h3 id="wsTitle">Worksheet</h3>
+      <div class="wshead-actions">
+        <a id="wsDownload" class="wsdl" href="#" download>⬇ Download PDF</a>
+        <button onclick="closeWorksheet()" aria-label="Close">✕</button>
+      </div>
+    </div>
+    <iframe id="wsFrame" class="wsframe" title="Worksheet preview"></iframe>
+  </div>
+</div>
+<div class="overlay" id="qzOverlay" onclick="if(event.target===this)closeQuiz()">
+  <div class="modal qzmodal" role="dialog" aria-modal="true" aria-labelledby="qzTitle">
+    <div class="modal-head"><h3 id="qzTitle">Practice quiz</h3><button onclick="closeQuiz()" aria-label="Close">✕</button></div>
+    <div class="modal-scroll"><div class="qz-meta" id="qzMeta"></div><div id="qzBody"></div></div>
+    <div class="qz-foot">
+      <span class="qz-score" id="qzScore">Self-check — not graded.</span>
+      <button class="btn-ghost" onclick="revealQuiz()">Show answers</button>
+      <button class="btn-ghost" onclick="newQuiz()">↻ New set</button>
+      <button class="btn-primary" onclick="checkQuiz()">Check answers</button>
+    </div>
+  </div>
+</div>
+<div class="overlay" id="tgOverlay" onclick="if(event.target===this)closeTest()">
+  <div class="modal tgmodal" role="dialog" aria-modal="true" aria-labelledby="tgTitle">
+    <div class="modal-head"><h3 id="tgTitle">Generate test</h3><button onclick="closeTest()" aria-label="Close">✕</button></div>
+    <div class="modal-scroll">
+      <div class="tg-row">
+        <div class="tg-field"><label>Number of questions</label>
+          <select id="tgCount"><option>10</option><option selected>15</option><option>20</option><option>25</option><option>30</option></select></div>
+        <div class="tg-field"><label>Difficulty</label>
+          <select id="tgDiff"><option value="0">All levels</option><option value="1">Level 1 (intro)</option><option value="2">Level 2 (core)</option><option value="3">Level 3 (challenge)</option></select></div>
+        <div class="tg-field"><label>Shuffled versions</label>
+          <select id="tgVers"><option>1</option><option>2</option><option>3</option><option>4</option></select></div>
+      </div>
+      <div class="tg-field"><label>Sub-topics to include</label>
+        <div class="tg-subs" id="tgSubs"></div></div>
+    </div>
+    <div class="qz-foot">
+      <span class="qz-score" id="tgInfo"></span>
+      <button class="btn-primary" onclick="buildTest()"><svg aria-hidden="true" class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/></svg> Build printable test + key</button>
+    </div>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
+<footer class="foot"><div class="wrap">
+  <div class="stamp"><b>Numberbender CCC — California Community College Math Success Center.</b><br>
+  Lessons by Dr. E. Aligned to C-ID MATH 120 (c-id.net) &amp; ASCCC OERI. Free for every student and instructor.<br><span style="display:block;margin-top:8px">Created by <b>Dr. Peter Esperanza</b> — math faculty at Barstow Community College, Victor Valley College &amp; West Coast University. A <b>registered 501(c)(3) nonprofit since 2023</b> — free to use, share, and adapt (CC&nbsp;BY).</span><span style="display:inline-flex;flex-wrap:wrap;gap:8px;margin-top:10px"><a href="https://c-id.net" target="_blank" rel="noopener" style="font-size:11px;font-weight:600;color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,.3);border-radius:7px;padding:5px 9px;background:rgba(255,255,255,.06)">C-ID · c-id.net ↗</a><a href="https://asccc-oeri.org" target="_blank" rel="noopener" style="font-size:11px;font-weight:600;color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,.3);border-radius:7px;padding:5px 9px;background:rgba(255,255,255,.06)">ASCCC OERI ↗</a><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener" style="font-size:11px;font-weight:600;color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,.3);border-radius:7px;padding:5px 9px;background:rgba(255,255,255,.06)">CC BY 4.0 ↗</a></span></div>
+  <div class="oer">CC BY · OER · ASCCC-aligned</div>
+</div></footer>
+
+<script src="content/banks/MATH120_banks.js?v=20260604-1610"></script>
+<script>
+const COURSE = {
+  "cid": "MATH 120",
+  "course": "Survey of Calculus",
+  "topics": [
+    {
+      "slug": "functions-and-graphs",
+      "title": "Functions & Graphs",
+      "desc": "Evaluating linear and quadratic functions, interpreting function notation, and finding the domain of rational functions. Business applications throughout.",
+      "videos": [
+        {
+          "id": "9exMxUS-QGc",
+          "title": "Introduction to Functions and Function Notation",
+          "url": "https://www.youtube.com/watch?v=9exMxUS-QGc",
+          "dur": "10m 47s",
+          "views": 2004,
+          "fil": "fDlWPUEPqBM"
+        },
+        {
+          "id": "9tMSRf8pcRs",
+          "title": "Linear Functions and Slope",
+          "url": "https://www.youtube.com/watch?v=9tMSRf8pcRs",
+          "dur": "7m 33s",
+          "views": 1840,
+          "fil": "e0pgfD66bZY"
+        },
+        {
+          "id": "gTu4iKykemM",
+          "title": "Quadratic Functions and Parabolas",
+          "url": "https://www.youtube.com/watch?v=gTu4iKykemM",
+          "dur": "25m 9s",
+          "views": 159,
+          "fil": "U6iyvl0ZW_0"
+        },
+        {
+          "id": "CXkjM33MXww",
+          "title": "Domain and Range",
+          "url": "https://www.youtube.com/watch?v=CXkjM33MXww",
+          "dur": "6m 18s",
+          "views": 17151,
+          "fil": "0NVqydqyzV4"
+        }
+      ]
+    },
+    {
+      "slug": "limits",
+      "title": "Limits",
+      "desc": "Intuitive understanding of limits: direct substitution and factoring to resolve 0/0 forms. No epsilon-delta — just the core idea.",
+      "videos": [
+        {
+          "id": "CGZXu3Gq_0g",
+          "title": "Introduction to Limits",
+          "url": "https://www.youtube.com/watch?v=CGZXu3Gq_0g",
+          "dur": "25m 18s",
+          "views": 1078,
+          "fil": "0sYj5PFIPFY"
+        },
+        {
+          "id": "V6ZCqn4rLuc",
+          "title": "Limits by Direct Substitution",
+          "url": "https://www.youtube.com/watch?v=V6ZCqn4rLuc",
+          "dur": "9m 40s",
+          "views": 247,
+          "fil": "bw4vc3BU_-Q"
+        },
+        {
+          "id": "zEgMBKtxDaE",
+          "title": "Limits by Factoring",
+          "url": "https://www.youtube.com/watch?v=zEgMBKtxDaE",
+          "dur": "10m 7s",
+          "views": 13482,
+          "fil": "jcJdM6QuNs0"
+        },
+        {
+          "id": "LBewgSAfvsI",
+          "title": "One-Sided Limits",
+          "url": "https://www.youtube.com/watch?v=LBewgSAfvsI",
+          "dur": "10m 12s",
+          "views": 4665,
+          "fil": "tXxQpGFOdiI"
+        }
+      ]
+    },
+    {
+      "slug": "derivatives-rules",
+      "title": "Derivatives & Differentiation Rules",
+      "desc": "Power rule, product rule, chain rule — applied to cost, revenue, and profit functions.",
+      "videos": [
+        {
+          "id": "Sq40TTKQJhE",
+          "title": "The Power Rule for Derivatives",
+          "url": "https://www.youtube.com/watch?v=Sq40TTKQJhE",
+          "dur": "8m 31s",
+          "views": 5150,
+          "fil": "146TO6lLJ9Q"
+        },
+        {
+          "id": "aG0QGylbxb0",
+          "title": "Differentiating Polynomial Functions",
+          "url": "https://www.youtube.com/watch?v=aG0QGylbxb0",
+          "dur": "11m 33s",
+          "views": 1186,
+          "fil": "aI7V1JR2Z-U"
+        },
+        {
+          "id": "wut95XJZWjQ",
+          "title": "The Product Rule",
+          "url": "https://www.youtube.com/watch?v=wut95XJZWjQ",
+          "dur": "4m 42s",
+          "views": 1642,
+          "fil": "vVUMeCDA__g"
+        },
+        {
+          "id": "9y6ym_2Wvrk",
+          "title": "The Chain Rule",
+          "url": "https://www.youtube.com/watch?v=9y6ym_2Wvrk",
+          "dur": "9m 19s",
+          "views": 1330,
+          "fil": "bU-uZ6cEFVM"
+        }
+      ]
+    },
+    {
+      "slug": "applications-of-derivatives",
+      "title": "Applications of Derivatives",
+      "desc": "Marginal analysis, critical points, and optimization — finding maximum profit, minimum cost, and optimal production levels.",
+      "videos": [
+        {
+          "id": "4d8wqQWRlIo",
+          "title": "Increasing and Decreasing Functions",
+          "url": "https://www.youtube.com/watch?v=4d8wqQWRlIo",
+          "dur": "10m 27s",
+          "views": 1463,
+          "fil": "boa33U6lD5o"
+        },
+        {
+          "id": "1DKKUoFUDyk",
+          "title": "Critical Points and Optimization",
+          "url": "https://www.youtube.com/watch?v=1DKKUoFUDyk",
+          "dur": "12m 39s",
+          "views": 3420,
+          "fil": "S9jf9kEMMck"
+        },
+        {
+          "id": "cUPN9j-p04Y",
+          "title": "Second Derivative Test — Concavity & Inflection",
+          "url": "https://www.youtube.com/watch?v=cUPN9j-p04Y",
+          "dur": "7m 57s",
+          "views": 2010,
+          "fil": "dxmRbbc1etI"
+        },
+        {
+          "id": "WGEiXm9Qofk",
+          "title": "Analyzing f(x) Using the Graph of f'(x)",
+          "url": "https://www.youtube.com/watch?v=WGEiXm9Qofk",
+          "dur": "9m 40s",
+          "views": 13027,
+          "fil": "7r871U0jaaM"
+        },
+        {
+          "id": "U-jUWoebKZc",
+          "title": "Applied Optimization Problems",
+          "url": "https://www.youtube.com/watch?v=U-jUWoebKZc",
+          "dur": "15m 6s",
+          "views": 8668,
+          "fil": "-kzvsog_7O8"
+        },
+        {
+          "id": "rlEdoj5xJ1w",
+          "title": "Marginal Analysis in Business",
+          "url": "https://www.youtube.com/watch?v=rlEdoj5xJ1w",
+          "dur": "8m 28s",
+          "views": 373,
+          "fil": "th4pfjqt0XI"
+        }
+      ]
+    },
+    {
+      "slug": "antiderivatives-and-integrals",
+      "title": "Antiderivatives & Definite Integrals",
+      "desc": "Power rule for antiderivatives, indefinite integrals, and the Fundamental Theorem of Calculus for definite integrals.",
+      "videos": [
+        {
+          "id": "dzXQYjDvFfM",
+          "title": "Introduction to Antiderivatives",
+          "url": "https://www.youtube.com/watch?v=dzXQYjDvFfM",
+          "dur": "7m 31s",
+          "views": 1433,
+          "fil": "ODd4K-tEBpQ"
+        },
+        {
+          "id": "ijoZuosJZEA",
+          "title": "Definite Integrals — Power Rule",
+          "url": "https://www.youtube.com/watch?v=ijoZuosJZEA",
+          "dur": "9m 14s",
+          "views": 957,
+          "fil": "cISTqL-i9yY"
+        },
+        {
+          "id": "XHtZBGyADHc",
+          "title": "The Fundamental Theorem of Calculus",
+          "url": "https://www.youtube.com/watch?v=XHtZBGyADHc",
+          "dur": "5m 57s",
+          "views": 1204,
+          "fil": "6ArPsBlDLmU"
+        },
+        {
+          "id": "s4KiDXCq0mY",
+          "title": "Area Under a Curve",
+          "url": "https://www.youtube.com/watch?v=s4KiDXCq0mY",
+          "dur": "9m 38s",
+          "views": 2768,
+          "fil": "M_KDipH-mlw"
+        }
+      ]
+    },
+    {
+      "slug": "applications-of-integration",
+      "title": "Applications of Integration",
+      "desc": "Total accumulated change, area under a curve, and interpreting definite integrals in business contexts.",
+      "videos": [
+        {
+          "id": "FdLCZQUV3q8",
+          "title": "Accumulated Change as a Definite Integral",
+          "url": "https://www.youtube.com/watch?v=FdLCZQUV3q8",
+          "dur": "6m 58s",
+          "views": 3882,
+          "fil": "sXr0bfHH5IM"
+        },
+        {
+          "id": "xI5hXmmw9QM",
+          "title": "Area Between Curves",
+          "url": "https://www.youtube.com/watch?v=xI5hXmmw9QM",
+          "dur": "32m 14s",
+          "views": 781,
+          "fil": "q_HR89n0TG0"
+        },
+        {
+          "id": "KNTn9INJ3ZE",
+          "title": "Total Revenue and Total Cost from Rates",
+          "url": "https://www.youtube.com/watch?v=KNTn9INJ3ZE",
+          "dur": "4m 20s",
+          "views": 559,
+          "fil": "zVb8yVW6_7U"
+        },
+        {
+          "id": "4dhjSbehdaA",
+          "title": "Interpreting Definite Integrals in Context",
+          "url": "https://www.youtube.com/watch?v=4dhjSbehdaA",
+          "dur": "4m 47s",
+          "views": 797,
+          "fil": "EDea4EnvYiM"
+        }
+      ]
+    }
+  ]
+};
+
+const KIT_TIP = "<b>Use it your way:</b> assign the video as the lecture (online), project it and run the practice set in class (traditional), or have students watch before class and use the time for the activity (hybrid/flipped). Same lessons, worksheets, and verified tests.";
+
+const OBJECTIVES_BY_SLUG = {
+  "functions-and-graphs":["Evaluate linear and quadratic functions using function notation","Find the domain of rational functions and state excluded values","Interpret function values in business contexts (cost, revenue, profit)","Distinguish between linear and quadratic models"],
+  "limits":["Evaluate limits of polynomial functions by direct substitution","Resolve 0/0 indeterminate forms by factoring","Interpret limits as describing function behavior near a point","Apply limit concepts to price-demand models"],
+  "derivatives-rules":["Apply the power rule to differentiate monomials and polynomials","Apply the product rule to differentiate products of functions","Apply the chain rule to differentiate composite functions","Interpret the derivative as an instantaneous rate of change"],
+  "applications-of-derivatives":["Compute marginal cost, revenue, and profit using derivatives","Find critical points by setting the derivative equal to zero","Classify extrema and determine maximum profit or minimum cost","Solve applied optimization problems in business and economics"],
+  "antiderivatives-and-integrals":["Find antiderivatives of power functions using the integration power rule","Evaluate definite integrals using the Fundamental Theorem of Calculus","Interpret definite integrals as net accumulated change","Apply integration to recover total cost from marginal cost"],
+  "applications-of-integration":["Interpret definite integrals as total accumulated change over an interval","Compute area under a curve as a definite integral","Apply integration to compute total revenue or output from a rate function","Interpret the result of a definite integral in context"]
+};
+function alignPanel(t,i){
+  const objs=OBJECTIVES_BY_SLUG[t.slug];
+  if(!objs||!objs.length) return '';
+  const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const items=objs.map(o=>`<li>${esc(o)}</li>`).join('');
+  return `<details class="align">
+    <summary>🎯 Objectives this unit addresses (C-ID-aligned)<span class="chev">›</span></summary>
+    <div class="body">
+      <ul>${items}</ul>
+      <div class="crosswalk">Aligned to the statewide <b>C-ID ${COURSE.cid}</b> course objectives. These map to — but don't replace — your college's local SLOs; use them as a crosswalk for your syllabus and SLO assessment.</div>
+      <button class="alignbtn" onclick="copyAlignment(${i})">${ICONS.copy} Copy alignment statement</button>
+    </div>
+  </details>`;
+}
+function copyAlignment(i){
+  const t=COURSE.topics[i]; const objs=OBJECTIVES_BY_SLUG[t.slug]||[];
+  const txt=`${t.title} — aligned to C-ID ${COURSE.cid} (${COURSE.course}).\n`+
+    `Objectives addressed:\n`+objs.map(o=>`  • ${o}`).join('\n')+
+    `\nSource: Numberbender (numberbender.com) — free OER, C-ID aligned.`;
+  navigator.clipboard.writeText(txt).then(
+    ()=>toast('Alignment statement copied — paste into your syllabus or SLO crosswalk.'),
+    ()=>{const ta=document.createElement('textarea');ta.value=txt;document.body.appendChild(ta);ta.select();document.execCommand('copy');ta.remove();toast('Alignment statement copied.');});
+}
+
+const CANVAS_COPY_SLUGS = ["derivatives-rules"];
+function canvasCopyButtons(t,i){
+  if(!CANVAS_COPY_SLUGS.includes(t.slug)) return '';
+  const B=(window.NB_BANKS&&window.NB_BANKS.banks)||{};
+  const key=B[t.slug]?t.slug:t.slug;
+  if(!(B[key]||[]).length) return '';
+  return `<div class="cvrow">
+    <div class="cvh">${ICONS.copy} Copy as digital worksheet for Canvas</div>
+    <div class="cvbtns">
+      <button class="cvb" onclick="copyForCanvas(${i},false)">${ICONS.copy} Questions only</button>
+      <button class="cvb key" onclick="copyForCanvas(${i},true)">${ICONS.copy} With answer key</button>
+    </div>
+    <div class="cvnote">Paste into a Canvas <b>Page</b> or <b>Assignment</b> using the editor's HTML view (<b>&lt;/&gt;</b>). Text &amp; numeric items only. Pasted pages are <b>not</b> auto-graded — that's the QTI/.imscc path.</div>
+  </div>`;
+}
+function _esc(s){return String(s==null?'':s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));}
+function canvasWorksheetHTML(t,items,withKey){
+  const head=`<div style="font-family:Arial,Helvetica,sans-serif;max-width:720px">
+  <div style="background:#0c7d7d;color:#fff;padding:12px 16px;border-radius:8px 8px 0 0">
+    <div style="font-size:12px;letter-spacing:.03em">C-ID ${_esc(COURSE.cid)} &middot; ${_esc(COURSE.course)}</div>
+    <div style="font-size:19px;font-weight:bold">${_esc(t.title)} &mdash; Practice Worksheet${withKey?' (Answer Key)':''}</div>
+  </div>
+  <div style="border:1px solid #dce8e8;border-top:none;border-radius:0 0 8px 8px;padding:14px 16px">
+  <p style="color:#4a6068;font-size:13px;margin:0 0 12px">Show your work. ${withKey?'Verified answers shown in teal.':'Answer in the space provided.'}</p>
+  <ol style="padding-left:22px;margin:0">`;
+  const body=items.map(it=>{
+    const given=it.given?`<div style="font-family:'Courier New',monospace;background:#eafafa;display:inline-block;padding:4px 9px;border-radius:6px;margin:5px 0">${_esc(it.given)}</div>`:'';
+    const ans=withKey
+      ? `<div style="color:#0c7d7d;font-weight:bold;font-size:13px;margin-top:5px">Answer: ${_esc(it.answer_text)}</div>`
+      : `<div style="color:#888;font-size:13px;margin-top:6px">Answer: ____________________________</div>`;
+    return `<li style="margin-bottom:15px;font-size:14px;color:#10242b">${_esc(it.instruction)}${given}${ans}</li>`;
+  }).join('');
+  const foot=`</ol>
+  <p style="color:#9aa;font-size:11px;margin-top:14px;border-top:1px solid #eee;padding-top:8px">Numberbender &middot; numberbender.com &middot; Free OER, C-ID aligned. Answers verified by independent computation.</p>
+  </div></div>`;
+  return head+body+foot;
+}
+function copyForCanvas(i,withKey){
+  const t=COURSE.topics[i];
+  const items=sampleItems(t.slug,10);
+  if(!items.length){toast('Question bank not loaded.');return;}
+  const html=canvasWorksheetHTML(t,items,withKey);
+  const done=()=>toast(withKey?'Worksheet + key copied — paste into Canvas HTML view.':'Worksheet copied — paste into Canvas HTML view.');
+  navigator.clipboard.writeText(html).then(done,
+    ()=>{const ta=document.createElement('textarea');ta.value=html;document.body.appendChild(ta);ta.select();document.execCommand('copy');ta.remove();done();});
+}
+
+function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove('show'),2600);}
+
+function setMode(teacher){
+  document.body.classList.toggle('teacher',teacher);
+  document.getElementById('bTeacher').classList.toggle('on',teacher);
+  document.getElementById('bStudent').classList.toggle('on',!teacher);
+  const mt=document.getElementById('modeTag');
+  if(mt) mt.textContent = teacher ? '🏫 Instructor view' : '🎓 Student view';
+}
+
+const WORKSHEETS = {
+  "functions-and-graphs":          "exports/MATH120_functions_and_graphs.pdf",
+  "limits":                        "exports/MATH120_limits.pdf",
+  "derivatives-rules":             "exports/MATH120_derivatives_rules.pdf",
+  "applications-of-derivatives":   "exports/MATH120_applications_of_derivatives.pdf",
+  "antiderivatives-and-integrals": "exports/MATH120_antiderivatives_and_integrals.pdf",
+  "applications-of-integration":   "exports/MATH120_applications_of_integration.pdf"
+};
+
+const ICONS = {
+  play:'<svg aria-hidden="true" class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 4 20 12 6 20 6 4" fill="currentColor" stroke="none"/></svg>',
+  sheet:'<svg aria-hidden="true" class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/></svg>',
+  quiz:'<svg aria-hidden="true" class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>',
+  test:'<svg aria-hidden="true" class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>',
+  video:'<svg aria-hidden="true" class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="15" height="14" rx="2"/><path d="M17 9l5-3v12l-5-3"/></svg>',
+  copy:'<svg aria-hidden="true" class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>'
+};
+
+function subtopicChips(slug){
+  const M=(window.NB_BANKS&&window.NB_BANKS.meta)||{};
+  const meta=M[slug]||null;
+  if(!meta||!meta.subtopics) return '';
+  const names=Object.keys(meta.subtopics);
+  if(!names.length) return '';
+  const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  return '<div class="subchips" title="Covered in the worksheet, quiz, and test">'+
+    names.map(n=>`<span class="subchip">${esc(n)}</span>`).join('')+'</div>';
+}
+
+const tc=document.getElementById('topics');
+COURSE.topics.forEach((t,i)=>{
+  t.worksheet = WORKSHEETS[t.slug] || t.worksheet || null;
+  const sheetBtn = t.worksheet
+    ? `<button class="btn btn-sheet" onclick="openWorksheet(${i})">${ICONS.sheet} Worksheet + Key</button>`
+    : `<button class="btn btn-sheet" onclick="toast('Practice set for this topic is being built.')">${ICONS.sheet} Worksheet + Key</button>`;
+  const dlBtn = t.worksheet
+    ? `<a class="btn btn-dl" href="${t.worksheet}" download title="Download the worksheet PDF (with answer key)">⬇ Download PDF</a>`
+    : '';
+  const canvasSnippet = buildCanvasSnippet(t);
+  tc.insertAdjacentHTML('beforeend', `
+    <div class="topic">
+      <div class="topic-main">
+        <div class="tnum">${i+1}</div>
+        <div class="tbody">
+          <h3>${t.title}</h3>
+          <p>${t.desc}</p>
+          ${subtopicChips(t.slug)}
+          <div class="actions">
+            <button class="btn btn-watch" onclick="openTopic(${i})">${ICONS.play} Watch lesson</button>
+            ${sheetBtn}
+            ${dlBtn}
+            <button class="btn btn-quiz studentOnly" onclick="openQuiz(${i})">${ICONS.quiz} Practice quiz</button>
+            <button class="btn btn-test teacherOnly" onclick="openTest(${i})">${ICONS.test} Generate test</button>
+            <span class="vcount">${ICONS.video} ${t.videos.length} video lessons</span>${(()=>{const n=t.videos?t.videos.filter(v=>v.fil).length:0;const tot=t.videos.length;if(!n)return '';const lab=(n===tot)?'EN + FIL':`EN + FIL · ${n}/${tot}`;return `<span class="filbadge" title="All ${tot} lessons are in English; ${n} also available in Filipino">${lab}</span>`;})()}
+          </div>
+        </div>
+      </div>
+      <div class="kit">
+        <h4>Instructor teaching kit</h4>
+        <div class="row">
+          <button class="mini" onclick="copyCanvas(${i})">${ICONS.copy} Copy Canvas block</button>
+          <button class="mini" onclick="openTopic(${i})">${ICONS.play} Preview lesson</button>
+          ${t.worksheet?`<button class="mini" onclick="openWorksheet(${i})">${ICONS.sheet} Preview / download worksheet</button>`:''}
+        </div>
+        ${canvasCopyButtons(t,i)}
+        <div class="kit-note">${KIT_TIP}</div>
+        ${alignPanel(t,i)}
+        <div class="help">Need the full Canvas import file? <a href="#" onclick="toast('Common Cartridge (.imscc) export + setup guide live on the help page.');return false;">Canvas setup &amp; .imscc →</a></div>
+        <textarea id="canvas${i}" style="position:absolute;left:-9999px">${canvasSnippet}</textarea>
+      </div>
+    </div>`);
+});
+
+function buildCanvasSnippet(t){
+  const v=t.videos[0]||null;
+  return `<div style="font-family:Arial,sans-serif;max-width:760px;border:1px solid #dce8e8;border-radius:10px;overflow:hidden">
+  <div style="background:#0c7d7d;color:#fff;padding:14px 18px">
+    <div style="font-size:12px;letter-spacing:.04em">C-ID MATH 120 · Survey of Calculus</div>
+    <div style="font-size:20px;font-weight:bold">${t.title}</div>
+  </div>
+  <div style="padding:16px 18px">
+    <p style="color:#4a6068;margin:0 0 12px">${t.desc}</p>
+    ${v?`<div style="position:relative;padding-bottom:56.25%;height:0;margin-bottom:14px">
+      <iframe src="https://www.youtube-nocookie.com/embed/${v.id}?rel=0" title="${v.title}" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <p style="margin:0"><b>Lesson:</b> ${v.title}</p>`:`<p style="margin:0;color:#4a6068"><i>Video lessons for this topic are coming soon — the worksheet below is ready to use.</i></p>`}
+  </div>
+</div>`;
+}
+function copyCanvas(i){
+  const ta=document.getElementById('canvas'+i);ta.select();
+  navigator.clipboard.writeText(ta.value).then(()=>toast('Canvas block copied — paste into a Canvas Page HTML editor.'),
+    ()=>{document.execCommand('copy');toast('Canvas block copied.');});
+}
+
+const overlay=document.getElementById('overlay'),frame=document.getElementById('mFrame'),
+      mTitle=document.getElementById('mTitle'),mList=document.getElementById('mList');
+const mUrl=document.getElementById('mUrl');
+let LANG='en', CUR_TOPIC=0, CUR_IDX=0;
+function vidId(v){ return (LANG==='fil' && v.fil) ? v.fil : v.id; }
+function play(id,title){
+  frame.src='https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0&modestbranding=1&playsinline=1';
+  mTitle.textContent=title;
+  mUrl.value='https://www.youtube.com/watch?v='+id;
+}
+function playIdx(idx){
+  CUR_IDX=idx;
+  const t=COURSE.topics[CUR_TOPIC], v=t.videos[idx], id=vidId(v);
+  const tag = LANG==='fil' ? (v.fil?' · Filipino':' · (English — Filipino soon)') : '';
+  play(id, v.title+tag);
+  [...mList.children].forEach((c,k)=>c.classList.toggle('on',k===idx));
+}
+function renderPlaylist(){
+  const t=COURSE.topics[CUR_TOPIC];
+  mList.innerHTML=t.videos.map((v,idx)=>{
+    const lab=(LANG==='fil') ? (v.fil?' <span class="filchip" title="Playing the Filipino version">FIL</span>':' <span class="enonly" title="No Filipino version yet — plays in English">EN only</span>') : ' <span class="filchip" title="Playing the English version">EN</span>';
+    return `<div class="pl" data-idx="${idx}" onclick="playIdx(${idx})">${v.title}${lab}<div class="d">${v.dur}${(typeof STATS_ESTIMATED!=="undefined"&&STATS_ESTIMATED)||!v.views?"":` · ${v.views.toLocaleString()} views`}</div></div>`;
+  }).join('');
+}
+function setLang(l){
+  LANG=l;
+  document.getElementById('langEn').classList.toggle('on',l==='en');
+  document.getElementById('langFil').classList.toggle('on',l==='fil');
+  document.getElementById('langEn').setAttribute('aria-pressed',l==='en');
+  document.getElementById('langFil').setAttribute('aria-pressed',l==='fil');
+  renderPlaylist(); playIdx(CUR_IDX);
+}
+function copyVideoUrl(){mUrl.select();
+  navigator.clipboard.writeText(mUrl.value).then(()=>toast('Video link copied — paste it for your class.'),
+    ()=>{document.execCommand('copy');toast('Video link copied.');});}
+function openTopic(i){
+  CUR_TOPIC=i; CUR_IDX=0;
+  renderPlaylist();
+  overlay.classList.add('show');document.body.style.overflow='hidden';
+  playIdx(0);
+}
+function closeModal(){overlay.classList.remove('show');frame.src='';document.body.style.overflow='';}
+
+const wsOverlay=document.getElementById('wsOverlay'),wsFrame=document.getElementById('wsFrame'),
+      wsTitle=document.getElementById('wsTitle'),wsDownload=document.getElementById('wsDownload');
+function openWorksheet(i){
+  const t=COURSE.topics[i];
+  wsTitle.textContent=t.title+' — Worksheet + Answer Key';
+  wsFrame.src=t.worksheet+'#toolbar=1&view=FitH';
+  wsDownload.href=t.worksheet;
+  wsDownload.setAttribute('download', (t.worksheet||'worksheet.pdf').split('/').pop());
+  wsOverlay.classList.add('show');document.body.style.overflow='hidden';
+}
+function closeWorksheet(){wsOverlay.classList.remove('show');wsFrame.src='';document.body.style.overflow='';}
+
+const BANKS = (window.NB_BANKS && window.NB_BANKS.banks) || {};
+const BMETA = (window.NB_BANKS && window.NB_BANKS.meta)  || {};
+function bankKey(slug){ return slug; }
+function bankReady(){ return window.NB_BANKS && Object.keys(BANKS).length>0; }
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+function sampleItems(slug,n,{maxDiff=0,subs=null}={}){
+  let pool=(BANKS[bankKey(slug)]||[]);
+  if(maxDiff)  pool=pool.filter(it=>it.difficulty<=maxDiff);
+  if(subs&&subs.length) pool=pool.filter(it=>subs.includes(it.subtopic));
+  const by={}; pool.forEach(it=>{(by[it.subtopic]=by[it.subtopic]||[]).push(it);});
+  Object.keys(by).forEach(k=>by[k]=shuffle(by[k]));
+  const order=shuffle(Object.keys(by)); const out=[]; let added=true;
+  while(out.length<n&&added){added=false;for(const k of order){if(by[k].length){out.push(by[k].shift());added=true;if(out.length>=n)break;}}}
+  return out;
+}
+
+const qzOverlay=document.getElementById('qzOverlay');
+let QZ={slug:null,items:[]};
+function openQuiz(i){
+  const t=COURSE.topics[i];
+  if(!bankReady()){toast('Question bank not loaded — open this page so MATH120_banks.js can load.');return;}
+  QZ.slug=t.slug; QZ.title=t.title; newQuiz();
+  qzOverlay.classList.add('show');document.body.style.overflow='hidden';
+}
+function newQuiz(){
+  const items=sampleItems(QZ.slug,5);
+  QZ.items=items;
+  document.getElementById('qzTitle').textContent=QZ.title+' — Practice quiz';
+  document.getElementById('qzMeta').innerHTML='5 self-checking questions · ungraded · retry anytime. Type your answer, then <b>Check answers</b>.';
+  document.getElementById('qzScore').textContent='Self-check — not graded.';
+  document.getElementById('qzBody').innerHTML=items.map((it,n)=>`
+    <div class="qz-q" id="qzq${n}">
+      <div class="qhead"><span class="qnum">Q${n+1}</span><span class="qsub">${it.subtopic}</span></div>
+      <div class="qinstr">${escapeHtml(it.instruction)}</div>
+      ${it.given?`<div class="qgiven">${escapeHtml(it.given)}</div>`:''}
+      <input class="qans" id="qza${n}" type="text" placeholder="Your answer" aria-label="Your answer" autocomplete="off">
+      <div class="qfb ok">✓ Correct</div>
+      <div class="qfb no">✗ Not quite</div>
+      <div class="qreveal">Answer: <b>${escapeHtml(it.answer_text)}</b></div>
+    </div>`).join('');
+}
+function normAns(s){return (s||'').toLowerCase().replace(/\s+/g,'').replace(/[$]/g,'').replace(/[,;]/g,',');}
+function numbersIn(s){return (s.match(/-?\d+\.?\d*/g)||[]).map(Number);}
+function quizMatch(input,it){
+  const want=it.answer_value, got=normAns(input);
+  if(!got) return false;
+  const wantNums=numbersIn(JSON.stringify(want));
+  const gotNums=numbersIn(input);
+  if(wantNums.length && gotNums.length>=wantNums.length){
+    return wantNums.every(w=>gotNums.some(g=>Math.abs(g-w)<=Math.max(0.02,Math.abs(w)*0.01)));
+  }
+  const wantText=normAns(it.answer_text);
+  return wantText.split(',').every(part=>part&&got.includes(part.split('=').pop()));
+}
+function checkQuiz(){
+  let correct=0;
+  QZ.items.forEach((it,n)=>{
+    const el=document.getElementById('qzq'+n);
+    const val=document.getElementById('qza'+n).value;
+    const ok=quizMatch(val,it);
+    el.classList.remove('correct','wrong');
+    el.classList.add(ok?'correct':'wrong');
+    if(ok)correct++;
+  });
+  document.getElementById('qzScore').textContent=`You got ${correct} / ${QZ.items.length} — `+
+    (correct===QZ.items.length?'perfect!':'check the ones marked, answers shown below them.');
+}
+function revealQuiz(){QZ.items.forEach((it,n)=>document.getElementById('qzq'+n).classList.add('revealed'));}
+function closeQuiz(){qzOverlay.classList.remove('show');document.body.style.overflow='';}
+
+const tgOverlay=document.getElementById('tgOverlay');
+let TG={slug:null,title:null};
+function openTest(i){
+  const t=COURSE.topics[i];
+  if(!bankReady()){toast('Question bank not loaded — open this page so MATH120_banks.js can load.');return;}
+  TG.slug=t.slug; TG.title=t.title;
+  document.getElementById('tgTitle').textContent=t.title+' — Generate test';
+  const meta=BMETA[bankKey(t.slug)]||{subtopics:{}};
+  const subs=Object.keys(meta.subtopics||{});
+  document.getElementById('tgSubs').innerHTML=subs.map(s=>
+    `<label><input type="checkbox" class="tgsub" value="${escapeHtml(s)}" checked> ${escapeHtml(s)} <span style="color:var(--slate)">(${meta.subtopics[s]})</span></label>`).join('');
+  document.getElementById('tgInfo').textContent=`${meta.total||0} verified items available across ${subs.length} sub-topics.`;
+  tgOverlay.classList.add('show');document.body.style.overflow='hidden';
+}
+function buildTest(){
+  const count=+document.getElementById('tgCount').value;
+  const maxDiff=+document.getElementById('tgDiff').value;
+  const versions=+document.getElementById('tgVers').value;
+  const subs=[...document.querySelectorAll('.tgsub:checked')].map(c=>c.value);
+  if(!subs.length){toast('Pick at least one sub-topic.');return;}
+  const letters=['A','B','C','D'];
+  const forms=[];
+  for(let v=0;v<versions;v++){
+    const items=sampleItems(TG.slug,count,{maxDiff,subs});
+    if(!items.length){toast('No items match those filters — loosen difficulty or sub-topics.');return;}
+    forms.push({label:letters[v],items});
+  }
+  openPrintableTest(TG.title,forms);
+}
+function escapeHtml(s){return (s==null?'':String(s)).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function openPrintableTest(title,forms){
+  const today=new Date().toLocaleDateString();
+  const sect=(f,withKey)=>`
+    <section class="form">
+      <div class="thead">
+        <div class="brandrow"><div class="logo">N</div>
+          <div><div class="ttl">Numberbender · C-ID MATH 155</div><div class="sub">${escapeHtml(title)} — Test ${f.label}${withKey?' · ANSWER KEY':''}</div></div>
+          ${withKey?'<div class="keybadge">ANSWER KEY</div>':'<div class="meta">Name: ________________  Date: __________</div>'}
+        </div>
+      </div>
+      <ol class="qs">
+        ${f.items.map(it=>`<li>
+          <div class="qi">${escapeHtml(it.instruction)}</div>
+          ${it.given?`<div class="gv">${escapeHtml(it.given)}</div>`:''}
+          ${withKey?`<div class="ak">Answer: ${escapeHtml(it.answer_text)}</div>`:'<div class="blank">Answer: ____________________________</div>'}
+        </li>`).join('')}
+      </ol>
+    </section>`;
+  let body='';
+  forms.forEach(f=>{ body+=sect(f,false); });
+  forms.forEach(f=>{ body+=sect(f,true); });
+  const html=`<!DOCTYPE html><html><head><meta charset="utf-8"><title>${escapeHtml(title)} — Test</title>
+  <style>
+   @media print{.noprint{display:none}.form{page-break-after:always}}
+   body{font-family:Arial,Helvetica,sans-serif;color:#10242b;margin:0;background:#f4faf9}
+   .bar{position:sticky;top:0;background:#0c7d7d;color:#fff;padding:12px 18px;display:flex;gap:12px;align-items:center}
+   .bar button{font:inherit;font-weight:700;border:none;border-radius:8px;padding:9px 16px;cursor:pointer;background:#e8a93b;color:#10242b}
+   .wrap{max-width:760px;margin:18px auto;background:#fff;box-shadow:0 2px 14px rgba(7,94,94,.1)}
+   .form{padding:30px 34px}
+   .thead{border-bottom:2px solid #0c7d7d;padding-bottom:10px;margin-bottom:16px}
+   .brandrow{display:flex;align-items:center;gap:12px}
+   .logo{width:38px;height:38px;border:2.5px solid #0c7d7d;border-radius:7px;display:flex;align-items:center;justify-content:center;font-weight:800;color:#0c7d7d;font-size:20px;font-family:Georgia,serif}
+   .ttl{font-size:12px;color:#4a6068;letter-spacing:.03em}.sub{font-size:18px;font-weight:800}
+   .meta{margin-left:auto;font-size:12px;color:#4a6068}
+   .keybadge{margin-left:auto;background:#0c7d7d;color:#fff;font-weight:700;font-size:12px;padding:5px 10px;border-radius:6px}
+   ol.qs{padding-left:22px}ol.qs li{margin-bottom:16px;font-size:14px}
+   .qi{font-weight:500}.gv{font-family:'Courier New',monospace;background:#eafafa;display:inline-block;padding:4px 9px;border-radius:6px;margin:5px 0}
+   .blank{color:#888;margin-top:6px;font-size:13px}.ak{color:#0c7d7d;font-weight:700;margin-top:6px}
+  </style></head><body>
+   <div class="bar noprint"><b>${escapeHtml(title)} — ${forms.length} version(s) + answer key</b>
+     <button onclick="window.print()">⬇ Print / Save as PDF</button>
+     <span style="font-size:12.5px;opacity:.85">Use your browser's "Save as PDF". Verified answer keys follow the blank forms.</span></div>
+   <div class="wrap">${body}</div>
+  </body></html>`;
+  const w=window.open('','_blank');
+  if(!w){toast('Allow pop-ups to open the printable test.');return;}
+  w.document.write(html); w.document.close();
+}
+function closeTest(){tgOverlay.classList.remove('show');document.body.style.overflow='';}
+
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeModal();closeWorksheet();closeQuiz();closeTest();}});
+</script>
+<script>
+function nbToggleDD(btn){
+  var menu = btn.nextElementSibling;
+  var willOpen = !menu.classList.contains('open');
+  document.querySelectorAll('.nbnav-menu.open').forEach(function(m){
+    m.classList.remove('open');
+    var t = m.previousElementSibling; if(t) t.setAttribute('aria-expanded','false');
+  });
+  if(willOpen){ menu.classList.add('open'); btn.setAttribute('aria-expanded','true'); }
+}
+document.addEventListener('click',function(e){
+  if(!e.target.closest('.nbnav-dd')){
+    document.querySelectorAll('.nbnav-menu.open').forEach(function(m){
+      m.classList.remove('open');
+      var t=m.previousElementSibling; if(t) t.setAttribute('aria-expanded','false');
+    });
+  }
+});
+</script>
+<script>(function(){try{var p=new URLSearchParams(location.search);var l=p.get("lang")||localStorage.getItem("nb_lang");if(l==="fil"&&typeof LANG!=="undefined"){LANG="fil";var e=document.getElementById("langEn"),f=document.getElementById("langFil");if(e)e.classList.remove("on");if(f)f.classList.add("on");}}catch(_){}})();</script>
+<script src="nb-analytics.js" defer></script>
+</body>
+</html>

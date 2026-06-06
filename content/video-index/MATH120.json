@@ -1,0 +1,256 @@
+{
+  "cid": "MATH 120",
+  "course": "Survey of Calculus",
+  "topics": [
+    {
+      "slug": "functions-and-graphs",
+      "title": "Functions & Graphs",
+      "desc": "Evaluating linear and quadratic functions, interpreting function notation, and finding the domain of rational functions. Business applications throughout.",
+      "videos": [
+        {
+          "id": "9exMxUS-QGc",
+          "title": "Introduction to Functions and Function Notation",
+          "url": "https://www.youtube.com/watch?v=9exMxUS-QGc",
+          "dur": "10m 47s",
+          "views": 2004,
+          "fil": "fDlWPUEPqBM"
+        },
+        {
+          "id": "9tMSRf8pcRs",
+          "title": "Linear Functions and Slope",
+          "url": "https://www.youtube.com/watch?v=9tMSRf8pcRs",
+          "dur": "7m 33s",
+          "views": 1840,
+          "fil": "e0pgfD66bZY"
+        },
+        {
+          "id": "gTu4iKykemM",
+          "title": "Quadratic Functions and Parabolas",
+          "url": "https://www.youtube.com/watch?v=gTu4iKykemM",
+          "dur": "25m 9s",
+          "views": 159,
+          "fil": "U6iyvl0ZW_0"
+        },
+        {
+          "id": "CXkjM33MXww",
+          "title": "Domain and Range",
+          "url": "https://www.youtube.com/watch?v=CXkjM33MXww",
+          "dur": "6m 18s",
+          "views": 17151,
+          "fil": "0NVqydqyzV4"
+        }
+      ]
+    },
+    {
+      "slug": "limits",
+      "title": "Limits",
+      "desc": "Intuitive understanding of limits: direct substitution and factoring to resolve 0/0 forms. No epsilon-delta — just the core idea.",
+      "videos": [
+        {
+          "id": "CGZXu3Gq_0g",
+          "title": "Introduction to Limits",
+          "url": "https://www.youtube.com/watch?v=CGZXu3Gq_0g",
+          "dur": "25m 18s",
+          "views": 1078,
+          "fil": "0sYj5PFIPFY"
+        },
+        {
+          "id": "V6ZCqn4rLuc",
+          "title": "Limits by Direct Substitution",
+          "url": "https://www.youtube.com/watch?v=V6ZCqn4rLuc",
+          "dur": "9m 40s",
+          "views": 247,
+          "fil": "bw4vc3BU_-Q"
+        },
+        {
+          "id": "zEgMBKtxDaE",
+          "title": "Limits by Factoring",
+          "url": "https://www.youtube.com/watch?v=zEgMBKtxDaE",
+          "dur": "10m 7s",
+          "views": 13482,
+          "fil": "jcJdM6QuNs0"
+        },
+        {
+          "id": "LBewgSAfvsI",
+          "title": "One-Sided Limits",
+          "url": "https://www.youtube.com/watch?v=LBewgSAfvsI",
+          "dur": "10m 12s",
+          "views": 4665,
+          "fil": "tXxQpGFOdiI"
+        }
+      ]
+    },
+    {
+      "slug": "derivatives-rules",
+      "title": "Derivatives & Differentiation Rules",
+      "desc": "Power rule, product rule, chain rule — applied to cost, revenue, and profit functions.",
+      "videos": [
+        {
+          "id": "Sq40TTKQJhE",
+          "title": "The Power Rule for Derivatives",
+          "url": "https://www.youtube.com/watch?v=Sq40TTKQJhE",
+          "dur": "8m 31s",
+          "views": 5150,
+          "fil": "146TO6lLJ9Q"
+        },
+        {
+          "id": "aG0QGylbxb0",
+          "title": "Differentiating Polynomial Functions",
+          "url": "https://www.youtube.com/watch?v=aG0QGylbxb0",
+          "dur": "11m 33s",
+          "views": 1186,
+          "fil": "aI7V1JR2Z-U"
+        },
+        {
+          "id": "wut95XJZWjQ",
+          "title": "The Product Rule",
+          "url": "https://www.youtube.com/watch?v=wut95XJZWjQ",
+          "dur": "4m 42s",
+          "views": 1642,
+          "fil": "vVUMeCDA__g"
+        },
+        {
+          "id": "9y6ym_2Wvrk",
+          "title": "The Chain Rule",
+          "url": "https://www.youtube.com/watch?v=9y6ym_2Wvrk",
+          "dur": "9m 19s",
+          "views": 1330,
+          "fil": "bU-uZ6cEFVM"
+        }
+      ]
+    },
+    {
+      "slug": "applications-of-derivatives",
+      "title": "Applications of Derivatives",
+      "desc": "Marginal analysis, critical points, and optimization — finding maximum profit, minimum cost, and optimal production levels.",
+      "videos": [
+        {
+          "id": "4d8wqQWRlIo",
+          "title": "Increasing and Decreasing Functions",
+          "url": "https://www.youtube.com/watch?v=4d8wqQWRlIo",
+          "dur": "10m 27s",
+          "views": 1463,
+          "fil": "boa33U6lD5o"
+        },
+        {
+          "id": "1DKKUoFUDyk",
+          "title": "Critical Points and Optimization",
+          "url": "https://www.youtube.com/watch?v=1DKKUoFUDyk",
+          "dur": "12m 39s",
+          "views": 3420,
+          "fil": "S9jf9kEMMck"
+        },
+        {
+          "id": "cUPN9j-p04Y",
+          "title": "Second Derivative Test — Concavity & Inflection",
+          "url": "https://www.youtube.com/watch?v=cUPN9j-p04Y",
+          "dur": "7m 57s",
+          "views": 2010,
+          "fil": "dxmRbbc1etI"
+        },
+        {
+          "id": "WGEiXm9Qofk",
+          "title": "Analyzing f(x) Using the Graph of f'(x)",
+          "url": "https://www.youtube.com/watch?v=WGEiXm9Qofk",
+          "dur": "9m 40s",
+          "views": 13027,
+          "fil": "7r871U0jaaM"
+        },
+        {
+          "id": "U-jUWoebKZc",
+          "title": "Applied Optimization Problems",
+          "url": "https://www.youtube.com/watch?v=U-jUWoebKZc",
+          "dur": "15m 6s",
+          "views": 8668,
+          "fil": "-kzvsog_7O8"
+        },
+        {
+          "id": "rlEdoj5xJ1w",
+          "title": "Marginal Analysis in Business",
+          "url": "https://www.youtube.com/watch?v=rlEdoj5xJ1w",
+          "dur": "8m 28s",
+          "views": 373,
+          "fil": "th4pfjqt0XI"
+        }
+      ]
+    },
+    {
+      "slug": "antiderivatives-and-integrals",
+      "title": "Antiderivatives & Definite Integrals",
+      "desc": "Power rule for antiderivatives, indefinite integrals, and the Fundamental Theorem of Calculus for definite integrals.",
+      "videos": [
+        {
+          "id": "dzXQYjDvFfM",
+          "title": "Introduction to Antiderivatives",
+          "url": "https://www.youtube.com/watch?v=dzXQYjDvFfM",
+          "dur": "7m 31s",
+          "views": 1433,
+          "fil": "ODd4K-tEBpQ"
+        },
+        {
+          "id": "ijoZuosJZEA",
+          "title": "Definite Integrals — Power Rule",
+          "url": "https://www.youtube.com/watch?v=ijoZuosJZEA",
+          "dur": "9m 14s",
+          "views": 957,
+          "fil": "cISTqL-i9yY"
+        },
+        {
+          "id": "XHtZBGyADHc",
+          "title": "The Fundamental Theorem of Calculus",
+          "url": "https://www.youtube.com/watch?v=XHtZBGyADHc",
+          "dur": "5m 57s",
+          "views": 1204,
+          "fil": "6ArPsBlDLmU"
+        },
+        {
+          "id": "s4KiDXCq0mY",
+          "title": "Area Under a Curve",
+          "url": "https://www.youtube.com/watch?v=s4KiDXCq0mY",
+          "dur": "9m 38s",
+          "views": 2768,
+          "fil": "M_KDipH-mlw"
+        }
+      ]
+    },
+    {
+      "slug": "applications-of-integration",
+      "title": "Applications of Integration",
+      "desc": "Total accumulated change, area under a curve, and interpreting definite integrals in business contexts.",
+      "videos": [
+        {
+          "id": "FdLCZQUV3q8",
+          "title": "Accumulated Change as a Definite Integral",
+          "url": "https://www.youtube.com/watch?v=FdLCZQUV3q8",
+          "dur": "6m 58s",
+          "views": 3882,
+          "fil": "sXr0bfHH5IM"
+        },
+        {
+          "id": "xI5hXmmw9QM",
+          "title": "Area Between Curves",
+          "url": "https://www.youtube.com/watch?v=xI5hXmmw9QM",
+          "dur": "32m 14s",
+          "views": 781,
+          "fil": "q_HR89n0TG0"
+        },
+        {
+          "id": "KNTn9INJ3ZE",
+          "title": "Total Revenue and Total Cost from Rates",
+          "url": "https://www.youtube.com/watch?v=KNTn9INJ3ZE",
+          "dur": "4m 20s",
+          "views": 559,
+          "fil": "zVb8yVW6_7U"
+        },
+        {
+          "id": "4dhjSbehdaA",
+          "title": "Interpreting Definite Integrals in Context",
+          "url": "https://www.youtube.com/watch?v=4dhjSbehdaA",
+          "dur": "4m 47s",
+          "views": 797,
+          "fil": "EDea4EnvYiM"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "id": "mathteach-fracmul-001",
+  "cid": "MATHTEACH",
+  "topic": "Fractions and Proportional Reasoning",
+  "subtopic": "Multiplying fractions",
+  "difficulty": 1,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Multiply the fractions and simplify: {a}/{b} x {c}/{d}.",
+  "params": {
+    "a": {
+      "type": "int",
+      "min": 1,
+      "max": 6
+    },
+    "b": {
+      "type": "int",
+      "min": 2,
+      "max": 8
+    },
+    "c": {
+      "type": "int",
+      "min": 1,
+      "max": 6
+    },
+    "d": {
+      "type": "int",
+      "min": 2,
+      "max": 8
+    }
+  },
+  "answer_expr": "fracmul",
+  "steps": [
+    "Multiply numerators: {a} x {c} = {ac}.",
+    "Multiply denominators: {b} x {d} = {bd}.",
+    "Simplify {ac}/{bd}: {answer_fracmul}."
+  ],
+  "tags": [
+    "pre-algebra",
+    "fractions",
+    "multiplication"
+  ],
+  "source": "adapted-from:fracmul-001.json"
+}

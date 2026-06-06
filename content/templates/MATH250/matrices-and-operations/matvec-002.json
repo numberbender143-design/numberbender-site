@@ -1,0 +1,20 @@
+{
+  "id": "math250-matvec23-002",
+  "cid": "MATH 250",
+  "topic": "Matrices and Operations",
+  "subtopic": "Matrix-vector product",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "A linear transformation is given by the 2x3 matrix A. Find entry {ri} of y = Ax.\nA:\n  Row 1: [{a11}, {a12}, {a13}]\n  Row 2: [{a21}, {a22}, {a23}]\nx = [{x1}, {x2}, {x3}]",
+  "params": {
+    "a11": {"type":"int","min":-4,"max":4}, "a12": {"type":"int","min":-4,"max":4}, "a13": {"type":"int","min":-4,"max":4},
+    "a21": {"type":"int","min":-4,"max":4}, "a22": {"type":"int","min":-4,"max":4}, "a23": {"type":"int","min":-4,"max":4},
+    "x1":  {"type":"int","min":-2,"max":2}, "x2":  {"type":"int","min":-2,"max":2}, "x3":  {"type":"int","min":-2,"max":2},
+    "q_row": {"type":"int","min":0,"max":1}
+  },
+  "answer_expr": "matvec23",
+  "steps": [
+    "y_{ri} = row {ri} of A . x = {terms_str} = {answer_matvec23}."
+  ],
+  "tags": ["linear-algebra","matrix-vector-product","linear-transformation"]
+}

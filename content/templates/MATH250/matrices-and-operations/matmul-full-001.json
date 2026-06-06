@@ -1,0 +1,23 @@
+{
+  "id": "math250-matmul_full22-001",
+  "cid": "MATH 250",
+  "topic": "Matrices and Operations",
+  "subtopic": "Matrix multiplication",
+  "difficulty": 3,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Compute the full product matrix C = A x B.\nA:\n  Row 1: [{a11}, {a12}]\n  Row 2: [{a21}, {a22}]\nB:\n  Row 1: [{b11}, {b12}]\n  Row 2: [{b21}, {b22}]\nGive all four entries of C.",
+  "params": {
+    "a11": {"type":"int","min":-3,"max":3}, "a12": {"type":"int","min":-3,"max":3},
+    "a21": {"type":"int","min":-3,"max":3}, "a22": {"type":"int","min":-3,"max":3},
+    "b11": {"type":"int","min":-3,"max":3}, "b12": {"type":"int","min":-3,"max":3},
+    "b21": {"type":"int","min":-3,"max":3}, "b22": {"type":"int","min":-3,"max":3}
+  },
+  "answer_expr": "matmul_full22",
+  "steps": [
+    "C[1][1] = a11*b11+a12*b21 = {c11}",
+    "C[1][2] = a11*b12+a12*b22 = {c12}",
+    "C[2][1] = a21*b11+a22*b21 = {c21}",
+    "C[2][2] = a21*b12+a22*b22 = {c22}"
+  ],
+  "tags": ["linear-algebra","matrix-multiplication","full-product","2x2"]
+}

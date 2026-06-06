@@ -1,0 +1,21 @@
+{
+  "id": "math250-matdet2-001",
+  "cid": "MATH 250",
+  "topic": "Determinants",
+  "subtopic": "2x2 determinant",
+  "difficulty": 1,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Compute the determinant of the 2x2 matrix A = [[{a}, {b}], [{c}, {d}]].",
+  "params": {
+    "a": { "type": "int", "min": -5, "max": 5 },
+    "b": { "type": "int", "min": -5, "max": 5 },
+    "c": { "type": "int", "min": -5, "max": 5 },
+    "d": { "type": "int", "min": -5, "max": 5 }
+  },
+  "answer_expr": "matdet2",
+  "steps": [
+    "For a 2x2 matrix, det(A) = ad - bc.",
+    "det(A) = ({a})({d}) - ({b})({c}) = {ad} - {bc} = {answer_matdet2}."
+  ],
+  "tags": ["linear-algebra", "determinant", "2x2"]
+}

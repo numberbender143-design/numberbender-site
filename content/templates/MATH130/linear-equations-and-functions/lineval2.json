@@ -1,0 +1,34 @@
+{
+  "id": "math130-lineval2-001",
+  "cid": "MATH 130",
+  "topic": "Linear Equations and Functions",
+  "subtopic": "Evaluating a linear function",
+  "difficulty": 1,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Given g(x) = {m}x - {b_pos}, find g({x_val}).",
+  "params": {
+    "m": {
+      "type": "int",
+      "min": 2,
+      "max": 8
+    },
+    "b_pos": {
+      "type": "int",
+      "min": 1,
+      "max": 9
+    },
+    "x_val": {
+      "type": "int",
+      "min": -4,
+      "max": 6
+    }
+  },
+  "answer_expr": "lineval2",
+  "steps": [
+    "Substitute x = {x_val}: g({x_val}) = {m}({x_val}) - {b_pos} = {m_times_x2} - {b_pos} = {answer_lineval2}."
+  ],
+  "tags": [
+    "linear-function",
+    "function-evaluation"
+  ]
+}

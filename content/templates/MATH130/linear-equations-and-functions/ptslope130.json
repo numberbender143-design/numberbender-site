@@ -1,0 +1,21 @@
+{
+  "id": "math130-ptslope130-001",
+  "cid": "MATH 130",
+  "topic": "Linear Equations and Functions",
+  "subtopic": "Point-slope form",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Write the equation in point-slope form for the line through ({x0}, {y0}) with slope {m}/{n}.",
+  "params": {
+    "x0": {"type": "int", "min": -5, "max": 5},
+    "y0": {"type": "int", "min": -5, "max": 5},
+    "m": {"type": "int", "min": -4, "max": 4},
+    "n": {"type": "int", "min": 1, "max": 4}
+  },
+  "answer_expr": "ptslope130",
+  "steps": [
+    "Point-slope form: y - y1 = m(x - x1).",
+    "y - {y0} = {slope_str}(x - {x0})."
+  ],
+  "tags": ["point-slope", "linear-equation"]
+}

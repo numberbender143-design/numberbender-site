@@ -1,0 +1,20 @@
+{
+  "id": "math220-polyint-002",
+  "cid": "MATH 220",
+  "topic": "Applications of Integration",
+  "subtopic": "Area under a curve",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Find the area under f(x) = {c}x^{n} from x = 0 to x = {b}.",
+  "params": {
+    "c": { "type": "int", "min": 1, "max": 4 },
+    "n": { "type": "int", "min": 1, "max": 3 },
+    "b": { "type": "int", "min": 2, "max": 5 }
+  },
+  "answer_expr": "polyint3",
+  "steps": [
+    "Area = integral from 0 to {b} of {c}x^{n} dx = [{c}x^{n_plus_1}/{n_plus_1}] from 0 to {b}.",
+    "= {c}*{b}^{n_plus_1}/{n_plus_1} = {answer_polyint3}."
+  ],
+  "tags": ["area", "definite-integral", "power-rule"]
+}

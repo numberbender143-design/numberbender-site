@@ -1,0 +1,23 @@
+{
+  "id": "math250-eigenval2-001",
+  "cid": "MATH 250",
+  "topic": "Eigenvalues and Eigenvectors",
+  "subtopic": "Eigenvalues of a 2x2 matrix",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Find the eigenvalues of the 2x2 matrix A = [[{a}, {b}], [{c}, {d}]] using the characteristic polynomial det(A - lambda*I) = 0.",
+  "params": {
+    "a": { "type": "int", "min": -4, "max": 4 },
+    "b": { "type": "int", "min": -3, "max": 3 },
+    "c": { "type": "int", "min": -3, "max": 3 },
+    "d": { "type": "int", "min": -4, "max": 4 }
+  },
+  "answer_expr": "eigenval2",
+  "steps": [
+    "Characteristic polynomial: lambda^2 - tr(A)*lambda + det(A) = 0.",
+    "tr(A) = {a} + {d} = {tr},  det(A) = {a}*{d} - {b}*{c} = {det2}.",
+    "Discriminant = tr^2 - 4*det = {disc}.",
+    "Eigenvalues: lambda_1 = {answer_eigenval2[l1]},  lambda_2 = {answer_eigenval2[l2]}."
+  ],
+  "tags": ["linear-algebra", "eigenvalues", "characteristic-polynomial", "2x2"]
+}

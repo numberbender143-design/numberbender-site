@@ -1,0 +1,22 @@
+{
+  "id": "math250-matmul22-002",
+  "cid": "MATH 250",
+  "topic": "Matrices and Operations",
+  "subtopic": "Matrix multiplication",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Matrices A and B are given below. Find entry C_{ri}{ci} of C = A x B.\nA:\n  Row 1: [{a11}, {a12}]\n  Row 2: [{a21}, {a22}]\nB:\n  Row 1: [{b11}, {b12}]\n  Row 2: [{b21}, {b22}]",
+  "params": {
+    "a11": {"type":"int","min":-4,"max":4}, "a12": {"type":"int","min":-4,"max":4},
+    "a21": {"type":"int","min":-4,"max":4}, "a22": {"type":"int","min":-4,"max":4},
+    "b11": {"type":"int","min":-4,"max":4}, "b12": {"type":"int","min":-4,"max":4},
+    "b21": {"type":"int","min":-4,"max":4}, "b22": {"type":"int","min":-4,"max":4},
+    "q_row": {"type":"int","min":0,"max":1}, "q_col": {"type":"int","min":0,"max":1}
+  },
+  "answer_expr": "matmul22",
+  "steps": [
+    "Row {ri} of A dotted with column {ci} of B:",
+    "{step1} + {step2} = {answer_matmul22}."
+  ],
+  "tags": ["linear-algebra","matrix-multiplication","2x2"]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "mathteach-onestepadd-001",
+  "cid": "MATHTEACH",
+  "topic": "Algebraic Thinking",
+  "subtopic": "Solving one-step equations",
+  "difficulty": 1,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Solve for x: x + {a} = {b}",
+  "params": {
+    "a": {
+      "type": "int",
+      "min": 2,
+      "max": 15
+    },
+    "b": {
+      "type": "int",
+      "min": 5,
+      "max": 30
+    }
+  },
+  "answer_expr": "onestepadd",
+  "steps": [
+    "Subtract {a} from both sides to isolate x.",
+    "x = {b} - {a} = {answer_onestepadd}.",
+    "Check: {answer_onestepadd} + {a} = {b}. True."
+  ],
+  "tags": [
+    "pre-algebra",
+    "algebra",
+    "equation",
+    "one-step",
+    "addition"
+  ],
+  "source": "adapted-from:equation-001.json"
+}

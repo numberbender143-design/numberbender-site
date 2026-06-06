@@ -1,0 +1,19 @@
+{
+  "id": "math250-vecmag250-vs001",
+  "cid": "MATH 250",
+  "topic": "Vector Spaces",
+  "subtopic": "Vector norm",
+  "difficulty": 1,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Find the norm (magnitude) of the vector v = ({u1}, {u2}, {u3}). Round to 4 decimal places.",
+  "params": {
+    "u1": { "type": "int", "min": -5, "max": 5 },
+    "u2": { "type": "int", "min": -5, "max": 5 },
+    "u3": { "type": "int", "min": -5, "max": 5 }
+  },
+  "answer_expr": "vecmag250",
+  "steps": [
+    "||v|| = sqrt(v1^2 + v2^2 + v3^2) = sqrt({u1}^2 + {u2}^2 + {u3}^2) = sqrt({sq_sum}) approx {answer_vecmag250}."
+  ],
+  "tags": ["linear-algebra", "norm", "magnitude", "vector-spaces"]
+}

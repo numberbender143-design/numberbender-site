@@ -1,0 +1,24 @@
+{
+  "id": "math110-descstat-mode-001",
+  "cid": "MATH 110",
+  "topic": "Descriptive Statistics",
+  "subtopic": "Mode of a data set",
+  "difficulty": 1,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "source": "original-template",
+  "params": {
+    "base_values": { "type": "int_array", "len": 6, "min": 1, "max": 20 },
+    "mode_val":    { "type": "int", "min": 1, "max": 20 },
+    "mode_count":  { "type": "int", "min": 2, "max": 3 }
+  },
+  "instruction": "Find the mode:",
+  "math_expr": "set(values_with_mode)",
+  "answer_expr": "mode_val",
+  "answer_latex_tmpl": "\\text{Mode} = {answer}",
+  "steps": [
+    "Tally each value's frequency.",
+    "{mode_val} appears {mode_count} times — more than any other value.",
+    "Mode = {answer}."
+  ],
+  "tags": ["mode", "central-tendency"]
+}

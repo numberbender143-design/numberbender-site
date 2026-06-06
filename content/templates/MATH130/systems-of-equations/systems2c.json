@@ -1,0 +1,50 @@
+{
+  "id": "math130-systems2c-001",
+  "cid": "MATH 130",
+  "topic": "Systems of Equations",
+  "subtopic": "Solve a 2x2 linear system",
+  "difficulty": 3,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Solve the system by elimination: {a}x - {b}y = {c} and {d}x + {e}y = {f}.",
+  "params": {
+    "x_sol": {
+      "type": "int",
+      "min": 1,
+      "max": 5
+    },
+    "y_sol": {
+      "type": "int",
+      "min": 1,
+      "max": 5
+    },
+    "a": {
+      "type": "int",
+      "min": 2,
+      "max": 5
+    },
+    "d": {
+      "type": "int",
+      "min": 1,
+      "max": 4
+    },
+    "b": {
+      "type": "int",
+      "min": 1,
+      "max": 3
+    },
+    "e": {
+      "type": "int",
+      "min": 1,
+      "max": 3
+    }
+  },
+  "answer_expr": "systems2c",
+  "steps": [
+    "Add the equations to eliminate y: ({a}+{d})x = {c} + {f} => {a_plus_d}x = {c_plus_f}.",
+    "x = {answer_sys_x}. Substitute back to find y = {answer_sys_y}."
+  ],
+  "tags": [
+    "system-of-equations",
+    "elimination"
+  ]
+}

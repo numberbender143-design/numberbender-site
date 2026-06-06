@@ -1,0 +1,22 @@
+{
+  "id": "math250-eigenval2-003",
+  "cid": "MATH 250",
+  "topic": "Eigenvalues and Eigenvectors",
+  "subtopic": "Eigenvalues of a 2x2 matrix",
+  "difficulty": 3,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "A transformation matrix is A = [[{a}, {b}], [{c}, {d}]]. Find its eigenvalues. Are they real?",
+  "params": {
+    "a": { "type": "int", "min": -5, "max": 5 },
+    "b": { "type": "int", "min": -4, "max": 4 },
+    "c": { "type": "int", "min": -4, "max": 4 },
+    "d": { "type": "int", "min": -5, "max": 5 }
+  },
+  "answer_expr": "eigenval2",
+  "steps": [
+    "Characteristic polynomial: lambda^2 - {tr}*lambda + {det2} = 0.",
+    "Discriminant = {disc}. If disc >= 0 the eigenvalues are real.",
+    "lambda_1 = {answer_eigenval2[l1]},  lambda_2 = {answer_eigenval2[l2]}."
+  ],
+  "tags": ["linear-algebra", "eigenvalues", "real", "complex"]
+}

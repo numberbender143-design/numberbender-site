@@ -1,0 +1,22 @@
+{
+  "id": "math160-truthval160-imp",
+  "cid": "MATH 160",
+  "topic": "Logic",
+  "subtopic": "Conditional (p -> q)",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Let p be a proposition with truth value {p_str} and q be a proposition with truth value {q_str}. What is the truth value of the conditional statement p -> q (if p then q)?",
+  "params": {
+    "p_val": { "type": "int", "min": 0, "max": 1 },
+    "q_val": { "type": "int", "min": 0, "max": 1 },
+    "connective": { "type": "choice", "choices": ["IMPLIES"] }
+  },
+  "answer_expr": "truthval160",
+  "steps": [
+    "The conditional p -> q is False ONLY when p is True and q is False.",
+    "Equivalently: p -> q is equivalent to (NOT p) OR q.",
+    "Here p = {p_str} and q = {q_str}.",
+    "Since NOT({p_str}) OR {q_str}: the result is {answer_truthval160}."
+  ],
+  "tags": ["logic", "conditional", "implication", "truth-table"]
+}

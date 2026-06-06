@@ -1,0 +1,19 @@
+{
+  "id": "math250-vecmag250-vs002",
+  "cid": "MATH 250",
+  "topic": "Vector Spaces",
+  "subtopic": "Vector norm",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "A displacement vector is given by d = ({u1}, {u2}, {u3}). What is the distance traveled (the norm ||d||)? Round to 4 decimal places.",
+  "params": {
+    "u1": { "type": "int", "min": 1, "max": 8 },
+    "u2": { "type": "int", "min": 1, "max": 8 },
+    "u3": { "type": "int", "min": 1, "max": 8 }
+  },
+  "answer_expr": "vecmag250",
+  "steps": [
+    "||d|| = sqrt({u1}^2 + {u2}^2 + {u3}^2) = sqrt({sq_sum}) approx {answer_vecmag250}."
+  ],
+  "tags": ["linear-algebra", "norm", "distance", "applied"]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "math155-logeval-001",
+  "cid": "MATH 155",
+  "topic": "Exponential and Logarithmic Functions",
+  "subtopic": "Evaluating logarithms",
+  "difficulty": 1,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Evaluate: log_{base}({val}).",
+  "params": {
+    "base": { "type": "choice", "choices": [2, 3, 5, 10] },
+    "exp_n": { "type": "int", "min": 1, "max": 4 }
+  },
+  "answer_expr": "logeval",
+  "steps": [
+    "Ask: {base} raised to what power equals {val}?",
+    "{base}^{exp_n} = {val}, so log_{base}({val}) = {answer_logeval}."
+  ],
+  "tags": ["logarithm", "evaluation", "exponential-inverse"]
+}

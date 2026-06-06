@@ -1,0 +1,19 @@
+{
+  "id": "math160-perm160-002",
+  "cid": "MATH 160",
+  "topic": "Counting Methods",
+  "subtopic": "Permutations P(n,r)",
+  "difficulty": 1,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "A club needs to elect a President, Vice-President, and Secretary from {n} candidates. No person may hold more than one office. How many different officer lineups are possible?",
+  "params": {
+    "n": { "type": "int", "min": 7,  "max": 15 },
+    "r": { "type": "int", "min": 3,  "max": 3  }
+  },
+  "answer_expr": "perm160",
+  "steps": [
+    "Each office is distinct, so order matters: use P(n,r).",
+    "P({n},3) = {n}!/({n_minus_r})! = {answer_perm160}."
+  ],
+  "tags": ["counting", "permutations", "elections"]
+}

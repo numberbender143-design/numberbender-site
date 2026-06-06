@@ -1,0 +1,48 @@
+{
+  "id": "math210-deriv_product210-001",
+  "cid": "MATH 210",
+  "topic": "Derivatives Rules",
+  "subtopic": "Product rule",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Let f(x) = ({a}x + {b})({c}x + {d}). Use the product rule to find f'({x_val}).",
+  "params": {
+    "a": {
+      "type": "int",
+      "min": 1,
+      "max": 4
+    },
+    "b": {
+      "type": "int",
+      "min": -4,
+      "max": 4
+    },
+    "c": {
+      "type": "int",
+      "min": 1,
+      "max": 4
+    },
+    "d": {
+      "type": "int",
+      "min": -4,
+      "max": 4
+    },
+    "x_val": {
+      "type": "int",
+      "min": -2,
+      "max": 3
+    }
+  },
+  "answer_expr": "deriv_product210",
+  "steps": [
+    "Let u = {a}x + {b}, v = {c}x + {d}. Then u' = {a}, v' = {c}.",
+    "Product rule: f'(x) = u'v + uv' = {a}({c}x+{d}) + {c}({a}x+{b}).",
+    "At x = {x_val}: u = {u_at}, v = {v_at}.",
+    "f'({x_val}) = {a}*{v_at} + {c}*{u_at} = {answer_deriv_product210}."
+  ],
+  "tags": [
+    "calculus",
+    "product-rule",
+    "derivative"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "math160-modarith160-002",
+  "cid": "MATH 160",
+  "topic": "Number Theory",
+  "subtopic": "Modular arithmetic",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Compute {a} mod {n}. Then state what this tells you: if an event repeats every {n} steps and you are at step {a}, which step position are you in?",
+  "params": {
+    "a": { "type": "int", "min": 30, "max": 200 },
+    "n": { "type": "int", "min": 6,  "max": 14  }
+  },
+  "answer_expr": "modarith160",
+  "steps": [
+    "{a} divided by {n} gives quotient {quotient} with remainder {remainder}.",
+    "So {a} = {quotient} * {n} + {remainder}.",
+    "{a} mod {n} = {answer_modarith160}. You are at position {answer_modarith160} in the cycle."
+  ],
+  "tags": ["number-theory", "modular-arithmetic", "cycles"]
+}

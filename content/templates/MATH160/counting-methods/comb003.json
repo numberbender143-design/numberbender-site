@@ -1,0 +1,19 @@
+{
+  "id": "math160-comb160-003",
+  "cid": "MATH 160",
+  "topic": "Counting Methods",
+  "subtopic": "Combinations C(n,r)",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "A hand of {r} cards is dealt from a standard 52-card deck. How many different hands are possible? (Note: for this problem, n = {n}.)",
+  "params": {
+    "n": { "type": "int", "min": 10, "max": 13 },
+    "r": { "type": "int", "min": 3,  "max": 5  }
+  },
+  "answer_expr": "comb160",
+  "steps": [
+    "Cards in a hand are unordered, so use combinations: C(n,r).",
+    "C({n},{r}) = {n}!/({r}! * {n_minus_r}!) = {answer_comb160}."
+  ],
+  "tags": ["counting", "combinations", "cards", "hands"]
+}

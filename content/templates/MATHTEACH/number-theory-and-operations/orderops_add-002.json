@@ -1,0 +1,36 @@
+{
+  "id": "mathteach-orderops_add-002",
+  "cid": "MATHTEACH",
+  "topic": "Number Theory and Operations",
+  "subtopic": "Order of operations",
+  "difficulty": 1,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "A store sells {b} items at ${c} each, plus a ${a} fee. What is the total: {a} + {b} x {c}?",
+  "params": {
+    "a": {
+      "type": "int",
+      "min": 1,
+      "max": 20
+    },
+    "b": {
+      "type": "int",
+      "min": 2,
+      "max": 10
+    },
+    "c": {
+      "type": "int",
+      "min": 3,
+      "max": 12
+    }
+  },
+  "answer_expr": "orderops_add",
+  "steps": [
+    "Multiply first: {b} x {c} = {bc}. Then add: {a} + {bc} = {answer_orderops_add}."
+  ],
+  "tags": [
+    "pre-algebra",
+    "order-of-operations",
+    "applied"
+  ],
+  "source": "adapted-from:orderops-add-002.json"
+}

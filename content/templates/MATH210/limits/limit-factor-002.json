@@ -1,0 +1,33 @@
+{
+  "id": "math210-limit_factor210-002",
+  "cid": "MATH 210",
+  "topic": "Limits",
+  "subtopic": "Factoring to resolve 0/0",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Find lim(x->\\1) {a}(x^2 - {r}^2) / (x - {r}) by simplifying the fraction first.",
+  "params": {
+    "a": {
+      "type": "int",
+      "min": 2,
+      "max": 5
+    },
+    "r": {
+      "type": "int",
+      "min": 2,
+      "max": 7
+    }
+  },
+  "answer_expr": "limit_factor210",
+  "steps": [
+    "Direct substitution gives 0/0 \u2014 factor instead.",
+    "Numerator: {a}(x-{r})(x+{r}). Cancel with denominator.",
+    "Result: {a}(x+{r}) at x={r} = {a}(2*{r}) = {answer_limit_factor210}."
+  ],
+  "tags": [
+    "calculus",
+    "limits",
+    "0-over-0",
+    "cancel"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "id": "math220-netchange-001",
+  "cid": "MATH 220",
+  "topic": "Integration Techniques",
+  "subtopic": "Net change — linear rate",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "A particle has velocity v(t) = {a} + {b}t. Find the net displacement from t = 0 to t = {T}.",
+  "params": {
+    "a": { "type": "int", "min": 1, "max": 8 },
+    "b": { "type": "int", "min": 1, "max": 6 },
+    "T": { "type": "int", "min": 2, "max": 5 }
+  },
+  "answer_expr": "netchange",
+  "steps": [
+    "Net displacement = integral from 0 to {T} of ({a} + {b}t) dt.",
+    "= [{a}t + {b}t^2/2] from 0 to {T}.",
+    "= {a}({T}) + {b}({T})^2/2 = {aT} + {bT2_half} = {answer_netchange}."
+  ],
+  "tags": ["net-change", "definite-integral", "velocity", "displacement"]
+}

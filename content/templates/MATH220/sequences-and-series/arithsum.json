@@ -1,0 +1,21 @@
+{
+  "id": "math220-arithsum-001",
+  "cid": "MATH 220",
+  "topic": "Sequences and Series",
+  "subtopic": "Arithmetic series — partial sum",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Find the sum of the first {n_terms} terms of the arithmetic sequence with a_1 = {a1} and d = {d}.",
+  "params": {
+    "a1": { "type": "int", "min": 1, "max": 10 },
+    "d":  { "type": "int", "min": 2, "max": 7 },
+    "n_terms": { "type": "int", "min": 5, "max": 12 }
+  },
+  "answer_expr": "arithsum",
+  "steps": [
+    "Find a_n: a_{n_terms} = {a1} + ({n_terms}-1)*{d} = {an}.",
+    "Sum formula: S_n = n/2 * (a_1 + a_n).",
+    "S_{n_terms} = {n_terms}/2 * ({a1} + {an}) = {n_terms}/2 * {a1_plus_an} = {answer_arithsum}."
+  ],
+  "tags": ["arithmetic-series", "partial-sum", "sigma"]
+}

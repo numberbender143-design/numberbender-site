@@ -1,0 +1,46 @@
+{
+  "id": "math210-deriv_poly210-001",
+  "cid": "MATH 210",
+  "topic": "Derivatives Fundamentals",
+  "subtopic": "Polynomial derivative",
+  "difficulty": 1,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Let f(x) = {pa}x^3 + {pb}x^2 + {pc}x + {pd}. Find f'({x_val}).",
+  "params": {
+    "pa": {
+      "type": "int",
+      "min": 1,
+      "max": 3
+    },
+    "pb": {
+      "type": "int",
+      "min": -3,
+      "max": 3
+    },
+    "pc": {
+      "type": "int",
+      "min": -5,
+      "max": 5
+    },
+    "pd": {
+      "type": "int",
+      "min": -6,
+      "max": 6
+    },
+    "x_val": {
+      "type": "int",
+      "min": -2,
+      "max": 3
+    }
+  },
+  "answer_expr": "deriv_poly210",
+  "steps": [
+    "f'(x) = {da}x^2 + {db}x + {dc}.",
+    "f'({x_val}) = {da}({x_val})^2 + {db}({x_val}) + {dc} = {answer_deriv_poly210}."
+  ],
+  "tags": [
+    "calculus",
+    "derivative",
+    "polynomial"
+  ]
+}

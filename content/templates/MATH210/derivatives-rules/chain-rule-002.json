@@ -1,0 +1,40 @@
+{
+  "id": "math210-deriv_chain210-002",
+  "cid": "MATH 210",
+  "topic": "Derivatives Rules",
+  "subtopic": "Chain rule",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Differentiate f(x) = ({a}x + {b})^{n} and evaluate at x = {x_val}.",
+  "params": {
+    "a": {
+      "type": "int",
+      "min": 2,
+      "max": 5
+    },
+    "b": {
+      "type": "int",
+      "min": 0,
+      "max": 4
+    },
+    "n": {
+      "type": "int",
+      "min": 2,
+      "max": 3
+    },
+    "x_val": {
+      "type": "int",
+      "min": 0,
+      "max": 2
+    }
+  },
+  "answer_expr": "deriv_chain210",
+  "steps": [
+    "f'(x) = {n}*{a}*({a}x+{b})^{n-1}.",
+    "f'({x_val}) = {n}*{a}*({inner})^{n-1} = {answer_deriv_chain210}."
+  ],
+  "tags": [
+    "calculus",
+    "chain-rule"
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "id": "math250-matdet3-001",
+  "cid": "MATH 250",
+  "topic": "Determinants",
+  "subtopic": "3x3 determinant",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Find the determinant of the 3x3 matrix A:\n  Row 1: [{a11}, {a12}, {a13}]\n  Row 2: [{a21}, {a22}, {a23}]\n  Row 3: [{a31}, {a32}, {a33}]\nUse cofactor expansion along Row 1.",
+  "params": {
+    "a11": {
+      "type": "int",
+      "min": -4,
+      "max": 4
+    },
+    "a12": {
+      "type": "int",
+      "min": -4,
+      "max": 4
+    },
+    "a13": {
+      "type": "int",
+      "min": -4,
+      "max": 4
+    },
+    "a21": {
+      "type": "int",
+      "min": -4,
+      "max": 4
+    },
+    "a22": {
+      "type": "int",
+      "min": -4,
+      "max": 4
+    },
+    "a23": {
+      "type": "int",
+      "min": -4,
+      "max": 4
+    },
+    "a31": {
+      "type": "int",
+      "min": -4,
+      "max": 4
+    },
+    "a32": {
+      "type": "int",
+      "min": -4,
+      "max": 4
+    },
+    "a33": {
+      "type": "int",
+      "min": -4,
+      "max": 4
+    }
+  },
+  "answer_expr": "matdet3",
+  "steps": [
+    "Expand along row 1: det = a11*M11 - a12*M12 + a13*M13.",
+    "M11 = {m11}, M12 = {m12}, M13 = {m13}.",
+    "det = ({c1}) + ({c2}) + {c3} = {answer_matdet3}."
+  ],
+  "tags": [
+    "linear-algebra",
+    "determinant",
+    "3x3",
+    "cofactor"
+  ]
+}

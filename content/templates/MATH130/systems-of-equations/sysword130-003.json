@@ -1,0 +1,20 @@
+{
+  "id": "math130-sysword130-003",
+  "cid": "MATH 130",
+  "topic": "Systems of Equations",
+  "subtopic": "Word problems (systems)",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "A farmer has chickens and cows. There are {total_heads} heads and {total_legs} legs. How many chickens are there?",
+  "params": {
+    "x_sol": {"type": "int", "min": 5, "max": 20},
+    "y_sol": {"type": "int", "min": 5, "max": 20}
+  },
+  "answer_expr": "sysword130",
+  "steps": [
+    "Let x = chickens (2 legs), y = cows (4 legs).",
+    "x + y = {total_heads} and 2x + 4y = {total_legs}.",
+    "Solve: x = {x_sol}."
+  ],
+  "tags": ["systems", "word-problem"]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "math160-countmult160-002",
+  "cid": "MATH 160",
+  "topic": "Counting Methods",
+  "subtopic": "Multiplication counting principle",
+  "difficulty": 1,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "A password consists of one letter (from {a} choices) followed by one digit (from {b} choices). How many different passwords are possible?",
+  "params": {
+    "a": { "type": "int", "min": 4, "max": 10 },
+    "b": { "type": "int", "min": 5, "max": 10 }
+  },
+  "answer_expr": "countmult160",
+  "steps": [
+    "Each letter can be paired with each digit independently.",
+    "Total = {a} letters x {b} digits = {answer_countmult160}."
+  ],
+  "tags": ["counting", "multiplication-principle", "passwords"]
+}

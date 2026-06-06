@@ -1,0 +1,36 @@
+{
+  "id": "math210-deriv_power210-001",
+  "cid": "MATH 210",
+  "topic": "Derivatives Fundamentals",
+  "subtopic": "Power rule",
+  "difficulty": 1,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Let f(x) = {a}x^{n}. Find f'({c_val}) using the power rule.",
+  "params": {
+    "a": {
+      "type": "int",
+      "min": 1,
+      "max": 6
+    },
+    "n": {
+      "type": "int",
+      "min": 2,
+      "max": 5
+    },
+    "c_val": {
+      "type": "int",
+      "min": 1,
+      "max": 4
+    }
+  },
+  "answer_expr": "deriv_power210",
+  "steps": [
+    "Power rule: d/dx[{a}x^{n}] = {coeff}x^{new_exp}.",
+    "Evaluate at x = {c_val}: {coeff}({c_val})^{new_exp} = {answer_deriv_power210}."
+  ],
+  "tags": [
+    "calculus",
+    "derivatives",
+    "power-rule"
+  ]
+}

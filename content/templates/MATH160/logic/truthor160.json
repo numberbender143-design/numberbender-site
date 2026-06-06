@@ -1,0 +1,21 @@
+{
+  "id": "math160-truthval160-or",
+  "cid": "MATH 160",
+  "topic": "Logic",
+  "subtopic": "OR (disjunction)",
+  "difficulty": 1,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Let p be a proposition with truth value {p_str} and q be a proposition with truth value {q_str}. What is the truth value of p OR q (p v q)?",
+  "params": {
+    "p_val": { "type": "int", "min": 0, "max": 1 },
+    "q_val": { "type": "int", "min": 0, "max": 1 },
+    "connective": { "type": "choice", "choices": ["OR"] }
+  },
+  "answer_expr": "truthval160",
+  "steps": [
+    "p OR q is False only when BOTH p and q are False.",
+    "Here p = {p_str} and q = {q_str}.",
+    "Since {p_str} OR {q_str}: the result is {answer_truthval160}."
+  ],
+  "tags": ["logic", "disjunction", "truth-table", "OR"]
+}

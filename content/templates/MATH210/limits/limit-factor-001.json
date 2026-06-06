@@ -1,0 +1,33 @@
+{
+  "id": "math210-limit_factor210-001",
+  "cid": "MATH 210",
+  "topic": "Limits",
+  "subtopic": "Factoring to resolve 0/0",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Evaluate the limit by factoring: lim(x->\\1) ({a}(x^2 - {r}^2)) / (x - {r}).",
+  "params": {
+    "a": {
+      "type": "int",
+      "min": 1,
+      "max": 4
+    },
+    "r": {
+      "type": "int",
+      "min": 1,
+      "max": 6
+    }
+  },
+  "answer_expr": "limit_factor210",
+  "steps": [
+    "Factor the numerator: {a}(x^2 - {r}^2) = {a}(x + {r})(x - {r}).",
+    "Cancel (x - {r}): limit = {a}(x + {r}).",
+    "Substitute x = {r}: {a}({r} + {r}) = {answer_limit_factor210}."
+  ],
+  "tags": [
+    "calculus",
+    "limits",
+    "factoring",
+    "indeterminate"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "id": "math110-descstat-range-001",
+  "cid": "MATH 110",
+  "topic": "Descriptive Statistics",
+  "subtopic": "Range",
+  "difficulty": 1,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "source": "original-template",
+  "params": {
+    "n":      { "type": "int", "min": 5, "max": 8 },
+    "values": { "type": "int_array", "len": "n", "min": 1, "max": 50 }
+  },
+  "instruction": "Find the range:",
+  "math_expr": "set(values)",
+  "answer_expr": "max(values) - min(values)",
+  "answer_latex_tmpl": "\\text{Range} = {answer}",
+  "steps": [
+    "Range = max − min.",
+    "max = {max_val}, min = {min_val}.",
+    "Range = {max_val} − {min_val} = {answer}."
+  ],
+  "tags": ["range", "spread"]
+}

@@ -1,0 +1,34 @@
+{
+  "id": "mathteach-area_rect-003",
+  "cid": "MATHTEACH",
+  "topic": "Geometry and Measurement",
+  "subtopic": "Area of a rectangle",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "A rectangular parking lot is {l} yards long and {w} yards wide. What is the area of the lot?",
+  "params": {
+    "l": {
+      "type": "int",
+      "min": 15,
+      "max": 60
+    },
+    "w": {
+      "type": "int",
+      "min": 10,
+      "max": 40
+    }
+  },
+  "answer_expr": "area_rect",
+  "steps": [
+    "Area = length x width.",
+    "A = {l} x {w} = {answer_area_rect} yd^2."
+  ],
+  "tags": [
+    "pre-algebra",
+    "geometry",
+    "area",
+    "rectangle",
+    "word-problem"
+  ],
+  "source": "adapted-from:area-rect-003.json"
+}

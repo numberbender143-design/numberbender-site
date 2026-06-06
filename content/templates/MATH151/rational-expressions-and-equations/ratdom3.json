@@ -1,0 +1,37 @@
+{
+  "id": "math151-ratsimp-001",
+  "cid": "MATH 151",
+  "topic": "Rational Expressions and Equations",
+  "subtopic": "Simplifying rational expressions",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Simplify the rational expression: ({a}x + {ab}) / ({a}x + {ac}). Find the excluded value and the simplified form.",
+  "params": {
+    "a": {
+      "type": "int",
+      "min": 1,
+      "max": 4
+    },
+    "b": {
+      "type": "int",
+      "min": 1,
+      "max": 6
+    },
+    "c": {
+      "type": "int",
+      "min": 1,
+      "max": 6
+    }
+  },
+  "answer_expr": "ratsimp",
+  "steps": [
+    "Factor: {a}(x + {b}) / {a}(x + {c}).",
+    "Cancel the common factor {a}: (x + {b}) / (x + {c}).",
+    "Excluded value: x = -{c} (denominator = 0)."
+  ],
+  "tags": [
+    "rational-expression",
+    "simplify",
+    "factoring"
+  ]
+}

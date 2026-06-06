@@ -1,0 +1,32 @@
+{
+  "id": "mathteach-area_rect-002",
+  "cid": "MATHTEACH",
+  "topic": "Geometry and Measurement",
+  "subtopic": "Area of a rectangle",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "A garden measures {l} meters long and {w} meters wide. How many square meters of soil are needed to cover it?",
+  "params": {
+    "l": {
+      "type": "int",
+      "min": 4,
+      "max": 20
+    },
+    "w": {
+      "type": "int",
+      "min": 2,
+      "max": 10
+    }
+  },
+  "answer_expr": "area_rect",
+  "steps": [
+    "Area = {l} x {w} = {answer_area_rect} square meters."
+  ],
+  "tags": [
+    "pre-algebra",
+    "geometry",
+    "area",
+    "applied"
+  ],
+  "source": "adapted-from:area-rect-002.json"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "mathteach-area_tri-001",
+  "cid": "MATHTEACH",
+  "topic": "Geometry and Measurement",
+  "subtopic": "Area of a triangle",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Find the area of a triangle with base {b} cm and height {h} cm.",
+  "params": {
+    "b": {
+      "type": "int_even",
+      "min": 2,
+      "max": 16
+    },
+    "h": {
+      "type": "int",
+      "min": 2,
+      "max": 12
+    }
+  },
+  "answer_expr": "area_tri",
+  "steps": [
+    "A = (1/2) x base x height = (1/2) x {b} x {h} = {bh}/2 = {answer_area_tri} sq cm."
+  ],
+  "tags": [
+    "pre-algebra",
+    "geometry",
+    "area",
+    "triangle"
+  ],
+  "source": "adapted-from:area-tri-001.json"
+}

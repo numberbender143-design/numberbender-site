@@ -1,0 +1,16 @@
+{
+  "id": "math130-domrange130-002",
+  "cid": "MATH 130",
+  "topic": "Linear Equations and Functions",
+  "subtopic": "Domain and range",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "What is the domain of g(x) = sqrt(x - {c})?",
+  "params": {
+    "c": {"type": "int", "min": 1, "max": 9},
+    "answer_key": {"type": "choice", "choices": ["x >= c"]}
+  },
+  "answer_expr": "domrange130",
+  "steps": ["Set the radicand >= 0: x - {c} >= 0, so x >= {c}. Domain: [{c}, inf)."],
+  "tags": ["domain", "range", "square-root"]
+}

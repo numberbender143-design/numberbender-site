@@ -1,0 +1,47 @@
+{
+  "id": "math210-deriv_poly210-002",
+  "cid": "MATH 210",
+  "topic": "Derivatives Fundamentals",
+  "subtopic": "Polynomial derivative",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Find the slope of the tangent line to f(x) = {pa}x^3 + {pb}x^2 + {pc}x + {pd} at x = {x_val}.",
+  "params": {
+    "pa": {
+      "type": "int",
+      "min": 1,
+      "max": 2
+    },
+    "pb": {
+      "type": "int",
+      "min": -2,
+      "max": 2
+    },
+    "pc": {
+      "type": "int",
+      "min": -4,
+      "max": 4
+    },
+    "pd": {
+      "type": "int",
+      "min": -4,
+      "max": 4
+    },
+    "x_val": {
+      "type": "int",
+      "min": -1,
+      "max": 2
+    }
+  },
+  "answer_expr": "deriv_poly210",
+  "steps": [
+    "Slope = f'({x_val}) where f'(x) = {da}x^2 + {db}x + {dc}.",
+    "f'({x_val}) = {answer_deriv_poly210}."
+  ],
+  "tags": [
+    "calculus",
+    "tangent-line",
+    "slope",
+    "polynomial"
+  ]
+}

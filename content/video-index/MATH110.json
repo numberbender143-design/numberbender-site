@@ -1,0 +1,415 @@
+{
+  "cid": "MATH 110",
+  "course": "Introduction to Statistics",
+  "topics": [
+    {
+      "slug": "descriptive-statistics",
+      "title": "Descriptive Statistics",
+      "desc": "Mean, median, mode, spread, and graphing a data set.",
+      "videos": [
+        {
+          "id": "kkPNZ4SJDp0",
+          "title": "Statistics: Measures of Center Mean Vs Median",
+          "url": "https://www.youtube.com/watch?v=kkPNZ4SJDp0",
+          "dur": "5m 1s",
+          "views": 6256,
+          "fil": "-BBMRaI_XFA"
+        },
+        {
+          "id": "KTkizHDaFWw",
+          "title": "Describing the Shape, Center, and Spread of a Distribution",
+          "url": "https://www.youtube.com/watch?v=KTkizHDaFWw",
+          "dur": "8m 36s",
+          "views": 23438,
+          "fil": "juMHkBm0MKs"
+        },
+        {
+          "id": "KtqpHjCKju8",
+          "title": "STATISTICS Constructing Quartiles and Boxplot",
+          "url": "https://www.youtube.com/watch?v=KtqpHjCKju8",
+          "dur": "5m 59s",
+          "views": 5437,
+          "fil": "LHFMQObuGE0"
+        },
+        {
+          "id": "UHefJnSA1v4",
+          "title": "Statistics Constructing Stem and Leaf Plot",
+          "url": "https://www.youtube.com/watch?v=UHefJnSA1v4",
+          "dur": "4m 55s",
+          "views": 5359,
+          "fil": "W07Yil2XEQQ"
+        },
+        {
+          "id": "gBYX9_S7API",
+          "title": "STATISTICS Constructing Dot Plot",
+          "url": "https://www.youtube.com/watch?v=gBYX9_S7API",
+          "dur": "5m 0s",
+          "views": 2947,
+          "fil": "SMFxqUbQBjY"
+        }
+      ]
+    },
+    {
+      "slug": "probability",
+      "title": "Probability & Probability Distributions",
+      "desc": "Classical probability, the rules, and discrete distributions.",
+      "videos": [
+        {
+          "id": "chjuz7CJpWY",
+          "title": "Statistics: Classical Probability Given the Sample Space",
+          "url": "https://www.youtube.com/watch?v=chjuz7CJpWY",
+          "dur": "9m 55s",
+          "views": 12463,
+          "fil": "eFwf7du_qpA"
+        },
+        {
+          "id": "xuArY4tl5S4",
+          "title": "How to Answer Classical Probability or Theoretical Probability in Statistics",
+          "url": "https://www.youtube.com/watch?v=xuArY4tl5S4",
+          "dur": "8m 16s",
+          "views": 4468,
+          "fil": "2lGEECua_8U"
+        },
+        {
+          "id": "T8ySQBRgIAY",
+          "title": "Statistics - Probability of Discrete Random Variables",
+          "url": "https://www.youtube.com/watch?v=T8ySQBRgIAY",
+          "dur": "12m 32s",
+          "views": 5357,
+          "fil": "QvXzQszvwLI"
+        },
+        {
+          "id": "RbPVH2SRwFo",
+          "title": "Statistics: How to Solve Binomial Probability",
+          "url": "https://www.youtube.com/watch?v=RbPVH2SRwFo",
+          "dur": "11m 50s",
+          "views": 2629,
+          "fil": "a7ZkBcvczBs"
+        },
+        {
+          "id": "SD7NOs77NXw",
+          "title": "Statistics - How to Compute for Probability Using Geometric Distribution",
+          "url": "https://www.youtube.com/watch?v=SD7NOs77NXw",
+          "dur": "7m 35s",
+          "views": 2291,
+          "fil": "VFrfBEzO6kM"
+        },
+        {
+          "id": "cdG5BDqCWM4",
+          "title": "How to solve probability using a 2-way or contingency table, venn diagram, and tree diagram",
+          "url": "https://www.youtube.com/watch?v=cdG5BDqCWM4",
+          "dur": "15m 42s",
+          "views": 4403,
+          "fil": "D-r173kf97g"
+        },
+        {
+          "id": "kbgtCljxcxA",
+          "title": "Statistics: Probability Using Discrete Random Variables",
+          "url": "https://www.youtube.com/watch?v=kbgtCljxcxA",
+          "dur": "8m 25s",
+          "views": 2433,
+          "fil": "Rfo8xvyjhhU"
+        }
+      ]
+    },
+    {
+      "slug": "normal-zscores",
+      "title": "Normal Distribution & Z-Scores",
+      "desc": "Standard normal curve, z-scores, the empirical rule, and area under the curve.",
+      "videos": [
+        {
+          "id": "T7-eeg6rhjY",
+          "title": "STATISTICS: Using the Empirical Rule 68-95-99.7",
+          "url": "https://www.youtube.com/watch?v=T7-eeg6rhjY",
+          "dur": "5m 8s",
+          "views": 79926,
+          "fil": "eneZPveMdqs"
+        },
+        {
+          "id": "JNe38QYVfTE",
+          "title": "Statistics -  Standard Normal Distribution and Z-Score: Computing for Normal Probability",
+          "url": "https://www.youtube.com/watch?v=JNe38QYVfTE",
+          "dur": "7m 46s",
+          "views": 47228,
+          "fil": "zegZ7OvSzV0"
+        },
+        {
+          "id": "cM8gRnu0ez4",
+          "title": "Statistics - Finding Area Under the Normal Curve Using the Z-table",
+          "url": "https://www.youtube.com/watch?v=cM8gRnu0ez4",
+          "dur": "16m 51s",
+          "views": 16612,
+          "fil": "XgWIHOErYic"
+        },
+        {
+          "id": "-7NClNBCP-U",
+          "title": "Statistics - How to use the 68-95-99.7 Rule in computing the area under the Normal curve",
+          "url": "https://www.youtube.com/watch?v=-7NClNBCP-U",
+          "dur": "11m 49s",
+          "views": 5478,
+          "fil": "jftbDjsCMYE"
+        },
+        {
+          "id": "EU4E6t3h9yU",
+          "title": "How to compute for percentile using z-score",
+          "url": "https://www.youtube.com/watch?v=EU4E6t3h9yU",
+          "dur": "18m 20s",
+          "views": 40448,
+          "fil": "JxOguy6_9Iw"
+        },
+        {
+          "id": "IAG57XsYku0",
+          "title": "Statistics - Continuous Random Variable and Normal Distribution",
+          "url": "https://www.youtube.com/watch?v=IAG57XsYku0",
+          "dur": "4m 24s",
+          "views": 2191,
+          "fil": "e3F-kx0jCKk"
+        },
+        {
+          "id": "FpJGjMNqDsw",
+          "title": "Statistics: Finding the Area Under the Normal Curve Using Ti 84",
+          "url": "https://www.youtube.com/watch?v=FpJGjMNqDsw",
+          "dur": "6m 51s",
+          "views": 5311,
+          "fil": "UfJiUqdrcaU"
+        }
+      ]
+    },
+    {
+      "slug": "confidence-intervals",
+      "title": "Confidence Intervals",
+      "desc": "Estimating population means and proportions with confidence.",
+      "videos": [
+        {
+          "id": "u6fUod_UZgY",
+          "title": "STATISTICS Introduction to Confidence Interval for Population Mean",
+          "url": "https://www.youtube.com/watch?v=u6fUod_UZgY",
+          "dur": "10m 47s",
+          "views": 78826,
+          "fil": "MGTeT-ZAL_I"
+        },
+        {
+          "id": "RnN-Ze4EyHU",
+          "title": "Statistics: Computing for the Confidence Interval for Population Mean",
+          "url": "https://www.youtube.com/watch?v=RnN-Ze4EyHU",
+          "dur": "5m 41s",
+          "views": 23457,
+          "fil": "Up0ZCMkKJ_c"
+        },
+        {
+          "id": "adnUfMk5pqg",
+          "title": "STATISTICS: Confidence Interval for Population Mean Using t Distribution",
+          "url": "https://www.youtube.com/watch?v=adnUfMk5pqg",
+          "dur": "5m 4s",
+          "views": 17946,
+          "fil": "Or2-wCpX4jI"
+        },
+        {
+          "id": "kUV12zT5RUc",
+          "title": "Statistics: Confidence Interval for Population Proportion",
+          "url": "https://www.youtube.com/watch?v=kUV12zT5RUc",
+          "dur": "6m 57s",
+          "views": 16268,
+          "fil": "uMlLjv6Fs94"
+        },
+        {
+          "id": "bCe8b_vGQ7A",
+          "title": "Statistics - Solving Problems on Confidence Interval for Population Mean µ",
+          "url": "https://www.youtube.com/watch?v=bCe8b_vGQ7A",
+          "dur": "11m 48s",
+          "views": 3344,
+          "fil": "8GuQ56pcKZs"
+        },
+        {
+          "id": "lgqPlZiRXOI",
+          "title": "Statistics - Solving Problems Involving Confidence Interval for Proportion",
+          "url": "https://www.youtube.com/watch?v=lgqPlZiRXOI",
+          "dur": "15m 29s",
+          "views": 2556,
+          "fil": "z3IrVrNzH1c"
+        }
+      ]
+    },
+    {
+      "slug": "hypothesis-testing",
+      "title": "Hypothesis Testing",
+      "desc": "Z-tests, t-tests, proportions, chi-square, Type I/II errors.",
+      "videos": [
+        {
+          "id": "qMpRIpouNkE",
+          "title": "Statistics -  Introduction to Hypothesis Testing",
+          "url": "https://www.youtube.com/watch?v=qMpRIpouNkE",
+          "dur": "6m 16s",
+          "views": 12481,
+          "fil": "plAiYXYaqY0"
+        },
+        {
+          "id": "_-ltcU7RbOU",
+          "title": "How to Perform Hypothesis Testing on One Sample Mean | Z-Test Explained",
+          "url": "https://www.youtube.com/watch?v=_-ltcU7RbOU",
+          "dur": "7m 58s",
+          "views": 26078,
+          "fil": "zfeY94knNNs"
+        },
+        {
+          "id": "qdM16bfNSyE",
+          "title": "How to Perform Hypothesis Testing for One-Sample Proportions | Step-by-Step Guide",
+          "url": "https://www.youtube.com/watch?v=qdM16bfNSyE",
+          "dur": "8m 24s",
+          "views": 21801,
+          "fil": "nAwz1Z2sxRw"
+        },
+        {
+          "id": "jxadMxJj8sk",
+          "title": "STATISTICS Hypothesis Test for 2 Sample Means",
+          "url": "https://www.youtube.com/watch?v=jxadMxJj8sk",
+          "dur": "8m 19s",
+          "views": 39372,
+          "fil": "7k9fvQsO0BM"
+        },
+        {
+          "id": "5KRNNZM5mrk",
+          "title": "STATISTICS: Type I and Type II errors in Conducting a Hypothesis Testing",
+          "url": "https://www.youtube.com/watch?v=5KRNNZM5mrk",
+          "dur": "9m 33s",
+          "views": 703,
+          "fil": "Sdw2E7Xi0Q0"
+        },
+        {
+          "id": "gKY8TqndNo4",
+          "title": "Statistics -  Chi Square Goodness of Fit GOF Test",
+          "url": "https://www.youtube.com/watch?v=gKY8TqndNo4",
+          "dur": "8m 2s",
+          "views": 5678,
+          "fil": "TZYd6JWBtUA"
+        },
+        {
+          "id": "7LF4VQVltds",
+          "title": "How to Use Chi-Square Test for Independence | STATISTICS | HOW?",
+          "url": "https://www.youtube.com/watch?v=7LF4VQVltds",
+          "dur": "11m 44s",
+          "views": 3698,
+          "fil": "hIiR2jpDxgU"
+        },
+        {
+          "id": "i8lFGYoFmsM",
+          "title": "Statistics -  Hypothesis Testing on Matched Pairs Design for Mean",
+          "url": "https://www.youtube.com/watch?v=i8lFGYoFmsM",
+          "dur": "7m 5s",
+          "views": 8936,
+          "fil": "iMZCtt4D6Vk"
+        }
+      ]
+    },
+    {
+      "slug": "regression-correlation",
+      "title": "Linear Regression & Correlation",
+      "desc": "Scatterplots, correlation, and the least-squares regression line.",
+      "videos": [
+        {
+          "id": "XwEWvD0IbWw",
+          "title": "STATISTICS:  Interpreting Correlation in Bivariate Data Set",
+          "url": "https://www.youtube.com/watch?v=XwEWvD0IbWw",
+          "dur": "7m 48s",
+          "views": 2039,
+          "fil": "BHX8NVdtExk"
+        },
+        {
+          "id": "999WrlRXho4",
+          "title": "STATISTICS - Using Regression Model in Predicting Outcome LSRL USING TI84",
+          "url": "https://www.youtube.com/watch?v=999WrlRXho4",
+          "dur": "6m 49s",
+          "views": 14543,
+          "fil": "nTzTKcHPbEE"
+        },
+        {
+          "id": "FMkxtndCrf8",
+          "title": "Statistics -  How to Write the Linear Regression Equation from Two Data Sets",
+          "url": "https://www.youtube.com/watch?v=FMkxtndCrf8",
+          "dur": "16m 47s",
+          "views": 1916,
+          "fil": "OL_NaOAcpEo"
+        },
+        {
+          "id": "J1y8vBtrvso",
+          "title": "STATISTICS: How to Graph and Interpret Scatterplots",
+          "url": "https://www.youtube.com/watch?v=J1y8vBtrvso",
+          "dur": "5m 27s",
+          "views": 2251,
+          "fil": "yP3wIjfrxaY"
+        },
+        {
+          "id": "dblfS2r546U",
+          "title": "Statistics - How to Identify Explanatory and Response Variables and the Graph of a Scatterplot",
+          "url": "https://www.youtube.com/watch?v=dblfS2r546U",
+          "dur": "5m 18s",
+          "views": 32162,
+          "fil": "vvEgYDJ9uEs"
+        }
+      ]
+    },
+    {
+      "slug": "sampling-design",
+      "title": "Sampling Methods & Study Design",
+      "desc": "Populations vs samples, sampling techniques, study design, and the Central Limit Theorem.",
+      "videos": [
+        {
+          "id": "KD4t2b3XJn0",
+          "title": "Statistics - Population VS Sample - Lesson on Different Sampling Techniques",
+          "url": "https://www.youtube.com/watch?v=KD4t2b3XJn0",
+          "dur": "9m 21s",
+          "views": 4524,
+          "fil": "h3Sh82NcLCk"
+        },
+        {
+          "id": "d3j9WYKGDfY",
+          "title": "How to Identify Population and Sample in an Experiment",
+          "url": "https://www.youtube.com/watch?v=d3j9WYKGDfY",
+          "dur": "6m 4s",
+          "views": 13596,
+          "fil": "vDF0BW-6T2o"
+        },
+        {
+          "id": "y2vn3O8X3aw",
+          "title": "Statistics - How to Use the  Random Number Generator in Sampling",
+          "url": "https://www.youtube.com/watch?v=y2vn3O8X3aw",
+          "dur": "7m 25s",
+          "views": 12426,
+          "fil": "4nEtsjk57mg"
+        },
+        {
+          "id": "y2vn3O8X3aw",
+          "title": "Statistics - Using Random Number Generator in Simulating Simple Random Sampling (SRS)",
+          "url": "https://www.youtube.com/watch?v=y2vn3O8X3aw",
+          "dur": "7m 25s",
+          "views": 12426,
+          "fil": "4nEtsjk57mg"
+        },
+        {
+          "id": "BtqCDd6yV9E",
+          "title": "Statistics -  Lurking vs Confounding Variables and Blind Experiments",
+          "url": "https://www.youtube.com/watch?v=BtqCDd6yV9E",
+          "dur": "9m 32s",
+          "views": 14774,
+          "fil": "_00ZzgjIE8E"
+        },
+        {
+          "id": "vP01LFw2PEs",
+          "title": "STATISTICS: The Central Limit Theorem (Parameter vs Statistic)",
+          "url": "https://www.youtube.com/watch?v=vP01LFw2PEs",
+          "dur": "7m 14s",
+          "views": 5207,
+          "fil": "m3bwwvOMTTE"
+        },
+        {
+          "id": "Z66GkDW9l1A",
+          "title": "Statistics - Mean and Standard Deviation of a Sampling Distribution",
+          "url": "https://www.youtube.com/watch?v=Z66GkDW9l1A",
+          "dur": "7m 38s",
+          "views": 31118,
+          "fil": "0Rxx1hb5Mmc"
+        }
+      ]
+    }
+  ]
+}

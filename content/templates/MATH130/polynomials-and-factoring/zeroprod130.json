@@ -1,0 +1,21 @@
+{
+  "id": "math130-zeroprod130-001",
+  "cid": "MATH 130",
+  "topic": "Polynomials and Factoring",
+  "subtopic": "Zero product property",
+  "difficulty": 1,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Solve: (x - {a})(x + {b}) = 0.",
+  "params": {
+    "a": {"type": "int", "min": 1, "max": 9},
+    "b": {"type": "int", "min": 1, "max": 9}
+  },
+  "answer_expr": "zeroprod130",
+  "steps": [
+    "Set each factor equal to zero:",
+    "x - {a} = 0 => x = {a}",
+    "x + {b} = 0 => x = -{b}",
+    "Solutions: x = -{b} or x = {a}."
+  ],
+  "tags": ["zero-product", "factoring", "solve"]
+}

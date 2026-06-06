@@ -1,0 +1,23 @@
+{
+  "id": "math155-quadvert-001",
+  "cid": "MATH 155",
+  "topic": "Polynomial and Rational Functions",
+  "subtopic": "Vertex of a parabola",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Find the vertex of the parabola f(x) = {a}x^2 + {bq}x + {cq}.",
+  "params": {
+    "a_sign": { "type": "choice", "choices": [1, -1] },
+    "a_mag":  { "type": "int", "min": 1, "max": 3 },
+    "h": { "type": "int", "min": -5, "max": 5 },
+    "k": { "type": "int", "min": -9, "max": 9 }
+  },
+  "answer_expr": "quadvert",
+  "steps": [
+    "Use the vertex formula h = -b / (2a) with a = {a}, b = {bq}.",
+    "h = -({bq}) / (2 * {a}) = {h_check}.",
+    "k = f({h_check}) = {a}({h_check})^2 + {bq}({h_check}) + {cq} = {k_check}.",
+    "Vertex: ({answer_h}, {answer_k})."
+  ],
+  "tags": ["quadratic", "vertex", "parabola"]
+}

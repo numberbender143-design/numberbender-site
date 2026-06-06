@@ -1,0 +1,23 @@
+{
+  "id": "math110-descstat-median-001",
+  "cid": "MATH 110",
+  "topic": "Descriptive Statistics",
+  "subtopic": "Median of a data set",
+  "difficulty": 1,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "source": "original-template",
+  "params": {
+    "n":      { "type": "int", "min": 5, "max": 8 },
+    "values": { "type": "int_array", "len": "n", "min": 1, "max": 40 }
+  },
+  "instruction": "Find the median of the data set:",
+  "math_expr": "set(sorted_values)",
+  "answer_expr": "median(values)",
+  "answer_latex_tmpl": "\\text{Median} = {answer}",
+  "steps": [
+    "Sort the data: {sorted_values}.",
+    "n = {n} — {parity_note}.",
+    "Median = {answer}."
+  ],
+  "tags": ["median", "central-tendency"]
+}

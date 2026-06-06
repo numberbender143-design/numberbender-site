@@ -1,0 +1,27 @@
+{
+  "id": "math155-trigtan-001",
+  "cid": "MATH 155",
+  "topic": "Trigonometry Basics",
+  "subtopic": "Unit circle trig values",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Find the exact value of tan({deg}\u00b0) using the unit circle.",
+  "params": {
+    "angle_idx": {
+      "type": "int",
+      "min": 0,
+      "max": 5
+    }
+  },
+  "answer_expr": "trigtan",
+  "steps": [
+    "Use the identity tan(theta) = sin(theta) / cos(theta).",
+    "At {deg}\u00b0: sin = {sin_str}, cos = {cos_str}.",
+    "tan({deg}\u00b0) = {sin_str} / {cos_str} = {answer_trigtan}."
+  ],
+  "tags": [
+    "unit-circle",
+    "tangent",
+    "trig-values"
+  ]
+}

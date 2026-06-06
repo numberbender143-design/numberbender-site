@@ -1,0 +1,289 @@
+{
+  "cid": "MATH 130",
+  "course": "College Algebra / Math for Liberal Arts",
+  "topics": [
+    {
+      "slug": "set-theory",
+      "title": "Set Theory",
+      "desc": "Set definitions and notation, subsets, set operations (union, intersection, difference, complement), and Venn diagrams with survey applications.",
+      "videos": [
+        {
+          "id": "yTB-UlpwV1E",
+          "title": "HOW TO WRITE SET NOTATIONS IN DISCRETE MATH",
+          "url": "https://www.youtube.com/watch?v=yTB-UlpwV1E",
+          "dur": "11m 57s",
+          "views": 42,
+          "fil": "vYiIUALMuP0"
+        },
+        {
+          "id": "REp5bXqS3S4",
+          "title": "HOW TO IDENTIFY SUBSETS IN SET LOGIC",
+          "url": "https://www.youtube.com/watch?v=REp5bXqS3S4",
+          "dur": "6m 16s",
+          "views": 37,
+          "fil": "6rxAY7L-mLQ"
+        },
+        {
+          "id": "OY3CKdZt_7A",
+          "title": "HOW TO INTERPRET AND CONSTRUCT A VENN DIAGRAM",
+          "url": "https://www.youtube.com/watch?v=OY3CKdZt_7A",
+          "dur": "13m 14s",
+          "views": 298,
+          "fil": "_-n8Sz8UaQQ"
+        },
+        {
+          "id": "6Sde1IJjeeM",
+          "title": "Math - Solving Survey Problems Involving Set Operations",
+          "url": "https://www.youtube.com/watch?v=6Sde1IJjeeM",
+          "dur": "4m 56s",
+          "views": 5612,
+          "fil": "-543UnnrYro"
+        },
+        {
+          "id": "w6OPEXqxPHY",
+          "title": "HOW TO ANSWER SURVEY PROBLEMS IN SET LOGIC",
+          "url": "https://www.youtube.com/watch?v=w6OPEXqxPHY",
+          "dur": "4m 56s",
+          "views": 72,
+          "fil": "cayRsvYkLqY"
+        }
+      ]
+    },
+    {
+      "slug": "statistics",
+      "title": "Statistics",
+      "desc": "Organizing and picturing data, measures of average and position, boxplots and percentiles, and the normal distribution with the Empirical Rule (68-95-99.7).",
+      "videos": [
+        {
+          "id": "UHefJnSA1v4",
+          "title": "Statistics Constructing Stem and Leaf Plot",
+          "url": "https://www.youtube.com/watch?v=UHefJnSA1v4",
+          "dur": "4m 55s",
+          "views": 5359,
+          "fil": "W07Yil2XEQQ"
+        },
+        {
+          "id": "kkPNZ4SJDp0",
+          "title": "Statistics: Measures of Center Mean Vs Median",
+          "url": "https://www.youtube.com/watch?v=kkPNZ4SJDp0",
+          "dur": "5m 1s",
+          "views": 6256,
+          "fil": "-BBMRaI_XFA"
+        },
+        {
+          "id": "KTkizHDaFWw",
+          "title": "Describing the Shape, Center, and Spread of a Distribution",
+          "url": "https://www.youtube.com/watch?v=KTkizHDaFWw",
+          "dur": "8m 36s",
+          "views": 23438,
+          "fil": "juMHkBm0MKs"
+        },
+        {
+          "id": "KtqpHjCKju8",
+          "title": "STATISTICS Constructing Quartiles and Boxplot",
+          "url": "https://www.youtube.com/watch?v=KtqpHjCKju8",
+          "dur": "5m 59s",
+          "views": 5437,
+          "fil": "LHFMQObuGE0"
+        },
+        {
+          "id": "EU4E6t3h9yU",
+          "title": "How to compute for percentile using z-score",
+          "url": "https://www.youtube.com/watch?v=EU4E6t3h9yU",
+          "dur": "18m 20s",
+          "views": 40448,
+          "fil": "JxOguy6_9Iw"
+        },
+        {
+          "id": "T7-eeg6rhjY",
+          "title": "STATISTICS: Using the Empirical Rule 68-95-99.7",
+          "url": "https://www.youtube.com/watch?v=T7-eeg6rhjY",
+          "dur": "5m 8s",
+          "views": 79926,
+          "fil": "eneZPveMdqs"
+        },
+        {
+          "id": "JNe38QYVfTE",
+          "title": "Statistics -  Standard Normal Distribution and Z-Score: Computing for Normal Probability",
+          "url": "https://www.youtube.com/watch?v=JNe38QYVfTE",
+          "dur": "7m 46s",
+          "views": 47228,
+          "fil": "zegZ7OvSzV0"
+        },
+        {
+          "id": "cM8gRnu0ez4",
+          "title": "Statistics - Finding Area Under the Normal Curve Using the Z-table",
+          "url": "https://www.youtube.com/watch?v=cM8gRnu0ez4",
+          "dur": "16m 51s",
+          "views": 16612,
+          "fil": "XgWIHOErYic"
+        },
+        {
+          "id": "-7NClNBCP-U",
+          "title": "Statistics - How to use the 68-95-99.7 Rule in computing the area under the Normal curve",
+          "url": "https://www.youtube.com/watch?v=-7NClNBCP-U",
+          "dur": "11m 49s",
+          "views": 5478,
+          "fil": "jftbDjsCMYE"
+        },
+        {
+          "id": "IAG57XsYku0",
+          "title": "Statistics - Continuous Random Variable and Normal Distribution",
+          "url": "https://www.youtube.com/watch?v=IAG57XsYku0",
+          "dur": "4m 24s",
+          "views": 2191,
+          "fil": "e3F-kx0jCKk"
+        },
+        {
+          "id": "FpJGjMNqDsw",
+          "title": "Statistics: Finding the Area Under the Normal Curve Using Ti 84",
+          "url": "https://www.youtube.com/watch?v=FpJGjMNqDsw",
+          "dur": "6m 51s",
+          "views": 5311,
+          "fil": "UfJiUqdrcaU"
+        }
+      ]
+    },
+    {
+      "slug": "probability-and-counting",
+      "title": "Probability and Counting Techniques",
+      "desc": "Basic concepts of probability, sample spaces, probability rules, independent and dependent events, the Fundamental Counting Principle and permutations, and tree diagrams and tables.",
+      "videos": [
+        {
+          "id": "chjuz7CJpWY",
+          "title": "Statistics: Classical Probability Given the Sample Space",
+          "url": "https://www.youtube.com/watch?v=chjuz7CJpWY",
+          "dur": "9m 55s",
+          "views": 12463,
+          "fil": "eFwf7du_qpA"
+        },
+        {
+          "id": "xuArY4tl5S4",
+          "title": "How to Answer Classical Probability or Theoretical Probability in Statistics",
+          "url": "https://www.youtube.com/watch?v=xuArY4tl5S4",
+          "dur": "8m 16s",
+          "views": 4468,
+          "fil": "2lGEECua_8U"
+        },
+        {
+          "id": "Nbrw9-RdtLY",
+          "title": "How to Use the Probability Rules",
+          "url": "https://www.youtube.com/watch?v=Nbrw9-RdtLY",
+          "dur": "12m 29s",
+          "views": 1468,
+          "fil": "lmDzvcAQOwU"
+        },
+        {
+          "id": "uFnGgN_Frx0",
+          "title": "How To Solve Probability of Dependent and Independent Events",
+          "url": "https://www.youtube.com/watch?v=uFnGgN_Frx0",
+          "dur": "7m 42s",
+          "views": 680,
+          "fil": "bpkXQ9E8aR0"
+        },
+        {
+          "id": "39e3Uuqbh4k",
+          "title": "Statistics: Computing for Probability of Independent vs Dependent Events",
+          "url": "https://www.youtube.com/watch?v=39e3Uuqbh4k",
+          "dur": "7m 20s",
+          "views": 1300,
+          "fil": "UoVZwUQWsHU"
+        },
+        {
+          "id": "kUZvAP9W76M",
+          "title": "ALGEBRA Using PERMUTATION  AND FUNDAMENTAL COUNTING PRINCIPLE",
+          "url": "https://www.youtube.com/watch?v=kUZvAP9W76M",
+          "dur": "6m 5s",
+          "views": 2258,
+          "fil": "kQmtvAKUXew"
+        },
+        {
+          "id": "cdG5BDqCWM4",
+          "title": "How to solve probability using a 2-way or contingency table, venn diagram, and tree diagram",
+          "url": "https://www.youtube.com/watch?v=cdG5BDqCWM4",
+          "dur": "15m 42s",
+          "views": 4403,
+          "fil": "D-r173kf97g"
+        }
+      ]
+    },
+    {
+      "slug": "logic",
+      "title": "Logic",
+      "desc": "Simple statements and negation, compound statements, conjunction and disjunction truth tables, and translating statements to symbolic form.",
+      "videos": [
+        {
+          "id": "teERQdghX9U",
+          "title": "HOW TO FORM SIMPLE STATEMENTS AND ITS NEGATIONS IN SET LOGIC",
+          "url": "https://www.youtube.com/watch?v=teERQdghX9U",
+          "dur": "9m 2s",
+          "views": 50,
+          "fil": "hXL3ijD8j0Q"
+        },
+        {
+          "id": "g66BNlNhrDI",
+          "title": "HOW TO FORM COMPOUND STATEMENTS IN SYMBOLIC LOGIC",
+          "url": "https://www.youtube.com/watch?v=g66BNlNhrDI",
+          "dur": "11m 9s",
+          "views": 55,
+          "fil": "-C1Za5wBeb4"
+        },
+        {
+          "id": "esywilk1eSQ",
+          "title": "How to Construct a Truth Table for Conjunction & Disjunction",
+          "url": "https://www.youtube.com/watch?v=esywilk1eSQ",
+          "dur": "11m 39s",
+          "views": 44519,
+          "fil": "1LUOJqlu81c"
+        },
+        {
+          "id": "LojjlWfPY8o",
+          "title": "Math - How to Translate Compound Statements to Symbolic Form",
+          "url": "https://www.youtube.com/watch?v=LojjlWfPY8o",
+          "dur": "10m 9s",
+          "views": 57390,
+          "fil": "2g3L9Y-gZ-8"
+        }
+      ]
+    },
+    {
+      "slug": "geometry",
+      "title": "Geometry",
+      "desc": "Points, lines, and planes, angle notation, and classifying polygons and measuring their angles.",
+      "videos": [
+        {
+          "id": "pRwYhD6wA8Q",
+          "title": "NAMING POINTS, LINES, AND PLANES",
+          "url": "https://www.youtube.com/watch?v=pRwYhD6wA8Q",
+          "dur": "23m 33s",
+          "views": 1934,
+          "fil": "GZdadgNwKjQ"
+        },
+        {
+          "id": "xcypiS76cIk",
+          "title": "HOW TO NAME AND WRITE ANGLE NOTATIONS",
+          "url": "https://www.youtube.com/watch?v=xcypiS76cIk",
+          "dur": "12m 2s",
+          "views": 1104,
+          "fil": "ja5uGrFad7U"
+        },
+        {
+          "id": "X3nLe3uzWF8",
+          "title": "HOW TO CLASSIFY AND NAMES POLYGONS ACCORDING TO ITS SIDES",
+          "url": "https://www.youtube.com/watch?v=X3nLe3uzWF8",
+          "dur": "16m 33s",
+          "views": 1502,
+          "fil": "GLw1J4MIqeM"
+        },
+        {
+          "id": "c6ZwRQdHd7Y",
+          "title": "HOW TO MEASURE ANGLES OF A POLYGON USING ITS DIAGONALS",
+          "url": "https://www.youtube.com/watch?v=c6ZwRQdHd7Y",
+          "dur": "14m 21s",
+          "views": 257,
+          "fil": "nJ5HDek5W40"
+        }
+      ]
+    }
+  ]
+}

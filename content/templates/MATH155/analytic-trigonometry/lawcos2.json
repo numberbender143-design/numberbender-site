@@ -1,0 +1,39 @@
+{
+  "id": "math155-lawcos2-001",
+  "cid": "MATH 155",
+  "topic": "Analytic Trigonometry",
+  "subtopic": "Law of Cosines \u2014 find missing angle",
+  "difficulty": 3,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "In triangle ABC, a = {side_a}, b = {side_b}, c = {side_c}. Use the Law of Cosines to find angle C in degrees (round to 1 decimal place).",
+  "params": {
+    "side_a": {
+      "type": "int",
+      "min": 4,
+      "max": 9
+    },
+    "side_b": {
+      "type": "int",
+      "min": 4,
+      "max": 9
+    },
+    "side_c": {
+      "type": "int",
+      "min": 4,
+      "max": 9
+    }
+  },
+  "answer_expr": "lawcos2",
+  "steps": [
+    "Rearrange the Law of Cosines for angle C:",
+    "cos(C) = (a^2 + b^2 - c^2) / (2ab) = ({side_a}^2 + {side_b}^2 - {side_c}^2) / (2*{side_a}*{side_b}).",
+    "cos(C) = ({a2} + {b2} - {c2}) / {two_ab} = {cos_C_val}.",
+    "C = arccos({cos_C_val}) = {answer_lawcos2}\u00b0."
+  ],
+  "tags": [
+    "law-of-cosines",
+    "triangle",
+    "inverse-trig",
+    "angle"
+  ]
+}

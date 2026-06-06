@@ -1,0 +1,20 @@
+{
+  "id": "math160-lcm160-001",
+  "cid": "MATH 160",
+  "topic": "Number Theory",
+  "subtopic": "LCM from GCD",
+  "difficulty": 1,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Find the least common multiple (LCM) of {a} and {b}.",
+  "params": {
+    "a": { "type": "int", "min": 4,  "max": 24 },
+    "b": { "type": "int", "min": 3,  "max": 18 }
+  },
+  "answer_expr": "lcm160",
+  "steps": [
+    "Use the formula: LCM(a,b) = a*b / GCD(a,b).",
+    "GCD({a},{b}) = {gcd_val}.",
+    "LCM({a},{b}) = ({a} * {b}) / {gcd_val} = {product_ab} / {gcd_val} = {answer_lcm160}."
+  ],
+  "tags": ["number-theory", "LCM", "GCD", "divisibility"]
+}

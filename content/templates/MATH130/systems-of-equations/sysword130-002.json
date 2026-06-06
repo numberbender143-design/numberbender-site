@@ -1,0 +1,22 @@
+{
+  "id": "math130-sysword130-002",
+  "cid": "MATH 130",
+  "topic": "Systems of Equations",
+  "subtopic": "Word problems (systems)",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "A store sells pens for ${pen} each and notebooks for ${notebook} each. A customer buys {total_items} items totaling ${total_cost}. How many pens were purchased?",
+  "params": {
+    "pen": {"type": "int", "min": 2, "max": 5},
+    "notebook": {"type": "int", "min": 6, "max": 12},
+    "x_sol": {"type": "int", "min": 3, "max": 15},
+    "y_sol": {"type": "int", "min": 3, "max": 15}
+  },
+  "answer_expr": "sysword130",
+  "steps": [
+    "Let x = pens, y = notebooks.",
+    "x + y = {total_items} and {pen}x + {notebook}y = {total_cost}.",
+    "Solve: x = {x_sol}."
+  ],
+  "tags": ["systems", "word-problem"]
+}

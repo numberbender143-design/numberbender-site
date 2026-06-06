@@ -1,0 +1,21 @@
+{
+  "id": "math160-setcard160-001",
+  "cid": "MATH 160",
+  "topic": "Sets",
+  "subtopic": "Inclusion-exclusion principle",
+  "difficulty": 1,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "In a group of students, |A| = {a_size} students are in club A, |B| = {b_size} students are in club B, and |A cap B| = {inter_size} students are in both. How many students are in at least one club (|A union B|)?",
+  "params": {
+    "a_size":    { "type": "int", "min": 10, "max": 40 },
+    "b_size":    { "type": "int", "min": 10, "max": 40 },
+    "inter_size":{ "type": "int", "min": 2,  "max": 9  }
+  },
+  "answer_expr": "setcard160",
+  "steps": [
+    "Use the inclusion-exclusion principle: |A union B| = |A| + |B| - |A cap B|.",
+    "|A union B| = {a_size} + {b_size} - {inter_size}.",
+    "|A union B| = {union_size}."
+  ],
+  "tags": ["sets", "union", "inclusion-exclusion", "cardinality"]
+}

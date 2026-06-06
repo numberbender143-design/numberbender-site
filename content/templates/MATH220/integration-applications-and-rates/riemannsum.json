@@ -1,0 +1,37 @@
+{
+  "id": "math220-riemannsum-001",
+  "cid": "MATH 220",
+  "topic": "Integration Applications and Rates",
+  "subtopic": "Riemann sum approximation",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Use a left Riemann sum with n = {n_rect} equal subintervals to approximate the integral from 0 to {b} of f(x) = {c}x.",
+  "params": {
+    "c": {
+      "type": "int",
+      "min": 1,
+      "max": 6
+    },
+    "b": {
+      "type": "int",
+      "min": 2,
+      "max": 6
+    },
+    "n_rect": {
+      "type": "int",
+      "min": 2,
+      "max": 4
+    }
+  },
+  "answer_expr": "riemannsum",
+  "steps": [
+    "Delta_x = {b}/{n_rect} = {dx}. Left endpoints: x_0=0, x_1={dx}, ...",
+    "Left Riemann sum = delta_x * sum of f(x_i) = {dx} * ({sum_str}).",
+    "= {dx} * {f_sum} = {answer_riemannsum}."
+  ],
+  "tags": [
+    "riemann-sum",
+    "approximation",
+    "definite-integral"
+  ]
+}

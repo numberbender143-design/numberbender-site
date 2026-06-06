@@ -1,0 +1,20 @@
+{
+  "id": "math250-matvec23-001",
+  "cid": "MATH 250",
+  "topic": "Matrices and Operations",
+  "subtopic": "Matrix-vector product",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Compute entry {ri} of the product y = Ax.\nA (2x3 matrix):\n  Row 1: [{a11}, {a12}, {a13}]\n  Row 2: [{a21}, {a22}, {a23}]\nx (column vector): [{x1}, {x2}, {x3}]",
+  "params": {
+    "a11": {"type":"int","min":-3,"max":3}, "a12": {"type":"int","min":-3,"max":3}, "a13": {"type":"int","min":-3,"max":3},
+    "a21": {"type":"int","min":-3,"max":3}, "a22": {"type":"int","min":-3,"max":3}, "a23": {"type":"int","min":-3,"max":3},
+    "x1":  {"type":"int","min":-3,"max":3}, "x2":  {"type":"int","min":-3,"max":3}, "x3":  {"type":"int","min":-3,"max":3},
+    "q_row": {"type":"int","min":0,"max":1}
+  },
+  "answer_expr": "matvec23",
+  "steps": [
+    "Row {ri} of A dotted with x: {terms_str} = {answer_matvec23}."
+  ],
+  "tags": ["linear-algebra","matrix-vector-product","2x3"]
+}

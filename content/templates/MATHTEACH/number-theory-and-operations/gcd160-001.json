@@ -1,0 +1,34 @@
+{
+  "id": "mathteach-gcd160-001",
+  "cid": "MATHTEACH",
+  "topic": "Number Theory and Operations",
+  "subtopic": "GCD (Euclidean algorithm)",
+  "difficulty": 1,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Find the greatest common divisor (GCD) of {a} and {b}.",
+  "params": {
+    "a": {
+      "type": "int",
+      "min": 12,
+      "max": 96
+    },
+    "b": {
+      "type": "int",
+      "min": 6,
+      "max": 48
+    }
+  },
+  "answer_expr": "gcd160",
+  "steps": [
+    "Use the Euclidean algorithm: repeatedly replace (a, b) with (b, a mod b) until b = 0.",
+    "The last nonzero remainder is the GCD.",
+    "GCD({a}, {b}) = {answer_gcd160}."
+  ],
+  "tags": [
+    "number-theory",
+    "GCD",
+    "euclidean-algorithm",
+    "divisibility"
+  ],
+  "source": "adapted-from:gcd001.json"
+}

@@ -1,0 +1,48 @@
+{
+  "id": "math151-ratdom4-001",
+  "cid": "MATH 151",
+  "topic": "Rational Expressions and Equations",
+  "subtopic": "Domain of a rational expression",
+  "difficulty": 1,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Find all values excluded from the domain of h(x) = {num_a} / (({den_c}x + {den_d})({den_e}x + {den_f})).",
+  "params": {
+    "num_a": {
+      "type": "int",
+      "min": 1,
+      "max": 6
+    },
+    "den_c": {
+      "type": "int",
+      "min": 1,
+      "max": 4
+    },
+    "den_d": {
+      "type": "int",
+      "min": -8,
+      "max": 8
+    },
+    "den_e": {
+      "type": "int",
+      "min": 1,
+      "max": 3
+    },
+    "den_f": {
+      "type": "int",
+      "min": -8,
+      "max": 8
+    }
+  },
+  "answer_expr": "ratdom4",
+  "steps": [
+    "Set each factor to zero.",
+    "{den_c}x + {den_d} = 0 => x = {excl1}.",
+    "{den_e}x + {den_f} = 0 => x = {excl2}.",
+    "Excluded values: x = {excl1} and x = {excl2}."
+  ],
+  "tags": [
+    "rational-expression",
+    "domain",
+    "excluded-values"
+  ]
+}

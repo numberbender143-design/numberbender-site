@@ -1,0 +1,39 @@
+{
+  "id": "mathteach-primefac-001",
+  "cid": "MATHTEACH",
+  "topic": "Number Theory and Operations",
+  "subtopic": "Prime factorization & prime numbers",
+  "difficulty": 1,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "source": "original-template",
+  "instruction": "Write the prime factorization of {n} (use exponents).",
+  "params": {
+    "n": {
+      "type": "choice",
+      "choices": [
+        12,
+        18,
+        20,
+        24,
+        28,
+        36,
+        40,
+        45,
+        48,
+        50
+      ]
+    }
+  },
+  "answer_expr": "primefac",
+  "steps": [
+    "Divide {n} by the smallest prime that goes in evenly; repeat on each quotient.",
+    "Collect repeated primes as powers.",
+    "{n} = {pf_expanded} = {answer_primefac}."
+  ],
+  "tags": [
+    "number-theory",
+    "prime-factorization",
+    "primes",
+    "divisibility"
+  ]
+}

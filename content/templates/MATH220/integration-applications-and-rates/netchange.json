@@ -1,0 +1,37 @@
+{
+  "id": "math220-netchange-002",
+  "cid": "MATH 220",
+  "topic": "Integration Applications and Rates",
+  "subtopic": "Net change from rate",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "A quantity changes at rate r(t) = {a} + {b}t units/hour. Find the total change from t = 0 to t = {T}.",
+  "params": {
+    "a": {
+      "type": "int",
+      "min": 1,
+      "max": 10
+    },
+    "b": {
+      "type": "int",
+      "min": 1,
+      "max": 5
+    },
+    "T": {
+      "type": "int",
+      "min": 2,
+      "max": 6
+    }
+  },
+  "answer_expr": "netchange",
+  "steps": [
+    "Net change = integral from 0 to {T} of ({a} + {b}t) dt = [{a}t + {b}t^2/2] at t={T}.",
+    "= {a}*{T} + {b}*{T}^2/2 = {aT} + {bT2_half} = {answer_netchange}."
+  ],
+  "tags": [
+    "net-change",
+    "accumulation",
+    "rate",
+    "definite-integral"
+  ]
+}

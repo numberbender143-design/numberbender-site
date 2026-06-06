@@ -1,0 +1,281 @@
+{
+  "cid": "MATHTEACH",
+  "course": "Math for Elementary Teachers",
+  "topics": [
+    {
+      "slug": "number-theory-and-operations",
+      "title": "Number Theory & Operations",
+      "desc": "Place value, whole number operations, GCD, LCM, prime factorization, divisibility rules, and order of operations.",
+      "videos": [
+        {
+          "id": "jgKKaNiylGw",
+          "title": "REPRESENTING REAL NUMBERS ON A NUMBER LINE",
+          "url": "https://www.youtube.com/watch?v=jgKKaNiylGw",
+          "dur": "20m 25s",
+          "views": 107,
+          "fil": "07vb7k7mQdg"
+        },
+        {
+          "id": "P_VsM5mNzRs",
+          "title": "How to ADD, SUBTRACT, MULTIPLY, AND DIVIDE INTEGERS",
+          "url": "https://www.youtube.com/watch?v=P_VsM5mNzRs",
+          "dur": "19m 16s",
+          "views": 1213,
+          "fil": "T2h4oGbusJg"
+        },
+        {
+          "id": "gat5MiXJA8k",
+          "title": "ALGEBRA: Plotting Points in the X-Y Plane",
+          "url": "https://www.youtube.com/watch?v=gat5MiXJA8k",
+          "dur": "4m 30s",
+          "views": 4863,
+          "fil": "x2sTZwm5D54"
+        },
+        {
+          "id": "44vfTjoXQJM",
+          "title": "HOW TO APPROXIMATE SQUARE ROOTS",
+          "url": "https://www.youtube.com/watch?v=44vfTjoXQJM",
+          "dur": "13m 3s",
+          "views": 118,
+          "fil": "Id6mM3QUKp8"
+        },
+        {
+          "id": "EjFvomRXPkM",
+          "title": "ALGEBRA: Laws of Exponents",
+          "url": "https://www.youtube.com/watch?v=EjFvomRXPkM",
+          "dur": "9m 12s",
+          "views": 6132,
+          "fil": "9DdGtXpMpC8"
+        },
+        {
+          "id": "FBlzd8a1mBo",
+          "title": "CONVERTING SCIENTIFIC NOTATION TO STANDARD FORM VV",
+          "url": "https://www.youtube.com/watch?v=FBlzd8a1mBo",
+          "dur": "15m 44s",
+          "views": 108,
+          "fil": "JtGR0Le7rjs"
+        }
+      ]
+    },
+    {
+      "slug": "fractions-and-proportional-reasoning",
+      "title": "Fractions & Proportional Reasoning",
+      "desc": "Adding, subtracting, multiplying, and dividing fractions; connecting fractions to decimals and percents; ratios and proportions.",
+      "videos": [
+        {
+          "id": "Ry7KgcysvpI",
+          "title": "HOW TO USE THE FACTOR TREE IN SIMPLIFYING FRACTIONS",
+          "url": "https://www.youtube.com/watch?v=Ry7KgcysvpI",
+          "dur": "13m 46s",
+          "views": 255,
+          "fil": "CKxn_9Hafr4"
+        },
+        {
+          "id": "aQCVdczqeCY",
+          "title": "WHAT ARE RATIONAL NUMBERS?",
+          "url": "https://www.youtube.com/watch?v=aQCVdczqeCY",
+          "dur": "19m 32s",
+          "views": 137,
+          "fil": "07vb7k7mQdg"
+        },
+        {
+          "id": "4JhPTVF7JDw",
+          "title": "ALGEBRA: Evaluating Ratio and Proportion",
+          "url": "https://www.youtube.com/watch?v=4JhPTVF7JDw",
+          "dur": "9m 17s",
+          "views": 87117,
+          "fil": "BrLb-jZRmio"
+        },
+        {
+          "id": "7N7afYls81w",
+          "title": "HOW TO ANSWER WORD PROBLEMS ON DIRECT VARIATION",
+          "url": "https://www.youtube.com/watch?v=7N7afYls81w",
+          "dur": "20m 17s",
+          "views": 89,
+          "fil": "vHvAuX6k4Gs"
+        },
+        {
+          "id": "EVeFMrDZ1BU",
+          "title": "HOW TO SOLVE PROBLEMS INVOLVING INVERSE VARIATION",
+          "url": "https://www.youtube.com/watch?v=EVeFMrDZ1BU",
+          "dur": "14m 55s",
+          "views": 81,
+          "fil": "1FyLXwZKVQg"
+        },
+        {
+          "id": "bAzfn5Dm_Co",
+          "title": "HOW TO SOLVE WORD PROBLEMS INVOLVING JOINT VARIATION",
+          "url": "https://www.youtube.com/watch?v=bAzfn5Dm_Co",
+          "dur": "15m 3s",
+          "views": 499,
+          "fil": "kPkpywEVDBM"
+        }
+      ]
+    },
+    {
+      "slug": "algebraic-thinking",
+      "title": "Algebraic Thinking",
+      "desc": "Number patterns, evaluating expressions, solving one- and two-step equations, and representing relationships with tables and graphs.",
+      "videos": [
+        {
+          "id": "ODXWMglNUYg",
+          "title": "ALGEBRA: Evaluating Algebraic Expressions",
+          "url": "https://www.youtube.com/watch?v=ODXWMglNUYg",
+          "dur": "5m 14s",
+          "views": 5614,
+          "fil": "QAV84ArIMjQ"
+        },
+        {
+          "id": "3zpS3TYD3PE",
+          "title": "ALGEBRA: Translating Algebraic to Numerical Expressions",
+          "url": "https://www.youtube.com/watch?v=3zpS3TYD3PE",
+          "dur": "6m 6s",
+          "views": 6848,
+          "fil": "mIfkWQ8wvNA"
+        },
+        {
+          "id": "xKtNiqVXtfc",
+          "title": "ALGEBRA: Number Properties",
+          "url": "https://www.youtube.com/watch?v=xKtNiqVXtfc",
+          "dur": "7m 55s",
+          "views": 3045,
+          "fil": "07vb7k7mQdg"
+        },
+        {
+          "id": "x_iTz3pQFXU",
+          "title": "LET, UPCAT, SAT, MCQ REVIEW -  Multiplying Polynomials: Distributive Property Method! #math",
+          "url": "https://www.youtube.com/watch?v=x_iTz3pQFXU",
+          "dur": "30s",
+          "views": 376,
+          "fil": "QAV84ArIMjQ"
+        },
+        {
+          "id": "8FiLIEU48IQ",
+          "title": "LECTURE: HOW TO SOLVE ONE-STEP EQUATION",
+          "url": "https://www.youtube.com/watch?v=8FiLIEU48IQ",
+          "dur": "28m 56s",
+          "views": 87,
+          "fil": "oRhyDgCkIqM"
+        },
+        {
+          "id": "A2btQVNRFIU",
+          "title": "ALGEBRA: Solving Linear Equations",
+          "url": "https://www.youtube.com/watch?v=A2btQVNRFIU",
+          "dur": "12m 44s",
+          "views": 9208,
+          "fil": "oRhyDgCkIqM"
+        }
+      ]
+    },
+    {
+      "slug": "geometry-and-measurement",
+      "title": "Geometry & Measurement",
+      "desc": "Perimeter, area, volume, geometric shapes, and applying measurement formulas in real-world contexts.",
+      "videos": [
+        {
+          "id": "pRwYhD6wA8Q",
+          "title": "NAMING POINTS, LINES, AND PLANES",
+          "url": "https://www.youtube.com/watch?v=pRwYhD6wA8Q",
+          "dur": "23m 33s",
+          "views": 1934,
+          "fil": "GZdadgNwKjQ"
+        },
+        {
+          "id": "xcypiS76cIk",
+          "title": "HOW TO NAME AND WRITE ANGLE NOTATIONS",
+          "url": "https://www.youtube.com/watch?v=xcypiS76cIk",
+          "dur": "12m 2s",
+          "views": 1104,
+          "fil": "ja5uGrFad7U"
+        },
+        {
+          "id": "X3nLe3uzWF8",
+          "title": "HOW TO CLASSIFY AND NAMES POLYGONS ACCORDING TO ITS SIDES",
+          "url": "https://www.youtube.com/watch?v=X3nLe3uzWF8",
+          "dur": "16m 33s",
+          "views": 1502,
+          "fil": "GLw1J4MIqeM"
+        },
+        {
+          "id": "c6ZwRQdHd7Y",
+          "title": "HOW TO MEASURE ANGLES OF A POLYGON USING ITS DIAGONALS",
+          "url": "https://www.youtube.com/watch?v=c6ZwRQdHd7Y",
+          "dur": "14m 21s",
+          "views": 257,
+          "fil": "nJ5HDek5W40"
+        },
+        {
+          "id": "zu1DolJeNQs",
+          "title": "DETERMINING SIMILARITY ON POLYGONS",
+          "url": "https://www.youtube.com/watch?v=zu1DolJeNQs",
+          "dur": "14m 7s",
+          "views": 41,
+          "fil": "I6zjdEFxINM"
+        },
+        {
+          "id": "JccZzmqieiI",
+          "title": "SOLVING TRIANGLE SIMILARITY USING AA, SSS, SAS SIMILARITY THEOREM",
+          "url": "https://www.youtube.com/watch?v=JccZzmqieiI",
+          "dur": "12m 12s",
+          "views": 423,
+          "fil": "XRX74dDcsfY"
+        }
+      ]
+    },
+    {
+      "slug": "statistics-and-probability",
+      "title": "Statistics & Probability",
+      "desc": "Mean, median, mode, range, classical probability, counting methods, and reading graphs.",
+      "videos": [
+        {
+          "id": "xuArY4tl5S4",
+          "title": "How to Answer Classical Probability or Theoretical Probability in Statistics",
+          "url": "https://www.youtube.com/watch?v=xuArY4tl5S4",
+          "dur": "8m 16s",
+          "views": 4468,
+          "fil": "2lGEECua_8U"
+        },
+        {
+          "id": "Nbrw9-RdtLY",
+          "title": "How to Use the Probability Rules",
+          "url": "https://www.youtube.com/watch?v=Nbrw9-RdtLY",
+          "dur": "12m 29s",
+          "views": 1468,
+          "fil": "lmDzvcAQOwU"
+        },
+        {
+          "id": "chjuz7CJpWY",
+          "title": "Statistics: Classical Probability Given the Sample Space",
+          "url": "https://www.youtube.com/watch?v=chjuz7CJpWY",
+          "dur": "9m 55s",
+          "views": 12463,
+          "fil": "2lGEECua_8U"
+        },
+        {
+          "id": "uFnGgN_Frx0",
+          "title": "How To Solve Probability of Dependent and Independent Events",
+          "url": "https://www.youtube.com/watch?v=uFnGgN_Frx0",
+          "dur": "7m 42s",
+          "views": 680,
+          "fil": "bpkXQ9E8aR0"
+        },
+        {
+          "id": "39e3Uuqbh4k",
+          "title": "Statistics: Computing for Probability of Independent vs Dependent Events",
+          "url": "https://www.youtube.com/watch?v=39e3Uuqbh4k",
+          "dur": "7m 20s",
+          "views": 1300,
+          "fil": "UoVZwUQWsHU"
+        },
+        {
+          "id": "cdG5BDqCWM4",
+          "title": "How to solve probability using a 2-way or contingency table, venn diagram, and tree diagram",
+          "url": "https://www.youtube.com/watch?v=cdG5BDqCWM4",
+          "dur": "15m 42s",
+          "views": 4403,
+          "fil": "D-r173kf97g"
+        }
+      ]
+    }
+  ]
+}

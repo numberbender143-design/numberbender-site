@@ -1,0 +1,22 @@
+{
+  "id": "math155-ratdom-001",
+  "cid": "MATH 155",
+  "topic": "Polynomial and Rational Functions",
+  "subtopic": "Domain of a rational function",
+  "difficulty": 1,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Find the value(s) excluded from the domain of f(x) = ({num_a}x + {num_b}) / ({den_c}x + {den_d}).",
+  "params": {
+    "num_a": { "type": "int", "min": 1, "max": 5 },
+    "num_b": { "type": "int", "min": -5, "max": 5 },
+    "den_c": { "type": "int", "min": 1, "max": 5 },
+    "den_d": { "type": "int", "min": -9, "max": 9 }
+  },
+  "answer_expr": "ratdom",
+  "steps": [
+    "Set the denominator equal to zero: {den_c}x + {den_d} = 0.",
+    "Solve: {den_c}x = -{den_d}, so x = {answer_ratdom}.",
+    "The domain is all real numbers except x = {answer_ratdom}."
+  ],
+  "tags": ["rational-function", "domain", "excluded-values"]
+}

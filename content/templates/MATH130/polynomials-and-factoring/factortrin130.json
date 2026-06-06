@@ -1,0 +1,20 @@
+{
+  "id": "math130-factortrin130-001",
+  "cid": "MATH 130",
+  "topic": "Polynomials and Factoring",
+  "subtopic": "Factoring trinomials",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Factor: x^2 + {b_coef}x + {c_coef}.",
+  "params": {
+    "r1": {"type": "int", "min": 1, "max": 9},
+    "r2": {"type": "int", "min": 1, "max": 9}
+  },
+  "answer_expr": "factortrin130",
+  "steps": [
+    "Find two numbers that multiply to {c_coef} and add to {b_coef}.",
+    "The numbers are {r1} and {r2}.",
+    "Factor: (x + {r1})(x + {r2})."
+  ],
+  "tags": ["factoring", "trinomial"]
+}

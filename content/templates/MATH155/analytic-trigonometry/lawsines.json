@@ -1,0 +1,21 @@
+{
+  "id": "math155-lawsines-001",
+  "cid": "MATH 155",
+  "topic": "Analytic Trigonometry",
+  "subtopic": "Law of Sines",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "In triangle ABC, angle A = {ang_A}°, angle B = {ang_B}°, and side a = {side_a}. Use the Law of Sines to find side b (round to 2 decimal places).",
+  "params": {
+    "ang_A": { "type": "choice", "choices": [30, 45, 60] },
+    "ang_B": { "type": "choice", "choices": [45, 60, 75, 90] },
+    "side_a": { "type": "int", "min": 4, "max": 12 }
+  },
+  "answer_expr": "lawsines",
+  "steps": [
+    "Law of Sines: a / sin(A) = b / sin(B).",
+    "b = a * sin(B) / sin(A) = {side_a} * sin({ang_B}°) / sin({ang_A}°).",
+    "b = {side_a} * {sin_B} / {sin_A} = {answer_lawsines}."
+  ],
+  "tags": ["law-of-sines", "triangle", "trigonometry"]
+}

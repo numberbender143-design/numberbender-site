@@ -1,0 +1,32 @@
+{
+  "id": "mathteach-arithseq_d-001",
+  "cid": "MATHTEACH",
+  "topic": "Algebraic Thinking",
+  "subtopic": "Number patterns & sequences",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Find the common difference d of the arithmetic sequence: {a1}, {a2}, {a3}, ...",
+  "params": {
+    "a1": {
+      "type": "int",
+      "min": 2,
+      "max": 15
+    },
+    "d": {
+      "type": "int",
+      "min": 3,
+      "max": 10
+    }
+  },
+  "answer_expr": "arithseq_d",
+  "steps": [
+    "Subtract consecutive terms: d = a2 - a1 = {a2} - {a1} = {answer_arithseq_d}.",
+    "Verify: {a2} - {a1} = {a3} - {a2} = {answer_arithseq_d}. The sequence is arithmetic."
+  ],
+  "tags": [
+    "arithmetic-sequence",
+    "common-difference",
+    "identify"
+  ],
+  "source": "adapted-from:arithseq2.json"
+}

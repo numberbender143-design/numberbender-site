@@ -1,0 +1,31 @@
+{
+  "id": "math130-exprules_quot-001",
+  "cid": "MATH 130",
+  "topic": "Polynomials and Factoring",
+  "subtopic": "Laws of exponents \u2014 quotient rule",
+  "difficulty": 1,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Simplify: x^{m} / x^{n} (assume m > n). Write your answer as x^k.",
+  "params": {
+    "n": {
+      "type": "int",
+      "min": 1,
+      "max": 5
+    },
+    "extra": {
+      "type": "int",
+      "min": 1,
+      "max": 6
+    }
+  },
+  "answer_expr": "exprules_quot",
+  "steps": [
+    "Quotient rule: x^m / x^n = x^(m-n).",
+    "x^{m} / x^{n} = x^({m}-{n}) = x^{answer_exprules_quot}."
+  ],
+  "tags": [
+    "exponents",
+    "quotient-rule",
+    "simplify"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": "math160-graphdeg160-002",
+  "cid": "MATH 160",
+  "topic": "Graph Theory",
+  "subtopic": "Handshaking theorem",
+  "difficulty": 1,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "In a graph where each vertex has the degree sequence {deg_list}, how many edges does the graph have?",
+  "params": {
+    "degrees": {
+      "type": "choice",
+      "choices": [
+        [1,1,2,2],
+        [2,2,4,4],
+        [3,3,3,3],
+        [1,2,3,2],
+        [4,4,2,2,2],
+        [3,3,2,2,2,2],
+        [2,4,2,4,2],
+        [1,3,3,1,2]
+      ]
+    }
+  },
+  "answer_expr": "graphdeg160",
+  "steps": [
+    "Sum all degrees: {deg_sum}.",
+    "By the Handshaking Theorem: edges = sum / 2 = {answer_graphdeg160}."
+  ],
+  "tags": ["graph-theory", "handshaking-theorem", "edges", "degree-sequence"]
+}

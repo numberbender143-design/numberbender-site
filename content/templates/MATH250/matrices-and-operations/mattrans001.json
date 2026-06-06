@@ -1,0 +1,26 @@
+{
+  "id": "math250-mattrans-001",
+  "cid": "MATH 250",
+  "topic": "Matrices and Operations",
+  "subtopic": "Matrix transpose",
+  "difficulty": 1,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Let A be the 2x3 matrix shown. Find the entry in row {at_row}, column {at_col} of the transpose A^T.",
+  "params": {
+    "a11": { "type": "int", "min": -6, "max": 6 },
+    "a12": { "type": "int", "min": -6, "max": 6 },
+    "a13": { "type": "int", "min": -6, "max": 6 },
+    "a21": { "type": "int", "min": -6, "max": 6 },
+    "a22": { "type": "int", "min": -6, "max": 6 },
+    "a23": { "type": "int", "min": -6, "max": 6 },
+    "query_row": { "type": "int", "min": 0, "max": 2 },
+    "query_col": { "type": "int", "min": 0, "max": 1 }
+  },
+  "answer_expr": "mattrans",
+  "steps": [
+    "The transpose A^T swaps rows and columns: (A^T)_{ij} = A_{ji}.",
+    "Entry (row {at_row}, col {at_col}) of A^T = entry (row {a_row}, col {a_col}) of A.",
+    "Answer: {answer_mattrans}."
+  ],
+  "tags": ["linear-algebra", "transpose", "matrix", "entry"]
+}

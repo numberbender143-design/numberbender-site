@@ -1,0 +1,51 @@
+{
+  "id": "math130-systems2sub-001",
+  "cid": "MATH 130",
+  "topic": "Systems of Equations",
+  "subtopic": "Solve a 2x2 linear system",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Solve the system by substitution: y = {m}x + {b} and {p}x + {q}y = {r}.",
+  "params": {
+    "x_sol": {
+      "type": "int",
+      "min": -3,
+      "max": 3
+    },
+    "y_sol": {
+      "type": "int",
+      "min": -4,
+      "max": 4
+    },
+    "m": {
+      "type": "int",
+      "min": 1,
+      "max": 3
+    },
+    "b": {
+      "type": "int",
+      "min": -4,
+      "max": 4
+    },
+    "p": {
+      "type": "int",
+      "min": 1,
+      "max": 4
+    },
+    "q": {
+      "type": "int",
+      "min": 1,
+      "max": 3
+    }
+  },
+  "answer_expr": "systems2sub",
+  "steps": [
+    "Substitute y = {m}x + {b} into {p}x + {q}y = {r}.",
+    "{p}x + {q}({m}x + {b}) = {r} => ({p} + {qm})x = {r} - {qb} => x = {answer_sys_x}.",
+    "y = {m}({answer_sys_x}) + {b} = {answer_sys_y}."
+  ],
+  "tags": [
+    "system-of-equations",
+    "substitution"
+  ]
+}

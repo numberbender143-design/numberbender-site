@@ -1,0 +1,19 @@
+{
+  "id": "math160-perm160-003",
+  "cid": "MATH 160",
+  "topic": "Counting Methods",
+  "subtopic": "Permutations P(n,r)",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "How many 4-digit codes can be formed from the digits 0-9 if no digit repeats? (Assume the first digit can be 0.)",
+  "params": {
+    "n": { "type": "int", "min": 10, "max": 10 },
+    "r": { "type": "int", "min": 4,  "max": 4  }
+  },
+  "answer_expr": "perm160",
+  "steps": [
+    "We are choosing 4 digits in order from 10 digits with no repetition.",
+    "P(10,4) = 10!/6! = {answer_perm160}."
+  ],
+  "tags": ["counting", "permutations", "codes", "digits"]
+}

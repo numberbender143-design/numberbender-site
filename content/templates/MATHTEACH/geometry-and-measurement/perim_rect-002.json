@@ -1,0 +1,34 @@
+{
+  "id": "mathteach-perim_rect-002",
+  "cid": "MATHTEACH",
+  "topic": "Geometry and Measurement",
+  "subtopic": "Perimeter of a rectangle",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "A rectangular room is {l} feet long and {w} feet wide. How much baseboard trim (in feet) is needed to go around the entire room?",
+  "params": {
+    "l": {
+      "type": "int",
+      "min": 8,
+      "max": 22
+    },
+    "w": {
+      "type": "int",
+      "min": 6,
+      "max": 16
+    }
+  },
+  "answer_expr": "perim_rect",
+  "steps": [
+    "Perimeter = 2(length + width).",
+    "P = 2({l} + {w}) = 2({lw}) = {answer_perim_rect} ft."
+  ],
+  "tags": [
+    "pre-algebra",
+    "geometry",
+    "perimeter",
+    "rectangle",
+    "word-problem"
+  ],
+  "source": "adapted-from:perim-rect-002.json"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "math220-geominfsum-001",
+  "cid": "MATH 220",
+  "topic": "Sequences and Series",
+  "subtopic": "Infinite geometric series",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Find the sum of the infinite geometric series with a_1 = {a1} and r = 1/{denom} (|r| < 1).",
+  "params": {
+    "a1": { "type": "int", "min": 1, "max": 8 },
+    "denom": { "type": "choice", "choices": [2, 3, 4, 5] }
+  },
+  "answer_expr": "geominfsum",
+  "steps": [
+    "Since |r| = 1/{denom} < 1, the series converges.",
+    "Sum = a_1 / (1 - r) = {a1} / (1 - 1/{denom}) = {a1} / ({num_frac}/{denom}).",
+    "= {a1} * {denom}/{num_frac} = {answer_geominfsum}."
+  ],
+  "tags": ["infinite-series", "geometric", "convergence", "sum"]
+}

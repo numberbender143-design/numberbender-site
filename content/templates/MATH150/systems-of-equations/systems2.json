@@ -1,0 +1,25 @@
+{
+  "id": "math150-systems2-001",
+  "cid": "MATH 150",
+  "topic": "Systems of Equations",
+  "subtopic": "Solve a 2x2 linear system",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Solve the system: {a}x + {b}y = {c} and {d}x + {e}y = {f}.",
+  "params": {
+    "x_sol": { "type": "int", "min": -4, "max": 4 },
+    "y_sol": { "type": "int", "min": -4, "max": 4 },
+    "a": { "type": "int", "min": 1, "max": 4 },
+    "d": { "type": "int", "min": 1, "max": 4 },
+    "b": { "type": "int", "min": 1, "max": 3 },
+    "e": { "type": "int", "min": 1, "max": 3 }
+  },
+  "answer_expr": "systems2",
+  "steps": [
+    "From the coefficients and solution, c = {a}({x_sol}) + {b}({y_sol}) = {c}.",
+    "f = {d}({x_sol}) + {e}({y_sol}) = {f}.",
+    "Using elimination: multiply Eq1 by {d} and Eq2 by {a}, subtract to solve for y, then back-substitute.",
+    "Solution: x = {answer_sys_x}, y = {answer_sys_y}."
+  ],
+  "tags": ["system-of-equations", "elimination", "substitution"]
+}

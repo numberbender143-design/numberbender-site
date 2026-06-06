@@ -1,0 +1,21 @@
+{
+  "id": "math155-arithseq-001",
+  "cid": "MATH 155",
+  "topic": "Sequences and Series",
+  "subtopic": "Arithmetic sequences",
+  "difficulty": 1,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "An arithmetic sequence has first term a_1 = {a1} and common difference d = {d}. Find the {n_term}th term.",
+  "params": {
+    "a1": { "type": "int", "min": 1, "max": 20 },
+    "d":  { "type": "int", "min": 2, "max": 8 },
+    "n_term": { "type": "int", "min": 5, "max": 15 }
+  },
+  "answer_expr": "arithseq",
+  "steps": [
+    "Use the formula a_n = a_1 + (n - 1)d.",
+    "a_{n_term} = {a1} + ({n_term} - 1)({d}).",
+    "= {a1} + {n_minus_1} * {d} = {a1} + {delta} = {answer_arithseq}."
+  ],
+  "tags": ["arithmetic-sequence", "explicit-formula", "common-difference"]
+}

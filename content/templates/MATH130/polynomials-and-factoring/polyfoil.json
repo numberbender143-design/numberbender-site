@@ -1,0 +1,42 @@
+{
+  "id": "math130-polyfoil-001",
+  "cid": "MATH 130",
+  "topic": "Polynomials and Factoring",
+  "subtopic": "Multiplying polynomials (FOIL)",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Multiply: ({a}x + {b})({c}x + {d}). Write the result in standard form ax^2 + bx + c.",
+  "params": {
+    "a": {
+      "type": "int",
+      "min": 1,
+      "max": 4
+    },
+    "b": {
+      "type": "int",
+      "min": 1,
+      "max": 6
+    },
+    "c": {
+      "type": "int",
+      "min": 1,
+      "max": 4
+    },
+    "d": {
+      "type": "int",
+      "min": 1,
+      "max": 6
+    }
+  },
+  "answer_expr": "polyfoil",
+  "steps": [
+    "FOIL: First={a}*{c}x^2, Outer={a}*{d}x, Inner={b}*{c}x, Last={b}*{d}.",
+    "= {foil_a2}x^2 + ({foil_outer}+{foil_inner})x + {foil_c0}.",
+    "= {foil_a2}x^2 + {foil_a1}x + {foil_c0}."
+  ],
+  "tags": [
+    "FOIL",
+    "polynomial-multiplication",
+    "standard-form"
+  ]
+}

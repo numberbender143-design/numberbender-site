@@ -1,0 +1,16 @@
+{
+  "id": "math130-domrange130-003",
+  "cid": "MATH 130",
+  "topic": "Linear Equations and Functions",
+  "subtopic": "Domain and range",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "What is the range of h(x) = x^2 + {k}?",
+  "params": {
+    "k": {"type": "int", "min": -5, "max": 5},
+    "answer_key": {"type": "choice", "choices": ["y >= k"]}
+  },
+  "answer_expr": "domrange130",
+  "steps": ["x^2 >= 0 for all x, so x^2 + {k} >= {k}. Range: [{k}, inf)."],
+  "tags": ["domain", "range", "quadratic"]
+}

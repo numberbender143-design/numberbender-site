@@ -1,0 +1,19 @@
+{
+  "id": "math220-arithseq-001",
+  "cid": "MATH 220",
+  "topic": "Sequences and Series",
+  "subtopic": "Arithmetic sequences",
+  "difficulty": 1,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "An arithmetic sequence has a_1 = {a1} and d = {d}. Find the {n_term}th term.",
+  "params": {
+    "a1": { "type": "int", "min": 1, "max": 15 },
+    "d":  { "type": "int", "min": 2, "max": 8 },
+    "n_term": { "type": "int", "min": 5, "max": 15 }
+  },
+  "answer_expr": "arithseq",
+  "steps": [
+    "a_n = a_1 + (n-1)d = {a1} + ({n_term}-1)*{d} = {a1} + {delta} = {answer_arithseq}."
+  ],
+  "tags": ["arithmetic-sequence", "nth-term"]
+}

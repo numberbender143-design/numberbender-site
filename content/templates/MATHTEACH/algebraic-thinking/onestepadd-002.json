@@ -1,0 +1,35 @@
+{
+  "id": "mathteach-onestepadd-002",
+  "cid": "MATHTEACH",
+  "topic": "Algebraic Thinking",
+  "subtopic": "Solving one-step equations",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "After earning ${a} more, Maria has ${b} in all. Write and solve an equation to find how much she started with.",
+  "params": {
+    "a": {
+      "type": "int",
+      "min": 3,
+      "max": 20
+    },
+    "b": {
+      "type": "int",
+      "min": 10,
+      "max": 45
+    }
+  },
+  "answer_expr": "onestepadd",
+  "steps": [
+    "Let x = starting amount. Equation: x + {a} = {b}.",
+    "Subtract {a} from both sides: x = {b} - {a} = {answer_onestepadd}.",
+    "Maria started with ${answer_onestepadd}."
+  ],
+  "tags": [
+    "pre-algebra",
+    "algebra",
+    "equation",
+    "one-step",
+    "word-problem"
+  ],
+  "source": "adapted-from:equation-003.json"
+}

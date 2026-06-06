@@ -1,0 +1,22 @@
+{
+  "id": "math220-avgval-001",
+  "cid": "MATH 220",
+  "topic": "Applications of Integration",
+  "subtopic": "Average value of a function",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Find the average value of f(x) = {c}x^{n} on the interval [0, {b}].",
+  "params": {
+    "c": { "type": "int", "min": 1, "max": 5 },
+    "n": { "type": "int", "min": 1, "max": 3 },
+    "b": { "type": "int", "min": 2, "max": 5 }
+  },
+  "answer_expr": "avgval",
+  "steps": [
+    "Average value = 1/(b-a) * integral from a to b of f(x) dx.",
+    "= 1/{b} * integral from 0 to {b} of {c}x^{n} dx.",
+    "= 1/{b} * [{c}x^{n_plus_1}/{n_plus_1}] from 0 to {b}.",
+    "= 1/{b} * {c}*{b}^{n_plus_1}/{n_plus_1} = {answer_avgval}."
+  ],
+  "tags": ["average-value", "definite-integral", "applications"]
+}

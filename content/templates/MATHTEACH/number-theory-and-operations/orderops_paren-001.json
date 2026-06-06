@@ -1,0 +1,37 @@
+{
+  "id": "mathteach-orderops_paren-001",
+  "cid": "MATHTEACH",
+  "topic": "Number Theory and Operations",
+  "subtopic": "Order of operations",
+  "difficulty": 1,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Evaluate: ({a} + {b}) x {c}. Parentheses come first!",
+  "params": {
+    "a": {
+      "type": "int",
+      "min": 1,
+      "max": 10
+    },
+    "b": {
+      "type": "int",
+      "min": 1,
+      "max": 10
+    },
+    "c": {
+      "type": "int",
+      "min": 2,
+      "max": 8
+    }
+  },
+  "answer_expr": "orderops_paren",
+  "steps": [
+    "Step 1: Add inside parentheses: {a} + {b} = {ab}.",
+    "Step 2: Multiply: {ab} x {c} = {answer_orderops_paren}."
+  ],
+  "tags": [
+    "pre-algebra",
+    "order-of-operations",
+    "parentheses"
+  ],
+  "source": "adapted-from:orderops-paren-001.json"
+}

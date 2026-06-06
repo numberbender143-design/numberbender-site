@@ -1,0 +1,19 @@
+{
+  "id": "math150-lineval-001",
+  "cid": "MATH 150",
+  "topic": "Linear Equations and Functions",
+  "subtopic": "Evaluating a linear function",
+  "difficulty": 1,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Given f(x) = {m}x + {b}, find f({x_val}).",
+  "params": {
+    "m": { "type": "int", "min": 1, "max": 9 },
+    "b": { "type": "int", "min": -8, "max": 8 },
+    "x_val": { "type": "int", "min": -5, "max": 5 }
+  },
+  "answer_expr": "lineval",
+  "steps": [
+    "Substitute x = {x_val}: f({x_val}) = {m}({x_val}) + {b} = {m_times_x} + {b} = {answer_lineval}."
+  ],
+  "tags": ["linear-function", "function-evaluation"]
+}

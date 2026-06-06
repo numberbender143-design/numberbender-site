@@ -12,6 +12,127 @@
 # Google prefers one canonical form; these ensure the .html version
 # redirects to the extensionless version with a 301 (permanent).
 
+# --------------- Numberbender CCC (math section) ---------------
+[[redirects]]
+  from = "/math-ccc"
+  to   = "/ccc-atlas.html"
+  status = 200
+
+[[redirects]]
+  from = "/ccc-atlas.html"
+  to   = "/math-ccc"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/ab1705-corequisite-math.html"
+  to   = "/ab1705-corequisite-math"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/elementary-algebra-course.html"
+  to   = "/elementary-algebra-course"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/intermediate-algebra-course.html"
+  to   = "/intermediate-algebra-course"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/prealgebra-course.html"
+  to   = "/prealgebra-course"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/mathteach-course.html"
+  to   = "/mathteach-course"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/math110-course.html"
+  to   = "/math110-course"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/math120-course.html"
+  to   = "/math120-course"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/math130-course.html"
+  to   = "/math130-course"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/math140-course.html"
+  to   = "/math140-course"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/math150-course.html"
+  to   = "/math150-course"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/math151-course.html"
+  to   = "/math151-course"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/math155-course.html"
+  to   = "/math155-course"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/math160-course.html"
+  to   = "/math160-course"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/math210-course.html"
+  to   = "/math210-course"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/math220-course.html"
+  to   = "/math220-course"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/math230-course.html"
+  to   = "/math230-course"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/math240-course.html"
+  to   = "/math240-course"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/math250-course.html"
+  to   = "/math250-course"
+  status = 301
+  force  = true
+
+
 [[redirects]]
   from = "/about.html"
   to   = "/about"

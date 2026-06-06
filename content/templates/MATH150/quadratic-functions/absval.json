@@ -1,0 +1,21 @@
+{
+  "id": "math150-absval-001",
+  "cid": "MATH 150",
+  "topic": "Quadratic Functions",
+  "subtopic": "Absolute value equations",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Solve: |{m}x + {b}| = {rhs}.",
+  "params": {
+    "m":   { "type": "int", "min": 1, "max": 4 },
+    "b":   { "type": "int", "min": -6, "max": 6 },
+    "rhs": { "type": "int", "min": 2, "max": 12 }
+  },
+  "answer_expr": "absval",
+  "steps": [
+    "Split into two cases: {m}x + {b} = {rhs}  or  {m}x + {b} = -{rhs}.",
+    "Case 1: {m}x = {rhs} - {b} = {diff1} => x = {diff1}/{m} = {answer_abs1}.",
+    "Case 2: {m}x = -{rhs} - {b} = {diff2} => x = {diff2}/{m} = {answer_abs2}."
+  ],
+  "tags": ["absolute-value", "equations"]
+}

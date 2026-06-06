@@ -1,0 +1,20 @@
+{
+  "id": "math155-trigval-001",
+  "cid": "MATH 155",
+  "topic": "Trigonometry Basics",
+  "subtopic": "Unit circle trig values",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Find the exact value of {func}({deg}°) using the unit circle.",
+  "params": {
+    "angle_idx": { "type": "int", "min": 0, "max": 7 },
+    "func_idx": { "type": "int", "min": 0, "max": 1 }
+  },
+  "answer_expr": "trigval",
+  "steps": [
+    "Locate {deg}° on the unit circle.",
+    "The coordinates at this angle are (cos, sin) = ({cos_str}, {sin_str}).",
+    "{func}({deg}°) = {answer_trigval}."
+  ],
+  "tags": ["unit-circle", "trig-values", "sine", "cosine"]
+}

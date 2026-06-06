@@ -1,0 +1,20 @@
+{
+  "id": "math160-setcard160-003",
+  "cid": "MATH 160",
+  "topic": "Sets",
+  "subtopic": "Set cardinality",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "A class has {a_size} students enrolled in English and {b_size} enrolled in History. If {inter_size} students are in both courses and every student is in at least one, how many students are in the class?",
+  "params": {
+    "a_size":    { "type": "int", "min": 12, "max": 35 },
+    "b_size":    { "type": "int", "min": 12, "max": 35 },
+    "inter_size":{ "type": "int", "min": 2,  "max": 10 }
+  },
+  "answer_expr": "setcard160",
+  "steps": [
+    "Total students = |English union History| = |English| + |History| - |both|.",
+    "= {a_size} + {b_size} - {inter_size} = {union_size}."
+  ],
+  "tags": ["sets", "cardinality", "inclusion-exclusion"]
+}

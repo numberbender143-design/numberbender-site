@@ -1,0 +1,31 @@
+{
+  "id": "math160-graphdeg160-001",
+  "cid": "MATH 160",
+  "topic": "Graph Theory",
+  "subtopic": "Handshaking theorem",
+  "difficulty": 1,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "A graph has vertices with degree sequence {deg_list}. Use the Handshaking Theorem to determine the number of edges in the graph.",
+  "params": {
+    "degrees": {
+      "type": "choice",
+      "choices": [
+        [2,3,3,2,2],
+        [1,2,3,2,2],
+        [3,3,2,2,2],
+        [4,3,3,2,2],
+        [2,2,2,2,2,2],
+        [3,3,3,3],
+        [4,3,3,2],
+        [2,2,4,4]
+      ]
+    }
+  },
+  "answer_expr": "graphdeg160",
+  "steps": [
+    "The Handshaking Theorem states: sum of all vertex degrees = 2 * (number of edges).",
+    "Sum of degrees = {deg_sum}.",
+    "Number of edges = {deg_sum} / 2 = {answer_graphdeg160}."
+  ],
+  "tags": ["graph-theory", "handshaking-theorem", "degree", "edges"]
+}

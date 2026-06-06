@@ -1,0 +1,225 @@
+{
+  "cid": "PREALG",
+  "course": "Pre-Algebra",
+  "topics": [
+    {
+      "slug": "integers-and-order-of-operations",
+      "title": "Integers & Order of Operations",
+      "desc": "Adding, subtracting, multiplying, and dividing integers. Order of operations (PEMDAS) with parentheses and exponents.",
+      "videos": [
+        {
+          "id": "jgKKaNiylGw",
+          "title": "REPRESENTING REAL NUMBERS ON A NUMBER LINE",
+          "url": "https://www.youtube.com/watch?v=jgKKaNiylGw",
+          "dur": "20m 25s",
+          "views": 107,
+          "fil": "O2kjG2LA4jo"
+        },
+        {
+          "id": "P_VsM5mNzRs",
+          "title": "How to ADD, SUBTRACT, MULTIPLY, AND DIVIDE INTEGERS",
+          "url": "https://www.youtube.com/watch?v=P_VsM5mNzRs",
+          "dur": "19m 16s",
+          "views": 1213,
+          "fil": "T2h4oGbusJg"
+        },
+        {
+          "id": "gat5MiXJA8k",
+          "title": "ALGEBRA: Plotting Points in the X-Y Plane",
+          "url": "https://www.youtube.com/watch?v=gat5MiXJA8k",
+          "dur": "4m 30s",
+          "views": 4863,
+          "fil": "x2sTZwm5D54"
+        },
+        {
+          "id": "44vfTjoXQJM",
+          "title": "HOW TO APPROXIMATE SQUARE ROOTS",
+          "url": "https://www.youtube.com/watch?v=44vfTjoXQJM",
+          "dur": "13m 3s",
+          "views": 118,
+          "fil": "Id6mM3QUKp8"
+        },
+        {
+          "id": "EjFvomRXPkM",
+          "title": "ALGEBRA: Laws of Exponents",
+          "url": "https://www.youtube.com/watch?v=EjFvomRXPkM",
+          "dur": "9m 12s",
+          "views": 6132,
+          "fil": "9DdGtXpMpC8"
+        },
+        {
+          "id": "FBlzd8a1mBo",
+          "title": "CONVERTING SCIENTIFIC NOTATION TO STANDARD FORM VV",
+          "url": "https://www.youtube.com/watch?v=FBlzd8a1mBo",
+          "dur": "15m 44s",
+          "views": 108,
+          "fil": "JtGR0Le7rjs"
+        }
+      ]
+    },
+    {
+      "slug": "fractions-and-decimals",
+      "title": "Fractions & Decimals",
+      "desc": "Adding, subtracting, multiplying, and dividing fractions and mixed numbers. Simplifying fractions and converting between fractions and decimals.",
+      "videos": [
+        {
+          "id": "Ry7KgcysvpI",
+          "title": "HOW TO USE THE FACTOR TREE IN SIMPLIFYING FRACTIONS",
+          "url": "https://www.youtube.com/watch?v=Ry7KgcysvpI",
+          "dur": "13m 46s",
+          "views": 255,
+          "fil": "CKxn_9Hafr4"
+        },
+        {
+          "id": "aQCVdczqeCY",
+          "title": "WHAT ARE RATIONAL NUMBERS?",
+          "url": "https://www.youtube.com/watch?v=aQCVdczqeCY",
+          "dur": "19m 32s",
+          "views": 137,
+          "fil": "07vb7k7mQdg"
+        },
+        {
+          "id": "4JhPTVF7JDw",
+          "title": "ALGEBRA: Evaluating Ratio and Proportion",
+          "url": "https://www.youtube.com/watch?v=4JhPTVF7JDw",
+          "dur": "9m 17s",
+          "views": 87117,
+          "fil": "BrLb-jZRmio"
+        }
+      ]
+    },
+    {
+      "slug": "ratios-proportions-and-percents",
+      "title": "Ratios, Proportions & Percents",
+      "desc": "Writing and simplifying ratios, solving proportions by cross-multiplication, computing percents, and percent word problems.",
+      "videos": [
+        {
+          "id": "Ry7KgcysvpI",
+          "title": "HOW TO USE THE FACTOR TREE IN SIMPLIFYING FRACTIONS",
+          "url": "https://www.youtube.com/watch?v=Ry7KgcysvpI",
+          "dur": "13m 46s",
+          "views": 255,
+          "fil": "CKxn_9Hafr4"
+        },
+        {
+          "id": "aQCVdczqeCY",
+          "title": "WHAT ARE RATIONAL NUMBERS?",
+          "url": "https://www.youtube.com/watch?v=aQCVdczqeCY",
+          "dur": "19m 32s",
+          "views": 137,
+          "fil": "07vb7k7mQdg"
+        },
+        {
+          "id": "4JhPTVF7JDw",
+          "title": "ALGEBRA: Evaluating Ratio and Proportion",
+          "url": "https://www.youtube.com/watch?v=4JhPTVF7JDw",
+          "dur": "9m 17s",
+          "views": 87117,
+          "fil": "BrLb-jZRmio"
+        },
+        {
+          "id": "7N7afYls81w",
+          "title": "HOW TO ANSWER WORD PROBLEMS ON DIRECT VARIATION",
+          "url": "https://www.youtube.com/watch?v=7N7afYls81w",
+          "dur": "20m 17s",
+          "views": 89,
+          "fil": "vHvAuX6k4Gs"
+        },
+        {
+          "id": "EVeFMrDZ1BU",
+          "title": "HOW TO SOLVE PROBLEMS INVOLVING INVERSE VARIATION",
+          "url": "https://www.youtube.com/watch?v=EVeFMrDZ1BU",
+          "dur": "14m 55s",
+          "views": 81,
+          "fil": "1FyLXwZKVQg"
+        },
+        {
+          "id": "bAzfn5Dm_Co",
+          "title": "HOW TO SOLVE WORD PROBLEMS INVOLVING JOINT VARIATION",
+          "url": "https://www.youtube.com/watch?v=bAzfn5Dm_Co",
+          "dur": "15m 3s",
+          "views": 499,
+          "fil": "kPkpywEVDBM"
+        }
+      ]
+    },
+    {
+      "slug": "basic-geometry",
+      "title": "Basic Geometry",
+      "desc": "Perimeter and area of rectangles and triangles, angle types, and applying geometric formulas to real-world problems.",
+      "videos": [
+        {
+          "id": "pRwYhD6wA8Q",
+          "title": "NAMING POINTS, LINES, AND PLANES",
+          "url": "https://www.youtube.com/watch?v=pRwYhD6wA8Q",
+          "dur": "23m 33s",
+          "views": 1934,
+          "fil": "GZdadgNwKjQ"
+        },
+        {
+          "id": "xcypiS76cIk",
+          "title": "HOW TO NAME AND WRITE ANGLE NOTATIONS",
+          "url": "https://www.youtube.com/watch?v=xcypiS76cIk",
+          "dur": "12m 2s",
+          "views": 1104,
+          "fil": "ja5uGrFad7U"
+        },
+        {
+          "id": "X3nLe3uzWF8",
+          "title": "HOW TO CLASSIFY AND NAMES POLYGONS ACCORDING TO ITS SIDES",
+          "url": "https://www.youtube.com/watch?v=X3nLe3uzWF8",
+          "dur": "16m 33s",
+          "views": 1502,
+          "fil": "GLw1J4MIqeM"
+        },
+        {
+          "id": "c6ZwRQdHd7Y",
+          "title": "HOW TO MEASURE ANGLES OF A POLYGON USING ITS DIAGONALS",
+          "url": "https://www.youtube.com/watch?v=c6ZwRQdHd7Y",
+          "dur": "14m 21s",
+          "views": 257,
+          "fil": "nJ5HDek5W40"
+        }
+      ]
+    },
+    {
+      "slug": "introduction-to-algebra",
+      "title": "Introduction to Algebra",
+      "desc": "Evaluating expressions, combining like terms, solving one-step equations, and translating word problems into algebra.",
+      "videos": [
+        {
+          "id": "ODXWMglNUYg",
+          "title": "ALGEBRA: Evaluating Algebraic Expressions",
+          "url": "https://www.youtube.com/watch?v=ODXWMglNUYg",
+          "dur": "5m 14s",
+          "views": 5614,
+          "fil": "QAV84ArIMjQ"
+        },
+        {
+          "id": "3zpS3TYD3PE",
+          "title": "ALGEBRA: Translating Algebraic to Numerical Expressions",
+          "url": "https://www.youtube.com/watch?v=3zpS3TYD3PE",
+          "dur": "6m 6s",
+          "views": 6848,
+          "fil": "mIfkWQ8wvNA"
+        },
+        {
+          "id": "xKtNiqVXtfc",
+          "title": "ALGEBRA: Number Properties",
+          "url": "https://www.youtube.com/watch?v=xKtNiqVXtfc",
+          "dur": "7m 55s",
+          "views": 3045,
+          "fil": "B8sE5C7ucD4"
+        },
+        {
+          "id": "T0zBD5aa4_g",
+          "title": "LET, UPCAT, SAT, MCQ REVIEW -  Multiplying Polynomials: Distributive Property Method! #math",
+          "url": "https://www.youtube.com/watch?v=T0zBD5aa4_g",
+          "dur": "6m 38s",
+          "views": 2666,
+          "fil": "QAV84ArIMjQ"
+        }
+      ]
+    }
+  ]
+}

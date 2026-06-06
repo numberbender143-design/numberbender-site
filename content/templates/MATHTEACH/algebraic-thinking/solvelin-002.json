@@ -1,0 +1,36 @@
+{
+  "id": "mathteach-solvelin-002",
+  "cid": "MATHTEACH",
+  "topic": "Algebraic Thinking",
+  "subtopic": "Two-step equations",
+  "difficulty": 1,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "A plumber charges ${a} per hour plus a flat ${b} fee. If the total bill is ${c_rhs}, how many hours did the job take? Solve {a}x + {b} = {c_rhs}.",
+  "params": {
+    "a": {
+      "type": "int",
+      "min": 20,
+      "max": 50
+    },
+    "b": {
+      "type": "int",
+      "min": 20,
+      "max": 60
+    },
+    "c_rhs": {
+      "type": "int",
+      "min": 100,
+      "max": 300
+    }
+  },
+  "answer_expr": "solvelin",
+  "steps": [
+    "Subtract ${b}: {a}x = {rhs_minus_b}. Divide by {a}: x = {answer_solvelin} hours."
+  ],
+  "tags": [
+    "elementary-algebra",
+    "linear-equation",
+    "applied"
+  ],
+  "source": "adapted-from:solvelin-002.json"
+}

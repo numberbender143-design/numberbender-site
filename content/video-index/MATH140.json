@@ -1,0 +1,256 @@
+{
+  "cid": "MATH 140",
+  "course": "Business / Applied Calculus",
+  "topics": [
+    {
+      "slug": "functions-cost-revenue-profit",
+      "title": "Functions — Cost, Revenue & Profit",
+      "desc": "Linear, quadratic, and rational business functions. Evaluating cost, revenue, and profit functions. Domain and break-even analysis.",
+      "videos": [
+        {
+          "id": "9exMxUS-QGc",
+          "title": "Introduction to Functions and Function Notation",
+          "url": "https://www.youtube.com/watch?v=9exMxUS-QGc",
+          "dur": "10m 47s",
+          "views": 2004,
+          "fil": "fDlWPUEPqBM"
+        },
+        {
+          "id": "9tMSRf8pcRs",
+          "title": "Linear Cost and Revenue Functions",
+          "url": "https://www.youtube.com/watch?v=9tMSRf8pcRs",
+          "dur": "7m 33s",
+          "views": 1840,
+          "fil": "e0pgfD66bZY"
+        },
+        {
+          "id": "gTu4iKykemM",
+          "title": "Quadratic Revenue and Profit Models",
+          "url": "https://www.youtube.com/watch?v=gTu4iKykemM",
+          "dur": "25m 9s",
+          "views": 159,
+          "fil": "U6iyvl0ZW_0"
+        },
+        {
+          "id": "CXkjM33MXww",
+          "title": "Domain and Average Cost Functions",
+          "url": "https://www.youtube.com/watch?v=CXkjM33MXww",
+          "dur": "6m 18s",
+          "views": 17151,
+          "fil": "0NVqydqyzV4"
+        }
+      ]
+    },
+    {
+      "slug": "limits-and-continuity",
+      "title": "Limits & Continuity",
+      "desc": "Evaluating limits by direct substitution and factoring. Continuity of business functions and behavior near excluded values.",
+      "videos": [
+        {
+          "id": "CGZXu3Gq_0g",
+          "title": "Introduction to Limits",
+          "url": "https://www.youtube.com/watch?v=CGZXu3Gq_0g",
+          "dur": "25m 18s",
+          "views": 1078,
+          "fil": "0sYj5PFIPFY"
+        },
+        {
+          "id": "k-wUK29Ct_o",
+          "title": "Limits by Direct Substitution",
+          "url": "https://www.youtube.com/watch?v=k-wUK29Ct_o",
+          "dur": "1m 0s",
+          "views": 418,
+          "fil": "BVu39lH6a6g"
+        },
+        {
+          "id": "zEgMBKtxDaE",
+          "title": "Limits by Factoring — Resolving 0/0",
+          "url": "https://www.youtube.com/watch?v=zEgMBKtxDaE",
+          "dur": "10m 7s",
+          "views": 13482,
+          "fil": "jcJdM6QuNs0"
+        },
+        {
+          "id": "LBewgSAfvsI",
+          "title": "Continuity of Business Functions",
+          "url": "https://www.youtube.com/watch?v=LBewgSAfvsI",
+          "dur": "10m 12s",
+          "views": 4665,
+          "fil": "tXxQpGFOdiI"
+        }
+      ]
+    },
+    {
+      "slug": "differentiation-rules",
+      "title": "Differentiation Rules",
+      "desc": "Power rule, product rule, and chain rule applied to business functions — marginal cost, marginal revenue, and rates of change.",
+      "videos": [
+        {
+          "id": "Sq40TTKQJhE",
+          "title": "The Power Rule for Derivatives",
+          "url": "https://www.youtube.com/watch?v=Sq40TTKQJhE",
+          "dur": "8m 31s",
+          "views": 5150,
+          "fil": "146TO6lLJ9Q"
+        },
+        {
+          "id": "aG0QGylbxb0",
+          "title": "Differentiating Cost and Revenue Polynomials",
+          "url": "https://www.youtube.com/watch?v=aG0QGylbxb0",
+          "dur": "11m 33s",
+          "views": 1186,
+          "fil": "aI7V1JR2Z-U"
+        },
+        {
+          "id": "wut95XJZWjQ",
+          "title": "The Product Rule — Business Applications",
+          "url": "https://www.youtube.com/watch?v=wut95XJZWjQ",
+          "dur": "4m 42s",
+          "views": 1642,
+          "fil": "vVUMeCDA__g"
+        },
+        {
+          "id": "9y6ym_2Wvrk",
+          "title": "The Chain Rule",
+          "url": "https://www.youtube.com/watch?v=9y6ym_2Wvrk",
+          "dur": "9m 19s",
+          "views": 1330,
+          "fil": "bU-uZ6cEFVM"
+        }
+      ]
+    },
+    {
+      "slug": "applications-of-derivatives",
+      "title": "Applications of Derivatives",
+      "desc": "Marginal analysis: marginal cost, marginal revenue, marginal profit. Optimization: finding maximum profit and minimum cost using critical points.",
+      "videos": [
+        {
+          "id": "1DKKUoFUDyk",
+          "title": "Increasing and Decreasing Functions",
+          "url": "https://www.youtube.com/watch?v=1DKKUoFUDyk",
+          "dur": "12m 39s",
+          "views": 3420,
+          "fil": "boa33U6lD5o"
+        },
+        {
+          "id": "U-jUWoebKZc",
+          "title": "Critical Points and Optimization",
+          "url": "https://www.youtube.com/watch?v=U-jUWoebKZc",
+          "dur": "15m 6s",
+          "views": 8668,
+          "fil": "-kzvsog_7O8"
+        },
+        {
+          "id": "cUPN9j-p04Y",
+          "title": "Second Derivative Test — Concavity & Inflection",
+          "url": "https://www.youtube.com/watch?v=cUPN9j-p04Y",
+          "dur": "7m 57s",
+          "views": 2010,
+          "fil": "dxmRbbc1etI"
+        },
+        {
+          "id": "WGEiXm9Qofk",
+          "title": "Analyzing f(x) Using the Graph of f'(x)",
+          "url": "https://www.youtube.com/watch?v=WGEiXm9Qofk",
+          "dur": "9m 40s",
+          "views": 13027,
+          "fil": "7r871U0jaaM"
+        },
+        {
+          "id": "-nqUM4k6oYA",
+          "title": "Profit Maximization and Revenue Optimization",
+          "url": "https://www.youtube.com/watch?v=-nqUM4k6oYA",
+          "dur": "4m 45s",
+          "views": 5778,
+          "fil": "DQOYVr5Pa5w"
+        },
+        {
+          "id": "rlEdoj5xJ1w",
+          "title": "Marginal Analysis in Business",
+          "url": "https://www.youtube.com/watch?v=rlEdoj5xJ1w",
+          "dur": "8m 28s",
+          "views": 373,
+          "fil": "th4pfjqt0XI"
+        }
+      ]
+    },
+    {
+      "slug": "integration-and-antiderivatives",
+      "title": "Integration & Antiderivatives",
+      "desc": "Power rule for antiderivatives, total cost from marginal cost, and definite integrals using the Fundamental Theorem of Calculus.",
+      "videos": [
+        {
+          "id": "dzXQYjDvFfM",
+          "title": "Introduction to Antiderivatives",
+          "url": "https://www.youtube.com/watch?v=dzXQYjDvFfM",
+          "dur": "7m 31s",
+          "views": 1433,
+          "fil": "ODd4K-tEBpQ"
+        },
+        {
+          "id": "ijoZuosJZEA",
+          "title": "Power Rule for Integration",
+          "url": "https://www.youtube.com/watch?v=ijoZuosJZEA",
+          "dur": "9m 14s",
+          "views": 957,
+          "fil": "cISTqL-i9yY"
+        },
+        {
+          "id": "XHtZBGyADHc",
+          "title": "The Fundamental Theorem of Calculus",
+          "url": "https://www.youtube.com/watch?v=XHtZBGyADHc",
+          "dur": "5m 57s",
+          "views": 1204,
+          "fil": "6ArPsBlDLmU"
+        },
+        {
+          "id": "8DtQjeP3pB8",
+          "title": "Recovering Total Cost from Marginal Cost",
+          "url": "https://www.youtube.com/watch?v=8DtQjeP3pB8",
+          "dur": "4m 19s",
+          "views": 1319,
+          "fil": "q_HR89n0TG0"
+        }
+      ]
+    },
+    {
+      "slug": "applications-of-integration",
+      "title": "Applications of Integration",
+      "desc": "Total revenue from marginal revenue, area under demand curves, consumer surplus, and total accumulated change.",
+      "videos": [
+        {
+          "id": "FdLCZQUV3q8",
+          "title": "Total Revenue from Marginal Revenue",
+          "url": "https://www.youtube.com/watch?v=FdLCZQUV3q8",
+          "dur": "6m 58s",
+          "views": 3882,
+          "fil": "sXr0bfHH5IM"
+        },
+        {
+          "id": "HcH-4IhnRT8",
+          "title": "Area Under a Demand Curve",
+          "url": "https://www.youtube.com/watch?v=HcH-4IhnRT8",
+          "dur": "9m 38s",
+          "views": 16,
+          "fil": "M_KDipH-mlw"
+        },
+        {
+          "id": "KNTn9INJ3ZE",
+          "title": "Consumer Surplus as a Definite Integral",
+          "url": "https://www.youtube.com/watch?v=KNTn9INJ3ZE",
+          "dur": "4m 20s",
+          "views": 559,
+          "fil": "zVb8yVW6_7U"
+        },
+        {
+          "id": "4dhjSbehdaA",
+          "title": "Accumulated Output and Production Totals",
+          "url": "https://www.youtube.com/watch?v=4dhjSbehdaA",
+          "dur": "4m 47s",
+          "views": 797,
+          "fil": "EDea4EnvYiM"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "math220-polyint-001",
+  "cid": "MATH 220",
+  "topic": "Integration Techniques",
+  "subtopic": "Definite integral — power rule",
+  "difficulty": 2,
+  "license": "CC BY-NC-SA (Numberbender original)",
+  "instruction": "Evaluate the definite integral: integral from 0 to {b} of x^{n} dx.",
+  "params": {
+    "n": { "type": "int", "min": 1, "max": 4 },
+    "b": { "type": "int", "min": 2, "max": 5 }
+  },
+  "answer_expr": "polyint",
+  "steps": [
+    "Use the power rule: integral of x^n dx = x^(n+1)/(n+1).",
+    "Evaluate from 0 to {b}: [{b}^({n}+1) / ({n}+1)] - [0^({n}+1)/({n}+1)].",
+    "= {b_pow} / {n_plus_1} = {answer_polyint}."
+  ],
+  "tags": ["definite-integral", "power-rule", "fundamental-theorem"]
+}
