@@ -296,6 +296,12 @@
   status = 301
   force  = true
 
+[[redirects]]
+  from = "/speaking-2026-06-wcu-pec.html"
+  to   = "/speaking-2026-06-wcu-pec"
+  status = 301
+  force  = true
+
 # Blog pages
 [[redirects]]
   from = "/blog.html"
