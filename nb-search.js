@@ -104,7 +104,7 @@
     wrap.innerHTML =
       '<div class="nb-si">' +
         '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>' +
-        '<input class="nb-sin" type="search" placeholder="Search…" autocomplete="off" spellcheck="false" aria-label="Search worksheets and courses" aria-autocomplete="list" aria-controls="nb-drop">' +
+        '<input class="nb-sin" type="search" placeholder="Try &quot;chain rule&quot; or &quot;algebra&quot;…" autocomplete="off" spellcheck="false" aria-label="Search worksheets and courses" aria-autocomplete="list" aria-controls="nb-drop">' +
         '<button class="nb-sx" aria-label="Clear search">✕</button>' +
       '</div>' +
       '<div class="nb-drop" id="nb-drop" role="listbox" aria-label="Search results"></div>';
