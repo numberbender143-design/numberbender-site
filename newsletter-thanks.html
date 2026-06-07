@@ -180,7 +180,7 @@
 <header class="nav">
   <div class="container nav-inner">
     <a href="/" class="logo logo-lockup" aria-label="Numberbender — Master the Elements of Math">
-      <img src="images/numberbender-lockup-transparent.svg" alt="Numberbender" class="lockup-img">
+      <img src="images/numberbender-lockup-transparent.svg" alt="Numberbender" class="lockup-img" loading="lazy">
     </a>
     <button class="menu-toggle" aria-label="Toggle menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
     <nav class="nav-links" id="navlinks">
@@ -209,6 +209,8 @@
         <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">About <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
           <a href="/about">👨‍🏫 About Dr. E</a>
+          <a href="/nonprofit">🏛️ Mission &amp; Nonprofit</a>
+          <a href="/for-institutions">🤝 For Institutions</a>
           <a href="/speaking">🎤 Speaking</a>
           <a href="/press">📰 Press &amp; Media</a>
           <a href="/blog">✍️ Blog</a>
@@ -225,17 +227,17 @@
   <section class="thanks-section">
     <div class="container">
       <div class="thanks-inner">
-        <div class="thanks-icon">📬</div>
+        <div class="thanks-icon">🎁</div>
         <div class="badge">✓ You're subscribed</div>
-        <h1>Thanks for <span class="accent">subscribing!</span></h1>
-        <p class="lead">Dr. E will send one teaching tip a week — straight to your inbox. Expect practical strategies for students and educators alike.</p>
+        <h1>Your <span class="accent">worksheets are ready!</span></h1>
+        <p class="lead">Check your inbox — your free bundle is on its way. While you wait, download it directly below.</p>
         <div class="ctas">
-          <a href="/" class="btn btn-primary">← Back to Homepage</a>
-          <a href="/courses" class="btn btn-outline">Explore Courses</a>
+          <a href="/bundle-thanks?subject=algebra" class="btn btn-primary">Download My 10 Worksheets →</a>
+          <a href="/math-worksheets" class="btn btn-outline">Browse All Worksheets</a>
         </div>
         <div class="tip-card">
-          <div class="tip-label">While you wait — try this</div>
-          <p>Browse Dr. E's free math courses on YouTube. Algebra, Statistics, Calculus, and more — all taught in plain language, totally free.</p>
+          <div class="tip-label">What's in your bundle?</div>
+          <p>10 printable math worksheets with full answer keys — algebra, statistics, calculus, and more. All free, forever. Dr. E will also send one short email a week with lesson tips and new resources.</p>
         </div>
       </div>
     </div>
@@ -247,7 +249,7 @@
     <div class="foot-bottom">
       © 2026 Numberbender · Numberbender Inc. is a 501(c)(3) nonprofit · EIN: 86-2952520
       <div style="margin-top:8px;font-size:0.78rem;color:#94a3b8;">
-        <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener"><img src="https://licensebuttons.net/l/by/4.0/88x31.png" alt="CC BY 4.0" style="border:0;vertical-align:middle;margin-right:6px;"></a>
+        <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener"><img src="https://licensebuttons.net/l/by/4.0/88x31.png" alt="CC BY 4.0" style="border:0;vertical-align:middle;margin-right:6px;" loading="lazy"></a>
         Original content licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener" style="color:#94a3b8;">CC BY 4.0</a> &mdash; free to share and adapt with credit to Peter Esperanza / Numberbender.
       </div>
     </div>
@@ -288,5 +290,6 @@
   });
 </script>
 
+<script src="/nb-search.js"></script>
 </body>
 </html>

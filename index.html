@@ -1092,7 +1092,7 @@
 <header class="nav">
   <div class="container nav-inner">
     <a href="/" class="logo logo-lockup" aria-label="Numberbender — Master the Elements of Math">
-      <img src="images/numberbender_banner_only.svg" alt="Numberbender" class="lockup-img">
+      <img src="images/numberbender_banner_only.svg" alt="Numberbender" class="lockup-img" loading="lazy">
     </a>
     <button class="menu-toggle" aria-label="Toggle menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
     <nav class="nav-links" id="navlinks">
@@ -1121,6 +1121,8 @@
         <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">About <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
           <a href="/about">👨‍🏫 About Dr. E</a>
+          <a href="/nonprofit">🏛️ Mission &amp; Nonprofit</a>
+          <a href="/for-institutions">🤝 For Institutions</a>
           <a href="/speaking">🎤 Speaking</a>
           <a href="/press">📰 Press &amp; Media</a>
           <a href="/blog">✍️ Blog</a>
@@ -1207,7 +1209,10 @@
               <div class="ws-badge-sub">Math for every Filipino learner, worldwide</div>
             </div>
           </div>
-          <img src="images/hero_image_worksheet_teacher.png" alt="Student with bilingual math worksheet and Dr. E with laptop showing Numberbender" loading="eager">
+          <picture>
+            <source srcset="images/hero_image_worksheet_teacher.webp" type="image/webp">
+            <img src="images/hero_image_worksheet_teacher.png" alt="Student with bilingual math worksheet and Dr. E with laptop showing Numberbender" loading="eager" fetchpriority="high">
+          </picture>
         </div>
       </div>
     </div>
@@ -1352,7 +1357,7 @@
         </div>
       </div>
       <div>
-        <img src="images/blog_post_banner/worksheet_download_home.png" alt="Free printable math worksheets with answer keys" style="width:100%;border-radius:var(--radius);margin-bottom:14px;display:block;">
+        <img src="images/blog_post_banner/worksheet_download_home.png" alt="Free printable math worksheets with answer keys" style="width:100%;border-radius:var(--radius);margin-bottom:14px;display:block;" loading="lazy">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
         <div style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:22px 18px;text-align:center;">
           <div style="font-size:2.2rem;font-weight:800;color:var(--blue);line-height:1;">482</div>
@@ -1495,7 +1500,7 @@
 <section class="about" id="about">
   <div class="container about-grid">
     <div class="about-photo" aria-label="Dr. Peter Esperanza">
-      <img src="images/dr-e-headshot.jpg" alt="Dr. Peter Esperanza" class="about-photo-img" onerror="this.style.display='none';this.parentElement.innerHTML='Dr. E';">
+      <img src="images/dr-e-headshot.jpg" alt="Dr. Peter Esperanza" class="about-photo-img" onerror="this.style.display='none';this.parentElement.innerHTML='Dr. E';" loading="lazy">
     </div>
     <div class="about-content">
       <div class="section-eyebrow" style="text-align:left;">Meet the founder</div>
@@ -1532,8 +1537,11 @@
       <p>A peek inside the home workstation where math meets streaming energy.</p>
     </div>
     <div class="video-wrap">
-      <div onclick="var f=document.createElement('iframe');f.src='https://www.youtube.com/embed/--dQxo3KwBM?autoplay=1';f.allow='autoplay;encrypted-media;picture-in-picture';f.allowFullscreen=true;f.style.cssText='width:100%;height:100%;border:0;display:block;';this.innerHTML='';this.appendChild(f);" style="cursor:pointer;position:relative;width:100%;height:100%;">
-        <img src="images/dr-e-hero.jpg" alt="Dr. E in action at his home workstation" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
+      <div onclick="var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/--dQxo3KwBM?autoplay=1';f.allow='autoplay;encrypted-media;picture-in-picture';f.allowFullscreen=true;f.style.cssText='width:100%;height:100%;border:0;display:block;';this.innerHTML='';this.appendChild(f);" style="cursor:pointer;position:relative;width:100%;height:100%;">
+        <picture>
+          <source srcset="images/dr-e-hero.webp" type="image/webp">
+          <img src="images/dr-e-hero.jpg" alt="Dr. E in action at his home workstation" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
+        </picture>
         <div aria-hidden="true" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;">
           <svg width="68" height="48" viewBox="0 0 68 48" xmlns="http://www.w3.org/2000/svg"><rect width="68" height="48" rx="12" fill="rgba(0,0,0,0.75)"/><polygon points="27,16 27,32 45,24" fill="white"/></svg>
         </div>
@@ -1550,7 +1558,7 @@
       <a href="https://www.merlot.org" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:12px 20px;font-weight:600;font-size:0.95rem;color:var(--navy);text-decoration:none;transition:box-shadow .15s ease,transform .15s ease;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 10px 30px rgba(15,23,42,0.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">🏛️ Listed on MERLOT</a>
       <a href="https://oercommons.org" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:12px 20px;font-weight:600;font-size:0.95rem;color:var(--navy);text-decoration:none;transition:box-shadow .15s ease,transform .15s ease;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 10px 30px rgba(15,23,42,0.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">📚 OER Commons</a>
       <a href="https://commons.libretexts.org" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:12px 20px;font-weight:600;font-size:0.95rem;color:var(--navy);text-decoration:none;transition:box-shadow .15s ease,transform .15s ease;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 10px 30px rgba(15,23,42,0.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">📖 LibreTexts</a>
-      <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener" style="display:inline-flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:12px 20px;text-decoration:none;transition:box-shadow .15s ease,transform .15s ease;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 10px 30px rgba(15,23,42,0.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''"><img src="https://licensebuttons.net/l/by/4.0/88x31.png" alt="CC BY 4.0" style="border:0;display:block;"></a>
+      <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener" style="display:inline-flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:12px 20px;text-decoration:none;transition:box-shadow .15s ease,transform .15s ease;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 10px 30px rgba(15,23,42,0.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''"><img src="https://licensebuttons.net/l/by/4.0/88x31.png" alt="CC BY 4.0" style="border:0;display:block;" loading="lazy"></a>
     </div>
   </div>
 </section>
@@ -1603,7 +1611,7 @@
       <div class="testimonial">
         <p>I transferred to Barstow High as a new student, and Dr. E's videos rebuilt my confidence in math. Then he had me create AP Calculus and AP Statistics videos of my own — I got to learn math twice, and scored a 5 on both AP exams. That's an experience I'll cherish forever.</p>
         <div class="testimonial-author">
-          <div class="avatar"><picture><source srcset="images/Willow_S.webp" type="image/webp"><img src="images/Willow_S.png" alt="Willow S." onerror="this.style.display='none'"></picture></div>
+          <div class="avatar"><picture><source srcset="images/Willow_S.webp" type="image/webp"><img src="images/Willow_S.png" alt="Willow S." onerror="this.style.display='none'" loading="lazy"></picture></div>
           <div>
             <div class="author-name">Willow S.</div>
             <div class="author-role">Former Barstow High School Student · 5s on AP Calculus &amp; AP Statistics</div>
@@ -1613,7 +1621,7 @@
       <div class="testimonial">
         <p>I was hesitant to record my first video — it always felt awkward and I cringed watching myself back. Dr. E told me to focus on the students in my classroom and ignore the noise of who else might watch, and that one shift unlocked it. I found a skill I never thought I could do.</p>
         <div class="testimonial-author">
-          <div class="avatar"><picture><source srcset="images/Katrinah_M.webp" type="image/webp"><img src="images/Katrinah_M.jpg" alt="Katrinah M." onerror="this.style.display='none'"></picture></div>
+          <div class="avatar"><picture><source srcset="images/Katrinah_M.webp" type="image/webp"><img src="images/Katrinah_M.jpg" alt="Katrinah M." onerror="this.style.display='none'" loading="lazy"></picture></div>
           <div>
             <div class="author-name">Katrinah M.</div>
             <div class="author-role">Teacher · Desert Rose Elementary School</div>
@@ -1674,9 +1682,9 @@
   <div class="container">
     <div class="newsletter-inner">
       <div class="newsletter-copy">
-        <div class="nl-eyebrow">📬 For students & teachers alike</div>
-        <h2>One email a week. Actually useful.</h2>
-        <p>Whether you're studying math or teaching it — Dr. E sends one short email a week with free resources, lesson tips, new worksheets, and video drops. No fluff, no hard sell. Just the good stuff. Unsubscribe anytime in one click.</p>
+        <div class="nl-eyebrow">🎁 Free worksheet bundle — 10 printable PDFs</div>
+        <h2>Get 10 free math worksheets, delivered instantly.</h2>
+        <p>Enter your email and we'll send you a free bundle of 10 printable worksheets — algebra, statistics, calculus, and more. Full answer keys included. Dr. E also sends one short email a week with lesson tips and new resources. No spam. Unsubscribe anytime.</p>
       </div>
       <div class="newsletter-form-wrap">
         <form class="newsletter-form" id="newsletterForm" action="https://numberbender.us17.list-manage.com/subscribe/post?u=65e30fe527dde6fb604f6760a&amp;id=ad0977e0cc&amp;f_id=003758e0f0" method="post" target="_blank">
@@ -1705,7 +1713,7 @@
           </select>
           <div class="nl-row">
             <input class="nl-input" type="email" name="EMAIL" required placeholder="your@email.com" autocomplete="email" aria-label="Email address">
-            <button class="nl-btn" type="submit">Get Free Resources →</button>
+            <button class="nl-btn" type="submit">Get My 10 Worksheets →</button>
           </div>
           <div aria-hidden="true" style="position:absolute;left:-5000px;"><input type="text" name="b_65e30fe527dde6fb604f6760a_ad0977e0cc" tabindex="-1" value=""></div>
         </form>
@@ -1723,14 +1731,14 @@
       <div class="foot foot-brand">
         <div class="logo" style="color:white;">
           <div class="logo-mark" style="background:transparent;overflow:hidden;">
-            <img src="images/numberbender-mark-teal-transparent.svg" alt="Numberbender" style="width:100%;height:100%;object-fit:contain;display:block;">
+            <img src="images/numberbender-mark-teal-transparent.svg" alt="Numberbender" style="width:100%;height:100%;object-fit:contain;display:block;" loading="lazy">
           </div>
           <span>Numberbender</span>
         </div>
         <p>Helping students learn math with confidence and helping educators teach online with energy, clarity, and impact.</p>
         <p class="footer-tagline">Math is hard. So we made it human.</p>
         <div style="margin-top:16px;">
-          <p style="color:#94a3b8;font-size:0.88rem;margin-bottom:8px;">📬 Get free math resources sent to your inbox — no spam, just math.</p>
+          <p style="color:#94a3b8;font-size:0.88rem;margin-bottom:8px;">🎁 Get 10 free math worksheets — join 1,000+ subscribers</p>
           <form action="https://numberbender.us17.list-manage.com/subscribe/post?u=65e30fe527dde6fb604f6760a&amp;id=ad0977e0cc&amp;f_id=003758e0f0" method="post" target="_blank" style="display:flex;gap:8px;">
             <input type="email" name="EMAIL" required placeholder="your@email.com" style="flex:1;padding:9px 12px;border-radius:8px;border:1px solid #334155;background:#1e293b;color:white;font-size:0.9rem;min-width:0;">
             <div aria-hidden="true" style="position:absolute;left:-5000px;"><input type="text" name="b_65e30fe527dde6fb604f6760a_ad0977e0cc" tabindex="-1" value=""></div>
@@ -1774,7 +1782,7 @@
     <div class="foot-bottom">
       © 2026 Numberbender · Founded by Dr. Peter Esperanza · Numberbender Inc. is a 501(c)(3) nonprofit organization · EIN: 86-2952520 · Made with care for learners and educators everywhere.
 <div style="margin-top:8px;font-size:0.78rem;color:#94a3b8;">
-        <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener"><img src="https://licensebuttons.net/l/by/4.0/88x31.png" alt="CC BY 4.0" style="border:0;vertical-align:middle;margin-right:6px;"></a>
+        <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener"><img src="https://licensebuttons.net/l/by/4.0/88x31.png" alt="CC BY 4.0" style="border:0;vertical-align:middle;margin-right:6px;" loading="lazy"></a>
         Original content licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener" style="color:#94a3b8;">CC BY 4.0</a> &mdash; free to share and adapt with credit to Peter Esperanza / Numberbender.
       </div>
     </div>
@@ -1867,37 +1875,63 @@
   });
 </script>
 
-<!-- ── Numberbender Sticky Bar — Back to School June 2026 ── -->
-<div id="nb-sticky-bar">
-  <p>🇵🇭 Philippine schools open in June! Get FREE bilingual math worksheets:</p>
+<!-- ── Numberbender Sticky Bar — geo-targeted ── -->
+<div id="nb-sticky-bar" style="display:none">
+  <p id="nb-bar-msg"></p>
   <input type="email" id="nb-email-input" placeholder="your@email.com" autocomplete="email" aria-label="Email address" />
   <button class="nb-submit" onclick="nbSubmit()">Get Free Worksheets →</button>
   <button class="nb-close" onclick="nbDismiss()" aria-label="Close">✕</button>
 </div>
 <script>
 (function(){
-  var d = localStorage.getItem('nb_bar_dismissed');
-  if(d && (Date.now()-parseInt(d))/(1000*60*60*24)<7){
-    document.getElementById('nb-sticky-bar').style.display='none';
+  var d=localStorage.getItem(‘nb_bar_dismissed’);
+  if(d&&(Date.now()-parseInt(d))/(1000*60*60*24)<7) return;
+
+  var msgs={
+    PH:’🇵🇭 Philippine schools open in June! Get FREE bilingual math worksheets:’,
+    US:’📚 Free college math worksheets — algebra, stats, calculus, and more:’,
+    DEFAULT:’🎁 Get 10 free math worksheets from Dr. E — no login, no paywall:’
+  };
+
+  function showBar(country){
+    var msg=msgs[country]||msgs.DEFAULT;
+    document.getElementById(‘nb-bar-msg’).textContent=msg;
+    document.getElementById(‘nb-sticky-bar’).style.display=’’;
   }
+
+  var cached=sessionStorage.getItem(‘nb_country’);
+  if(cached){showBar(cached);return;}
+
+  fetch(‘https://ipapi.co/country/’)
+    .then(function(r){return r.text();})
+    .then(function(c){
+      c=(c||’’).trim().toUpperCase().substring(0,2);
+      sessionStorage.setItem(‘nb_country’,c);
+      showBar(c);
+    })
+    .catch(function(){showBar(‘DEFAULT’);});
 })();
+
 function nbDismiss(){
-  document.getElementById('nb-sticky-bar').style.display='none';
-  localStorage.setItem('nb_bar_dismissed',Date.now());
+  document.getElementById(‘nb-sticky-bar’).style.display=’none’;
+  localStorage.setItem(‘nb_bar_dismissed’,Date.now());
 }
 function nbSubmit(){
-  var email=document.getElementById('nb-email-input').value.trim();
-  if(!email||!email.includes('@')){document.getElementById('nb-email-input').focus();return;}
-  // Show success immediately
-  var bar=document.getElementById('nb-sticky-bar');
-  bar.innerHTML='<p class="nb-success">✅ You’re in! Check your inbox for your free worksheets. — Dr. E 🇵🇭</p><button class="nb-close" onclick="nbDismiss()" aria-label="Close">✕</button>';
-  localStorage.setItem('nb_bar_dismissed',Date.now()+(7*24*60*60*1000));
-  // Submit to Mailchimp via JSONP
+  var email=document.getElementById(‘nb-email-input’).value.trim();
+  if(!email||!email.includes(‘@’)){document.getElementById(‘nb-email-input’).focus();return;}
+  var bar=document.getElementById(‘nb-sticky-bar’);
+  var country=sessionStorage.getItem(‘nb_country’)||’’;
+  var ok=country===’PH’
+    ? ‘✅ You\’re in! Check your inbox for your free worksheets. — Dr. E 🇵🇭’
+    : ‘✅ You\’re in! Check your inbox for your free math worksheets. — Dr. E’;
+  bar.innerHTML=’<p class="nb-success">’+ok+’</p><button class="nb-close" onclick="nbDismiss()" aria-label="Close">✕</button>’;
+  localStorage.setItem(‘nb_bar_dismissed’,Date.now()+(7*24*60*60*1000));
   window.nbMcCb=function(){};
-  var s=document.createElement('script');
-  s.src='https://numberbender.us17.list-manage.com/subscribe/post-json?u=65e30fe527dde6fb604f6760a&id=ad0977e0cc&f_id=003758e0f0&EMAIL='+encodeURIComponent(email)+'&b_65e30fe527dde6fb604f6760a_ad0977e0cc=&c=nbMcCb';
+  var s=document.createElement(‘script’);
+  s.src=’https://numberbender.us17.list-manage.com/subscribe/post-json?u=65e30fe527dde6fb604f6760a&id=ad0977e0cc&f_id=003758e0f0&EMAIL=’+encodeURIComponent(email)+’&b_65e30fe527dde6fb604f6760a_ad0977e0cc=&c=nbMcCb’;
   document.body.appendChild(s);
 }
 </script>
+<script src="/nb-search.js"></script>
 </body>
 </html>

@@ -262,7 +262,7 @@
 <header class="nav">
   <div class="container nav-inner">
     <a href="/" class="logo-lockup" aria-label="Numberbender — Home">
-      <img src="images/numberbender_banner_only.svg" alt="Numberbender" class="lockup-img">
+      <img src="images/numberbender_banner_only.svg" alt="Numberbender" class="lockup-img" loading="lazy">
     </a>
     <button class="menu-toggle" aria-label="Toggle menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
     <nav class="nav-links" id="navlinks">
@@ -291,6 +291,8 @@
         <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">About <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
           <a href="/about">👨‍🏫 About Dr. E</a>
+          <a href="/nonprofit">🏛️ Mission &amp; Nonprofit</a>
+          <a href="/for-institutions">🤝 For Institutions</a>
           <a href="/speaking">🎤 Speaking</a>
           <a href="/press">📰 Press &amp; Media</a>
           <a href="/blog">✍️ Blog</a>
@@ -508,5 +510,6 @@ function nbSubmit(){
   document.body.appendChild(s);
 }
 </script>
+<script src="/nb-search.js"></script>
 </body>
 </html>

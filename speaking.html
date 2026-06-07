@@ -511,6 +511,7 @@
 #nb-sticky-bar .nb-success{font-size:15px;font-weight:600;color:#fff;}
 @media(max-width:640px){#nb-sticky-bar{flex-direction:column;gap:8px;padding:14px 16px;text-align:center;}#nb-sticky-bar p{white-space:normal;font-size:13px;}#nb-sticky-bar input[type="email"]{width:100%;}#nb-sticky-bar button.nb-submit{width:100%;}}
 </style>
+<noscript><style>.section-head,.why-card,.ep-card,.module,.final-cta,.archive-cta,.coverage-card,.video-slot,.about-photo-big,.about-hero-content,.press-hero-text,.press-hero-img,.featured-post,.post-card{opacity:1!important;transform:none!important;}</style></noscript>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -519,7 +520,7 @@
 <header class="nav">
   <div class="container nav-inner">
     <a href="/" class="logo logo-lockup" aria-label="Numberbender — Master the Elements of Math">
-      <img src="images/numberbender_banner_only.svg" alt="Numberbender" class="lockup-img">
+      <img src="images/numberbender_banner_only.svg" alt="Numberbender" class="lockup-img" loading="lazy">
     </a>
     <button class="menu-toggle" aria-label="Toggle menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
         <nav class="nav-links" id="navlinks">
@@ -548,6 +549,8 @@
         <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">About <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
           <a href="/about">👨‍🏫 About Dr. E</a>
+          <a href="/nonprofit">🏛️ Mission &amp; Nonprofit</a>
+          <a href="/for-institutions">🤝 For Institutions</a>
           <a href="/speaking">🎤 Speaking</a>
           <a href="/press">📰 Press &amp; Media</a>
           <a href="/blog">✍️ Blog</a>
@@ -588,7 +591,7 @@
 
     <div class="keynote-video">
       <iframe
-        src="https://www.youtube.com/embed/Xud68k4Wp-A"
+        src="https://www.youtube-nocookie.com/embed/Xud68k4Wp-A"
         title="Engage Like a YouTuber — OTC 2025 Long Beach (Dr. Peter Esperanza)"
         allow="autoplay; encrypted-media; picture-in-picture"
         allowfullscreen
@@ -761,7 +764,7 @@
     </div>
     <div class="recent-grid">
       <a href="/speaking-2026-04-actla-51" class="rec-card">
-        <div class="rec-thumb t2"><span class="rec-tag">Webinar</span><picture><source srcset="images/ACTLA_Cover.webp" type="image/webp"><img src="images/ACTLA_Cover.png" alt="Tutor Like a Streamer at ACTLA 51"></picture></div>
+        <div class="rec-thumb t2"><span class="rec-tag">Webinar</span><picture><source srcset="images/ACTLA_Cover.webp" type="image/webp"><img src="images/ACTLA_Cover.png" alt="Tutor Like a Streamer at ACTLA 51" loading="lazy"></picture></div>
         <div class="rec-body">
           <div class="rec-meta">April 15–17, 2026 · California (online)</div>
           <h3>Tutor Like a Streamer at ACTLA 51</h3>
@@ -770,7 +773,7 @@
         </div>
       </a>
       <a href="/speaking-2026-03-site-philadelphia" class="rec-card">
-        <div class="rec-thumb"><span class="rec-tag">Plenary</span><picture><source srcset="images/SITE_Cover.webp" type="image/webp"><img src="images/SITE_Cover.png" alt="Teach It Like You Stream It at SITE 2026"></picture></div>
+        <div class="rec-thumb"><span class="rec-tag">Plenary</span><picture><source srcset="images/SITE_Cover.webp" type="image/webp"><img src="images/SITE_Cover.png" alt="Teach It Like You Stream It at SITE 2026" loading="lazy"></picture></div>
         <div class="rec-body">
           <div class="rec-meta">March 23–27, 2026 · Philadelphia, PA</div>
           <h3>Teach It Like You Stream It at SITE 2026</h3>
@@ -779,7 +782,7 @@
         </div>
       </a>
       <a href="/speaking-2025-08-seameo-indonesia" class="rec-card">
-        <div class="rec-thumb t3"><span class="rec-tag">Workshop</span><picture><source srcset="images/SEAMEAO_Indonesia_blog.webp" type="image/webp"><img src="images/SEAMEAO_Indonesia_blog.png" alt="Differentiating Math Across Southeast Asia — SEAMEO QITEP"></picture></div>
+        <div class="rec-thumb t3"><span class="rec-tag">Workshop</span><picture><source srcset="images/SEAMEAO_Indonesia_blog.webp" type="image/webp"><img src="images/SEAMEAO_Indonesia_blog.png" alt="Differentiating Math Across Southeast Asia — SEAMEO QITEP" loading="lazy"></picture></div>
         <div class="rec-body">
           <div class="rec-meta">Aug 14–16, 2025 · Yogyakarta, Indonesia</div>
           <h3>Differentiating Math Across Southeast Asia</h3>
@@ -813,7 +816,7 @@
       <div class="foot foot-brand">
         <div class="logo" style="color:white;">
           <div class="logo-mark" style="background:transparent;overflow:hidden;">
-            <img src="images/numberbender-mark-teal-transparent.svg" alt="Numberbender" style="width:100%;height:100%;object-fit:contain;display:block;">
+            <img src="images/numberbender-mark-teal-transparent.svg" alt="Numberbender" style="width:100%;height:100%;object-fit:contain;display:block;" loading="lazy">
           </div>
           <span>Numberbender</span>
         </div>
@@ -827,7 +830,7 @@
         </div>
       
         <div class="foot-signup-block">
-          <label for="foot-email">📬 Join the movement — 1,000+ students and teachers already in</label>
+          <label for="foot-email">🎁 Get 10 free math worksheets — join 1,000+ subscribers</label>
           <form class="foot-signup-form" action="https://numberbender.us17.list-manage.com/subscribe/post?u=65e30fe527dde6fb604f6760a&amp;id=ad0977e0cc&amp;f_id=003058e0f0" method="post" target="_blank">
             <input id="foot-email" type="email" name="EMAIL" placeholder="your@email.com" required aria-label="Your email address">
             <div style="position:absolute; left:-5000px;" aria-hidden="true"><input type="text" name="b_65e30fe527dde6fb604f6760a_ad0977e0cc" tabindex="-1" value=""></div>
@@ -865,7 +868,7 @@
     <div class="foot-bottom">
       © 2026 Numberbender · Founded by Dr. Peter Esperanza · Numberbender Inc. is a 501(c)(3) nonprofit organization · EIN: 86-2952520 · Made with care for learners and educators everywhere. · <a href="/privacy" style="color:#94a3b8;">Privacy Policy</a>
       <div style="margin-top:8px;font-size:0.78rem;color:#94a3b8;">
-        <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener"><img src="https://licensebuttons.net/l/by/4.0/88x31.png" alt="CC BY 4.0" style="border:0;vertical-align:middle;margin-right:6px;"></a>
+        <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener"><img src="https://licensebuttons.net/l/by/4.0/88x31.png" alt="CC BY 4.0" style="border:0;vertical-align:middle;margin-right:6px;" loading="lazy"></a>
         Original content licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener" style="color:#94a3b8;">CC BY 4.0</a> &mdash; free to share and adapt with credit to Peter Esperanza / Numberbender.
       </div>
     </div>
@@ -957,5 +960,6 @@ function nbSubmit(){
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="/nb-animations.js"></script>
+<script src="/nb-search.js"></script>
 </body>
 </html>

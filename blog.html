@@ -215,6 +215,7 @@
 #nb-sticky-bar .nb-success{font-size:15px;font-weight:600;color:#fff;}
 @media(max-width:640px){#nb-sticky-bar{flex-direction:column;gap:8px;padding:14px 16px;text-align:center;}#nb-sticky-bar p{white-space:normal;font-size:13px;}#nb-sticky-bar input[type="email"]{width:100%;}#nb-sticky-bar button.nb-submit{width:100%;}}
 </style>
+<noscript><style>.section-head,.why-card,.ep-card,.module,.final-cta,.archive-cta,.coverage-card,.video-slot,.about-photo-big,.about-hero-content,.press-hero-text,.press-hero-img,.featured-post,.post-card{opacity:1!important;transform:none!important;}</style></noscript>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -224,7 +225,7 @@
 <header>
   <div class="container nav-inner">
     <a href="/" class="brand-lockup">
-      <img src="images/numberbender_banner_only.svg" alt="Numberbender" class="lockup-img">
+      <img src="images/numberbender_banner_only.svg" alt="Numberbender" class="lockup-img" loading="lazy">
     </a>
     <button class="menu-toggle" aria-label="Toggle menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
     <nav class="nav-links" id="navlinks">
@@ -253,6 +254,8 @@
         <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">About <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
           <a href="/about">👨‍🏫 About Dr. E</a>
+          <a href="/nonprofit">🏛️ Mission &amp; Nonprofit</a>
+          <a href="/for-institutions">🤝 For Institutions</a>
           <a href="/speaking">🎤 Speaking</a>
           <a href="/press">📰 Press &amp; Media</a>
           <a href="/blog">✍️ Blog</a>
@@ -293,7 +296,7 @@
     <a href="/blog-flipped-first-class" style="text-decoration:none;color:inherit;display:block;">
     <div class="featured-post" style="cursor:pointer;">
       <div class="featured-thumb" style="background:none; padding:0; overflow:hidden;">
-        <picture><source srcset="images/blog_post_banner/featured_blog_real.webp" type="image/webp"><img src="images/blog_post_banner/featured_blog_real.jpg" alt="How I Flipped My First Math Class" style="width:100%;height:100%;object-fit:cover;display:block;"></picture>
+        <picture><source srcset="images/blog_post_banner/featured_blog_real.webp" type="image/webp"><img src="images/blog_post_banner/featured_blog_real.jpg" alt="How I Flipped My First Math Class" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"></picture>
       </div>
       <div class="featured-body">
         <div class="post-meta">
@@ -319,7 +322,7 @@
       <a href="/blog-flipped-mistakes" style="text-decoration:none;color:inherit;">
       <div class="post-card">
         <div class="post-thumb" style="background:none; padding:0; overflow:hidden;">
-          <picture><source srcset="images/blog_post_banner/blog_1.webp" type="image/webp"><img src="images/blog_post_banner/blog_1.png" alt="5 Flipped Classroom Mistakes I Made" style="width:100%;height:100%;object-fit:cover;display:block;"></picture>
+          <picture><source srcset="images/blog_post_banner/blog_1.webp" type="image/webp"><img src="images/blog_post_banner/blog_1.png" alt="5 Flipped Classroom Mistakes I Made" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"></picture>
         </div>
         <div class="post-body">
           <div class="post-meta">
@@ -337,7 +340,7 @@
       <a href="/blog-become-edutuber" style="text-decoration:none;color:inherit;">
       <div class="post-card">
         <div class="post-thumb" style="background:none; padding:0; overflow:hidden;">
-          <picture><source srcset="images/blog_post_banner/Blog_2.webp" type="image/webp"><img src="images/blog_post_banner/Blog_2.png" alt="How to Become an EduTuber" style="width:100%;height:100%;object-fit:cover;display:block;"></picture>
+          <picture><source srcset="images/blog_post_banner/Blog_2.webp" type="image/webp"><img src="images/blog_post_banner/Blog_2.png" alt="How to Become an EduTuber" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"></picture>
         </div>
         <div class="post-body">
           <div class="post-meta">
@@ -355,7 +358,7 @@
       <a href="/blog-five-minute-rule" style="text-decoration:none;color:inherit;">
       <div class="post-card">
         <div class="post-thumb" style="background:none; padding:0; overflow:hidden;">
-          <picture><source srcset="images/blog_post_banner/Blog_3.webp" type="image/webp"><img src="images/blog_post_banner/Blog_3.png" alt="The 5-Minute Rule for Teaching Videos" style="width:100%;height:100%;object-fit:cover;display:block;"></picture>
+          <picture><source srcset="images/blog_post_banner/Blog_3.webp" type="image/webp"><img src="images/blog_post_banner/Blog_3.png" alt="The 5-Minute Rule for Teaching Videos" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"></picture>
         </div>
         <div class="post-body">
           <div class="post-meta">
@@ -483,7 +486,7 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="images/numberbender_banner_only.svg" alt="Numberbender" class="lockup-img-footer">
+        <img src="images/numberbender_banner_only.svg" alt="Numberbender" class="lockup-img-footer" loading="lazy">
         <p>Free math education and teacher professional development by Dr. Peter Esperanza — Apple Distinguished Educator, math professor, YouTube educator, and international speaker.</p>
       </div>
       <div class="footer-col">
@@ -608,5 +611,6 @@ function nbSubmit(){
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="/nb-animations.js"></script>
+<script src="/nb-search.js"></script>
 </body>
 </html>

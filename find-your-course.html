@@ -376,6 +376,18 @@
 #nb-sticky-bar .nb-success{font-size:15px;font-weight:600;color:#fff;}
 @media(max-width:640px){#nb-sticky-bar{flex-direction:column;gap:8px;padding:14px 16px;text-align:center;}#nb-sticky-bar p{white-space:normal;font-size:13px;}#nb-sticky-bar input[type="email"]{width:100%;}#nb-sticky-bar button.nb-submit{width:100%;}}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://numberbender.com/find-your-course",
+  "url": "https://numberbender.com/find-your-course",
+  "name": "Find Your Course — Numberbender Math",
+  "description": "Pick your math subject and go straight to the right free lessons, videos, and worksheets — Algebra, Statistics, Geometry, Calculus, and more.",
+  "isPartOf": { "@id": "https://numberbender.com/#website" },
+  "publisher": { "@id": "https://numberbender.com/#org" }
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -384,7 +396,7 @@
 <header class="nav">
   <div class="container nav-inner">
     <a href="/" class="logo-lockup" aria-label="Numberbender — Home">
-      <img src="images/numberbender_banner_only.svg" alt="Numberbender" class="lockup-img">
+      <img src="images/numberbender_banner_only.svg" alt="Numberbender" class="lockup-img" loading="lazy">
     </a>
     <button class="menu-toggle" aria-label="Toggle menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
     <nav class="nav-links" id="navlinks">
@@ -413,6 +425,8 @@
         <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">About <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
           <a href="/about">👨‍🏫 About Dr. E</a>
+          <a href="/nonprofit">🏛️ Mission &amp; Nonprofit</a>
+          <a href="/for-institutions">🤝 For Institutions</a>
           <a href="/speaking">🎤 Speaking</a>
           <a href="/press">📰 Press &amp; Media</a>
           <a href="/blog">✍️ Blog</a>
@@ -682,7 +696,7 @@
   <div class="container">
     © 2026 Numberbender · Founded by Dr. Peter Esperanza · <a href="/">Home</a> · <a href="/contact">Contact</a>
     <div style="margin-top:8px;font-size:0.78rem;color:#94a3b8;">
-      <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener"><img src="https://licensebuttons.net/l/by/4.0/88x31.png" alt="CC BY 4.0" style="border:0;vertical-align:middle;margin-right:6px;"></a>
+      <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener"><img src="https://licensebuttons.net/l/by/4.0/88x31.png" alt="CC BY 4.0" style="border:0;vertical-align:middle;margin-right:6px;" loading="lazy"></a>
       Original content licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener" style="color:#94a3b8;">CC BY 4.0</a> &mdash; free to share and adapt with credit to Peter Esperanza / Numberbender.
     </div>
   </div>
@@ -987,5 +1001,6 @@ function nbSubmit(){
 }
 </script>
 
+<script src="/nb-search.js"></script>
 </body>
 </html>

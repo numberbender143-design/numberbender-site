@@ -192,7 +192,7 @@
 <header class="nav">
   <div class="container nav-inner">
     <a href="/" aria-label="Numberbender — Home">
-      <img src="images/numberbender_banner_only.svg" alt="Numberbender" class="lockup-img">
+      <img src="images/numberbender_banner_only.svg" alt="Numberbender" class="lockup-img" loading="lazy">
     </a>
     <button class="menu-toggle" aria-label="Toggle menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
     <nav class="nav-links" id="navlinks">
@@ -221,6 +221,8 @@
         <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">About <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
           <a href="/about">👨‍🏫 About Dr. E</a>
+          <a href="/nonprofit">🏛️ Mission &amp; Nonprofit</a>
+          <a href="/for-institutions">🤝 For Institutions</a>
           <a href="/speaking">🎤 Speaking</a>
           <a href="/press">📰 Press &amp; Media</a>
           <a href="/blog">✍️ Blog</a>
@@ -333,7 +335,7 @@
       <div class="video-frame">
         <div class="yt-facade" id="yt-headbutt" onclick="
           var f=document.createElement('iframe');
-          f.src='https://www.youtube.com/embed/XT4HDi1p0xE?autoplay=1&rel=0';
+          f.src='https://www.youtube-nocookie.com/embed/XT4HDi1p0xE?autoplay=1&rel=0';
           f.allow='autoplay; encrypted-media';f.allowFullscreen=true;
           f.style.cssText='width:100%;aspect-ratio:16/9;border:none;display:block;';
           this.replaceWith(f);" style="cursor:pointer;position:relative;display:block;aspect-ratio:16/9;background:#000 url(BLOG_VIDEO_POST/thumbnails/calculus_lesson_headbutt.jpg) center/cover no-repeat;">
@@ -383,7 +385,7 @@
   <div class="container">
     <div class="foot-grid">
       <div class="foot-brand">
-        <div class="logo-mark"><img src="images/numberbender_banner_only.svg" alt="Numberbender"></div>
+        <div class="logo-mark"><img src="images/numberbender_banner_only.svg" alt="Numberbender" loading="lazy"></div>
         <p>Free math education and teacher PD by Dr. Peter Esperanza — math professor, EduTuber, and international speaker.</p>
       </div>
       <div class="foot">
@@ -410,7 +412,7 @@
     <div class="foot-bottom">
       © 2026 Numberbender Inc. · 501(c)(3) Nonprofit · EIN 86-2952520
       <div style="margin-top:8px;font-size:0.78rem;color:#94a3b8;">
-        <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener"><img src="https://licensebuttons.net/l/by/4.0/88x31.png" alt="CC BY 4.0" style="border:0;vertical-align:middle;margin-right:6px;"></a>
+        <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener"><img src="https://licensebuttons.net/l/by/4.0/88x31.png" alt="CC BY 4.0" style="border:0;vertical-align:middle;margin-right:6px;" loading="lazy"></a>
         Original content licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener" style="color:#94a3b8;">CC BY 4.0</a> &mdash; free to share and adapt with credit to Peter Esperanza / Numberbender.
       </div>
     </div>
@@ -543,5 +545,6 @@ function nbSubmit(){
   document.body.appendChild(s);
 }
 </script>
+<script src="/nb-search.js"></script>
 </body>
 </html>

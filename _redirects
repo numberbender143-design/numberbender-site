@@ -102,4 +102,12 @@ https://www.numberbender.com/*  https://numberbender.com/:splat  301!
 /blog/                          /blog                           301
 /speaking/                      /speaking                       301
 
+# New pages — June 2026
+/nonprofit/                     /nonprofit                      301
+/for-institutions/              /for-institutions               301
+/partners                       /for-institutions               301
+/partners/                      /for-institutions               301
+/mission                        /nonprofit                      301
+/mission/                       /nonprofit                      301
+
 # Catch-all: anything else not found → custom 404 (Netlify does this automatically via 404.html)

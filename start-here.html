@@ -424,7 +424,7 @@
 <header class="nav">
   <div class="container nav-inner">
     <a href="/" class="logo-lockup" aria-label="Numberbender — Home">
-      <img src="images/numberbender_banner_only.svg" alt="Numberbender" class="lockup-img">
+      <img src="images/numberbender_banner_only.svg" alt="Numberbender" class="lockup-img" loading="lazy">
     </a>
     <button class="menu-toggle" aria-label="Toggle menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
         <nav class="nav-links" id="navlinks">
@@ -453,6 +453,8 @@
         <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">About <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
           <a href="/about">👨‍🏫 About Dr. E</a>
+          <a href="/nonprofit">🏛️ Mission &amp; Nonprofit</a>
+          <a href="/for-institutions">🤝 For Institutions</a>
           <a href="/speaking">🎤 Speaking</a>
           <a href="/press">📰 Press &amp; Media</a>
           <a href="/blog">✍️ Blog</a>
@@ -488,7 +490,7 @@
       </div>
       <p class="step-sub">A quick intro to how Dr. E breaks down a linear equation. Press play whenever you're ready.</p>
       <div class="video-wrap yt-facade" data-video-id="A2btQVNRFIU" role="button" tabindex="0" aria-label="Play video: Solving Linear Equations" onclick="loadYT(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();loadYT(this);}">
-        <img src="https://img.youtube.com/vi/A2btQVNRFIU/maxresdefault.jpg" alt="Solving Linear Equations — Numberbender lesson with Dr. E" class="yt-thumb" onerror="this.src='https://img.youtube.com/vi/A2btQVNRFIU/hqdefault.jpg'">
+        <img src="https://img.youtube.com/vi/A2btQVNRFIU/maxresdefault.jpg" alt="Solving Linear Equations — Numberbender lesson with Dr. E" class="yt-thumb" onerror="this.src='https://img.youtube.com/vi/A2btQVNRFIU/hqdefault.jpg'" loading="lazy">
         <div class="yt-play" aria-hidden="true">
           <svg viewBox="0 0 68 48" width="68" height="48"><path d="M66.52 7.74a8 8 0 0 0-5.64-5.64C56.06 1 34 1 34 1S11.94 1 7.12 2.1a8 8 0 0 0-5.64 5.64A83.7 83.7 0 0 0 0 24a83.7 83.7 0 0 0 1.48 16.26 8 8 0 0 0 5.64 5.64C11.94 47 34 47 34 47s22.06 0 26.88-1.1a8 8 0 0 0 5.64-5.64A83.7 83.7 0 0 0 68 24a83.7 83.7 0 0 0-1.48-16.26z" fill="#ff0000"/><path d="M27 34l18-10-18-10z" fill="#fff"/></svg>
         </div>
@@ -605,7 +607,7 @@
   <div class="container">
     © 2026 Numberbender · Founded by Dr. Peter Esperanza · <a href="/">Home</a> · <a href="/contact">Contact</a>
       <div style="margin-top:8px;font-size:0.78rem;color:#94a3b8;">
-        <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener"><img src="https://licensebuttons.net/l/by/4.0/88x31.png" alt="CC BY 4.0" style="border:0;vertical-align:middle;margin-right:6px;"></a>
+        <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener"><img src="https://licensebuttons.net/l/by/4.0/88x31.png" alt="CC BY 4.0" style="border:0;vertical-align:middle;margin-right:6px;" loading="lazy"></a>
         Original content licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener" style="color:#94a3b8;">CC BY 4.0</a> &mdash; free to share and adapt with credit to Peter Esperanza / Numberbender.
       </div>
   </div>
@@ -616,7 +618,7 @@
     var id = el.getAttribute('data-video-id');
     if(!id) return;
     var iframe = document.createElement('iframe');
-    iframe.src = 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0';
+    iframe.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
     iframe.title = el.getAttribute('aria-label') || 'YouTube video';
     iframe.setAttribute('frameborder', '0');
     iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
@@ -707,5 +709,6 @@ function nbSubmit(){
   document.body.appendChild(s);
 }
 </script>
+<script src="/nb-search.js"></script>
 </body>
 </html>

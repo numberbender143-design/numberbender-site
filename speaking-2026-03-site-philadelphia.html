@@ -522,7 +522,7 @@
 <header class="nav">
   <div class="container nav-inner">
     <a href="/" class="logo logo-lockup" aria-label="Numberbender — Home">
-      <img src="images/numberbender_banner_only.svg" alt="Numberbender" class="lockup-img">
+      <img src="images/numberbender_banner_only.svg" alt="Numberbender" class="lockup-img" loading="lazy">
     </a>
     <button class="menu-toggle" aria-label="Toggle menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
     <nav class="nav-links" id="navlinks">
@@ -551,6 +551,8 @@
         <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">About <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
           <a href="/about">👨‍🏫 About Dr. E</a>
+          <a href="/nonprofit">🏛️ Mission &amp; Nonprofit</a>
+          <a href="/for-institutions">🤝 For Institutions</a>
           <a href="/speaking">🎤 Speaking</a>
           <a href="/press">📰 Press &amp; Media</a>
           <a href="/blog">✍️ Blog</a>
@@ -622,7 +624,7 @@
     <div class="reel-label">📱 Watch the Reel</div>
     <div class="reel-video-wrap">
       <iframe
-        src="https://www.youtube.com/embed/DGYCmaNBHj4"
+        src="https://www.youtube-nocookie.com/embed/DGYCmaNBHj4"
         title="Short reel from the SITE 2026 Philadelphia plenary"
         frameborder="0"
         allow="autoplay; encrypted-media; picture-in-picture"
@@ -753,7 +755,7 @@
     <div class="foot-bottom">
       © 2026 Numberbender · Founded by Dr. Peter Esperanza · <a href="/privacy" style="color:#94a3b8;">Privacy Policy</a>
       <div style="margin-top:8px;font-size:0.78rem;color:#94a3b8;">
-        <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener"><img src="https://licensebuttons.net/l/by/4.0/88x31.png" alt="CC BY 4.0" style="border:0;vertical-align:middle;margin-right:6px;"></a>
+        <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener"><img src="https://licensebuttons.net/l/by/4.0/88x31.png" alt="CC BY 4.0" style="border:0;vertical-align:middle;margin-right:6px;" loading="lazy"></a>
         Original content licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener" style="color:#94a3b8;">CC BY 4.0</a> &mdash; free to share and adapt with credit to Peter Esperanza / Numberbender.
       </div>
     </div>
@@ -881,5 +883,6 @@ function nbSubmit(){
   document.body.appendChild(s);
 }
 </script>
+<script src="/nb-search.js"></script>
 </body>
 </html>
