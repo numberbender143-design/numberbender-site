@@ -849,6 +849,24 @@
     50%{ box-shadow:0 4px 32px rgba(250,204,21,.85); }
   }
 
+  /* ========== TEST PREP FEATURE SECTION ========== */
+  .tp-feature{ padding: 80px 0; background: var(--bg); border-top: 1px solid var(--border); }
+  .tp-feature-inner{ display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+  .tp-feature-art{ position: relative; }
+  .tp-feature-art img{
+    width: 100%; max-width: 520px; height: auto;
+  }
+  .tp-feature-text h2{ font-size: 2rem; line-height: 1.25; margin-bottom: 16px; }
+  .tp-feature-text p{ color: var(--muted); font-size: 1rem; line-height: 1.7; margin-bottom: 20px; }
+  .tp-feature-list{ list-style: none; padding: 0; margin: 0 0 28px; display: flex; flex-direction: column; gap: 10px; }
+  .tp-feature-list li{ font-size: 0.95rem; color: var(--navy); font-weight: 500; display: flex; align-items: flex-start; gap: 8px; }
+  .tp-feature-note{ font-size: 0.8rem; color: var(--muted); margin-top: 12px; }
+  @media(max-width: 860px){
+    .tp-feature-inner{ grid-template-columns: 1fr; gap: 36px; }
+    .tp-feature-art{ display: flex; justify-content: center; }
+    .tp-feature-art img{ max-width: 400px; }
+  }
+
   /* ========== FEATURED COURSES ========== */
   .courses-dark{
     background: linear-gradient(135deg, #0f172a 0%, #0a2440 55%, #0a1628 100%) !important;
@@ -1102,6 +1120,7 @@
           <a href="/start-here">🎁 Free Starter Lesson</a>
           <a href="/find-your-course">🧭 Where Do I Start?</a>
           <a href="/courses">📚 Explore Math Lessons</a>
+          <a href="/subjects/test-prep">🎯 Test Prep Practice</a>
           <a href="/math-worksheets">📝 Free Worksheets</a>
           <a href="/for-filipino-students">🇵🇭 Para sa Filipino Students</a>
         </div>
@@ -1212,6 +1231,43 @@
           <img src="images/hero_image_worksheet_teacher.png" alt="Student with bilingual math worksheet and Dr. E with laptop showing Numberbender" loading="eager" fetchpriority="high">
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TEST PREP FEATURE ========== -->
+<section class="tp-feature">
+  <div class="container">
+    <div class="tp-feature-inner">
+
+      <!-- Left: Artwork -->
+      <div class="tp-feature-art">
+        <img src="/images/numberbender_hero_testPrep.png"
+             alt="Gamified test prep — earn badges, track streaks, practice math for LET, UPCAT, SAT and more"
+             width="512" height="512"
+             loading="lazy">
+      </div>
+
+      <!-- Right: Text -->
+      <div class="tp-feature-text">
+        <div class="section-eyebrow">🎯 Gamified Test Prep</div>
+        <h2>Practice for LET, UPCAT, SAT &amp; more — and earn badges along the way.</h2>
+        <p>
+          69 lessons across 5 units. Algebra, functions, number sense, statistics,
+          geometry, and quick drills — all in English and Filipino.
+          Every practice session you complete moves you forward on the
+          <strong>Numberbender Path</strong>.
+        </p>
+        <ul class="tp-feature-list">
+          <li>📊 Track your progress per unit</li>
+          <li>🔥 Build a daily practice streak</li>
+          <li>🏅 Unlock badges — from <em>The Path of Variables</em> to <em>Elemental Mathematics</em></li>
+          <li>⭐ Reach the <em>Numberbender State</em> with a perfect score</li>
+        </ul>
+        <a href="/subjects/test-prep" class="btn btn-primary">Start Test Prep Practice →</a>
+        <p class="tp-feature-note">Free. No login. Works on any device.</p>
+      </div>
+
     </div>
   </div>
 </section>

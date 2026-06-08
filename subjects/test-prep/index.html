@@ -139,12 +139,7 @@ h1{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:900;line-height:1.15;margin-bo
 .hero-artwork-wrap{
   flex-shrink:0;
   align-self:flex-end;
-  width:240px;
-  background:rgba(255,255,255,0.96);
-  border-radius:20px 20px 0 0;
-  padding:14px 14px 0;
-  overflow:hidden;
-  box-shadow:0 -4px 24px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.8);
+  width:280px;
 }
 .hero-artwork{width:100%;height:auto;display:block;}
 @media(max-width:760px){.hero-artwork-wrap{display:none;}}
@@ -293,7 +288,7 @@ h1{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:900;line-height:1.15;margin-bo
         </div>
       </div><!-- /hero-content -->
       <div class="hero-artwork-wrap">
-        <img class="hero-artwork" src="../../images/worksheet_page_artworks/15_test_prep.png" alt="" aria-hidden="true">
+        <img class="hero-artwork" src="../../images/numberbender_hero_testPrep.png" alt="Gamified test prep — earn badges and track your progress" loading="eager">
       </div>
     </div>
   </div>
@@ -1655,6 +1650,340 @@ pracModal.addEventListener('click', function(e) {
 document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape' && pracModal.classList.contains('open')) closePractice();
 });
+
+// ── GAMIFICATION ────────────────────────────────────────────────────────────
+(function(){
+  var STORE_SCORES  = 'nb_tp_scores';   // { videoId: {score,total,best} }
+  var STORE_STREAK  = 'nb_tp_streak';   // { count, lastDate }
+  var STORE_BADGES  = 'nb_tp_badges';   // ['unit-1','perfect','streak-3',...]
+
+  // Unit lesson counts
+  var UNITS = {
+    'unit-1': { name:'Algebra & Linear Equations',        total:13 },
+    'unit-2': { name:'Functions, Quadratics & Sequences', total:12 },
+    'unit-3': { name:'Number Sense, Radicals & Exponents',total:12 },
+    'unit-4': { name:'Statistics, Geometry & Word Problems', total:16 },
+    'unit-5': { name:'Quick Drills — Math in a Minute',   total:16 }
+  };
+
+  var BADGE_DEFS = [
+    { id:'unit-1',   emoji:'🌬️', img:'/images/badges_test_prep/path_of_variables.png',    label:'The Path of Variables',    desc:'Variables bend to your will. The algebraic journey begins.' },
+    { id:'unit-2',   emoji:'🌊', img:'/images/badges_test_prep/harmony_of_functions.png',  label:'Harmony of Functions',      desc:'You move with functions like water — fluid, precise, and powerful.' },
+    { id:'unit-3',   emoji:'🪨', img:'/images/badges_test_prep/four_foundations.png',      label:'The Four Foundations',      desc:'Grounded in the fundamentals. Every element of math starts here.' },
+    { id:'unit-4',   emoji:'🔥', img:'/images/badges_test_prep/data_harmony.png',          label:'Data Harmony',              desc:'You read patterns in chaos. Order lives inside the numbers.' },
+    { id:'unit-5',   emoji:'⚡', img:'/images/badges_test_prep/mastery_trials.png',        label:'The Mastery Trials',        desc:'You faced the drills and did not flinch. Trial complete.' },
+    { id:'perfect',  emoji:'⭐', img:'/images/badges_test_prep/numberbender_state.png',    label:'Numberbender State',        desc:'Peak focus. Peak power. You entered the Numberbender State.' },
+    { id:'streak-3', emoji:'🌀', img:'/images/badges_test_prep/the_unknown_quest.png',     label:'The Unknown Quest',         desc:'1, 1, 2, 3… Three days in. The path ahead reveals itself.' },
+    { id:'streak-7', emoji:'🪷', img:'/images/badges_test_prep/convergence_academy.png',   label:'Convergence Academy',       desc:'Seven days. You are converging on mastery. Keep going.' },
+    { id:'all-done', emoji:'🌀', img:'/images/badges_test_prep/elemental_math.png',        label:'Elemental Mathematics',     desc:'Earth. Water. Fire. Air. Numbers. All elements mastered.' }
+  ];
+
+  /* ── Storage helpers ── */
+  function loadScores(){ try{ return JSON.parse(localStorage.getItem(STORE_SCORES)||'{}'); }catch(e){ return {}; } }
+  function saveScores(d){ localStorage.setItem(STORE_SCORES, JSON.stringify(d)); }
+  function loadStreak(){ try{ return JSON.parse(localStorage.getItem(STORE_STREAK)||'{"count":0,"lastDate":""}'); }catch(e){ return {count:0,lastDate:''}; } }
+  function saveStreak(d){ localStorage.setItem(STORE_STREAK, JSON.stringify(d)); }
+  function loadBadges(){ try{ return JSON.parse(localStorage.getItem(STORE_BADGES)||'[]'); }catch(e){ return []; } }
+  function saveBadges(d){ localStorage.setItem(STORE_BADGES, JSON.stringify(d)); }
+  function today(){ return new Date().toISOString().slice(0,10); }
+
+  /* ── Streak update ── */
+  function updateStreak(){
+    var s = loadStreak();
+    var t = today();
+    if(s.lastDate === t) return s.count; // already practiced today
+    var yesterday = new Date(); yesterday.setDate(yesterday.getDate()-1);
+    var yStr = yesterday.toISOString().slice(0,10);
+    s.count = (s.lastDate === yStr) ? s.count + 1 : 1;
+    s.lastDate = t;
+    saveStreak(s);
+    return s.count;
+  }
+
+  /* ── Save a completed practice ── */
+  function recordScore(videoId, score, total){
+    var d = loadScores();
+    var prev = d[videoId] || {score:0, total:total, best:0, attempts:0};
+    d[videoId] = {
+      score: score,
+      total: total,
+      best:  Math.max(prev.best, score),
+      attempts: prev.attempts + 1
+    };
+    saveScores(d);
+
+    var streak = updateStreak();
+    checkBadges(videoId, score, total, streak);
+    refreshUI(videoId);
+  }
+
+  /* ── Badge logic ── */
+  function checkBadges(videoId, score, total, streak){
+    var badges = loadBadges();
+    var scores = loadScores();
+    var changed = false;
+
+    function earn(id){
+      if(badges.indexOf(id)===-1){ badges.push(id); changed=true; showBadgeToast(id); }
+    }
+
+    // Perfect score
+    if(score === total && total > 0) earn('perfect');
+
+    // Streak badges
+    if(streak >= 7) earn('streak-7');
+    else if(streak >= 3) earn('streak-3');
+
+    // Unit completion — check if all lessons in each unit have been practiced
+    Object.keys(UNITS).forEach(function(unitId){
+      var lessons = document.querySelectorAll('#'+unitId+' .lesson-item');
+      var allDone = lessons.length > 0 && Array.from(lessons).every(function(l){
+        return !!scores[l.dataset.videoId];
+      });
+      if(allDone) earn(unitId);
+    });
+
+    // All done
+    var allLessons = document.querySelectorAll('.lesson-item');
+    var allPracticed = Array.from(allLessons).every(function(l){ return !!scores[l.dataset.videoId]; });
+    if(allPracticed) earn('all-done');
+
+    if(changed) saveBadges(badges);
+  }
+
+  /* ── Badge toast notification ── */
+  function showBadgeToast(badgeId){
+    var def = BADGE_DEFS.find(function(b){ return b.id===badgeId; });
+    if(!def) return;
+    var toast = document.createElement('div');
+    toast.className = 'nb-badge-toast';
+    toast.innerHTML = '<img src="'+def.img+'" alt="" width="40" height="40" style="object-fit:contain;flex-shrink:0;"><div><strong>Badge Unlocked!</strong><br>'+def.label+'</div>';
+    document.body.appendChild(toast);
+    setTimeout(function(){ toast.classList.add('show'); }, 50);
+    setTimeout(function(){ toast.classList.remove('show'); setTimeout(function(){ toast.remove(); }, 400); }, 3500);
+  }
+
+  /* ── Refresh lesson checkmark ── */
+  function refreshUI(videoId){
+    var scores = loadScores();
+    // Checkmark on lesson row
+    document.querySelectorAll('.lesson-item').forEach(function(item){
+      var vid = item.dataset.videoId;
+      if(!vid) return;
+      var numEl = item.querySelector('.lesson-num');
+      if(!numEl) return;
+      if(scores[vid]){
+        numEl.classList.add('done');
+        var best = scores[vid].best;
+        var total = scores[vid].total;
+        numEl.setAttribute('title','Best: '+best+'/'+total);
+      }
+    });
+    // Unit progress bars
+    document.querySelectorAll('.unit-block').forEach(function(unit){
+      var lessons = unit.querySelectorAll('.lesson-item');
+      var done = Array.from(lessons).filter(function(l){ return !!scores[l.dataset.videoId]; }).length;
+      var bar = unit.querySelector('.nb-unit-progress');
+      var label = unit.querySelector('.nb-unit-prog-label');
+      if(bar){
+        bar.style.width = (lessons.length ? Math.round((done/lessons.length)*100) : 0)+'%';
+      }
+      if(label){
+        label.textContent = done+'/'+lessons.length+' practiced';
+        if(done === lessons.length && lessons.length > 0) label.textContent += ' ✅';
+      }
+    });
+    // Hero streak
+    var streak = loadStreak();
+    var streakEl = document.getElementById('nb-streak-val');
+    if(streakEl) streakEl.textContent = streak.count > 0 ? streak.count+'🔥' : '—';
+    // Badges panel
+    renderBadgesPanel();
+  }
+
+  /* ── Inject CSS ── */
+  var css = [
+    /* lesson done checkmark */
+    '.lesson-num.done{background:var(--green)!important;color:white!important;border-color:var(--green)!important;}',
+    '.lesson-num.done::after{content:"✓";font-size:0.75rem;}',
+    /* unit progress bar */
+    '.nb-unit-prog-wrap{padding:0 20px 14px;display:flex;align-items:center;gap:10px;}',
+    '.nb-unit-prog-track{flex:1;height:6px;background:#e2e8f0;border-radius:999px;overflow:hidden;}',
+    '.nb-unit-progress{height:100%;background:var(--green);border-radius:999px;width:0;transition:width .4s ease;}',
+    '.nb-unit-prog-label{font-size:0.72rem;font-weight:600;color:var(--muted);white-space:nowrap;min-width:80px;text-align:right;}',
+    /* score best label */
+    '.prac-score-best{font-size:0.8rem;color:var(--muted);margin-top:-4px;}',
+    /* badge toast */
+    '.nb-badge-toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(20px);background:#0f172a;color:white;padding:12px 18px;border-radius:14px;display:flex;align-items:center;gap:12px;font-size:0.9rem;box-shadow:0 8px 24px rgba(0,0,0,.25);opacity:0;transition:opacity .3s,transform .3s;z-index:9999;pointer-events:none;}',
+    '.nb-badge-toast.show{opacity:1;transform:translateX(-50%) translateY(0);}',
+    '.nb-toast-emoji{font-size:1.8rem;flex-shrink:0;}',
+    /* badges panel */
+    /* badges panel */
+    '.nb-badges-panel{padding:24px 0 8px;}',
+    '.nb-journey-card{background:linear-gradient(135deg,#0f172a 0%,#1e3a5f 100%);border-radius:18px;padding:28px 32px;margin-bottom:20px;color:white;position:relative;overflow:hidden;}',
+    '.nb-journey-card::before{content:"";position:absolute;top:-40px;right:-40px;width:180px;height:180px;background:radial-gradient(circle,rgba(250,204,21,.12) 0%,transparent 70%);pointer-events:none;}',
+    '.nb-journey-eyebrow{font-size:0.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#facc15;margin-bottom:10px;}',
+    '.nb-journey-title{font-size:1.25rem;font-weight:800;line-height:1.3;margin-bottom:16px;color:white;}',
+    '.nb-journey-story{font-size:0.9rem;line-height:1.75;color:#cbd5e1;margin-bottom:18px;}',
+    '.nb-journey-story em{color:#facc15;font-style:normal;font-weight:600;}',
+    '.nb-journey-toggle{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.15);color:white;font-size:0.8rem;font-weight:600;padding:7px 14px;border-radius:999px;cursor:pointer;transition:background .2s;}',
+    '.nb-journey-toggle:hover{background:rgba(255,255,255,.18);}',
+    '.nb-journey-toggle .arrow{transition:transform .3s;display:inline-block;}',
+    '.nb-journey-toggle.open .arrow{transform:rotate(180deg);}',
+    '.nb-badge-grid{display:none;margin-top:20px;border-top:1px solid rgba(255,255,255,.1);padding-top:20px;}',
+    '.nb-badge-grid.open{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;}',
+    '@media(max-width:700px){.nb-badge-grid.open{grid-template-columns:1fr 1fr;}}',
+    '@media(max-width:480px){.nb-badge-grid.open{grid-template-columns:1fr;}}',
+    '.nb-badge-card{background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.1);border-radius:12px;padding:12px 14px;display:flex;align-items:flex-start;gap:12px;}',
+    '.nb-badge-card.earned{background:rgba(250,204,21,.12);border-color:rgba(250,204,21,.4);}',
+    '.nb-badge-icon{width:48px;height:48px;flex-shrink:0;display:flex;align-items:center;justify-content:center;}',
+    '.nb-badge-icon img{width:48px;height:48px;object-fit:contain;filter:grayscale(1) opacity(.35);}',
+    '.nb-badge-card.earned .nb-badge-icon img{filter:none;}',
+    '.nb-badge-info{}',
+    '.nb-badge-name{font-size:0.82rem;font-weight:700;color:white;margin-bottom:2px;}',
+    '.nb-badge-card.earned .nb-badge-name{color:#facc15;}',
+    '.nb-badge-how{font-size:0.74rem;color:#94a3b8;line-height:1.4;}',
+    '.nb-badge-card.earned .nb-badge-how{color:#cbd5e1;}',
+    '.nb-badge-lock{font-size:0.65rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#475569;margin-top:4px;}',
+    '.nb-badge-card.earned .nb-badge-lock{color:#fde047;}',
+    /* chips row (below the card) */
+    '.nb-badges-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px;}',
+    '.nb-badge-chip{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:999px;font-size:0.78rem;font-weight:600;background:#f1f5f9;border:1.5px solid #e2e8f0;color:#64748b;}',
+    '.nb-badge-chip.earned{background:#fef9c3;border-color:#fde047;color:#854d0e;}',
+    '.nb-badges-label{font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:8px;}',
+  ].join('');
+  var styleEl = document.createElement('style');
+  styleEl.textContent = css;
+  document.head.appendChild(styleEl);
+
+  /* ── Inject unit progress bars into DOM ── */
+  document.querySelectorAll('.unit-block').forEach(function(unit){
+    var lessonsDiv = unit.querySelector('.unit-lessons');
+    if(!lessonsDiv) return;
+    var wrap = document.createElement('div');
+    wrap.className = 'nb-unit-prog-wrap';
+    wrap.innerHTML = '<div class="nb-unit-prog-track"><div class="nb-unit-progress"></div></div><span class="nb-unit-prog-label">0/0 practiced</span>';
+    lessonsDiv.insertBefore(wrap, lessonsDiv.firstChild);
+  });
+
+  /* ── Inject streak stat in hero ── */
+  var heroStats = document.querySelector('.hero-stats');
+  if(heroStats){
+    var streakStat = document.createElement('div');
+    streakStat.className = 'hstat';
+    streakStat.innerHTML = '<span class="n" id="nb-streak-val">—</span><span class="l">day streak</span>';
+    heroStats.appendChild(streakStat);
+  }
+
+  /* ── Inject badges panel below search ── */
+  /* Badge unlock conditions — shown in the grid */
+  var BADGE_HOW = {
+    'unit-1':   'Complete all 13 lessons in Unit 1 — Algebra & Linear Equations',
+    'unit-2':   'Complete all 12 lessons in Unit 2 — Functions, Quadratics & Sequences',
+    'unit-3':   'Complete all 12 lessons in Unit 3 — Number Sense, Radicals & Exponents',
+    'unit-4':   'Complete all lessons in Unit 4 — Statistics, Geometry & Word Problems',
+    'unit-5':   'Complete all Quick Drills in Unit 5 — Math in a Minute',
+    'perfect':  'Score 3 out of 3 on any practice set',
+    'streak-3': 'Practice on 3 consecutive days',
+    'streak-7': 'Practice on 7 consecutive days',
+    'all-done': 'Practice every lesson across all 5 units'
+  };
+
+  var searchWrap = document.querySelector('.search-wrap');
+  if(searchWrap){
+    var panel = document.createElement('div');
+    panel.className = 'nb-badges-panel';
+    panel.id = 'nb-badges-panel';
+    panel.innerHTML =
+      '<div class="nb-journey-card">' +
+        '<div class="nb-journey-eyebrow">🌀 Your Numberbender Journey</div>' +
+        '<div class="nb-journey-title">Every practice session moves you forward.</div>' +
+        '<div class="nb-journey-story">' +
+          'Every student who walks the Numberbender path earns their badges through <em>practice — not perfection.</em> ' +
+          'Each unit you complete, each streak you build, each perfect score you reach unlocks a piece of your identity as a mathematical thinker.<br><br>' +
+          'The rarest badge? <em>Numberbender State</em> — awarded only when you achieve a perfect score. ' +
+          'The final badge, <em>Elemental Mathematics</em>, is earned when you have touched every lesson across all five units.<br><br>' +
+          'Your journey starts with one practice session. <em>Begin.</em>' +
+        '</div>' +
+        '<button class="nb-journey-toggle" id="nb-journey-toggle" onclick="nbToggleBadgeGrid()">🏅 See all badges <span class="arrow">▾</span></button>' +
+        '<div class="nb-badge-grid" id="nb-badge-grid"></div>' +
+      '</div>' +
+      '<div class="nb-badges-label">🏅 Your Badges</div>' +
+      '<div class="nb-badges-row" id="nb-badges-row"></div>';
+    searchWrap.parentNode.insertBefore(panel, searchWrap.nextSibling);
+  }
+
+  window.nbToggleBadgeGrid = function(){
+    var btn = document.getElementById('nb-journey-toggle');
+    var grid = document.getElementById('nb-badge-grid');
+    if(!btn || !grid) return;
+    var isOpen = grid.classList.toggle('open');
+    btn.classList.toggle('open', isOpen);
+  };
+
+  function renderBadgesPanel(){
+    /* chips row */
+    var row = document.getElementById('nb-badges-row');
+    var grid = document.getElementById('nb-badge-grid');
+    var earned = loadBadges();
+
+    if(row){
+      row.innerHTML = BADGE_DEFS.map(function(b){
+        var isEarned = earned.indexOf(b.id) !== -1;
+        var icon = isEarned
+          ? '<img src="'+b.img+'" alt="" width="18" height="18" style="object-fit:contain;vertical-align:middle;">'
+          : '🔒';
+        return '<div class="nb-badge-chip'+(isEarned?' earned':'')+'" title="'+b.desc+'">'+icon+' '+b.label+'</div>';
+      }).join('');
+    }
+
+    if(grid){
+      grid.innerHTML = BADGE_DEFS.map(function(b){
+        var isEarned = earned.indexOf(b.id) !== -1;
+        return '<div class="nb-badge-card'+(isEarned?' earned':'')+'">' +
+          '<div class="nb-badge-icon"><img src="'+b.img+'" alt="'+b.label+'" width="48" height="48"></div>' +
+          '<div class="nb-badge-info">' +
+            '<div class="nb-badge-name">'+b.label+'</div>' +
+            '<div class="nb-badge-how">'+(BADGE_HOW[b.id]||b.desc)+'</div>' +
+            '<div class="nb-badge-lock">'+(isEarned ? '✅ Unlocked' : '🔒 Locked')+'</div>' +
+          '</div>' +
+        '</div>';
+      }).join('');
+    }
+  }
+
+  /* ── Add "Best: X/3" to score screen ── */
+  var origShowScore = showScore;
+  showScore = function(){
+    origShowScore();
+    // Save score
+    if(window._pracVideoId){
+      recordScore(window._pracVideoId, currentScore, currentQs.length);
+    }
+    // Show best score
+    var scores = loadScores();
+    var existing = window._pracVideoId ? scores[window._pracVideoId] : null;
+    var bestEl = document.getElementById('nb-prac-best');
+    if(!bestEl){
+      bestEl = document.createElement('div');
+      bestEl.id = 'nb-prac-best';
+      bestEl.className = 'prac-score-best';
+      pracSCircle.parentNode.insertBefore(bestEl, pracSCircle.nextSibling);
+    }
+    bestEl.textContent = existing && existing.attempts > 1 ? 'Personal best: '+existing.best+'/'+existing.total : '';
+  };
+
+  /* ── Intercept openPractice to capture videoId ── */
+  var origOpenPractice = openPractice;
+  openPractice = function(videoId, title){
+    window._pracVideoId = videoId;
+    origOpenPractice(videoId, title);
+  };
+
+  /* ── Init on load ── */
+  refreshUI(null);
+
+})();
 
 // ── LESSON ITEM CLICK ──
 document.querySelectorAll('.lesson-item').forEach(function(item) {
