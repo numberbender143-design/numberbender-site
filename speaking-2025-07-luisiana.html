@@ -63,6 +63,7 @@
   .nav-links{ display:flex; gap: 22px; align-items:center; }
   .nav-links a{ color: var(--navy); font-weight: 500; font-size: 0.95rem; }
   .nav-links a:hover{ color: var(--blue); text-decoration: none; }
+  .nav-links a:focus-visible, .nav-dropdown .dropdown-trigger:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; border-radius: 4px; }
   .nav-cta{ background: var(--navy); color: white !important; padding: 9px 16px; border-radius: 10px; font-weight: 600; }
   .nav-cta:hover{ background: var(--blue); text-decoration: none; }
   .menu-toggle{ display:none; background:none; border:none; cursor:pointer; font-size: 1.4rem; color: var(--navy); }
@@ -511,7 +512,7 @@
     <a href="/" class="logo logo-lockup" aria-label="Numberbender — Home">
       <img src="images/numberbender_banner_only.svg" alt="Numberbender" class="lockup-img" loading="lazy">
     </a>
-    <button class="menu-toggle" aria-label="Toggle menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" onclick="var exp=this.getAttribute('aria-expanded')==='false';this.setAttribute('aria-expanded',exp?'true':'false');document.getElementById('navlinks').classList.toggle('open')">☰</button>
     <nav class="nav-links" id="navlinks">
       <div class="nav-dropdown">
         <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Learn <span class="caret" aria-hidden="true">▾</span></button>
@@ -535,7 +536,13 @@
           <a href="/courses">📚 Lesson &amp; Course Library</a>
         </div>
       </div>
-      <a href="/math-ccc" class="nav-mathccc" style="color:var(--blue);font-weight:600">Math CCC</a>
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger nav-mathccc" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Math CCC <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="/math-ccc">📚 Browse All Courses</a>
+          <a href="/ab1705-corequisite-math">🧭 AB 1705 Corequisite Support</a>
+        </div>
+      </div>
       <div class="nav-dropdown">
         <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">About <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
@@ -783,6 +790,15 @@
         if (t) t.setAttribute('aria-expanded','false');
       });
     }
+  });
+  // Close mobile menu when a nav link is clicked
+  document.querySelectorAll('#navlinks a').forEach(function(a){
+    a.addEventListener('click', function(){
+      var nav = document.getElementById('navlinks');
+      var btn = document.querySelector('.menu-toggle');
+      if(nav){ nav.classList.remove('open'); }
+      if(btn){ btn.setAttribute('aria-expanded','false'); }
+    });
   });
 
   // Luisiana photo carousel
