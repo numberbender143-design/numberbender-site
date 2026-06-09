@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P1M2WZD840"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P1M2WZD840');
+</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>DepEd Math — MATATAG &amp; Strengthened SHS, Free &amp; Bilingual | Numberbender</title>
+<meta name="description" content="Free bilingual math aligned to the DepEd 2026 curriculum — MATATAG for Grades 7–10 and the Strengthened Senior High School program for Grades 11–12. English &amp; Filipino video lessons. No login, no paywall." />
+<link rel="canonical" href="https://numberbender.com/deped" />
+<!-- Bilingual content is inline (EN + FIL on one URL); hreflang not used intentionally. -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="DepEd Math — MATATAG &amp; Strengthened SHS | Numberbender" />
+<meta property="og:description" content="Free bilingual math aligned to the DepEd 2026 curriculum. MATATAG (Grades 7–10) and Strengthened SHS (Grades 11–12). English &amp; Filipino. No login, no paywall." />
+<meta property="og:url" content="https://numberbender.com/deped" />
+<meta property="og:site_name" content="Numberbender" />
+<meta property="og:image" content="https://numberbender.com/images/filipino_math_hero_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@numberbender" />
+<meta name="twitter:title" content="DepEd Math — MATATAG &amp; Strengthened SHS | Numberbender" />
+<meta name="twitter:description" content="Free bilingual math aligned to the DepEd 2026 curriculum — Grades 7 to 12, English and Filipino. No login, no paywall." />
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="../images/exports/numberbender-favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../images/exports/png/favicon-32.png">
+<link rel="icon" type="image/png" sizes="180x180" href="../images/exports/png/favicon-180.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../images/exports/png/favicon-180.png">
+<meta name="theme-color" content="#3730A3">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "DepEd Math — MATATAG & Strengthened SHS | Numberbender",
+  "url": "https://numberbender.com/deped",
+  "description": "Free bilingual math video lessons aligned to the DepEd 2026 curriculum: MATATAG for Grades 7–10 and the Strengthened Senior High School program for Grades 11–12. English and Filipino.",
+  "inLanguage": ["en", "tl"],
+  "isPartOf": { "@type": "WebSite", "name": "Numberbender", "url": "https://numberbender.com" },
+  "publisher": { "@type": "Person", "@id": "https://numberbender.com/about#dr-e", "name": "Dr. Peter Esperanza" },
+  "audience": { "@type": "EducationalAudience", "educationalRole": "student" }
+}
+</script>
+<style>
+  :root{
+    --navy:#0F172A;
+    --blue:#2563EB;
+    --yellow:#FACC15;
+    --cyan:#06B6D4;
+    --green:#22C55E;
+    --bg:#F8FAFC;
+    --surface:#FFFFFF;
+    --muted:#64748B;
+    --border:#E2E8F0;
+    --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+    --shadow-lg: 0 20px 50px rgba(15, 23, 42, 0.12);
+    --radius: 16px;
+  }
+
+  *{ box-sizing: border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; }
+  body{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--navy);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a{ color: var(--blue); text-decoration:none; }
+  a:hover{ text-decoration: underline; }
+  img{ max-width:100%; display:block; }
+
+  .container{ width: min(1200px, 92%); margin-inline: auto; }
+
+  /* ========== NAVIGATION ========== */
+  .nav{ position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,0.92); backdrop-filter: saturate(180%) blur(10px); border-bottom: 1px solid var(--border); }
+  .nav-inner{ display:flex; align-items:center; justify-content:space-between; padding: 14px 0; }
+  .logo{ display:flex; align-items:center; gap:10px; font-weight: 800; font-size: 1.15rem; color: var(--navy); }
+  .logo-mark{ width: 56px; height: 56px; border-radius: 12px; background: transparent; display: grid; place-items: center; color: white; font-weight: 800; font-size: 1rem; overflow: hidden; }
+  .nav-links{ display:flex; gap: 22px; align-items:center; }
+  .nav-links a{ color: var(--navy); font-weight: 500; font-size: 0.95rem; }
+  .nav-links a:hover{ color: var(--blue); text-decoration: none; }
+  .nav-links a:focus-visible, .nav-dropdown .dropdown-trigger:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; border-radius: 4px; }
+  .nav-cta{ background: var(--navy); color: white !important; padding: 9px 16px; border-radius: 10px; font-weight: 600; }
+  .nav-cta:hover{ background: var(--blue); text-decoration: none; }
+  .menu-toggle{ display:none; background:none; border:none; cursor:pointer; font-size: 1.4rem; color: var(--navy); }
+
+  /* ========== DROPDOWN NAV ========== */
+  .nav-links{ flex-wrap: nowrap; }
+  .nav-links a, .nav-links .dropdown-trigger{ white-space: nowrap; }
+  .nav-dropdown{ position: relative; }
+  .nav-dropdown .dropdown-trigger{ background: none; border: none; padding: 0; margin: 0; font: inherit; color: var(--navy); font-weight: 500; font-size: 0.95rem; cursor: pointer; display: inline-flex; align-items: center; gap: 4px; transition: color .15s ease; }
+  .nav-dropdown .dropdown-trigger:hover{ color: var(--blue); }
+  .nav-dropdown .caret{ font-size: 0.75em; display: inline-block; transition: transform .2s ease; }
+  .nav-dropdown:hover .caret, .nav-dropdown .dropdown-trigger[aria-expanded="true"] .caret{ transform: rotate(180deg); }
+  .nav-dropdown .dropdown-menu{ position: absolute; top: 100%; left: 0; margin-top: 10px; background: white; border: 1px solid var(--border); border-radius: 14px; padding: 6px; box-shadow: 0 20px 50px rgba(15, 23, 42, 0.12); min-width: 240px; opacity: 0; visibility: hidden; transform: translateY(-6px); transition: opacity .15s ease, transform .15s ease, visibility .15s ease; z-index: 100; }
+  .nav-dropdown .dropdown-menu::before{ content: ''; position: absolute; top: -10px; left: 0; right: 0; height: 10px; }
+  .nav-dropdown:hover .dropdown-menu, .nav-dropdown .dropdown-menu.open{ opacity: 1; visibility: visible; transform: translateY(0); }
+  .nav-dropdown .dropdown-menu a{ display: block; padding: 10px 14px; border-radius: 8px; color: var(--navy); font-weight: 500; font-size: 0.95rem; }
+  .nav-dropdown .dropdown-menu a:hover{ background: rgba(37,99,235,.08); color: var(--blue); text-decoration: none; }
+  .dd-label{ font-size:.7rem; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); padding:10px 14px 4px; }
+  @media (max-width: 900px){
+    .nav-dropdown{ width: 100%; }
+    .nav-dropdown .dropdown-trigger{ width: 100%; justify-content: space-between; padding: 6px 0; }
+    .nav-dropdown .dropdown-menu{ position: static; box-shadow: none; border: none; padding: 0 0 4px 14px; margin-top: 0; min-width: 0; opacity: 1; visibility: visible; transform: none; display: none; background: transparent; }
+    .nav-dropdown:hover .dropdown-menu{ display: none; }
+    .nav-dropdown .dropdown-menu.open{ display: block; }
+  }
+
+  /* ========== BUTTONS ========== */
+  .btn{ display:inline-flex; align-items:center; justify-content:center; gap:8px; padding: 13px 22px; border-radius: 12px; font-weight: 600; font-size: 1rem; cursor: pointer; border: 2px solid transparent; transition: transform .15s ease, box-shadow .15s ease, background .15s ease; text-decoration: none !important; }
+  .btn:hover{ transform: translateY(-2px); box-shadow: var(--shadow); }
+  .btn-primary{ background: #3730A3; color: white; }
+  .btn-primary:hover{ background: #312e81; }
+  .btn-yellow{ background: var(--yellow); color: var(--navy); }
+  .btn-yellow:hover{ background: #eab308; }
+  .btn-outline{ background: transparent; color: var(--navy); border: 2px solid var(--border); }
+  .btn-outline:hover{ border-color: var(--blue); color: var(--blue); }
+  .btn-lg{ padding: 16px 28px; font-size: 1.05rem; }
+
+  /* ========== HERO (dark gradient) ========== */
+  .hero{ position: relative; padding: 72px 0 0; overflow: hidden;
+    background: radial-gradient(900px 600px at 100% -20%, rgba(245,158,11,0.18), transparent 60%), radial-gradient(800px 500px at -10% 80%, rgba(99,102,241,0.30), transparent 60%), linear-gradient(150deg, #1e1b4b 0%, #3730A3 55%, #312e81 100%); }
+  .hero-inner{ text-align:center; max-width: 860px; margin: 0 auto; padding-bottom: 8px; }
+  .hero-eyebrow{ display:inline-flex; align-items:center; gap:8px; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.22); color: rgba(255,255,255,0.92); padding: 6px 14px; border-radius: 999px; font-size: 0.85rem; font-weight: 600; margin-bottom: 18px; }
+  .hero h1{ font-size: clamp(2.2rem, 4.5vw, 3.6rem); line-height: 1.06; letter-spacing: -0.025em; font-weight: 800; margin-bottom: 16px; color:white; }
+  .hero h1 .accent-cyan{ color:#FCD34D; }
+  .hero p.subhead{ font-size: 1.12rem; color: rgba(255,255,255,0.82); margin: 0 auto 6px; line-height: 1.55; max-width: 680px; }
+  .hero p.subhead-fil{ font-size: 1rem; color: rgba(255,255,255,0.6); margin: 0 auto 24px; line-height: 1.55; font-style: italic; max-width: 680px; }
+  .hero-ctas{ display:flex; flex-wrap:wrap; gap: 14px; justify-content:center; margin-bottom: 4px; }
+  .hero-stats{ display:flex; flex-wrap:wrap; gap: 0; border-top: 1px solid rgba(255,255,255,0.15); padding: 28px 0; justify-content: center; margin-top: 36px; }
+  .stat{ display:flex; flex-direction:column; align-items: center; text-align: center; padding: 0 22px; border-right: 1px solid rgba(255,255,255,0.15); }
+  .stat:last-child{ border-right: none; }
+  .stat-num{ font-weight: 800; font-size: 1.7rem; color: white; }
+  .stat-label{ font-size: 0.82rem; color: rgba(255,255,255,0.6); margin-top: 2px; }
+
+  /* ========== LANGUAGE TOGGLE ========== */
+  .lang-toggle{ display:inline-flex; border:1px solid rgba(255,255,255,0.32); border-radius:999px; overflow:hidden; background:rgba(255,255,255,0.1); margin-bottom: 22px; }
+  .lang-btn{ padding:7px 20px; border:none; background:transparent; font-weight:700; cursor:pointer; color:rgba(255,255,255,0.7); font-size:.88rem; transition: background .15s, color .15s; }
+  .lang-btn[aria-pressed="true"]{ background:#fff; color:#0d3b5e; }
+  .lang-toggle.on-light{ border-color: var(--border); background:#fff; }
+  .lang-toggle.on-light .lang-btn{ color: var(--muted); }
+  .lang-toggle.on-light .lang-btn[aria-pressed="true"]{ background:#3730A3; color:#fff; }
+
+  /* ========== SECTION BASE ========== */
+  section{ padding: 72px 0; }
+  .section-head{ text-align: center; max-width: 760px; margin: 0 auto 44px; }
+  .section-eyebrow{ text-transform: uppercase; letter-spacing: .12em; font-size: 0.8rem; font-weight: 700; color: #3730A3; margin-bottom: 12px; }
+  .section-head h2{ font-size: clamp(1.8rem, 3.2vw, 2.4rem); line-height: 1.2; letter-spacing: -0.01em; margin-bottom: 12px; }
+  .section-head p{ color: var(--muted); font-size: 1.06rem; }
+  .section-head p.fil{ font-style: italic; font-size: .98rem; margin-top: 4px; }
+
+  /* ========== GRADE GRID ========== */
+  .grade-grid{ display:grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+  .grade-card{ background: var(--surface); border:1px solid var(--border); border-radius: var(--radius); padding: 24px 22px; transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; display:flex; flex-direction:column; text-decoration:none !important; color:var(--navy); }
+  .grade-card:hover h3{ color:#3730A3; }
+  .grade-card:hover{ transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color:#3730A3; }
+  .grade-badge{ display:inline-flex; align-items:center; justify-content:center; width:48px; height:48px; border-radius:12px; background:linear-gradient(135deg,#3730A3,#6366F1); color:#fff; font-weight:800; font-size:1.25rem; margin-bottom:14px; }
+  .grade-card h3{ font-size:1.12rem; margin-bottom:2px; }
+  .grade-card .subj-fil{ font-size:.82rem; color:var(--muted); font-style:italic; margin-bottom:14px; }
+  .grade-card .domain{ font-size:.85rem; color:var(--navy); padding:7px 0; border-top:1px dashed var(--border); }
+  .grade-card .domain a{ color:var(--navy); font-weight:600; }
+  .grade-card .domain a:hover{ color:#3730A3; text-decoration:none; }
+  .grade-card .domain .tag-cov{ font-size:.68rem; font-weight:700; color:#059669; }
+  .grade-card .domain .tag-soon{ font-size:.68rem; font-weight:700; color:var(--muted); }
+
+  /* ========== SHS GRID ========== */
+  .shs-grid{ display:grid; grid-template-columns: repeat(4, 1fr); gap:18px; }
+  .shs-card{ display:flex; flex-direction:column; background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:24px 20px; text-decoration:none !important; color:var(--navy); transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+  .shs-card:hover{ transform:translateY(-4px); box-shadow:var(--shadow); border-color:#3730A3; }
+  .shs-card .s-ico{ font-size:1.9rem; margin-bottom:10px; }
+  .shs-card h4{ font-size:1rem; font-weight:700; margin-bottom:4px; }
+  .shs-card .s-fil{ font-size:.8rem; color:var(--muted); font-style:italic; }
+  .shs-card .s-cov{ margin-top:auto; padding-top:12px; font-size:.74rem; font-weight:700; color:#059669; }
+
+  /* ========== CALLOUT ========== */
+  .callout{ background:#fff; border:1px solid var(--border); border-left:5px solid #F59E0B; border-radius:12px; padding:18px 22px; margin: 26px auto 0; max-width:860px; font-size:.95rem; color:var(--muted); }
+  .callout strong{ color:var(--navy); }
+
+  /* ========== TEACHER BAND ========== */
+  .teach-band{ background:var(--surface); border:1px solid var(--border); border-radius:20px; padding:36px; display:grid; grid-template-columns:1fr auto; gap:24px; align-items:center; }
+  .teach-band h3{ font-size:1.3rem; margin-bottom:6px; }
+  .teach-band p{ color:var(--muted); font-size:.98rem; }
+  .teach-actions{ display:flex; gap:12px; flex-wrap:wrap; }
+  .for-teachers-badge{ display:inline-flex; align-items:center; gap:6px; background:rgba(34,197,94,.12); color:#15803d; font-weight:700; font-size:.75rem; padding:4px 10px; border-radius:999px; margin-bottom:10px; }
+  .share-btn{ background:transparent; border:2px solid var(--border); color:var(--navy); border-radius:12px; padding:13px 20px; font-weight:600; cursor:pointer; font-size:1rem; transition:border-color .15s, color .15s; }
+  .share-btn:hover{ border-color:#3730A3; color:#3730A3; }
+
+  /* ========== FINAL CTA ========== */
+  .final-cta{ background: radial-gradient(800px 400px at 80% 0%, rgba(99,102,241,.28), transparent 60%), radial-gradient(800px 400px at 20% 100%, rgba(245,158,11,.18), transparent 60%), linear-gradient(135deg, var(--navy) 0%, #1e1b4b 100%); color: white; text-align: center; }
+  .final-cta h2{ font-size: clamp(2rem, 3.6vw, 2.6rem); margin-bottom: 12px; }
+  .final-cta p{ color: #cbd5e1; max-width: 620px; margin: 0 auto 8px; font-size: 1.08rem; }
+  .final-cta p.fil-line{ color: #FBBF24; font-style: italic; font-size: 1rem; margin-bottom: 28px; }
+  .final-ctas{ display:flex; gap: 14px; justify-content:center; flex-wrap:wrap; }
+  .btn-glass{ display:inline-flex; align-items:center; justify-content:center; gap:8px; padding: 16px 28px; border-radius: 12px; font-weight: 700; font-size: 1.05rem; cursor: pointer; background: rgba(255,255,255,0.16); color: white; border: 1.5px solid rgba(255,255,255,0.32); transition: background .15s ease, transform .15s ease; text-decoration: none !important; }
+  .btn-glass:hover{ background: rgba(255,255,255,0.26); transform: translateY(-2px); color:white; }
+  .btn-glass-solid{ display:inline-flex; align-items:center; justify-content:center; gap:8px; padding: 16px 28px; border-radius: 12px; font-weight: 700; font-size: 1.05rem; cursor: pointer; background: rgba(255,255,255,0.95); color: #3730A3; border: 1.5px solid transparent; transition: background .15s ease, transform .15s ease; text-decoration: none !important; }
+  .btn-glass-solid:hover{ background: white; transform: translateY(-2px); color:#3730A3; }
+
+  /* ========== FOOTER ========== */
+  footer{ background: #0b1220; color: #94a3b8; padding: 50px 0 24px; }
+  .foot-grid{ display:grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 32px; margin-bottom: 32px; }
+  .foot h4{ color: white; margin-bottom: 14px; font-size: 0.95rem; letter-spacing: .05em; text-transform: uppercase; }
+  .foot a{ color: #94a3b8; display: block; padding: 4px 0; font-size: 0.95rem; }
+  .foot a:hover{ color: white; text-decoration: none; }
+  .foot-brand p{ margin-top: 12px; font-size: 0.95rem; }
+  .footer-tagline{ color: var(--cyan); font-style: italic; font-weight: 600; margin-top: 8px !important; font-size: 0.95rem !important; }
+  .socials{ display:flex; gap: 10px; margin-top: 14px; }
+  .socials a{ width: 38px; height: 38px; border-radius: 10px; background: #1e293b; display: inline-flex; align-items: center; justify-content: center; color: white; transition: background .15s ease, transform .15s ease; }
+  .socials a:hover{ transform: translateY(-2px); }
+  .socials a[aria-label="YouTube"]:hover{ background: #ff0000; }
+  .socials a[aria-label="TikTok"]:hover{ background: #000000; }
+  .socials a[aria-label="Facebook"]:hover{ background: #1877f2; }
+  .socials a[aria-label="LinkedIn"]:hover{ background: #0a66c2; }
+  .foot-bottom{ border-top: 1px solid #1e293b; padding-top: 20px; text-align: center; font-size: 0.88rem; }
+  .foot-bottom a{ color: #94a3b8; text-decoration: underline; }
+  .logo-lockup{ padding: 0; }
+  .logo-lockup .lockup-img{ height: 72px; width: auto; display: block; max-width: 360px; }
+
+  /* ========== RESPONSIVE ========== */
+  @media (max-width: 900px){
+    .grade-grid{ grid-template-columns: repeat(2, 1fr); }
+    .shs-grid{ grid-template-columns: repeat(2, 1fr); }
+    .teach-band{ grid-template-columns: 1fr; }
+    .about-grid{ grid-template-columns: 1fr; }
+    .foot-grid{ grid-template-columns: 1fr 1fr; }
+    .nav-links{ display:none; position: absolute; top: 100%; left:0; right:0; background: white; flex-direction: column; padding: 18px; border-bottom: 1px solid var(--border); gap: 14px; }
+    .nav-links.open{ display:flex; }
+    .menu-toggle{ display:block; }
+    .logo-lockup .lockup-img{ height: 60px; max-width: 300px; }
+    .stat{ padding: 0 16px; }
+  }
+  @media (max-width: 600px){
+    section{ padding: 56px 0; }
+    .hero{ padding: 56px 0 40px; }
+    .grade-grid{ grid-template-columns: 1fr; }
+    .shs-grid{ grid-template-columns: 1fr 1fr; }
+    .hero-stats{ gap: 0; }
+    .stat{ padding: 12px 16px; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.12); width: 50%; }
+    .stat:nth-child(odd){ border-right: 1px solid rgba(255,255,255,0.12); }
+    .stat:nth-last-child(-n+2){ border-bottom: none; }
+    .foot-grid{ grid-template-columns: 1fr; }
+    .logo-lockup .lockup-img{ height: 50px; max-width: 240px; }
+  }
+  .skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}
+  .skip-link:focus{position:fixed;top:0;left:0;width:auto;height:auto;padding:8px 16px;background:#0F2B3D;color:#fff;z-index:9999;font-size:14px;text-decoration:none;border-radius:0 0 4px 0;}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<!-- ========== NAVIGATION ========== -->
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="/" class="logo logo-lockup" aria-label="Numberbender — Master the Elements of Math">
+      <img src="../images/numberbender_banner_only.svg" alt="Numberbender" class="lockup-img" loading="lazy">
+    </a>
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" onclick="var exp=this.getAttribute('aria-expanded')==='false';this.setAttribute('aria-expanded',exp?'true':'false');document.getElementById('navlinks').classList.toggle('open')">☰</button>
+    <nav class="nav-links" id="navlinks">
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Learn <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="/start-here">🎁 Free Starter Lesson</a>
+          <a href="/find-your-course">🧭 Where Do I Start?</a>
+          <a href="/courses">📚 Explore Math Lessons</a>
+          <a href="/subjects/test-prep">🎯 Test Prep Practice</a>
+          <a href="/math-worksheets">📝 Free Worksheets</a>
+          <a href="/for-filipino-students">🇵🇭 Para sa Filipino Students</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Teach <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="/for-teachers">🏫 For Teachers Hub</a>
+          <a href="/teach-the-math">🎓 Teach the Math</a>
+          <a href="/teach-it-like-you-stream-it">🎬 Teach It Like You Stream It</a>
+          <a href="/teacher-resources">📦 Teacher Resources</a>
+          <a href="/math-worksheets">📄 Printable Worksheets</a>
+          <a href="/courses">📚 Lesson &amp; Course Library</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger nav-mathccc" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Math CCC <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="/math-ccc">📚 Browse All Courses</a>
+          <a href="/ab1705-corequisite-math">🧭 AB 1705 Corequisite Support</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">DepEd Math <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="/deped">🇵🇭 DepEd Math Home</a>
+          <a href="/deped/teachers">👩‍🏫 For Teachers · Para sa Teachers</a>
+          <div class="dd-label">MATATAG · Junior High</div>
+          <a href="/deped#grade-7">Mathematics 7 · Matematika 7</a>
+          <a href="/deped#grade-8">Mathematics 8 · Matematika 8</a>
+          <a href="/deped#grade-9">Mathematics 9 · Matematika 9</a>
+          <a href="/deped#grade-10">Mathematics 10 · Matematika 10</a>
+          <div class="dd-label">Strengthened SHS · Senior High</div>
+          <a href="/deped/shs/general-math">General Mathematics</a>
+          <a href="/deped/shs/statistics-probability">Statistics &amp; Probability</a>
+          <a href="/deped/shs/pre-calculus">Pre-Calculus</a>
+          <a href="/deped/shs/basic-calculus">Basic Calculus</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">About <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="/speaking-archive">📅 Past Engagements</a>
+          <a href="/blog">✍️ Blog</a>
+          <a href="/speaking">🎤 Speaking</a>
+          <a href="/for-institutions">🤝 For Institutions</a>
+          <a href="/nonprofit">🏛️ Mission &amp; Nonprofit</a>
+          <a href="/press">📰 Press &amp; Media</a>
+          <a href="/about">👨‍🏫 About Dr. E</a>
+        </div>
+      </div>
+      <a href="/contact" class="nav-cta">Contact</a>
+    </nav>
+  </div>
+</header>
+<main id="main-content">
+
+<!-- ========== HERO ========== -->
+<section class="hero">
+  <div class="container hero-inner">
+    <span class="hero-eyebrow">🇵🇭 Aligned to the DepEd 2026 Curriculum</span>
+    <div>
+      <div class="lang-toggle" role="group" aria-label="Choose language / Pumili ng wika">
+        <button class="lang-btn" data-lang="en" aria-pressed="true" onclick="nbSetLang('en')">EN</button>
+        <button class="lang-btn" data-lang="fil" aria-pressed="false" onclick="nbSetLang('fil')">FIL</button>
+      </div>
+    </div>
+    <h1>
+      <span class="i18n" data-en="DepEd Math, the way you actually" data-fil="DepEd Math, sa paraang talagang">DepEd Math, the way you actually</span>
+      <span class="accent-cyan i18n" data-en="learn it" data-fil="matututo ka">learn it</span>
+    </h1>
+    <p class="subhead i18n" data-en="Every lesson mapped to the new 2026 curriculum — MATATAG for Grades 7–10 and the Strengthened Senior High School program for Grades 11–12. In English and Filipino. No login. No paywall." data-fil="Bawat aralin naka-map sa bagong 2026 curriculum — MATATAG para sa Grades 7–10 at Strengthened Senior High School para sa Grades 11–12. Sa English at Filipino. Walang login. Walang bayad.">Every lesson mapped to the new 2026 curriculum — MATATAG for Grades 7–10 and the Strengthened Senior High School program for Grades 11–12. In English and Filipino. No login. No paywall.</p>
+    <p class="subhead-fil">Handa ka na ba? Hanapin ang grade mo sa baba. — Dr. E</p>
+    <div class="hero-ctas">
+      <a href="#grades" class="btn btn-glass-solid"><span class="i18n" data-en="Find my grade" data-fil="Hanapin ang grade ko">Find my grade</span> →</a>
+      <a href="#teachers" class="btn btn-glass"><span class="i18n" data-en="For Teachers" data-fil="Para sa Teachers">For Teachers</span></a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-num">400+</span><span class="stat-label i18n" data-en="Video lessons" data-fil="Video aralin">Video lessons</span></div>
+      <div class="stat"><span class="stat-num">7–12</span><span class="stat-label i18n" data-en="Grades covered" data-fil="Grade levels">Grades covered</span></div>
+      <div class="stat"><span class="stat-num">2</span><span class="stat-label i18n" data-en="Languages" data-fil="Mga wika">Languages</span></div>
+      <div class="stat"><span class="stat-num">₱0</span><span class="stat-label i18n" data-en="Always free" data-fil="Libre lagi">Always free</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== JHS — MATATAG ========== -->
+<section id="grades">
+  <div class="container">
+    <div class="section-head">
+      <p class="section-eyebrow">MATATAG · Junior High School</p>
+      <h2 class="i18n" data-en="Grades 7 to 10 — Mathematics" data-fil="Grades 7 hanggang 10 — Matematika">Grades 7 to 10 — Mathematics</h2>
+      <p class="i18n" data-en="The MATATAG curriculum organizes every grade into three domains: Number &amp; Algebra, Measurement &amp; Geometry, and Data &amp; Probability. Tap your grade." data-fil="Inaayos ng MATATAG curriculum ang bawat grade sa tatlong domain: Number &amp; Algebra, Measurement &amp; Geometry, at Data &amp; Probability. I-tap ang grade mo.">The MATATAG curriculum organizes every grade into three domains: Number &amp; Algebra, Measurement &amp; Geometry, and Data &amp; Probability. Tap your grade.</p>
+    </div>
+
+    <div class="grade-grid">
+      <!-- GRADE 7 -->
+      <a class="grade-card" id="grade-7" href="/deped/grade-7">
+        <span class="grade-badge">7</span>
+        <h3>Mathematics 7</h3>
+        <div class="subj-fil">Matematika 7</div>
+        <div class="domain">Number &amp; Algebra <span class="tag-cov">●</span></div>
+        <div class="domain">Measurement &amp; Geometry <span class="tag-soon">partial</span></div>
+        <div class="domain">Data &amp; Probability <span class="tag-soon">partial</span></div>
+      </a>
+      <!-- GRADE 8 -->
+      <a class="grade-card" id="grade-8" href="/deped/grade-8">
+        <span class="grade-badge">8</span>
+        <h3>Mathematics 8</h3>
+        <div class="subj-fil">Matematika 8</div>
+        <div class="domain">Number &amp; Algebra <span class="tag-cov">●</span></div>
+        <div class="domain">Measurement &amp; Geometry <span class="tag-cov">●</span></div>
+        <div class="domain">Data &amp; Probability <span class="tag-soon">partial</span></div>
+      </a>
+      <!-- GRADE 9 -->
+      <a class="grade-card" id="grade-9" href="/deped/grade-9">
+        <span class="grade-badge">9</span>
+        <h3>Mathematics 9</h3>
+        <div class="subj-fil">Matematika 9</div>
+        <div class="domain">Number &amp; Algebra <span class="tag-cov">●</span></div>
+        <div class="domain">Measurement, Geometry &amp; Trig <span class="tag-cov">●</span></div>
+        <div class="domain">Data &amp; Probability <span class="tag-soon">partial</span></div>
+      </a>
+      <!-- GRADE 10 -->
+      <a class="grade-card" id="grade-10" href="/deped/grade-10">
+        <span class="grade-badge">10</span>
+        <h3>Mathematics 10</h3>
+        <div class="subj-fil">Matematika 10</div>
+        <div class="domain">Number &amp; Algebra <span class="tag-cov">●</span></div>
+        <div class="domain">Measurement &amp; Geometry <span class="tag-soon">partial</span></div>
+        <div class="domain">Data &amp; Probability <span class="tag-soon">partial</span></div>
+      </a>
+    </div>
+
+    <div class="callout">
+      <span class="i18n" data-en="Coverage key: ● = full video coverage now · partial = some units live, more coming. The Grade 10 MATATAG guide is still being finalized by DepEd (national rollout SY 2027–28), so its mapping is provisional." data-fil="Gabay sa coverage: ● = kumpletong video ngayon · partial = may ilang units na, dadagdagan pa. Ang Grade 10 MATATAG guide ay hinahandang pa ng DepEd (rollout SY 2027–28), kaya pansamantala pa ang mapping nito.">Coverage key: ● = full video coverage now · partial = some units live, more coming. The Grade 10 MATATAG guide is still being finalized by DepEd (national rollout SY 2027–28), so its mapping is provisional.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SHS — Strengthened SHS ========== -->
+<section id="shs" style="background:var(--surface);">
+  <div class="container">
+    <div class="section-head">
+      <p class="section-eyebrow">Strengthened SHS · Senior High School</p>
+      <h2 class="i18n" data-en="Grades 11 &amp; 12 — by subject" data-fil="Grades 11 at 12 — ayon sa subject">Grades 11 &amp; 12 — by subject</h2>
+      <p class="i18n" data-en="Under the Strengthened SHS program, General Mathematics is the core math subject for all Grade 11 learners. Specialized math lives in Academic-track electives." data-fil="Sa Strengthened SHS program, ang General Mathematics ang core math subject para sa lahat ng Grade 11. Ang specialized math ay nasa Academic-track electives.">Under the Strengthened SHS program, General Mathematics is the core math subject for all Grade 11 learners. Specialized math lives in Academic-track electives.</p>
+    </div>
+
+    <div class="shs-grid">
+      <a class="shs-card" href="/deped/shs/general-math">
+        <span class="s-ico">🧮</span>
+        <h4>General Mathematics</h4>
+        <span class="s-fil">Core · functions &amp; logic</span>
+        <span class="s-cov">● Functions covered</span>
+      </a>
+      <a class="shs-card" href="/deped/shs/statistics-probability">
+        <span class="s-ico">📊</span>
+        <h4>Statistics &amp; Probability</h4>
+        <span class="s-fil">Estadistika at Probabilidad</span>
+        <span class="s-cov">● Full coverage</span>
+      </a>
+      <a class="shs-card" href="/deped/shs/pre-calculus">
+        <span class="s-ico">📐</span>
+        <h4>Pre-Calculus</h4>
+        <span class="s-fil">Para sa STEM</span>
+        <span class="s-cov">● Full coverage</span>
+      </a>
+      <a class="shs-card" href="/deped/shs/basic-calculus">
+        <span class="s-ico">∫</span>
+        <h4>Basic Calculus</h4>
+        <span class="s-fil">Panimulang calculus</span>
+        <span class="s-cov">● Full coverage</span>
+      </a>
+    </div>
+
+    <div class="callout">
+      <span class="i18n" data-en="Note: DepEd is replacing the old STEM / ABM / HUMSS / GAS strands with two flexible tracks — Academic and Technical-Professional — starting SY 2026–27. We organize Senior High by subject so it works for every learner, whatever track they choose." data-fil="Paalala: Pinapalitan ng DepEd ang lumang STEM / ABM / HUMSS / GAS strands ng dalawang flexible na track — Academic at Technical-Professional — simula SY 2026–27. Inaayos namin ang Senior High ayon sa subject para gumana ito sa lahat, anuman ang track nila.">Note: DepEd is replacing the old STEM / ABM / HUMSS / GAS strands with two flexible tracks — Academic and Technical-Professional — starting SY 2026–27. We organize Senior High by subject so it works for every learner, whatever track they choose.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TEACHERS ========== -->
+<section id="teachers">
+  <div class="container">
+    <div class="teach-band">
+      <div>
+        <span class="for-teachers-badge">👩‍🏫 <span class="i18n" data-en="For Teachers" data-fil="Para sa Teachers">For Teachers</span></span>
+        <h3 class="i18n" data-en="Use it in class. Assign it for homework." data-fil="Gamitin sa klase. Ipasa bilang takdang-aralin.">Use it in class. Assign it for homework.</h3>
+        <p class="i18n" data-en="Every lesson cluster pairs with a free printable worksheet. Download, project, or share a direct link with your students — no accounts needed." data-fil="Bawat aralin may kasamang libreng printable na worksheet. I-download, i-project, o mag-share ng direktang link sa mga estudyante — walang account na kailangan.">Every lesson cluster pairs with a free printable worksheet. Download, project, or share a direct link with your students — no accounts needed.</p>
+      </div>
+      <div class="teach-actions">
+        <a href="/math-worksheets" class="btn btn-primary"><span class="i18n" data-en="Free worksheets" data-fil="Libreng worksheets">Free worksheets</span></a>
+        <button type="button" class="share-btn" onclick="nbShare()"><span class="i18n" data-en="🔗 Share this page" data-fil="🔗 I-share ang page">🔗 Share this page</span></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FINAL CTA ========== -->
+<section class="final-cta">
+  <div class="container">
+    <h2 class="i18n" data-en="Math is hard. So we made it human." data-fil="Mahirap ang Math. Kaya ginawa naming makatao.">Math is hard. So we made it human.</h2>
+    <p class="i18n" data-en="Free, bilingual, and built around the curriculum you're actually studying." data-fil="Libre, bilingual, at gawa para sa curriculum na pinag-aaralan mo talaga.">Free, bilingual, and built around the curriculum you're actually studying.</p>
+    <p class="fil-line">Labanan ang agwat — libre, para sa lahat.</p>
+    <div class="final-ctas">
+      <a href="#grades" class="btn btn-glass-solid"><span class="i18n" data-en="Find my grade" data-fil="Hanapin ang grade ko">Find my grade</span> →</a>
+      <a href="/for-filipino-students" class="btn btn-glass">🇵🇭 Para sa Filipino Students</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot foot-brand">
+        <div class="logo" style="color:white;">
+          <div class="logo-mark" style="background:transparent;overflow:hidden;">
+            <img src="../images/numberbender-mark-teal-transparent.svg" alt="Numberbender" style="width:100%;height:100%;object-fit:contain;display:block;" loading="lazy">
+          </div>
+          <span>Numberbender</span>
+        </div>
+        <p>Helping students learn math with confidence and helping educators teach online with energy, clarity, and impact.</p>
+        <p class="footer-tagline">Math is hard. So we made it human.</p>
+        <p class="footer-tagline" lang="fil">Labanan ang agwat.</p>
+        <div class="socials">
+          <a href="https://www.youtube.com/@numberbender" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a2.997 2.997 0 0 0-2.108-2.119C19.42 3.5 12 3.5 12 3.5s-7.42 0-9.39.567A2.997 2.997 0 0 0 .502 6.186C0 8.176 0 12 0 12s0 3.824.502 5.814a2.997 2.997 0 0 0 2.108 2.119C4.58 20.5 12 20.5 12 20.5s7.42 0 9.39-.567a2.997 2.997 0 0 0 2.108-2.119C24 15.824 24 12 24 12s0-3.824-.502-5.814zM9.6 15.572V8.428L15.818 12 9.6 15.572z"/></svg></a>
+          <a href="https://www.tiktok.com/@numberbender" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.74a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.17z"/></svg></a>
+          <a href="https://www.facebook.com/thenumberbender" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"/></svg></a>
+          <a href="https://www.linkedin.com/in/numberbender/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.063 2.063 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        </div>
+      </div>
+      <div class="foot">
+        <h4>Students</h4>
+        <a href="/deped">🇵🇭 DepEd Math</a>
+        <a href="/courses">Explore All Subjects</a>
+        <a href="/subjects/algebra/">Algebra</a>
+        <a href="/subjects/statistics/">Statistics</a>
+        <a href="/for-filipino-students">Para sa Filipino Students</a>
+      </div>
+      <div class="foot">
+        <h4>Educators</h4>
+        <a href="/for-teachers">For Teachers Hub</a>
+        <a href="/teach-it-like-you-stream-it">Teach It Like You Stream It</a>
+        <a href="/teach-the-math">Teach the Math</a>
+        <a href="/teacher-resources">Teacher Resources</a>
+        <a href="/math-worksheets">Free Worksheets</a>
+      </div>
+      <div class="foot">
+        <h4>Connect</h4>
+        <a href="/about">About Dr. E</a>
+        <a href="/speaking">Speaking</a>
+        <a href="/press">Press &amp; Media</a>
+        <a href="/contact">Contact</a>
+        <a href="https://www.youtube.com/@numberbender" target="_blank" rel="noopener">YouTube Channel</a>
+        <a href="/privacy">Privacy Policy</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      © 2026 Numberbender · Founded by Dr. Peter Esperanza · Numberbender Inc. is a 501(c)(3) nonprofit organization · EIN: 86-2952520 · Made with care for learners and educators everywhere.
+      <div style="margin-top:8px;font-size:0.78rem;color:#94a3b8;">
+        <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener"><img src="https://licensebuttons.net/l/by/4.0/88x31.png" alt="CC BY 4.0" style="border:0;vertical-align:middle;margin-right:6px;display:inline;" loading="lazy"></a>
+        Original content licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener" style="color:#94a3b8;">CC BY 4.0</a> &mdash; free to share and adapt with credit to Peter Esperanza / Numberbender.
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Dropdown nav (matches site-wide behavior)
+  function toggleDD(btn){
+    var menu = btn.nextElementSibling;
+    var willOpen = !menu.classList.contains('open');
+    document.querySelectorAll('.nav-dropdown .dropdown-menu.open').forEach(function(m){
+      m.classList.remove('open');
+      var t = m.previousElementSibling;
+      if (t) t.setAttribute('aria-expanded','false');
+    });
+    if (willOpen){
+      menu.style.transition='none';
+      menu.classList.add('open');
+      menu.getBoundingClientRect();
+      menu.style.transition='';
+      btn.setAttribute('aria-expanded','true');
+    }
+  }
+  document.addEventListener('click', function(e){
+    if (!e.target.closest('.nav-dropdown')){
+      document.querySelectorAll('.nav-dropdown .dropdown-menu.open').forEach(function(m){
+        m.classList.remove('open');
+        var t = m.previousElementSibling;
+        if (t) t.setAttribute('aria-expanded','false');
+      });
+    }
+  });
+  document.querySelectorAll('#navlinks a').forEach(function(a){
+    a.addEventListener('click', function(){
+      var nav = document.getElementById('navlinks');
+      var btn = document.querySelector('.menu-toggle');
+      if(nav){ nav.classList.remove('open'); }
+      if(btn){ btn.setAttribute('aria-expanded','false'); }
+    });
+  });
+
+  // EN / FIL language preference — persists across visits and carries into lesson pages
+  (function(){
+    var saved = localStorage.getItem('nb_lang') || 'en';
+    applyLang(saved);
+    window.nbSetLang = function(l){ localStorage.setItem('nb_lang', l); applyLang(l); };
+    function applyLang(l){
+      document.documentElement.setAttribute('data-lang', l);
+      document.querySelectorAll('.i18n').forEach(function(el){
+        var t = el.getAttribute('data-' + l);
+        if (t !== null) el.textContent = t;
+      });
+      document.querySelectorAll('.lang-btn').forEach(function(b){
+        b.setAttribute('aria-pressed', b.getAttribute('data-lang') === l ? 'true' : 'false');
+      });
+    }
+  })();
+
+  // Share this page — copy clean deep link to clipboard
+  function nbShare(){
+    var url = 'https://numberbender.com/deped';
+    if (navigator.share){
+      navigator.share({ title: 'DepEd Math — Numberbender', url: url }).catch(function(){});
+      return;
+    }
+    if (navigator.clipboard){
+      navigator.clipboard.writeText(url).then(function(){
+        alert('Link copied! Ipasa mo na sa students mo. 🔗');
+      });
+    } else {
+      prompt('Copy this link:', url);
+    }
+  }
+</script>
+<script src="/nb-search.js"></script>
+</body>
+</html>

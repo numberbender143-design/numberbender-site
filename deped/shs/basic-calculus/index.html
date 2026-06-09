@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P1M2WZD840"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P1M2WZD840');
+</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Basic Calculus (DepEd SHS) — Free Bilingual Lessons | Numberbender</title>
+<meta name="description" content="Free Basic Calculus for DepEd Senior High School (STEM) — limits and continuity, derivatives and their applications, and integration. Bilingual video lessons in English and Filipino. No login." />
+<link rel="canonical" href="https://numberbender.com/deped/shs/basic-calculus" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Basic Calculus (DepEd SHS) — Free Bilingual Lessons | Numberbender" />
+<meta property="og:description" content="Basic Calculus for DepEd Senior High (STEM) — limits, continuity, derivatives, applications, and integration. Free bilingual lessons in English and Filipino." />
+<meta property="og:url" content="https://numberbender.com/deped/shs/basic-calculus" />
+<meta property="og:site_name" content="Numberbender" />
+<meta property="og:image" content="https://numberbender.com/images/filipino_math_hero_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@numberbender" />
+<meta name="twitter:title" content="Basic Calculus (DepEd SHS) — Free Bilingual Lessons | Numberbender" />
+<meta name="twitter:description" content="Basic Calculus for DepEd Senior High (STEM) — limits, continuity, derivatives, applications, and integration. Free bilingual lessons in English and Filipino." />
+<link rel="icon" type="image/svg+xml" href="/images/exports/numberbender-favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/exports/png/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/exports/png/favicon-180.png">
+<meta name="theme-color" content="#3730A3">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "Basic Calculus — DepEd Senior High (Free Bilingual)",
+  "description": "Basic Calculus for DepEd Senior High (STEM) — limits, continuity, derivatives, applications, and integration. Free bilingual lessons in English and Filipino.",
+  "inLanguage": ["en", "tl"],
+  "url": "https://numberbender.com/deped/shs/basic-calculus",
+  "provider": { "@type": "EducationalOrganization", "name": "Numberbender", "url": "https://numberbender.com" },
+  "isAccessibleForFree": true,
+  "educationalLevel": "Grade 12"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "DepEd Math", "item": "https://numberbender.com/deped" },
+    { "@type": "ListItem", "position": 2, "name": "Senior High", "item": "https://numberbender.com/deped#shs" },
+    { "@type": "ListItem", "position": 3, "name": "Basic Calculus", "item": "https://numberbender.com/deped/shs/basic-calculus" }
+  ]
+}
+</script>
+<style>
+  :root{
+    --navy:#0F172A; --blue:#2563EB; --yellow:#FACC15; --cyan:#06B6D4; --green:#22C55E;
+    --bg:#F8FAFC; --surface:#FFFFFF; --muted:#64748B; --border:#E2E8F0;
+    --shadow: 0 10px 30px rgba(15, 23, 42, 0.08); --shadow-lg: 0 20px 50px rgba(15, 23, 42, 0.12); --radius: 16px;
+    --indigo:#3730A3; --indigo-dk:#312e81; --amber:#F59E0B; --emerald:#059669;
+  }
+  *{ box-sizing: border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; }
+  body{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", Roboto, "Helvetica Neue", Arial, sans-serif; color: var(--navy); background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  a{ color: var(--blue); text-decoration:none; }
+  a:hover{ text-decoration: underline; }
+  img{ max-width:100%; display:block; }
+  .container{ width: min(1100px, 92%); margin-inline: auto; }
+  .nav{ position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,0.92); backdrop-filter: saturate(180%) blur(10px); border-bottom: 1px solid var(--border); }
+  .nav-inner{ display:flex; align-items:center; justify-content:space-between; padding: 14px 0; }
+  .logo{ display:flex; align-items:center; gap:10px; font-weight: 800; font-size: 1.15rem; color: var(--navy); }
+  .nav-links{ display:flex; gap: 22px; align-items:center; flex-wrap:nowrap; }
+  .nav-links a{ color: var(--navy); font-weight: 500; font-size: 0.95rem; white-space:nowrap; }
+  .nav-links a:hover{ color: var(--blue); text-decoration: none; }
+  .nav-links a:focus-visible, .nav-dropdown .dropdown-trigger:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; border-radius: 4px; }
+  .nav-cta{ background: var(--navy); color: white !important; padding: 9px 16px; border-radius: 10px; font-weight: 600; }
+  .nav-cta:hover{ background: var(--blue); text-decoration: none; }
+  .menu-toggle{ display:none; background:none; border:none; cursor:pointer; font-size: 1.4rem; color: var(--navy); }
+  .nav-dropdown{ position: relative; }
+  .nav-dropdown .dropdown-trigger{ background: none; border: none; padding: 0; margin: 0; font: inherit; color: var(--navy); font-weight: 500; font-size: 0.95rem; cursor: pointer; display: inline-flex; align-items: center; gap: 4px; white-space:nowrap; }
+  .nav-dropdown .dropdown-trigger:hover{ color: var(--blue); }
+  .nav-dropdown .caret{ font-size: 0.75em; transition: transform .2s ease; }
+  .nav-dropdown .dropdown-trigger[aria-expanded="true"] .caret{ transform: rotate(180deg); }
+  .nav-dropdown .dropdown-menu{ position: absolute; top: 100%; left: 0; margin-top: 10px; background: white; border: 1px solid var(--border); border-radius: 14px; padding: 6px; box-shadow: 0 20px 50px rgba(15, 23, 42, 0.12); min-width: 250px; opacity: 0; visibility: hidden; transform: translateY(-6px); transition: opacity .15s ease, transform .15s ease, visibility .15s ease; z-index: 100; }
+  .nav-dropdown .dropdown-menu::before{ content: ''; position: absolute; top: -10px; left: 0; right: 0; height: 10px; }
+  .nav-dropdown:hover .dropdown-menu, .nav-dropdown .dropdown-menu.open{ opacity: 1; visibility: visible; transform: translateY(0); }
+  .nav-dropdown .dropdown-menu a{ display: block; padding: 10px 14px; border-radius: 8px; color: var(--navy); font-weight: 500; font-size: 0.95rem; }
+  .nav-dropdown .dropdown-menu a:hover{ background: rgba(55,48,163,.08); color: var(--indigo); text-decoration: none; }
+  .dd-label{ font-size:.7rem; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); padding:10px 14px 4px; }
+  .logo-lockup .lockup-img{ height: 60px; width:auto; display:block; max-width:300px; }
+  @media (max-width: 900px){
+    .nav-dropdown{ width: 100%; }
+    .nav-dropdown .dropdown-trigger{ width: 100%; justify-content: space-between; padding: 6px 0; }
+    .nav-dropdown .dropdown-menu{ position: static; box-shadow: none; border: none; padding: 0 0 4px 14px; margin-top: 0; min-width: 0; opacity: 1; visibility: visible; transform: none; display: none; background: transparent; }
+    .nav-dropdown .dropdown-menu.open{ display: block; }
+    .nav-links{ display:none; position:absolute; top:100%; left:0; right:0; background:white; flex-direction:column; padding:18px; border-bottom:1px solid var(--border); gap:14px; }
+    .nav-links.open{ display:flex; }
+    .menu-toggle{ display:block; }
+  }
+  .btn{ display:inline-flex; align-items:center; justify-content:center; gap:8px; padding: 13px 22px; border-radius: 12px; font-weight: 600; font-size: 1rem; cursor: pointer; border: 2px solid transparent; transition: transform .15s ease, box-shadow .15s ease, background .15s ease; text-decoration: none !important; }
+  .btn:hover{ transform: translateY(-2px); box-shadow: var(--shadow); }
+  .btn-primary{ background: var(--indigo); color: white; }
+  .btn-primary:hover{ background: var(--indigo-dk); }
+  .hero{ position: relative; padding: 30px 0 56px; overflow: hidden; color:white;
+    background: radial-gradient(900px 600px at 100% -20%, rgba(245,158,11,0.18), transparent 60%), radial-gradient(800px 500px at -10% 80%, rgba(99,102,241,0.30), transparent 60%), linear-gradient(150deg, #1e1b4b 0%, #3730A3 55%, #312e81 100%); }
+  .breadcrumb{ font-size:.85rem; padding:18px 0 0; }
+  .breadcrumb a{ color:rgba(255,255,255,0.75); }
+  .breadcrumb a:hover{ color:#fff; }
+  .breadcrumb span{ color:rgba(255,255,255,0.5); }
+  .hero-inner{ max-width: 820px; padding-top: 22px; }
+  .hero-eyebrow{ display:inline-flex; align-items:center; gap:8px; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.22); color: rgba(255,255,255,0.92); padding: 6px 14px; border-radius: 999px; font-size: 0.82rem; font-weight: 600; margin-bottom: 16px; }
+  .hero h1{ font-size: clamp(2rem, 4vw, 3rem); line-height: 1.06; letter-spacing: -0.025em; font-weight: 800; margin-bottom: 6px; }
+  .hero .h1-fil{ font-size: 1.1rem; color:#FCD34D; font-weight:700; font-style:italic; margin-bottom:14px; }
+  .hero p.subhead{ font-size: 1.08rem; color: rgba(255,255,255,0.82); margin: 0 0 8px; max-width: 660px; }
+  .hero p.subhead-fil{ font-size: .98rem; color: rgba(255,255,255,0.6); font-style: italic; margin: 0 0 20px; }
+  .lang-toggle{ display:inline-flex; border:1px solid rgba(255,255,255,0.32); border-radius:999px; overflow:hidden; background:rgba(255,255,255,0.1); }
+  .lang-btn{ padding:7px 20px; border:none; background:transparent; font-weight:700; cursor:pointer; color:rgba(255,255,255,0.7); font-size:.88rem; transition: background .15s, color .15s; }
+  .lang-btn[aria-pressed="true"]{ background:#fff; color:var(--indigo-dk); }
+  section{ padding: 56px 0; }
+  .domain{ margin-bottom: 30px; }
+  .domain:last-child{ margin-bottom:0; }
+  .domain-head{ display:flex; align-items:center; gap:12px; margin-bottom: 14px; }
+  .domain-num{ width:38px; height:38px; flex-shrink:0; border-radius:10px; background:linear-gradient(135deg,var(--indigo),#6366F1); color:#fff; font-weight:800; display:grid; place-items:center; font-size:1rem; }
+  .domain-head h2{ font-size: 1.3rem; letter-spacing:-0.01em; }
+  .domain-head .d-fil{ font-size:.85rem; color:var(--muted); font-style:italic; }
+  .topic-list{ display:grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .topic-row{ display:flex; align-items:center; justify-content:space-between; gap:14px; background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:16px 18px; text-decoration:none !important; color:var(--navy); transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease; }
+  .topic-row:hover{ transform: translateY(-2px); box-shadow: var(--shadow); border-color: var(--indigo); }
+  .topic-row .t-main{ display:flex; flex-direction:column; min-width:0; }
+  .topic-row .t-title{ font-weight:700; font-size:.98rem; }
+  .topic-row .t-sub{ font-size:.8rem; color:var(--muted); }
+  .topic-row .t-go{ font-size:.82rem; font-weight:700; color:var(--indigo); white-space:nowrap; flex-shrink:0; }
+  .topic-row:hover .t-go{ text-decoration:underline; }
+  .topic-row.soon{ opacity:.92; }
+  .topic-row.soon .t-go{ color:var(--muted); }
+  .cov-pill{ display:inline-block; font-size:.66rem; font-weight:800; letter-spacing:.05em; text-transform:uppercase; padding:2px 7px; border-radius:999px; margin-left:8px; vertical-align:middle; }
+  .cov-soon{ background:#f1f5f9; color:var(--muted); }
+  .callout{ background:#fff; border:1px solid var(--border); border-left:5px solid var(--amber); border-radius:12px; padding:16px 20px; margin-top:28px; font-size:.92rem; color:var(--muted); }
+  .teach-band{ background:var(--surface); border:1px solid var(--border); border-radius:18px; padding:28px; display:flex; flex-wrap:wrap; gap:18px; align-items:center; justify-content:space-between; }
+  .teach-band h3{ font-size:1.15rem; margin-bottom:4px; }
+  .teach-band p{ color:var(--muted); font-size:.95rem; }
+  .for-teachers-badge{ display:inline-flex; align-items:center; gap:6px; background:rgba(5,150,105,.12); color:var(--emerald); font-weight:700; font-size:.72rem; padding:4px 10px; border-radius:999px; margin-bottom:8px; }
+  .teach-actions{ display:flex; gap:12px; flex-wrap:wrap; }
+  .share-btn{ background:transparent; border:2px solid var(--border); color:var(--navy); border-radius:12px; padding:13px 20px; font-weight:600; cursor:pointer; font-size:1rem; transition:border-color .15s, color .15s; }
+  .share-btn:hover{ border-color:var(--indigo); color:var(--indigo); }
+  .grade-nav{ display:flex; justify-content:space-between; gap:12px; margin-top:36px; flex-wrap:wrap; }
+  .grade-nav a{ font-weight:700; color:var(--indigo); }
+  footer{ background: #0b1220; color: #94a3b8; padding: 46px 0 24px; }
+  .foot-grid{ display:grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 32px; margin-bottom: 28px; }
+  .foot h4{ color: white; margin-bottom: 12px; font-size: 0.92rem; letter-spacing: .05em; text-transform: uppercase; }
+  .foot a{ color: #94a3b8; display: block; padding: 4px 0; font-size: 0.93rem; }
+  .foot a:hover{ color: white; text-decoration: none; }
+  .footer-tagline{ color: var(--cyan); font-style: italic; font-weight: 600; margin-top: 8px; font-size: 0.93rem; }
+  .foot-bottom{ border-top: 1px solid #1e293b; padding-top: 18px; text-align: center; font-size: 0.85rem; }
+  .foot-bottom a{ color:#94a3b8; text-decoration:underline; }
+  @media (max-width: 760px){ .topic-list{ grid-template-columns: 1fr; } .foot-grid{ grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px){ section{ padding:44px 0; } .foot-grid{ grid-template-columns:1fr; } }
+  .skip-link{position:absolute;left:-9999px;}
+  .skip-link:focus{position:fixed;top:0;left:0;padding:8px 16px;background:#0F2B3D;color:#fff;z-index:9999;text-decoration:none;}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="/" class="logo logo-lockup" aria-label="Numberbender"><img src="/images/numberbender_banner_only.svg" alt="Numberbender" class="lockup-img" loading="lazy"></a>
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" onclick="var exp=this.getAttribute('aria-expanded')==='false';this.setAttribute('aria-expanded',exp?'true':'false');document.getElementById('navlinks').classList.toggle('open')">&#9776;</button>
+    <nav class="nav-links" id="navlinks">
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Learn <span class="caret" aria-hidden="true">&#9662;</span></button>
+        <div class="dropdown-menu">
+          <a href="/start-here">&#127873; Free Starter Lesson</a>
+          <a href="/find-your-course">&#129517; Where Do I Start?</a>
+          <a href="/courses">&#128218; Explore Math Lessons</a>
+          <a href="/subjects/test-prep">&#127919; Test Prep Practice</a>
+          <a href="/math-worksheets">&#128221; Free Worksheets</a>
+          <a href="/for-filipino-students">&#127477;&#127469; Para sa Filipino Students</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Teach <span class="caret" aria-hidden="true">&#9662;</span></button>
+        <div class="dropdown-menu">
+          <a href="/for-teachers">&#128105;&#8205;&#127979; For Teachers Hub</a>
+          <a href="/teach-the-math">&#127891; Teach the Math</a>
+          <a href="/teach-it-like-you-stream-it">&#127916; Teach It Like You Stream It</a>
+          <a href="/teacher-resources">&#128230; Teacher Resources</a>
+          <a href="/math-worksheets">&#128196; Printable Worksheets</a>
+          <a href="/courses">&#128218; Lesson &amp; Course Library</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Math CCC <span class="caret" aria-hidden="true">&#9662;</span></button>
+        <div class="dropdown-menu">
+          <a href="/math-ccc">&#128218; Browse All Courses</a>
+          <a href="/ab1705-corequisite-math">&#129517; AB 1705 Corequisite Support</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">DepEd Math <span class="caret" aria-hidden="true">&#9662;</span></button>
+        <div class="dropdown-menu">
+          <a href="/deped">&#127477;&#127469; DepEd Math Home</a>
+          <a href="/deped/teachers">👩‍🏫 For Teachers · Para sa Teachers</a>
+          <div class="dd-label">MATATAG &middot; Junior High</div>
+          <a href="/deped/grade-7">Mathematics 7 &middot; Matematika 7</a>
+          <a href="/deped/grade-8">Mathematics 8 &middot; Matematika 8</a>
+          <a href="/deped/grade-9">Mathematics 9 &middot; Matematika 9</a>
+          <a href="/deped/grade-10">Mathematics 10 &middot; Matematika 10</a>
+          <div class="dd-label">Strengthened SHS &middot; Senior High</div>
+          <a href="/deped/shs/general-math">General Mathematics</a>
+          <a href="/deped/shs/statistics-probability">Statistics &amp; Probability</a>
+          <a href="/deped/shs/pre-calculus">Pre-Calculus</a>
+          <a href="/deped/shs/basic-calculus">Basic Calculus</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">About <span class="caret" aria-hidden="true">&#9662;</span></button>
+        <div class="dropdown-menu">
+          <a href="/speaking-archive">&#128197; Past Engagements</a>
+          <a href="/blog">&#9997;&#65039; Blog</a>
+          <a href="/speaking">&#127908; Speaking</a>
+          <a href="/for-institutions">&#129309; For Institutions</a>
+          <a href="/nonprofit">&#127963;&#65039; Mission &amp; Nonprofit</a>
+          <a href="/press">&#128240; Press &amp; Media</a>
+          <a href="/about">&#128104;&#8205;&#127979; About Dr. E</a>
+        </div>
+      </div>
+      <a href="/contact" class="nav-cta">Contact</a>
+    </nav>
+  </div>
+</header>
+<main id="main-content">
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="/deped">DepEd Math</a> <span>&rsaquo;</span> <a href="/deped#shs">Senior High</a> <span>&rsaquo;</span> <span style="color:rgba(255,255,255,.92)">Basic Calculus</span></div>
+    <div class="hero-inner">
+      <span class="hero-eyebrow">🇵🇭 Strengthened SHS · STEM</span>
+      <h1>Basic Calculus</h1>
+      <div class="h1-fil">Panimulang calculus para sa STEM</div>
+      <p class="subhead i18n" data-en="The full DepEd Basic Calculus subject — limits and continuity, the derivative and its applications, and integration — with free video lessons in English and Filipino." data-fil="Buong DepEd Basic Calculus subject — limits at continuity, derivatives at applications, at integration — may libreng video aralin sa English at Filipino.">The full DepEd Basic Calculus subject — limits and continuity, the derivative and its applications, and integration — with free video lessons in English and Filipino.</p>
+      <p class="subhead-fil">Handa ka na ba? Pumili ng topic sa baba. — Dr. E</p>
+      <div class="lang-toggle" role="group" aria-label="Choose language">
+        <button class="lang-btn" data-lang="en" aria-pressed="true" onclick="nbSetLang('en')">EN</button>
+        <button class="lang-btn" data-lang="fil" aria-pressed="false" onclick="nbSetLang('fil')">FIL</button>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="domain">
+      <div class="domain-head">
+        <span class="domain-num">1</span>
+        <div>
+          <h2>Limits &amp; Continuity</h2>
+          <div class="d-fil">Limits &amp; continuity</div>
+        </div>
+      </div>
+      <div class="topic-list">
+        <a class="topic-row" href="/subjects/calculus/#unit-1">
+          <span class="t-main"><span class="t-title">Limits &amp; Continuity</span><span class="t-sub">Evaluating limits &amp; continuity</span></span>
+          <span class="t-go i18n" data-en="Watch →" data-fil="Panoorin →">Watch →</span>
+        </a>
+      </div>
+    </div>
+    <div class="domain">
+      <div class="domain-head">
+        <span class="domain-num">2</span>
+        <div>
+          <h2>Derivatives</h2>
+          <div class="d-fil">The derivative &amp; its applications</div>
+        </div>
+      </div>
+      <div class="topic-list">
+        <a class="topic-row" href="/subjects/calculus/#unit-2">
+          <span class="t-main"><span class="t-title">Basic Derivative Rules</span><span class="t-sub">Power, product &amp; quotient rules</span></span>
+          <span class="t-go i18n" data-en="Watch →" data-fil="Panoorin →">Watch →</span>
+        </a>
+        <a class="topic-row" href="/subjects/calculus/#unit-3">
+          <span class="t-main"><span class="t-title">Transcendental Derivatives</span><span class="t-sub">Trig, exponential &amp; log derivatives</span></span>
+          <span class="t-go i18n" data-en="Watch →" data-fil="Panoorin →">Watch →</span>
+        </a>
+        <a class="topic-row" href="/subjects/calculus/#unit-4">
+          <span class="t-main"><span class="t-title">Implicit Differentiation</span><span class="t-sub">Differentiating implicitly</span></span>
+          <span class="t-go i18n" data-en="Watch →" data-fil="Panoorin →">Watch →</span>
+        </a>
+        <a class="topic-row" href="/subjects/calculus/#unit-5">
+          <span class="t-main"><span class="t-title">Applications of Derivatives</span><span class="t-sub">Optimization &amp; related rates</span></span>
+          <span class="t-go i18n" data-en="Watch →" data-fil="Panoorin →">Watch →</span>
+        </a>
+      </div>
+    </div>
+    <div class="domain">
+      <div class="domain-head">
+        <span class="domain-num">3</span>
+        <div>
+          <h2>Integration</h2>
+          <div class="d-fil">Antiderivatives &amp; integrals</div>
+        </div>
+      </div>
+      <div class="topic-list">
+        <a class="topic-row" href="/subjects/calculus/#unit-6">
+          <span class="t-main"><span class="t-title">Integration Fundamentals</span><span class="t-sub">Antiderivatives &amp; the integral</span></span>
+          <span class="t-go i18n" data-en="Watch →" data-fil="Panoorin →">Watch →</span>
+        </a>
+        <a class="topic-row" href="/subjects/calculus/#unit-7">
+          <span class="t-main"><span class="t-title">Applications of Integration</span><span class="t-sub">Area &amp; accumulation</span></span>
+          <span class="t-go i18n" data-en="Watch →" data-fil="Panoorin →">Watch →</span>
+        </a>
+      </div>
+    </div>
+    <div class="callout"><span class="i18n" data-en="Fully covered: every Basic Calculus topic links to complete video lessons on our Calculus page, with English and Filipino versions." data-fil="Kumpleto: bawat Basic Calculus topic ay naka-link sa buong video lessons sa Calculus page namin, may English at Filipino.">Fully covered: every Basic Calculus topic links to complete video lessons on our Calculus page, with English and Filipino versions.</span></div>
+    <div class="teach-band" style="margin-top:40px;">
+      <div>
+        <span class="for-teachers-badge">&#128105;&#8205;&#127979; <span class="i18n" data-en="For Teachers" data-fil="Para sa Teachers">For Teachers</span></span>
+        <h3 class="i18n" data-en="Assign any topic to your class" data-fil="Ipasa ang anumang topic sa klase mo">Assign any topic to your class</h3>
+        <p class="i18n" data-en="Each lesson has a free printable worksheet. Share this page link straight to your students." data-fil="Bawat aralin may libreng printable worksheet. I-share ang page link na ito sa mga estudyante mo.">Each lesson has a free printable worksheet. Share this page link straight to your students.</p>
+      </div>
+      <div class="teach-actions">
+        <a href="/math-worksheets" class="btn btn-primary"><span class="i18n" data-en="Free worksheets" data-fil="Libreng worksheets">Free worksheets</span></a>
+        <button type="button" class="share-btn" onclick="nbShare()"><span class="i18n" data-en="🔗 Share this page" data-fil="🔗 I-share ang page">🔗 Share this page</span></button>
+      </div>
+    </div>
+    <div class="grade-nav"><a href="/deped/shs/pre-calculus">← Pre-Calculus</a><a href="/deped">All DepEd Math</a></div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot">
+        <div class="logo" style="color:white;"><span>Numberbender</span></div>
+        <p style="margin-top:10px;font-size:.93rem;">Free, bilingual math for every Filipino learner &mdash; aligned to the DepEd 2026 curriculum.</p>
+        <p class="footer-tagline" lang="fil">Labanan ang agwat.</p>
+      </div>
+      <div class="foot">
+        <h4>DepEd Math</h4>
+        <a href="/deped">DepEd Math Home</a>
+        <a href="/deped/grade-7">Mathematics 7</a>
+        <a href="/deped/grade-8">Mathematics 8</a>
+        <a href="/deped/grade-9">Mathematics 9</a>
+        <a href="/deped/grade-10">Mathematics 10</a>
+      </div>
+      <div class="foot">
+        <h4>Senior High</h4>
+        <a href="/deped/shs/general-math">General Mathematics</a>
+        <a href="/deped/shs/statistics-probability">Statistics &amp; Probability</a>
+        <a href="/deped/shs/pre-calculus">Pre-Calculus</a>
+        <a href="/deped/shs/basic-calculus">Basic Calculus</a>
+      </div>
+      <div class="foot">
+        <h4>Connect</h4>
+        <a href="/for-filipino-students">Para sa Filipino Students</a>
+        <a href="/for-teachers">For Teachers</a>
+        <a href="/about">About Dr. E</a>
+        <a href="/contact">Contact</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      &copy; 2026 Numberbender &middot; Numberbender Inc. is a 501(c)(3) nonprofit &middot; EIN: 86-2952520 &middot; Content licensed <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener">CC BY 4.0</a>.
+    </div>
+  </div>
+</footer>
+<script>
+  function toggleDD(btn){
+    var menu = btn.nextElementSibling;
+    var willOpen = !menu.classList.contains('open');
+    document.querySelectorAll('.nav-dropdown .dropdown-menu.open').forEach(function(m){ m.classList.remove('open'); var t=m.previousElementSibling; if(t) t.setAttribute('aria-expanded','false'); });
+    if (willOpen){ menu.classList.add('open'); btn.setAttribute('aria-expanded','true'); }
+  }
+  document.addEventListener('click', function(e){
+    if (!e.target.closest('.nav-dropdown')){
+      document.querySelectorAll('.nav-dropdown .dropdown-menu.open').forEach(function(m){ m.classList.remove('open'); var t=m.previousElementSibling; if(t) t.setAttribute('aria-expanded','false'); });
+    }
+  });
+  document.querySelectorAll('#navlinks a').forEach(function(a){
+    a.addEventListener('click', function(){ var nav=document.getElementById('navlinks'); var btn=document.querySelector('.menu-toggle'); if(nav){nav.classList.remove('open');} if(btn){btn.setAttribute('aria-expanded','false');} });
+  });
+  (function(){
+    var saved = localStorage.getItem('nb_lang') || 'en';
+    applyLang(saved);
+    window.nbSetLang = function(l){ localStorage.setItem('nb_lang', l); applyLang(l); };
+    function applyLang(l){
+      document.documentElement.setAttribute('data-lang', l);
+      document.querySelectorAll('.i18n').forEach(function(el){ var t=el.getAttribute('data-'+l); if(t!==null) el.textContent=t; });
+      document.querySelectorAll('.lang-btn').forEach(function(b){ b.setAttribute('aria-pressed', b.getAttribute('data-lang')===l?'true':'false'); });
+    }
+  })();
+  function nbShare(){
+    var url=document.querySelector('link[rel=canonical]').href;
+    if(navigator.share){ navigator.share({title:document.title, url:url}).catch(function(){}); return; }
+    if(navigator.clipboard){ navigator.clipboard.writeText(url).then(function(){ alert('Link copied! Ipasa mo na sa students mo. 🔗'); }); }
+    else { prompt('Copy this link:', url); }
+  }
+</script>
+<script src="/nb-search.js"></script>
+</body>
+</html>
