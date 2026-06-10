@@ -41,7 +41,7 @@
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Numberbender", "item": "https://numberbender.com" },
-        { "@type": "ListItem", "position": 2, "name": "Math CCC", "item": "https://numberbender.com/ccc-atlas.html" },
+        { "@type": "ListItem", "position": 2, "name": "Math CCC", "item": "https://numberbender.com/math-ccc" },
         { "@type": "ListItem", "position": 3, "name": "Discrete Mathematics (MATH 160)", "item": "https://numberbender.com/math160-course" }
       ]
     }
@@ -389,7 +389,7 @@
           <a href="/start-here">🎁 Free Starter Lesson</a>
           <a href="/find-your-course">🧭 Where Do I Start?</a>
           <a href="/courses">📚 Explore Math Lessons</a>
-          <a href="/subjects/test-prep">🎯 Test Prep Practice</a>
+          <a href="/subjects/test-prep/">🎯 Test Prep Practice</a>
           <a href="/math-worksheets">📝 Free Worksheets</a>
           <a href="/for-filipino-students">🇵🇭 Para sa Filipino Students</a>
         </div>
@@ -408,8 +408,23 @@
       <div class="nbnav-dd">
         <button type="button" class="nbnav-trigger nbnav-mathccc active" aria-haspopup="true" aria-expanded="false" onclick="nbToggleDD(this);return false;">Math CCC <span class="nbnav-caret" aria-hidden="true">▾</span></button>
         <div class="nbnav-menu">
-          <a href="ccc-atlas.html">📚 Browse All Courses</a>
-          <a href="ab1705-corequisite-math.html">🧭 AB 1705 Corequisite Support</a>
+          <a href="/math-ccc">📚 Browse All Courses</a>
+          <a href="/ab1705-corequisite-math">🧭 AB 1705 Corequisite Support</a>
+        </div>
+      </div>
+      <div class="nbnav-dd">
+        <button type="button" class="nbnav-trigger" aria-haspopup="true" aria-expanded="false" onclick="nbToggleDD(this);return false;">DepEd Math <span class="nbnav-caret" aria-hidden="true">▾</span></button>
+        <div class="nbnav-menu">
+          <a href="/deped">🇵🇭 DepEd Math Home</a>
+          <a href="/deped/teachers">👩‍🏫 For Teachers · Para sa Teachers</a>
+          <a href="/deped/grade-7">7 · Mathematics 7</a>
+          <a href="/deped/grade-8">8 · Mathematics 8</a>
+          <a href="/deped/grade-9">9 · Mathematics 9</a>
+          <a href="/deped/grade-10">10 · Mathematics 10</a>
+          <a href="/deped/shs/general-math">📐 General Mathematics</a>
+          <a href="/deped/shs/statistics-probability">📊 Statistics &amp; Probability</a>
+          <a href="/deped/shs/pre-calculus">∫ Pre-Calculus</a>
+          <a href="/deped/shs/basic-calculus">∂ Basic Calculus</a>
         </div>
       </div>
       <div class="nbnav-dd">
@@ -430,7 +445,7 @@
 </header>
 
 <div class="wrap">
-  <div class="crumb"><a href="ccc-atlas.html">All Courses</a> &nbsp;›&nbsp; STEM Pathway &nbsp;›&nbsp; MATH 160</div>
+  <div class="crumb"><a href="/math-ccc">All Courses</a> &nbsp;›&nbsp; STEM Pathway &nbsp;›&nbsp; MATH 160</div>
   <section class="hero" id="content" tabindex="-1">
     <span class="cid">C-ID MATH 160</span>
     <h1>Discrete Mathematics</h1>
@@ -1072,7 +1087,8 @@ function openPrintableTest(title,forms){
      <button onclick="window.print()">⬇ Print / Save as PDF</button>
      <span style="font-size:12.5px;opacity:.85">Use your browser's "Save as PDF". Verified answer keys follow the blank forms.</span></div>
    <div class="wrap">${body}</div>
-  </body></html>`;
+  <script src="/nb-search.js"></script>
+</body></html>`;
   const w=window.open('','_blank');
   if(!w){toast('Allow pop-ups to open the printable test.');return;}
   w.document.write(html); w.document.close();

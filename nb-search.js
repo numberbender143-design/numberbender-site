@@ -1,6 +1,7 @@
 /*!
  * nb-search.js — Numberbender Global Nav Search
- * Self-installs into any page that has #navlinks.
+ * Self-installs into any page that has #navlinks (standard nav)
+ * or #nbnavlinks (course-page nav).
  * Searches worksheet-index.json (480 worksheets) + a hardcoded course list.
  * Keyboard: ArrowUp/Down navigate results, Enter selects, Escape closes.
  */
@@ -94,7 +95,7 @@
 
   // ── Boot ──────────────────────────────────────────────────────────────────────
   document.addEventListener('DOMContentLoaded', function () {
-    var nav = document.getElementById(NAV_ID);
+    var nav = document.getElementById(NAV_ID) || document.getElementById('nbnavlinks');
     if (!nav) return;
 
     // Inject CSS
@@ -115,7 +116,7 @@
       '<div class="nb-drop" id="nb-drop" role="listbox" aria-label="Search results"></div>';
 
     // Insert before the .nav-cta (Contact) button
-    var cta = nav.querySelector('.nav-cta');
+    var cta = nav.querySelector('.nav-cta') || nav.querySelector('.nbnav-cta');
     if (cta) {
       nav.insertBefore(wrap, cta);
     } else {

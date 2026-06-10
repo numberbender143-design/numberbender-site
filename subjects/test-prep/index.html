@@ -53,16 +53,6 @@ img{max-width:100%;display:block;}
 .container{width:min(1000px,92%);margin-inline:auto;}
 
 /* ── NAV ── */
-.site-nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.97);border-bottom:1px solid var(--border);backdrop-filter:blur(8px);}
-.nav-inner{display:flex;align-items:center;gap:20px;height:71px;}
-.nav-logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.05rem;color:var(--navy);text-decoration:none;flex-shrink:0;}
-.nav-logo img{height:36px;width:auto;}
-.nav-links{display:flex;align-items:center;gap:4px;margin-left:auto;}
-.nav-links a{font-size:0.85rem;font-weight:600;color:var(--muted);padding:6px 12px;border-radius:8px;transition:all .15s;}
-.nav-links a:hover{background:var(--bg);color:var(--navy);text-decoration:none;}
-.nav-links a.active{background:var(--active-light);color:var(--active);}
-.nav-cta{background:var(--active);color:white!important;border-radius:8px;padding:6px 14px!important;}
-.nav-cta:hover{opacity:.9;background:var(--active)!important;}
 @media(max-width:640px){.nav-links a:not(.nav-cta){display:none;}}
 
 /* ── HERO ── */
@@ -218,7 +208,50 @@ h1{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:900;line-height:1.15;margin-bo
   .hero-content{gap:14px;}
   .hero-icon{width:60px;height:60px;}
 }
-.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}.skip-link:focus{position:fixed;top:0;left:0;width:auto;height:auto;padding:8px 16px;background:#0F2B3D;color:#fff;z-index:9999;font-size:14px;text-decoration:none;border-radius:0 0 4px 0;}</style>
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}.skip-link:focus{position:fixed;top:0;left:0;width:auto;height:auto;padding:8px 16px;background:#0F2B3D;color:#fff;z-index:9999;font-size:14px;text-decoration:none;border-radius:0 0 4px 0;}
+/* ── standard site nav (ported from subject library template) ── */
+.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.94);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--border);}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0;}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.1rem;color:var(--navy);text-decoration:none;}
+.logo-lockup{padding:0;}
+.logo-lockup .lockup-img{height:52px;width:auto;display:block;max-width:280px;}
+.menu-toggle{display:none;background:none;border:none;cursor:pointer;font-size:1.4rem;color:var(--navy);}
+.nav-links{display:flex;gap:20px;align-items:center;flex-wrap:nowrap;}
+.nav-links a,.nav-links .dropdown-trigger{white-space:nowrap;}
+.nav-links a{color:var(--navy);font-weight:500;font-size:0.92rem;}
+.nav-links a:hover{color:var(--blue);text-decoration:none;}
+.nav-cta{background:var(--teal-dark);color:white!important;padding:8px 15px;border-radius:9px;font-weight:600;font-size:0.88rem;}
+.nav-cta:hover{background:var(--teal);text-decoration:none!important;}
+.nav-dropdown{position:relative;}
+.nav-dropdown .dropdown-trigger{background:none;border:none;padding:0;margin:0;font:inherit;color:var(--navy);font-weight:500;font-size:0.92rem;cursor:pointer;display:inline-flex;align-items:center;gap:4px;transition:color .15s ease;}
+.nav-dropdown .dropdown-trigger:hover{color:var(--blue);}
+.nav-dropdown .caret{font-size:.75em;display:inline-block;transition:transform .2s ease;}
+.nav-dropdown:hover .caret,.nav-dropdown .dropdown-trigger[aria-expanded="true"] .caret{transform:rotate(180deg);}
+.nav-dropdown .dropdown-menu{position:absolute;top:100%;left:0;margin-top:10px;background:white;border:1px solid var(--border);border-radius:14px;padding:6px;box-shadow:0 20px 50px rgba(15,23,42,.12);min-width:240px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .15s ease,transform .15s ease,visibility .15s ease;z-index:100;}
+.nav-dropdown .dropdown-menu::before{content:'';position:absolute;top:-10px;left:0;right:0;height:10px;}
+.nav-dropdown:hover .dropdown-menu,.nav-dropdown .dropdown-menu.open{opacity:1;visibility:visible;transform:translateY(0);}
+.nav-dropdown .dropdown-menu a{display:block;padding:10px 14px;border-radius:8px;color:var(--navy);font-weight:500;font-size:0.92rem;}
+.nav-dropdown .dropdown-menu a:hover{background:rgba(37,99,235,.08);color:var(--blue);text-decoration:none;}
+.menu-toggle{display:block;}
+.nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:white;flex-direction:column;padding:18px;border-bottom:1px solid var(--border);gap:14px;}
+.nav-links.open{display:flex;}
+.nav-dropdown{width:100%;}
+.nav-dropdown .dropdown-trigger{width:100%;justify-content:space-between;padding:6px 0;}
+.nav-dropdown .dropdown-menu{position:static;box-shadow:none;border:none;padding:0 0 4px 14px;margin-top:0;min-width:0;opacity:1;visibility:visible;transform:none;display:none;background:transparent;}
+.nav-dropdown:hover .dropdown-menu{display:none;}
+.nav-dropdown .dropdown-menu.open{display:block;}
+@media(max-width:900px){
+  .logo-lockup .lockup-img{height:42px;max-width:220px;}
+  .menu-toggle{display:block;}
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:white;flex-direction:column;padding:18px;border-bottom:1px solid var(--border);gap:14px;}
+  .nav-links.open{display:flex;}
+  .nav-dropdown{width:100%;}
+  .nav-dropdown .dropdown-trigger{width:100%;justify-content:space-between;padding:6px 0;}
+  .nav-dropdown .dropdown-menu{position:static;box-shadow:none;border:none;padding:0 0 4px 14px;margin-top:0;min-width:0;opacity:1;visibility:visible;transform:none;display:none;background:transparent;}
+  .nav-dropdown:hover .dropdown-menu{display:none;}
+  .nav-dropdown .dropdown-menu.open{display:block;}
+}
+</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -240,20 +273,71 @@ h1{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:900;line-height:1.15;margin-bo
 
 
 <!-- ── NAV ── -->
-<nav class="site-nav">
+<header class="nav">
   <div class="container nav-inner">
-    <a href="../../" class="nav-logo">
-      <img src="../../images/exports/numberbender-favicon.svg" alt="Numberbender">
-      Numberbender
+    <a href="../../" class="logo logo-lockup" aria-label="Numberbender — Master the Elements of Math">
+      <img src="../../images/numberbender_banner_only.svg" alt="Numberbender" class="lockup-img">
     </a>
-    <div class="nav-links">
-      <a href="/courses">Subject Library</a>
-      <a href="../../learn/intermediate-algebra/">Courses</a>
-      <a href="https://www.youtube.com/@numberbender" target="_blank" rel="noopener">YouTube</a>
-      <a href="/courses" class="nav-cta active">Test Prep 🎯</a>
-    </div>
+    <button class="menu-toggle" aria-label="Toggle menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
+    <nav class="nav-links" id="navlinks">
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Learn <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="/start-here">🎁 Free Starter Lesson</a>
+          <a href="/find-your-course">🧭 Where Do I Start?</a>
+          <a href="/courses">📚 Explore Math Lessons</a>
+          <a href="/subjects/test-prep/">🎯 Test Prep Practice</a>
+          <a href="/math-worksheets">📝 Free Worksheets</a>
+          <a href="/for-filipino-students">🇵🇭 Para sa Filipino Students</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Teach <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="/for-teachers">🏫 For Teachers Hub</a>
+          <a href="/teach-the-math">🎓 Teach the Math</a>
+          <a href="/teach-it-like-you-stream-it">🎬 Teach It Like You Stream It</a>
+          <a href="/teacher-resources">📦 Teacher Resources</a>
+          <a href="/math-worksheets">📄 Printable Worksheets</a>
+          <a href="/courses">📚 Lesson &amp; Course Library</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger nav-mathccc" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Math CCC <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="/math-ccc">📚 Browse All Courses</a>
+          <a href="/ab1705-corequisite-math">🧭 AB 1705 Corequisite Support</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">DepEd Math <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="/deped">🇵🇭 DepEd Math Home</a>
+          <a href="/deped/teachers">👩‍🏫 For Teachers · Para sa Teachers</a>
+          <a href="/deped/grade-7">7 · Mathematics 7</a>
+          <a href="/deped/grade-8">8 · Mathematics 8</a>
+          <a href="/deped/grade-9">9 · Mathematics 9</a>
+          <a href="/deped/grade-10">10 · Mathematics 10</a>
+          <a href="/deped/shs/general-math">📐 General Mathematics</a>
+          <a href="/deped/shs/statistics-probability">📊 Statistics &amp; Probability</a>
+          <a href="/deped/shs/pre-calculus">∫ Pre-Calculus</a>
+          <a href="/deped/shs/basic-calculus">∂ Basic Calculus</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">About <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="/about">👨‍🏫 About Dr. E</a>
+          <a href="/speaking">🎤 Speaking</a>
+          <a href="/press">📰 Press &amp; Media</a>
+          <a href="/blog">✍️ Blog</a>
+          <a href="/speaking-archive">📅 Past Engagements</a>
+        </div>
+      </div>
+      <a href="/contact" class="nav-cta">Contact</a>
+    </nav>
   </div>
-</nav>
+</header>
 
 <!-- ── HERO ── -->
 <section class="subject-hero">
@@ -288,7 +372,7 @@ h1{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:900;line-height:1.15;margin-bo
         </div>
       </div><!-- /hero-content -->
       <div class="hero-artwork-wrap">
-        <img class="hero-artwork" src="../../images/numberbender_hero_testPrep.png" alt="Gamified test prep — earn badges and track your progress" loading="eager">
+        <picture><source srcset="../../images/numberbender_hero_testPrep.webp" type="image/webp"><img class="hero-artwork" src="../../images/numberbender_hero_testPrep.png" alt="Gamified test prep — earn badges and track your progress" loading="eager" width="512" height="512"></picture>
       </div>
     </div>
   </div>
@@ -2025,5 +2109,6 @@ document.addEventListener('click',function(e){
 });
 
 </script>
+<script src="/nb-search.js"></script>
 </body>
 </html>
