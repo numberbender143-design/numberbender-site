@@ -32,6 +32,7 @@
     { name: 'Intermediate Algebra', code: 'Developmental', url: '/intermediate-algebra-course', keywords: 'intermediate algebra' },
     { name: 'AB 1705 / AB 705 Corequisite Support', code: 'CCC', url: '/ab1705-corequisite-math', keywords: 'ab705 ab1705 corequisite just-in-time' },
     { name: 'CCC Math Atlas', code: 'CCC', url: '/ccc-atlas', keywords: 'california community college atlas cid' },
+    { name: 'Teach It Like You Stream It', code: 'Online Teaching for Educators — Dr. E', url: '/teach-it-like-you-stream-it', keywords: 'tilysi tilys edutuber streaming flipped creator online teaching engaging', community: true },
   ];
 
   // ── CSS (injected once) ───────────────────────────────────────────────────────
@@ -80,6 +81,10 @@
     '    color:#0f172a;padding:4px;}',
     '}',
     '@media(min-width:701px){.nb-mob-btn{display:none!important;}}',
+    '.nb-comm{margin:4px 6px 6px;padding:10px 14px;background:#f0fdf9;border:1.5px solid #1F6F6B;border-radius:10px;display:flex;align-items:center;justify-content:space-between;gap:10px;}',
+    '.nb-comm-t{font-size:.80rem;font-weight:600;color:#0F2B3D;}',
+    '.nb-comm-b{background:#1F6F6B;color:#fff;border:none;border-radius:6px;padding:5px 12px;font-size:.79rem;font-weight:700;cursor:pointer;white-space:nowrap;text-decoration:none;transition:background .15s;}',
+    '.nb-comm-b:hover{background:#155F5B;color:#fff;text-decoration:none;}',
   ].join('');
 
   // ── State ─────────────────────────────────────────────────────────────────────
@@ -248,6 +253,13 @@
             '<span class="nb-drs">' + esc(c.code) + '</span>' +
             '</a>';
         });
+        // Community CTA — appears when a community-flagged page (e.g. TILYS) is in results
+        if (res.courses.some(function(c){ return c.community; })) {
+          html += '<div class="nb-comm">' +
+            '<span class="nb-comm-t">👋 Join Dr. E\'s growing community of educators &amp; students</span>' +
+            '<a class="nb-comm-b" href="javascript:void(0)" onclick="window.nbOpenCommunityBar();return false;">Join Us →</a>' +
+            '</div>';
+        }
       }
 
       if (res.ws.length) {
@@ -278,4 +290,25 @@
       return decode(String(s)).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
     }
   });
+
+  // Global: open the sticky bar from anywhere on the page (e.g. search community CTA)
+  window.nbOpenCommunityBar = function() {
+    var bar = document.getElementById('nb-sticky-bar');
+    if (bar) {
+      bar.style.display = '';
+      sessionStorage.setItem('nb_bar_ctx', 'WORKSHOP');
+      var msg = document.getElementById('nb-bar-msg');
+      if (msg && !msg.textContent) {
+        msg.textContent = '👋 Great to meet you! Support the movement — join Dr. E\'s community of educators and students:';
+      }
+      var inp = document.getElementById('nb-email-input');
+      if (inp) {
+        setTimeout(function(){ inp.focus(); }, 80);
+        bar.scrollIntoView({ behavior: 'smooth', block: 'end' });
+      }
+    } else {
+      window.location.href = '/?ref=community';
+    }
+  };
+
 })();

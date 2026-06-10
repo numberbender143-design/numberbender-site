@@ -1963,7 +1963,7 @@
 <div id="nb-sticky-bar" style="display:none">
   <p id="nb-bar-msg"></p>
   <input type="email" id="nb-email-input" placeholder="your@email.com" autocomplete="email" aria-label="Email address" />
-  <button class="nb-submit" onclick="nbSubmit()">Get Free Worksheets →</button>
+  <button class="nb-submit" onclick="nbSubmit()">Join the Community →</button>
   <button class="nb-close" onclick="nbDismiss()" aria-label="Close">✕</button>
 </div>
 <script>
@@ -1971,17 +1971,29 @@
   var d=localStorage.getItem(‘nb_bar_dismissed’);
   if(d&&(Date.now()-parseInt(d))/(1000*60*60*24)<7) return;
 
+  // Detect conference / workshop referral from URL params
+  var p=new URLSearchParams(window.location.search);
+  var ref=(p.get(‘ref’)||p.get(‘utm_source’)||p.get(‘utm_campaign’)||’’).toLowerCase();
+  var isConf=/(conference|conf|summit|symposium|convention|forum)/.test(ref);
+  var isWS=/(workshop|seminar|training|bootcamp|session)/.test(ref);
+
   var msgs={
-    PH:’🇵🇭 Philippine schools open in June! Get FREE bilingual math worksheets:’,
-    US:’📚 Free college math worksheets — algebra, stats, calculus, and more:’,
-    DEFAULT:’🎁 Get 10 free math worksheets from Dr. E — no login, no paywall:’
+    CONFERENCE:’🎓 Welcome — Dr. E invited you! Join our growing community and help make math more accessible:’,
+    WORKSHOP:’👋 Great to meet you! Support the movement — join Dr. E\’s community of educators and students:’,
+    PH:’🇵🇭 Samahan mo kami! Join Dr. E\’s growing community of Filipino educators and students:’,
+    US:’📚 Join Dr. E\’s growing community — free resources for educators and students, by Dr. E:’,
+    DEFAULT:’🌍 Join the movement — help bring math to more teachers and students worldwide:’
   };
 
-  function showBar(country){
-    var msg=msgs[country]||msgs.DEFAULT;
-    document.getElementById(‘nb-bar-msg’).textContent=msg;
+  function showBar(key){
+    document.getElementById(‘nb-bar-msg’).textContent=msgs[key]||msgs.DEFAULT;
     document.getElementById(‘nb-sticky-bar’).style.display=’’;
+    sessionStorage.setItem(‘nb_bar_ctx’,key);
   }
+
+  // Conference / workshop take priority over geo
+  if(isConf){showBar(‘CONFERENCE’);return;}
+  if(isWS){showBar(‘WORKSHOP’);return;}
 
   var cached=sessionStorage.getItem(‘nb_country’);
   if(cached){showBar(cached);return;}
@@ -2004,10 +2016,15 @@ function nbSubmit(){
   var email=document.getElementById(‘nb-email-input’).value.trim();
   if(!email||!email.includes(‘@’)){document.getElementById(‘nb-email-input’).focus();return;}
   var bar=document.getElementById(‘nb-sticky-bar’);
-  var country=sessionStorage.getItem(‘nb_country’)||’’;
-  var ok=country===’PH’
-    ? ‘✅ You\’re in! Check your inbox for your free worksheets. — Dr. E 🇵🇭’
-    : ‘✅ You\’re in! Check your inbox for your free math worksheets. — Dr. E’;
+  var ctx=sessionStorage.getItem(‘nb_bar_ctx’)||’’;
+  var ok;
+  if(ctx===’CONFERENCE’||ctx===’WORKSHOP’){
+    ok=’✅ You\’re in! Welcome to the community — Dr. E will be in touch. Thank you for your support! 🙏’;
+  } else if(ctx===’PH’){
+    ok=’✅ Salamat at sumali ka! Check your inbox for free resources. — Dr. E 🇵🇭’;
+  } else {
+    ok=’✅ Welcome to the community! Check your inbox for free resources. — Dr. E’;
+  }
   bar.innerHTML=’<p class="nb-success">’+ok+’</p><button class="nb-close" onclick="nbDismiss()" aria-label="Close">✕</button>’;
   localStorage.setItem(‘nb_bar_dismissed’,Date.now()+(7*24*60*60*1000));
   window.nbMcCb=function(){};

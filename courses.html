@@ -1036,5 +1036,93 @@ document.querySelectorAll('#navlinks a').forEach(function(a){
 });
 </script>
 <script src="/nb-search.js"></script>
+
+<!-- ── Numberbender Sticky Bar CSS ── -->
+<style>
+#nb-sticky-bar{position:fixed;bottom:0;left:0;right:0;background:#1F6F6B;color:#fff;padding:12px 20px;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;z-index:9999;box-shadow:0 -2px 12px rgba(0,0,0,.15);font-family:'Plus Jakarta Sans',sans-serif;}
+#nb-sticky-bar p{margin:0;font-size:14px;font-weight:500;color:#fff;white-space:nowrap;}
+#nb-sticky-bar input[type="email"]{padding:8px 14px;border-radius:6px;border:none;font-size:14px;width:240px;outline:none;color:#0F2B3D;}
+#nb-sticky-bar button.nb-submit{background:#F4A922;color:#0F2B3D;border:none;padding:9px 18px;border-radius:6px;font-size:14px;font-weight:700;cursor:pointer;white-space:nowrap;transition:background .2s;}
+#nb-sticky-bar button.nb-submit:hover{background:#e09910;}
+#nb-sticky-bar button.nb-close{background:transparent;border:1.5px solid rgba(255,255,255,.4);color:#fff;width:28px;height:28px;border-radius:50%;font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .2s;}
+#nb-sticky-bar button.nb-close:hover{background:rgba(255,255,255,.15);}
+#nb-sticky-bar .nb-success{font-size:15px;font-weight:600;color:#fff;}
+@media(max-width:640px){#nb-sticky-bar{flex-direction:column;gap:8px;padding:14px 16px;text-align:center;}#nb-sticky-bar p{white-space:normal;font-size:13px;}#nb-sticky-bar input[type="email"]{width:100%;}#nb-sticky-bar button.nb-submit{width:100%;}}
+</style>
+
+<!-- ── Numberbender Sticky Bar — community CTA ── -->
+<div id="nb-sticky-bar" style="display:none">
+  <p id="nb-bar-msg"></p>
+  <input type="email" id="nb-email-input" placeholder="your@email.com" autocomplete="email" aria-label="Email address" />
+  <button class="nb-submit" onclick="nbSubmit()">Join the Community →</button>
+  <button class="nb-close" onclick="nbDismiss()" aria-label="Close">✕</button>
+</div>
+<script>
+(function(){
+  var d=localStorage.getItem('nb_bar_dismissed');
+  if(d&&(Date.now()-parseInt(d))/(1000*60*60*24)<7) return;
+
+  // Detect conference / workshop referral from URL params
+  var p=new URLSearchParams(window.location.search);
+  var ref=(p.get('ref')||p.get('utm_source')||p.get('utm_campaign')||'').toLowerCase();
+  var isConf=/(conference|conf|summit|symposium|convention|forum)/.test(ref);
+  var isWS=/(workshop|seminar|training|bootcamp|session)/.test(ref);
+
+  var msgs={
+    CONFERENCE:'🎓 Welcome — Dr. E invited you! Join our growing community and help make math more accessible:',
+    WORKSHOP:'👋 Great to meet you! Support the movement — join Dr. E\'s community of educators and students:',
+    PH:'🇵🇭 Samahan mo kami! Join Dr. E\'s growing community of Filipino educators and students:',
+    US:'📚 Join Dr. E\'s growing community — free resources for educators and students, by Dr. E:',
+    DEFAULT:'🌍 Join the movement — help bring math to more teachers and students worldwide:'
+  };
+
+  function showBar(key){
+    document.getElementById('nb-bar-msg').textContent=msgs[key]||msgs.DEFAULT;
+    document.getElementById('nb-sticky-bar').style.display='';
+    sessionStorage.setItem('nb_bar_ctx',key);
+  }
+
+  // Conference / workshop take priority over geo
+  if(isConf){showBar('CONFERENCE');return;}
+  if(isWS){showBar('WORKSHOP');return;}
+
+  var cached=sessionStorage.getItem('nb_country');
+  if(cached){showBar(cached);return;}
+
+  fetch('https://ipapi.co/country/')
+    .then(function(r){return r.text();})
+    .then(function(c){
+      c=(c||'').trim().toUpperCase().substring(0,2);
+      sessionStorage.setItem('nb_country',c);
+      showBar(c);
+    })
+    .catch(function(){showBar('DEFAULT');});
+})();
+
+function nbDismiss(){
+  document.getElementById('nb-sticky-bar').style.display='none';
+  localStorage.setItem('nb_bar_dismissed',Date.now());
+}
+function nbSubmit(){
+  var email=document.getElementById('nb-email-input').value.trim();
+  if(!email||!email.includes('@')){document.getElementById('nb-email-input').focus();return;}
+  var bar=document.getElementById('nb-sticky-bar');
+  var ctx=sessionStorage.getItem('nb_bar_ctx')||'';
+  var ok;
+  if(ctx==='CONFERENCE'||ctx==='WORKSHOP'){
+    ok='✅ You\'re in! Welcome to the community — Dr. E will be in touch. Thank you for your support! 🙏';
+  } else if(ctx==='PH'){
+    ok='✅ Salamat at sumali ka! Check your inbox for free resources. — Dr. E 🇵🇭';
+  } else {
+    ok='✅ Welcome to the community! Check your inbox for free resources. — Dr. E';
+  }
+  bar.innerHTML='<p class="nb-success">'+ok+'</p><button class="nb-close" onclick="nbDismiss()" aria-label="Close">✕</button>';
+  localStorage.setItem('nb_bar_dismissed',Date.now()+(7*24*60*60*1000));
+  window.nbMcCb=function(){};
+  var s=document.createElement('script');
+  s.src='https://numberbender.us17.list-manage.com/subscribe/post-json?u=65e30fe527dde6fb604f6760a&id=ad0977e0cc&f_id=003758e0f0&EMAIL='+encodeURIComponent(email)+'&b_65e30fe527dde6fb604f6760a_ad0977e0cc=&c=nbMcCb';
+  document.body.appendChild(s);
+}
+</script>
 </body>
 </html>
