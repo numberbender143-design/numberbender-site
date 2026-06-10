@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P1M2WZD840"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P1M2WZD840');
+</script>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Trapezoid Angle Bisector Problem: BC = 9, AD = 4, Find AB — Solved | Numberbender</title>
+<meta name="description" content="In trapezoid ABCD with AD ∥ BC, the bisectors of ∠A and ∠B meet on side DC. BC = 9, AD = 4. Step-by-step solution with video by Dr. E — answer: AB = 13."/>
+<link rel="canonical" href="https://numberbender.com/solved/trapezoid-angle-bisectors-find-ab/"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Trapezoid Angle Bisector Problem: BC = 9, AD = 4, Find AB — Solved"/>
+<meta property="og:description" content="The bisectors of ∠A and ∠B intersect on side DC. Full worked solution with video — answer: AB = AD + BC = 13."/>
+<meta property="og:url" content="https://numberbender.com/solved/trapezoid-angle-bisectors-find-ab/"/>
+<meta property="og:site_name" content="Numberbender"/>
+<meta property="og:image" content="https://numberbender.com/images/dr-e-hero.jpg"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Trapezoid Angle Bisector Problem: Find AB — Solved Step by Step"/>
+<meta name="twitter:description" content="AD ∥ BC, bisectors of ∠A and ∠B meet on DC, BC = 9, AD = 4. Worked solution with video — AB = 13."/>
+<meta name="twitter:image" content="https://numberbender.com/images/dr-e-hero.jpg"/>
+<link rel="icon" type="image/svg+xml" href="/images/exports/numberbender-favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/exports/png/favicon-32.png">
+<link rel="icon" type="image/png" sizes="180x180" href="/images/exports/png/favicon-180.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/exports/png/favicon-180.png">
+<meta name="theme-color" content="#d97706">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://numberbender.com/"},
+    {"@type":"ListItem","position":2,"name":"Solved Problems","item":"https://numberbender.com/solved/"},
+    {"@type":"ListItem","position":3,"name":"Trapezoid Angle Bisector Problem: Find AB","item":"https://numberbender.com/solved/trapezoid-angle-bisectors-find-ab/"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  "name": "Trapezoid Angle Bisector Problem: BC = 9, AD = 4 — Find AB",
+  "description": "In trapezoid ABCD, AD is parallel to BC. The bisectors of angles A and B intersect at point P on side DC. Given BC = 9 and AD = 4, find AB. Worked example with full step-by-step solution: AB = AD + BC = 13.",
+  "learningResourceType": "Worked example",
+  "educationalLevel": "High school geometry",
+  "url": "https://numberbender.com/solved/trapezoid-angle-bisectors-find-ab/",
+  "inLanguage": "en",
+  "isAccessibleForFree": true,
+  "author": {"@type":"Person","name":"Peter Esperanza","alternateName":"Dr. E","url":"https://numberbender.com/about"},
+  "provider": {"@type":"Organization","name":"Numberbender","url":"https://numberbender.com"},
+  "about": ["geometry","trapezoid","angle bisector","isosceles triangle","congruent triangles"]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Quiz",
+  "name": "Trapezoid angle bisector problem",
+  "about": {"@type":"Thing","name":"Trapezoid angle bisectors"},
+  "educationalAlignment": [
+    {"@type":"AlignmentObject","alignmentType":"educationalSubject","targetName":"Geometry"}
+  ],
+  "hasPart": {
+    "@type": "Question",
+    "eduQuestionType": "Flashcard",
+    "text": "In trapezoid ABCD, AD ∥ BC. The angle bisectors of ∠A and ∠B intersect at point P on side DC. Given BC = 9 and AD = 4, find AB.",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "AB = 13. Extend AP to meet line BC at E. Alternate interior angles give ∠EAB = ∠AEB, so triangle ABE is isosceles with AB = BE. Since BP bisects the apex angle of the isosceles triangle, it is also a median, so P is the midpoint of AE. Triangles ADP and ECP are congruent (ASA), so CE = AD = 4. Therefore AB = BE = BC + CE = 9 + 4 = 13."
+    }
+  }
+}
+</script>
+<style>
+:root{
+  --navy:#0F172A;
+  --blue:#2563EB; --blue-dark:#1d4ed8; --blue-light:#EFF6FF; --blue-mid:#93C5FD; --blue-xlight:#DBEAFE;
+  --red:#DC2626; --red-dark:#b91c1c; --red-light:#FEF2F2; --red-mid:#FCA5A5;
+  --teal:#1F6F6B; --teal-dark:#085041;
+  --bg:#F8FAFC; --surface:#FFFFFF;
+  --muted:#64748B; --border:#E2E8F0;
+  --green:#16a34a; --green-light:#f0fdf4; --green-mid:#86efac;
+  --amber:#92400e; --amber-light:#fef3c7; --amber-mid:#fde68a;
+  --radius:16px; --shadow:0 8px 24px rgba(15,23,42,0.09);
+  --active:#d97706; --active-dark:#b45309; --active-light:#fffbeb; --active-mid:#fcd34d;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Inter",Roboto,Arial,sans-serif;color:var(--navy);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;}
+a{color:var(--blue);text-decoration:none;}
+a:hover{text-decoration:underline;}
+img{max-width:100%;display:block;}
+.container{width:min(860px,92%);margin-inline:auto;}
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}.skip-link:focus{position:fixed;top:0;left:0;width:auto;height:auto;padding:8px 16px;background:#0F2B3D;color:#fff;z-index:9999;font-size:14px;text-decoration:none;border-radius:0 0 4px 0;}
+
+/* ── NAV ── */
+.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.94);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--border);}
+.nav .container{width:min(1000px,92%);}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0;}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.1rem;color:var(--navy);text-decoration:none;}
+.logo-lockup{padding:0;}
+.logo-lockup .lockup-img{height:52px;width:auto;display:block;max-width:280px;}
+.menu-toggle{display:none;background:none;border:none;cursor:pointer;font-size:1.4rem;color:var(--navy);}
+.nav-links{display:flex;gap:20px;align-items:center;flex-wrap:nowrap;}
+.nav-links a,.nav-links .dropdown-trigger{white-space:nowrap;}
+.nav-links a{color:var(--navy);font-weight:500;font-size:0.92rem;}
+.nav-links a:hover{color:var(--blue);text-decoration:none;}
+.nav-cta{background:var(--teal-dark);color:white!important;padding:8px 15px;border-radius:9px;font-weight:600;font-size:0.88rem;}
+.nav-cta:hover{background:var(--teal);text-decoration:none!important;}
+.nav-dropdown{position:relative;}
+.nav-dropdown .dropdown-trigger{background:none;border:none;padding:0;margin:0;font:inherit;color:var(--navy);font-weight:500;font-size:0.92rem;cursor:pointer;display:inline-flex;align-items:center;gap:4px;transition:color .15s ease;}
+.nav-dropdown .dropdown-trigger:hover{color:var(--blue);}
+.nav-dropdown .caret{font-size:.75em;display:inline-block;transition:transform .2s ease;}
+.nav-dropdown:hover .caret,.nav-dropdown .dropdown-trigger[aria-expanded="true"] .caret{transform:rotate(180deg);}
+.nav-dropdown .dropdown-menu{position:absolute;top:100%;left:0;margin-top:10px;background:white;border:1px solid var(--border);border-radius:14px;padding:6px;box-shadow:0 20px 50px rgba(15,23,42,.12);min-width:240px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .15s ease,transform .15s ease,visibility .15s ease;z-index:100;}
+.nav-dropdown .dropdown-menu::before{content:'';position:absolute;top:-10px;left:0;right:0;height:10px;}
+.nav-dropdown:hover .dropdown-menu,.nav-dropdown .dropdown-menu.open{opacity:1;visibility:visible;transform:translateY(0);}
+.nav-dropdown .dropdown-menu a{display:block;padding:10px 14px;border-radius:8px;color:var(--navy);font-weight:500;font-size:0.92rem;}
+.nav-dropdown .dropdown-menu a:hover{background:rgba(37,99,235,.08);color:var(--blue);text-decoration:none;}
+@media(max-width:900px){
+  .logo-lockup .lockup-img{height:42px;max-width:220px;}
+  .menu-toggle{display:block;}
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:white;flex-direction:column;padding:18px;border-bottom:1px solid var(--border);gap:14px;}
+  .nav-links.open{display:flex;}
+  .nav-dropdown{width:100%;}
+  .nav-dropdown .dropdown-trigger{width:100%;justify-content:space-between;padding:6px 0;}
+  .nav-dropdown .dropdown-menu{position:static;box-shadow:none;border:none;padding:0 0 4px 14px;margin-top:0;min-width:0;opacity:1;visibility:visible;transform:none;display:none;background:transparent;}
+  .nav-dropdown:hover .dropdown-menu{display:none;}
+  .nav-dropdown .dropdown-menu.open{display:block;}
+}
+
+/* ── HERO ── */
+.solved-hero{background:linear-gradient(135deg,#b45309 0%,#d97706 60%,#f59e0b 100%);color:white;padding:40px 0 44px;}
+.breadcrumb-nav{font-size:0.82rem;margin-bottom:18px;color:rgba(255,255,255,0.65);}
+.breadcrumb-nav a{color:rgba(255,255,255,0.65);}
+.breadcrumb-nav a:hover{color:white;text-decoration:none;}
+.solved-hero h1{font-size:clamp(1.6rem,4vw,2.2rem);font-weight:900;letter-spacing:-0.02em;line-height:1.15;margin-bottom:10px;}
+.solved-hero .sub{font-size:0.98rem;color:rgba(255,255,255,0.82);max-width:600px;}
+.hero-pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px;}
+.hero-pill{font-size:0.75rem;font-weight:600;padding:4px 12px;border-radius:999px;background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.88);}
+
+/* ── CONTENT ── */
+.content{padding:36px 0 64px;}
+.card{background:var(--surface);border:1.5px solid var(--border);border-radius:14px;padding:24px 26px;margin-bottom:22px;}
+.card-label{font-size:0.75rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:12px;}
+.problem-flex{display:flex;gap:24px;align-items:center;flex-wrap:wrap;}
+.problem-flex .fig{flex-shrink:0;}
+.problem-flex .statement{flex:1;min-width:240px;font-size:1.04rem;line-height:1.7;}
+.fig-note{font-size:0.74rem;color:var(--muted);text-align:center;margin-top:6px;}
+
+.video-slot{background:var(--navy);border-radius:14px;padding:40px 28px;margin-bottom:22px;text-align:center;color:#cbd5e1;}
+.video-slot .vp-icon{width:62px;height:62px;border-radius:50%;background:var(--active);color:white;display:grid;place-items:center;font-size:1.4rem;margin:0 auto 14px;}
+.video-slot p{font-size:0.95rem;max-width:440px;margin:0 auto 10px;}
+.video-slot strong{color:white;}
+.video-slot a{color:var(--active-mid);font-weight:600;font-size:0.9rem;}
+.video-wrap{position:relative;padding-bottom:56.25%;height:0;border-radius:14px;overflow:hidden;margin-bottom:22px;background:#000;}
+.video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+
+.step{display:flex;gap:16px;margin-bottom:18px;}
+.step-num{width:34px;height:34px;border-radius:50%;background:var(--active);color:white;font-weight:800;font-size:0.9rem;display:grid;place-items:center;flex-shrink:0;margin-top:2px;}
+.step-body{flex:1;font-size:0.97rem;line-height:1.7;}
+.step-body .step-title{font-weight:700;margin-bottom:2px;}
+.step-body .reason{color:var(--muted);font-size:0.88rem;}
+.math{font-family:Georgia,"Times New Roman",serif;font-style:italic;}
+
+.answer-box{background:var(--green-light);border:1.5px solid var(--green-mid);border-radius:14px;padding:20px 26px;margin:26px 0 22px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+.answer-box .ans-label{font-size:0.75rem;font-weight:800;color:var(--green);text-transform:uppercase;letter-spacing:.08em;}
+.answer-box .ans-value{font-size:1.5rem;font-weight:900;color:var(--navy);}
+.answer-box .ans-note{font-size:0.88rem;color:var(--muted);flex-basis:100%;}
+
+.lemma{background:var(--blue-light);border:1.5px solid var(--blue-xlight);border-radius:14px;padding:20px 26px;margin-bottom:22px;}
+.lemma h3{font-size:0.95rem;font-weight:800;color:var(--blue-dark);margin-bottom:8px;}
+.lemma p{font-size:0.92rem;line-height:1.7;margin-bottom:8px;}
+.lemma p:last-child{margin-bottom:0;}
+
+.cta-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:30px;}
+.cta-card{background:var(--surface);border:1.5px solid var(--border);border-radius:14px;padding:20px 22px;display:flex;flex-direction:column;gap:8px;transition:border-color .15s,box-shadow .15s;text-decoration:none;color:inherit;}
+.cta-card:hover{border-color:var(--active-mid);box-shadow:0 4px 16px rgba(217,119,6,0.1);text-decoration:none;}
+.cta-card .cta-icon{font-size:1.4rem;}
+.cta-card .cta-title{font-weight:700;font-size:0.95rem;color:var(--navy);}
+.cta-card .cta-sub{font-size:0.82rem;color:var(--muted);line-height:1.5;}
+.back-link{display:inline-block;margin-top:30px;font-size:0.9rem;font-weight:600;}
+
+/* ── FOOTER ── */
+footer{background:var(--navy);color:#94a3b8;padding:56px 0 28px;}
+footer .container{width:min(1000px,92%);}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:36px;}
+@media(max-width:760px){.foot-grid{grid-template-columns:1fr 1fr;}}
+.foot h4{color:white;font-size:0.92rem;font-weight:700;margin-bottom:12px;}
+.foot a{display:block;color:#94a3b8;font-size:0.88rem;margin-bottom:8px;}
+.foot a:hover{color:white;text-decoration:none;}
+.foot-brand p{font-size:0.88rem;line-height:1.7;margin-top:12px;}
+.foot-bottom{border-top:1px solid #1e293b;padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:0.82rem;}
+.foot-logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.1rem;color:white;}
+.foot-logo-mark{width:42px;height:42px;border-radius:10px;display:grid;place-items:center;overflow:hidden;}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<!-- ── NAV ── -->
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="/" class="logo logo-lockup" aria-label="Numberbender — Master the Elements of Math">
+      <img src="/images/numberbender_banner_only.svg" alt="Numberbender" class="lockup-img">
+    </a>
+    <button class="menu-toggle" aria-label="Toggle menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
+    <nav class="nav-links" id="navlinks">
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Learn <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="/start-here">🎁 Free Starter Lesson</a>
+          <a href="/find-your-course">🧭 Where Do I Start?</a>
+          <a href="/courses">📚 Explore Math Lessons</a>
+          <a href="/subjects/test-prep/">🎯 Test Prep Practice</a>
+          <a href="/math-worksheets">📝 Free Worksheets</a>
+          <a href="/for-filipino-students">🇵🇭 Para sa Filipino Students</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Teach <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="/for-teachers">🏫 For Teachers Hub</a>
+          <a href="/teach-the-math">🎓 Teach the Math</a>
+          <a href="/teach-it-like-you-stream-it">🎬 Teach It Like You Stream It</a>
+          <a href="/teacher-resources">📦 Teacher Resources</a>
+          <a href="/math-worksheets">📄 Printable Worksheets</a>
+          <a href="/courses">📚 Lesson &amp; Course Library</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger nav-mathccc" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Math CCC <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="/math-ccc">📚 Browse All Courses</a>
+          <a href="/ab1705-corequisite-math">🧭 AB 1705 Corequisite Support</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">DepEd Math <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="/deped">🇵🇭 DepEd Math Home</a>
+          <a href="/deped/teachers">👩‍🏫 For Teachers · Para sa Teachers</a>
+          <a href="/deped/grade-7">7 · Mathematics 7</a>
+          <a href="/deped/grade-8">8 · Mathematics 8</a>
+          <a href="/deped/grade-9">9 · Mathematics 9</a>
+          <a href="/deped/grade-10">10 · Mathematics 10</a>
+          <a href="/deped/shs/general-math">📐 General Mathematics</a>
+          <a href="/deped/shs/statistics-probability">📊 Statistics &amp; Probability</a>
+          <a href="/deped/shs/pre-calculus">∫ Pre-Calculus</a>
+          <a href="/deped/shs/basic-calculus">∂ Basic Calculus</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">About <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="/about">👨‍🏫 About Dr. E</a>
+          <a href="/speaking">🎤 Speaking</a>
+          <a href="/press">📰 Press &amp; Media</a>
+          <a href="/blog">✍️ Blog</a>
+          <a href="/speaking-archive">📅 Past Engagements</a>
+        </div>
+      </div>
+      <a href="/contact" class="nav-cta">Contact</a>
+    </nav>
+  </div>
+</header>
+<main id="main-content">
+
+<!-- ── HERO ── -->
+<section class="solved-hero">
+  <div class="container">
+    <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+      <a href="/">Home</a> › <a href="/solved/">Solved Problems</a> › Trapezoid Angle Bisectors
+    </nav>
+    <h1>Trapezoid Angle Bisector Problem: Find AB</h1>
+    <p class="sub">A classic geometry problem, worked out step by step by Dr. E — with the full reasoning behind every move, a video walkthrough, and a free practice worksheet.</p>
+    <div class="hero-pills">
+      <span class="hero-pill">📐 Geometry</span>
+      <span class="hero-pill">🎬 Video solution</span>
+      <span class="hero-pill">📄 Free worksheet</span>
+    </div>
+  </div>
+</section>
+
+<section class="content">
+  <div class="container">
+
+    <!-- ── PROBLEM ── -->
+    <div class="card">
+      <div class="card-label">The Problem</div>
+      <div class="problem-flex">
+        <div class="fig">
+          <svg width="280" height="330" viewBox="0 0 300 340" role="img" aria-label="Trapezoid ABCD with AD parallel to BC. The angle bisectors from A and B meet at point P on side DC.">
+            <polygon points="106,16 194,16 238,294 40,294" fill="#fffbeb" stroke="#0F172A" stroke-width="2" stroke-linejoin="round"/>
+            <line x1="106" y1="16" x2="216" y2="155" stroke="#d97706" stroke-width="1.8" stroke-dasharray="6 4"/>
+            <line x1="40" y1="294" x2="216" y2="155" stroke="#2563EB" stroke-width="1.8" stroke-dasharray="6 4"/>
+            <circle cx="216" cy="155" r="4.5" fill="#0F172A"/>
+            <path d="M 126 16 A 20 20 0 0 1 122 28" fill="none" stroke="#d97706" stroke-width="1.6"/>
+            <path d="M 119 32 A 26 26 0 0 1 110 41" fill="none" stroke="#d97706" stroke-width="1.6"/>
+            <path d="M 60 290 A 20 20 0 0 0 57 277" fill="none" stroke="#2563EB" stroke-width="1.6"/>
+            <path d="M 55 273 A 26 26 0 0 0 44 268" fill="none" stroke="#2563EB" stroke-width="1.6"/>
+            <text x="96" y="12" font-size="15" font-weight="700" fill="#0F172A">A</text>
+            <text x="198" y="12" font-size="15" font-weight="700" fill="#0F172A">D</text>
+            <text x="244" y="308" font-size="15" font-weight="700" fill="#0F172A">C</text>
+            <text x="24" y="308" font-size="15" font-weight="700" fill="#0F172A">B</text>
+            <text x="226" y="152" font-size="15" font-weight="700" fill="#d97706">P</text>
+            <text x="144" y="10" font-size="13" fill="#64748B">4</text>
+            <text x="133" y="312" font-size="13" fill="#64748B">9</text>
+          </svg>
+          <div class="fig-note">Figure not drawn to scale</div>
+        </div>
+        <p class="statement">In trapezoid <span class="math">ABCD</span>, <span class="math">AD</span> ∥ <span class="math">BC</span>. The bisectors of <span class="math">∠A</span> and <span class="math">∠B</span> intersect at point <span class="math">P</span> on side <span class="math">DC</span>. Given <span class="math">BC</span> = 9 and <span class="math">AD</span> = 4, find <span class="math">AB</span>.</p>
+      </div>
+    </div>
+
+    <!-- ── VIDEO ── -->
+    <!-- VIDEO-SLOT: when the video is live, replace this block with:
+    <div class="video-wrap">
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Trapezoid Angle Bisector Problem: Find AB — solved by Dr. E" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    ...and add the VideoObject JSON-LD to the head. -->
+    <div class="video-slot" id="video-slot">
+      <div class="vp-icon">▶</div>
+      <p><strong>Video solution coming this week.</strong> Dr. E walks through this exact problem on the whiteboard, step by step.</p>
+      <a href="https://www.youtube.com/@numberbender" target="_blank" rel="noopener">Subscribe on YouTube so you don't miss it →</a>
+    </div>
+
+    <!-- ── SOLUTION ── -->
+    <div class="card">
+      <div class="card-label">Step-by-Step Solution</div>
+
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <div class="step-title">Extend AP until it meets line BC at point E.</div>
+          Because <span class="math">AD</span> ∥ <span class="math">BC</span> with transversal <span class="math">AE</span>, the alternate interior angles are equal: <span class="math">∠DAE = ∠AEB</span>. But <span class="math">AP</span> bisects <span class="math">∠A</span>, so <span class="math">∠DAE = ∠EAB</span>. Putting these together: <span class="math">∠EAB = ∠AEB</span>.
+          <div class="reason">Two equal base angles → triangle ABE is isosceles, with AB = BE.</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <div class="step-title">BP is the bisector from the apex of isosceles △ABE — so it is also a median.</div>
+          In an isosceles triangle, the angle bisector drawn from the apex (here <span class="math">B</span>, since <span class="math">BA = BE</span>) is simultaneously the median and the altitude. <span class="math">P</span> lies on that bisector and on <span class="math">AE</span>, so <span class="math">P</span> is the <strong>midpoint of AE</strong>: <span class="math">AP = PE</span>.
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <div class="step-title">Triangles ADP and ECP are congruent (ASA).</div>
+          <span class="math">AP = PE</span> (step 2), <span class="math">∠APD = ∠EPC</span> (vertical angles), and <span class="math">∠DAP = ∠CEP</span> (alternate interior angles, <span class="math">AD</span> ∥ <span class="math">EC</span>). Therefore <span class="math">△ADP ≅ △ECP</span>, which gives <span class="math">CE = AD = 4</span>.
+          <div class="reason">Bonus: the congruence also gives DP = PC — P is the midpoint of DC.</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <div class="step-title">Add the segments along line BC.</div>
+          <span class="math">AB = BE = BC + CE = 9 + 4 = 13</span>.
+        </div>
+      </div>
+
+      <div class="answer-box">
+        <span class="ans-label">Answer</span>
+        <span class="ans-value">AB = 13</span>
+        <span class="ans-note">In general: whenever the bisectors of the two angles on one leg of a trapezoid meet on the other leg, that first leg equals the <em>sum</em> of the parallel sides — here AB = AD + BC.</span>
+      </div>
+    </div>
+
+    <!-- ── TEACHER TAKEAWAY ── -->
+    <div class="lemma">
+      <h3>💡 Why this works — the picture to remember</h3>
+      <p>The whole solution is one idea: <strong>a bisector plus parallel lines creates an isosceles triangle.</strong> The moment you extend AP to line BC, the alternate-interior angles "copy" half of ∠A down to E, forcing AB = BE. Everything after that is bookkeeping.</p>
+      <p>Two elegant facts hide inside this configuration: P is always the <strong>midpoint of DC</strong>, and since ∠A + ∠B = 180° (co-interior angles), the half-angles add to 90° — so <strong>∠APB is always a right angle</strong>. Both make great extension questions for students.</p>
+    </div>
+
+    <!-- ── CTAs ── -->
+    <div class="cta-grid">
+      <a class="cta-card" href="/worksheets/geometry/02-05-geometry-angle-bisectors-perpendicular-bisectors.pdf" target="_blank" rel="noopener">
+        <span class="cta-icon">📄</span>
+        <span class="cta-title">Practice this skill — free worksheet</span>
+        <span class="cta-sub">Angle bisectors &amp; perpendicular bisectors PDF — more problems just like this one.</span>
+      </a>
+      <a class="cta-card" href="/subjects/geometry/">
+        <span class="cta-icon">📐</span>
+        <span class="cta-title">All geometry video lessons</span>
+        <span class="cta-sub">7 units from foundations to circles — free, in English and Filipino.</span>
+      </a>
+      <a class="cta-card" href="https://www.youtube.com/@numberbender" target="_blank" rel="noopener">
+        <span class="cta-icon">🎬</span>
+        <span class="cta-title">Numberbender on YouTube</span>
+        <span class="cta-sub">700+ free math lessons by Dr. E. Subscribe for new solved problems.</span>
+      </a>
+    </div>
+
+    <a class="back-link" href="/solved/">← Browse all solved problems</a>
+
+  </div>
+</section>
+
+</main>
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot foot-brand">
+        <div class="foot-logo">
+          <div class="foot-logo-mark">
+            <img src="/images/numberbender-mark-teal-transparent.svg" alt="Numberbender" style="width:100%;height:100%;object-fit:contain;">
+          </div>
+          <span>Numberbender</span>
+        </div>
+        <p>Helping students learn math with confidence and helping educators teach online with energy, clarity, and impact.</p>
+      </div>
+      <div class="foot">
+        <h4>Subjects</h4>
+        <a href="/courses">All Subjects</a>
+        <a href="/subjects/algebra/">Algebra</a>
+        <a href="/subjects/geometry/">Geometry</a>
+        <a href="/subjects/precalculus/">Precalculus</a>
+      </div>
+      <div class="foot">
+        <h4>Full Courses</h4>
+        <a href="/learn/elementary-algebra/">Elementary Algebra</a>
+        <a href="/learn/intermediate-algebra/">Intermediate Algebra</a>
+      </div>
+      <div class="foot">
+        <h4>Connect</h4>
+        <a href="/about">About Dr. E</a>
+        <a href="/math-worksheets">Worksheets</a>
+        <a href="/contact">Contact</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Numberbender · Dr. Peter Esperanza</span>
+      <span>Free bilingual math — English &amp; Filipino 🇵🇭</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleDD(btn){
+  var menu=btn.nextElementSibling;
+  var willOpen=!menu.classList.contains('open');
+  document.querySelectorAll('.nav-dropdown .dropdown-menu.open').forEach(function(m){
+    m.classList.remove('open');
+    var t=m.previousElementSibling;
+    if(t)t.setAttribute('aria-expanded','false');
+  });
+  if(willOpen){
+    menu.style.transition='none';
+    menu.classList.add('open');
+    menu.getBoundingClientRect();
+    menu.style.transition='';
+    btn.setAttribute('aria-expanded','true');
+  }
+}
+document.addEventListener('click',function(e){
+  if(!e.target.closest('.nav-dropdown')){
+    document.querySelectorAll('.nav-dropdown .dropdown-menu.open').forEach(function(m){
+      m.classList.remove('open');
+      var t=m.previousElementSibling;
+      if(t)t.setAttribute('aria-expanded','false');
+    });
+  }
+});
+</script>
+<script src="/nb-search.js"></script>
+</body>
+</html>
