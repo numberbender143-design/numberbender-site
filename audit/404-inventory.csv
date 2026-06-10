@@ -28,7 +28,7 @@ url,status,referring_page,source,suggested_fix
 /deped/grade-7/numberbender_solving_basic_equations_integer_operations.pdf,404,/deped/grade-7,crawl,FIXED: href rewritten to /worksheets/algebra/numberbender_solving_basic_equations_integer_operations.pdf (verified 200)
 /deped/grade-7/numberbender_solving_one_step_linear_equations.pdf,404,/deped/grade-7,crawl,FIXED: href rewritten to /worksheets/algebra/numberbender_solving_one_step_linear_equations.pdf (verified 200)
 /images/carousel_5_tips/slide-4.webp,404,/find-your-course,crawl,FIXED: generated WebP (plus all 6 carousel slides) and added width/height
-/BLOG_VIDEO_POST/esperanza_youtube_event.mp4,404,/blog-become-edutuber,crawl,REMAINING — needs owner decision: file is gitignored so it never deploys; either host the video (e.g. YouTube embed) or remove the broken <video> block
+/BLOG_VIDEO_POST/esperanza_youtube_event.mp4,404,/blog-become-edutuber,crawl,FIXED (owner-approved): replaced with youtube-nocookie embed of FeVpR31V2rg (verified live); local mp4 already absent
 /about.html,301 chain (internal links/JSON-LD pointed at redirecting URL),multiple pages,crawl,FIXED: internal links + JSON-LD rewritten to clean URL; robots.txt no longer blocks the 301
 /courses.html,301 chain (internal links/JSON-LD pointed at redirecting URL),multiple pages,crawl,FIXED: internal links + JSON-LD rewritten to clean URL; robots.txt no longer blocks the 301
 /ccc-atlas.html,301 chain (internal links/JSON-LD pointed at redirecting URL),multiple pages,crawl,FIXED: internal links + JSON-LD rewritten to clean URL; robots.txt no longer blocks the 301

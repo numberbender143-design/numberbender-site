@@ -5,7 +5,7 @@
 
 ## Executive summary
 
-The site's redirect and canonical infrastructure was already strong; the audit found and fixed one cluster of genuine user-facing 404s (all 28 worksheet PDF links on the Grade-7 DepEd page were broken), a sitewide pattern of internal links and JSON-LD pointing at `.html` URLs that 301-redirect (a wasted hop on every crawl), and a robots.txt that *blocked Google from following those same 301s*, preventing signal consolidation. Two URLs (`/index.html`, `/math-worksheets.html`) were serving 200 duplicate content because their redirect rules were shadowed by the physical files — now forced. On the Core Web Vitals side, the priority pages for the Philippine mobile audience (DepEd hub, press, speaking, homepage) were shipping multi-megabyte PNGs; they now serve WebP at 4–25× smaller with explicit dimensions and LCP preloads. One item needs an owner decision: a blog page embeds a video file that is gitignored and can never exist in production.
+The site's redirect and canonical infrastructure was already strong; the audit found and fixed one cluster of genuine user-facing 404s (all 28 worksheet PDF links on the Grade-7 DepEd page were broken), a sitewide pattern of internal links and JSON-LD pointing at `.html` URLs that 301-redirect (a wasted hop on every crawl), and a robots.txt that *blocked Google from following those same 301s*, preventing signal consolidation. Two URLs (`/index.html`, `/math-worksheets.html`) were serving 200 duplicate content because their redirect rules were shadowed by the physical files — now forced. On the Core Web Vitals side, the priority pages for the Philippine mobile audience (DepEd hub, press, speaking, homepage) were shipping multi-megabyte PNGs; they now serve WebP at 4–25× smaller with explicit dimensions and LCP preloads. A blog page embedded a video file that was gitignored and could never exist in production; with owner approval it now uses the YouTube embed of the same clip.
 
 ## 404 inventory — found → fixed → remaining
 
@@ -17,7 +17,7 @@ The site's redirect and canonical infrastructure was already strong; the audit f
 | `/index.html` and `/math-worksheets.html` served 200 duplicates (non-forced rules shadowed by files) | 2 | **Fixed** — `301!` forced in `_redirects` (takes effect on deploy) |
 | 126 internal links to `/subjects/test-prep` (canonical is `…/test-prep/`); 1 stray `/deped/teachers/` | 127 | **Fixed** — normalized to canonical forms |
 | `/uploads/attachments/*` redirected to `/` (more specific netlify.toml rule was shadowed) | pattern | **Fixed** — specific rule added in `_redirects` |
-| `blog-become-edutuber` embeds `/BLOG_VIDEO_POST/esperanza_youtube_event.mp4` — file is **gitignored**, 404s live, player shows broken | 1 | **REMAINING — owner decision** (removing the visible block is out of authorized scope). Options: host the clip on YouTube and embed it, or delete the `<video>` block. |
+| `blog-become-edutuber` embedded `/BLOG_VIDEO_POST/esperanza_youtube_event.mp4` — file was gitignored, 404'd live, player showed broken | 1 | **Fixed (owner-approved)** — replaced with the YouTube embed of the same clip (`youtube-nocookie.com/embed/FeVpR31V2rg`, verified live via oEmbed). Local mp4 already absent from disk. |
 
 Full row-by-row detail in [404-inventory.csv](404-inventory.csv).
 
@@ -65,11 +65,10 @@ Also: explicit `width`/`height` added on every newly wrapped image (CLS); carous
 
 ## Deferred to human review
 
-1. **Broken video embed** on `/blog-become-edutuber` (see above) — content decision.
-2. **Test-prep badge images** (`images/badges_test_prep/*.png`, ~1.2 MB total) are injected via inline JS on `/subjects/test-prep/`; converting to WebP means editing JS string paths. Below the fold, so deferred.
-3. **`/deped` vs `/deped/` both return 200** (Netlify serves directories both ways). Canonicals/sitemap/links are consistent, so this is cosmetic; a forced slash policy could be added if GSC ever reports duplicates.
-4. **Sitemap generation** is manual — works today (verified 1:1 with routes) but will drift; recommend automating.
-5. **`exports/` PDFs** (100 files) are deployed without `X-Robots-Tag: noindex` (the `/*.pdf` header rule covers them — verify in GSC that none are indexed as duplicates of course pages).
+1. **Test-prep badge images** (`images/badges_test_prep/*.png`, ~1.2 MB total) are injected via inline JS on `/subjects/test-prep/`; converting to WebP means editing JS string paths. Below the fold, so deferred.
+2. **`/deped` vs `/deped/` both return 200** (Netlify serves directories both ways). Canonicals/sitemap/links are consistent, so this is cosmetic; a forced slash policy could be added if GSC ever reports duplicates.
+3. **Sitemap generation** is manual — works today (verified 1:1 with routes) but will drift; recommend automating.
+4. **`exports/` PDFs** (100 files) are deployed without `X-Robots-Tag: noindex` (the `/*.pdf` header rule covers them — verify in GSC that none are indexed as duplicates of course pages).
 
 ## Owner action items (need account access)
 
