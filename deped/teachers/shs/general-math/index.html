@@ -2,192 +2,187 @@
 <html lang="en" data-lang="en">
 <head>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-P1M2WZD840"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-P1M2WZD840');
-</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-P1M2WZD840');</script>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>General Mathematics for Teachers (DepEd SHS) | Numberbender</title>
-<meta name="description" content="Teacher view of DepEd Senior High General Mathematics — functions and logic — with lessons, worksheets and assign links in English and Filipino." />
+<meta name="description" content="Teacher view of DepEd SHS General Mathematics — inline lessons, printable worksheets, and copy-ready assign links. English and Filipino." />
 <link rel="canonical" href="https://numberbender.com/deped/teachers/shs/general-math" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="General Mathematics for Teachers (DepEd SHS) | Numberbender" />
-<meta property="og:description" content="Teacher view of DepEd Senior High General Mathematics — functions and logic — with lessons, worksheets and assign links in English and Filipino." />
+<meta property="og:description" content="Teacher view of DepEd SHS General Mathematics — inline lessons, printable worksheets, and copy-ready assign links. English and Filipino." />
 <meta property="og:url" content="https://numberbender.com/deped/teachers/shs/general-math" />
 <meta property="og:site_name" content="Numberbender" />
 <meta property="og:image" content="https://numberbender.com/images/filipino_math_hero_image.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@numberbender" />
 <meta name="twitter:title" content="General Mathematics for Teachers (DepEd SHS) | Numberbender" />
-<meta name="twitter:description" content="Teacher view of DepEd Senior High General Mathematics — functions and logic — with lessons, worksheets and assign links in English and Filipino." />
+<meta name="twitter:description" content="Teacher view of DepEd SHS General Mathematics — inline lessons, printable worksheets, and copy-ready assign links. English and Filipino." />
 <link rel="icon" type="image/svg+xml" href="/images/exports/numberbender-favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/images/exports/png/favicon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/images/exports/png/favicon-180.png">
 <meta name="theme-color" content="#0F766E">
 <script type="application/ld+json">
-{ "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{ "@type":"ListItem","position":1,"name":"DepEd Math","item":"https://numberbender.com/deped" },{ "@type":"ListItem","position":2,"name":"For Teachers","item":"https://numberbender.com/deped/teachers" },{ "@type": "ListItem", "position": 3, "name": "Senior High", "item": "https://numberbender.com/deped/teachers" },
-    { "@type":"ListItem","position":4,"name":"General Mathematics","item":"https://numberbender.com/deped/teachers/shs/general-math" }] }
+{
+  "@context":"https://schema.org","@type":"Course",
+  "name":"General Mathematics — DepEd SHS (Free Bilingual)",
+  "description":"SHS General Mathematics — functions, rational functions, exponential and logarithmic functions, logic. Free bilingual video lessons.",
+  "inLanguage":["en","tl"],"url":"https://numberbender.com/deped/teachers/shs/general-math",
+  "provider":{"@type":"EducationalOrganization","name":"Numberbender","url":"https://numberbender.com"},
+  "isAccessibleForFree":true
+}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"DepEd Math","item":"https://numberbender.com/deped"},
+    {"@type":"ListItem","position":2,"name":"For Teachers","item":"https://numberbender.com/deped/teachers"},
+    {"@type":"ListItem","position":3,"name":"General Mathematics","item":"https://numberbender.com/deped/teachers/shs/general-math"}]}
 </script>
 <style>
-
   :root{
     --navy:#0F172A; --blue:#2563EB; --yellow:#FACC15; --cyan:#06B6D4; --green:#22C55E;
     --bg:#F8FAFC; --surface:#FFFFFF; --muted:#64748B; --border:#E2E8F0;
-    --shadow: 0 10px 30px rgba(15, 23, 42, 0.08); --shadow-lg: 0 20px 50px rgba(15, 23, 42, 0.12); --radius: 16px;
+    --shadow: 0 10px 30px rgba(15,23,42,0.08); --shadow-lg: 0 20px 50px rgba(15,23,42,0.12); --radius:16px;
     --indigo:#0F766E; --indigo-dk:#115E59; --amber:#F59E0B; --emerald:#059669;
   }
-  *{ box-sizing: border-box; margin:0; padding:0; }
-  html{ scroll-behavior:smooth; }
-  body{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", Roboto, "Helvetica Neue", Arial, sans-serif; color: var(--navy); background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; }
-  a{ color: var(--blue); text-decoration:none; }
-  a:hover{ text-decoration: underline; }
-  img{ max-width:100%; display:block; }
-  .container{ width: min(1100px, 92%); margin-inline: auto; }
-
-  /* NAV */
-  .nav{ position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,0.92); backdrop-filter: saturate(180%) blur(10px); border-bottom: 1px solid var(--border); }
-  .nav-inner{ display:flex; align-items:center; justify-content:space-between; padding: 14px 0; }
-  .logo{ display:flex; align-items:center; gap:10px; font-weight: 800; font-size: 1.15rem; color: var(--navy); }
-  .nav-links{ display:flex; gap: 22px; align-items:center; flex-wrap:nowrap; }
-  .nav-links a{ color: var(--navy); font-weight: 500; font-size: 0.95rem; white-space:nowrap; }
-  .nav-links a:hover{ color: var(--blue); text-decoration: none; }
-  .nav-links a:focus-visible, .nav-dropdown .dropdown-trigger:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; border-radius: 4px; }
-  .nav-cta{ background: var(--navy); color: white !important; padding: 9px 16px; border-radius: 10px; font-weight: 600; }
-  .nav-cta:hover{ background: var(--blue); text-decoration: none; }
-  .menu-toggle{ display:none; background:none; border:none; cursor:pointer; font-size: 1.4rem; color: var(--navy); }
-  .nav-dropdown{ position: relative; }
-  .nav-dropdown .dropdown-trigger{ background: none; border: none; padding: 0; margin: 0; font: inherit; color: var(--navy); font-weight: 500; font-size: 0.95rem; cursor: pointer; display: inline-flex; align-items: center; gap: 4px; white-space:nowrap; }
-  .nav-dropdown .dropdown-trigger:hover{ color: var(--blue); }
-  .nav-dropdown .caret{ font-size: 0.75em; transition: transform .2s ease; }
-  .nav-dropdown .dropdown-trigger[aria-expanded="true"] .caret{ transform: rotate(180deg); }
-  .nav-dropdown .dropdown-menu{ position: absolute; top: 100%; left: 0; margin-top: 10px; background: white; border: 1px solid var(--border); border-radius: 14px; padding: 6px; box-shadow: 0 20px 50px rgba(15, 23, 42, 0.12); min-width: 250px; opacity: 0; visibility: hidden; transform: translateY(-6px); transition: opacity .15s ease, transform .15s ease, visibility .15s ease; z-index: 100; }
-  .nav-dropdown .dropdown-menu::before{ content: ''; position: absolute; top: -10px; left: 0; right: 0; height: 10px; }
-  .nav-dropdown:hover .dropdown-menu, .nav-dropdown .dropdown-menu.open{ opacity: 1; visibility: visible; transform: translateY(0); }
-  .nav-dropdown .dropdown-menu a{ display: block; padding: 10px 14px; border-radius: 8px; color: var(--navy); font-weight: 500; font-size: 0.95rem; }
-  .nav-dropdown .dropdown-menu a:hover{ background: rgba(13,148,136,.08); color: var(--indigo); text-decoration: none; }
-  .dd-label{ font-size:.7rem; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); padding:10px 14px 4px; }
-  .logo-lockup .lockup-img{ height: 60px; width:auto; display:block; max-width:300px; }
-  @media (max-width: 900px){
-    .nav-dropdown{ width: 100%; }
-    .nav-dropdown .dropdown-trigger{ width: 100%; justify-content: space-between; padding: 6px 0; }
-    .nav-dropdown .dropdown-menu{ position: static; box-shadow: none; border: none; padding: 0 0 4px 14px; margin-top: 0; min-width: 0; opacity: 1; visibility: visible; transform: none; display: none; background: transparent; }
-    .nav-dropdown .dropdown-menu.open{ display: block; }
-    .nav-links{ display:none; position:absolute; top:100%; left:0; right:0; background:white; flex-direction:column; padding:18px; border-bottom:1px solid var(--border); gap:14px; }
-    .nav-links.open{ display:flex; }
-    .menu-toggle{ display:block; }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Inter",Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--navy);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;}
+  a{color:var(--blue);text-decoration:none;} a:hover{text-decoration:underline;}
+  img{max-width:100%;display:block;}
+  .container{width:min(1100px,92%);margin-inline:auto;}
+  .nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.92);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid var(--border);}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0;}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.15rem;color:var(--navy);}
+  .nav-links{display:flex;gap:22px;align-items:center;flex-wrap:nowrap;}
+  .nav-links a{color:var(--navy);font-weight:500;font-size:0.95rem;white-space:nowrap;}
+  .nav-links a:hover{color:var(--blue);text-decoration:none;}
+  .nav-links a:focus-visible,.nav-dropdown .dropdown-trigger:focus-visible{outline:3px solid var(--blue);outline-offset:2px;border-radius:4px;}
+  .nav-cta{background:var(--navy);color:white!important;padding:9px 16px;border-radius:10px;font-weight:600;}
+  .nav-cta:hover{background:var(--blue);text-decoration:none;}
+  .menu-toggle{display:none;background:none;border:none;cursor:pointer;font-size:1.4rem;color:var(--navy);}
+  .nav-dropdown{position:relative;}
+  .nav-dropdown .dropdown-trigger{background:none;border:none;padding:0;margin:0;font:inherit;color:var(--navy);font-weight:500;font-size:0.95rem;cursor:pointer;display:inline-flex;align-items:center;gap:4px;white-space:nowrap;}
+  .nav-dropdown .dropdown-trigger:hover{color:var(--blue);}
+  .nav-dropdown .caret{font-size:0.75em;transition:transform .2s ease;}
+  .nav-dropdown .dropdown-trigger[aria-expanded="true"] .caret{transform:rotate(180deg);}
+  .nav-dropdown .dropdown-menu{position:absolute;top:100%;left:0;margin-top:10px;background:white;border:1px solid var(--border);border-radius:14px;padding:6px;box-shadow:0 20px 50px rgba(15,23,42,0.12);min-width:250px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .15s ease,transform .15s ease,visibility .15s ease;z-index:100;}
+  .nav-dropdown .dropdown-menu::before{content:'';position:absolute;top:-10px;left:0;right:0;height:10px;}
+  .nav-dropdown:hover .dropdown-menu,.nav-dropdown .dropdown-menu.open{opacity:1;visibility:visible;transform:translateY(0);}
+  .nav-dropdown .dropdown-menu a{display:block;padding:10px 14px;border-radius:8px;color:var(--navy);font-weight:500;font-size:0.95rem;}
+  .nav-dropdown .dropdown-menu a:hover{background:rgba(55,48,163,.08);color:var(--indigo);text-decoration:none;}
+  .dd-label{font-size:.7rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding:10px 14px 4px;}
+  .logo-lockup .lockup-img{height:60px;width:auto;display:block;max-width:300px;}
+  @media (max-width:900px){
+    .nav-dropdown{width:100%;}
+    .nav-dropdown .dropdown-trigger{width:100%;justify-content:space-between;padding:6px 0;}
+    .nav-dropdown .dropdown-menu{position:static;box-shadow:none;border:none;padding:0 0 4px 14px;margin-top:0;min-width:0;opacity:1;visibility:visible;transform:none;display:none;background:transparent;}
+    .nav-dropdown .dropdown-menu.open{display:block;}
+    .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:white;flex-direction:column;padding:18px;border-bottom:1px solid var(--border);gap:14px;}
+    .nav-links.open{display:flex;}
+    .menu-toggle{display:block;}
   }
-
-  /* BUTTONS */
-  .btn{ display:inline-flex; align-items:center; justify-content:center; gap:8px; padding: 13px 22px; border-radius: 12px; font-weight: 600; font-size: 1rem; cursor: pointer; border: 2px solid transparent; transition: transform .15s ease, box-shadow .15s ease, background .15s ease; text-decoration: none !important; }
-  .btn:hover{ transform: translateY(-2px); box-shadow: var(--shadow); }
-  .btn-primary{ background: var(--indigo); color: white; }
-  .btn-primary:hover{ background: var(--indigo-dk); }
-  .btn-glass{ background: rgba(255,255,255,0.16); color: white; border: 1.5px solid rgba(255,255,255,0.32); }
-  .btn-glass:hover{ background: rgba(255,255,255,0.26); color:white; }
-  .btn-glass-solid{ background: rgba(255,255,255,0.95); color: var(--indigo); }
-  .btn-glass-solid:hover{ background:white; color:var(--indigo); }
-
-  /* HERO */
-  .hero{ position: relative; padding: 30px 0 56px; overflow: hidden; color:white;
-    background: radial-gradient(900px 600px at 100% -20%, rgba(245,158,11,0.18), transparent 60%), radial-gradient(800px 500px at -10% 80%, rgba(20,184,166,0.30), transparent 60%), linear-gradient(150deg, #042f2e 0%, #0F766E 55%, #134e4a 100%); }
-  .breadcrumb{ font-size:.85rem; padding:18px 0 0; }
-  .breadcrumb a{ color:rgba(255,255,255,0.75); }
-  .breadcrumb a:hover{ color:#fff; }
-  .breadcrumb span{ color:rgba(255,255,255,0.5); }
-  .hero-inner{ max-width: 820px; padding-top: 22px; }
-  .hero-eyebrow{ display:inline-flex; align-items:center; gap:8px; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.22); color: rgba(255,255,255,0.92); padding: 6px 14px; border-radius: 999px; font-size: 0.82rem; font-weight: 600; margin-bottom: 16px; }
-  .hero h1{ font-size: clamp(2rem, 4vw, 3rem); line-height: 1.06; letter-spacing: -0.025em; font-weight: 800; margin-bottom: 6px; }
-  .hero .h1-fil{ font-size: 1.1rem; color:#FCD34D; font-weight:700; font-style:italic; margin-bottom:14px; }
-  .hero p.subhead{ font-size: 1.08rem; color: rgba(255,255,255,0.82); margin: 0 0 8px; max-width: 660px; }
-  .hero p.subhead-fil{ font-size: .98rem; color: rgba(255,255,255,0.6); font-style: italic; margin: 0 0 20px; }
-  .lang-toggle{ display:inline-flex; border:1px solid rgba(255,255,255,0.32); border-radius:999px; overflow:hidden; background:rgba(255,255,255,0.1); }
-  .lang-btn{ padding:7px 20px; border:none; background:transparent; font-weight:700; cursor:pointer; color:rgba(255,255,255,0.7); font-size:.88rem; transition: background .15s, color .15s; }
-  .lang-btn[aria-pressed="true"]{ background:#fff; color:var(--indigo-dk); }
-
-  /* DOMAIN SECTIONS */
-  section{ padding: 56px 0; }
-  .domain{ margin-bottom: 30px; }
-  .domain:last-child{ margin-bottom:0; }
-  .domain-head{ display:flex; align-items:center; gap:12px; margin-bottom: 14px; }
-  .domain-num{ width:38px; height:38px; flex-shrink:0; border-radius:10px; background:linear-gradient(135deg,var(--indigo),#14B8A6); color:#fff; font-weight:800; display:grid; place-items:center; font-size:1rem; }
-  .domain-head h2{ font-size: 1.3rem; letter-spacing:-0.01em; }
-  .domain-head .d-fil{ font-size:.85rem; color:var(--muted); font-style:italic; }
-  .topic-list{ display:grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-  .topic-row{ display:flex; align-items:center; justify-content:space-between; gap:14px; background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:16px 18px; text-decoration:none !important; color:var(--navy); transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease; }
-  .topic-row:hover{ transform: translateY(-2px); box-shadow: var(--shadow); border-color: var(--indigo); }
-  .topic-row .t-main{ display:flex; flex-direction:column; min-width:0; }
-  .topic-row .t-title{ font-weight:700; font-size:.98rem; }
-  .topic-row .t-sub{ font-size:.8rem; color:var(--muted); }
-  .topic-row .t-go{ font-size:.82rem; font-weight:700; color:var(--indigo); white-space:nowrap; flex-shrink:0; }
-  .topic-row:hover .t-go{ text-decoration:underline; }
-  .topic-row.soon{ opacity:.92; }
-  .topic-row.soon .t-go{ color:var(--muted); }
-  .cov-pill{ display:inline-block; font-size:.66rem; font-weight:800; letter-spacing:.05em; text-transform:uppercase; padding:2px 7px; border-radius:999px; margin-left:8px; vertical-align:middle; }
-  .cov-full{ background:rgba(5,150,105,.12); color:var(--emerald); }
-  .cov-soon{ background:#f1f5f9; color:var(--muted); }
-
-  .callout{ background:#fff; border:1px solid var(--border); border-left:5px solid var(--amber); border-radius:12px; padding:16px 20px; margin-top:28px; font-size:.92rem; color:var(--muted); }
-
-  /* TEACHER + SHARE */
-  .teach-band{ background:var(--surface); border:1px solid var(--border); border-radius:18px; padding:28px; display:flex; flex-wrap:wrap; gap:18px; align-items:center; justify-content:space-between; }
-  .teach-band h3{ font-size:1.15rem; margin-bottom:4px; }
-  .teach-band p{ color:var(--muted); font-size:.95rem; }
-  .for-teachers-badge{ display:inline-flex; align-items:center; gap:6px; background:rgba(5,150,105,.12); color:var(--emerald); font-weight:700; font-size:.72rem; padding:4px 10px; border-radius:999px; margin-bottom:8px; }
-  .teach-actions{ display:flex; gap:12px; flex-wrap:wrap; }
-  .share-btn{ background:transparent; border:2px solid var(--border); color:var(--navy); border-radius:12px; padding:13px 20px; font-weight:600; cursor:pointer; font-size:1rem; transition:border-color .15s, color .15s; }
-  .share-btn:hover{ border-color:var(--indigo); color:var(--indigo); }
-
-  /* NEXT/PREV */
-  .grade-nav{ display:flex; justify-content:space-between; gap:12px; margin-top:36px; flex-wrap:wrap; }
-  .grade-nav a{ font-weight:700; color:var(--indigo); }
-
-  /* FOOTER */
-  footer{ background: #0b1220; color: #94a3b8; padding: 46px 0 24px; }
-  .foot-grid{ display:grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 32px; margin-bottom: 28px; }
-  .foot h4{ color: white; margin-bottom: 12px; font-size: 0.92rem; letter-spacing: .05em; text-transform: uppercase; }
-  .foot a{ color: #94a3b8; display: block; padding: 4px 0; font-size: 0.93rem; }
-  .foot a:hover{ color: white; text-decoration: none; }
-  .footer-tagline{ color: var(--cyan); font-style: italic; font-weight: 600; margin-top: 8px; font-size: 0.93rem; }
-  .foot-bottom{ border-top: 1px solid #1e293b; padding-top: 18px; text-align: center; font-size: 0.85rem; }
-  .foot-bottom a{ color:#94a3b8; text-decoration:underline; }
-
-  @media (max-width: 760px){
-    .topic-list{ grid-template-columns: 1fr; }
-    .foot-grid{ grid-template-columns: 1fr 1fr; }
-  }
-  @media (max-width: 560px){ section{ padding:44px 0; } .foot-grid{ grid-template-columns:1fr; } }
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 22px;border-radius:12px;font-weight:600;font-size:1rem;cursor:pointer;border:2px solid transparent;transition:transform .15s ease,box-shadow .15s ease,background .15s ease;text-decoration:none!important;}
+  .btn:hover{transform:translateY(-2px);box-shadow:var(--shadow);}
+  .btn-primary{background:var(--indigo);color:white;} .btn-primary:hover{background:var(--indigo-dk);}
+  .hero{position:relative;padding:30px 0 56px;overflow:hidden;color:white;
+    background:radial-gradient(900px 600px at 100% -20%,rgba(245,158,11,0.18),transparent 60%),radial-gradient(800px 500px at -10% 80%,rgba(99,102,241,0.30),transparent 60%),linear-gradient(150deg,#1e1b4b 0%,#0F766E 55%,#115E59 100%);}
+  .breadcrumb{font-size:.85rem;padding:18px 0 0;}
+  .breadcrumb a{color:rgba(255,255,255,0.75);} .breadcrumb a:hover{color:#fff;}
+  .breadcrumb span{color:rgba(255,255,255,0.5);}
+  .hero-inner{max-width:820px;padding-top:22px;}
+  .hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.22);color:rgba(255,255,255,0.92);padding:6px 14px;border-radius:999px;font-size:0.82rem;font-weight:600;margin-bottom:16px;}
+  .hero h1{font-size:clamp(2rem,4vw,3rem);line-height:1.06;letter-spacing:-0.025em;font-weight:800;margin-bottom:6px;}
+  .hero .h1-fil{font-size:1.1rem;color:#FCD34D;font-weight:700;font-style:italic;margin-bottom:14px;}
+  .hero p.subhead{font-size:1.08rem;color:rgba(255,255,255,0.82);margin:0 0 8px;max-width:660px;}
+  .hero p.subhead-fil{font-size:.98rem;color:rgba(255,255,255,0.6);font-style:italic;margin:0 0 20px;}
+  .lang-toggle{display:inline-flex;border:1px solid rgba(255,255,255,0.32);border-radius:999px;overflow:hidden;background:rgba(255,255,255,0.1);}
+  .lang-btn{padding:7px 20px;border:none;background:transparent;font-weight:700;cursor:pointer;color:rgba(255,255,255,0.7);font-size:.88rem;transition:background .15s,color .15s;}
+  .lang-btn[aria-pressed="true"]{background:#fff;color:#115E59;}
+  section{padding:56px 0;}
+  .domain{margin-bottom:30px;} .domain:last-child{margin-bottom:0;}
+  .domain-head{display:flex;align-items:center;gap:12px;margin-bottom:14px;}
+  .domain-num{width:38px;height:38px;flex-shrink:0;border-radius:10px;background:linear-gradient(135deg,var(--indigo),#6366F1);color:#fff;font-weight:800;display:grid;place-items:center;font-size:1rem;}
+  .domain-head h2{font-size:1.3rem;letter-spacing:-0.01em;}
+  .domain-head .d-fil{font-size:.85rem;color:var(--muted);font-style:italic;}
+  .cov-pill{display:inline-block;font-size:.66rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;padding:2px 7px;border-radius:999px;margin-left:8px;vertical-align:middle;}
+  .cov-soon{background:#f1f5f9;color:var(--muted);}
+  .callout{background:#fff;border:1px solid var(--border);border-left:5px solid var(--amber);border-radius:12px;padding:16px 20px;margin-top:28px;font-size:.92rem;color:var(--muted);}
+  .teach-band{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:28px;display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between;}
+  .teach-band h3{font-size:1.15rem;margin-bottom:4px;} .teach-band p{color:var(--muted);font-size:.95rem;}
+  .for-teachers-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(5,150,105,.12);color:var(--emerald);font-weight:700;font-size:.72rem;padding:4px 10px;border-radius:999px;margin-bottom:8px;}
+  .teach-actions{display:flex;gap:12px;flex-wrap:wrap;}
+  .share-btn{background:transparent;border:2px solid var(--border);color:var(--navy);border-radius:12px;padding:13px 20px;font-weight:600;cursor:pointer;font-size:1rem;transition:border-color .15s,color .15s;}
+  .share-btn:hover{border-color:var(--indigo);color:var(--indigo);}
+  .grade-nav{display:flex;justify-content:space-between;gap:12px;margin-top:36px;flex-wrap:wrap;}
+  .grade-nav a{font-weight:700;color:var(--indigo);}
+  footer{background:#0b1220;color:#94a3b8;padding:46px 0 24px;}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px;margin-bottom:28px;}
+  .foot h4{color:white;margin-bottom:12px;font-size:0.92rem;letter-spacing:.05em;text-transform:uppercase;}
+  .foot a{color:#94a3b8;display:block;padding:4px 0;font-size:0.93rem;}
+  .foot a:hover{color:white;text-decoration:none;}
+  .footer-tagline{color:var(--cyan);font-style:italic;font-weight:600;margin-top:8px;font-size:0.93rem;}
+  .foot-bottom{border-top:1px solid #1e293b;padding-top:18px;text-align:center;font-size:0.85rem;}
+  .foot-bottom a{color:#94a3b8;text-decoration:underline;}
+  @media (max-width:760px){.foot-grid{grid-template-columns:1fr 1fr;}}
+  @media (max-width:560px){section{padding:44px 0;} .foot-grid{grid-template-columns:1fr;}}
   .skip-link{position:absolute;left:-9999px;}
   .skip-link:focus{position:fixed;top:0;left:0;padding:8px 16px;background:#0F2B3D;color:#fff;z-index:9999;text-decoration:none;}
+  /* Accordion */
+  .acc{background:var(--surface);border:1px solid var(--border);border-radius:14px;margin-bottom:14px;overflow:hidden;}
+  .acc-head{display:flex;align-items:center;gap:14px;padding:16px 18px;cursor:pointer;user-select:none;}
+  .acc-head:hover{background:#fafaff;}
+  .acc-badge{flex-shrink:0;min-width:56px;height:34px;padding:0 12px;border-radius:10px;background:linear-gradient(135deg,var(--indigo),#6366F1);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:.82rem;white-space:nowrap;}
+  .acc-info{flex:1;min-width:0;} .acc-info h3{font-size:1.05rem;margin:0;} .acc-info .acc-sub{font-size:.8rem;color:var(--muted);}
+  .acc-meta{font-size:.8rem;color:var(--muted);white-space:nowrap;}
+  .acc-chev{transition:transform .2s;color:var(--muted);} .acc.open .acc-chev{transform:rotate(180deg);}
+  .acc-body{display:none;border-top:1px solid var(--border);padding:6px 12px 12px;} .acc.open .acc-body{display:block;}
+  .lesson{display:flex;align-items:center;gap:14px;padding:12px 8px;border-radius:10px;}
+  .lesson+.lesson{border-top:1px solid var(--border);}
+  .lesson:hover{background:#fafaff;}
+  .lesson-play{flex-shrink:0;width:40px;height:40px;border-radius:50%;background:var(--indigo);color:#fff;border:none;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:.95rem;}
+  .lesson-play:hover{background:var(--indigo-dk);}
+  .lesson-main{flex:1;min-width:0;} .lesson-main .lt{font-weight:700;font-size:.95rem;} .lesson-main .ls{font-size:.78rem;color:var(--muted);}
+  .lesson-badge{flex-shrink:0;font-size:.64rem;font-weight:800;padding:3px 8px;border-radius:999px;background:rgba(5,150,105,.12);color:var(--emerald);}
+  .lesson-badge.en{background:#eef2ff;color:var(--indigo);}
+  .ws-actions{display:flex;gap:8px;flex-shrink:0;}
+  .ws-btn{display:inline-flex;align-items:center;gap:5px;font-size:.78rem;font-weight:700;padding:7px 11px;border-radius:8px;border:1.5px solid var(--border);background:#fff;cursor:pointer;text-decoration:none!important;white-space:nowrap;}
+  .ws-btn.view{color:var(--indigo);} .ws-btn.view:hover{border-color:var(--indigo);}
+  .ws-btn.dl{color:var(--emerald);} .ws-btn.dl:hover{border-color:var(--emerald);}
+  .coming{padding:14px 18px;color:var(--muted);font-size:.9rem;font-style:italic;}
+  /* Teacher copy button */
+  .acc-copy{flex-shrink:0;background:transparent;border:1.5px solid var(--border);border-radius:8px;padding:5px 10px;font-size:.78rem;cursor:pointer;color:var(--muted);transition:border-color .15s,color .15s;white-space:nowrap;}
+  .acc-copy:hover{border-color:var(--indigo);color:var(--indigo);}
+  .acc-copy.copied{border-color:var(--emerald);color:var(--emerald);}
+  /* Teacher toolbar */
+  .toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px;}
+  .toolbar a,.toolbar button{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:10px;font-size:.88rem;font-weight:600;text-decoration:none!important;border:1.5px solid var(--border);color:var(--navy);background:#fff;cursor:pointer;}
+  .toolbar a.primary{background:var(--indigo);color:#fff;border-color:transparent;}
+  .toolbar a:hover,.toolbar button:hover{border-color:var(--indigo);color:var(--indigo);}
+  .toolbar a.primary:hover{background:var(--indigo-dk);color:#fff;}
+  /* Modal */
+  .nbm{display:none;position:fixed;inset:0;z-index:2000;background:rgba(15,23,42,.72);align-items:center;justify-content:center;padding:18px;}
+  .nbm.open{display:flex;}
+  .nbm-box{background:#fff;border-radius:16px;max-width:900px;width:100%;overflow:hidden;box-shadow:var(--shadow-lg);}
+  .nbm-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 16px;border-bottom:1px solid var(--border);}
+  .nbm-head h4{font-size:1rem;margin:0;}
+  .nbm-r{display:flex;align-items:center;gap:12px;}
+  .nbm-lang{display:inline-flex;border:1px solid var(--border);border-radius:999px;overflow:hidden;}
+  .nbm-lang button{border:none;background:#fff;padding:6px 14px;font-weight:700;font-size:.8rem;cursor:pointer;color:var(--muted);}
+  .nbm-lang button.on{background:var(--indigo);color:#fff;}
+  .nbm-close{background:none;border:none;font-size:1.25rem;cursor:pointer;color:var(--muted);line-height:1;}
+  .nbm-copy{display:none;align-items:center;gap:5px;background:transparent;border:1.5px solid var(--border);border-radius:8px;padding:5px 12px;font-size:.78rem;font-weight:700;cursor:pointer;color:var(--muted);transition:border-color .15s,color .15s;white-space:nowrap;}
+  .nbm-copy:hover{border-color:var(--indigo);color:var(--indigo);}
+  .nbm-copy.copied{border-color:var(--emerald)!important;color:var(--emerald)!important;}
+  .nbm-video{position:relative;aspect-ratio:16/9;background:#000;} .nbm-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+  .nbm-pdf iframe{width:100%;height:78vh;border:0;display:block;}
+  @media (max-width:560px){.lesson{flex-wrap:wrap;} .ws-actions{width:100%;} .acc-meta{display:none;}}
 
-  .t-actions{ display:flex; gap:8px; flex-shrink:0; align-items:center; }
-  .t-act{ font-size:.8rem; font-weight:700; border-radius:8px; padding:8px 13px; border:1.5px solid var(--border); background:#fff; color:var(--indigo); cursor:pointer; text-decoration:none !important; white-space:nowrap; transition:border-color .15s, background .15s; }
-  .t-act:hover{ border-color:var(--indigo); background:rgba(55,48,163,.06); }
-  .t-act.copy{ color:#B45309; }
-  .t-act.copy:hover{ border-color:#B45309; background:rgba(180,83,9,.06); }
-  .topic-row.tch{ cursor:default; }
-  .topic-row.tch:hover{ transform:none; border-color:var(--border); box-shadow:var(--shadow); }
-  .toolbar{ display:flex; gap:12px; flex-wrap:wrap; margin: 4px 0 30px; }
-  .toolbar a{ display:inline-flex; align-items:center; gap:7px; font-size:.9rem; font-weight:700; padding:11px 16px; border-radius:10px; border:1.5px solid var(--border); color:var(--navy); background:#fff; }
-  .toolbar a:hover{ border-color:var(--indigo); color:var(--indigo); text-decoration:none; }
-  .toolbar a.primary{ background:var(--indigo); color:#fff; border-color:var(--indigo); }
-  .toolbar a.primary:hover{ background:var(--indigo-dk); color:#fff; }
-  .how-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-bottom:8px; }
-  .how-card{ background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:22px; }
-  .how-card .h-ico{ font-size:1.6rem; margin-bottom:8px; }
-  .how-card h3{ font-size:1.05rem; margin-bottom:6px; }
-  .how-card p{ color:var(--muted); font-size:.92rem; }
-  .tcards{ display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
-  .tcard{ display:flex; flex-direction:column; gap:4px; background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:20px; text-decoration:none !important; color:var(--navy); transition:transform .15s, box-shadow .15s, border-color .15s; }
-  .tcard:hover{ transform:translateY(-3px); box-shadow:var(--shadow); border-color:var(--indigo); }
-  .tcard .tc-badge{ width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,var(--indigo),#14B8A6);color:#fff;font-weight:800;display:grid;place-items:center;margin-bottom:8px; }
-  .tcard h3{ font-size:1.02rem; }
-  .tcard .tc-fil{ font-size:.8rem; color:var(--muted); font-style:italic; }
-  @media (max-width:760px){ .how-grid{ grid-template-columns:1fr; } .tcards{ grid-template-columns:1fr 1fr; } .topic-row.tch{ flex-direction:column; align-items:flex-start; gap:10px; } }
-
+  /* Hero artwork */
+  .hero-art{position:absolute;right:0;top:0;height:100%;width:auto;max-width:52%;object-fit:contain;object-position:right top;pointer-events:none;user-select:none;opacity:0.95;}
+  @media(max-width:900px){.hero-art{max-width:40%;opacity:0.75;}}
+  @media(max-width:600px){.hero-art{display:none;}}
 </style>
 </head>
 <body>
@@ -261,83 +256,123 @@
 </header>
 <main id="main-content">
 <section class="hero">
+<img src="../../../artwork2/general-mathematics.png" alt="" class="hero-art" aria-hidden="true" loading="eager">
   <div class="container">
-    <div class="breadcrumb"><a href="/deped">DepEd Math</a> <span>&rsaquo;</span> <a href="/deped/teachers">For Teachers</a> <span>&rsaquo;</span> <a href="/deped/teachers">Senior High</a> <span>&rsaquo;</span> <span style="color:rgba(255,255,255,.92)">General Mathematics</span></div>
+    <div class="breadcrumb"><a href="/deped">DepEd Math</a> <span>&rsaquo;</span> <a href="/deped/teachers">For Teachers</a> <span>&rsaquo;</span> <span style="color:rgba(255,255,255,.92)">General Mathematics</span></div>
     <div class="hero-inner">
-      <span class="hero-eyebrow">👩‍🏫 For Teachers · Para sa Teachers</span>
+      <span class="hero-eyebrow">&#128105;&#8205;&#127979; For Teachers &middot; Para sa Teachers</span>
       <h1>General Mathematics — Teacher View</h1>
-      <div class="h1-fil">Core subject · Grade 11 · Para sa guro</div>
-      <p class="subhead i18n" data-en="General Mathematics for Grade 11. Open the function and logic lessons, print worksheets, or copy an assign-link for your class — English and Filipino." data-fil="General Mathematics para sa Grade 11. Buksan ang functions at logic lessons, i-print ang worksheet, o kopyahin ang assign-link — English at Filipino.">General Mathematics for Grade 11. Open the function and logic lessons, print worksheets, or copy an assign-link for your class — English and Filipino.</p>
+      <div class="h1-fil">General Mathematics &middot; Para sa guro</div>
+      <p class="subhead i18n" data-en="DepEd Senior High School General Mathematics — functions and inverse functions, rational, exponential and logarithmic functions, and propositional logic — with free video lessons for every topic." data-fil="DepEd Senior High School General Mathematics — functions at inverse functions, rational, exponential at logarithmic functions, at propositional logic — may libreng video aralin.">DepEd Senior High School General Mathematics — functions and inverse functions, rational, exponential and logarithmic functions, and propositional logic — with free video lessons for every topic.</p>
       <p class="subhead-fil">Para sa mga guro: panoorin sa klase, i-print ang worksheet, o i-share ang link sa mga estudyante. — Dr. E</p>
-      <div class="lang-toggle" role="group" aria-label="Choose language"><button class="lang-btn" data-lang="en" aria-pressed="true" onclick="nbSetLang('en')">EN</button><button class="lang-btn" data-lang="fil" aria-pressed="false" onclick="nbSetLang('fil')">FIL</button></div>
+      <div class="lang-toggle" role="group" aria-label="Choose language">
+        <button class="lang-btn" data-lang="en" aria-pressed="true" onclick="nbSetLang('en')">EN</button>
+        <button class="lang-btn" data-lang="fil" aria-pressed="false" onclick="nbSetLang('fil')">FIL</button>
+      </div>
     </div>
   </div>
 </section>
 <section>
   <div class="container">
     <div class="toolbar">
-      <a class="primary" href="/math-worksheets">📄 <span class="i18n" data-en="All printable worksheets" data-fil="Lahat ng printable worksheets">All printable worksheets</span></a>
-      <a href="/deped/shs/general-math">👁️ <span class="i18n" data-en="Student view of this page" data-fil="Student view ng page na ito">Student view of this page</span></a>
-      <a href="/for-teachers">🏫 <span class="i18n" data-en="For Teachers Hub" data-fil="For Teachers Hub">For Teachers Hub</span></a>
+      <a class="primary" href="/math-worksheets">&#128196; <span class="i18n" data-en="All printable worksheets" data-fil="Lahat ng printable worksheets">All printable worksheets</span></a>
+      <a href="https://numberbender.com/deped/shs/general-math">&#128065;&#65039; <span class="i18n" data-en="Student view" data-fil="Student view">Student view</span></a>
+      <a href="/for-teachers">&#127981; <span class="i18n" data-en="For Teachers Hub" data-fil="For Teachers Hub">For Teachers Hub</span></a>
     </div>
+    <div style="display:flex;gap:10px;align-items:flex-start;background:#E1F5EE;border:0.5px solid #0F766E;border-radius:12px;padding:14px 16px;margin-bottom:24px;color:#04342C;font-size:.92rem;line-height:1.55;"><span aria-hidden="true" style="font-size:1.05rem;">&#8505;&#65039;</span><span class="i18n" data-en="Tap any unit to open lessons inline — hit &#9654; to play in class or copy the unit link to share with students. View or download the paired worksheet for each lesson." data-fil="I-tap ang anumang unit para buksan ang aralin inline — pindutin ang &#9654; para i-play sa klase o kopyahin ang unit link para ibahagi sa mga estudyante. I-view o i-download ang worksheet para sa bawat aralin.">Tap any unit to open lessons inline — hit &#9654; to play in class or copy the unit link to share with students.</span></div>
     <div class="domain">
-      <div class="domain-head">
-        <span class="domain-num">1</span>
-        <div>
-          <h2>Functions</h2>
-          <div class="d-fil">Functions &amp; their graphs</div>
-        </div>
+  <div class="domain-head">
+    <span class="domain-num">1</span>
+    <div><h2>Functions</h2><div class="d-fil">Functions &amp; their graphs</div></div>
+  </div>
+<div class="acc open">
+  <div class="acc-head" onclick="accToggle(this)" role="button" tabindex="0">
+    <span class="acc-badge">Unit 1</span>
+    <div class="acc-info"><h3>Functions &amp; Inverse Functions</h3><div class="acc-sub">Pre-Calculus &middot; Functions</div></div>
+    <span class="acc-meta">4 lessons &middot; 4 worksheets</span>
+<button type="button" class="acc-copy" onclick="event.stopPropagation();nbAccCopy(this,'https://numberbender.com/deped/shs/general-math')" title="Copy student page link">&#128279; Copy video link#128279; Copy link</button>
+    <span class="acc-chev" aria-hidden="true">&#9662;</span>
+  </div>
+  <div class="acc-body">
+    <div class="lesson"><button type="button" class="lesson-play" aria-label="Watch Function Operations &amp; Composition" onclick="nbmOpen('9exMxUS-QGc','fDlWPUEPqBM','Function Operations &amp; Composition')">&#9654;</button><div class="lesson-main"><div class="lt">Function Operations &amp; Composition</div><div class="ls">Unit 1 · Lesson 1</div></div><span class="lesson-badge">EN + FIL</span><div class="ws-actions"><button type="button" class="ws-btn view" onclick="nbmPdf('/worksheets/precalculus/01-01-precalc-function-operations-and-composition.pdf','Function Operations &amp; Composition — worksheet')">&#128065; <span class="i18n" data-en="View" data-fil="Tingnan">View</span></button><a class="ws-btn dl" href="/worksheets/precalculus/01-01-precalc-function-operations-and-composition.pdf" download>&#11015; <span class="i18n" data-en="Download" data-fil="I-download">Download</span></a></div></div>
+    <div class="lesson"><button type="button" class="lesson-play" aria-label="Watch Finding the Inverse of a Function" onclick="nbmOpen('QNLM1AUFG2U','_riXSeMPq1Y','Finding the Inverse of a Function')">&#9654;</button><div class="lesson-main"><div class="lt">Finding the Inverse of a Function</div><div class="ls">Unit 1 · Lesson 2</div></div><span class="lesson-badge">EN + FIL</span><div class="ws-actions"><button type="button" class="ws-btn view" onclick="nbmPdf('/worksheets/precalculus/01-02-precalc-finding-the-inverse-of-a-function.pdf','Finding the Inverse of a Function — worksheet')">&#128065; <span class="i18n" data-en="View" data-fil="Tingnan">View</span></button><a class="ws-btn dl" href="/worksheets/precalculus/01-02-precalc-finding-the-inverse-of-a-function.pdf" download>&#11015; <span class="i18n" data-en="Download" data-fil="I-download">Download</span></a></div></div>
+    <div class="lesson"><button type="button" class="lesson-play" aria-label="Watch Finding the Inverse Algebraically" onclick="nbmOpen('YjBrwsSv2Tw','_riXSeMPq1Y','Finding the Inverse Algebraically')">&#9654;</button><div class="lesson-main"><div class="lt">Finding the Inverse Algebraically</div><div class="ls">Unit 1 · Lesson 3</div></div><span class="lesson-badge">EN + FIL</span><div class="ws-actions"><button type="button" class="ws-btn view" onclick="nbmPdf('/worksheets/precalculus/01-03-precalc-finding-the-inverse-algebraically.pdf','Finding the Inverse Algebraically — worksheet')">&#128065; <span class="i18n" data-en="View" data-fil="Tingnan">View</span></button><a class="ws-btn dl" href="/worksheets/precalculus/01-03-precalc-finding-the-inverse-algebraically.pdf" download>&#11015; <span class="i18n" data-en="Download" data-fil="I-download">Download</span></a></div></div>
+    <div class="lesson"><button type="button" class="lesson-play" aria-label="Watch Solving Piecewise Defined Functions" onclick="nbmOpen('U4zwSs7-O3o','-GxjyUcybOM','Solving Piecewise Defined Functions')">&#9654;</button><div class="lesson-main"><div class="lt">Solving Piecewise Defined Functions</div><div class="ls">Unit 1 · Lesson 4</div></div><span class="lesson-badge">EN + FIL</span><div class="ws-actions"><button type="button" class="ws-btn view" onclick="nbmPdf('/worksheets/algebra/11-07-algebra-piecewise-functions.pdf','Solving Piecewise Defined Functions — worksheet')">&#128065; <span class="i18n" data-en="View" data-fil="Tingnan">View</span></button><a class="ws-btn dl" href="/worksheets/algebra/11-07-algebra-piecewise-functions.pdf" download>&#11015; <span class="i18n" data-en="Download" data-fil="I-download">Download</span></a></div></div>
+  </div>
+</div>
+<div class="acc">
+  <div class="acc-head" onclick="accToggle(this)" role="button" tabindex="0">
+    <span class="acc-badge">Unit 2</span>
+    <div class="acc-info"><h3>Rational Functions</h3><div class="acc-sub">Pre-Calculus &middot; Polynomial &amp; Rational Functions</div></div>
+    <span class="acc-meta">10 lessons &middot; 10 worksheets</span>
+<button type="button" class="acc-copy" onclick="event.stopPropagation();nbAccCopy(this,'https://numberbender.com/deped/shs/general-math')" title="Copy student page link">&#128279; Copy video link#128279; Copy link</button>
+    <span class="acc-chev" aria-hidden="true">&#9662;</span>
+  </div>
+  <div class="acc-body">
+    <div class="lesson"><button type="button" class="lesson-play" aria-label="Watch Solving Quadratic Equations" onclick="nbmOpen('5G_qrMRAT6o','jgZG010wvAo','Solving Quadratic Equations')">&#9654;</button><div class="lesson-main"><div class="lt">Solving Quadratic Equations</div><div class="ls">Unit 2 · Lesson 1</div></div><span class="lesson-badge">EN + FIL</span><div class="ws-actions"><button type="button" class="ws-btn view" onclick="nbmPdf('/worksheets/precalculus/02-01-precalc-solving-quadratic-equations.pdf','Solving Quadratic Equations — worksheet')">&#128065; <span class="i18n" data-en="View" data-fil="Tingnan">View</span></button><a class="ws-btn dl" href="/worksheets/precalculus/02-01-precalc-solving-quadratic-equations.pdf" download>&#11015; <span class="i18n" data-en="Download" data-fil="I-download">Download</span></a></div></div>
+    <div class="lesson"><button type="button" class="lesson-play" aria-label="Watch Remainder Theorem &amp; Factor Theorem" onclick="nbmOpen('g_PFUB8O3uE','ooAaWh0Ucv0','Remainder Theorem &amp; Factor Theorem')">&#9654;</button><div class="lesson-main"><div class="lt">Remainder Theorem &amp; Factor Theorem</div><div class="ls">Unit 2 · Lesson 2</div></div><span class="lesson-badge">EN + FIL</span><div class="ws-actions"><button type="button" class="ws-btn view" onclick="nbmPdf('/worksheets/precalculus/02-02-precalc-remainder-theorem-factor-theorem.pdf','Remainder Theorem &amp; Factor Theorem — worksheet')">&#128065; <span class="i18n" data-en="View" data-fil="Tingnan">View</span></button><a class="ws-btn dl" href="/worksheets/precalculus/02-02-precalc-remainder-theorem-factor-theorem.pdf" download>&#11015; <span class="i18n" data-en="Download" data-fil="I-download">Download</span></a></div></div>
+    <div class="lesson"><button type="button" class="lesson-play" aria-label="Watch Rational Exponents &amp; Radical Expressions" onclick="nbmOpen('xxKVQ5rLkf8','e2iOBjGtNqk','Rational Exponents &amp; Radical Expressions')">&#9654;</button><div class="lesson-main"><div class="lt">Rational Exponents &amp; Radical Expressions</div><div class="ls">Unit 2 · Lesson 3</div></div><span class="lesson-badge">EN + FIL</span><div class="ws-actions"><button type="button" class="ws-btn view" onclick="nbmPdf('/worksheets/precalculus/02-03-precalc-rational-exponents-and-radical-expressions.pdf','Rational Exponents &amp; Radical Expressions — worksheet')">&#128065; <span class="i18n" data-en="View" data-fil="Tingnan">View</span></button><a class="ws-btn dl" href="/worksheets/precalculus/02-03-precalc-rational-exponents-and-radical-expressions.pdf" download>&#11015; <span class="i18n" data-en="Download" data-fil="I-download">Download</span></a></div></div>
+    <div class="lesson"><button type="button" class="lesson-play" aria-label="Watch Simplifying Radical Expressions" onclick="nbmOpen('Qh8CJ_AjPK8','0g6g2OpboXU','Simplifying Radical Expressions')">&#9654;</button><div class="lesson-main"><div class="lt">Simplifying Radical Expressions</div><div class="ls">Unit 2 · Lesson 4</div></div><span class="lesson-badge">EN + FIL</span><div class="ws-actions"><button type="button" class="ws-btn view" onclick="nbmPdf('/worksheets/precalculus/02-04-precalc-simplifying-radical-expressions.pdf','Simplifying Radical Expressions — worksheet')">&#128065; <span class="i18n" data-en="View" data-fil="Tingnan">View</span></button><a class="ws-btn dl" href="/worksheets/precalculus/02-04-precalc-simplifying-radical-expressions.pdf" download>&#11015; <span class="i18n" data-en="Download" data-fil="I-download">Download</span></a></div></div>
+    <div class="lesson"><button type="button" class="lesson-play" aria-label="Watch Solving Radical Equations" onclick="nbmOpen('lgd7DJ4E5rI','v_WXIo2lefU','Solving Radical Equations')">&#9654;</button><div class="lesson-main"><div class="lt">Solving Radical Equations</div><div class="ls">Unit 2 · Lesson 5</div></div><span class="lesson-badge">EN + FIL</span><div class="ws-actions"><button type="button" class="ws-btn view" onclick="nbmPdf('/worksheets/precalculus/02-05-precalc-solving-radical-equations.pdf','Solving Radical Equations — worksheet')">&#128065; <span class="i18n" data-en="View" data-fil="Tingnan">View</span></button><a class="ws-btn dl" href="/worksheets/precalculus/02-05-precalc-solving-radical-equations.pdf" download>&#11015; <span class="i18n" data-en="Download" data-fil="I-download">Download</span></a></div></div>
+    <div class="lesson"><button type="button" class="lesson-play" aria-label="Watch Simplifying Rational Expressions" onclick="nbmOpen('LPJBm-sJC3s','ryLusD-C2KA','Simplifying Rational Expressions')">&#9654;</button><div class="lesson-main"><div class="lt">Simplifying Rational Expressions</div><div class="ls">Unit 2 · Lesson 6</div></div><span class="lesson-badge">EN + FIL</span><div class="ws-actions"><button type="button" class="ws-btn view" onclick="nbmPdf('/worksheets/precalculus/02-06-precalc-simplifying-rational-expressions.pdf','Simplifying Rational Expressions — worksheet')">&#128065; <span class="i18n" data-en="View" data-fil="Tingnan">View</span></button><a class="ws-btn dl" href="/worksheets/precalculus/02-06-precalc-simplifying-rational-expressions.pdf" download>&#11015; <span class="i18n" data-en="Download" data-fil="I-download">Download</span></a></div></div>
+    <div class="lesson"><button type="button" class="lesson-play" aria-label="Watch Adding &amp; Subtracting Rational Expressions" onclick="nbmOpen('43AQre6sIRU','mEs3VUqmPGc','Adding &amp; Subtracting Rational Expressions')">&#9654;</button><div class="lesson-main"><div class="lt">Adding &amp; Subtracting Rational Expressions</div><div class="ls">Unit 2 · Lesson 7</div></div><span class="lesson-badge">EN + FIL</span><div class="ws-actions"><button type="button" class="ws-btn view" onclick="nbmPdf('/worksheets/precalculus/02-07-precalc-adding-subtracting-rational-expressions.pdf','Adding &amp; Subtracting Rational Expressions — worksheet')">&#128065; <span class="i18n" data-en="View" data-fil="Tingnan">View</span></button><a class="ws-btn dl" href="/worksheets/precalculus/02-07-precalc-adding-subtracting-rational-expressions.pdf" download>&#11015; <span class="i18n" data-en="Download" data-fil="I-download">Download</span></a></div></div>
+    <div class="lesson"><button type="button" class="lesson-play" aria-label="Watch Multiplying &amp; Dividing Rational Expressions" onclick="nbmOpen('-PyfYtyo98E','u5Zto5__9S0','Multiplying &amp; Dividing Rational Expressions')">&#9654;</button><div class="lesson-main"><div class="lt">Multiplying &amp; Dividing Rational Expressions</div><div class="ls">Unit 2 · Lesson 8</div></div><span class="lesson-badge">EN + FIL</span><div class="ws-actions"><button type="button" class="ws-btn view" onclick="nbmPdf('/worksheets/precalculus/02-08-precalc-multiplying-dividing-rational-expressions.pdf','Multiplying &amp; Dividing Rational Expressions — worksheet')">&#128065; <span class="i18n" data-en="View" data-fil="Tingnan">View</span></button><a class="ws-btn dl" href="/worksheets/precalculus/02-08-precalc-multiplying-dividing-rational-expressions.pdf" download>&#11015; <span class="i18n" data-en="Download" data-fil="I-download">Download</span></a></div></div>
+    <div class="lesson"><button type="button" class="lesson-play" aria-label="Watch Domain of Rational Functions" onclick="nbmOpen('jMQRVs59Ydw','m2NhXgWKj1s','Domain of Rational Functions')">&#9654;</button><div class="lesson-main"><div class="lt">Domain of Rational Functions</div><div class="ls">Unit 2 · Lesson 9</div></div><span class="lesson-badge">EN + FIL</span><div class="ws-actions"><button type="button" class="ws-btn view" onclick="nbmPdf('/worksheets/precalculus/02-09-precalc-domain-of-rational-functions.pdf','Domain of Rational Functions — worksheet')">&#128065; <span class="i18n" data-en="View" data-fil="Tingnan">View</span></button><a class="ws-btn dl" href="/worksheets/precalculus/02-09-precalc-domain-of-rational-functions.pdf" download>&#11015; <span class="i18n" data-en="Download" data-fil="I-download">Download</span></a></div></div>
+    <div class="lesson"><button type="button" class="lesson-play" aria-label="Watch Asymptotes of Rational Functions" onclick="nbmOpen('gEsuawMfBmY','GgdGpjiJmkI','Asymptotes of Rational Functions')">&#9654;</button><div class="lesson-main"><div class="lt">Asymptotes of Rational Functions</div><div class="ls">Unit 2 · Lesson 10</div></div><span class="lesson-badge">EN + FIL</span><div class="ws-actions"><button type="button" class="ws-btn view" onclick="nbmPdf('/worksheets/precalculus/02-10-precalc-asymptotes-of-rational-functions.pdf','Asymptotes of Rational Functions — worksheet')">&#128065; <span class="i18n" data-en="View" data-fil="Tingnan">View</span></button><a class="ws-btn dl" href="/worksheets/precalculus/02-10-precalc-asymptotes-of-rational-functions.pdf" download>&#11015; <span class="i18n" data-en="Download" data-fil="I-download">Download</span></a></div></div>
+  </div>
+</div>
+<div class="acc">
+  <div class="acc-head" onclick="accToggle(this)" role="button" tabindex="0">
+    <span class="acc-badge">Unit 3</span>
+    <div class="acc-info"><h3>Exponential &amp; Logarithmic Functions</h3><div class="acc-sub">Pre-Calculus &middot; Exponential &amp; Logarithmic Functions</div></div>
+    <span class="acc-meta">6 lessons &middot; 6 worksheets</span>
+<button type="button" class="acc-copy" onclick="event.stopPropagation();nbAccCopy(this,'https://numberbender.com/deped/shs/general-math')" title="Copy student page link">&#128279; Copy video link#128279; Copy link</button>
+    <span class="acc-chev" aria-hidden="true">&#9662;</span>
+  </div>
+  <div class="acc-body">
+    <div class="lesson"><button type="button" class="lesson-play" aria-label="Watch Graphing Exponential Functions" onclick="nbmOpen('c_pKjcRY3EI','WWf678070P0','Graphing Exponential Functions')">&#9654;</button><div class="lesson-main"><div class="lt">Graphing Exponential Functions</div><div class="ls">Unit 3 · Lesson 1</div></div><span class="lesson-badge">EN + FIL</span><div class="ws-actions"><button type="button" class="ws-btn view" onclick="nbmPdf('/worksheets/precalculus/03-01-precalc-graphing-exponential-functions.pdf','Graphing Exponential Functions — worksheet')">&#128065; <span class="i18n" data-en="View" data-fil="Tingnan">View</span></button><a class="ws-btn dl" href="/worksheets/precalculus/03-01-precalc-graphing-exponential-functions.pdf" download>&#11015; <span class="i18n" data-en="Download" data-fil="I-download">Download</span></a></div></div>
+    <div class="lesson"><button type="button" class="lesson-play" aria-label="Watch Introduction to Logarithmic Functions" onclick="nbmOpen('z5bqapEjzCQ','smSeRfHpG8U','Introduction to Logarithmic Functions')">&#9654;</button><div class="lesson-main"><div class="lt">Introduction to Logarithmic Functions</div><div class="ls">Unit 3 · Lesson 2</div></div><span class="lesson-badge">EN + FIL</span><div class="ws-actions"><button type="button" class="ws-btn view" onclick="nbmPdf('/worksheets/precalculus/03-02-precalc-introduction-to-logarithmic-functions.pdf','Introduction to Logarithmic Functions — worksheet')">&#128065; <span class="i18n" data-en="View" data-fil="Tingnan">View</span></button><a class="ws-btn dl" href="/worksheets/precalculus/03-02-precalc-introduction-to-logarithmic-functions.pdf" download>&#11015; <span class="i18n" data-en="Download" data-fil="I-download">Download</span></a></div></div>
+    <div class="lesson"><button type="button" class="lesson-play" aria-label="Watch Properties of Logarithms" onclick="nbmOpen('Ljf38D-sGUU','f6p4P3whpao','Properties of Logarithms')">&#9654;</button><div class="lesson-main"><div class="lt">Properties of Logarithms</div><div class="ls">Unit 3 · Lesson 3</div></div><span class="lesson-badge">EN + FIL</span><div class="ws-actions"><button type="button" class="ws-btn view" onclick="nbmPdf('/worksheets/precalculus/03-03-precalc-properties-of-logarithms.pdf','Properties of Logarithms — worksheet')">&#128065; <span class="i18n" data-en="View" data-fil="Tingnan">View</span></button><a class="ws-btn dl" href="/worksheets/precalculus/03-03-precalc-properties-of-logarithms.pdf" download>&#11015; <span class="i18n" data-en="Download" data-fil="I-download">Download</span></a></div></div>
+    <div class="lesson"><button type="button" class="lesson-play" aria-label="Watch Graphing Logarithmic Functions" onclick="nbmOpen('MUZx6vsnviQ','Fe06wc5C6XM','Graphing Logarithmic Functions')">&#9654;</button><div class="lesson-main"><div class="lt">Graphing Logarithmic Functions</div><div class="ls">Unit 3 · Lesson 4</div></div><span class="lesson-badge">EN + FIL</span><div class="ws-actions"><button type="button" class="ws-btn view" onclick="nbmPdf('/worksheets/precalculus/03-04-precalc-graphing-logarithmic-functions.pdf','Graphing Logarithmic Functions — worksheet')">&#128065; <span class="i18n" data-en="View" data-fil="Tingnan">View</span></button><a class="ws-btn dl" href="/worksheets/precalculus/03-04-precalc-graphing-logarithmic-functions.pdf" download>&#11015; <span class="i18n" data-en="Download" data-fil="I-download">Download</span></a></div></div>
+    <div class="lesson"><button type="button" class="lesson-play" aria-label="Watch Solving Exponential Equations — Change of Base" onclick="nbmOpen('s3bL4ZFVyls','GfmyLztNY3E','Solving Exponential Equations — Change of Base')">&#9654;</button><div class="lesson-main"><div class="lt">Solving Exponential Equations — Change of Base</div><div class="ls">Unit 3 · Lesson 5</div></div><span class="lesson-badge">EN + FIL</span><div class="ws-actions"><button type="button" class="ws-btn view" onclick="nbmPdf('/worksheets/precalculus/03-05-precalc-solving-exponential-equations-change-of-base.pdf','Solving Exponential Equations — Change of Base — worksheet')">&#128065; <span class="i18n" data-en="View" data-fil="Tingnan">View</span></button><a class="ws-btn dl" href="/worksheets/precalculus/03-05-precalc-solving-exponential-equations-change-of-base.pdf" download>&#11015; <span class="i18n" data-en="Download" data-fil="I-download">Download</span></a></div></div>
+    <div class="lesson"><button type="button" class="lesson-play" aria-label="Watch Solving Logarithmic Equations" onclick="nbmOpen('Ljf38D-sGUU','EArWf8MQtfs','Solving Logarithmic Equations')">&#9654;</button><div class="lesson-main"><div class="lt">Solving Logarithmic Equations</div><div class="ls">Unit 3 · Lesson 6</div></div><span class="lesson-badge">EN + FIL</span><div class="ws-actions"><button type="button" class="ws-btn view" onclick="nbmPdf('/worksheets/precalculus/03-06-precalc-solving-logarithmic-equations.pdf','Solving Logarithmic Equations — worksheet')">&#128065; <span class="i18n" data-en="View" data-fil="Tingnan">View</span></button><a class="ws-btn dl" href="/worksheets/precalculus/03-06-precalc-solving-logarithmic-equations.pdf" download>&#11015; <span class="i18n" data-en="Download" data-fil="I-download">Download</span></a></div></div>
+  </div>
+</div>
+</div>
+<div class="domain">
+  <div class="domain-head">
+    <span class="domain-num">2</span>
+    <div><h2>Logic</h2><div class="d-fil">Propositional logic &amp; symbolic reasoning</div></div>
+  </div>
+<div class="acc">
+  <div class="acc-head" onclick="accToggle(this)" role="button" tabindex="0">
+    <span class="acc-badge">Unit 1</span>
+    <div class="acc-info"><h3>Propositions &amp; Logic</h3><div class="acc-sub">Discrete Math &middot; Logic &amp; Symbolic Reasoning</div></div>
+    <span class="acc-meta">4 lessons &middot; 4 worksheets</span>
+<button type="button" class="acc-copy" onclick="event.stopPropagation();nbAccCopy(this,'https://numberbender.com/deped/shs/general-math')" title="Copy student page link">&#128279; Copy video link#128279; Copy link</button>
+    <span class="acc-chev" aria-hidden="true">&#9662;</span>
+  </div>
+  <div class="acc-body">
+    <div class="lesson"><button type="button" class="lesson-play" aria-label="Watch Statements &amp; Negations" onclick="nbmOpen('teERQdghX9U','hXL3ijD8j0Q','Statements &amp; Negations')">&#9654;</button><div class="lesson-main"><div class="lt">Statements &amp; Negations</div><div class="ls">Unit 1 · Lesson 1</div></div><span class="lesson-badge">EN + FIL</span><div class="ws-actions"><button type="button" class="ws-btn view" onclick="nbmPdf('/worksheets/discrete-math/01-discrete-math-statements-and-symbolic-logic.pdf','Statements &amp; Negations — worksheet')">&#128065; <span class="i18n" data-en="View" data-fil="Tingnan">View</span></button><a class="ws-btn dl" href="/worksheets/discrete-math/01-discrete-math-statements-and-symbolic-logic.pdf" download>&#11015; <span class="i18n" data-en="Download" data-fil="I-download">Download</span></a></div></div>
+    <div class="lesson"><button type="button" class="lesson-play" aria-label="Watch Compound Statements &amp; Logical Connectives" onclick="nbmOpen('g66BNlNhrDI','-C1Za5wBeb4','Compound Statements &amp; Logical Connectives')">&#9654;</button><div class="lesson-main"><div class="lt">Compound Statements &amp; Logical Connectives</div><div class="ls">Unit 1 · Lesson 2</div></div><span class="lesson-badge">EN + FIL</span><div class="ws-actions"><button type="button" class="ws-btn view" onclick="nbmPdf('/worksheets/discrete-math/02-discrete-math-compound-statements-logical-connectives.pdf','Compound Statements &amp; Logical Connectives — worksheet')">&#128065; <span class="i18n" data-en="View" data-fil="Tingnan">View</span></button><a class="ws-btn dl" href="/worksheets/discrete-math/02-discrete-math-compound-statements-logical-connectives.pdf" download>&#11015; <span class="i18n" data-en="Download" data-fil="I-download">Download</span></a></div></div>
+    <div class="lesson"><button type="button" class="lesson-play" aria-label="Watch Truth Tables — Conjunction &amp; Disjunction" onclick="nbmOpen('esywilk1eSQ','1LUOJqlu81c','Truth Tables — Conjunction &amp; Disjunction')">&#9654;</button><div class="lesson-main"><div class="lt">Truth Tables — Conjunction &amp; Disjunction</div><div class="ls">Unit 1 · Lesson 3</div></div><span class="lesson-badge">EN + FIL</span><div class="ws-actions"><button type="button" class="ws-btn view" onclick="nbmPdf('/worksheets/discrete-math/03-discrete-math-truth-tables-negation-conjunction-disjunction.pdf','Truth Tables — Conjunction &amp; Disjunction — worksheet')">&#128065; <span class="i18n" data-en="View" data-fil="Tingnan">View</span></button><a class="ws-btn dl" href="/worksheets/discrete-math/03-discrete-math-truth-tables-negation-conjunction-disjunction.pdf" download>&#11015; <span class="i18n" data-en="Download" data-fil="I-download">Download</span></a></div></div>
+    <div class="lesson"><button type="button" class="lesson-play" aria-label="Watch Translating Compound Statements to Symbolic Form" onclick="nbmOpen('LojjlWfPY8o','2g3L9Y-gZ-8','Translating Compound Statements to Symbolic Form')">&#9654;</button><div class="lesson-main"><div class="lt">Translating Compound Statements to Symbolic Form</div><div class="ls">Unit 1 · Lesson 4</div></div><span class="lesson-badge">EN + FIL</span><div class="ws-actions"><button type="button" class="ws-btn view" onclick="nbmPdf('/worksheets/discrete-math/04-discrete-math-translating-compound-statements.pdf','Translating Compound Statements to Symbolic Form — worksheet')">&#128065; <span class="i18n" data-en="View" data-fil="Tingnan">View</span></button><a class="ws-btn dl" href="/worksheets/discrete-math/04-discrete-math-translating-compound-statements.pdf" download>&#11015; <span class="i18n" data-en="Download" data-fil="I-download">Download</span></a></div></div>
+  </div>
+</div>
+<div class="coming">Business &amp; Financial Math — more lessons coming soon.</div>
+</div>
+    <div class="callout"><span class="i18n" data-en="Tap any unit to open its lessons here. Hit ▶ to preview in class, tap 🔗 Copy link to share a direct student link, or View/Download the paired worksheet." data-fil="I-tap ang anumang unit para buksan ang aralin dito.">Tap any unit to open its lessons here. Hit ▶ to preview in class, tap 🔗 Copy link to share a direct student link, or View/Download the paired worksheet.</span></div>
+    <div class="teach-band" style="margin-top:40px;">
+      <div>
+        <span class="for-teachers-badge">&#128105;&#8205;&#127979; <span class="i18n" data-en="For Teachers" data-fil="Para sa Teachers">For Teachers</span></span>
+        <h3 class="i18n" data-en="Assign any topic to your class" data-fil="Ipasa ang anumang topic sa klase mo">Assign any topic to your class</h3>
+        <p class="i18n" data-en="Hit &#9654; on any lesson to play it in class. Tap &#128279; Copy video link#128279; Copy link on any unit to get a direct link. Or share the whole student page." data-fil="Pindutin ang &#9654; sa anumang aralin para i-play sa klase. I-tap ang &#128279; Copy video link#128279; Copy link sa anumang unit para makuha ang direktang link. O i-share ang buong student page.">Hit &#9654; on any lesson to play it in class. Tap &#128279; Copy video link#128279; Copy link on any unit to get a direct link.</p>
       </div>
-      <div class="topic-list">
-        <div class="topic-row tch">
-          <span class="t-main"><span class="t-title">Functions &amp; Function Notation</span><span class="t-sub">Precalculus · Unit 1</span></span>
-          <span class="t-actions">
-            <a class="t-act" href="/subjects/precalculus/#unit-1"><span class="i18n" data-en="▶ Watch lessons" data-fil="▶ Panoorin ang aralin">▶ Watch lessons</span></a>
-            <button type="button" class="t-act copy" data-link="https://numberbender.com/subjects/precalculus/#unit-1" onclick="nbCopy(this)">🔗 Assign</button>
-          </span>
-        </div>
-        <div class="topic-row tch">
-          <span class="t-main"><span class="t-title">Rational Functions</span><span class="t-sub">Precalculus · Unit 2</span></span>
-          <span class="t-actions">
-            <a class="t-act" href="/subjects/precalculus/#unit-2"><span class="i18n" data-en="▶ Watch lessons" data-fil="▶ Panoorin ang aralin">▶ Watch lessons</span></a>
-            <button type="button" class="t-act copy" data-link="https://numberbender.com/subjects/precalculus/#unit-2" onclick="nbCopy(this)">🔗 Assign</button>
-          </span>
-        </div>
-        <div class="topic-row tch">
-          <span class="t-main"><span class="t-title">Exponential &amp; Logarithmic Functions</span><span class="t-sub">Precalculus · Unit 3</span></span>
-          <span class="t-actions">
-            <a class="t-act" href="/subjects/precalculus/#unit-3"><span class="i18n" data-en="▶ Watch lessons" data-fil="▶ Panoorin ang aralin">▶ Watch lessons</span></a>
-            <button type="button" class="t-act copy" data-link="https://numberbender.com/subjects/precalculus/#unit-3" onclick="nbCopy(this)">🔗 Assign</button>
-          </span>
-        </div>
-        <div class="topic-row tch">
-          <span class="t-main"><span class="t-title">Inverse Functions</span><span class="t-sub">Precalculus · Unit 1</span></span>
-          <span class="t-actions">
-            <a class="t-act" href="/subjects/precalculus/#unit-1"><span class="i18n" data-en="▶ Watch lessons" data-fil="▶ Panoorin ang aralin">▶ Watch lessons</span></a>
-            <button type="button" class="t-act copy" data-link="https://numberbender.com/subjects/precalculus/#unit-1" onclick="nbCopy(this)">🔗 Assign</button>
-          </span>
-        </div>
+      <div class="teach-actions">
+        <a href="https://numberbender.com/deped/shs/general-math" class="btn btn-primary"><span class="i18n" data-en="&#128065; Student view" data-fil="&#128065; Student view">&#128065; Student view</span></a>
+        <button type="button" class="share-btn" onclick="nbShare()"><span class="i18n" data-en="&#128279; Share this page" data-fil="&#128279; I-share ang page">&#128279; Share this page</span></button>
       </div>
     </div>
-    <div class="domain">
-      <div class="domain-head">
-        <span class="domain-num">2</span>
-        <div>
-          <h2>Logic <span class="cov-pill cov-soon">More coming</span></h2>
-          <div class="d-fil">Propositional logic</div>
-        </div>
-      </div>
-      <div class="topic-list">
-        <div class="topic-row tch">
-          <span class="t-main"><span class="t-title">Propositions &amp; Logic</span><span class="t-sub">Discrete Math · more coming</span></span>
-          <span class="t-actions">
-            <a class="t-act" href="/subjects/discrete-math/"><span class="i18n" data-en="▶ Watch lessons" data-fil="▶ Panoorin ang aralin">▶ Watch lessons</span></a>
-            <button type="button" class="t-act copy" data-link="https://numberbender.com/subjects/discrete-math/" onclick="nbCopy(this)">🔗 Assign</button>
-          </span>
-        </div>
-      </div>
-    </div>
-    <div class="callout"><span class="i18n" data-en="Note: DepEd General Mathematics also covers business and financial mathematics (interest, annuities, loans). That strand isn’t on Numberbender yet — it’s flagged for a future lesson set, so this page focuses on the functions and logic we teach." data-fil="Paalala: saklaw din ng DepEd General Mathematics ang business at financial mathematics (interest, annuities, loans). Wala pa ‘yan sa Numberbender — nakatakda ito bilang future lessons, kaya naka-focus ang page sa functions at logic.">Note: DepEd General Mathematics also covers business and financial mathematics (interest, annuities, loans). That strand isn’t on Numberbender yet — it’s flagged for a future lesson set, so this page focuses on the functions and logic we teach.</span></div>
     <div class="grade-nav"><a href="/deped/teachers">← All teacher pages</a><a href="/deped/teachers/shs/statistics-probability">Statistics &amp; Probability →</a></div>
   </div>
 </section>
@@ -351,24 +386,24 @@
         <p class="footer-tagline" lang="fil">Labanan ang agwat.</p>
       </div>
       <div class="foot">
-        <h4>For Teachers</h4>
-        <a href="/deped/teachers">DepEd Teacher Home</a>
-        <a href="/deped/teachers/grade-7">Grade 7</a>
-        <a href="/deped/teachers/grade-8">Grade 8</a>
-        <a href="/deped/teachers/grade-9">Grade 9</a>
-        <a href="/deped/teachers/grade-10">Grade 10</a>
+        <h4>DepEd Math</h4>
+        <a href="/deped">DepEd Math Home</a>
+        <a href="/deped/grade-7">Mathematics 7</a>
+        <a href="/deped/grade-8">Mathematics 8</a>
+        <a href="/deped/grade-9">Mathematics 9</a>
+        <a href="/deped/grade-10">Mathematics 10</a>
       </div>
       <div class="foot">
-        <h4>Teacher SHS</h4>
-        <a href="/deped/teachers/shs/general-math">General Mathematics</a>
-        <a href="/deped/teachers/shs/statistics-probability">Statistics &amp; Probability</a>
-        <a href="/deped/teachers/shs/pre-calculus">Pre-Calculus</a>
-        <a href="/deped/teachers/shs/basic-calculus">Basic Calculus</a>
+        <h4>Senior High</h4>
+        <a href="/deped/shs/general-math">General Mathematics</a>
+        <a href="/deped/shs/statistics-probability">Statistics &amp; Probability</a>
+        <a href="/deped/shs/pre-calculus">Pre-Calculus</a>
+        <a href="/deped/shs/basic-calculus">Basic Calculus</a>
       </div>
       <div class="foot">
         <h4>Connect</h4>
-        <a href="/math-worksheets">Printable Worksheets</a>
-        <a href="/for-teachers">For Teachers Hub</a>
+        <a href="/for-filipino-students">Para sa Filipino Students</a>
+        <a href="/for-teachers">For Teachers</a>
         <a href="/about">About Dr. E</a>
         <a href="/contact">Contact</a>
       </div>
@@ -380,40 +415,86 @@
 </footer>
 <script>
   function toggleDD(btn){
-    var menu = btn.nextElementSibling;
-    var willOpen = !menu.classList.contains('open');
-    document.querySelectorAll('.nav-dropdown .dropdown-menu.open').forEach(function(m){ m.classList.remove('open'); var t=m.previousElementSibling; if(t) t.setAttribute('aria-expanded','false'); });
-    if (willOpen){ menu.classList.add('open'); btn.setAttribute('aria-expanded','true'); }
+    var menu=btn.nextElementSibling;
+    var willOpen=!menu.classList.contains('open');
+    document.querySelectorAll('.nav-dropdown .dropdown-menu.open').forEach(function(m){m.classList.remove('open');var t=m.previousElementSibling;if(t)t.setAttribute('aria-expanded','false');});
+    if(willOpen){menu.classList.add('open');btn.setAttribute('aria-expanded','true');}
   }
-  document.addEventListener('click', function(e){
-    if (!e.target.closest('.nav-dropdown')){
-      document.querySelectorAll('.nav-dropdown .dropdown-menu.open').forEach(function(m){ m.classList.remove('open'); var t=m.previousElementSibling; if(t) t.setAttribute('aria-expanded','false'); });
+  document.addEventListener('click',function(e){
+    if(!e.target.closest('.nav-dropdown')){
+      document.querySelectorAll('.nav-dropdown .dropdown-menu.open').forEach(function(m){m.classList.remove('open');var t=m.previousElementSibling;if(t)t.setAttribute('aria-expanded','false');});
     }
   });
   document.querySelectorAll('#navlinks a').forEach(function(a){
-    a.addEventListener('click', function(){ var nav=document.getElementById('navlinks'); var btn=document.querySelector('.menu-toggle'); if(nav){nav.classList.remove('open');} if(btn){btn.setAttribute('aria-expanded','false');} });
+    a.addEventListener('click',function(){var nav=document.getElementById('navlinks');var btn=document.querySelector('.menu-toggle');if(nav)nav.classList.remove('open');if(btn)btn.setAttribute('aria-expanded','false');});
   });
   (function(){
-    var saved = localStorage.getItem('nb_lang') || 'en';
+    var saved=localStorage.getItem('nb_lang')||'en';
     applyLang(saved);
-    window.nbSetLang = function(l){ localStorage.setItem('nb_lang', l); applyLang(l); };
+    window.nbSetLang=function(l){localStorage.setItem('nb_lang',l);applyLang(l);};
     function applyLang(l){
-      document.documentElement.setAttribute('data-lang', l);
-      document.querySelectorAll('.i18n').forEach(function(el){ var t=el.getAttribute('data-'+l); if(t!==null) el.textContent=t; });
-      document.querySelectorAll('.lang-btn').forEach(function(b){ b.setAttribute('aria-pressed', b.getAttribute('data-lang')===l?'true':'false'); });
+      document.documentElement.setAttribute('data-lang',l);
+      document.querySelectorAll('.i18n').forEach(function(el){var t=el.getAttribute('data-'+l);if(t!==null)el.textContent=t;});
+      document.querySelectorAll('.lang-btn').forEach(function(b){b.setAttribute('aria-pressed',b.getAttribute('data-lang')===l?'true':'false');});
     }
   })();
-  function nbCopy(btn){
-    var l = btn.getAttribute('data-link');
-    function ok(){ var o=btn.textContent; btn.textContent='✓ Copied'; setTimeout(function(){ btn.textContent=o; },1500); }
-    if(navigator.clipboard){ navigator.clipboard.writeText(l).then(ok); } else { prompt('Copy link:', l); }
-  }
   function nbShare(){
     var url=document.querySelector('link[rel=canonical]').href;
-    if(navigator.share){ navigator.share({title:document.title, url:url}).catch(function(){}); return; }
-    if(navigator.clipboard){ navigator.clipboard.writeText(url).then(function(){ alert('Link copied! 🔗'); }); } else { prompt('Copy this link:', url); }
+    if(navigator.share){navigator.share({title:document.title,url:url}).catch(function(){});return;}
+    if(navigator.clipboard){navigator.clipboard.writeText(url).then(function(){alert('Link copied! Ipasa mo na sa students mo. 🔗');});}
+    else{prompt('Copy this link:',url);}
   }
 </script>
 <script src="/nb-search.js"></script>
+<div class="nbm" id="nbm" role="dialog" aria-modal="true" aria-label="Lesson player">
+  <div class="nbm-box">
+    <div class="nbm-head">
+      <h4 id="nbm-title">Lesson</h4>
+      <div class="nbm-r">
+        <div class="nbm-lang" id="nbm-lang">
+          <button type="button" data-l="en" onclick="nbmLang('en')">EN</button>
+          <button type="button" data-l="fil" onclick="nbmLang('fil')">FIL</button>
+        </div>
+        <button class="nbm-copy" id="nbm-copy" onclick="nbmCopyLink()" title="Copy this video link to share with students">&#128279; Copy video link#128279; Copy link</button>
+        <button class="nbm-close" aria-label="Close" onclick="nbmClose()">&times;</button>
+      </div>
+    </div>
+    <div id="nbm-body"></div>
+  </div>
+</div>
+<script>
+  function accToggle(el){el.closest('.acc').classList.toggle('open');}
+  document.querySelectorAll('.acc-head').forEach(function(h){h.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();accToggle(h);}});});
+  var nbmCur={en:'',fil:''};
+  function nbmOpen(en,fil,title){
+    nbmCur={en:en,fil:fil};
+    document.getElementById('nbm-title').textContent=title;
+    var lang=(localStorage.getItem('nb_lang')||'en');if(lang==='fil'&&!fil)lang='en';
+    document.getElementById('nbm-lang').style.display=fil?'inline-flex':'none';
+    nbmRenderVideo(lang);document.getElementById('nbm-copy').style.display='inline-flex';openModal();
+  }
+  function nbmRenderVideo(lang){
+    var id=(lang==='fil'&&nbmCur.fil)?nbmCur.fil:nbmCur.en;
+    document.getElementById('nbm-body').innerHTML='<div class="nbm-video"><iframe src="https://www.youtube-nocookie.com/embed/'+id+'?rel=0&autoplay=1" title="Lesson video" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>';
+    document.querySelectorAll('#nbm-lang button').forEach(function(b){b.classList.toggle('on',b.getAttribute('data-l')===lang);});
+  }
+  function nbmLang(l){if(l==='fil'&&!nbmCur.fil)return;nbmRenderVideo(l);}
+  function nbmPdf(url,title){
+    document.getElementById('nbm-title').textContent=title;
+    document.getElementById('nbm-lang').style.display='none';
+    document.getElementById('nbm-body').innerHTML='<div class="nbm-pdf"><iframe src="'+url+'" title="Worksheet"></iframe></div>';document.getElementById('nbm-copy').style.display='none';
+    openModal();
+  }
+  function openModal(){document.getElementById('nbm').classList.add('open');document.body.style.overflow='hidden';}
+  function nbmClose(){document.getElementById('nbm').classList.remove('open');document.getElementById('nbm-body').innerHTML='';document.body.style.overflow='';}
+  document.getElementById('nbm').addEventListener('click',function(e){if(e.target.id==='nbm')nbmClose();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')nbmClose();});
+  function nbAccCopy(btn,url){
+    if(navigator.clipboard){navigator.clipboard.writeText(url).then(function(){
+      btn.classList.add('copied');btn.textContent='✓ Copied!';
+      setTimeout(function(){btn.classList.remove('copied');btn.textContent='🔗 Copy link';},2000);
+    });}else{prompt('Copy this link:',url);}
+  }
+</script>
 </body>
 </html>

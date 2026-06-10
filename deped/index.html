@@ -126,6 +126,9 @@
   .btn-lg{ padding: 16px 28px; font-size: 1.05rem; }
 
   /* ========== HERO (dark gradient) ========== */
+  /* Hero art — inline block, centered above the h1, no absolute positioning */
+  .hero-art-main{display:block;margin:0 auto 20px;max-height:200px;width:auto;max-width:min(360px,65%);object-fit:contain;pointer-events:none;user-select:none;}
+  @media(max-width:600px){.hero-art-main{max-height:140px;margin-bottom:14px;}}
   .hero{ position: relative; padding: 72px 0 0; overflow: hidden;
     background: radial-gradient(900px 600px at 100% -20%, rgba(245,158,11,0.18), transparent 60%), radial-gradient(800px 500px at -10% 80%, rgba(99,102,241,0.30), transparent 60%), linear-gradient(150deg, #1e1b4b 0%, #3730A3 55%, #312e81 100%); }
   .hero-inner{ text-align:center; max-width: 860px; margin: 0 auto; padding-bottom: 8px; }
@@ -148,6 +151,30 @@
   .lang-toggle.on-light{ border-color: var(--border); background:#fff; }
   .lang-toggle.on-light .lang-btn{ color: var(--muted); }
   .lang-toggle.on-light .lang-btn[aria-pressed="true"]{ background:#3730A3; color:#fff; }
+
+  /* ========== MISSION BAND ========== */
+  .mission-band{background:linear-gradient(135deg,#0F172A 0%,#1e1b4b 60%,#1a2744 100%);padding:64px 0;color:white;position:relative;overflow:hidden;}
+  .mission-band::before{content:'';position:absolute;inset:0;background:radial-gradient(600px 400px at 80% 50%,rgba(245,158,11,0.12),transparent 70%),radial-gradient(400px 300px at 10% 80%,rgba(6,182,212,0.10),transparent 60%);pointer-events:none;}
+  .mission-inner{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;position:relative;}
+  .mission-left{}
+  .mission-tagline{font-size:clamp(2.4rem,4vw,3.4rem);font-weight:900;line-height:1.05;letter-spacing:-0.03em;margin-bottom:10px;}
+  .mission-tagline .tl{color:#FACC15;font-style:italic;}
+  .mission-tagline .en{color:rgba(255,255,255,0.55);font-size:0.52em;font-weight:600;display:block;letter-spacing:0;font-style:normal;margin-top:6px;}
+  .mission-body{font-size:1.05rem;color:rgba(255,255,255,0.72);line-height:1.65;max-width:480px;margin-bottom:22px;}
+  .mission-badges{display:flex;flex-wrap:wrap;gap:10px;}
+  .mbadge{display:inline-flex;align-items:center;gap:6px;padding:6px 13px;border-radius:999px;font-size:.78rem;font-weight:700;border:1.5px solid;}
+  .mbadge-oer{background:rgba(250,204,21,0.10);border-color:rgba(250,204,21,0.40);color:#FACC15;}
+  .mbadge-np{background:rgba(34,197,94,0.10);border-color:rgba(34,197,94,0.35);color:#4ade80;}
+  .mbadge-dep{background:rgba(99,102,241,0.15);border-color:rgba(99,102,241,0.4);color:#a5b4fc;}
+  .mbadge-dr{background:rgba(6,182,212,0.10);border-color:rgba(6,182,212,0.35);color:#22d3ee;}
+  .mission-pillars{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .mpillar{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.10);border-radius:14px;padding:20px 18px;}
+  .mpillar-icon{font-size:1.5rem;margin-bottom:8px;}
+  .mpillar-num{font-size:1.6rem;font-weight:900;color:#FACC15;line-height:1;}
+  .mpillar-label{font-size:.82rem;color:rgba(255,255,255,0.6);margin-top:3px;line-height:1.35;}
+  .mpillar-label strong{color:rgba(255,255,255,0.88);display:block;}
+  @media(max-width:900px){.mission-inner{grid-template-columns:1fr;gap:36px;}.mission-pillars{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:560px){.mission-pillars{grid-template-columns:1fr 1fr;}.mission-tagline{font-size:2.2rem;}}
 
   /* ========== SECTION BASE ========== */
   section{ padding: 72px 0; }
@@ -338,6 +365,7 @@
         <button class="lang-btn" data-lang="fil" aria-pressed="false" onclick="nbSetLang('fil')">FIL</button>
       </div>
     </div>
+    <img src="deped_artwork2_deped-main-hero.png" alt="" class="hero-art-main" aria-hidden="true" loading="eager" onerror="this.style.display='none'">
     <h1>
       <span class="i18n" data-en="DepEd Math, the way you actually" data-fil="DepEd Math, sa paraang talagang">DepEd Math, the way you actually</span>
       <span class="accent-cyan i18n" data-en="learn it" data-fil="matututo ka">learn it</span>
@@ -346,13 +374,60 @@
     <p class="subhead-fil">Handa ka na ba? Hanapin ang grade mo sa baba. — Dr. E</p>
     <div class="hero-ctas">
       <a href="#grades" class="btn btn-glass-solid"><span class="i18n" data-en="Find my grade" data-fil="Hanapin ang grade ko">Find my grade</span> →</a>
-      <a href="#teachers" class="btn btn-glass"><span class="i18n" data-en="For Teachers" data-fil="Para sa Teachers">For Teachers</span></a>
+      <a href="/deped/teachers/" class="btn btn-glass"><span class="i18n" data-en="For Teachers" data-fil="Para sa Teachers">For Teachers</span></a>
     </div>
     <div class="hero-stats">
       <div class="stat"><span class="stat-num">400+</span><span class="stat-label i18n" data-en="Video lessons" data-fil="Video aralin">Video lessons</span></div>
       <div class="stat"><span class="stat-num">7–12</span><span class="stat-label i18n" data-en="Grades covered" data-fil="Grade levels">Grades covered</span></div>
       <div class="stat"><span class="stat-num">2</span><span class="stat-label i18n" data-en="Languages" data-fil="Mga wika">Languages</span></div>
       <div class="stat"><span class="stat-num">₱0</span><span class="stat-label i18n" data-en="Always free" data-fil="Libre lagi">Always free</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== MISSION & TRUST ========== -->
+<section class="mission-band">
+  <div class="container">
+    <div class="mission-inner">
+      <div class="mission-left">
+        <div class="mission-tagline">
+          <span class="tl">Labanan ang agwat.</span>
+          <span class="en">Close the gap.</span>
+        </div>
+        <p class="mission-body i18n"
+           data-en="Every Filipino student deserves a complete, high-quality math education — in their language, aligned to their curriculum, at no cost. Numberbender is built to make that real."
+           data-fil="Bawat estudyanteng Pilipino ay may karapatang magkaroon ng kumpleto at de-kalidad na edukasyon sa math — sa kanilang wika, naka-align sa kanilang curriculum, nang walang bayad. Ginawa ang Numberbender para matupad iyon.">
+          Every Filipino student deserves a complete, high-quality math education — in their language, aligned to their curriculum, at no cost. Numberbender is built to make that real.
+        </p>
+        <div class="mission-badges">
+          <span class="mbadge mbadge-oer">📖 Open Educational Resource</span>
+          <span class="mbadge mbadge-np">💚 501(c)(3) Nonprofit</span>
+          <span class="mbadge mbadge-dep">🇵🇭 DepEd 2026 Aligned</span>
+          <span class="mbadge mbadge-dr">👨‍🏫 By Dr. Peter Esperanza</span>
+        </div>
+      </div>
+      <div class="mission-pillars">
+        <div class="mpillar">
+          <div class="mpillar-icon">📹</div>
+          <div class="mpillar-num">400+</div>
+          <div class="mpillar-label"><strong class="i18n" data-en="Video lessons" data-fil="Video aralin">Video lessons</strong><span class="i18n" data-en="Grades 7–12, every unit" data-fil="Grades 7–12, bawat unit">Grades 7–12, every unit</span></div>
+        </div>
+        <div class="mpillar">
+          <div class="mpillar-icon">🌐</div>
+          <div class="mpillar-num">2</div>
+          <div class="mpillar-label"><strong class="i18n" data-en="Languages" data-fil="Mga wika">Languages</strong><span class="i18n" data-en="English &amp; Filipino" data-fil="English at Filipino">English &amp; Filipino</span></div>
+        </div>
+        <div class="mpillar">
+          <div class="mpillar-icon">📄</div>
+          <div class="mpillar-num">₱0</div>
+          <div class="mpillar-label"><strong class="i18n" data-en="Forever free" data-fil="Libre magpakailanman">Forever free</strong><span class="i18n" data-en="No login, no paywall" data-fil="Walang login, walang bayad">No login, no paywall</span></div>
+        </div>
+        <div class="mpillar">
+          <div class="mpillar-icon">🗺️</div>
+          <div class="mpillar-num">8</div>
+          <div class="mpillar-label"><strong class="i18n" data-en="Subjects covered" data-fil="Mga subject">Subjects covered</strong><span class="i18n" data-en="JHS + all SHS math" data-fil="JHS + lahat ng SHS math">JHS + all SHS math</span></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>

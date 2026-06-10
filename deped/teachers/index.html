@@ -93,11 +93,13 @@
   /* HERO */
   .hero{ position: relative; padding: 30px 0 56px; overflow: hidden; color:white;
     background: radial-gradient(900px 600px at 100% -20%, rgba(245,158,11,0.18), transparent 60%), radial-gradient(800px 500px at -10% 80%, rgba(20,184,166,0.30), transparent 60%), linear-gradient(150deg, #042f2e 0%, #0F766E 55%, #134e4a 100%); }
+  .hero-art-main{position:absolute;right:0;top:0;height:100%;width:auto;max-width:44%;object-fit:contain;object-position:right center;pointer-events:none;user-select:none;opacity:0.88;}
+  @media(max-width:860px){.hero-art-main{display:none;}}
   .breadcrumb{ font-size:.85rem; padding:18px 0 0; }
   .breadcrumb a{ color:rgba(255,255,255,0.75); }
   .breadcrumb a:hover{ color:#fff; }
   .breadcrumb span{ color:rgba(255,255,255,0.5); }
-  .hero-inner{ max-width: 820px; padding-top: 22px; }
+  .hero-inner{ max-width: 820px; padding-top: 22px; padding-right: min(46%, 500px); }
   .hero-eyebrow{ display:inline-flex; align-items:center; gap:8px; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.22); color: rgba(255,255,255,0.92); padding: 6px 14px; border-radius: 999px; font-size: 0.82rem; font-weight: 600; margin-bottom: 16px; }
   .hero h1{ font-size: clamp(2rem, 4vw, 3rem); line-height: 1.06; letter-spacing: -0.025em; font-weight: 800; margin-bottom: 6px; }
   .hero .h1-fil{ font-size: 1.1rem; color:#FCD34D; font-weight:700; font-style:italic; margin-bottom:14px; }
@@ -260,6 +262,7 @@
 </header>
 <main id="main-content">
 <section class="hero">
+  <img src="../deped_artwork2_deped-main-hero.png" alt="" class="hero-art-main" aria-hidden="true" loading="eager" onerror="this.style.display='none'">
   <div class="container">
     <div class="breadcrumb"><a href="/deped">DepEd Math</a> <span>&rsaquo;</span> <span style="color:rgba(255,255,255,.92)">For Teachers</span></div>
     <div class="hero-inner">
@@ -284,14 +287,14 @@
       <a href="/deped">👁️ <span class="i18n" data-en="Student view" data-fil="Student view">Student view</span></a>
       <a href="/for-teachers">🏫 <span class="i18n" data-en="For Teachers Hub" data-fil="For Teachers Hub">For Teachers Hub</span></a>
     </div>
-    <div class="domain-head" style="margin-top:34px;"><span class="domain-num">7-10</span><div><h2>MATATAG · Junior High</h2><div class="d-fil">Mathematics 7 hanggang 10</div></div></div>
+    <div class="domain-head" style="margin-top:34px;"><span class="domain-num" style="width:auto;min-width:56px;height:36px;padding:0 14px;border-radius:12px;white-space:nowrap;font-size:.95rem;letter-spacing:.02em;">7–10</span><div><h2>MATATAG · Junior High</h2><div class="d-fil">Mathematics 7 hanggang 10</div></div></div>
     <div class="tcards" style="margin-bottom:30px;">
       <a class="tcard" href="/deped/teachers/grade-7"><span class="tc-badge">7</span><h3>Mathematics 7</h3><span class="tc-fil">Matematika 7</span></a>
       <a class="tcard" href="/deped/teachers/grade-8"><span class="tc-badge">8</span><h3>Mathematics 8</h3><span class="tc-fil">Matematika 8</span></a>
       <a class="tcard" href="/deped/teachers/grade-9"><span class="tc-badge">9</span><h3>Mathematics 9</h3><span class="tc-fil">Matematika 9</span></a>
       <a class="tcard" href="/deped/teachers/grade-10"><span class="tc-badge">10</span><h3>Mathematics 10</h3><span class="tc-fil">Matematika 10</span></a>
     </div>
-    <div class="domain-head"><span class="domain-num">11-12</span><div><h2>Strengthened SHS · Senior High</h2><div class="d-fil">By subject</div></div></div>
+    <div class="domain-head"><span class="domain-num" style="width:auto;min-width:56px;height:36px;padding:0 14px;border-radius:12px;white-space:nowrap;font-size:.95rem;letter-spacing:.02em;">11–12</span><div><h2>Strengthened SHS · Senior High</h2><div class="d-fil">By subject</div></div></div>
     <div class="tcards">
       <a class="tcard" href="/deped/teachers/shs/general-math"><span class="tc-badge">🧮</span><h3>General Mathematics</h3><span class="tc-fil">Core · Grade 11</span></a>
       <a class="tcard" href="/deped/teachers/shs/statistics-probability"><span class="tc-badge">📊</span><h3>Statistics &amp; Probability</h3><span class="tc-fil">Estadistika</span></a>
@@ -364,7 +367,7 @@
   })();
   function nbCopy(btn){
     var l = btn.getAttribute('data-link');
-    function ok(){ var o=btn.textContent; btn.textContent='✓ Copied'; setTimeout(function(){ btn.textContent=o; },1500); }
+    function ok(){ var o=btn.textContent; btn.textContent='✓ Copied!'; setTimeout(function(){ btn.textContent=o; },1500); }
     if(navigator.clipboard){ navigator.clipboard.writeText(l).then(ok); } else { prompt('Copy link:', l); }
   }
   function nbShare(){
