@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P1M2WZD840"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P1M2WZD840');
+</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Numerical Methods — Euler&#x27;s Method Worksheet (MATH 240) — Free PDF with Answer Key | Numberbender</title>
+<meta name="description" content="Free Ordinary Differential Equations practice worksheet on Numerical Methods — Euler&#x27;s Method with full answer key, aligned to C-ID MATH 240 for California Community Colleges. Euler&#x27;s method for numerically approximating solutions to ODEs. Step-by-step application and error interpretation. Free video lessons included. By Dr. Peter Esperanza." />
+<link rel="canonical" href="https://numberbender.com/worksheets/ccc/math240-numerical-methods/" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Numerical Methods — Euler&#x27;s Method Worksheet (MATH 240) — Free PDF with Answer Key | Numberbender" />
+<meta property="og:description" content="Free Ordinary Differential Equations practice worksheet on Numerical Methods — Euler&#x27;s Method with full answer key, aligned to C-ID MATH 240 for California Community Colleges. Euler&#x27;s method for numerically approximating solutions to ODEs. Step-by-step application and error interpretation. Free video lessons included. By Dr. Peter Esperanza." />
+<meta property="og:url" content="https://numberbender.com/worksheets/ccc/math240-numerical-methods/" />
+<meta property="og:site_name" content="Numberbender" />
+<meta property="og:image" content="https://numberbender.com/images/dr-e-hero.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@numberbender" />
+<meta name="twitter:title" content="Numerical Methods — Euler&#x27;s Method Worksheet (MATH 240) — Free PDF with Answer Key | Numberbender" />
+<meta name="twitter:description" content="Free Ordinary Differential Equations practice worksheet on Numerical Methods — Euler&#x27;s Method with full answer key, aligned to C-ID MATH 240 for California Community Colleges. Euler&#x27;s method for numerically approximating solutions to ODEs. Step-by-step application and error interpretation. Free video lessons included. By Dr. Peter Esperanza." />
+<meta name="twitter:image" content="https://numberbender.com/images/dr-e-hero.jpg" />
+<link rel="icon" type="image/svg+xml" href="/images/exports/numberbender-favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/exports/png/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/exports/png/favicon-180.png">
+<meta name="theme-color" content="#1F6F6B">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://numberbender.com/worksheets/ccc/math240-numerical-methods/#page","url":"https://numberbender.com/worksheets/ccc/math240-numerical-methods/","name":"Numerical Methods — Euler's Method Worksheet (MATH 240) — Free PDF with Answer Key | Numberbender","description":"Free Ordinary Differential Equations practice worksheet on Numerical Methods — Euler's Method with full answer key, aligned to C-ID MATH 240 for California Community Colleges. Euler's method for numerically approximating solutions to ODEs. Step-by-step application and error interpretation. Free video lessons included. By Dr. Peter Esperanza.","inLanguage":"en","isPartOf":{"@type":"WebSite","name":"Numberbender","url":"https://numberbender.com"},"breadcrumb":{"@id":"https://numberbender.com/worksheets/ccc/math240-numerical-methods/#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://numberbender.com/worksheets/ccc/math240-numerical-methods/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://numberbender.com/"},{"@type":"ListItem","position":2,"name":"Math CCC","item":"https://numberbender.com/math-ccc"},{"@type":"ListItem","position":3,"name":"MATH 240 — Ordinary Differential Equations","item":"https://numberbender.com/math240-course"},{"@type":"ListItem","position":4,"name":"Numerical Methods — Euler's Method Worksheet — MATH 240","item":"https://numberbender.com/worksheets/ccc/math240-numerical-methods/"}]},{"@type":"LearningResource","name":"Numerical Methods — Euler's Method Worksheet — MATH 240","description":"Free Ordinary Differential Equations practice worksheet on Numerical Methods — Euler's Method with full answer key, aligned to C-ID MATH 240 for California Community Colleges. Euler's method for numerically approximating solutions to ODEs. Step-by-step application and error interpretation. Free video lessons included. By Dr. Peter Esperanza.","learningResourceType":"Worksheet","inLanguage":"en","isAccessibleForFree":true,"url":"https://numberbender.com/worksheets/ccc/math240-numerical-methods/","teaches":"Numerical Methods — Euler's Method","educationalUse":"practice","educationalAlignment":{"@type":"AlignmentObject","alignmentType":"educationalSubject","educationalFramework":"C-ID (Course Identification Numbering System)","targetName":"MATH 240","targetDescription":"Ordinary Differential Equations"},"audience":{"@type":"EducationalAudience","educationalRole":"student"},"hasPart":{"@type":"DigitalDocument","name":"Numerical Methods — Euler's Method Worksheet — MATH 240 (PDF with answer key)","url":"https://numberbender.com/exports/MATH240_numerical_methods.pdf","encodingFormat":"application/pdf"},"author":{"@type":"Person","name":"Dr. Peter Esperanza"},"publisher":{"@type":"Organization","name":"Numberbender","url":"https://numberbender.com"}}]}</script>
+<style>
+  :root{
+    --navy:#0F172A; --blue:#2563EB; --yellow:#FACC15; --cyan:#06B6D4; --green:#22C55E;
+    --bg:#F8FAFC; --surface:#FFFFFF; --muted:#64748B; --border:#E2E8F0;
+    --shadow: 0 10px 30px rgba(15,23,42,.08); --radius:16px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0} html{scroll-behavior:smooth}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Inter",Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--navy);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:var(--blue);text-decoration:none} a:hover{text-decoration:underline}
+  img{max-width:100%;display:block}
+  .container{width:min(1100px,92%);margin-inline:auto}
+  .skip-link{position:absolute;left:-9999px} .skip-link:focus{left:8px;top:8px;background:#fff;padding:8px 14px;z-index:100;border-radius:8px}
+  .nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid var(--border)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+  .logo-lockup .lockup-img{height:72px;width:auto;display:block;max-width:360px}
+  .nav-links{display:flex;gap:22px;align-items:center;flex-wrap:nowrap}
+  .nav-links a{color:var(--navy);font-weight:500;font-size:.95rem;white-space:nowrap}
+  .nav-links a:hover{color:var(--blue);text-decoration:none}
+  .nav-cta{background:var(--navy);color:#fff!important;padding:9px 16px;border-radius:10px;font-weight:600}
+  .nav-cta:hover{background:var(--blue)}
+  .menu-toggle{display:none;background:none;border:none;cursor:pointer;font-size:1.4rem;color:var(--navy)}
+  .nav-dropdown{position:relative}
+  .nav-dropdown .dropdown-trigger{background:none;border:none;padding:0;font:inherit;color:var(--navy);font-weight:500;font-size:.95rem;cursor:pointer;display:inline-flex;align-items:center;gap:4px;white-space:nowrap}
+  .nav-dropdown .dropdown-trigger:hover{color:var(--blue)}
+  .nav-dropdown .caret{font-size:.75em;transition:transform .2s}
+  .nav-dropdown:hover .caret,.nav-dropdown .dropdown-trigger[aria-expanded="true"] .caret{transform:rotate(180deg)}
+  .nav-dropdown .dropdown-menu{position:absolute;top:100%;left:0;margin-top:10px;background:#fff;border:1px solid var(--border);border-radius:14px;padding:6px;box-shadow:0 20px 50px rgba(15,23,42,.12);min-width:240px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:.15s;z-index:100}
+  .nav-dropdown .dropdown-menu::before{content:'';position:absolute;top:-10px;left:0;right:0;height:10px}
+  .nav-dropdown:hover .dropdown-menu,.nav-dropdown .dropdown-menu.open{opacity:1;visibility:visible;transform:translateY(0)}
+  .nav-dropdown .dropdown-menu a{display:block;padding:10px 14px;border-radius:8px;color:var(--navy);font-weight:500;font-size:.95rem}
+  .nav-dropdown .dropdown-menu a:hover{background:rgba(37,99,235,.08);color:var(--blue);text-decoration:none}
+  @media (max-width:980px){
+    .menu-toggle{display:block}
+    .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;align-items:flex-start;padding:14px 5%;gap:12px;border-bottom:1px solid var(--border)}
+    .nav-links.open{display:flex}
+    .nav-dropdown .dropdown-menu{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;border:none;margin:0;padding-left:14px;display:none}
+    .nav-dropdown .dropdown-menu.open{display:block}
+  }
+  .crumbs{font-size:.85rem;color:var(--muted);padding:18px 0 0}
+  .crumbs a{color:var(--muted)} .crumbs a:hover{color:var(--blue)}
+  .ws-head{padding:34px 0 26px;background:radial-gradient(900px 400px at 90% -10%,rgba(6,182,212,.16),transparent 60%),radial-gradient(700px 400px at -10% 10%,rgba(37,99,235,.13),transparent 60%),linear-gradient(180deg,#fff 0%,var(--bg) 100%)}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(6,182,212,.14);color:#0e7490;padding:6px 14px;border-radius:999px;font-size:.8rem;font-weight:700;margin-bottom:14px;text-transform:uppercase;letter-spacing:.08em}
+  h1{font-size:clamp(1.9rem,4vw,2.8rem);line-height:1.1;letter-spacing:-.02em;font-weight:800;margin-bottom:12px}
+  .lead{color:var(--muted);font-size:1.08rem;max-width:640px;margin-bottom:20px}
+  .pills{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px}
+  .pill{background:var(--surface);border:1px solid var(--border);border-radius:999px;padding:6px 14px;font-size:.85rem;color:var(--muted)}
+  .pill strong{color:var(--navy)}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 22px;border-radius:12px;font-weight:600;font-size:1rem;cursor:pointer;border:2px solid transparent;transition:.15s;text-decoration:none!important}
+  .btn:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+  .btn-primary{background:var(--blue);color:#fff} .btn-primary:hover{background:#1d4ed8}
+  .btn-yellow{background:var(--yellow);color:var(--navy)} .btn-yellow:hover{background:#eab308}
+  .btn-outline{background:transparent;color:var(--navy);border:2px solid var(--border)} .btn-outline:hover{border-color:var(--blue);color:var(--blue)}
+  section{padding:44px 0}
+  h2{font-size:1.5rem;font-weight:800;margin-bottom:8px}
+  .sub{color:var(--muted);margin-bottom:22px;max-width:640px}
+  .vid-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  @media (max-width:760px){.vid-grid{grid-template-columns:1fr}}
+  .vid-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+  .vid-label{padding:12px 16px;font-weight:700;font-size:.95rem;display:flex;align-items:center;gap:8px}
+  .facade{position:relative;aspect-ratio:16/9;background:#0b1220;cursor:pointer;border:0;padding:0;width:100%;display:block}
+  .facade img{width:100%;height:100%;object-fit:cover;opacity:.85}
+  .facade .play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+  .facade .play span{width:68px;height:48px;background:rgba(15,23,42,.8);border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.3rem;transition:.15s}
+  .facade:hover .play span{background:var(--blue)}
+  .facade iframe{width:100%;height:100%;border:0;position:absolute;inset:0}
+  .rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  @media (max-width:860px){.rel-grid{grid-template-columns:1fr 1fr}}
+  @media (max-width:560px){.rel-grid{grid-template-columns:1fr}}
+  .rel-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:18px;box-shadow:var(--shadow);display:block;color:var(--navy)}
+  .rel-card:hover{text-decoration:none;border-color:var(--blue)}
+  .rel-card .t{font-weight:700;margin-bottom:4px}
+  .rel-card .m{font-size:.82rem;color:var(--muted)}
+  .course-links a{display:inline-block;margin:0 12px 8px 0;font-weight:600}
+  .cta-box{background:linear-gradient(135deg,#0F172A,#1e3a8a);border-radius:var(--radius);padding:38px;color:#e2e8f0;display:flex;gap:30px;align-items:center;flex-wrap:wrap;justify-content:space-between}
+  .cta-box h2{color:#fff} .cta-box p{max-width:440px}
+  .cta-box form{display:flex;gap:10px;flex-wrap:wrap}
+  .cta-box input[type=email]{padding:13px 16px;border-radius:12px;border:none;min-width:240px;font-size:1rem}
+  footer{background:#0b1220;color:#94a3b8;padding:50px 0 24px}
+  footer a{color:#cbd5e1;display:block;margin-bottom:8px;font-size:.92rem}
+  footer h4{color:#fff;margin-bottom:12px;font-size:.95rem}
+  .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px;margin-bottom:30px}
+  @media (max-width:760px){.foot-grid{grid-template-columns:1fr 1fr}}
+  .foot-brand p{margin-bottom:10px;font-size:.92rem}
+  .footer-tagline{color:var(--cyan);font-style:italic;font-weight:600;font-size:.95rem!important}
+  .foot-bottom{border-top:1px solid #1e293b;padding-top:20px;font-size:.85rem}
+  .foot-bottom a{display:inline}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="/" class="logo-lockup" aria-label="Numberbender — Home">
+      <img src="/images/numberbender_banner_only.svg" alt="Numberbender" class="lockup-img" loading="lazy">
+    </a>
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" onclick="var exp=this.getAttribute('aria-expanded')==='false';this.setAttribute('aria-expanded',exp?'true':'false');document.getElementById('navlinks').classList.toggle('open')">☰</button>
+    <nav class="nav-links" id="navlinks">
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Learn <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="/start-here">🎁 Free Starter Lesson</a>
+          <a href="/find-your-course">🧭 Where Do I Start?</a>
+          <a href="/courses">📚 Explore Math Lessons</a>
+          <a href="/subjects/test-prep/">🎯 Test Prep Practice</a>
+          <a href="/math-worksheets">📝 Free Worksheets</a>
+          <a href="/for-filipino-students">🇵🇭 Para sa Filipino Students</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Teach <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="/for-teachers">🏫 For Teachers Hub</a>
+          <a href="/teach-the-math">🎓 Teach the Math</a>
+          <a href="/teach-it-like-you-stream-it">🎬 Teach It Like You Stream It</a>
+          <a href="/teacher-resources">📦 Teacher Resources</a>
+          <a href="/math-worksheets">📄 Printable Worksheets</a>
+          <a href="/courses">📚 Lesson &amp; Course Library</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger nav-mathccc" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Math CCC <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="/math-ccc">📚 Browse All Courses</a>
+          <a href="/ab1705-corequisite-math">🧭 AB 1705 Corequisite Support</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">DepEd Math <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="/deped">🇵🇭 DepEd Math Home</a>
+          <a href="/deped/teachers">👩‍🏫 For Teachers · Para sa Teachers</a>
+          <a href="/deped/grade-7">7 · Mathematics 7</a>
+          <a href="/deped/grade-8">8 · Mathematics 8</a>
+          <a href="/deped/grade-9">9 · Mathematics 9</a>
+          <a href="/deped/grade-10">10 · Mathematics 10</a>
+          <a href="/deped/shs/general-math">📐 General Mathematics</a>
+          <a href="/deped/shs/statistics-probability">📊 Statistics &amp; Probability</a>
+          <a href="/deped/shs/pre-calculus">∫ Pre-Calculus</a>
+          <a href="/deped/shs/basic-calculus">∂ Basic Calculus</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">About <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="/speaking-archive">📅 Past Engagements</a>
+          <a href="/blog">✍️ Blog</a>
+          <a href="/speaking">🎤 Speaking</a>
+          <a href="/for-institutions">🤝 For Institutions</a>
+          <a href="/nonprofit">🏛️ Mission &amp; Nonprofit</a>
+          <a href="/press">📰 Press &amp; Media</a>
+          <a href="/about">👨‍🏫 About Dr. E</a>
+        </div>
+      </div>
+      <a href="/contact" class="nav-cta">Contact</a>
+    </nav>
+  </div>
+</header>
+<main id="main-content">
+<div class="container crumbs" aria-label="Breadcrumb">
+  <a href="/">Home</a> › <a href="/math-worksheets">Worksheets</a> › <a href="/math-ccc">CCC · MATH 240</a> › <span>Numerical Methods — Euler&#x27;s Method Worksheet — MATH 240</span>
+</div>
+<section class="ws-head" style="padding-top:18px;">
+  <div class="container">
+    <span class="eyebrow">Free printable · Answer key included</span>
+    <h1>Numerical Methods — Euler&#x27;s Method Worksheet — MATH 240</h1>
+    <p class="lead">C-ID–aligned practice for Ordinary Differential Equations (MATH 240): Euler&#x27;s method for numerically approximating solutions to ODEs. Step-by-step application and error interpretation. Download the worksheet with its verified answer key, or work through the video lessons first.</p>
+    <div class="pills">
+      <span class="pill"><strong>Subject:</strong>&nbsp;CCC · MATH 240</span>
+      <span class="pill"><strong>Topic:</strong>&nbsp;Ordinary Differential Equations</span>
+      <span class="pill"><strong>C-ID MATH 240</strong></span>
+      <span class="pill"><strong>Level:</strong>&nbsp;College</span>
+    </div>
+    <div class="ctas">
+      <a class="btn btn-yellow" href="/exports/MATH240_numerical_methods.pdf" target="_blank" rel="noopener" onclick="nbTrack('worksheet_download',{worksheet:'math240-numerical-methods',subject:'CCC MATH 240'})">⬇ Download free PDF</a>
+      <a class="btn btn-outline" href="#video">▶ Watch the video lesson first</a>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:10px;">
+  <div class="container">
+    <h2>More CCC · MATH 240 worksheets</h2>
+    <p class="sub">Working through Ordinary Differential Equations? These are the sheets that come before and after this one in the course sequence.</p>
+    <div class="rel-grid">
+      <a class="rel-card" href="/worksheets/ccc/math240-first-order-separable/"><span class="t">First-Order ODEs Worksheet</span><span class="m">MATH 240 · Ordinary Differential Equations</span></a>
+      <a class="rel-card" href="/worksheets/ccc/math240-applications-growth-decay/"><span class="t">Applications — Growth, Decay &amp; Mixing Worksheet</span><span class="m">MATH 240 · Ordinary Differential Equations</span></a>
+      <a class="rel-card" href="/worksheets/ccc/math240-higher-order-odes/"><span class="t">Higher-Order Linear ODEs Worksheet</span><span class="m">MATH 240 · Ordinary Differential Equations</span></a>
+      <a class="rel-card" href="/worksheets/ccc/math240-undetermined-coefficients/"><span class="t">Undetermined Coefficients Worksheet</span><span class="m">MATH 240 · Ordinary Differential Equations</span></a>
+      <a class="rel-card" href="/worksheets/ccc/math240-laplace-transforms/"><span class="t">Laplace Transforms Worksheet</span><span class="m">MATH 240 · Ordinary Differential Equations</span></a>
+    </div>
+    <p class="course-links" style="margin-top:26px;"><strong>Part of these free courses:</strong> <a href="/math240-course">MATH 240 — Ordinary Differential Equations</a> · <a href="/math-ccc">All CCC courses</a></p>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="cta-box">
+      <div>
+        <h2>New worksheets, every month — free</h2>
+        <p>Join teachers and students getting Dr. E's newest worksheets and video lessons. No spam, no cost, ever. <em>Labanan ang agwat.</em></p>
+      </div>
+      <form name="worksheet-updates" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/newsletter-thanks" onsubmit="nbTrack('worksheet_signup',{worksheet:'math240-numerical-methods'})">
+        <input type="hidden" name="form-name" value="worksheet-updates">
+        <input type="hidden" name="worksheet" value="math240-numerical-methods">
+        <p style="display:none;"><input name="bot-field"></p>
+        <input type="email" name="email" required placeholder="you@email.com" aria-label="Email address">
+        <button type="submit" class="btn btn-yellow">Send me worksheets</button>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot foot-brand">
+        <p style="color:#cbd5e1;font-weight:700;font-size:1.05rem;">Numberbender</p>
+        <p>Helping students learn math with confidence and helping educators teach online with energy, clarity, and impact.</p>
+        <p class="footer-tagline">Math is hard. So we made it human.</p>
+      </div>
+      <div class="foot">
+        <h4>Students</h4>
+        <a href="/courses">Explore All Subjects</a>
+        <a href="/math-worksheets">Free Worksheets</a>
+        <a href="/find-your-course">Where Do I Start?</a>
+        <a href="/start-here">Free Starter Lesson</a>
+      </div>
+      <div class="foot">
+        <h4>Educators</h4>
+        <a href="/for-teachers">For Teachers Hub</a>
+        <a href="/teach-the-math">Teach the Math</a>
+        <a href="/teacher-resources">Teacher Resources</a>
+        <a href="/flipped-classroom-math">Flipped Classroom Guide</a>
+      </div>
+      <div class="foot">
+        <h4>Connect</h4>
+        <a href="/about">About Dr. E</a>
+        <a href="/speaking">Speaking</a>
+        <a href="/press">Press &amp; Media</a>
+        <a href="/contact">Contact</a>
+        <a href="https://www.youtube.com/@numberbender" target="_blank" rel="noopener">YouTube Channel</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      © 2026 Numberbender · Founded by Dr. Peter Esperanza · <a href="/">Home</a> · <a href="/contact">Contact</a>
+      <div style="margin-top:8px;font-size:0.78rem;color:#94a3b8;">
+        <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener"><img src="https://licensebuttons.net/l/by/4.0/88x31.png" alt="CC BY 4.0" style="border:0;vertical-align:middle;margin-right:6px;" loading="lazy"></a>
+        Original content licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener" style="color:#94a3b8;">CC BY 4.0</a> &mdash; free to share and adapt with credit to Peter Esperanza / Numberbender.
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+  function toggleDD(btn){
+    var menu=btn.nextElementSibling, willOpen=!menu.classList.contains('open');
+    document.querySelectorAll('.nav-dropdown .dropdown-menu.open').forEach(function(m){m.classList.remove('open');var t=m.previousElementSibling;if(t)t.setAttribute('aria-expanded','false');});
+    if(willOpen){menu.classList.add('open');btn.setAttribute('aria-expanded','true');}
+  }
+  document.addEventListener('click',function(e){
+    if(!e.target.closest('.nav-dropdown')){document.querySelectorAll('.nav-dropdown .dropdown-menu.open').forEach(function(m){m.classList.remove('open');var t=m.previousElementSibling;if(t)t.setAttribute('aria-expanded','false');});}
+  });
+  function nbTrack(n,p){ if(typeof gtag==='function') gtag('event',n,p); }
+  document.querySelectorAll('.facade').forEach(function(f){
+    function load(){
+      var id=f.getAttribute('data-yt');
+      nbTrack('video_play',{video_id:id,page_location:location.pathname});
+      var ifr=document.createElement('iframe');
+      ifr.src='https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0';
+      ifr.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      ifr.allowFullscreen=true; ifr.title=f.getAttribute('aria-label')||'Video lesson';
+      f.innerHTML=''; f.appendChild(ifr);
+    }
+    f.addEventListener('click',load);
+    f.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){e.preventDefault();load();} });
+  });
+</script>
+<script src="/nb-search.js" defer></script>
+</body>
+</html>

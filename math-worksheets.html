@@ -1624,7 +1624,7 @@
         +(dl?'<span class="sr-diff" '+diffStyle(w.difficulty)+'>'+dl+'</span>':'')
       +'</div>'
       +(w.topic?'<div class="sr-topic" '+STYLE_TOPIC+'>'+hl(w.topic,q)+'</div>':'')
-      +'<h3 class="sr-title" '+STYLE_TITLE+'>'+hl(w.title,q)+'</h3>'
+      +'<h3 class="sr-title" '+STYLE_TITLE+'>'+(w.detailUrl?'<a href="'+esc(w.detailUrl)+'" style="color:inherit;" title="Open worksheet page — video lesson + answer key">'+hl(w.title,q)+'</a>':hl(w.title,q))+'</h3>'
       +'<div class="sr-actions" '+STYLE_ACTIONS+'>'
         +(w.pdfUrl?'<button '+STYLE_BTN_PRI_BTN+' onclick="openPdfPreview(this)" data-pdf="'+esc(w.pdfUrl)+'" data-title="'+esc(w.title)+'">'+SVG_EYE+' View</button>':'<span></span>')
         +(w.pdfUrl?'<a class="sr-btn" '+STYLE_BTN+' href="'+esc(w.pdfUrl)+'" download>&#8595; Download</a>':'<span></span>')

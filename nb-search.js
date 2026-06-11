@@ -266,7 +266,7 @@
       if (res.ws.length) {
         html += '<div class="nb-dh">Worksheets</div>';
         res.ws.forEach(function (w) {
-          var url = w.pageUrl || SEARCH_PAGE;
+          var url = w.detailUrl || w.pageUrl || SEARCH_PAGE;
           html += '<a class="nb-dr" href="' + url + '">' +
             '<span class="nb-drt">' + esc(w.title) + '</span>' +
             '<span class="nb-drs">' + esc(w.subject) + (w.topic ? ' · ' + esc(w.topic) : '') + '</span>' +
