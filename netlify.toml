@@ -12,6 +12,13 @@
 # Google prefers one canonical form; these ensure the .html version
 # redirects to the extensionless version with a 301 (permanent).
 
+# ── Root index.html → / (prevents duplicate homepage URL in GSC) ──
+[[redirects]]
+  from   = "/index.html"
+  to     = "/"
+  status = 301
+  force  = true
+
 # --------------- Numberbender CCC (math section) ---------------
 [[redirects]]
   from = "/math-ccc"
@@ -360,6 +367,67 @@
   force  = true
 
 # ── Old /worksheets/[subject]/ URLs (previous site structure) ──
+# ── /subjects/*/index.html → /subjects/*/ (removes index.html from crawlable URLs) ──
+[[redirects]]
+  from = "/subjects/algebra/index.html"
+  to   = "/subjects/algebra/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/subjects/calculus/index.html"
+  to   = "/subjects/calculus/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/subjects/precalculus/index.html"
+  to   = "/subjects/precalculus/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/subjects/statistics/index.html"
+  to   = "/subjects/statistics/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/subjects/trigonometry/index.html"
+  to   = "/subjects/trigonometry/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/subjects/geometry/index.html"
+  to   = "/subjects/geometry/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/subjects/linear-algebra/index.html"
+  to   = "/subjects/linear-algebra/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/subjects/discrete-math/index.html"
+  to   = "/subjects/discrete-math/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/subjects/pre-algebra/index.html"
+  to   = "/subjects/pre-algebra/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/subjects/test-prep/index.html"
+  to   = "/subjects/test-prep/"
+  status = 301
+  force  = true
+
 [[redirects]]
   from = "/worksheets/algebra/"
   to   = "/subjects/algebra/"

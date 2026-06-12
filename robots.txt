@@ -10,8 +10,9 @@ Allow: /
 # <meta name="robots" content="noindex, nofollow">, which Google can only
 # obey if it is allowed to crawl the page.
 
-# Internal site-search result URLs (parameterized duplicates)
+# Parameterized URLs that produce duplicate content
 Disallow: /courses?s=
+Disallow: /contact?
 
 Sitemap: https://numberbender.com/sitemap.xml
 Sitemap: https://numberbender.com/video-sitemap.xml
