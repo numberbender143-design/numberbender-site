@@ -374,6 +374,9 @@
 :focus-visible{outline:3px solid #e8a93b;outline-offset:2px}
 #content:focus{outline:none}
 </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script>function nbTeX(it){var t=(it&&it.tex)?it.tex:((it&&it.given)?it.given:"");if(!t)return "";try{if(window.katex)return katex.renderToString(t,{throwOnError:false,displayMode:false});}catch(e){}return String(t).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}</script>
 </head>
 <body>
 <a class="skip-link" href="#content">Skip to main content</a>
@@ -553,7 +556,7 @@
   <div class="oer">CC BY · OER · ASCCC-aligned</div>
 </div></footer>
 
-<script src="content/banks/MATH220_banks.js?v=20260604-1610"></script>
+<script src="content/banks/MATH220_banks.js?v=20260613-katex"></script>
 <script>
 const COURSE = {"cid": "MATH 220", "course": "Calculus II", "topics": [{"slug": "integration-techniques", "title": "Integration Techniques", "desc": "U-substitution, antiderivatives of transcendental functions, and the Fundamental Theorem of Calculus.", "videos": [{"id": "dzXQYjDvFfM", "title": "Introduction to Antiderivatives", "url": "https://www.youtube.com/watch?v=dzXQYjDvFfM", "dur": "7m 31s", "views": 1433, "fil": "ODd4K-tEBpQ"}, {"id": "0fNHhILpCiA", "title": "Antiderivatives of Transcendental Functions", "url": "https://www.youtube.com/watch?v=0fNHhILpCiA", "dur": "5m 49s", "views": 2377, "fil": "iBvE5Fs-ags"}, {"id": "6P8Y4rso_8U", "title": "Definite Integrals", "url": "https://www.youtube.com/watch?v=6P8Y4rso_8U", "dur": "4m 54s", "views": 7591, "fil": "gS46GllBLMk"}, {"id": "XHtZBGyADHc", "title": "Fundamental Theorem of Calculus", "url": "https://www.youtube.com/watch?v=XHtZBGyADHc", "dur": "5m 57s", "views": 1204, "fil": "6ArPsBlDLmU"}, {"id": "jmN4-l-6Uhk", "title": "U-Substitution", "url": "https://www.youtube.com/watch?v=jmN4-l-6Uhk", "dur": "58m 25s", "views": 1500, "fil": "qVf2XVGpLfc"}]}, {"slug": "applications-of-integration", "title": "Applications of Integration", "desc": "Area between curves, volumes of revolution (disk, washer, cross sections), and average value.", "videos": [{"id": "SxxUUjkxeiQ", "title": "Area Between Curves", "url": "https://www.youtube.com/watch?v=SxxUUjkxeiQ", "dur": "14m 39s", "views": 2804, "fil": "PykCwNeXdNI"}, {"id": "3bVtOlrYLp8", "title": "Volume — Disk Method", "url": "https://www.youtube.com/watch?v=3bVtOlrYLp8", "dur": "9m 36s", "views": 5222, "fil": "2EvrU_go1a4"}, {"id": "5KtMivJK0DA", "title": "Volume — Washer Method", "url": "https://www.youtube.com/watch?v=5KtMivJK0DA", "dur": "8m 40s", "views": 1793, "fil": "BrZxb4YeIKs"}, {"id": "_N90KUkRmoY", "title": "Volume — Cross Sections", "url": "https://www.youtube.com/watch?v=_N90KUkRmoY", "dur": "12m 56s", "views": 2534, "fil": "-fqJgZwJQHA"}, {"id": "KNTn9INJ3ZE", "title": "Average Value of a Function", "url": "https://www.youtube.com/watch?v=KNTn9INJ3ZE", "dur": "4m 20s", "views": 559, "fil": "zVb8yVW6_7U"}]}, {"slug": "sequences-and-series", "title": "Sequences and Series", "desc": "Arithmetic and geometric sequences, partial sums, infinite series, and convergence.", "videos": [{"id": "9pa6dFedGTg", "title": "Arithmetic Sequences", "url": "https://www.youtube.com/watch?v=9pa6dFedGTg", "dur": "5m 41s", "views": 14996, "fil": "OAhJuftIoEM"}, {"id": "1eZpN9_T3n8", "title": "Geometric Sequences", "url": "https://www.youtube.com/watch?v=1eZpN9_T3n8", "dur": "3m 11s", "views": 6666, "fil": "93X6Up32Peg"}, {"id": "775ubcycKmc", "title": "Summation and Sigma Notation", "url": "https://www.youtube.com/watch?v=775ubcycKmc", "dur": "1m 15s", "views": 40, "fil": "PrrV22vIuvg"}, {"id": "V_T4o6upYfI", "title": "Sequences and Factorial Notation", "url": "https://www.youtube.com/watch?v=V_T4o6upYfI", "dur": "6m 44s", "views": 2583, "fil": "Fc8rAjxEIvs"}]}, {"slug": "integration-applications-rates", "title": "Integration Applications — Rates and Accumulation", "desc": "Net change theorem, Riemann sums, and applied integration with rate and accumulation problems.", "videos": [{"id": "FdLCZQUV3q8", "title": "Net Change Applications", "url": "https://www.youtube.com/watch?v=FdLCZQUV3q8", "dur": "6m 58s", "views": 3882, "fil": "sXr0bfHH5IM"}, {"id": "LrMHnkqg0zQ", "title": "Riemann Sums — Area Under the Curve", "url": "https://www.youtube.com/watch?v=LrMHnkqg0zQ", "dur": "12m 40s", "views": 2885, "fil": "MrgoAYlTUBA"}, {"id": "YFJ0hD1JIBA", "title": "Riemann Sums — Distance and Displacement", "url": "https://www.youtube.com/watch?v=YFJ0hD1JIBA", "dur": "10m 27s", "views": 6742, "fil": "6hN3-VRkndo"}, {"id": "IFd2ruoDRmg", "title": "Rate Problems FRQ — Traffic Flow", "url": "https://www.youtube.com/watch?v=IFd2ruoDRmg", "dur": "6m 48s", "views": 3089, "fil": "fMfe_bKgwCI"}]}, {"slug": "differential-equations", "title": "Differential Equations", "desc": "Slope fields, separable differential equations, and exponential growth and decay models.", "videos": [{"id": "2vIGgxZgQQo", "title": "Slope Fields and Separable Differential Equations", "url": "https://www.youtube.com/watch?v=2vIGgxZgQQo", "dur": "10m 0s", "views": 4286, "fil": "grP3zXYMMG4"}, {"id": "lzEi-jnmjyU", "title": "Differential Equations FRQ — Hot Potato (2017 Q4)", "url": "https://www.youtube.com/watch?v=lzEi-jnmjyU", "dur": "13m 34s", "views": 243, "fil": "yciywCgqpDc"}, {"id": "mtRIId_NI-I", "title": "Differential Equations FRQ Practice — 2004 Q6", "url": "https://www.youtube.com/watch?v=mtRIId_NI-I", "dur": "8m 49s", "views": 2156, "fil": "yciywCgqpDc"}, {"id": "ihA02afgs18", "title": "Differential Equations FRQ Practice — 2005 Q6", "url": "https://www.youtube.com/watch?v=ihA02afgs18", "dur": "13m 25s", "views": 4299, "fil": "TWtjeOmkaPU"}]}]};
 const KIT_TIP = "<b>Use it your way:</b> assign the video as the lecture (online), project it and run the practice set in class (traditional), or have students watch before class and use the time for the activity (hybrid/flipped). Same lessons, worksheets, and verified tests.";
@@ -609,7 +612,7 @@ function canvasWorksheetHTML(t,items,withKey){
   <p style="color:#4a6068;font-size:13px;margin:0 0 12px">Show your work. ${withKey?'Verified answers shown in teal.':'Answer in the space provided.'}</p>
   <ol style="padding-left:22px;margin:0">`;
   const body=items.map(it=>{
-    const given=it.given?`<div style="font-family:'Courier New',monospace;background:#eafafa;display:inline-block;padding:4px 9px;border-radius:6px;margin:5px 0">${_esc(it.given)}</div>`:'';
+    const given=it.given?`<div style="font-family:'Courier New',monospace;background:#eafafa;display:inline-block;padding:4px 9px;border-radius:6px;margin:5px 0">${nbTeX(it)}</div>`:'';
     const ans=withKey
       ? `<div style="color:#0c7d7d;font-weight:bold;font-size:13px;margin-top:5px">Answer: ${_esc(it.answer_text)}</div>`
       : `<div style="color:#888;font-size:13px;margin-top:6px">Answer: ____________________________</div>`;
@@ -818,7 +821,7 @@ function newQuiz(){
     <div class="qz-q" id="qzq${n}">
       <div class="qhead"><span class="qnum">Q${n+1}</span><span class="qsub">${it.subtopic}</span></div>
       <div class="qinstr">${escapeHtml(it.instruction)}</div>
-      ${it.given?`<div class="qgiven">${escapeHtml(it.given)}</div>`:''}
+      ${it.given?`<div class="qgiven">${nbTeX(it)}</div>`:''}
       <input class="qans" id="qza${n}" type="text" placeholder="Your answer" aria-label="Your answer" autocomplete="off">
       <div class="qfb ok">✓ Correct</div>
       <div class="qfb no">✗ Not quite</div>
@@ -897,7 +900,7 @@ function openPrintableTest(title,forms){
       <ol class="qs">
         ${f.items.map(it=>`<li>
           <div class="qi">${escapeHtml(it.instruction)}</div>
-          ${it.given?`<div class="gv">${escapeHtml(it.given)}</div>`:''}
+          ${it.given?`<div class="gv">${nbTeX(it)}</div>`:''}
           ${withKey?`<div class="ak">Answer: ${escapeHtml(it.answer_text)}</div>`:'<div class="blank">Answer: ____________________________</div>'}
         </li>`).join('')}
       </ol>
@@ -922,7 +925,7 @@ function openPrintableTest(title,forms){
    ol.qs{padding-left:22px}ol.qs li{margin-bottom:16px;font-size:14px}
    .qi{font-weight:500}.gv{font-family:'Courier New',monospace;background:#eafafa;display:inline-block;padding:4px 9px;border-radius:6px;margin:5px 0}
    .blank{color:#888;margin-top:6px;font-size:13px}.ak{color:#0c7d7d;font-weight:700;margin-top:6px}
-  </style></head><body>
+  </style><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css"></head><body>
    <div class="bar noprint"><b>${escapeHtml(title)} — ${forms.length} version(s) + answer key</b>
      <button onclick="window.print()">⬇ Print / Save as PDF</button>
      <span style="font-size:12.5px;opacity:.85">Use your browser's "Save as PDF". Verified answer keys follow the blank forms.</span></div>

@@ -53,3 +53,6 @@ numberbender v3.0/
 
 # Dev validator (run locally before deploy; not site content)
 tools/validate-pages.js
+
+# stray test bank (cannot delete from sandbox; never deploy)
+content/banks/_TEST_*.js
