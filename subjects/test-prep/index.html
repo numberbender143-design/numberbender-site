@@ -183,6 +183,16 @@ h1{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:900;line-height:1.15;margin-bo
 /* ── FOOTER ── */
 .site-footer{background:var(--navy);color:rgba(255,255,255,0.55);padding:36px 0;text-align:center;font-size:0.82rem;}
 .site-footer a{color:rgba(255,255,255,0.65);}
+/* ── current site footer (ported from worksheet/landing template) ── */
+footer{background:#0b1220;color:#94a3b8;padding:50px 0 24px}
+footer a{color:#cbd5e1;display:block;margin-bottom:8px;font-size:.92rem}
+footer h4{color:#fff;margin-bottom:12px;font-size:.95rem}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px;margin-bottom:30px}
+@media (max-width:760px){.foot-grid{grid-template-columns:1fr 1fr}}
+.foot-brand p{margin-bottom:10px;font-size:.92rem}
+.footer-tagline{color:#06B6D4;font-style:italic;font-weight:600;font-size:.95rem!important}
+.foot-bottom{border-top:1px solid #1e293b;padding-top:20px;font-size:.85rem}
+.foot-bottom a{display:inline}
 .footer-links{display:flex;justify-content:center;gap:20px;margin-bottom:10px;flex-wrap:wrap;}
 
 /* ── SEARCH BAR ── */
@@ -232,14 +242,6 @@ h1{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:900;line-height:1.15;margin-bo
 .nav-dropdown:hover .dropdown-menu,.nav-dropdown .dropdown-menu.open{opacity:1;visibility:visible;transform:translateY(0);}
 .nav-dropdown .dropdown-menu a{display:block;padding:10px 14px;border-radius:8px;color:var(--navy);font-weight:500;font-size:0.92rem;}
 .nav-dropdown .dropdown-menu a:hover{background:rgba(37,99,235,.08);color:var(--blue);text-decoration:none;}
-.menu-toggle{display:block;}
-.nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:white;flex-direction:column;padding:18px;border-bottom:1px solid var(--border);gap:14px;}
-.nav-links.open{display:flex;}
-.nav-dropdown{width:100%;}
-.nav-dropdown .dropdown-trigger{width:100%;justify-content:space-between;padding:6px 0;}
-.nav-dropdown .dropdown-menu{position:static;box-shadow:none;border:none;padding:0 0 4px 14px;margin-top:0;min-width:0;opacity:1;visibility:visible;transform:none;display:none;background:transparent;}
-.nav-dropdown:hover .dropdown-menu{display:none;}
-.nav-dropdown .dropdown-menu.open{display:block;}
 @media(max-width:900px){
   .logo-lockup .lockup-img{height:42px;max-width:220px;}
   .menu-toggle{display:block;}
@@ -1160,15 +1162,44 @@ h1{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:900;line-height:1.15;margin-bo
 </div>
 
 <!-- ── FOOTER ── -->
-<footer class="site-footer">
+<footer>
   <div class="container">
-    <div class="footer-links">
-      <a href="../../">Home</a>
-      <a href="/courses">Subject Library</a>
-      <a href="https://www.youtube.com/@numberbender" target="_blank" rel="noopener">YouTube</a>
-      <a href="https://www.youtube.com/@numberbenderEn" target="_blank" rel="noopener">YouTube EN</a>
+    <div class="foot-grid">
+      <div class="foot foot-brand">
+        <p style="color:#cbd5e1;font-weight:700;font-size:1.05rem;">Numberbender</p>
+        <p>Helping students learn math with confidence and helping educators teach online with energy, clarity, and impact.</p>
+        <p class="footer-tagline">Math is hard. So we made it human.</p>
+      </div>
+      <div class="foot">
+        <h4>Students</h4>
+        <a href="/courses">Explore All Subjects</a>
+        <a href="/math-worksheets">Free Worksheets</a>
+        <a href="/find-your-course">Where Do I Start?</a>
+        <a href="/start-here">Free Starter Lesson</a>
+      </div>
+      <div class="foot">
+        <h4>Educators</h4>
+        <a href="/for-teachers">For Teachers Hub</a>
+        <a href="/teach-the-math">Teach the Math</a>
+        <a href="/teacher-resources">Teacher Resources</a>
+        <a href="/flipped-classroom-math">Flipped Classroom Guide</a>
+      </div>
+      <div class="foot">
+        <h4>Connect</h4>
+        <a href="/about">About Dr. E</a>
+        <a href="/speaking">Speaking</a>
+        <a href="/press">Press &amp; Media</a>
+        <a href="/contact">Contact</a>
+        <a href="https://www.youtube.com/@numberbender" target="_blank" rel="noopener">YouTube Channel</a>
+      </div>
     </div>
-    <p>© 2025 Numberbender · Made with ❤️ by Dr. E · Always free for students everywhere 🌏</p>
+    <div class="foot-bottom">
+      © 2026 Numberbender · Founded by Dr. Peter Esperanza · <a href="/">Home</a> · <a href="/contact">Contact</a>
+      <div style="margin-top:8px;font-size:0.78rem;color:#94a3b8;">
+        <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener"><img src="https://licensebuttons.net/l/by/4.0/88x31.png" alt="CC BY 4.0" style="border:0;vertical-align:middle;margin-right:6px;" loading="lazy"></a>
+        Original content licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener" style="color:#94a3b8;">CC BY 4.0</a> &mdash; free to share and adapt with credit to Peter Esperanza / Numberbender.
+      </div>
+    </div>
   </div>
 </footer>
 
