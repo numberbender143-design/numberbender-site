@@ -50,3 +50,6 @@ School_logo/
 
 # v3.0 development folder — not ready for deployment
 numberbender v3.0/
+
+# Dev validator (run locally before deploy; not site content)
+tools/validate-pages.js

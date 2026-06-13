@@ -1197,7 +1197,6 @@ function openPrintableTest(title,forms){
      <button onclick="window.print()">⬇ Print / Save as PDF</button>
      <span style="font-size:12.5px;opacity:.85">Use your browser's "Save as PDF". Verified answer keys follow the blank forms.</span></div>
    <div class="wrap">${body}</div>
-  <script src="/nb-search.js"></script>
 </body></html>`;
   const w=window.open('','_blank');
   if(!w){toast('Allow pop-ups to open the printable test.');return;}
@@ -1228,5 +1227,6 @@ document.addEventListener('click',function(e){
 </script>
 <script>(function(){try{var p=new URLSearchParams(location.search);var l=p.get("lang")||localStorage.getItem("nb_lang");if(l==="fil"&&typeof LANG!=="undefined"){LANG="fil";var e=document.getElementById("langEn"),f=document.getElementById("langFil");if(e)e.classList.remove("on");if(f)f.classList.add("on");}}catch(_){}})();</script>
 <script src="nb-analytics.js" defer></script>
+<script src="/nb-search.js"></script>
 </body>
 </html>
