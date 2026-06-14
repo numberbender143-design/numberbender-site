@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Numberbender Studio — Free Online Teaching Studio | Teach It Like You Stream It</title>
+<meta name="description" content="A free, streaming-style studio for online teachers: put your camera beside your slides, iPad whiteboard, or any window and share it into Zoom or Teams. No login, installs as an app on Mac &amp; PC." />
+<link rel="canonical" href="https://numberbender.com/studio/" />
+<meta name="robots" content="index, follow" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Numberbender Studio — Free Online Teaching Studio" />
+<meta property="og:description" content="Camera + your slides, side by side, shared into Zoom or Teams. Free, no login, installs as an app. Teach It Like You Stream It." />
+<meta property="og:url" content="https://numberbender.com/studio/" />
+<meta property="og:site_name" content="Numberbender" />
+<meta property="og:image" content="https://numberbender.com/images/studio-og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@numberbender" />
+<meta name="twitter:title" content="Numberbender Studio — Free Online Teaching Studio" />
+<meta name="twitter:description" content="Camera + your slides, side by side, shared into Zoom or Teams. Free, no login. Teach It Like You Stream It." />
+<meta name="twitter:image" content="https://numberbender.com/images/studio-og.png" />
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#1F6F6B">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="icons/icon-512.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Numberbender Studio","applicationCategory":"EducationalApplication","operatingSystem":"Web browser (Windows, macOS, ChromeOS)","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://numberbender.com/studio/","description":"A free, streaming-style studio for online teachers: camera beside your slides, iPad whiteboard, or any window, shared into Zoom or Teams.","publisher":{"@type":"Organization","name":"Numberbender","url":"https://numberbender.com/"}}
+</script>
+<style>
+  :root{
+    --teal:#2E7D7B; --teal-d:#246360; --orange:#D17A3E;
+    --bg:#0b0f14; --panel:#141a21; --panel-2:#1b2530; --line:#26313c;
+    --text:#e7edf2; --muted:#9fb0bd;
+    --radius:12px;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%;margin:0}
+  body{
+    background:var(--bg); color:var(--text);
+    font:15px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    display:flex; flex-direction:column; overflow:hidden;
+  }
+
+  /* ---------- Top toolbar ---------- */
+  #bar{
+    display:flex; align-items:center; gap:9px; flex-wrap:wrap;
+    padding:9px 13px; background:var(--panel); border-bottom:1px solid var(--line); z-index:20;
+  }
+  #brand{display:flex; align-items:center; gap:9px; margin-right:4px}
+  #brand img{width:28px;height:28px;border-radius:7px;display:block}
+  #brand .sub{color:var(--muted); font-size:12px; margin-left:2px}
+  #brand .brand-text{line-height:1.15}
+  #brand .slogan{font-style:italic; font-size:11px; font-weight:600; color:var(--orange); letter-spacing:.2px; margin-top:1px}
+  .spacer{flex:1}
+  .grp{display:flex; align-items:center; gap:7px}
+  button, select, label.btn{
+    appearance:none; border:1px solid var(--line); background:var(--panel-2); color:var(--text);
+    padding:7px 11px; border-radius:9px; font-size:13px; cursor:pointer; white-space:nowrap;
+  }
+  button:hover, label.btn:hover, select:hover{border-color:#36505c}
+  button.primary{background:var(--teal); border-color:var(--teal); color:#fff; font-weight:600}
+  button.primary:hover{background:var(--teal-d)}
+  button.accent{background:var(--orange); border-color:var(--orange); color:#fff; font-weight:600}
+  /* group color-coding: teal = set up scene · purple = adjust look · orange = go live */
+  button.g-scene, select.g-scene, label.g-scene{ background:rgba(46,125,123,.16); border-color:rgba(46,125,123,.55); color:#cdeae8 }
+  button.g-look,  select.g-look,  label.g-look { background:rgba(139,92,246,.16); border-color:rgba(139,92,246,.55); color:#ddd2fb }
+  button.g-live,  select.g-live,  label.g-live { background:rgba(209,122,62,.16); border-color:rgba(209,122,62,.55); color:#f3dcc8 }
+  button.g-scene:hover, select.g-scene:hover, label.g-scene:hover{ border-color:var(--teal) }
+  button.g-look:hover,  select.g-look:hover,  label.g-look:hover { border-color:#8B5CF6 }
+  button.g-live:hover,  select.g-live:hover,  label.g-live:hover { border-color:var(--orange) }
+  .toggle{display:inline-flex; align-items:center; gap:6px; user-select:none; font-size:13px; padding:7px 11px; border:1px solid var(--line); border-radius:9px}
+  .toggle input{accent-color:#8B5CF6; width:16px;height:16px}
+
+  /* segmented layout switcher */
+  .seg{display:inline-flex; border:1px solid rgba(46,125,123,.55); border-radius:9px; overflow:hidden}
+  .seg button{border:0; border-right:1px solid rgba(46,125,123,.3); border-radius:0; padding:7px 12px; background:rgba(46,125,123,.16); color:#cdeae8}
+  .seg button:last-child{border-right:0}
+  .seg button.active{background:var(--teal); color:#fff; font-weight:600}
+
+  /* contextual control visibility (driven by body.lay-*) */
+  .only-dual, .only-pip{display:none !important}
+  body.lay-dual .only-dual{display:flex !important}
+  body.lay-spotlight .only-pip, body.lay-dual .only-pip{display:flex !important}
+  body.lay-spotlight .only-sidedual{display:none !important}
+
+  /* ---------- Stage (this is what gets broadcast) ---------- */
+  #stage{position:relative; flex:1; min-height:0; background:#05080b}
+  body.lay-side #stage, body.lay-dual #stage{display:flex}
+  body.lay-spotlight #stage{display:block}
+  #stage.flip{flex-direction:row-reverse}
+
+  .slot{position:relative; min-width:0; overflow:hidden; background:#000}
+  .slot video{width:100%; height:100%; display:block; background:#000}
+  .slot-cam video{object-fit:cover}
+  .slot-content video, .slot-content2 video{object-fit:contain}
+  .slot-cam.mirror video{transform:scaleX(-1)}
+
+  /* side-by-side sizing (JS overrides flex-grow) */
+  body.lay-side .slot-cam{flex:45 1 0}
+  body.lay-side .slot-content{flex:55 1 0}
+  body.lay-side .slot-content2{display:none}
+  /* dual sizing */
+  body.lay-dual .slot-content{flex:50 1 0}
+  body.lay-dual .slot-content2{flex:50 1 0}
+  /* spotlight */
+  body.lay-spotlight .slot-content{position:absolute; inset:0}
+  body.lay-spotlight .slot-content2{display:none}
+
+  /* dividers */
+  #dividerA, #dividerB{display:none; flex:0 0 10px; cursor:col-resize; position:relative; background:var(--line)}
+  #dividerA::after, #dividerB::after{content:""; position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);
+    width:4px; height:46px; border-radius:4px; background:#43596a}
+  #dividerA:hover::after, #dividerB:hover::after{background:var(--teal)}
+  body.lay-side #dividerA{display:block}
+  body.lay-dual #dividerB{display:block}
+
+  /* camera as PIP bubble (spotlight + dual) */
+  .slot-cam{position:static}
+  body.lay-spotlight .slot-cam, body.lay-dual .slot-cam{
+    position:absolute; z-index:6; width:var(--pip-w,22%);
+    border:3px solid #fff; box-shadow:0 8px 24px rgba(0,0,0,.5); overflow:hidden; background:#000;
+  }
+  #stage.pip-tl .slot-cam{top:18px; left:18px}
+  #stage.pip-tr .slot-cam{top:18px; right:18px}
+  #stage.pip-bl .slot-cam{bottom:18px; left:18px}
+  #stage.pip-br .slot-cam{bottom:18px; right:18px}
+  body.lay-spotlight #stage.pip-round .slot-cam, body.lay-dual #stage.pip-round .slot-cam{aspect-ratio:1/1; border-radius:50%}
+  body.lay-spotlight #stage.pip-square .slot-cam, body.lay-dual #stage.pip-square .slot-cam{aspect-ratio:16/10; border-radius:14px}
+  #stage.pip-s{--pip-w:16%} #stage.pip-m{--pip-w:22%} #stage.pip-l{--pip-w:30%}
+
+  .slot-label{position:absolute; top:10px; left:10px; background:rgba(0,0,0,.5);
+    padding:3px 9px; border-radius:7px; font-size:12px; color:#dfe7ee; pointer-events:none; opacity:0; transition:opacity .2s; z-index:7}
+  #stage:hover .slot-label{opacity:1}
+  body.presenter .slot-label{display:none}
+
+  .placeholder{position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center;
+    text-align:center; gap:9px; color:var(--muted); padding:18px}
+  .placeholder svg{width:36px;height:36px;opacity:.7}
+  .placeholder .big{color:var(--text); font-size:15px; font-weight:600}
+
+  /* brand badge */
+  #badge{position:absolute; z-index:8; display:flex; align-items:center; gap:9px;
+    background:rgba(8,12,16,.62); backdrop-filter:blur(6px);
+    border:1px solid rgba(255,255,255,.14); border-radius:999px;
+    padding:6px 13px 6px 7px; color:#fff; font-size:13px; pointer-events:none; box-shadow:0 4px 16px rgba(0,0,0,.35)}
+  #badge img{width:26px;height:26px;border-radius:6px;display:block;background:#fff}
+  #badge .pwr{opacity:.85}
+  #badge.pos-br{right:16px; bottom:16px}
+  #badge.pos-bl{left:16px; bottom:16px}
+  #badge.pos-tr{right:16px; top:16px}
+  #badge.pos-tl{left:16px; top:16px}
+
+  /* presenter mode */
+  body.presenter #bar{display:none}
+  #exitPresenter{display:none; position:fixed; top:14px; left:50%; transform:translateX(-50%); z-index:50;
+    background:rgba(8,12,16,.82); border:1px solid rgba(255,255,255,.22); color:#fff;
+    border-radius:10px; padding:8px 16px; font-size:13px; cursor:pointer; opacity:0;
+    transition:opacity .45s; box-shadow:0 6px 20px rgba(0,0,0,.4)}
+  #exitPresenter:hover{opacity:1}
+  body.presenter #exitPresenter{display:block}
+  body.presenter #exitPresenter.show{opacity:1}
+
+  /* help */
+  #help{position:fixed; inset:0; z-index:60; background:rgba(3,6,9,.72); display:none; align-items:center; justify-content:center; padding:20px}
+  #help.open{display:flex}
+  .card{background:var(--panel); border:1px solid var(--line); border-radius:16px; max-width:660px; width:100%; max-height:88vh; overflow:auto; padding:24px 28px}
+  .card h2{margin:0 0 4px; font-size:20px}
+  .card h3{margin:18px 0 6px; font-size:15px; color:var(--teal)}
+  .card p, .card li{color:#d3dde6; font-size:14px}
+  .card ol{padding-left:20px; margin:6px 0}
+  .card ul.guide{padding-left:18px; margin:8px 0}
+  .card ul.guide li{margin:7px 0}
+  .card li{margin:6px 0}
+  .card .note{background:var(--panel-2); border:1px solid var(--line); border-radius:10px; padding:10px 12px; color:var(--muted); font-size:13px}
+  .card .close{float:right}
+  .kbd{background:#0d141b;border:1px solid var(--line);border-radius:6px;padding:1px 6px;font-size:12px}
+  a{color:var(--orange)}
+  @media (max-width:820px){ #brand .sub, #brand .slogan{display:none} button,select,label.btn{padding:6px 8px;font-size:12.5px} }
+</style>
+</head>
+<body class="lay-side">
+  <!-- Toolbar -->
+  <div id="bar">
+    <div id="brand">
+      <img id="brandLogo" alt="Numberbender" />
+      <div class="brand-text">
+        <div><b>Numberbender</b> <span class="sub">Studio</span></div>
+        <div class="slogan">Teach It Like You Stream It</div>
+      </div>
+    </div>
+
+    <div class="seg" id="layoutSeg" title="Choose a layout">
+      <button data-layout="side" class="active">▥ Side&#8209;by&#8209;side</button>
+      <button data-layout="spotlight">▣ Spotlight</button>
+      <button data-layout="dual">⊞ Dual + cam</button>
+    </div>
+
+    <div class="grp">
+      <button id="btnCapture" class="primary">▣ Capture content</button>
+      <button id="btnCapture2" class="primary only-dual">▣ Capture 2nd window</button>
+      <select id="camSelect" class="g-scene" title="Camera"></select>
+    </div>
+
+    <div class="grp only-sidedual">
+      <button id="btnFlip" class="g-look" title="Swap sides">⇄ Flip</button>
+    </div>
+    <div class="grp">
+      <label class="toggle g-look"><input type="checkbox" id="chkMirror" /> Mirror cam</label>
+    </div>
+
+    <div class="grp only-pip" title="Camera bubble">
+      <select id="pipCorner" class="g-look">
+        <option value="bl">Cam: bottom-left</option>
+        <option value="br">Cam: bottom-right</option>
+        <option value="tl">Cam: top-left</option>
+        <option value="tr">Cam: top-right</option>
+      </select>
+      <select id="pipShape" class="g-look">
+        <option value="round">Circle</option>
+        <option value="square">Square</option>
+      </select>
+      <select id="pipSize" class="g-look">
+        <option value="s">Cam: small</option>
+        <option value="m">Cam: medium</option>
+        <option value="l">Cam: large</option>
+      </select>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="grp">
+      <label class="btn g-look" for="logoFile" title="Replace the badge logo">★ Replace logo</label>
+      <input type="file" id="logoFile" accept="image/*" hidden />
+      <select id="badgePos" class="g-look" title="Badge position">
+        <option value="pos-br">Badge: bottom-right</option>
+        <option value="pos-bl">Badge: bottom-left</option>
+        <option value="pos-tr">Badge: top-right</option>
+        <option value="pos-tl">Badge: top-left</option>
+      </select>
+    </div>
+
+    <div class="grp">
+      <button id="btnPresenter" class="g-live" title="Hide controls for a clean broadcast">◧ Presenter</button>
+      <button id="btnFull" class="g-live" title="Fullscreen the stage">⤢ Fullscreen</button>
+      <button id="btnHelp" class="accent">? Help</button>
+    </div>
+  </div>
+
+  <!-- STAGE -->
+  <div id="stage" class="flip-none pip-bl pip-round pip-m">
+    <div class="slot slot-cam" id="slotCam">
+      <video id="cam" autoplay playsinline muted></video>
+      <div class="slot-label">Camera</div>
+      <div class="placeholder" id="camPlaceholder">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+        <div class="big">Allow camera access</div>
+        <div>Click <b>Allow</b> when your browser asks.</div>
+      </div>
+    </div>
+
+    <div id="dividerA" title="Drag to resize"></div>
+
+    <div class="slot slot-content" id="slotContent">
+      <video id="content" autoplay playsinline muted></video>
+      <div class="slot-label">Content</div>
+      <div class="placeholder" id="contentPlaceholder">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        <div class="big">No content yet</div>
+        <div>Click <b>▣ Capture content</b> and pick your slides,<br/>whiteboard, or iPad window.</div>
+      </div>
+    </div>
+
+    <div id="dividerB" title="Drag to resize"></div>
+
+    <div class="slot slot-content2" id="slotContent2">
+      <video id="content2" autoplay playsinline muted></video>
+      <div class="slot-label">Window 2</div>
+      <div class="placeholder" id="content2Placeholder">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 9h20"/></svg>
+        <div class="big">No second window yet</div>
+        <div>Click <b>▣ Capture 2nd window</b> and pick<br/>another window (e.g. a desktop app).</div>
+      </div>
+    </div>
+
+    <!-- Brand badge -->
+    <div id="badge" class="pos-br">
+      <img id="logoImg" alt="Numberbender" />
+      <span class="pwr">Powered by <b>Numberbender</b></span>
+    </div>
+  </div>
+
+  <button id="exitPresenter">⤡ Press Esc (or click here) to show the menu</button>
+
+  <!-- Help -->
+  <div id="help">
+    <div class="card">
+      <button class="close" id="btnCloseHelp">✕ Close</button>
+      <h2>Numberbender Studio — quick start</h2>
+      <p>Make a clean layout of your camera and your content, then share it into Zoom or Teams. No install — it all runs in this browser.</p>
+
+      <h3>Pick a layout</h3>
+      <ul class="guide">
+        <li><b>▥ Side-by-side</b> — camera and one content window next to each other. Drag the divider to resize, <b>⇄ Flip</b> to swap sides.</li>
+        <li><b>▣ Spotlight</b> — your content fills the screen with your camera as a small bubble in the corner. Great for talking over slides.</li>
+        <li><b>⊞ Dual + cam</b> — two captured windows side by side (e.g. your iPad whiteboard + a desktop app) with your camera as a corner bubble on top, so you stay visible while you teach.</li>
+      </ul>
+
+      <h3>1. Allow your camera</h3>
+      <p>Click <b>Allow</b> when the browser asks. Pick the right camera from the dropdown if you have more than one.</p>
+
+      <h3>Optional — use your phone as your camera</h3>
+      <p>Any phone your computer sees as a camera shows up in the <b>camera dropdown</b> — connect it, then pick it. All wireless:</p>
+      <div class="note">
+        <b>iPhone + Mac:</b> use <b>Continuity Camera</b>, built into macOS &amp; iOS — same Apple ID, Wi-Fi and Bluetooth on, and your iPhone appears as a camera. Nothing to install.<br/><br/>
+        <b>Android + Windows:</b> recent Windows 11 can use your phone through the <b>Phone Link</b> app as a connected camera.<br/><br/>
+        <b>Any phone, any computer:</b> install a webcam app like <b>Iriun</b>, <b>DroidCam</b>, or <b>Camo</b> (iPhone or Android, Mac or Windows) — open it on the phone and on the computer, and the phone shows up as a camera here.<br/><br/>
+        Connected the phone <i>after</i> opening Studio? The dropdown refreshes on its own — just click it and choose your phone.
+      </div>
+
+      <h3>2. Capture your content</h3>
+      <p>Click <b>▣ Capture content</b> and choose the window for the content side. In <b>Dual + cam</b>, click <b>▣ Capture 2nd window</b> to add a second window.</p>
+      <div class="note">
+        <b>iPad (Mac):</b> connect via cable → open <b>QuickTime Player</b> → <b>File ▸ New Movie Recording</b> → click the ⌄ next to record → choose your iPad. Then pick that QuickTime window here.<br/><br/>
+        <b>iPad (Windows):</b> run an AirPlay-receiver app (e.g. 5KPlayer, ApowerMirror), mirror your iPad to it, then pick that window here.<br/><br/>
+        <b>Wacom / Bamboo pad:</b> it has no screen of its own — open any whiteboard app and capture <i>that app's</i> window.
+      </div>
+
+      <h3>3. Arrange &amp; position the camera bubble</h3>
+      <p>In Spotlight and Dual layouts, set the camera bubble's <b>corner</b>, <b>shape</b> (circle or square), and <b>size</b> from the toolbar. <b>Mirror cam</b> gives a selfie-style view.</p>
+
+      <h3>4. Go live in Zoom / Teams</h3>
+      <ol>
+        <li>Click <b>◧ Presenter</b> (hides these controls) or <b>⤢ Fullscreen</b>.</li>
+        <li>In Zoom/Teams choose <b>Share Screen</b>.</li>
+        <li>Pick <b>this browser tab</b> (cleanest) — or this window if you went fullscreen.</li>
+      </ol>
+      <div class="note">Tip: capture a <b>single window</b> (not your whole screen) so you don't get a mirror-in-mirror loop. The “Powered by Numberbender” badge stays in the shared view. Press <span class="kbd">Esc</span> to leave fullscreen/presenter.</div>
+
+      <h3>What each control does</h3>
+      <p>Controls are colour-coded by job: <b style="color:#6fcfcb">teal = set up your scene</b>, <b style="color:#b89bff">purple = adjust the look</b>, <b style="color:#e8a874">orange = go live</b>.</p>
+      <ul class="guide">
+        <li><b>Layout switcher</b> — pick Side-by-side, Spotlight, or Dual + cam.</li>
+        <li><b>▣ Capture content</b> — choose the window for the main content. Click again anytime to switch windows.</li>
+        <li><b>▣ Capture 2nd window</b> (Dual only) — choose a second window to show beside the first.</li>
+        <li><b>Camera dropdown</b> — pick which camera feeds the camera view: built-in, an external webcam, or your phone.</li>
+        <li><b>⇄ Flip</b> — swap which side each window sits on.</li>
+        <li><b>Mirror cam</b> — flips your camera left-to-right for a selfie view; it does not change your content.</li>
+        <li><b>Cam corner / shape / size</b> — position, shape, and size of the camera bubble in Spotlight and Dual layouts.</li>
+        <li><b>Drag a divider</b> — make the side-by-side panes wider or narrower.</li>
+        <li><b>★ Replace logo</b> — swap the badge logo for your own image; it is remembered next time.</li>
+        <li><b>Badge position</b> — move the “Powered by Numberbender” badge to any corner.</li>
+        <li><b>◧ Presenter</b> — hides all controls for a clean broadcast. A reminder bar appears at the top; press <span class="kbd">Esc</span> or click it to bring the menu back.</li>
+        <li><b>⤢ Fullscreen</b> — expands the layout to fill your screen (<span class="kbd">Esc</span> to exit).</li>
+        <li><b>? Help</b> — opens this guide.</li>
+      </ul>
+      <div class="note">Studio remembers your layout, sizes, camera-bubble settings, badge position, and logo for next time. <b>Audio stays in Zoom/Teams as usual</b> — Studio only handles the picture.</div>
+    </div>
+  </div>
+
+<script>
+(function(){
+  "use strict";
+
+  // Default logo: vector recreation of the Numberbender mark
+  var SVG_LOGO = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">'
+    + '<rect x="7" y="7" width="86" height="86" rx="22" fill="#ffffff" stroke="#2E7D7B" stroke-width="7"/>'
+    + '<polyline points="31,71 31,31 67,71 67,31" fill="none" stroke="#2E7D7B" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>'
+    + '<circle cx="74" cy="26" r="5.5" fill="#D17A3E"/></svg>';
+  var DEFAULT_LOGO = "data:image/svg+xml;utf8," + encodeURIComponent(SVG_LOGO);
+
+  var $ = function(id){ return document.getElementById(id); };
+  var stage=$("stage"), cam=$("cam"), content=$("content"), content2=$("content2");
+  var slotCam=$("slotCam"), slotContent=$("slotContent"), slotContent2=$("slotContent2");
+  var dividerA=$("dividerA"), dividerB=$("dividerB");
+  var badge=$("badge"), logoImg=$("logoImg"), brandLogo=$("brandLogo");
+
+  // ----- Settings -----
+  var KEY="nb_studio_v2";
+  function loadSettings(){ try{ return JSON.parse(localStorage.getItem(KEY))||{}; }catch(e){ return {}; } }
+  function saveSettings(){ try{ localStorage.setItem(KEY, JSON.stringify(S)); }catch(e){} }
+  var S = Object.assign({
+    layout:"side", flipped:false, camGrow:45, dualGrow:50, mirror:false,
+    pipCorner:"bl", pipShape:"round", pipSize:"m", badgePos:"pos-br", logo:null, camId:null
+  }, loadSettings());
+
+  // ----- Apply branding -----
+  function applyBranding(){
+    var logo = S.logo || DEFAULT_LOGO;
+    logoImg.src = logo; brandLogo.src = logo;
+    badge.className = S.badgePos; $("badgePos").value = S.badgePos;
+    var fav=document.createElement("link"); fav.rel="icon"; fav.href=DEFAULT_LOGO; document.head.appendChild(fav);
+  }
+
+  // ----- Apply layout / scene -----
+  function applyLayout(){
+    document.body.classList.remove("lay-side","lay-spotlight","lay-dual");
+    document.body.classList.add("lay-"+S.layout);
+    stage.classList.toggle("flip", !!S.flipped);
+
+    // PIP classes
+    stage.classList.remove("pip-tl","pip-tr","pip-bl","pip-br"); stage.classList.add("pip-"+S.pipCorner);
+    stage.classList.remove("pip-round","pip-square"); stage.classList.add(S.pipShape==="square"?"pip-square":"pip-round");
+    stage.classList.remove("pip-s","pip-m","pip-l"); stage.classList.add("pip-"+S.pipSize);
+
+    // pane sizes
+    if(S.layout==="side"){ slotCam.style.flexGrow=S.camGrow; slotContent.style.flexGrow=100-S.camGrow; }
+    if(S.layout==="dual"){ slotContent.style.flexGrow=S.dualGrow; slotContent2.style.flexGrow=100-S.dualGrow; }
+
+    // mirror
+    slotCam.classList.toggle("mirror", !!S.mirror);
+    $("chkMirror").checked = !!S.mirror;
+
+    // sync toolbar controls
+    Array.prototype.forEach.call(document.querySelectorAll("#layoutSeg button"), function(b){
+      b.classList.toggle("active", b.getAttribute("data-layout")===S.layout);
+    });
+    $("pipCorner").value=S.pipCorner; $("pipShape").value=S.pipShape; $("pipSize").value=S.pipSize;
+  }
+
+  // ----- Camera -----
+  var currentStream=null;
+  async function startCamera(deviceId){
+    try{
+      if(currentStream){ currentStream.getTracks().forEach(function(t){t.stop();}); }
+      var constraints={ audio:false, video: deviceId ? { deviceId:{exact:deviceId} } : { width:{ideal:1280}, height:{ideal:720} } };
+      var stream=await navigator.mediaDevices.getUserMedia(constraints);
+      currentStream=stream; cam.srcObject=stream;
+      $("camPlaceholder").style.display="none";
+      var track=stream.getVideoTracks()[0];
+      if(track && track.getSettings){ S.camId=track.getSettings().deviceId||S.camId; saveSettings(); }
+      await populateCameras();
+    }catch(err){
+      $("camPlaceholder").querySelector(".big").textContent="Camera unavailable";
+      $("camPlaceholder").lastElementChild.textContent=err && err.message ? err.message : "Please allow camera access and reload.";
+      $("camPlaceholder").style.display="flex";
+    }
+  }
+  async function populateCameras(){
+    try{
+      var devices=await navigator.mediaDevices.enumerateDevices();
+      var cams=devices.filter(function(d){return d.kind==="videoinput";});
+      var sel=$("camSelect"); sel.innerHTML="";
+      cams.forEach(function(d,i){ var o=document.createElement("option"); o.value=d.deviceId; o.textContent=d.label||("Camera "+(i+1)); sel.appendChild(o); });
+      if(S.camId) sel.value=S.camId;
+    }catch(e){}
+  }
+
+  // ----- Content captures -----
+  function capture(videoEl, placeholderEl){
+    navigator.mediaDevices.getDisplayMedia({ video:{ frameRate:30 }, audio:false }).then(function(stream){
+      videoEl.srcObject=stream; placeholderEl.style.display="none";
+      stream.getVideoTracks()[0].addEventListener("ended", function(){ videoEl.srcObject=null; placeholderEl.style.display="flex"; });
+    }).catch(function(){ /* picker cancelled */ });
+  }
+
+  // ----- Divider resize -----
+  var dragging=null;
+  function onMove(e){
+    if(!dragging) return;
+    var r=stage.getBoundingClientRect();
+    var x=(e.touches?e.touches[0].clientX:e.clientX)-r.left;
+    var f=Math.max(0.2, Math.min(0.8, x/r.width));
+    var reversed=stage.classList.contains("flip");
+    if(dragging===dividerA){
+      var camFrac=reversed?(1-f):f;
+      slotCam.style.flexGrow=(camFrac*100).toFixed(1);
+      slotContent.style.flexGrow=((1-camFrac)*100).toFixed(1);
+      S.camGrow=Math.round(camFrac*100);
+    } else {
+      var cFrac=reversed?(1-f):f;
+      slotContent.style.flexGrow=(cFrac*100).toFixed(1);
+      slotContent2.style.flexGrow=((1-cFrac)*100).toFixed(1);
+      S.dualGrow=Math.round(cFrac*100);
+    }
+  }
+  function endDrag(){ if(dragging){ dragging=null; document.body.style.userSelect=""; saveSettings(); } }
+  dividerA.addEventListener("mousedown", function(){ dragging=dividerA; document.body.style.userSelect="none"; });
+  dividerB.addEventListener("mousedown", function(){ dragging=dividerB; document.body.style.userSelect="none"; });
+  dividerA.addEventListener("touchstart", function(){ dragging=dividerA; }, {passive:true});
+  dividerB.addEventListener("touchstart", function(){ dragging=dividerB; }, {passive:true});
+  window.addEventListener("mousemove", onMove);
+  window.addEventListener("touchmove", onMove, {passive:true});
+  window.addEventListener("mouseup", endDrag);
+  window.addEventListener("touchend", endDrag);
+
+  // ----- Wiring -----
+  Array.prototype.forEach.call(document.querySelectorAll("#layoutSeg button"), function(b){
+    b.addEventListener("click", function(){ S.layout=b.getAttribute("data-layout"); saveSettings(); applyLayout(); });
+  });
+  $("btnCapture").addEventListener("click", function(){ capture(content, $("contentPlaceholder")); });
+  $("btnCapture2").addEventListener("click", function(){ capture(content2, $("content2Placeholder")); });
+  $("camSelect").addEventListener("change", function(e){ S.camId=e.target.value; saveSettings(); startCamera(e.target.value); });
+  $("btnFlip").addEventListener("click", function(){ S.flipped=!S.flipped; saveSettings(); applyLayout(); });
+  $("chkMirror").addEventListener("change", function(e){ S.mirror=e.target.checked; slotCam.classList.toggle("mirror",S.mirror); saveSettings(); });
+  $("pipCorner").addEventListener("change", function(e){ S.pipCorner=e.target.value; saveSettings(); applyLayout(); });
+  $("pipShape").addEventListener("change", function(e){ S.pipShape=e.target.value; saveSettings(); applyLayout(); });
+  $("pipSize").addEventListener("change", function(e){ S.pipSize=e.target.value; saveSettings(); applyLayout(); });
+  $("badgePos").addEventListener("change", function(e){ S.badgePos=e.target.value; badge.className=S.badgePos; saveSettings(); });
+
+  $("logoFile").addEventListener("change", function(e){
+    var f=e.target.files&&e.target.files[0]; if(!f) return;
+    var reader=new FileReader();
+    reader.onload=function(){ S.logo=reader.result; logoImg.src=S.logo; brandLogo.src=S.logo; saveSettings(); };
+    reader.readAsDataURL(f);
+  });
+
+  var hintTimer=null;
+  function showHint(){ var el=$("exitPresenter"); el.classList.add("show"); clearTimeout(hintTimer); hintTimer=setTimeout(function(){ el.classList.remove("show"); }, 4000); }
+  function enterPresenter(){ document.body.classList.add("presenter"); showHint(); }
+  function leavePresenter(){ document.body.classList.remove("presenter"); clearTimeout(hintTimer); $("exitPresenter").classList.remove("show"); }
+  $("btnPresenter").addEventListener("click", enterPresenter);
+  $("exitPresenter").addEventListener("click", leavePresenter);
+  document.addEventListener("mousemove", function(){ if(document.body.classList.contains("presenter")) showHint(); });
+  $("btnFull").addEventListener("click", function(){
+    if(document.fullscreenElement){ document.exitFullscreen(); }
+    else if(stage.requestFullscreen){ stage.requestFullscreen(); }
+    else if(stage.webkitRequestFullscreen){ stage.webkitRequestFullscreen(); }
+  });
+  $("btnHelp").addEventListener("click", function(){ $("help").classList.add("open"); });
+  $("btnCloseHelp").addEventListener("click", function(){ $("help").classList.remove("open"); });
+  $("help").addEventListener("click", function(e){ if(e.target===$("help")) $("help").classList.remove("open"); });
+  document.addEventListener("keydown", function(e){ if(e.key==="Escape"){ leavePresenter(); $("help").classList.remove("open"); } });
+
+  if(navigator.mediaDevices && navigator.mediaDevices.addEventListener){
+    navigator.mediaDevices.addEventListener("devicechange", function(){ populateCameras(); });
+  }
+
+  // ----- Boot -----
+  applyBranding();
+  applyLayout();
+  startCamera(S.camId);
+  if(!loadSettings().seen){ $("help").classList.add("open"); S.seen=true; saveSettings(); }
+})();
+</script>
+<script>
+if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(){});});}
+</script>
+</body>
+</html>

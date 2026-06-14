@@ -1,0 +1,25 @@
+{
+  "name": "numberbender-studio-desktop",
+  "version": "1.0.0",
+  "description": "Native desktop wrapper for Numberbender Studio (Teach It Like You Stream It).",
+  "author": "Numberbender",
+  "license": "MIT",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist:mac": "electron-builder --mac",
+    "dist:win": "electron-builder --win"
+  },
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.numberbender.studio",
+    "productName": "Numberbender Studio",
+    "files": ["main.js", "build/**"],
+    "mac": { "category": "public.app-category.education", "target": ["dmg"], "icon": "build/icon.png" },
+    "win": { "target": ["nsis"], "icon": "build/icon.png" },
+    "directories": { "output": "release" }
+  }
+}

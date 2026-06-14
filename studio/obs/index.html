@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Numberbender Studio — OBS Setup (Backup) | Numberbender</title>
+<meta name="description" content="Optional OBS Studio setup for the Teach It Like You Stream It two-pane layout — a free backup to Numberbender Studio." />
+<link rel="canonical" href="https://numberbender.com/studio/obs/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Numberbender Studio — OBS Setup (free backup)" />
+<meta property="og:description" content="Optional OBS Studio setup for the Teach It Like You Stream It two-pane layout — a free backup to Numberbender Studio." />
+<meta property="og:url" content="https://numberbender.com/studio/obs/" />
+<meta property="og:site_name" content="Numberbender" />
+<meta property="og:image" content="https://numberbender.com/images/studio-og.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Numberbender Studio — OBS Setup" />
+<meta name="twitter:image" content="https://numberbender.com/images/studio-og.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/images/exports/png/favicon-32.png">
+<meta name="theme-color" content="#1F6F6B">
+<style>
+  :root{--navy:#0F172A;--blue:#2563EB;--teal:#1F6F6B;--orange:#D17A3E;--bg:#F8FAFC;--surface:#fff;--muted:#64748B;--border:#E2E8F0;--radius:16px}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Arial,sans-serif;color:var(--navy);background:var(--bg);line-height:1.6}
+  .container{width:min(820px,92%);margin-inline:auto;padding:32px 0 64px}
+  a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}
+  .top{display:flex;align-items:center;gap:12px;padding:18px 0;border-bottom:1px solid var(--border)}
+  .top img{width:40px;height:40px;border-radius:9px}
+  .top b{font-size:1.05rem}
+  h1{font-size:1.9rem;margin:28px 0 8px;letter-spacing:-.01em}
+  h2{font-size:1.2rem;margin:30px 0 8px;color:var(--teal)}
+  p{margin:8px 0;color:#334155}
+  ol{margin:10px 0 10px 22px}li{margin:8px 0}
+  .lead{font-size:1.05rem;color:#475569}
+  .btns{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0}
+  .btn{display:inline-flex;align-items:center;gap:8px;background:var(--teal);color:#fff;font-weight:700;padding:12px 18px;border-radius:12px}
+  .btn:hover{background:#16544f;text-decoration:none}
+  .btn.alt{background:#fff;color:var(--navy);border:2px solid var(--border)}
+  .btn.alt:hover{border-color:var(--teal)}
+  .note{background:#fff;border:1px solid var(--border);border-left:4px solid var(--orange);border-radius:10px;padding:14px 16px;margin:16px 0;color:#475569;font-size:.95rem}
+  .card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:20px 22px;margin:14px 0;box-shadow:0 10px 30px rgba(15,23,42,.05)}
+  .back{display:inline-block;margin-top:26px}
+  code{background:#eef2f7;padding:1px 6px;border-radius:6px;font-size:.92em}
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="top">
+      <img src="/studio/icons/icon-192.png" alt="Numberbender" />
+      <div><b>Numberbender Studio</b> · OBS Setup</div>
+    </div>
+
+    <h1>OBS setup — the free backup option</h1>
+    <p class="lead">Numberbender Studio runs right in your browser and needs no install. But if you already use <b>OBS Studio</b> (free), or you want it to appear as a real <b>virtual camera</b> inside Zoom/Teams, here's the same <em>Teach It Like You Stream It</em> two-pane layout for OBS.</p>
+
+    <div class="card">
+      <h2 style="margin-top:4px">1 · Download a starter scene</h2>
+      <p>Import this in OBS, then point the sources at your own camera and window.</p>
+      <div class="btns">
+        <a class="btn" href="numberbender-studio-windows.json" download>⬇ Windows scene</a>
+        <a class="btn" href="numberbender-studio-mac.json" download>⬇ Mac scene</a>
+        <a class="btn alt" href="https://obsproject.com/download" target="_blank" rel="noopener">Get OBS Studio (free) →</a>
+      </div>
+    </div>
+
+    <h2>2 · Import it into OBS</h2>
+    <ol>
+      <li>Open OBS → menu <b>Scene Collection ▸ Import</b>.</li>
+      <li>Choose the file you downloaded, then <b>Scene Collection ▸</b> pick <b>Numberbender Studio</b>.</li>
+      <li>You'll see two scenes: <b>NB · Side-by-side</b> and <b>NB · Spotlight (PIP)</b>.</li>
+    </ol>
+
+    <h2>3 · Point the sources at your devices</h2>
+    <p>Scene files can't know your specific camera or window, so set them once:</p>
+    <ol>
+      <li>Double-click the <b>Camera</b> source → choose your webcam (or your phone / Continuity Camera).</li>
+      <li>Double-click <b>Screen / iPad / Slides</b> → choose the window to show (your slides, whiteboard, or — for iPad on Mac — the QuickTime window).</li>
+    </ol>
+    <div class="note"><b>iPad &amp; tablet tips</b> are the same as in the web app: Mac uses QuickTime (cable), Windows uses an AirPlay-receiver app, and a Wacom/Bamboo pad draws into a whiteboard app you capture.</div>
+
+    <h2>4 · Go live</h2>
+    <ol>
+      <li><b>Virtual camera:</b> click <b>Start Virtual Camera</b>, then in Zoom/Teams pick <b>OBS Virtual Camera</b> as your camera.</li>
+      <li><b>Or share the window:</b> open <b>Window Projector</b> (right-click the preview) and screen-share that — just like the web app.</li>
+    </ol>
+
+    <div class="note">Not sure which to use? The browser version at <a href="/studio">numberbender.com/studio</a> is simpler and needs zero install — OBS is here only if you prefer it or want the virtual-camera route.</div>
+
+    <a class="back" href="/studio">← Back to Numberbender Studio</a> &nbsp;·&nbsp;
+    <a class="back" href="/teach-it-like-you-stream-it">Teach It Like You Stream It</a>
+  </div>
+</body>
+</html>
