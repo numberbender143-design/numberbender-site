@@ -116,7 +116,19 @@
   .footer-tagline{color:var(--cyan);font-style:italic;font-weight:600;font-size:.95rem!important}
   .foot-bottom{border-top:1px solid #1e293b;padding-top:20px;font-size:.85rem}
   .foot-bottom a{display:inline}
+  .nb-explain h2{font-size:1.5rem;margin:0 0 10px;color:#0f172a}
+  .nb-explain h3{font-size:1.15rem;margin:22px 0 6px;color:#0f172a}
+  .nb-explain p,.nb-explain li{font-size:1.02rem;line-height:1.7;color:#27323b}
+  .nb-explain ul{margin:0 0 14px 1.1rem}.nb-explain li{margin-bottom:8px}
+  .nb-example{background:#f0f9ff;border:1px solid #cfe6fb;border-radius:12px;padding:16px 20px;margin:12px 0}
+  .nb-faq h3{font-weight:700}.nb-faq p{margin:4px 0 16px}
+  .katex{font-size:1.06em}
 </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<script>window.addEventListener("load",function(){if(window.renderMathInElement)renderMathInElement(document.getElementById("main-content"),{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the difference between an angle bisector and a perpendicular bisector?","acceptedAnswer":{"@type":"Answer","text":"An angle bisector divides an angle into two equal angles; a perpendicular bisector divides a segment in half at a 90-degree angle. One works on angles, the other on segments."}},{"@type":"Question","name":"What is the Angle Bisector Theorem?","acceptedAnswer":{"@type":"Answer","text":"In a triangle, the bisector of an angle divides the opposite side into two segments proportional to the other two sides: BD/DC = AB/AC."}},{"@type":"Question","name":"What is the Perpendicular Bisector Theorem?","acceptedAnswer":{"@type":"Answer","text":"Any point on the perpendicular bisector of a segment is equidistant from the segment's two endpoints, and the converse is also true."}},{"@type":"Question","name":"Where do the perpendicular bisectors of a triangle meet?","acceptedAnswer":{"@type":"Answer","text":"They meet at the circumcenter, the single point equidistant from all three vertices and the center of the triangle's circumscribed circle."}}]}</script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -227,6 +239,42 @@
           <span class="play"><span>▶</span></span>
         </button>
       </div>
+    </div>
+  </div>
+</section>
+<section style="padding-top:30px;">
+  <div class="container nb-explain">
+    <h2>Angle bisectors vs. perpendicular bisectors</h2>
+    <p>Both are &ldquo;bisectors&rdquo; &mdash; they cut something exactly in half &mdash; but they bisect different things:</p>
+    <ul>
+      <li><strong>Angle bisector:</strong> a ray that divides an angle into two equal angles. Every point on it is the same distance from the two sides of the angle.</li>
+      <li><strong>Perpendicular bisector:</strong> a line that crosses a segment at its <em>midpoint</em> at a right angle. Every point on it is the same distance from the segment&rsquo;s two endpoints.</li>
+    </ul>
+
+    <h3>The Angle Bisector Theorem</h3>
+    <p>In a triangle, an angle bisector splits the opposite side into pieces proportional to the two adjacent sides. If \(AD\) bisects \(\angle A\) in \(\triangle ABC\) and meets \(BC\) at \(D\), then:</p>
+    <p style="text-align:center">$$\dfrac{BD}{DC}=\dfrac{AB}{AC}$$</p>
+
+    <h3>The Perpendicular Bisector Theorem</h3>
+    <p>A point lies on the perpendicular bisector of \(\overline{AB}\) <em>if and only if</em> it is equidistant from \(A\) and \(B\), that is \(PA = PB\). This is why the three perpendicular bisectors of a triangle&rsquo;s sides meet at the <strong>circumcenter</strong> &mdash; the one point equally far from all three vertices.</p>
+
+    <h2 style="margin-top:34px;">Worked example</h2>
+    <div class="nb-example">
+      <p><strong>Problem.</strong> In \(\triangle ABC\), the bisector of \(\angle A\) meets \(BC\) at \(D\). Given \(AB = 8\), \(AC = 6\), and \(BC = 7\), find \(BD\) and \(DC\).</p>
+      <p><strong>Solution.</strong> By the Angle Bisector Theorem, \(\dfrac{BD}{DC}=\dfrac{AB}{AC}=\dfrac{8}{6}=\dfrac{4}{3}\). Split \(BC = 7\) in the ratio \(4:3\): \(BD = \dfrac{4}{7}\times 7 = 4\) and \(DC = \dfrac{3}{7}\times 7 = 3\).</p>
+      <p><strong>Answer:</strong> \(BD = 4\), \(DC = 3\). <a href="/solved/triangle-angle-bisector-find-segments/">See the full step-by-step &rarr;</a></p>
+    </div>
+
+    <h2 style="margin-top:34px;">Frequently asked questions</h2>
+    <div class="nb-faq">
+      <h3>What&rsquo;s the difference between an angle bisector and a perpendicular bisector?</h3>
+      <p>An angle bisector divides an <em>angle</em> into two equal angles; a perpendicular bisector divides a <em>segment</em> in half at a 90&deg; angle. One works on angles, the other on segments.</p>
+      <h3>What is the Angle Bisector Theorem?</h3>
+      <p>In a triangle, the bisector of an angle divides the opposite side into two segments proportional to the other two sides: \(BD/DC = AB/AC\).</p>
+      <h3>What is the Perpendicular Bisector Theorem?</h3>
+      <p>Any point on the perpendicular bisector of a segment is equidistant from the segment&rsquo;s two endpoints &mdash; and the reverse is true too.</p>
+      <h3>Where do the perpendicular bisectors of a triangle meet?</h3>
+      <p>They meet at the <strong>circumcenter</strong>, the single point equidistant from all three vertices, which is the center of the triangle&rsquo;s circumscribed circle.</p>
     </div>
   </div>
 </section>

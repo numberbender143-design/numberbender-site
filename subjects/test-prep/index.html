@@ -270,6 +270,50 @@ footer h4{color:#fff;margin-bottom:12px;font-size:.95rem}
   "hasCourseInstance": {"@type": "CourseInstance", "courseMode": "online"}
 }
 </script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script>
+(function(){
+var SUP={'²':'2','³':'3','¹':'1','⁰':'0','⁴':'4','⁵':'5','⁶':'6','⁷':'7','⁸':'8','⁹':'9','ⁿ':'n','ˣ':'x','⁺':'+','⁻':'-'};
+var SUB={'₀':'0','₁':'1','₂':'2','₃':'3','₄':'4','₅':'5','ₐ':'a','ₙ':'n'};
+var SYM={'−':'-','×':'\\times ','÷':'\\div ','·':'\\cdot ','±':'\\pm ','≤':'\\le ','≥':'\\ge ','≠':'\\ne ','≅':'\\cong ','→':'\\to ','↔':'\\leftrightarrow ','∘':'^{\\circ}','°':'^{\\circ}','θ':'\\theta ','π':'\\pi ','△':'\\triangle '};
+var MATHWORDS={sqrt:1,sin:1,cos:1,tan:1,log:1,ln:1};
+function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function toLatex(f){var s=f;
+ s=s.replace(/√\s*\(([^)]*)\)/g,'\\sqrt{$1}').replace(/√\s*([0-9]+|[A-Za-z])/g,'\\sqrt{$1}');
+ s=s.replace(/[²³¹⁰⁴⁵⁶⁷⁸⁹ⁿˣ⁺⁻]+/g,function(m){var o='';for(var i=0;i<m.length;i++)o+=SUP[m[i]];return '^{'+o+'}';});
+ s=s.replace(/[₀₁₂₃₄₅ₐₙ]+/g,function(m){var o='';for(var i=0;i<m.length;i++)o+=SUB[m[i]];return '_{'+o+'}';});
+ s=s.replace(/[−×÷·±≤≥≠≅→↔∘°θπ△]/g,function(c){return SYM[c]||c;});
+ return s;}
+function isWord(c){return /^[A-Za-z]{2,}$/.test(c)&&!MATHWORDS[c.toLowerCase()];}
+function isHyW(c){return /^[A-Za-z]+(?:-[A-Za-z]+)+$/.test(c);}
+function sig(c){return /[0-9²³¹⁰-⁹₀-₅+×÷·±/=^√°≤≥≠≅()−]/.test(c);}
+window.nbMathify=function(str){
+ if(!str)return '';
+ if(!window.katex)return esc(str);
+ var parts=str.split(/(\s+)/),cls=parts.map(function(tok){
+  if(/^\s+$/.test(tok)||tok==='')return 'sp';
+  if(tok.indexOf('$')>=0)return 'word';
+  var core=tok.replace(/^[("']*/,'').replace(/[.,?;:!)"']+$/,'');
+  if(core==='')return 'punct';
+  if(isHyW(core)||isWord(core))return 'word';
+  if(sig(core)||/^[A-Za-z]$/.test(core))return 'math';
+  return 'word';});
+ for(var k=0;k<parts.length;k++){if(cls[k]==='math'&&/^[A-Za-z]$/.test(parts[k])){if(cls[k-2]!=='math'&&cls[k+2]!=='math')cls[k]='word';}}
+ var out='',i=0;
+ while(i<parts.length){
+  if(cls[i]==='math'){
+   var j=i,buf='';
+   while(j<parts.length&&(cls[j]==='math'||(cls[j]==='sp'&&cls[j+1]==='math'))){buf+=parts[j];j++;}
+   var m=buf.match(/^([\s\S]*?)([.,?;:!]*)$/),core=m[1],trail=m[2];
+   if(!/[0-9A-Za-z]/.test(core)){out+=esc(buf);i=j;continue;}
+   try{out+=katex.renderToString(toLatex(core),{throwOnError:false,strict:'ignore'})+esc(trail);}
+   catch(e){out+=esc(buf);}
+   i=j;
+  }else{out+=esc(parts[i]);i++;}}
+ return out;};
+})();
+</script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -1692,7 +1736,7 @@ function renderQuestion() {
   var pct = Math.round(((currentIdx) / currentQs.length) * 100);
   pracFill.style.width    = pct + '%';
   pracCounter.textContent = (currentIdx + 1) + ' / ' + currentQs.length;
-  pracQ.textContent       = q.q;
+  pracQ.innerHTML         = nbMathify(q.q);
   pracOpts.innerHTML      = '';
   pracExp.style.display   = 'none';
   pracExp.className       = 'prac-explanation';
@@ -1702,7 +1746,7 @@ function renderQuestion() {
   q.opts.forEach(function(opt, i) {
     var btn = document.createElement('button');
     btn.className = 'prac-opt';
-    btn.innerHTML = '<span class="prac-opt-letter">' + letters[i] + '</span>' + opt;
+    btn.innerHTML = '<span class="prac-opt-letter">' + letters[i] + '</span>' + nbMathify(opt);
     btn.onclick = function() { handleAnswer(i); };
     pracOpts.appendChild(btn);
   });
@@ -1716,11 +1760,11 @@ function handleAnswer(chosen) {
   if (chosen !== q.ans) {
     opts[chosen].classList.add('wrong');
     pracExp.className = 'prac-explanation wrong';
-    pracExp.innerHTML = '<span class="prac-exp-icon">📚</span>' + q.exp;
+    pracExp.innerHTML = '<span class="prac-exp-icon">📚</span>' + nbMathify(q.exp);
   } else {
     currentScore++;
     pracExp.className = 'prac-explanation correct';
-    pracExp.innerHTML = '<span class="prac-exp-icon">✅</span>' + q.exp;
+    pracExp.innerHTML = '<span class="prac-exp-icon">✅</span>' + nbMathify(q.exp);
   }
   pracExp.style.display = 'block';
   btnNext.style.display = 'block';
