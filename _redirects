@@ -111,6 +111,14 @@ https://www.numberbender.com/*  https://numberbender.com/:splat  301!
 /mission                        /nonprofit                      301
 /mission/                       /nonprofit                      301
 
+# Un-migrated .html pages still served as 200 → force redirect to clean URLs
+# (fixes duplicate content + the GSC "indexed though blocked by robots.txt" flag)
+/for-teachers.html              /for-teachers                   301!
+/blog.html                      /blog                           301!
+
+# CCC atlas duplicate → canonical hub
+/ccc-atlas                      /math-ccc                       301!
+
 # Catch-all: anything else not found → custom 404 (Netlify does this automatically via 404.html)
 
 # Audit deliverables live in the repo for the PR but are not site content
