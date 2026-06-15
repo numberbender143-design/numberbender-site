@@ -187,7 +187,7 @@ h1{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:900;line-height:1.15;margin-bo
 /* ── current site footer (ported from worksheet/landing template) ── */
 footer{background:#0b1220;color:#94a3b8;padding:50px 0 24px}
 footer a{color:#cbd5e1;display:block;margin-bottom:8px;font-size:.92rem}
-footer h4{color:#fff;margin-bottom:12px;font-size:.95rem}
+footer h3{color:#fff;margin-bottom:12px;font-size:.95rem}
 .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px;margin-bottom:30px}
 @media (max-width:760px){.foot-grid{grid-template-columns:1fr 1fr}}
 .foot-brand p{margin-bottom:10px;font-size:.92rem}
@@ -270,6 +270,7 @@ footer h4{color:#fff;margin-bottom:12px;font-size:.95rem}
   "hasCourseInstance": {"@type": "CourseInstance", "courseMode": "online"}
 }
 </script>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
 <script>
@@ -1216,21 +1217,21 @@ window.nbMathify=function(str){
         <p class="footer-tagline">Math is hard. So we made it human.</p>
       </div>
       <div class="foot">
-        <h4>Students</h4>
+        <h3>Students</h3>
         <a href="/courses">Explore All Subjects</a>
         <a href="/math-worksheets">Free Worksheets</a>
         <a href="/find-your-course">Where Do I Start?</a>
         <a href="/start-here">Free Starter Lesson</a>
       </div>
       <div class="foot">
-        <h4>Educators</h4>
+        <h3>Educators</h3>
         <a href="/for-teachers">For Teachers Hub</a>
         <a href="/teach-the-math">Teach the Math</a>
         <a href="/teacher-resources">Teacher Resources</a>
         <a href="/flipped-classroom-math">Flipped Classroom Guide</a>
       </div>
       <div class="foot">
-        <h4>Connect</h4>
+        <h3>Connect</h3>
         <a href="/about">About Dr. E</a>
         <a href="/speaking">Speaking</a>
         <a href="/press">Press &amp; Media</a>
@@ -1311,7 +1312,7 @@ function openModal(videoId, title, lang) {
   titleEl.textContent = title;
   badgeEl.textContent = lang;
   badgeEl.className = 'modal-lang-badge ' + lang.toLowerCase();
-  iframe.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0';
+  iframe.src = 'https://www.youtube-nocookie.com/embed/' + videoId + '?autoplay=1&rel=0';
   ytLink.href = 'https://www.youtube.com/watch?v=' + videoId;
   modal.classList.add('open');
   document.body.style.overflow = 'hidden';
@@ -2185,6 +2186,6 @@ document.addEventListener('click',function(e){
 });
 
 </script>
-<script src="/nb-search.js"></script>
+<script src="/nb-search.js" defer></script>
 </body>
 </html>

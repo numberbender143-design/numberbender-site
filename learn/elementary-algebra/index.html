@@ -361,7 +361,7 @@
     display:grid; grid-template-columns:2fr 1fr 1fr 1fr;
     gap:40px; margin-bottom:40px;
   }
-  .foot h4{ color:white; font-size:0.95rem; font-weight:700; margin-bottom:14px; }
+  .foot h3{ color:white; font-size:0.95rem; font-weight:700; margin-bottom:14px; }
   .foot a{ display:block; color:#94a3b8; font-size:0.9rem; margin-bottom:8px; }
   .foot a:hover{ color:white; text-decoration:none; }
   .foot-brand p{ font-size:0.9rem; line-height:1.7; margin-top:12px; }
@@ -1647,18 +1647,18 @@
         <p>Helping students learn math with confidence and helping educators teach online with energy, clarity, and impact.</p>
       </div>
       <div class="foot">
-        <h4>Courses</h4>
+        <h3>Courses</h3>
         <a href="/courses">All Subjects</a>
         <a href="../elementary-algebra/">Elementary Algebra</a>
         <a href="../intermediate-algebra/">Intermediate Algebra</a>
       </div>
       <div class="foot">
-        <h4>Students</h4>
+        <h3>Students</h3>
         <a href="../../math-worksheets">Free Worksheets</a>
         <a href="/courses">Video Lessons</a>
       </div>
       <div class="foot">
-        <h4>Connect</h4>
+        <h3>Connect</h3>
         <a href="../../about">About Dr. E</a>
         <a href="../../speaking">Speaking</a>
         <a href="../../contact">Contact</a>
@@ -1795,7 +1795,7 @@ function clearSearch() {
 // Video modal
 function openVideo(videoId, title) {
   document.getElementById('vid-modal-title').textContent = title || 'Classroom Lesson';
-  document.getElementById('vid-modal-frame').src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0&modestbranding=1';
+  document.getElementById('vid-modal-frame').src = 'https://www.youtube-nocookie.com/embed/' + videoId + '?autoplay=1&rel=0&modestbranding=1';
   var modal = document.getElementById('vid-modal');
   modal.style.display = 'flex';
   document.body.style.overflow = 'hidden';
@@ -1829,6 +1829,6 @@ function closeWorksheet() {
 }
 </script>
 
-<script src="/nb-search.js"></script>
+<script src="/nb-search.js" defer></script>
 </body>
 </html>

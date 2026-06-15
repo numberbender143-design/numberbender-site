@@ -7,6 +7,13 @@
 [build]
   publish = "."          # Root is the site (no build step)
 
+# --------------- Edge Functions ---------------
+# Geolocation for the homepage sticky bar — sets an nb_country cookie from
+# Netlify's edge geo so the bar localizes without a client-side ipapi.co call.
+[[edge_functions]]
+  path     = "/"
+  function = "geo"
+
 # --------------- Redirects ---------------
 # Pretty-URL rewrites: strip .html so canonical URLs are clean
 # Google prefers one canonical form; these ensure the .html version

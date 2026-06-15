@@ -150,7 +150,7 @@
   /* FOOTER */
   footer{ background: #0b1220; color: #94a3b8; padding: 46px 0 24px; }
   .foot-grid{ display:grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 32px; margin-bottom: 28px; }
-  .foot h4{ color: white; margin-bottom: 12px; font-size: 0.92rem; letter-spacing: .05em; text-transform: uppercase; }
+  .foot h3{ color: white; margin-bottom: 12px; font-size: 0.92rem; letter-spacing: .05em; text-transform: uppercase; }
   .foot a{ color: #94a3b8; display: block; padding: 4px 0; font-size: 0.93rem; }
   .foot a:hover{ color: white; text-decoration: none; }
   .footer-tagline{ color: var(--cyan); font-style: italic; font-weight: 600; margin-top: 8px; font-size: 0.93rem; }
@@ -314,7 +314,7 @@
         <p class="footer-tagline" lang="fil">Labanan ang agwat.</p>
       </div>
       <div class="foot">
-        <h4>For Teachers</h4>
+        <h3>For Teachers</h3>
         <a href="/deped/teachers">DepEd Teacher Home</a>
         <a href="/deped/teachers/grade-7">Grade 7</a>
         <a href="/deped/teachers/grade-8">Grade 8</a>
@@ -322,14 +322,14 @@
         <a href="/deped/teachers/grade-10">Grade 10</a>
       </div>
       <div class="foot">
-        <h4>Teacher SHS</h4>
+        <h3>Teacher SHS</h3>
         <a href="/deped/teachers/shs/general-math">General Mathematics</a>
         <a href="/deped/teachers/shs/statistics-probability">Statistics &amp; Probability</a>
         <a href="/deped/teachers/shs/pre-calculus">Pre-Calculus</a>
         <a href="/deped/teachers/shs/basic-calculus">Basic Calculus</a>
       </div>
       <div class="foot">
-        <h4>Connect</h4>
+        <h3>Connect</h3>
         <a href="/math-worksheets">Printable Worksheets</a>
         <a href="/for-teachers">For Teachers Hub</a>
         <a href="/about">About Dr. E</a>
@@ -377,6 +377,6 @@
     if(navigator.clipboard){ navigator.clipboard.writeText(url).then(function(){ alert('Link copied! 🔗'); }); } else { prompt('Copy this link:', url); }
   }
 </script>
-<script src="/nb-search.js"></script>
+<script src="/nb-search.js" defer></script>
 </body>
 </html>

@@ -275,14 +275,15 @@
     margin-top: 36px; padding-top: 28px; border-top: 1px solid var(--border);
   }
   .hero-left .stat{ align-items: flex-start; }
-  .hero-characters-wrap{ display: flex; align-items: center; justify-content: flex-end; }
+  .hero-characters-wrap{ display: flex; align-items: flex-start; justify-content: flex-end; align-self: start; }
   .hero-characters-wrap img{
     width: 100%; max-width: 500px; height: auto; display: block;
     filter: drop-shadow(0 20px 48px rgba(15,23,42,0.10));
   }
   .hero-chars-inner{ position: relative; max-width: 500px; width: 100%; }
+  .hero-img-wrap{ position: relative; }
   .ws-float-badge{
-    position: absolute; top: -80px; left: 0; right: 0;
+    position: absolute; top: -24px; left: 0; right: 0;
     margin: 0 auto; width: fit-content;
     background: var(--surface);
     border: 1px solid var(--border);
@@ -307,10 +308,75 @@
   .ws-float-badge .ws-badge-sub{
     font-size: 0.82rem; font-weight: 500; color: var(--muted); margin-top: 3px;
   }
+  /* Studio-for-Zoom hero card (fills the empty upper-right space) */
+  .studio-hero-card{
+    display:block; text-decoration:none !important; color:#fff;
+    position: relative;
+    margin: 92px 0 58px;
+    padding: 22px 24px;
+    border-radius: var(--radius);
+    background:
+      radial-gradient(120% 140% at 100% 0%, rgba(6,182,212,.45), transparent 55%),
+      linear-gradient(135deg, #1F6F6B 0%, #0B4D49 100%);
+    box-shadow: 0 18px 40px rgba(11,77,73,0.38);
+    border: 1px solid rgba(255,255,255,0.14);
+    overflow: hidden;
+    animation: floaty 6s ease-in-out infinite;
+    transition: transform .22s ease, box-shadow .22s ease;
+  }
+  .studio-hero-card:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 26px 54px rgba(11,77,73,0.5);
+  }
+  .studio-hero-card .sh-pill{
+    display:inline-flex; align-items:center; gap:7px;
+    background: rgba(255,255,255,0.16);
+    border: 1px solid rgba(255,255,255,0.25);
+    color:#eafffb; font-weight:700; font-size:0.72rem; letter-spacing:.04em;
+    text-transform:uppercase; padding:4px 11px; border-radius:999px;
+  }
+  .studio-hero-card .sh-pill .sh-dot{
+    width:8px; height:8px; border-radius:50%; background:#36e0c4;
+    box-shadow:0 0 0 0 rgba(54,224,196,.7); animation: shpulse 1.8s infinite;
+  }
+  @keyframes shpulse{
+    0%{ box-shadow:0 0 0 0 rgba(54,224,196,.6); }
+    70%{ box-shadow:0 0 0 9px rgba(54,224,196,0); }
+    100%{ box-shadow:0 0 0 0 rgba(54,224,196,0); }
+  }
+  .studio-hero-card h3{
+    margin:12px 0 4px; font-size:1.45rem; line-height:1.12; font-weight:800; color:#fff;
+  }
+  .studio-hero-card .sh-slogan{
+    font-style:italic; font-weight:700; font-size:0.9rem; color:#ffd98a;
+    margin:0 0 8px; letter-spacing:.01em;
+  }
+  .studio-hero-card p{
+    margin:0; font-size:0.92rem; line-height:1.45; color:rgba(255,255,255,0.88);
+  }
+  .studio-hero-card .sh-tools{
+    margin-top:12px; font-size:0.78rem; font-weight:600; color:rgba(234,255,251,0.92);
+    display:flex; align-items:center; gap:8px; flex-wrap:wrap;
+  }
+  .studio-hero-card .sh-cta{
+    margin-top:16px;
+    display:inline-flex; align-items:center; gap:8px;
+    background:#fff; color:#0B4D49; font-weight:800; font-size:0.92rem;
+    padding:10px 18px; border-radius:10px;
+    box-shadow:0 4px 14px rgba(0,0,0,0.18);
+    transition: gap .2s ease;
+  }
+  .studio-hero-card:hover .sh-cta{ gap:13px; }
+  .studio-hero-card .sh-icon{
+    position:absolute; top:16px; right:18px; font-size:1.9rem; opacity:.9;
+  }
   @media (max-width: 900px){
     .hero-characters-wrap{ justify-content: center; order: -1; }
     .hero-characters-wrap img{ max-width: 320px; }
     .hero-chars-inner{ max-width: 320px; }
+    .studio-hero-card{ padding:18px 18px; margin-top:0 !important; margin-bottom:20px; }
+    .studio-hero-card h3{ font-size:1.2rem; }
+    .studio-hero-card p{ font-size:0.85rem; }
     .ws-float-badge{ padding: 13px 18px; gap: 12px; }
     .ws-float-badge .ws-badge-icon{ width: 44px; height: 44px; font-size: 1.3rem; }
     .ws-float-badge .ws-badge-title{ font-size: 0.95rem; }
@@ -759,7 +825,7 @@
     gap: 32px;
     margin-bottom: 32px;
   }
-  .foot h4{
+  .foot h3{
     color: white;
     margin-bottom: 14px;
     font-size: 0.95rem;
@@ -1241,22 +1307,56 @@
           </div>
         </div>
       </div>
-      <!-- Right: Illustration -->
+      <!-- Right: Studio card + Illustration -->
       <div class="hero-characters-wrap">
         <div class="hero-chars-inner">
-          <div class="ws-float-badge">
-            <div class="ws-badge-icon">🌐</div>
-            <div>
-              <div class="ws-badge-title">Bilingual: English + Filipino</div>
-              <div class="ws-badge-sub">Math for every Filipino learner, worldwide</div>
+
+          <!-- Numberbender Studio: make your Zoom class engaging -->
+          <a class="studio-hero-card" href="/studio" title="Open Numberbender Studio — free teaching studio for Zoom, Meet & Teams">
+            <span class="sh-icon">🎬</span>
+            <span class="sh-pill"><span class="sh-dot"></span>New · Free Studio</span>
+            <h3>Turn Zoom into a real classroom.</h3>
+            <div class="sh-slogan">Teach It Like You Stream It</div>
+            <p>Numberbender&nbsp;Studio puts your camera and your slides or whiteboard side&#8209;by&#8209;side, then shares straight into your Zoom&nbsp;meeting — so your online class actually feels like teaching.</p>
+            <div class="sh-tools">🟦 Zoom · 🟩 Google&nbsp;Meet · 🟪 Teams — no install</div>
+            <span class="sh-cta">🎬 Open the Studio — Free →</span>
+          </a>
+
+          <div class="hero-img-wrap">
+            <div class="ws-float-badge">
+              <div class="ws-badge-icon">🌐</div>
+              <div>
+                <div class="ws-badge-title">Bilingual: English + Filipino</div>
+                <div class="ws-badge-sub">Math for every Filipino learner, worldwide</div>
+              </div>
             </div>
+            <picture><source srcset="images/hero_image_worksheet_teacher.webp" type="image/webp"><img src="images/hero_image_worksheet_teacher.png" alt="Student with bilingual math worksheet and Dr. E with laptop showing Numberbender" loading="eager" fetchpriority="high" width="600" height="500"></picture>
           </div>
-          <picture><source srcset="images/hero_image_worksheet_teacher.webp" type="image/webp"><img src="images/hero_image_worksheet_teacher.png" alt="Student with bilingual math worksheet and Dr. E with laptop showing Numberbender" loading="eager" fetchpriority="high" width="600" height="500"></picture>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<script>
+/* Align the Studio hero card's top with the "Learn Math" headline (desktop only) */
+(function(){
+  function alignStudioCard(){
+    var card=document.querySelector('.studio-hero-card');
+    var h1=document.querySelector('.hero-left h1');
+    var wrap=document.querySelector('.hero-characters-wrap');
+    if(!card||!h1||!wrap) return;
+    if(window.innerWidth<=900){ card.style.marginTop=''; return; }
+    var delta=Math.round(h1.getBoundingClientRect().top - wrap.getBoundingClientRect().top);
+    card.style.marginTop=Math.max(0, delta)+'px';
+  }
+  window.addEventListener('load', alignStudioCard);
+  window.addEventListener('resize', alignStudioCard);
+  if(document.fonts && document.fonts.ready){ document.fonts.ready.then(alignStudioCard); }
+  if(document.readyState!=='loading'){ alignStudioCard(); }
+  else { document.addEventListener('DOMContentLoaded', alignStudioCard); }
+})();
+</script>
 
 <!-- ========== TEST PREP FEATURE ========== -->
 <section class="tp-feature">
@@ -1878,14 +1978,14 @@
         </div>
       </div>
       <div class="foot">
-        <h4>Students</h4>
+        <h3>Students</h3>
         <a href="/courses">Explore All Subjects</a>
         <a href="subjects/algebra/">Algebra</a>
         <a href="subjects/statistics/">Statistics</a>
         <a href="/courses">Calculus</a>
       </div>
       <div class="foot">
-        <h4>Educators</h4>
+        <h3>Educators</h3>
         <a href="/for-teachers">For Teachers Hub</a>
         <a href="/teach-the-math">Teach the Math</a>
         <a href="/teach-it-like-you-stream-it">Teach It Like You Stream It</a>
@@ -1894,7 +1994,7 @@
         <a href="/speaking">Workshops &amp; Keynotes</a>
       </div>
       <div class="foot">
-        <h4>Connect</h4>
+        <h3>Connect</h3>
         <a href="/about">About Dr. E</a>
         <a href="/speaking">Speaking</a>
         <a href="/speaking-archive">Speaking Archive</a>
@@ -2048,6 +2148,12 @@
   var cached=sessionStorage.getItem('nb_country');
   if(cached){showBar(cached);return;}
 
+  // Netlify Edge geolocation: read the nb_country cookie set by
+  // netlify/edge-functions/geo.js — no third-party request. ipapi.co below is
+  // only a fallback for the rare case the edge cookie isn't present.
+  var ck=document.cookie.match(/(?:^|;\s*)nb_country=([A-Za-z]{2})/);
+  if(ck){var cc=ck[1].toUpperCase();sessionStorage.setItem('nb_country',cc);showBar(cc);return;}
+
   fetch('https://ipapi.co/country/')
     .then(function(r){return r.text();})
     .then(function(c){
@@ -2083,6 +2189,6 @@ function nbSubmit(){
   document.body.appendChild(s);
 }
 </script>
-<script src="/nb-search.js"></script>
+<script src="/nb-search.js" defer></script>
 </body>
 </html>

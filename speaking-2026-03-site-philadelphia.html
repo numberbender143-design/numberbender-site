@@ -308,7 +308,7 @@
 
   footer{ background: #0b1220; color: #94a3b8; padding: 50px 0 24px; }
   .foot-grid{ display:grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 32px; margin-bottom: 32px; }
-  .foot h4{ color: white; margin-bottom: 14px; font-size: 0.95rem; letter-spacing: .05em; text-transform: uppercase; }
+  .foot h3{ color: white; margin-bottom: 14px; font-size: 0.95rem; letter-spacing: .05em; text-transform: uppercase; }
   .foot a{ color:#94a3b8; display: block; padding: 4px 0; font-size: 0.95rem; }
   .foot a:hover{ color: white; text-decoration: none; }
   .foot-bottom{ border-top: 1px solid #1e293b; padding-top: 20px; text-align: center; font-size: 0.88rem; }
@@ -623,7 +623,7 @@
           <img src="images/SITE2026_blog/slide-3.jpg" alt="Dr. E at the SITE 2026 plenary in Philadelphia (slide 2 of 4)" loading="lazy">
         </div>
         <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="Slide 3 of 4">
-          <img src="images/SITE2026_blog/slide-4.jpg" alt="Dr. E at the SITE 2026 plenary in Philadelphia (slide 3 of 4)" loading="lazy">
+          <picture><source type="image/webp" srcset="images/SITE2026_blog/slide-4.webp"><img src="images/SITE2026_blog/slide-4.jpg" alt="Dr. E at the SITE 2026 plenary in Philadelphia (slide 3 of 4)" loading="lazy"></picture>
         </div>
         <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="Slide 4 of 4">
           <img src="images/SITE2026_blog/slide-5.jpg" alt="Dr. E at the SITE 2026 plenary in Philadelphia (slide 4 of 4)" loading="lazy">
@@ -755,20 +755,20 @@
         <p class="footer-tagline" style="color: var(--cyan); font-style: italic; font-weight: 600; margin-top: 8px; font-size: 0.95rem;">Math is hard. So we made it human.</p>
       </div>
       <div class="foot">
-        <h4>Speaking</h4>
+        <h3>Speaking</h3>
         <a href="/speaking">Topics &amp; Formats</a>
         <a href="/speaking-archive">Speaking Archive</a>
         <a href="/press">Press &amp; Media</a>
         <a href="/contact">Book Dr. E</a>
       </div>
       <div class="foot">
-        <h4>Educators</h4>
+        <h3>Educators</h3>
         <a href="/teach-it-like-you-stream-it">Teach It Like You Stream It</a>
         <a href="/teach-the-math">Teach the Math</a>
         <a href="/teacher-resources">Teacher Resources</a>
       </div>
       <div class="foot">
-        <h4>Connect</h4>
+        <h3>Connect</h3>
         <a href="/about">About Dr. E</a>
         <a href="/contact">Contact</a>
         <a href="/speaking-archive">Speaking Archive</a>
@@ -915,6 +915,6 @@ function nbSubmit(){
   document.body.appendChild(s);
 }
 </script>
-<script src="/nb-search.js"></script>
+<script src="/nb-search.js" defer></script>
 </body>
 </html>

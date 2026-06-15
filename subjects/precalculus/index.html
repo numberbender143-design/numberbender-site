@@ -191,7 +191,7 @@ body[data-lang="fil"] .unit-block.open{box-shadow:0 4px 16px rgba(220,38,38,0.08
 /* ── FOOTER ── */
 footer{background:var(--navy);color:#94a3b8;padding:56px 0 28px;}
 .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:36px;}
-.foot h4{color:white;font-size:0.92rem;font-weight:700;margin-bottom:12px;}
+.foot h3{color:white;font-size:0.92rem;font-weight:700;margin-bottom:12px;}
 .foot a{display:block;color:#94a3b8;font-size:0.88rem;margin-bottom:8px;}
 .foot a:hover{color:white;text-decoration:none;}
 .foot-brand p{font-size:0.88rem;line-height:1.7;margin-top:12px;}
@@ -995,19 +995,19 @@ footer{background:var(--navy);color:#94a3b8;padding:56px 0 28px;}
         <p>Helping students learn math with confidence and helping educators teach online with energy, clarity, and impact.</p>
       </div>
       <div class="foot">
-        <h4>Subjects</h4>
+        <h3>Subjects</h3>
         <a href="/courses">All Subjects</a>
         <a href="../algebra/">Algebra</a>
         <a href="../precalculus/">Precalculus</a>
         <a href="../calculus/">Calculus</a>
       </div>
       <div class="foot">
-        <h4>Full Courses</h4>
+        <h3>Full Courses</h3>
         <a href="../../learn/elementary-algebra/">Elementary Algebra</a>
         <a href="../../learn/intermediate-algebra/">Intermediate Algebra</a>
       </div>
       <div class="foot">
-        <h4>Connect</h4>
+        <h3>Connect</h3>
         <a href="../../about">About Dr. E</a>
         <a href="../../math-worksheets">Worksheets</a>
         <a href="../../contact">Contact</a>
@@ -1167,7 +1167,7 @@ function openModal(item) {
   var ytUrl     = 'https://www.youtube.com/watch?v=' + activeId;
   document.getElementById('modal-lesson-title').textContent = title;
   document.getElementById('modal-lesson-sub').textContent   = sub;
-  document.getElementById('modal-iframe').src = 'https://www.youtube.com/embed/' + activeId + '?autoplay=1&rel=0';
+  document.getElementById('modal-iframe').src = 'https://www.youtube-nocookie.com/embed/' + activeId + '?autoplay=1&rel=0';
   document.getElementById('modal-yt-btn').href = ytUrl;
   var wsBlock = document.getElementById('modal-ws-block');
   if (worksheet) {
@@ -1348,6 +1348,6 @@ document.addEventListener('click',function(e){
   window.addEventListener('hashchange', applyHashRouting);
 })();
 </script>
-<script src="/nb-search.js"></script>
+<script src="/nb-search.js" defer></script>
 </body>
 </html>

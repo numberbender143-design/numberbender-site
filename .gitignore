@@ -40,6 +40,10 @@ yt_inventory.json
 # scripts, spreadsheets, old reports). Never deploy this to Netlify.
 _archive/
 
+# Audit deliverables (reports, patches) — review artifacts, not site content
+numberbender audit/
+*.patch
+
 # Editor / build junk
 __pycache__/
 .~lock.*
