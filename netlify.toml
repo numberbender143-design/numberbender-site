@@ -7,6 +7,12 @@
 [build]
   publish = "."          # Root is the site (no build step)
 
+# Allow the public, referrer-restricted YouTube Data API key used client-side
+# in courses-playlist-v1.html (restricted to numberbender.com/* + YT Data API v3).
+# It must ship to the browser, so Netlify's secret scanner is told it's expected.
+[build.environment]
+  SECRETS_SCAN_SMART_DETECTION_OMIT_VALUES = "AIzaSyApHeJvJ15Nhe4bLv0ntt8WFPENcMag11Q"
+
 # --------------- Edge Functions ---------------
 # Geolocation for the homepage sticky bar — sets an nb_country cookie from
 # Netlify's edge geo so the bar localizes without a client-side ipapi.co call.
