@@ -16052,4 +16052,16 @@
       <video:live>no</video:live>
     </video:video>
   </url>
+  <url>
+    <loc>https://numberbender.com/teach-it-like-you-stream-it</loc>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/-bQKecEP71E/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>What Your Zoom Lesson Looks Like with Numberbender Studio</video:title>
+      <video:description>A short look at the camera + content layouts you get the moment you launch Numberbender Studio — the free, browser-based teaching studio built by Dr. Peter Esperanza. Side-by-side camera + slides, camera + whiteboard, and camera + iPad annotation, ready to share into Zoom, Microsoft Teams, or Google Meet.</video:description>
+      <video:player_loc>https://www.youtube-nocookie.com/embed/-bQKecEP71E</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+      <video:publication_date>2026-06-15T00:00:00+00:00</video:publication_date>
+    </video:video>
+  </url>
 </urlset>
