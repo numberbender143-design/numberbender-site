@@ -469,18 +469,42 @@
   // ----- Camera -----
   var currentStream=null;
   async function startCamera(deviceId){
+    if(!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia){
+      $("camPlaceholder").querySelector(".big").textContent="Camera unavailable";
+      $("camPlaceholder").lastElementChild.textContent="This browser can't reach the camera here. Make sure the page is on https:// and use a recent Safari, Chrome, or Edge.";
+      $("camPlaceholder").style.display="flex";
+      return;
+    }
     try{
       if(currentStream){ currentStream.getTracks().forEach(function(t){t.stop();}); }
-      var constraints={ audio:false, video: deviceId ? { deviceId:{exact:deviceId} } : { width:{ideal:1280}, height:{ideal:720} } };
-      var stream=await navigator.mediaDevices.getUserMedia(constraints);
+      // Use 'ideal' (a hint), not 'exact' (a hard requirement). Safari rotates deviceIds between
+      // sessions, so a saved id often no longer matches — 'exact' hard-fails, 'ideal' falls back.
+      var video = deviceId ? { deviceId:{ideal:deviceId}, width:{ideal:1280}, height:{ideal:720} }
+                           : { width:{ideal:1280}, height:{ideal:720} };
+      var stream;
+      try{
+        stream=await navigator.mediaDevices.getUserMedia({ audio:false, video:video });
+      }catch(inner){
+        // A stale or asleep device (e.g. iPhone Continuity Camera) can still throw — retry with
+        // no device preference so we open whatever camera is actually available.
+        stream=await navigator.mediaDevices.getUserMedia({ audio:false, video:true });
+      }
       currentStream=stream; cam.srcObject=stream;
       $("camPlaceholder").style.display="none";
       var track=stream.getVideoTracks()[0];
       if(track && track.getSettings){ S.camId=track.getSettings().deviceId||S.camId; saveSettings(); }
       await populateCameras();
     }catch(err){
+      // Populate the picker even on failure so the user can still choose a working camera.
+      await populateCameras();
+      var nm=err && err.name ? err.name : "";
+      var msg = nm==="NotAllowedError"
+            ? "Camera access is blocked. Allow it from the camera icon in the address bar (Chrome/Edge) or Safari ▸ Settings ▸ Websites ▸ Camera, then reload."
+        : nm==="NotFoundError"
+            ? "No camera found. Connect or wake a camera, then choose it from the menu."
+        : (err && err.message) ? err.message : "Please allow camera access and reload.";
       $("camPlaceholder").querySelector(".big").textContent="Camera unavailable";
-      $("camPlaceholder").lastElementChild.textContent=err && err.message ? err.message : "Please allow camera access and reload.";
+      $("camPlaceholder").lastElementChild.textContent=msg;
       $("camPlaceholder").style.display="flex";
     }
   }
