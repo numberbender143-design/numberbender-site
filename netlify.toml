@@ -559,11 +559,23 @@
     # are the canonical versions. Prevents "duplicate without canonical" in GSC.
     X-Robots-Tag = "noindex, nofollow"
 
-# Worksheet PDFs served from /worksheets/ and all subdirectories (algebra, calculus, precalculus, etc.)
+# Cache everything under /worksheets/ (HTML landing pages + PDFs)
 [[headers]]
   for = "/worksheets/**"
   [headers.values]
     Cache-Control = "public, max-age=2592000"
+
+# Noindex ONLY the worksheet PDFs — the HTML landing pages are the canonical,
+# indexable versions (listed in sitemap.xml + self-canonical). Covers both layouts:
+#   /worksheets/<subject>/<file>.pdf   and   /worksheets/<subject>/<topic>/<file>.pdf
+# The site-wide /*.pdf rule above remains a backstop.
+[[headers]]
+  for = "/worksheets/*/*.pdf"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+[[headers]]
+  for = "/worksheets/*/*/*.pdf"
+  [headers.values]
     X-Robots-Tag = "noindex, nofollow"
 
 # ZIP bundles: force download instead of opening in browser
