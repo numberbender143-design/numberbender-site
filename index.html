@@ -1471,30 +1471,49 @@
       </div>
     </div>
     <div style="flex:1 1 340px;min-width:300px;">
-      <div style="background:#0b0f14;border:1px solid rgba(255,255,255,.18);border-radius:16px;padding:10px;box-shadow:0 24px 60px rgba(0,0,0,.4);">
-        <div style="display:flex;gap:8px;height:200px;">
-          <div style="flex:0 0 42%;background:linear-gradient(135deg,#3a4a55,#22303a);border-radius:10px;display:flex;align-items:flex-end;justify-content:center;overflow:hidden;position:relative;">
-            <span style="position:absolute;top:8px;left:8px;background:rgba(0,0,0,.45);color:#fff;font-size:9px;padding:2px 7px;border-radius:5px;">● Camera</span>
-            <svg viewBox="0 0 100 80" style="width:82%;height:auto;display:block;" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
-              <circle cx="50" cy="28" r="17" fill="#8794a0"/>
-              <path d="M12 80 C12 54 88 54 88 80 Z" fill="#8794a0"/>
-            </svg>
-          </div>
-          <div style="flex:1;background:#fff;border-radius:10px;padding:15px;display:flex;flex-direction:column;position:relative;">
-            <span style="position:absolute;top:8px;right:8px;background:#eef2f7;color:#64748b;font-size:9px;padding:2px 7px;border-radius:5px;">Slide</span>
-            <div style="height:12px;width:56%;background:#0f172a;border-radius:4px;margin:2px 0 12px;"></div>
-            <div style="height:7px;width:90%;background:#cbd5e1;border-radius:4px;margin:5px 0;"></div>
-            <div style="height:7px;width:78%;background:#cbd5e1;border-radius:4px;margin:5px 0;"></div>
-            <div style="display:flex;align-items:flex-end;gap:8px;height:58px;margin-top:auto;">
-              <div style="flex:1;height:52%;background:#2563EB;border-radius:3px 3px 0 0;"></div>
-              <div style="flex:1;height:86%;background:#06B6D4;border-radius:3px 3px 0 0;"></div>
-              <div style="flex:1;height:40%;background:#1F6F6B;border-radius:3px 3px 0 0;"></div>
-              <div style="flex:1;height:70%;background:#D17A3E;border-radius:3px 3px 0 0;"></div>
+      <div style="background:#0b0f14;border:1px solid rgba(255,255,255,.18);border-radius:16px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.4);">
+        <!-- Studio toolbar (mirrors the real app) -->
+        <div style="display:flex;align-items:center;gap:8px;background:#141a21;border-bottom:1px solid #26313c;padding:8px 10px;">
+          <span style="width:20px;height:20px;border-radius:6px;background:linear-gradient(135deg,#2E7D7B,#1F6F6B);flex:0 0 auto;"></span>
+          <span style="line-height:1.15;">
+            <span style="display:block;font-size:11px;font-weight:800;color:#e7edf2;">Numberbender <span style="color:#9fb0bd;font-weight:600;">Studio</span></span>
+            <span style="display:block;font-size:8.5px;font-style:italic;font-weight:600;color:#D17A3E;">Teach It Like You Stream It</span>
+          </span>
+          <span style="display:flex;gap:3px;margin-left:6px;background:#0b0f14;border:1px solid #26313c;border-radius:8px;padding:3px;">
+            <span style="font-size:8.5px;font-weight:700;color:#fff;background:#2E7D7B;border-radius:5px;padding:3px 7px;white-space:nowrap;">▥ Side&#8209;by&#8209;side</span>
+            <span style="font-size:8.5px;color:#9fb0bd;padding:3px 6px;white-space:nowrap;">▣ Spotlight</span>
+            <span style="font-size:8.5px;color:#9fb0bd;padding:3px 6px;white-space:nowrap;">⊞ Dual</span>
+          </span>
+          <span style="flex:1;"></span>
+          <span style="font-size:8.5px;font-weight:700;color:#fff;background:#D17A3E;border-radius:6px;padding:4px 9px;white-space:nowrap;">◧ Presenter</span>
+        </div>
+        <!-- Stage: camera + live lesson, side by side -->
+        <div style="padding:10px;">
+          <div style="display:flex;gap:8px;height:188px;">
+            <div style="flex:0 0 44%;background:#19232c;border-radius:10px;overflow:hidden;position:relative;">
+              <picture>
+                <source srcset="images/studio-presenter.webp" type="image/webp">
+                <img src="images/studio-presenter.jpg" alt="Dr. E presenting live in Numberbender Studio" loading="lazy" width="360" height="439" style="width:100%;height:100%;object-fit:cover;object-position:center 22%;display:block;">
+              </picture>
+              <span style="position:absolute;top:8px;left:8px;display:inline-flex;align-items:center;gap:5px;background:rgba(0,0,0,.5);color:#fff;font-size:9px;padding:2px 7px;border-radius:5px;"><span style="width:6px;height:6px;border-radius:50%;background:#ff5a5a;display:inline-block;"></span>Camera</span>
+            </div>
+            <div style="flex:1;background:#fff;border-radius:10px;padding:13px 14px;display:flex;flex-direction:column;position:relative;">
+              <span style="position:absolute;top:8px;right:8px;background:#eef2f7;color:#64748b;font-size:9px;padding:2px 7px;border-radius:5px;">Slide</span>
+              <div style="font-size:12px;font-weight:800;color:#0f172a;margin:0 0 6px;">Graphing a Parabola</div>
+              <div style="font-family:Georgia,'Times New Roman',serif;font-size:13px;font-weight:700;color:#1F6F6B;margin:0 0 6px;">y = x² − 4</div>
+              <div style="flex:1;position:relative;min-height:58px;">
+                <svg viewBox="0 0 150 80" style="width:100%;height:100%;display:block;" preserveAspectRatio="none" aria-hidden="true">
+                  <line x1="0" y1="30" x2="150" y2="30" stroke="#e2e8f0" stroke-width="1.5"/>
+                  <line x1="75" y1="4" x2="75" y2="74" stroke="#e2e8f0" stroke-width="1.5"/>
+                  <path d="M24 8 Q75 96 126 8" fill="none" stroke="#D17A3E" stroke-width="3"/>
+                  <circle cx="75" cy="52" r="3.5" fill="#2563EB"/>
+                </svg>
+              </div>
             </div>
           </div>
-        </div>
-        <div style="display:flex;justify-content:flex-end;margin-top:8px;">
-          <span style="display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);color:#fff;font-size:11px;padding:4px 10px;border-radius:999px;">Powered by Numberbender</span>
+          <div style="display:flex;justify-content:flex-end;margin-top:8px;">
+            <span style="display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);color:#fff;font-size:11px;padding:4px 10px;border-radius:999px;">Powered by Numberbender</span>
+          </div>
         </div>
       </div>
     </div>
