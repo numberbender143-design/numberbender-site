@@ -268,6 +268,12 @@
   force  = true
 
 [[redirects]]
+  from = "/license.html"
+  to   = "/license"
+  status = 301
+  force  = true
+
+[[redirects]]
   from = "/flipped-classroom-ap-statistics.html"
   to   = "/flipped-classroom-ap-statistics"
   status = 301
