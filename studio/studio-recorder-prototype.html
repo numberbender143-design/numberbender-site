@@ -1,21 +1,19 @@
 <!doctype html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-P1M2WZD840"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-P1M2WZD840');
-</script>
+<!-- ============================================================
+     NUMBERBENDER STUDIO — RECORDER PROTOTYPE  (Option A)
+     This is a throwaway COPY of /studio/index.html with an in-browser
+     recorder bolted on. The live app is untouched. To remove every
+     trace of this experiment: delete this single file
+     (studio/studio-recorder-prototype.html). Nothing links to it.
+     ============================================================ -->
+<!-- [PROTOTYPE] Analytics (gtag) intentionally removed so recorder test sessions never hit your live Google Analytics. -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Numberbender Studio — Free Online Teaching Studio | Teach It Like You Stream It</title>
-<meta name="description" content="A free, streaming-style studio for online teachers: put your camera beside your slides, iPad whiteboard, or any window and share it into Zoom or Teams. No login, installs as an app on Mac &amp; PC." />
-<link rel="canonical" href="https://numberbender.com/studio" />
-<meta name="robots" content="index, follow" />
+<title>[PROTOTYPE] Numberbender Studio — Recorder Test</title>
+<meta name="description" content="Internal recorder prototype for Numberbender Studio. Not for public indexing." />
+<meta name="robots" content="noindex, nofollow" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Numberbender Studio — Free Online Teaching Studio" />
 <meta property="og:description" content="Camera + your slides, side by side, shared into Zoom or Teams. Free, no login, installs as an app. Teach It Like You Stream It." />
@@ -198,7 +196,7 @@
   @media (max-width:820px){ #brand .sub, #brand .slogan{display:none} button,select,label.btn{padding:6px 8px;font-size:12.5px} }
 
   /* ============================================================
-     Numberbender Studio - Recorder feature styles.
+     RECORDER PROTOTYPE styles (Option A).
      Safe to delete together with the #btnRecord button, the #recPill /
      #recToast blocks, and the recorder <script> at the bottom.
      ============================================================ */
@@ -291,7 +289,7 @@
     </div>
 
     <div class="grp">
-      <!-- Recorder: button + format picker -->
+      <!-- [PROTOTYPE] Recorder button + format picker -->
       <button id="btnRecord" class="g-live" title="Record the stage to a video file you can upload to YouTube (prototype)"><span class="rec-dot" style="margin-right:6px;vertical-align:middle"></span>Record</button>
       <select id="recFormat" class="g-live" title="File type for your recording. MP4 plays and edits everywhere; WebM uploads to YouTube but most editors can't open it.">
         <option value="auto">Save: Auto</option>
@@ -349,14 +347,14 @@
 
   <button id="exitPresenter">⤡ Press Esc (or click here) to show the menu</button>
 
-  <!-- Recorder: floating indicator + stop control -->
+  <!-- [PROTOTYPE] Floating recording indicator + stop control -->
   <div id="recPill">
     <span class="rec-dot"></span>
     <span>REC</span>
     <span id="recTime">00:00</span>
     <button id="recStop">■ Stop</button>
   </div>
-  <!-- Recorder: status toast (unsupported browser, mic denied, saved, etc.) -->
+  <!-- [PROTOTYPE] Status toast (unsupported browser, mic denied, saved, etc.) -->
   <div id="recToast"></div>
 
   <!-- Help -->
@@ -699,13 +697,11 @@
   if(!loadSettings().seen){ $("help").classList.add("open"); S.seen=true; saveSettings(); }
 })();
 </script>
-<script>
-if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(){});});}
-</script>
+<!-- [PROTOTYPE] Service-worker registration disabled: this test page caches nothing and registers no SW, so it can't linger after you delete the file. -->
 
 <script>
 /* ============================================================
-   NUMBERBENDER STUDIO — RECORDER MODULE  (self-capture method)
+   NUMBERBENDER STUDIO — RECORDER MODULE  (Option A prototype)
    Records the on-screen stage to a video file, entirely in the
    browser: getDisplayMedia(this tab) [+ optional Region-Capture
    crop to #stage] + microphone -> MediaRecorder, streamed straight
