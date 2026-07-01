@@ -588,6 +588,7 @@
   // ----- Content captures -----
   function capture(videoEl, placeholderEl){
     navigator.mediaDevices.getDisplayMedia({ video:{ frameRate:30 }, audio:false }).then(function(stream){
+      if(!window.__nbStudioLaunched && typeof gtag==='function'){ window.__nbStudioLaunched=1; gtag('event','studio_launch',{method:'content_capture'}); }
       videoEl.srcObject=stream; placeholderEl.style.display="none";
       stream.getVideoTracks()[0].addEventListener("ended", function(){ videoEl.srcObject=null; placeholderEl.style.display="flex"; });
     }).catch(function(){ /* picker cancelled */ });

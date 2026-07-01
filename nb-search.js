@@ -313,3 +313,36 @@
   };
 
 })();
+
+/* ===== NB conversion tracking (2026-07-01) =====
+   Fires GA4 events sitewide (this file loads on 716 pages):
+   - worksheet_download : click on any .pdf link
+   - worksheet_view     : click on a "View" worksheet button (nbmPdf)
+   - email_signup       : Mailchimp form submit (skipped on / and /contact,
+                          which already fire it inline)
+   Mark these as Key events in GA4: Admin > Events. */
+(function(){
+  function tg(){ if(typeof gtag==='function'){ gtag.apply(null,arguments); } }
+  document.addEventListener('click', function(e){
+    if(!e.target || !e.target.closest) return;
+    var a = e.target.closest('a[href*=".pdf"]');
+    if(a){
+      var f=(a.getAttribute('href')||'').split('/').pop();
+      tg('event','worksheet_download',{ file_name:f, link_url:a.href,
+        method:a.hasAttribute('download')?'download':'open' });
+      return;
+    }
+    var v = e.target.closest('.ws-btn.view');
+    if(v){
+      var oc=v.getAttribute('onclick')||'', m=oc.match(/'([^']*\.pdf)'/);
+      tg('event','worksheet_view',{ file_name:m?m[1].split('/').pop():'unknown' });
+    }
+  }, true);
+  document.addEventListener('submit', function(e){
+    var f=e.target, p=location.pathname;
+    if(p==='/'||p==='/index.html'||p.indexOf('/contact')===0) return; /* inline handler exists there */
+    if(f && typeof f.action==='string' && f.action.indexOf('list-manage.com')>-1){
+      tg('event','email_signup',{ method:'mailchimp_form' });
+    }
+  }, true);
+})();
