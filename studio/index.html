@@ -114,6 +114,9 @@
   #stage.reframe .slot-cam .slot-label{opacity:1}
   #btnReframe.active{background:var(--teal); color:#fff; border-color:var(--teal)}
   #camZoomWrap input[type=range]{accent-color:var(--teal); vertical-align:middle}
+  /* Zoom slider only appears while Reframe mode is on */
+  #camZoomWrap label{display:none}
+  #btnReframe.active + label{display:inline-flex}
 
   /* side-by-side sizing (JS overrides flex-grow) */
   body.lay-side .slot-cam{flex:45 1 0}
