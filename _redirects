@@ -111,6 +111,13 @@ https://www.numberbender.com/*  https://numberbender.com/:splat  301!
 /mission                        /nonprofit                      301
 /mission/                       /nonprofit                      301
 
+# Moved algebra course pages: root-level URLs → canonical /learn/ locations
+# (fixes GSC "Not found (404)" for /elementary-algebra/ and /intermediate-algebra/)
+/elementary-algebra             /learn/elementary-algebra       301
+/elementary-algebra/            /learn/elementary-algebra       301
+/intermediate-algebra           /learn/intermediate-algebra     301
+/intermediate-algebra/          /learn/intermediate-algebra     301
+
 # Un-migrated .html pages still served as 200 → force redirect to clean URLs
 # (fixes duplicate content + the GSC "indexed though blocked by robots.txt" flag)
 /for-teachers.html              /for-teachers                   301!
