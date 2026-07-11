@@ -50,6 +50,21 @@
 /worksheets/algebra/_archive        /subjects/algebra/          301
 /worksheets/algebra/_archive/       /subjects/algebra/          301
 
+# ── Trailing-slash → no-slash canonical for worksheet DETAIL pages ──
+# Internal links point to /worksheets/{subject}/{slug}/ (trailing slash) but the
+# canonical tag + sitemap declare the no-slash form. Both currently return 200,
+# so Google crawls both and reports "Duplicate, Google chose different canonical"
+# and "Alternate page with proper canonical tag." These 301s consolidate every
+# worksheet onto its no-slash canonical so exactly one URL gets indexed.
+#
+# MUST stay AFTER the subject-level + calculus sub-topic + archive rules above so
+# those still win first. Placeholders match a single path segment, so the two
+# rules cover the 491 two-level pages and the 91 nested calculus pages separately.
+# Only paths ending in "/" match, so .pdf files inside these directories are safe.
+# 301! forces the redirect even though index.html exists at the slash path.
+/worksheets/:subject/:topic/:slug/  /worksheets/:subject/:topic/:slug  301!
+/worksheets/:subject/:slug/         /worksheets/:subject/:slug         301!
+
 # Old Wix course catalog URLs — with and without spaces/encoded characters
 /subjects/view/*                /courses                        301
 

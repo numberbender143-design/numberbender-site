@@ -395,6 +395,12 @@
         <b>iPad (Windows):</b> run an AirPlay-receiver app (e.g. 5KPlayer, ApowerMirror), mirror your iPad to it, then pick that window here.<br/><br/>
         <b>Wacom / Bamboo pad:</b> it has no screen of its own — open any whiteboard app and capture <i>that app's</i> window.
       </div>
+      <div class="note">
+        <b>Mac — “I don't see my windows!”</b> Chrome and Safari no longer list windows inside their own dialog. Choose <b>Window</b>, then click <b>Choose a window</b> — the list opens in a separate <i>macOS</i> picker. Three gotchas:<br/><br/>
+        1. Windows <b>minimized to the Dock don't appear</b> — un-minimize them before sharing.<br/>
+        2. If the list is empty, your Mac is blocking the browser: open <b>System Settings ▸ Privacy &amp; Security ▸ Screen &amp; System Audio Recording</b>, switch your browser on, then quit and reopen the browser.<br/>
+        3. In a hurry mid-class? Pick <b>Entire Screen</b> (or <b>Chrome Tab</b> for browser content) — those always work.
+      </div>
 
       <h3>3. Arrange &amp; position the camera bubble</h3>
       <p>In Spotlight and Dual layouts, set the camera bubble's <b>corner</b>, <b>shape</b> (circle or square), and <b>size</b> from the toolbar. <b>Mirror cam</b> gives a selfie-style view.</p>
@@ -589,12 +595,52 @@
   }
 
   // ----- Content captures -----
+  // Set (or reset) a capture slot's placeholder message. Remembers the
+  // original text the first time so passing no args restores the default.
+  function slotMsg(placeholderEl, big, htmlDetail){
+    var bigEl=placeholderEl.querySelector(".big");
+    if(!placeholderEl._nbDefault){ placeholderEl._nbDefault={ big:bigEl.innerHTML, detail:placeholderEl.lastElementChild.innerHTML }; }
+    bigEl.innerHTML = big || placeholderEl._nbDefault.big;
+    placeholderEl.lastElementChild.innerHTML = htmlDetail || placeholderEl._nbDefault.detail;
+    placeholderEl.style.display="flex";
+  }
+  var MAC_PICKER_TIPS = 'Couldn\'t find your window? On a Mac, Chrome and Safari now open the window list in a <b>separate macOS picker</b>: choose <b>Window</b>, then click <b>Choose a window</b>. Windows minimized to the Dock <b>don\'t appear</b> — un-minimize them first. If the list is empty, allow your browser under <b>System Settings ▸ Privacy &amp; Security ▸ Screen &amp; System Audio Recording</b>, then quit and reopen the browser. <b>Entire Screen</b> always works in a pinch.';
   function capture(videoEl, placeholderEl){
-    navigator.mediaDevices.getDisplayMedia({ video:{ frameRate:30 }, audio:false }).then(function(stream){
+    if(!navigator.mediaDevices || !navigator.mediaDevices.getDisplayMedia){
+      slotMsg(placeholderEl, "Screen capture unavailable", "This browser can't capture windows here. Make sure the page is on https:// and use a recent Chrome, Edge, or Safari on a computer.");
+      return;
+    }
+    navigator.mediaDevices.getDisplayMedia({
+      video:{ frameRate:30 }, audio:false,
+      // Chromium-only hints (safely ignored by Safari/Firefox): hide Studio's own
+      // tab to prevent a mirror-in-mirror loop, offer every surface type, and let
+      // the user swap the shared window later without re-opening the picker.
+      selfBrowserSurface:"exclude", surfaceSwitching:"include", monitorTypeSurfaces:"include"
+    }).then(function(stream){
       if(!window.__nbStudioLaunched && typeof gtag==='function'){ window.__nbStudioLaunched=1; gtag('event','studio_launch',{method:'content_capture'}); }
+      // Switching windows? Stop the previous capture first — otherwise the browser
+      // keeps recording the old window in the background (the "is sharing a window"
+      // bar never goes away) and burns CPU for nothing.
+      if(videoEl._nbStream){ try{ videoEl._nbStream.getTracks().forEach(function(t){ t.stop(); }); }catch(e){} }
+      videoEl._nbStream=stream;
+      slotMsg(placeholderEl); // restore default text for next time
       videoEl.srcObject=stream; placeholderEl.style.display="none";
-      stream.getVideoTracks()[0].addEventListener("ended", function(){ videoEl.srcObject=null; placeholderEl.style.display="flex"; });
-    }).catch(function(){ /* picker cancelled */ });
+      stream.getVideoTracks()[0].addEventListener("ended", function(){
+        if(videoEl._nbStream===stream){ videoEl._nbStream=null; }
+        if(videoEl.srcObject===stream){ videoEl.srcObject=null; placeholderEl.style.display="flex"; }
+      });
+    }).catch(function(err){
+      var nm=err&&err.name?err.name:"", ms=err&&err.message?err.message:"";
+      if(nm==="NotAllowedError" && /system/i.test(ms)){
+        // e.g. Chrome's "Permission denied by system" — macOS is blocking the browser.
+        slotMsg(placeholderEl, "Your Mac is blocking screen capture", "Open <b>System Settings ▸ Privacy &amp; Security ▸ Screen &amp; System Audio Recording</b>, switch your browser on, then quit and reopen the browser and try again.");
+      } else if(nm==="NotAllowedError"){
+        // Picker cancelled — leave a gentle tip in the empty slot instead of silence.
+        slotMsg(placeholderEl, null, MAC_PICKER_TIPS);
+      } else {
+        slotMsg(placeholderEl, "Couldn't capture that window", (ms?ms+"<br/><br/>":"")+MAC_PICKER_TIPS);
+      }
+    });
   }
 
   // ----- Divider resize -----
@@ -811,7 +857,12 @@ if('serviceWorker' in navigator){window.addEventListener('load',function(){navig
     // 1) Capture THIS tab (preferCurrentTab keeps the picker to one choice).
     try{
       dispStream = await navigator.mediaDevices.getDisplayMedia({ video:{ frameRate:30 }, audio:false, preferCurrentTab:true });
-    }catch(err){ return; /* user cancelled the share picker */ }
+    }catch(err){
+      if(err && err.name==="NotAllowedError" && /system/i.test(err.message||"")){
+        toastMsg("Your Mac is blocking screen capture. Allow your browser in <b>System Settings ▸ Privacy &amp; Security ▸ Screen &amp; System Audio Recording</b>, then quit and reopen the browser.", 9000);
+      }
+      return; /* user cancelled the share picker */
+    }
     var vtrack = dispStream.getVideoTracks()[0];
     if(!vtrack){ cleanup(); return; }
 
