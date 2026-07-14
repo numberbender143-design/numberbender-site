@@ -1540,6 +1540,61 @@
 </script>
 
 <script>
+  // ── RESEARCH DATA → GOOGLE FORM (background copy on submit) ──
+  // Sends every bundle-form answer to the "Numberbender Research Community" Google Form,
+  // which feeds the linked Google Sheet for analysis. The Netlify submission and the
+  // bundle-thanks download redirect are unchanged. Added 2026-07-13.
+  (function(){
+    var GF = 'https://docs.google.com/forms/d/e/1FAIpQLSe5XJ6YLA2YtuPSTj5QhDScvDMb4PnPaBwdFyj2FLRDDJaR_Q/formResponse';
+    function val(id){ var el = document.getElementById(id); return el ? el.value.trim() : ''; }
+    document.getElementById('bundle-form').addEventListener('submit', function(){
+      try {
+        var p = new URLSearchParams();
+        p.append('emailAddress', val('f-email'));
+        p.append('entry.1314345372', val('f-fname'));   // First Name
+        p.append('entry.1669372573', val('f-lname'));   // Last Name
+        p.append('entry.95748444',  val('f-country'));  // Country
+        p.append('entry.28671399',  document.getElementById('form-subject').value || ''); // Subject / Bundle
+
+        // Multiple-choice mapper: site slug -> Google Form option label ("Other" for the rest)
+        function choice(entry, slug, map, otherMap){
+          if (!slug) return;
+          if (map[slug]) { p.append('entry.' + entry, map[slug]); }
+          else {
+            p.append('entry.' + entry, '__other_option__');
+            p.append('entry.' + entry + '.other_option_response', (otherMap && otherMap[slug]) || slug);
+          }
+        }
+        choice(1341314812, val('f-role'),
+          { student:'Student', teacher:'Teacher / Educator', parent:'Parent or Guardian' },
+          { tutor:'Tutor', 'self-learner':'Self-Learner' });
+        choice(401369402, val('f-setting'),
+          { 'public':'Public school', 'private':'Private school', university:'College / University', homeschool:'Homeschool' },
+          { 'self-study':'Self-Study / No School' });
+        var area = { urban:'Urban', suburban:'Suburban', rural:'Rural' }[val('f-location')];
+        if (area) p.append('entry.1139112071', area);
+        var paid = { yes:'Yes, I can pay for premium resources', sometimes:'Sometimes, depending on cost', no:'No, I rely on free resources only' }[val('f-access')];
+        if (paid) p.append('entry.1788360355', paid);
+        choice(59480415, val('f-internet'),
+          { reliable:'Reliable internet at home', limited:'Limited or shared access' },
+          { inconsistent:'Inconsistent' });
+        var lang = { english:'English', filipino:'Filipino / Tagalog', other:'Other local language' }[val('f-lang')];
+        if (lang) p.append('entry.580633977', lang);
+        choice(1642294331, val('f-use'),
+          { classroom:'Classroom teaching', tutoring:'Tutoring', 'self-study':'Self-study', 'exam-prep':'Review / test prep' },
+          { homework:'Homework / assignments' });
+        var consent = document.querySelector('#bundle-form input[name="research_consent"]');
+        p.append('entry.801533648', (consent && consent.checked) ? 'Yes' : 'No');
+        p.append('fvv','1'); p.append('pageHistory','0');
+
+        fetch(GF, { method:'POST', mode:'no-cors', keepalive:true,
+          headers:{ 'Content-Type':'application/x-www-form-urlencoded' }, body: p.toString() });
+      } catch(e) { /* research copy must never block the download */ }
+    });
+  })();
+</script>
+
+<script>
   // ── PDF PREVIEW MODAL ──
   function openPdfPreview(btn) {
     var url   = btn.getAttribute('data-pdf');
