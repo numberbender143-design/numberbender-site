@@ -50,20 +50,19 @@
 /worksheets/algebra/_archive        /subjects/algebra/          301
 /worksheets/algebra/_archive/       /subjects/algebra/          301
 
-# ── Trailing-slash → no-slash canonical for worksheet DETAIL pages ──
-# Internal links point to /worksheets/{subject}/{slug}/ (trailing slash) but the
-# canonical tag + sitemap declare the no-slash form. Both currently return 200,
-# so Google crawls both and reports "Duplicate, Google chose different canonical"
-# and "Alternate page with proper canonical tag." These 301s consolidate every
-# worksheet onto its no-slash canonical so exactly one URL gets indexed.
+# ── Worksheet DETAIL page trailing-slash handling ──
+# NOTE (2026-07-22): Removed the forced "301!" trailing-slash → no-slash rules
+# that previously lived here. Because index.html exists at the slash path AND
+# Netlify's default pretty-URL handling canonicalizes trailing slashes on its
+# own, forcing the opposite redirect created a redirect cycle
+# (slash → no-slash → slash …), which surfaced to visitors as
+# "numberbender.com redirected you too many times" (ERR_TOO_MANY_REDIRECTS),
+# especially for returning visitors whose browsers had cached the redirects.
 #
-# MUST stay AFTER the subject-level + calculus sub-topic + archive rules above so
-# those still win first. Placeholders match a single path segment, so the two
-# rules cover the 491 two-level pages and the 91 nested calculus pages separately.
-# Only paths ending in "/" match, so .pdf files inside these directories are safe.
-# 301! forces the redirect even though index.html exists at the slash path.
-/worksheets/:subject/:topic/:slug/  /worksheets/:subject/:topic/:slug  301!
-/worksheets/:subject/:slug/         /worksheets/:subject/:slug         301!
+# Canonicalization is now handled without a forced redirect: every worksheet
+# page carries <link rel="canonical"> to its no-slash URL, the sitemap lists
+# only the no-slash form, and all internal links point to the no-slash form.
+# Both URL forms return 200, so no cycle is possible.
 
 # Old Wix course catalog URLs — with and without spaces/encoded characters
 /subjects/view/*                /courses                        301
