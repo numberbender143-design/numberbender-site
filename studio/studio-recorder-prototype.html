@@ -797,20 +797,44 @@
     if(pill) pill.style.display = on ? "flex" : "none";
   }
 
+  var micErr=null;
   async function getMic(){
+    micErr=null;
+    if(!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia){ micErr={name:"Unsupported"}; return null; }
     try{ return await navigator.mediaDevices.getUserMedia({ audio:{echoCancellation:true,noiseSuppression:true,autoGainControl:true}, video:false }); }
-    catch(e){ return null; }
+    catch(e){ micErr=e; return null; }
+  }
+  function micProblemMsg(){
+    var n = micErr && micErr.name;
+    if(n==="NotAllowedError" || n==="SecurityError"){
+      return "Your microphone is <b>blocked for this page in Chrome</b>. Click the sliders/🎚 icon at the left of the address bar (or the camera icon at the right) ▸ set <b>Microphone</b> to <b>Allow</b> ▸ <b>reload</b> this page, then record again. Recording <b>video only</b> for now.";
+    }
+    if(n==="NotFoundError" || n==="OverconstrainedError"){
+      return "No microphone was found. Check it's connected and chosen as the input in your system sound settings, then reload. Recording <b>video only</b> for now.";
+    }
+    if(n==="NotReadableError" || n==="AbortError"){
+      return "Another app is holding your microphone (Zoom, Teams, OBS…). Close it, reload this page, then record again. Recording <b>video only</b> for now.";
+    }
+    return "Recording <b>without a microphone</b> (couldn't get audio access). Video only.";
   }
 
   async function start(){
-    // 1) Capture THIS tab (preferCurrentTab keeps the picker to one choice).
+    // 1) Microphone FIRST — Chrome only grants the mic while the record-button
+    //    click is still a fresh "user gesture"; once the screen-share picker opens
+    //    that gesture is spent and Chrome silently denies the mic (Safari doesn't).
+    micStream = await getMic();
+
+    // 2) Capture THIS tab (preferCurrentTab keeps the picker to one choice).
     try{
       dispStream = await navigator.mediaDevices.getDisplayMedia({ video:{ frameRate:30 }, audio:false, preferCurrentTab:true });
-    }catch(err){ return; /* user cancelled the share picker */ }
+    }catch(err){
+      if(micStream){ micStream.getTracks().forEach(function(t){t.stop();}); micStream=null; }
+      return; /* user cancelled the share picker */
+    }
     var vtrack = dispStream.getVideoTracks()[0];
     if(!vtrack){ cleanup(); return; }
 
-    // 2) Crop to just #stage where supported (Region Capture) so the
+    // 3) Crop to just #stage where supported (Region Capture) so the
     //    toolbar and floating controls never appear in the recording.
     try{
       if(window.CropTarget && CropTarget.fromElement && typeof vtrack.cropTo==="function"){
@@ -819,10 +843,7 @@
       }
     }catch(e){ /* unsupported -> records the whole tab, still works */ }
 
-    // 3) Microphone (optional — record video-only if blocked).
-    micStream = await getMic();
-
-    // 4) Combine video + mic into one stream.
+    // 4) Combine video + mic into one stream (mic was captured up front in step 1).
     mix = new MediaStream();
     mix.addTrack(vtrack);
     if(micStream){ micStream.getAudioTracks().forEach(function(t){ mix.addTrack(t); }); }
@@ -870,7 +891,7 @@
     rec.start(1000);                 // 1-second timeslice -> periodic flush to disk
     t0=Date.now(); tick(); timer=setInterval(tick,500);
     ui(true);
-    if(!micStream) toastMsg("Recording <b>without a microphone</b> (access was blocked). Video only.", 5000);
+    if(!micStream) toastMsg(micProblemMsg(), 10000);
   }
 
   async function finalize(ext){
