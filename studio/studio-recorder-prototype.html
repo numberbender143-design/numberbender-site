@@ -807,7 +807,7 @@
   function micProblemMsg(){
     var n = micErr && micErr.name;
     if(n==="NotAllowedError" || n==="SecurityError"){
-      return "Your microphone is <b>blocked for this page in Chrome</b>. Click the sliders/🎚 icon at the left of the address bar (or the camera icon at the right) ▸ set <b>Microphone</b> to <b>Allow</b> ▸ <b>reload</b> this page, then record again. Recording <b>video only</b> for now.";
+      return "Chrome didn't allow the microphone — usually the permission prompt was dismissed. <b>Reload</b> this page and click <b>Allow</b> when Chrome asks for the mic. Still blocked? Open a new tab, go to <b>chrome://settings/content/microphone</b>, and make sure this site isn't listed under <b>Not allowed</b>. Recording <b>video only</b> for now.";
     }
     if(n==="NotFoundError" || n==="OverconstrainedError"){
       return "No microphone was found. Check it's connected and chosen as the input in your system sound settings, then reload. Recording <b>video only</b> for now.";
