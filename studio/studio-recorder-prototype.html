@@ -208,9 +208,23 @@
     animation:nbRecBlink 1.1s steps(2,start) infinite }
   @keyframes nbRecBlink{ 50%{opacity:.2} }
   #recPill{ display:none; position:fixed; top:14px; left:50%; transform:translateX(-50%); z-index:55;
-    align-items:center; gap:11px; background:rgba(8,12,16,.86); backdrop-filter:blur(6px);
-    border:1px solid rgba(231,76,60,.65); color:#fff; border-radius:999px; padding:7px 9px 7px 14px;
+    flex-direction:column; gap:7px; min-width:252px; background:rgba(8,12,16,.86); backdrop-filter:blur(6px);
+    border:1px solid rgba(231,76,60,.65); color:#fff; border-radius:16px; padding:9px 12px;
     font-size:13px; box-shadow:0 6px 20px rgba(0,0,0,.45) }
+  #recPill .rec-row{ display:flex; align-items:center; gap:11px }
+  #recLabel{ font-weight:700; letter-spacing:.6px; font-size:12px }
+  #recPill.is-paused{ border-color:rgba(243,156,18,.8) }
+  #recPill.is-paused #recLabel{ color:#f39c12 }
+  #recPill.is-paused .rec-dot{ animation:none; background:#f39c12; border-radius:2px }
+  /* Segmented timeline: each pause/resume adds a "take"; it all saves as one video. */
+  #recBar{ display:flex; gap:2px; height:6px; width:100%; border-radius:4px; overflow:hidden; background:rgba(255,255,255,.14) }
+  #recBar .rec-seg{ width:100%; min-width:3px; background:#e74c3c; border-radius:2px; transition:width .25s linear }
+  #recBar .rec-seg.is-active{ background:#ff6b5c; animation:nbSegPulse 1.15s ease-in-out infinite }
+  #recPill.is-paused #recBar .rec-seg{ background:#f39c12 }
+  @keyframes nbSegPulse{ 50%{ opacity:.5 } }
+  #recPause{ background:transparent; border:1px solid rgba(255,255,255,.5); color:#fff; padding:5px 11px; font-size:12px; border-radius:8px; font-weight:600 }
+  #recPause:hover{ background:rgba(255,255,255,.12) }
+  #recPill.is-paused #recPause{ background:#f39c12; border-color:#f39c12; color:#141414 }
   #recTime{ font-variant-numeric:tabular-nums; font-weight:600; letter-spacing:.4px; min-width:52px; text-align:center }
   #recStop{ background:#c0392b; border-color:#c0392b; color:#fff; padding:5px 11px; font-size:12px; border-radius:8px; font-weight:600 }
   #recStop:hover{ background:#a93226; border-color:#a93226 }
@@ -352,10 +366,14 @@
 
   <!-- [PROTOTYPE] Floating recording indicator + stop control -->
   <div id="recPill">
-    <span class="rec-dot"></span>
-    <span>REC</span>
-    <span id="recTime">00:00</span>
-    <button id="recStop">■ Stop</button>
+    <div class="rec-row">
+      <span class="rec-dot"></span>
+      <span id="recLabel">REC</span>
+      <span id="recTime">00:00</span>
+      <button id="recPause" title="Pause — you can resume into the same video">⏸ Pause</button>
+      <button id="recStop">■ Stop</button>
+    </div>
+    <div id="recBar"></div>
   </div>
   <!-- [PROTOTYPE] Status toast (unsupported browser, mic denied, saved, etc.) -->
   <div id="recToast"></div>
@@ -412,6 +430,7 @@
         <li>Choose your file type in the <b>Save:</b> menu next to Record — <b>Auto</b> (recommended), <b>MP4</b>, or <b>WebM</b>.</li>
         <li>Click <b>🔴 Record</b>. If the browser asks what to share, choose <b>This Tab</b> and click <b>Share</b>; allow the <b>microphone</b> when asked.</li>
         <li>On Chrome/Edge you'll pick where to save — it then records straight to disk (so even long lectures won't fill up memory).</li>
+        <li><b>Need to change slides or take a breath?</b> Click <b>⏸ Pause</b> in the floating pill, then <b>▶ Resume</b> when you're ready. The paused time is skipped and it all saves as <b>one continuous video</b> — no clips to stitch. Each take shows as a segment on the little timeline, and the timer freezes (turns amber) while paused so you always know you're not rolling.</li>
         <li>Click <b>■ Stop</b> (top bar or the floating pill) when finished, then upload the file straight to YouTube.</li>
       </ol>
 
@@ -718,7 +737,8 @@
   "use strict";
   var $ = function(id){ return document.getElementById(id); };
   var btn=$("btnRecord"), stage=$("stage"), pill=$("recPill"),
-      tEl=$("recTime"), stopBtn=$("recStop"), toast=$("recToast");
+      tEl=$("recTime"), stopBtn=$("recStop"), toast=$("recToast"),
+      pauseBtn=$("recPause"), barEl=$("recBar"), labelEl=$("recLabel");
   if(!btn) return;
 
   var btnIdle = btn.innerHTML;  // remember the "● Record" markup for later
@@ -752,6 +772,8 @@
 
   var rec=null, dispStream=null, micStream=null, mix=null,
       chunks=[], writable=null, toDisk=false, timer=null, t0=0, mime="";
+  // Pause/resume state: each "take" is a paused-off segment; they all save as one file.
+  var paused=false, segs=[], segStart=0;
 
   // Candidate codec strings per container. The browser's recorder can only
   // produce these two containers (MP4 and WebM) — everything else (MOV, M4V,
@@ -787,14 +809,56 @@
   function pad(n){ return (n<10?"0":"")+n; }
   function fmt(ms){ var s=Math.floor(ms/1000),m=Math.floor(s/60),h=Math.floor(m/60); s%=60; m%=60;
     return (h>0?pad(h)+":":"")+pad(m)+":"+pad(s); }
-  function tick(){ if(tEl) tEl.textContent=fmt(Date.now()-t0); }
   function stamp(){ return new Date().toISOString().slice(0,19).replace(/[:T]/g,"-"); }
+
+  // ---- Pause/resume + segmented "takes" timeline (TikTok-style) ----
+  // Native MediaRecorder pause()/resume(): paused time is skipped and the whole
+  // session still writes to ONE continuous file. The timer shows *recorded* time
+  // (frozen while paused); the bar shows each take building up.
+  function sum(a){ var t=0; for(var i=0;i<a.length;i++){ t+=a[i]; } return t; }
+  function recordedMs(){ return sum(segs) + ((paused||!segStart)?0:(Date.now()-segStart)); }
+  function renderBar(){
+    if(!barEl) return;
+    var parts=segs.slice();
+    var active=(paused||!segStart)?0:(Date.now()-segStart);
+    if(active>0) parts.push(active);
+    var total=sum(parts)||1;
+    while(barEl.children.length<parts.length){ var d=document.createElement("div"); d.className="rec-seg"; barEl.appendChild(d); }
+    while(barEl.children.length>parts.length){ barEl.removeChild(barEl.lastChild); }
+    for(var i=0;i<parts.length;i++){
+      var el=barEl.children[i];
+      el.style.width=(parts[i]/total*100)+"%";
+      el.classList.toggle("is-active", (!paused && i===parts.length-1 && active>0));
+    }
+  }
+  function tick(){ if(tEl) tEl.textContent=fmt(recordedMs()); renderBar(); }
+
+  function setPausedUI(on){
+    if(pill) pill.classList.toggle("is-paused", on);
+    if(labelEl) labelEl.textContent = on ? "PAUSED" : "REC";
+    if(pauseBtn) pauseBtn.innerHTML = on ? "▶ Resume" : "⏸ Pause";
+  }
+  function pauseRec(){
+    if(!rec || rec.state!=="recording") return;
+    try{ rec.pause(); }catch(e){ return; }
+    segs.push(Date.now()-segStart);   // close the current take
+    segStart=0; paused=true;
+    setPausedUI(true); tick();
+  }
+  function resumeRec(){
+    if(!rec || rec.state!=="paused") return;
+    try{ rec.resume(); }catch(e){ return; }
+    segStart=Date.now(); paused=false;
+    setPausedUI(false); tick();
+  }
+  function togglePause(){ if(paused) resumeRec(); else pauseRec(); }
 
   function ui(on){
     document.body.classList.toggle("recording", on);
     btn.classList.toggle("is-rec", on);
     btn.innerHTML = on ? "■ Stop recording" : btnIdle;
     if(pill) pill.style.display = on ? "flex" : "none";
+    if(!on){ paused=false; setPausedUI(false); if(barEl) barEl.innerHTML=""; }
   }
 
   var micErr=null;
@@ -889,6 +953,11 @@
     vtrack.addEventListener("ended", function(){ if(rec && rec.state!=="inactive") stop(); });
 
     rec.start(1000);                 // 1-second timeslice -> periodic flush to disk
+    // Reset the takes timeline; only offer Pause if this browser's recorder supports it.
+    segs=[]; segStart=Date.now(); paused=false;
+    if(barEl) barEl.innerHTML="";
+    if(pauseBtn) pauseBtn.style.display = (typeof rec.pause==="function") ? "" : "none";
+    setPausedUI(false);
     t0=Date.now(); tick(); timer=setInterval(tick,500);
     ui(true);
     if(!micStream) toastMsg(micProblemMsg(), 10000);
@@ -930,6 +999,7 @@
 
   btn.addEventListener("click", function(){ if(rec && rec.state!=="inactive") stop(); else start(); });
   if(stopBtn) stopBtn.addEventListener("click", stop);
+  if(pauseBtn) pauseBtn.addEventListener("click", togglePause);
 })();
 </script>
 </body>
