@@ -90,11 +90,26 @@
   .seg button:last-child{border-right:0}
   .seg button.active{background:var(--teal); color:#fff; font-weight:600}
 
+  /* Toolbar grouping + Adjust drawer */
+  #bar{ position:relative }
+  .bar-sep{ width:1px; align-self:stretch; min-height:26px; background:var(--line); margin:0 4px }
+  #btnAdjust.active{ background:var(--teal); border-color:var(--teal); color:#fff; font-weight:600 }
+  #adjustPanel{ position:absolute; top:100%; left:0; right:0; z-index:30; display:none; flex-wrap:wrap; gap:22px;
+    padding:12px 16px; background:var(--panel-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+    box-shadow:0 12px 26px rgba(0,0,0,.45) }
+  #adjustPanel.open{ display:flex }
+  .adj-grp{ display:flex; flex-direction:column; gap:7px }
+  .adj-cap{ font-size:11px; font-weight:600; letter-spacing:.5px; text-transform:uppercase; color:var(--muted) }
+  .adj-row{ display:flex; flex-wrap:wrap; gap:8px; align-items:center }
+
   /* contextual control visibility (driven by body.lay-*) */
-  .only-dual, .only-pip{display:none !important}
+  .only-dual, .only-pip, .only-vert{display:none !important}
   body.lay-dual .only-dual{display:flex !important}
   body.lay-spotlight .only-pip, body.lay-dual .only-pip{display:flex !important}
-  body.lay-spotlight .only-sidedual{display:none !important}
+  body.lay-vertical.vm-bubble .only-pip{display:flex !important}
+  body.lay-vertical .only-vert{display:flex !important}
+  body.lay-spotlight .only-sidedual, body.lay-vertical .only-sidedual{display:none !important}
+  body.lay-vertical .only-dual{display:none !important}
 
   /* ---------- Stage (this is what gets broadcast) ---------- */
   #stage{position:relative; flex:1; min-height:0; background:#05080b}
@@ -117,6 +132,16 @@
   /* Zoom slider only appears while Reframe mode is on */
   #camZoomWrap label{display:none}
   #btnReframe.active + label{display:inline-flex}
+  /* Content reframe: zoom + pan the captured window (keeps a landscape slide readable in a tall frame) */
+  .slot-content video{ transform:translate(var(--con-x,0px),var(--con-y,0px)) scale(var(--con-zoom,1));
+    transform-origin:center center; will-change:transform }
+  #stage.reframe-con .slot-content{cursor:grab}
+  #stage.reframe-con .slot-content.panning{cursor:grabbing}
+  #stage.reframe-con .slot-content .slot-label{opacity:1}
+  #btnReframeCon.active{background:var(--teal); color:#fff; border-color:var(--teal)}
+  #conZoomWrap input[type=range]{accent-color:var(--teal); vertical-align:middle}
+  #conZoomWrap label{display:none}
+  #btnReframeCon.active + label{display:inline-flex}
 
   /* side-by-side sizing (JS overrides flex-grow) */
   body.lay-side .slot-cam{flex:45 1 0}
@@ -150,6 +175,39 @@
   body.lay-spotlight #stage.pip-round .slot-cam, body.lay-dual #stage.pip-round .slot-cam{aspect-ratio:1/1; border-radius:50%}
   body.lay-spotlight #stage.pip-square .slot-cam, body.lay-dual #stage.pip-square .slot-cam{aspect-ratio:16/10; border-radius:14px}
   #stage.pip-s{--pip-w:16%} #stage.pip-m{--pip-w:22%} #stage.pip-l{--pip-w:30%}
+  /* The vertical frame is narrow, so a width-based bubble/inset looks tiny — scale them up here */
+  body.lay-vertical #stage.pip-s{ --pip-w:34% }
+  body.lay-vertical #stage.pip-m{ --pip-w:48% }
+  body.lay-vertical #stage.pip-l{ --pip-w:64% }
+
+  /* ---------- Vertical 9:16 — record-only (Reels / TikTok / Shorts) ----------
+     Centered portrait stage; only #stage is recorded. Three arrangements picked
+     from the Vertical dropdown. Camera-bubble & slide-inset reuse the Spotlight
+     corner/shape/size controls; stack mode has a draggable divider. Use a
+     horizontal layout for live Zoom / Teams — this mode is for clips you record. */
+  body.lay-vertical #stage{ align-self:center; aspect-ratio:9 / 16; width:auto; max-width:100%;
+    overflow:hidden; box-shadow:0 0 0 2px rgba(255,255,255,.18); }
+  body.lay-vertical .slot-content2{ display:none; }
+  body.lay-vertical #dividerB{ display:none; }
+  body.lay-vertical #dividerA::after{ width:46px; height:4px; }
+
+  /* A) Camera top, slides below — draggable divider resizes the split */
+  body.lay-vertical.vm-stack #stage{ display:flex; flex-direction:column; }
+  body.lay-vertical.vm-stack .slot-cam{ position:relative; flex:55 1 0; min-height:0; border:0; border-radius:0; box-shadow:none; }
+  body.lay-vertical.vm-stack .slot-content{ position:relative; flex:45 1 0; min-height:0; background:#000; }
+  body.lay-vertical.vm-stack .slot-content video{ object-fit:contain; }
+  body.lay-vertical.vm-stack #dividerA{ display:block; flex:0 0 10px; cursor:row-resize; }
+
+  /* B) Slides full, camera bubble — reuses the Spotlight bubble */
+  body.lay-vertical.vm-bubble #stage{ display:block; }
+  body.lay-vertical.vm-bubble #dividerA{ display:none; }
+  body.lay-vertical.vm-bubble .slot-content{ position:absolute; inset:0; background:#000; }
+  body.lay-vertical.vm-bubble .slot-content video{ object-fit:contain; }
+  body.lay-vertical.vm-bubble .slot-cam{ position:absolute; z-index:6; width:var(--pip-w,22%);
+    border:3px solid #fff; box-shadow:0 8px 24px rgba(0,0,0,.5); overflow:hidden; background:#000; }
+  body.lay-vertical.vm-bubble #stage.pip-round .slot-cam{ aspect-ratio:1/1; border-radius:50% }
+  body.lay-vertical.vm-bubble #stage.pip-square .slot-cam{ aspect-ratio:16/10; border-radius:14px }
+
 
   .slot-label{position:absolute; top:10px; left:10px; background:rgba(0,0,0,.5);
     padding:3px 9px; border-radius:7px; font-size:12px; color:#dfe7ee; pointer-events:none; opacity:0; transition:opacity .2s; z-index:7}
@@ -201,7 +259,7 @@
   @media (max-width:820px){ #brand .sub, #brand .slogan{display:none} button,select,label.btn{padding:6px 8px;font-size:12.5px} }
 
   /* ============================================================
-     Numberbender Studio - Recorder feature styles.
+     RECORDER PROTOTYPE styles (Option A).
      Safe to delete together with the #btnRecord button, the #recPill /
      #recToast blocks, and the recorder <script> at the bottom.
      ============================================================ */
@@ -250,65 +308,36 @@
     </a>
     <a id="btnHome" href="/" title="Leave Studio and go back to the main site">↩ Back to site</a>
 
-    <div class="seg" id="layoutSeg" title="Choose a layout">
-      <button data-layout="side" class="active">▥ Side&#8209;by&#8209;side</button>
-      <button data-layout="spotlight">▣ Spotlight</button>
-      <button data-layout="dual">⊞ Dual + cam</button>
-    </div>
-
-    <div class="grp">
+    <!-- 1 · Set up your scene -->
+    <div class="grp" title="Set up your scene">
+      <select id="camSelect" class="g-scene" title="Choose your camera"></select>
       <button id="btnCapture" class="primary">▣ Capture content</button>
       <button id="btnCapture2" class="primary only-dual">▣ Capture 2nd window</button>
-      <select id="camSelect" class="g-scene" title="Camera"></select>
     </div>
 
-    <div class="grp only-sidedual">
-      <button id="btnFlip" class="g-look" title="Swap sides">⇄ Flip</button>
-    </div>
+    <span class="bar-sep"></span>
+
+    <!-- 2 · Layout -->
     <div class="grp">
-      <label class="toggle g-look"><input type="checkbox" id="chkMirror" /> Mirror cam</label>
-    </div>
-
-    <div class="grp" id="camZoomWrap" title="Reframe camera: zoom in, then drag the picture to choose what shows">
-      <button id="btnReframe" class="g-look" aria-pressed="false">✋ Reframe cam</button>
-      <label class="toggle g-look" style="gap:6px">Zoom
-        <input type="range" id="camZoom" min="1" max="3" step="0.05" value="1" />
-      </label>
-    </div>
-
-    <div class="grp only-pip" title="Camera bubble">
-      <select id="pipCorner" class="g-look">
-        <option value="bl">Cam: bottom-left</option>
-        <option value="br">Cam: bottom-right</option>
-        <option value="tl">Cam: top-left</option>
-        <option value="tr">Cam: top-right</option>
-      </select>
-      <select id="pipShape" class="g-look">
-        <option value="round">Circle</option>
-        <option value="square">Square</option>
-      </select>
-      <select id="pipSize" class="g-look">
-        <option value="s">Cam: small</option>
-        <option value="m">Cam: medium</option>
-        <option value="l">Cam: large</option>
-      </select>
+      <div class="seg" id="layoutSeg" title="Choose a layout">
+        <button data-layout="side" class="active">▥ Slides + me</button>
+        <button data-layout="spotlight">▣ Slides big + me</button>
+        <button data-layout="dual">⊞ Two windows + me</button>
+        <button data-layout="vertical" title="Vertical 9:16 for clips you record (Reels, TikTok, Shorts). For live Zoom or Teams, use a horizontal layout.">▯ Vertical</button>
+      </div>
+      <div class="grp only-vert" title="How to arrange camera and content in the vertical frame">
+        <select id="vertMode" class="g-scene">
+          <option value="stack">▤ Camera + slides</option>
+          <option value="bubble">▣ Slides + camera bubble</option>
+        </select>
+      </div>
+      <button id="btnAdjust" class="g-look" title="Fine-tune your camera, content and branding" aria-expanded="false">⚙ Adjust ▾</button>
     </div>
 
     <div class="spacer"></div>
 
+    <!-- 3 · Record & share -->
     <div class="grp">
-      <label class="btn g-look" for="logoFile" title="Replace the badge logo">★ Replace logo</label>
-      <input type="file" id="logoFile" accept="image/*" hidden />
-      <select id="badgePos" class="g-look" title="Badge position">
-        <option value="pos-br">Badge: bottom-right</option>
-        <option value="pos-bl">Badge: bottom-left</option>
-        <option value="pos-tr">Badge: top-right</option>
-        <option value="pos-tl">Badge: top-left</option>
-      </select>
-    </div>
-
-    <div class="grp">
-      <!-- Recorder: button + format picker -->
       <button id="btnRecord" class="g-live" title="Record the stage to a video file you can upload to YouTube (prototype)"><span class="rec-dot" style="margin-right:6px;vertical-align:middle"></span>Record</button>
       <select id="recFormat" class="g-live" title="File type for your recording. MP4 plays and edits everywhere; WebM uploads to YouTube but most editors can't open it.">
         <option value="auto">Save: Auto</option>
@@ -317,7 +346,64 @@
       </select>
       <button id="btnPresenter" class="g-live" title="Hide controls for a clean broadcast">◧ Presenter</button>
       <button id="btnFull" class="g-live" title="Fullscreen the stage">⤢ Fullscreen</button>
-      <button id="btnHelp" class="accent">? Help</button>
+    </div>
+
+    <button id="btnHelp" class="accent">? Help</button>
+
+    <!-- Adjust drawer: all the fine-tuning, tucked out of the way until needed -->
+    <div id="adjustPanel">
+      <div class="adj-grp">
+        <span class="adj-cap">Camera</span>
+        <div class="adj-row">
+          <label class="toggle g-look"><input type="checkbox" id="chkMirror" /> Mirror cam</label>
+          <div class="grp" id="camZoomWrap" title="Reframe camera: zoom in, then drag the picture to choose what shows">
+            <button id="btnReframe" class="g-look" aria-pressed="false">✋ Reframe cam</button>
+            <label class="toggle g-look" style="gap:6px">Zoom
+              <input type="range" id="camZoom" min="1" max="3" step="0.05" value="1" />
+            </label>
+          </div>
+          <div class="grp only-pip" title="Camera bubble">
+            <select id="pipCorner" class="g-look">
+              <option value="bl">Cam: bottom-left</option>
+              <option value="br">Cam: bottom-right</option>
+              <option value="tl">Cam: top-left</option>
+              <option value="tr">Cam: top-right</option>
+            </select>
+            <select id="pipShape" class="g-look">
+              <option value="round">Circle</option>
+              <option value="square">Square</option>
+            </select>
+            <select id="pipSize" class="g-look">
+              <option value="s">Cam: small</option>
+              <option value="m">Cam: medium</option>
+              <option value="l">Cam: large</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="adj-grp">
+        <span class="adj-cap">Content &amp; branding</span>
+        <div class="adj-row">
+          <div class="grp only-vert" id="conZoomWrap" title="Resize the captured window: zoom in, then drag it to choose what shows">
+            <button id="btnReframeCon" class="g-scene" aria-pressed="false">🔍 Resize window</button>
+            <label class="toggle g-scene" style="gap:6px">Zoom
+              <input type="range" id="conZoom" min="1" max="3" step="0.05" value="1" />
+            </label>
+          </div>
+          <div class="grp only-sidedual">
+            <button id="btnFlip" class="g-look" title="Swap sides">⇄ Flip</button>
+          </div>
+          <label class="btn g-look" for="logoFile" title="Replace the badge logo">★ Replace logo</label>
+          <input type="file" id="logoFile" accept="image/*" hidden />
+          <select id="badgePos" class="g-look" title="Badge position">
+            <option value="pos-br">Badge: bottom-right</option>
+            <option value="pos-bl">Badge: bottom-left</option>
+            <option value="pos-tr">Badge: top-right</option>
+            <option value="pos-tl">Badge: top-left</option>
+          </select>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -389,10 +475,55 @@
 
       <h3>Pick a layout</h3>
       <ul class="guide">
-        <li><b>▥ Side-by-side</b> — camera and one content window next to each other. Drag the divider to resize, <b>⇄ Flip</b> to swap sides.</li>
-        <li><b>▣ Spotlight</b> — your content fills the screen with your camera as a small bubble in the corner. Great for talking over slides.</li>
-        <li><b>⊞ Dual + cam</b> — two captured windows side by side (e.g. your iPad whiteboard + a desktop app) with your camera as a corner bubble on top, so you stay visible while you teach.</li>
+        <li><b>▥ Slides + me</b> — camera and one content window next to each other. Drag the divider to resize, <b>⇄ Flip</b> to swap sides.</li>
+        <li><b>▣ Slides big + me</b> — your content fills the screen with your camera as a small bubble in the corner. Great for talking over slides.</li>
+        <li><b>⊞ Two windows + me</b> — two captured windows side by side (e.g. your iPad whiteboard + a desktop app) with your camera as a corner bubble on top, so you stay visible while you teach.</li>
       </ul>
+
+      <!-- Illustrated layout gallery (horizontal = live features) -->
+      <svg viewBox="0 0 604 152" width="100%" role="img" aria-label="Three horizontal layouts: side-by-side (camera beside content), spotlight (content with a camera bubble), and dual plus camera (two windows with a camera bubble)" style="display:block; margin:6px 0 2px">
+        <rect x="22" y="6" width="170" height="96" rx="8" fill="#0e1620" stroke="#2b3a45"/>
+        <rect x="30" y="14" width="72" height="80" rx="5" fill="#2E7D7B"/>
+        <rect x="110" y="14" width="74" height="80" rx="5" fill="#D17A3E"/>
+        <text x="66" y="58" text-anchor="middle" fill="#eef6f5" font-size="11">cam</text>
+        <text x="147" y="58" text-anchor="middle" fill="#fff5ec" font-size="11">content</text>
+        <text x="107" y="122" text-anchor="middle" fill="#d3dde6" font-size="12.5" font-weight="600">Slides + me</text>
+        <text x="107" y="140" text-anchor="middle" fill="#8aa0ad" font-size="11">camera beside content</text>
+
+        <rect x="217" y="6" width="170" height="96" rx="8" fill="#0e1620" stroke="#2b3a45"/>
+        <rect x="225" y="14" width="154" height="80" rx="5" fill="#D17A3E"/>
+        <circle cx="356" cy="72" r="15" fill="#2E7D7B" stroke="#0e1620" stroke-width="2"/>
+        <text x="292" y="58" text-anchor="middle" fill="#fff5ec" font-size="11">content</text>
+        <text x="302" y="122" text-anchor="middle" fill="#d3dde6" font-size="12.5" font-weight="600">Slides big + me</text>
+        <text x="302" y="140" text-anchor="middle" fill="#8aa0ad" font-size="11">content + camera bubble</text>
+
+        <rect x="412" y="6" width="170" height="96" rx="8" fill="#0e1620" stroke="#2b3a45"/>
+        <rect x="420" y="14" width="70" height="80" rx="5" fill="#D17A3E"/>
+        <rect x="496" y="14" width="72" height="80" rx="5" fill="#D17A3E"/>
+        <circle cx="433" cy="30" r="12" fill="#2E7D7B" stroke="#0e1620" stroke-width="2"/>
+        <text x="497" y="122" text-anchor="middle" fill="#d3dde6" font-size="12.5" font-weight="600">Two windows + me</text>
+        <text x="497" y="140" text-anchor="middle" fill="#8aa0ad" font-size="11">two windows + camera</text>
+      </svg>
+
+      <h3>Make vertical videos — Reels, TikTok &amp; Shorts</h3>
+      <p>Same one-take recording, just a tall 9:16 frame instead of a wide one. A few ways your vertical lessons could look:</p>
+      <svg viewBox="0 0 604 226" width="100%" role="img" aria-label="Two vertical 9:16 layouts: camera on top with slides below, and slides filling the frame with a camera bubble" style="display:block; margin:6px 0 2px">
+        <rect x="176" y="6" width="96" height="170" rx="9" fill="#0e1620" stroke="#2b3a45"/>
+        <rect x="184" y="14" width="80" height="60" rx="5" fill="#2E7D7B"/>
+        <rect x="184" y="82" width="80" height="86" rx="5" fill="#D17A3E"/>
+        <text x="224" y="48" text-anchor="middle" fill="#eef6f5" font-size="11">cam</text>
+        <text x="224" y="129" text-anchor="middle" fill="#fff5ec" font-size="11">slides</text>
+        <text x="224" y="196" text-anchor="middle" fill="#d3dde6" font-size="12" font-weight="600">Camera + slides</text>
+        <text x="224" y="213" text-anchor="middle" fill="#8aa0ad" font-size="11">stacked</text>
+
+        <rect x="332" y="6" width="96" height="170" rx="9" fill="#0e1620" stroke="#2b3a45"/>
+        <rect x="340" y="14" width="80" height="154" rx="5" fill="#D17A3E"/>
+        <circle cx="380" cy="140" r="16" fill="#2E7D7B" stroke="#0e1620" stroke-width="2"/>
+        <text x="380" y="84" text-anchor="middle" fill="#fff5ec" font-size="11">slides</text>
+        <text x="380" y="196" text-anchor="middle" fill="#d3dde6" font-size="12" font-weight="600">Slides + bubble</text>
+        <text x="380" y="213" text-anchor="middle" fill="#8aa0ad" font-size="11">talking head</text>
+      </svg>
+      <div class="note"><b>Teaching live on Zoom or Teams? Use a horizontal layout.</b> Studio is built for live sessions, where your screen shares in a wide frame — the vertical formats are just for clips you <i>record</i> to post as Reels, TikTok, or Shorts.</div>
 
       <h3>1. Allow your camera</h3>
       <p>Click <b>Allow</b> when the browser asks. Pick the right camera from the dropdown if you have more than one.</p>
@@ -454,7 +585,7 @@
       <h3>What each control does</h3>
       <p>Controls are colour-coded by job: <b style="color:#6fcfcb">teal = set up your scene</b>, <b style="color:#b89bff">purple = adjust the look</b>, <b style="color:#e8a874">orange = go live</b>.</p>
       <ul class="guide">
-        <li><b>Layout switcher</b> — pick Side-by-side, Spotlight, or Dual + cam.</li>
+        <li><b>Layout switcher</b> — pick Slides + me, Slides big + me, or Two windows + me.</li>
         <li><b>▣ Capture content</b> — choose the window for the main content. Click again anytime to switch windows.</li>
         <li><b>▣ Capture 2nd window</b> (Dual only) — choose a second window to show beside the first.</li>
         <li><b>Camera dropdown</b> — pick which camera feeds the camera view: built-in, an external webcam, or your phone.</li>
@@ -495,8 +626,9 @@
   function saveSettings(){ try{ localStorage.setItem(KEY, JSON.stringify(S)); }catch(e){} }
   var S = Object.assign({
     layout:"side", flipped:false, camGrow:45, dualGrow:50, mirror:false,
+    vertMode:"stack", vertSplit:55,
     pipCorner:"bl", pipShape:"round", pipSize:"m", badgePos:"pos-br", logo:null, camId:null,
-    camZoom:1, camX:0, camY:0
+    camZoom:1, camX:0, camY:0, conZoom:1, conX:0, conY:0
   }, loadSettings());
 
   // ----- Apply branding -----
@@ -509,7 +641,7 @@
 
   // ----- Apply layout / scene -----
   function applyLayout(){
-    document.body.classList.remove("lay-side","lay-spotlight","lay-dual");
+    document.body.classList.remove("lay-side","lay-spotlight","lay-dual","lay-vertical");
     document.body.classList.add("lay-"+S.layout);
     stage.classList.toggle("flip", !!S.flipped);
 
@@ -522,6 +654,14 @@
     if(S.layout==="side"){ slotCam.style.flexGrow=S.camGrow; slotContent.style.flexGrow=100-S.camGrow; }
     if(S.layout==="dual"){ slotContent.style.flexGrow=S.dualGrow; slotContent2.style.flexGrow=100-S.dualGrow; }
 
+    // vertical arrangement (stack / bubble) + resizable split for stack
+    if(S.vertMode!=="bubble"){ S.vertMode="stack"; }   // "inset" removed -> fall back to stack
+    document.body.classList.remove("vm-stack","vm-bubble","vm-inset");
+    if(S.layout==="vertical"){
+      document.body.classList.add("vm-"+S.vertMode);
+      if(S.vertMode==="stack"){ slotCam.style.flexGrow=S.vertSplit; slotContent.style.flexGrow=100-S.vertSplit; }
+    }
+
     // mirror
     slotCam.classList.toggle("mirror", !!S.mirror);
     $("chkMirror").checked = !!S.mirror;
@@ -531,9 +671,11 @@
       b.classList.toggle("active", b.getAttribute("data-layout")===S.layout);
     });
     $("pipCorner").value=S.pipCorner; $("pipShape").value=S.pipShape; $("pipSize").value=S.pipSize;
+    var vmSel=$("vertMode"); if(vmSel) vmSel.value=S.vertMode||"stack";
 
-    // camera zoom/pan (re-clamp because slot size may have changed)
+    // camera + content zoom/pan (re-clamp because slot size may have changed)
     applyCamTransform();
+    applyConTransform();
   }
 
   // ----- Camera reframe: zoom + pan -----
@@ -557,6 +699,30 @@
     reframeOn=on;
     stage.classList.toggle("reframe", on);
     var b=$("btnReframe");
+    b.classList.toggle("active", on);
+    b.setAttribute("aria-pressed", on?"true":"false");
+  }
+
+  // ----- Content reframe: zoom + pan the captured window (same idea as camera reframe) -----
+  function conMax(){
+    var r=slotContent.getBoundingClientRect(), z=S.conZoom||1;
+    return { x:Math.max(0,(z-1)*r.width/2), y:Math.max(0,(z-1)*r.height/2) };
+  }
+  function applyConTransform(){
+    var el=$("content"); if(!el) return;
+    var m=conMax();
+    S.conX=Math.max(-m.x, Math.min(m.x, S.conX||0));
+    S.conY=Math.max(-m.y, Math.min(m.y, S.conY||0));
+    el.style.setProperty("--con-zoom", (S.conZoom||1));
+    el.style.setProperty("--con-x", (S.conX||0)+"px");
+    el.style.setProperty("--con-y", (S.conY||0)+"px");
+    var z=$("conZoom"); if(z) z.value=S.conZoom||1;
+  }
+  var conReframeOn=false;
+  function setReframeCon(on){
+    conReframeOn=on;
+    stage.classList.toggle("reframe-con", on);
+    var b=$("btnReframeCon");
     b.classList.toggle("active", on);
     b.setAttribute("aria-pressed", on?"true":"false");
   }
@@ -671,10 +837,18 @@
     var f=Math.max(0.2, Math.min(0.8, x/r.width));
     var reversed=stage.classList.contains("flip");
     if(dragging===dividerA){
-      var camFrac=reversed?(1-f):f;
-      slotCam.style.flexGrow=(camFrac*100).toFixed(1);
-      slotContent.style.flexGrow=((1-camFrac)*100).toFixed(1);
-      S.camGrow=Math.round(camFrac*100);
+      if(document.body.classList.contains("lay-vertical")){
+        var vy=(e.touches?e.touches[0].clientY:e.clientY)-r.top;
+        var fy=Math.max(0.2, Math.min(0.85, vy/r.height));
+        slotCam.style.flexGrow=(fy*100).toFixed(1);
+        slotContent.style.flexGrow=((1-fy)*100).toFixed(1);
+        S.vertSplit=Math.round(fy*100);
+      } else {
+        var camFrac=reversed?(1-f):f;
+        slotCam.style.flexGrow=(camFrac*100).toFixed(1);
+        slotContent.style.flexGrow=((1-camFrac)*100).toFixed(1);
+        S.camGrow=Math.round(camFrac*100);
+      }
     } else {
       var cFrac=reversed?(1-f):f;
       slotContent.style.flexGrow=(cFrac*100).toFixed(1);
@@ -728,9 +902,38 @@
   window.addEventListener("touchend", panEnd);
   slotCam.addEventListener("dblclick", function(){ if(reframeOn){ S.camZoom=1; S.camX=0; S.camY=0; applyCamTransform(); saveSettings(); } });
   window.addEventListener("resize", applyCamTransform);
+  window.addEventListener("resize", applyConTransform);
+
+  // Content reframe wiring (zoom + drag-to-pan the captured window)
+  $("btnReframeCon").addEventListener("click", function(){ setReframeCon(!conReframeOn); });
+  $("conZoom").addEventListener("input", function(e){ S.conZoom=parseFloat(e.target.value)||1; applyConTransform(); });
+  $("conZoom").addEventListener("change", saveSettings);
+  slotContent.addEventListener("wheel", function(e){ if(!conReframeOn) return; e.preventDefault();
+    S.conZoom=Math.max(1, Math.min(3, (S.conZoom||1) - e.deltaY*0.0015)); applyConTransform(); saveSettings(); }, {passive:false});
+  var panningCon=null;
+  function panConStart(x,y){ if(!conReframeOn) return; panningCon={x:x,y:y}; slotContent.classList.add("panning"); document.body.style.userSelect="none"; }
+  function panConMove(x,y){ if(!panningCon) return; S.conX=(S.conX||0)+(x-panningCon.x); S.conY=(S.conY||0)+(y-panningCon.y); panningCon.x=x; panningCon.y=y; applyConTransform(); }
+  function panConEnd(){ if(panningCon){ panningCon=null; slotContent.classList.remove("panning"); document.body.style.userSelect=""; saveSettings(); } }
+  slotContent.addEventListener("mousedown", function(e){ if(conReframeOn){ e.preventDefault(); panConStart(e.clientX,e.clientY); } });
+  window.addEventListener("mousemove", function(e){ panConMove(e.clientX,e.clientY); });
+  window.addEventListener("mouseup", panConEnd);
+  slotContent.addEventListener("touchstart", function(e){ if(conReframeOn && e.touches[0]){ panConStart(e.touches[0].clientX,e.touches[0].clientY); } }, {passive:true});
+  window.addEventListener("touchmove", function(e){ if(panningCon && e.touches[0]){ panConMove(e.touches[0].clientX,e.touches[0].clientY); } }, {passive:true});
+  window.addEventListener("touchend", panConEnd);
+  slotContent.addEventListener("dblclick", function(){ if(conReframeOn){ S.conZoom=1; S.conX=0; S.conY=0; applyConTransform(); saveSettings(); } });
   $("pipCorner").addEventListener("change", function(e){ S.pipCorner=e.target.value; saveSettings(); applyLayout(); });
   $("pipShape").addEventListener("change", function(e){ S.pipShape=e.target.value; saveSettings(); applyLayout(); });
   $("pipSize").addEventListener("change", function(e){ S.pipSize=e.target.value; saveSettings(); applyLayout(); });
+  var vmSel=$("vertMode"); if(vmSel) vmSel.addEventListener("change", function(e){ S.vertMode=e.target.value; saveSettings(); applyLayout(); });
+
+  // Adjust drawer — collapses all fine-tuning behind one button
+  var btnAdjust=$("btnAdjust"), adjustPanel=$("adjustPanel");
+  function setAdjust(on){ if(!adjustPanel) return; adjustPanel.classList.toggle("open", on); btnAdjust.classList.toggle("active", on); btnAdjust.setAttribute("aria-expanded", on?"true":"false"); }
+  if(btnAdjust && adjustPanel){
+    btnAdjust.addEventListener("click", function(e){ e.stopPropagation(); setAdjust(!adjustPanel.classList.contains("open")); });
+    document.addEventListener("click", function(e){ if(adjustPanel.classList.contains("open") && !adjustPanel.contains(e.target) && !btnAdjust.contains(e.target)) setAdjust(false); });
+    document.addEventListener("keydown", function(e){ if(e.key==="Escape" && adjustPanel.classList.contains("open")) setAdjust(false); });
+  }
   $("badgePos").addEventListener("change", function(e){ S.badgePos=e.target.value; badge.className=S.badgePos; saveSettings(); });
 
   $("logoFile").addEventListener("change", function(e){
