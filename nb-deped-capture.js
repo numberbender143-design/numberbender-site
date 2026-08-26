@@ -107,8 +107,8 @@
         if (h) t(h, 'You are already on the list.', 'Nasa listahan ka na.');
         if (p) {
           if (state === 'READY') {
-            t(p, 'Grab the files below any time — they stay free. Need the answer key again? Email dr.e@numberbender.com.',
-                 'Kunin ang mga file sa ibaba anumang oras — libre pa rin. Kailangan ng answer key muli? I-email si dr.e@numberbender.com.');
+            t(p, 'Grab the files below any time — they stay free.',
+                 'Kunin ang mga file sa ibaba anumang oras — libre pa rin.');
           } else {
             t(p, 'Your kit lands in your inbox the day it is done. Nothing else to do here.',
                  'Darating ang kit mo sa inbox sa araw na matapos ito. Wala nang kailangang gawin.');
@@ -183,14 +183,22 @@
         block.classList.add('is-done');
         track(already ? 'capture_duplicate' : 'capture_success', grade);
 
+        // The answer keys are revealed only when Teacher was the chosen role.
+        // A UX gate, not a lock — the hrefs are in the page source either way.
+        var keys = block.querySelector('.nbdc-keys');
+        if (keys && roleIn && roleIn.value === 'Teacher') {
+          keys.removeAttribute('hidden');
+          track('capture_keys_shown', grade);
+        }
+
         // Mailchimp sends nothing for an address that is already subscribed, so
         // do not let the copy imply a fresh email is on the way.
         if (already) {
           var dp = block.querySelector('.nbdc-done-p');
           if (dp) {
             if (state === 'READY') {
-              t(dp, 'You were already on the list, so no new email went out. The files are below — and email dr.e@numberbender.com if you need the answer key again.',
-                    'Nasa listahan ka na, kaya walang bagong email na ipinadala. Nasa ibaba ang mga file — i-email si dr.e@numberbender.com kung kailangan mo muli ang answer key.');
+              t(dp, 'You were already on the list, so no new email went out — but the files are all right here.',
+                    'Nasa listahan ka na, kaya walang bagong email na ipinadala — pero nasa dito na ang lahat ng file.');
             } else {
               t(dp, 'You were already on the list, so no new email went out. Your kit still lands in your inbox the day it is done.',
                     'Nasa listahan ka na, kaya walang bagong email na ipinadala. Darating pa rin ang kit mo sa araw na matapos ito.');

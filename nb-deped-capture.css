@@ -137,6 +137,22 @@
 .nbdc-dl.ghost::before{content:"";}
 .nbdc-dl.ghost:hover{background:rgba(253,230,138,.12);color:#fff;border-color:#fff;}
 
+
+/* answer keys — revealed only for a Teacher submit */
+.nbdc-keys{margin-top:18px;padding-top:16px;border-top:1px solid var(--nbdc-line);}
+.nbdc-keys[hidden]{display:none;}
+.nbdc-keys-note{
+  font-size:.82rem;font-weight:600;color:#FDE68A;
+  margin:0 0 11px;text-align:center;
+}
+.nbdc-keys .nbdc-dl{margin:0 5px;}
+.nbdc-dl.key{
+  background:transparent;color:#fff;box-shadow:none;
+  border:1px solid rgba(253,230,138,.55);font-size:.88rem;padding:9px 15px;
+}
+.nbdc-dl.key::before{content:"\1F511";font-weight:400;}
+.nbdc-dl.key:hover{background:rgba(253,230,138,.14);border-color:#FDE68A;}
+
 @media (max-width:860px){
   .nbdc-inner{grid-template-columns:1fr;gap:20px;}
   .nbdc-card{padding:24px 20px 22px;}
