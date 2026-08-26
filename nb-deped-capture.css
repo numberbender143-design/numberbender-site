@@ -102,6 +102,21 @@
 .nbdc-done-p{font-size:.95rem;color:rgba(255,255,255,.85);margin:0 auto;max-width:52ch;}
 .nbdc-done-p a{color:#FDE68A;font-weight:700;text-decoration:underline;}
 
+
+/* link to the pack itself — the block's proof that the file is real */
+.nbdc-open{
+  display:inline-flex;align-items:center;gap:6px;margin-top:14px;
+  font-size:.92rem;font-weight:700;color:#FDE68A;
+  border-bottom:1px solid rgba(253,230,138,.45);
+  padding-bottom:1px;text-decoration:none;transition:color .12s,border-color .12s;
+}
+.nbdc-open:hover{color:#fff;border-color:#fff;text-decoration:none;}
+.nbdc-open:focus-visible{outline:3px solid var(--nbdc-amber);outline-offset:3px;border-radius:2px;}
+
+/* the in-build state reads calmer than the ready one */
+.nbdc[data-state="SOON"] .nbdc-eyebrow{color:#BFD9D2;}
+.nbdc[data-state="SOON"] .nbdc-eyebrow .nbdc-dot{background:#7FB0A6;}
+
 @media (max-width:860px){
   .nbdc-inner{grid-template-columns:1fr;gap:20px;}
   .nbdc-card{padding:24px 20px 22px;}
