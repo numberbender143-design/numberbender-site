@@ -1,0 +1,113 @@
+/* ─────────────────────────────────────────────────────────────
+   nb-deped-capture.css
+   Email capture block for the DepEd section.
+   Scoped entirely under .nbdc — cannot collide with page styles.
+   Tokens inherited from each page's :root (--navy, --amber, etc.)
+   with hard fallbacks so the block survives on any page.
+   ───────────────────────────────────────────────────────────── */
+
+.nbdc{
+  --nbdc-ink:#0F172A;
+  --nbdc-deep:#1E1B4B;
+  --nbdc-teal:#1F6F6B;
+  --nbdc-amber:#F59E0B;
+  --nbdc-amber-dk:#B45309;
+  --nbdc-line:rgba(255,255,255,.18);
+  padding:26px 0 34px;
+  background:var(--bg,#F8FAFC);
+}
+.nbdc *{box-sizing:border-box;}
+
+.nbdc-card{
+  position:relative;
+  overflow:hidden;
+  border-radius:var(--radius,16px);
+  padding:30px 28px 28px;
+  background:linear-gradient(135deg,var(--nbdc-deep) 0%,#2A2A6E 42%,var(--nbdc-teal) 100%);
+  box-shadow:var(--shadow-lg,0 20px 50px rgba(15,23,42,.12));
+  color:#fff;
+}
+/* faint grid — bond paper under the card, not decoration for its own sake */
+.nbdc-card::before{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.14;
+  background-image:linear-gradient(rgba(255,255,255,.55) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(255,255,255,.55) 1px,transparent 1px);
+  background-size:26px 26px;
+  -webkit-mask-image:radial-gradient(120% 90% at 92% 0%,#000 0%,transparent 68%);
+          mask-image:radial-gradient(120% 90% at 92% 0%,#000 0%,transparent 68%);
+}
+.nbdc-inner{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr .85fr;gap:26px 40px;align-items:center;}
+
+.nbdc-eyebrow{
+  display:inline-flex;align-items:center;gap:7px;
+  font-size:.7rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;
+  color:#FDE68A;margin-bottom:11px;
+}
+.nbdc-eyebrow .nbdc-dot{width:6px;height:6px;border-radius:50%;background:var(--nbdc-amber);flex:none;}
+
+.nbdc-h{font-size:clamp(1.32rem,2.6vw,1.72rem);font-weight:800;line-height:1.22;margin:0 0 10px;letter-spacing:-.015em;color:#fff;text-wrap:balance;}
+.nbdc-sub{font-size:.98rem;line-height:1.55;color:rgba(255,255,255,.86);margin:0 0 14px;max-width:46ch;}
+
+.nbdc-list{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:7px 9px;}
+.nbdc-list li{
+  font-size:.79rem;font-weight:600;color:#fff;
+  background:rgba(255,255,255,.12);border:1px solid var(--nbdc-line);
+  border-radius:999px;padding:4px 11px;white-space:nowrap;
+}
+
+/* ── form ── */
+.nbdc-form{display:flex;flex-direction:column;gap:9px;}
+
+.nbdc-roles{display:flex;gap:6px;background:rgba(0,0,0,.22);border-radius:11px;padding:4px;}
+.nbdc-role{
+  flex:1;appearance:none;border:0;cursor:pointer;
+  font:inherit;font-size:.84rem;font-weight:700;color:rgba(255,255,255,.72);
+  background:transparent;border-radius:8px;padding:8px 4px;transition:background .14s,color .14s;
+}
+.nbdc-role:hover{color:#fff;}
+.nbdc-role[aria-pressed="true"]{background:#fff;color:var(--nbdc-deep);}
+.nbdc-role:focus-visible{outline:3px solid var(--nbdc-amber);outline-offset:2px;}
+
+.nbdc-field{
+  width:100%;font:inherit;font-size:.95rem;color:var(--nbdc-ink);
+  background:#fff;border:2px solid transparent;border-radius:11px;
+  padding:12px 14px;transition:border-color .14s,box-shadow .14s;
+}
+.nbdc-field::placeholder{color:#94A3B8;}
+.nbdc-field:focus{outline:none;border-color:var(--nbdc-amber);box-shadow:0 0 0 4px rgba(245,158,11,.28);}
+.nbdc-field[aria-invalid="true"]{border-color:#FCA5A5;box-shadow:0 0 0 4px rgba(239,68,68,.26);}
+
+.nbdc-btn{
+  appearance:none;border:0;cursor:pointer;font:inherit;
+  font-size:1rem;font-weight:800;letter-spacing:.01em;
+  color:#1F1300;background:var(--nbdc-amber);
+  border-radius:11px;padding:13px 16px;
+  box-shadow:0 6px 18px rgba(245,158,11,.34);
+  transition:transform .12s,box-shadow .12s,background .12s;
+}
+.nbdc-btn:hover{background:#FBBF24;transform:translateY(-1px);box-shadow:0 9px 22px rgba(245,158,11,.42);}
+.nbdc-btn:active{transform:translateY(0);}
+.nbdc-btn:focus-visible{outline:3px solid #fff;outline-offset:2px;}
+.nbdc-btn[disabled]{opacity:.62;cursor:progress;transform:none;}
+
+.nbdc-fine{font-size:.75rem;line-height:1.45;color:rgba(255,255,255,.62);margin:1px 0 0;}
+.nbdc-err{font-size:.8rem;font-weight:600;color:#FECACA;margin:0;min-height:0;}
+.nbdc-err:empty{display:none;}
+
+/* ── success ── */
+.nbdc-done{display:none;text-align:center;padding:6px 0 2px;}
+.nbdc.is-done .nbdc-inner{display:none;}
+.nbdc.is-done .nbdc-done{display:block;}
+.nbdc-done-h{font-size:1.24rem;font-weight:800;margin:0 0 7px;color:#fff;}
+.nbdc-done-p{font-size:.95rem;color:rgba(255,255,255,.85);margin:0 auto;max-width:52ch;}
+.nbdc-done-p a{color:#FDE68A;font-weight:700;text-decoration:underline;}
+
+@media (max-width:860px){
+  .nbdc-inner{grid-template-columns:1fr;gap:20px;}
+  .nbdc-card{padding:24px 20px 22px;}
+  .nbdc-sub{max-width:none;}
+}
+@media (prefers-reduced-motion:reduce){
+  .nbdc-btn,.nbdc-field,.nbdc-role{transition:none;}
+  .nbdc-btn:hover{transform:none;}
+}
