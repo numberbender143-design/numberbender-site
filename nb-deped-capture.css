@@ -117,6 +117,26 @@
 .nbdc[data-state="SOON"] .nbdc-eyebrow{color:#BFD9D2;}
 .nbdc[data-state="SOON"] .nbdc-eyebrow .nbdc-dot{background:#7FB0A6;}
 
+
+/* the success state hands the files over directly */
+.nbdc-done-links{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:16px;}
+.nbdc-dl{
+  display:inline-flex;align-items:center;gap:7px;
+  background:var(--nbdc-amber);color:#1F1300;
+  font-weight:800;font-size:.93rem;border-radius:11px;padding:11px 17px;
+  text-decoration:none;box-shadow:0 6px 18px rgba(245,158,11,.3);
+  transition:background .12s,transform .12s;
+}
+.nbdc-dl::before{content:"\2B07";font-weight:400;}
+.nbdc-dl:hover{background:#FBBF24;transform:translateY(-1px);text-decoration:none;}
+.nbdc-dl:focus-visible{outline:3px solid #fff;outline-offset:2px;}
+.nbdc-dl.ghost{
+  background:transparent;color:#FDE68A;box-shadow:none;
+  border:1px solid rgba(253,230,138,.5);
+}
+.nbdc-dl.ghost::before{content:"";}
+.nbdc-dl.ghost:hover{background:rgba(253,230,138,.12);color:#fff;border-color:#fff;}
+
 @media (max-width:860px){
   .nbdc-inner{grid-template-columns:1fr;gap:20px;}
   .nbdc-card{padding:24px 20px 22px;}

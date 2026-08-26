@@ -82,6 +82,7 @@
     block.setAttribute('data-nbdc-ready', '1');
 
     var grade  = block.getAttribute('data-grade') || '';
+    var state  = block.getAttribute('data-state') || 'SOON';
     var form   = block.querySelector('.nbdc-form');
     var email  = block.querySelector('.nbdc-email');
     var fname  = block.querySelector('.nbdc-fname');
@@ -103,10 +104,16 @@
         block.classList.add('is-done');
         var h = block.querySelector('.nbdc-done-h');
         var p = block.querySelector('.nbdc-done-p');
-        if (h) t(h, 'You are already on the list.',
-                   'Nasa listahan ka na.');
-        if (p) t(p, 'Your pack lands in your inbox. Nothing else to do here — scroll on down to the worksheets.',
-                   'Nasa inbox mo na ang pack. Wala nang kailangang gawin — mag-scroll lang pababa sa mga worksheet.');
+        if (h) t(h, 'You are already on the list.', 'Nasa listahan ka na.');
+        if (p) {
+          if (state === 'READY') {
+            t(p, 'Grab the files below any time — they stay free. Need the answer key again? Email dr.e@numberbender.com.',
+                 'Kunin ang mga file sa ibaba anumang oras — libre pa rin. Kailangan ng answer key muli? I-email si dr.e@numberbender.com.');
+          } else {
+            t(p, 'Your kit lands in your inbox the day it is done. Nothing else to do here.',
+                 'Darating ang kit mo sa inbox sa araw na matapos ito. Wala nang kailangang gawin.');
+          }
+        }
         return;
       }
     } catch (e) { /* private mode — just show the form */ }
@@ -175,6 +182,21 @@
 
         block.classList.add('is-done');
         track(already ? 'capture_duplicate' : 'capture_success', grade);
+
+        // Mailchimp sends nothing for an address that is already subscribed, so
+        // do not let the copy imply a fresh email is on the way.
+        if (already) {
+          var dp = block.querySelector('.nbdc-done-p');
+          if (dp) {
+            if (state === 'READY') {
+              t(dp, 'You were already on the list, so no new email went out. The files are below — and email dr.e@numberbender.com if you need the answer key again.',
+                    'Nasa listahan ka na, kaya walang bagong email na ipinadala. Nasa ibaba ang mga file — i-email si dr.e@numberbender.com kung kailangan mo muli ang answer key.');
+            } else {
+              t(dp, 'You were already on the list, so no new email went out. Your kit still lands in your inbox the day it is done.',
+                    'Nasa listahan ka na, kaya walang bagong email na ipinadala. Darating pa rin ang kit mo sa araw na matapos ito.');
+            }
+          }
+        }
 
         var liveH = block.querySelector('.nbdc-done-h');
         if (liveH) liveH.focus();
