@@ -60,3 +60,17 @@ tools/validate-pages.js
 
 # stray test bank (cannot delete from sandbox; never deploy)
 content/banks/_TEST_*.js
+
+# ------------------------------------------------------------
+# Public download packs — the ONLY .docx/.xlsx that may deploy.
+# These are deliberate public teaching resources, not internal
+# docs, so they are re-included below after the blanket ignores.
+# Anything placed here IS reachable at
+#   numberbender.com/deped/packs/<pack>/<file>
+# so never put an internal or unreleased file in this folder.
+# ------------------------------------------------------------
+!deped/packs/
+!deped/packs/**/
+!deped/packs/**/*.docx
+!deped/packs/**/*.xlsx
+!deped/packs/**/*.pdf
