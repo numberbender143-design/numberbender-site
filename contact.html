@@ -504,6 +504,9 @@
  }
 }
 </script>
+<style>
+.rf-optin{font-size:.86rem;line-height:1.5;color:#475569;background:#F1F5F9;border:1px solid #E2E8F0;border-radius:10px;padding:11px 14px;margin:0 0 14px;}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -718,13 +721,13 @@
 <section class="research-section" id="research-form">
   <div class="container">
     <div class="section-head">
-      <div class="section-eyebrow">📊 Help us improve math education</div>
-      <h2>Join our research community</h2>
-      <p>Your answers help Dr. E understand how students and educators access math resources — and shape future content, workshops, and research.</p>
+      <div class="section-eyebrow">🇵🇭 Open math education for every Filipino learner</div>
+      <h2>Join the movement</h2>
+      <p>Numberbender is free and stays free — 1,600+ video lessons and 569 worksheets, no accounts, no paywall, no ads. Join the list and you help keep it that way: your answers show me who is being left out, and where to build next.</p>
     </div>
 
     <div class="research-form-box">
-      <form name="contact-research" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <form name="contact-research" id="researchForm" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleResearchSubmit(event)">
         <input type="hidden" name="form-name" value="contact-research">
         <p style="display:none;"><input name="bot-field"></p>
 
@@ -843,8 +846,9 @@
           </div>
         </div>
 
-        <button type="submit" class="btn-research">Submit Research Form</button>
-        <p class="rf-privacy">🔒 No spam. Your information is kept private and secure.</p>
+        <p class="rf-optin">Joining puts you on the Numberbender email list — one short email a week, and you can unsubscribe from any of them. The research checkbox above is separate and entirely optional.</p>
+        <button type="submit" class="btn-research">Join the movement &rarr;</button>
+        <p class="rf-privacy">🔒 Never sold, never shared. Unsubscribe any time.</p>
       </form>
     </div>
   </div>
@@ -1038,6 +1042,72 @@ function nbSubmit(){
   s.src='https://numberbender.us17.list-manage.com/subscribe/post-json?u=65e30fe527dde6fb604f6760a&id=ad0977e0cc&f_id=003758e0f0&EMAIL='+encodeURIComponent(email)+'&b_65e30fe527dde6fb604f6760a_ad0977e0cc=&c=nbMcCb';
   document.body.appendChild(s);
 }
+</script>
+
+<script>
+  /* The research form used to post to Netlify and nothing else, so nobody who
+     filled it in ever reached the Mailchimp audience. It now does both:
+     Mailchimp gets the five fields it has merge tags for, Netlify keeps the
+     research answers there is no merge tag for. Mailchimp goes first — it is
+     the leg that grows the list, and the Netlify post navigates the page away.
+
+     ROLE is capitalised to match what the DepEd capture blocks send, so the
+     welcome email's *|IF:ROLE=Teacher|* block fires for a teacher who joins
+     here too. */
+  var NB_ROLE = { teacher: 'Teacher', student: 'Student', parent: 'Parent',
+                  tutor: 'Tutor', 'self-learner': 'Self-learner' };
+
+  function nbResearchSubscribe(fields, done) {
+    var called = false;
+    function once() { if (!called) { called = true; done(); } }
+    var name = 'nbRfCb' + Date.now();
+    window[name] = function () { once(); };
+    // Never let a slow or blocked Mailchimp strand someone mid-signup.
+    setTimeout(once, 4000);
+
+    var qs = [];
+    for (var k in fields) {
+      if (Object.prototype.hasOwnProperty.call(fields, k) && fields[k]) {
+        qs.push(encodeURIComponent(k) + '=' + encodeURIComponent(fields[k]));
+      }
+    }
+    qs.push('u=65e30fe527dde6fb604f6760a', 'id=ad0977e0cc', 'f_id=003758e0f0',
+            'b_65e30fe527dde6fb604f6760a_ad0977e0cc=', 'c=' + name);
+
+    var sc = document.createElement('script');
+    sc.src = 'https://numberbender.us17.list-manage.com/subscribe/post-json?' + qs.join('&');
+    sc.onerror = once;
+    document.body.appendChild(sc);
+  }
+
+  function handleResearchSubmit(e) {
+    e.preventDefault();
+    var form = e.target;
+    var btn = form.querySelector('.btn-research');
+    var data = new FormData(form);
+    var val = function (k) { return (data.get(k) || '').toString().trim(); };
+
+    if (btn) { btn.disabled = true; btn.textContent = 'Joining…'; }
+
+    nbResearchSubscribe({
+      EMAIL:   val('email'),
+      FNAME:   val('first_name'),
+      LNAME:   val('last_name'),
+      ROLE:    NB_ROLE[val('role')] || val('role'),
+      COUNTRY: val('country')
+    }, function () {
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(data).toString()
+      })
+      .then(function () { window.location.href = 'contact-thanks.html'; })
+      .catch(function () {
+        // Mailchimp already has them; only the research answers were lost.
+        window.location.href = 'contact-thanks.html';
+      });
+    });
+  }
 </script>
 <script src="/nb-search.js" defer></script>
 <script src="/nb-mirror.js" defer></script>
