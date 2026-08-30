@@ -23,6 +23,10 @@
   var MC_FID  = '003758e0f0';
   var HONEY   = 'b_' + MC_U + '_' + MC_ID;
   var LS_KEY  = 'nb_deped_subscribed';
+  // Which role they picked when they signed up. Without this, a teacher who
+  // comes back tomorrow is indistinguishable from a learner, and the returning
+  // state below has to guess — it used to guess wrong and hide her keys.
+  var LS_ROLE = 'nb_deped_role';
   var cbSeq   = 0;
 
   function t(el, en, fil) {
@@ -91,6 +95,16 @@
     var err    = block.querySelector('.nbdc-err');
     var roles  = block.querySelectorAll('.nbdc-role');
 
+    // Most pages are for one grade and say so in data-grade. The shared
+    // landing page cannot: it serves whoever the link reached, so it carries
+    // a <select class="nbdc-grade" name="GRADE"> instead. Read the grade at
+    // submit time rather than at boot, and a page with no select behaves
+    // exactly as it did before.
+    var gradeSel = block.querySelector('.nbdc-grade');
+    function currentGrade() {
+      return (gradeSel && gradeSel.value) || grade;
+    }
+
     if (!form || !email || !btn) return;
 
     // The markup keeps type="email" + required so the no-JS POST fallback still
@@ -104,9 +118,23 @@
         block.classList.add('is-done');
         var h = block.querySelector('.nbdc-done-h');
         var p = block.querySelector('.nbdc-done-p');
+
+        // The keys are revealed on submit — but a returning teacher never
+        // submits again, so this branch has to reveal them too. Anyone who
+        // subscribed before the role was remembered falls back to what this
+        // page is for: Teacher on /deped/teachers/**, Student elsewhere.
+        var backKeys = block.querySelector('.nbdc-keys');
+        var wasRole  = localStorage.getItem(LS_ROLE) ||
+                       (roleIn ? roleIn.value : '');
+        var showKeys = !!backKeys && wasRole === 'Teacher';
+        if (showKeys) backKeys.removeAttribute('hidden');
+
         if (h) t(h, 'You are already on the list.', 'Nasa listahan ka na.');
         if (p) {
-          if (state === 'READY') {
+          if (state === 'READY' && showKeys) {
+            t(p, 'Grab the files below any time — answer keys included. They stay free.',
+                 'Kunin ang mga file sa ibaba anumang oras — kasama ang answer keys. Libre pa rin.');
+          } else if (state === 'READY') {
             t(p, 'Grab the files below any time — they stay free.',
                  'Kunin ang mga file sa ibaba anumang oras — libre pa rin.');
           } else {
@@ -152,14 +180,14 @@
       t(btn, 'Sending…', 'Ipinapadala…');
       if (err) err.textContent = '';
 
-      track('capture_submit', grade);
+      track('capture_submit', currentGrade());
 
       jsonp({
         EMAIL:   addr,
         FNAME:   fname ? (fname.value || '').trim() : '',
         ROLE:    roleIn ? roleIn.value : '',
         COUNTRY: 'Philippines',
-        GRADE:   grade
+        GRADE:   currentGrade()
       }, function (res) {
         // Mailchimp returns result:'error' for an already-subscribed address.
         // For the teacher on the other end that is still a success, so we
@@ -172,23 +200,26 @@
           t(btn, origEn, origFil);
           if (err) t(err, 'That did not go through. Try again, or email dr.e@numberbender.com and I will add you myself.',
                           'Hindi natuloy. Subukan ulit, o i-email si dr.e@numberbender.com at ako na ang magdadagdag sa iyo.');
-          track('capture_error', grade);
+          track('capture_error', currentGrade());
           return;
         }
 
         try {
-          if (window.localStorage) localStorage.setItem(LS_KEY, String(Date.now()));
+          if (window.localStorage) {
+            localStorage.setItem(LS_KEY, String(Date.now()));
+            if (roleIn && roleIn.value) localStorage.setItem(LS_ROLE, roleIn.value);
+          }
         } catch (e) { /* ignore */ }
 
         block.classList.add('is-done');
-        track(already ? 'capture_duplicate' : 'capture_success', grade);
+        track(already ? 'capture_duplicate' : 'capture_success', currentGrade());
 
         // The answer keys are revealed only when Teacher was the chosen role.
         // A UX gate, not a lock — the hrefs are in the page source either way.
         var keys = block.querySelector('.nbdc-keys');
         if (keys && roleIn && roleIn.value === 'Teacher') {
           keys.removeAttribute('hidden');
-          track('capture_keys_shown', grade);
+          track('capture_keys_shown', currentGrade());
         }
 
         // Mailchimp sends nothing for an address that is already subscribed, so
