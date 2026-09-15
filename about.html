@@ -757,6 +757,26 @@
 }
 </script>
 <noscript><style>.section-head,.why-card,.ep-card,.module,.final-cta,.archive-cta,.coverage-card,.video-slot,.about-photo-big,.about-hero-content,.press-hero-text,.press-hero-img,.featured-post,.post-card{opacity:1!important;transform:none!important;}</style></noscript>
+<style id="nb-studio-nav">
+/* Numberbender Studio nav pill + nav overflow fixes */
+.nav-studio{display:inline-flex;align-items:center;gap:6px;background:#1F6F6B;color:#fff !important;padding:8px 15px;border-radius:999px;font-weight:800 !important;font-size:.88rem !important;box-shadow:0 3px 10px rgba(31,111,107,.28);white-space:nowrap;}
+.nav-studio:hover{background:#16544F;color:#fff !important;text-decoration:none;}
+/* keep the two right-hand dropdowns inside the viewport */
+.nav-links .nav-dropdown:nth-last-of-type(-n+2) .dropdown-menu{left:auto;right:0;}
+.nbnav-links .nbnav-dd:nth-last-of-type(-n+2) .nbnav-menu{left:auto;right:0;}
+/* the nav is at capacity on desktop: collapse to the hamburger earlier */
+@media (max-width:1080px){
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;padding:18px;border-bottom:1px solid #E2E8F0;gap:14px;}
+  .nav-links.open{display:flex;}
+  .menu-toggle{display:block;}
+  .nav-studio{align-self:flex-start;}
+  .nav-links .nav-dropdown{width:100%;}
+  .nav-links .nav-dropdown .dropdown-trigger{width:100%;justify-content:space-between;padding:6px 0;}
+  .nav-links .nav-dropdown .dropdown-menu{position:static;box-shadow:none;border:none;padding:0 0 4px 14px;margin-top:0;min-width:0;opacity:1;visibility:visible;transform:none;display:none;background:transparent;left:0;right:auto;}
+  .nav-links .nav-dropdown:hover .dropdown-menu{display:none;}
+  .nav-links .nav-dropdown .dropdown-menu.open{display:block;}
+}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -786,11 +806,14 @@
           <a href="/for-teachers">🏫 For Teachers Hub</a>
           <a href="/teach-the-math">🎓 Teach the Math</a>
           <a href="/teach-it-like-you-stream-it">🎬 Teach It Like You Stream It</a>
+          <a href="/studio">🎥 Numberbender Studio (free app)</a>
+          <a href="/studio-tutorial">▶️ Studio Tutorials</a>
           <a href="/teacher-resources">📦 Teacher Resources</a>
           <a href="/math-worksheets">📄 Printable Worksheets</a>
           <a href="/courses">📚 Lesson &amp; Course Library</a>
         </div>
       </div>
+      <a href="/studio" class="nav-studio">🎬 Studio</a>
       <div class="nav-dropdown">
         <button type="button" class="dropdown-trigger nav-mathccc" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Math CCC <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">

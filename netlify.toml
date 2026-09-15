@@ -196,6 +196,12 @@
   force  = true
 
 [[redirects]]
+  from = "/studio-tutorial.html"
+  to   = "/studio-tutorial"
+  status = 301
+  force  = true
+
+[[redirects]]
   from = "/start-here.html"
   to   = "/start-here"
   status = 301
