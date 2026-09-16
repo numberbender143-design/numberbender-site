@@ -57,7 +57,7 @@
     --navy:#0F172A; --blue:#2563EB; --yellow:#FACC15; --cyan:#06B6D4; --green:#22C55E;
     --bg:#F8FAFC; --surface:#FFFFFF; --muted:#64748B; --border:#E2E8F0;
     --shadow: 0 10px 30px rgba(15, 23, 42, 0.08); --shadow-lg: 0 20px 50px rgba(15, 23, 42, 0.12); --radius: 16px;
-    --indigo:#3730A3; --indigo-dk:#312e81; --amber:#F59E0B; --emerald:#059669;
+    --indigo:#3730A3; --indigo-dk:#312e81; --amber:#F59E0B; --emerald:#047552;
   }
   *{ box-sizing: border-box; margin:0; padding:0; }
   html{ scroll-behavior:smooth; }
@@ -214,7 +214,7 @@ a.q-chip.xcg:hover{background:#ffefcc}
 .qcard{background:#fff;border:1px solid #dfe9e8;border-radius:14px;padding:16px 18px}
 .qcard.now{border:2px solid #1F6F6B;box-shadow:0 4px 14px rgba(31,111,107,.12)}
 .qcard h3{margin:0;font-size:1.02rem;color:#15413e}
-.qcard .qfil{color:#6b7c7a;font-size:.82rem;margin:2px 0 6px}
+.qcard .qfil{color:#556664;font-size:.82rem;margin:2px 0 6px}
 .qcard .qnow-tag{display:inline-block;margin-left:6px;padding:1px 8px;border-radius:999px;background:#1F6F6B;color:#fff;font-size:.68rem;font-weight:700;vertical-align:middle}
 .qcard ul{list-style:none;margin:10px 0 0;padding:0}
 .qcard li{margin:7px 0;font-size:.92rem}
@@ -278,6 +278,10 @@ a.q-chip.xcg:hover{background:#ffefcc}
 }
 </script>
 <link rel="stylesheet" href="/nb-print.css" media="print">
+<style id="nb-a11y">
+/* WCAG 1.4.1 — inline links in running text need a non-colour cue */
+main p a:not([class]), main li a:not([class]), .qfil a, .subhead a { text-decoration: underline; text-underline-offset: 2px; }
+</style>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
