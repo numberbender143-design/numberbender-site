@@ -254,3 +254,33 @@
     boot();
   }
 })();
+
+
+/* ── Share to classroom: copy-link handler ── */
+window.nbShareCopy = function (btn) {
+  var url = btn.getAttribute('data-url') || window.location.href;
+  var done = function () {
+    var span = btn.querySelector('.nbshare-txt');
+    var prev = span ? span.textContent : '';
+    if (span) { span.textContent = 'Copied'; }
+    btn.classList.add('is-done');
+    setTimeout(function () {
+      if (span) { span.textContent = prev; }
+      btn.classList.remove('is-done');
+    }, 1800);
+    if (typeof gtag === 'function') {
+      gtag('event', 'share_copy_link', { event_category: 'share', event_label: location.pathname });
+    }
+  };
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(url).then(done).catch(function () { fallback(); });
+  } else { fallback(); }
+  function fallback() {
+    var ta = document.createElement('textarea');
+    ta.value = url; ta.setAttribute('readonly', '');
+    ta.style.position = 'absolute'; ta.style.left = '-9999px';
+    document.body.appendChild(ta); ta.select();
+    try { document.execCommand('copy'); done(); } catch (e) {}
+    document.body.removeChild(ta);
+  }
+};

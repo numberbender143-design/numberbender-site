@@ -1,0 +1,125 @@
+/* ============================================================
+   nb-print.css — Numberbender print stylesheet
+   Loaded with media="print", so it never touches screen rendering.
+
+   Teachers print these pages for classrooms that have no devices.
+   The printout has to be readable on paper AND carry the source, so
+   a photocopied sheet still tells the next teacher where it came from.
+   ============================================================ */
+
+@page {
+  size: Letter;
+  margin: 0.5in;
+}
+
+/* ── strip the interface ───────────────────────────────────── */
+header.nav,
+.nav-links,
+.menu-toggle,
+.nav-dropdown,
+.nav-studio-dd,
+.nb-sw,
+.skip-link,
+footer,
+#nb-sticky-bar,
+.nbshare,
+.nbdc,
+.nbtm,
+.lang-toggle,
+.nbprint-btn,
+.video-modal,
+.vframe,
+.video-slot,
+.video-wrap,
+.vp-icon,
+.lesson-play,
+iframe,
+video,
+audio,
+button,
+[role="button"],
+.hero-art,
+.noprint {
+  display: none !important;
+}
+
+/* ── page basics ───────────────────────────────────────────── */
+html, body {
+  background: #fff !important;
+  color: #000 !important;
+  font-size: 11.5pt;
+  line-height: 1.45;
+}
+body { margin: 0 !important; padding: 0 !important; }
+main, .container, .content, section, article, div {
+  background: transparent !important;
+  box-shadow: none !important;
+  float: none !important;
+  width: auto !important;
+  max-width: 100% !important;
+}
+main { padding: 0 !important; margin: 0 !important; }
+
+/* keep gradients and dark panels from eating a print cartridge */
+[style*="gradient"], [style*="background:#0"], [style*="background: #0"] {
+  background: #fff !important;
+  color: #000 !important;
+  border: 1px solid #999 !important;
+}
+
+/* ── typography ────────────────────────────────────────────── */
+h1, h2, h3, h4 {
+  color: #000 !important;
+  page-break-after: avoid;
+  break-after: avoid;
+}
+h1 { font-size: 19pt; margin: 0 0 6pt; }
+h2 { font-size: 14.5pt; margin: 14pt 0 5pt; }
+h3 { font-size: 12.5pt; margin: 11pt 0 4pt; }
+p, li, td, th { color: #000 !important; orphans: 3; widows: 3; }
+a { color: #000 !important; text-decoration: none !important; }
+
+/* worked solutions: never split a step across pages */
+.step, .solved-step, .lesson, .acc, figure, table, pre, blockquote {
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+.math, code, pre {
+  font-family: "Georgia", "Times New Roman", serif;
+  background: #f4f4f4 !important;
+  border: 1px solid #ddd !important;
+  color: #000 !important;
+}
+
+table { border-collapse: collapse !important; width: 100% !important; }
+th, td { border: 1px solid #999 !important; padding: 4pt 6pt !important; }
+th { background: #eee !important; }
+
+img { max-width: 100% !important; page-break-inside: avoid; }
+
+/* ── the part that travels ─────────────────────────────────── */
+/* A print-only source line. A photocopy of a photocopy still says
+   where to find the rest of it — the same job the worksheet PDFs do. */
+.nbprint-src {
+  display: block !important;
+  margin-top: 16pt;
+  padding-top: 7pt;
+  border-top: 1.5px solid #000;
+  font-size: 9pt;
+  line-height: 1.4;
+  color: #000 !important;
+  page-break-inside: avoid;
+}
+.nbprint-src::before {
+  content: "Numberbender · Free bilingual math for teachers and students";
+  display: block;
+  font-weight: bold;
+}
+.nbprint-src::after {
+  content: attr(data-url) " · Free to print and share (CC BY 4.0) · Math is hard. So we made it human.";
+  display: block;
+}
+/* Note: this whole file is loaded with media="print", so nothing here
+   applies on screen. The .nbprint-src div is empty in the HTML — its
+   text comes from the ::before/::after above — so on screen it renders
+   nothing at all and needs no hiding rule. */

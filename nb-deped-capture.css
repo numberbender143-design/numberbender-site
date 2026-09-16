@@ -239,3 +239,28 @@
   .nbtm-cta{flex-direction:column;align-items:stretch;}
   .nbtm-btn,.nbtm-ghost{justify-content:center;}
 }
+
+
+/* ══ Share to classroom — DepEd pages ══ */
+.nbshare{padding:18px 0 4px;}
+.nbshare-row{
+  display:flex;flex-wrap:wrap;align-items:center;gap:9px;
+  background:#F1F5F9;border:1px solid #E2E8F0;border-radius:14px;padding:12px 14px;
+}
+.nbshare-lbl{font-size:.88rem;font-weight:700;color:#0F172A;margin-right:2px;}
+.nbshare-btn{
+  display:inline-flex;align-items:center;gap:7px;
+  font-size:.86rem;font-weight:600;line-height:1;
+  background:#fff;color:#0F172A;border:1px solid #CBD5E1;border-radius:9px;
+  padding:9px 13px;text-decoration:none;cursor:pointer;font-family:inherit;
+  transition:border-color .12s,background .12s,color .12s;
+}
+.nbshare-btn:hover{border-color:#1F6F6B;color:#1F6F6B;background:#F8FAFC;text-decoration:none;}
+.nbshare-btn:focus-visible{outline:3px solid #1F6F6B;outline-offset:2px;}
+.nbshare-ico{width:15px;height:15px;flex:none;display:block;}
+.nbshare-btn.is-done{border-color:#16A34A;color:#16A34A;}
+@media (max-width:560px){
+  .nbshare-row{gap:7px;padding:11px;}
+  .nbshare-lbl{width:100%;margin-bottom:2px;}
+  .nbshare-btn{flex:1 1 auto;justify-content:center;}
+}
