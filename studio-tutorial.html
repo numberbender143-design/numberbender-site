@@ -352,13 +352,12 @@
   /* ===== ADE note ===== */
   .ade{ background:var(--surface); border-block:1px solid var(--border); padding:40px 0; }
   .ade-inner{ max-width:74ch; display:flex; gap:20px; align-items:flex-start; }
-  .ade-mark{
-    flex:none; width:48px; height:48px; border-radius:12px;
-    background:#0F172A; color:#fff; display:grid; place-items:center;
-    font-size:.72rem; font-weight:800; letter-spacing:.5px;
-  }
+  .ade-badge{ flex:none; display:block; width:132px; }
+  .ade-badge img{ width:100%; height:auto; display:block; }
+  @media (max-width:640px){ .ade-inner{ flex-direction:column; gap:16px; } .ade-badge{ width:116px; } }
   .ade-body p{ color:#334155; font-size:1.02rem; line-height:1.65; margin-bottom:12px; }
   .ade-body p:last-child{ margin-bottom:0; }
+  .ade-disclaim{ font-size:.82rem !important; color:#64748B !important; line-height:1.5; }
   .ade-who{ font-size:.82rem; font-weight:800; letter-spacing:.9px; text-transform:uppercase; color:var(--teal); margin-bottom:9px; }
 
   /* ===== Apple toolkit ===== */
@@ -635,7 +634,7 @@
   <div class="container">
     <div class="hero-grid">
       <div>
-        <span class="eyebrow">🍎 Apple Distinguished Educator · Teach It Like You Stream It</span>
+        <span class="eyebrow">🎬 Teach It Like You Stream It</span>
         <h1>Inside the Numberbender Studio<span class="h1-sub">Making thinking visible with iPad</span></h1>
         <p class="lede">A finished slide hides the part students actually need — the working out. This is the free setup I use to put my thinking on screen as it happens: iPad and Apple Pencil, Keynote, and a phone for a camera. Five short tutorials, nothing to buy.</p>
         <div class="pill-row">
@@ -695,7 +694,10 @@
 <section class="ade">
   <div class="container">
     <div class="ade-inner">
-      <div class="ade-mark" aria-hidden="true">ADE</div>
+      <picture class="ade-badge">
+          <source srcset="/images/apple-distinguished-educator.webp" type="image/webp">
+          <img src="/images/apple-distinguished-educator.png" alt="Apple Distinguished Educator" width="400" height="143" loading="lazy">
+        </picture>
       <div class="ade-body">
         <div class="ade-who">A note from Dr. E</div>
         <p>The tools on this page are Apple tools because that is what I teach with, and the Apple
@@ -704,6 +706,7 @@
         <b>think</b> &mdash; the crossing out, the second attempt, the moment you realise the first approach
         will not work. That is the part a finished slide hides, and it is the part students actually need.
         Everything below is free, and none of it requires the newest anything.</p>
+        <p class="ade-disclaim">Peter Esperanza is an Apple Distinguished Educator. Numberbender Inc. is an independent 501(c)(3) nonprofit and is not affiliated with, sponsored by, or endorsed by Apple.</p>
       </div>
     </div>
   </div>
