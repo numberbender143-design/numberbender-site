@@ -13,14 +13,14 @@
 
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>How to Use Numberbender Studio — 5 Free Video Tutorials</title>
-<meta name="description" content="Five short tutorials for setting up Numberbender Studio on Zoom or Teams — camera beside your slides, iPad whiteboard, vertical shorts, and more. Free." />
+<title>Inside the Numberbender Studio: Making Thinking Visible with iPad</title>
+<meta name="description" content="Five free tutorials: teaching math live with iPad, Apple Pencil and Keynote — making thinking visible on Zoom or Teams. By an Apple Distinguished Educator." />
 <!-- SEO: Canonical + Open Graph + Twitter Card -->
 <link rel="canonical" href="https://numberbender.com/studio-tutorial" />
 <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="How to Use Numberbender Studio — 5 Free Video Tutorials" />
-<meta property="og:description" content="Camera beside your slides, iPad whiteboard, vertical shorts, two apps at once. Five short tutorials from Dr. E. Free, no login, nothing to install." />
+<meta property="og:title" content="Inside the Numberbender Studio: Making Thinking Visible with iPad" />
+<meta property="og:description" content="Why handwriting math on an iPad beats a finished slide, and the exact free setup — iPad, Apple Pencil, Keynote, Continuity Camera — to do it in your own class." />
 <meta property="og:url" content="https://numberbender.com/studio-tutorial" />
 <meta property="og:site_name" content="Numberbender" />
 <meta property="og:image" content="https://numberbender.com/images/studio-og.png" />
@@ -28,8 +28,8 @@
 <meta property="og:image:height" content="630" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@numberbender" />
-<meta name="twitter:title" content="How to Use Numberbender Studio — 5 Free Video Tutorials" />
-<meta name="twitter:description" content="Camera beside your slides, iPad whiteboard, vertical shorts, two apps at once. Five short tutorials from Dr. E. Free, no login, nothing to install." />
+<meta name="twitter:title" content="Inside the Numberbender Studio: Making Thinking Visible with iPad" />
+<meta name="twitter:description" content="Why handwriting math on an iPad beats a finished slide, and the exact free setup — iPad, Apple Pencil, Keynote, Continuity Camera — to do it in your own class." />
 <meta name="twitter:image" content="https://numberbender.com/images/studio-og.png" />
 
 <link rel="icon" type="image/svg+xml" href="images/exports/numberbender-favicon.svg">
@@ -346,6 +346,36 @@
   .nav-studio:hover{ background: var(--teal-d); text-decoration:none; }
   @media (max-width:1080px){ .nav-studio{ align-self:flex-start; } }
 
+  /* ===== Title sub-line ===== */
+  .h1-sub{ display:block; font-size:.46em; font-weight:600; color:var(--yellow); margin-top:10px; letter-spacing:0; line-height:1.25; }
+
+  /* ===== ADE note ===== */
+  .ade{ background:var(--surface); border-block:1px solid var(--border); padding:40px 0; }
+  .ade-inner{ max-width:74ch; display:flex; gap:20px; align-items:flex-start; }
+  .ade-mark{
+    flex:none; width:48px; height:48px; border-radius:12px;
+    background:#0F172A; color:#fff; display:grid; place-items:center;
+    font-size:.72rem; font-weight:800; letter-spacing:.5px;
+  }
+  .ade-body p{ color:#334155; font-size:1.02rem; line-height:1.65; margin-bottom:12px; }
+  .ade-body p:last-child{ margin-bottom:0; }
+  .ade-who{ font-size:.82rem; font-weight:800; letter-spacing:.9px; text-transform:uppercase; color:var(--teal); margin-bottom:9px; }
+
+  /* ===== Apple toolkit ===== */
+  .kit-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin-top:34px; }
+  .kit{
+    background:var(--surface); border:1px solid var(--border); border-radius:18px;
+    padding:26px 24px; display:flex; flex-direction:column;
+  }
+  .kit-ico{ font-size:1.7rem; margin-bottom:12px; }
+  .kit h3{ font-size:1.1rem; margin-bottom:6px; }
+  .kit .kit-role{ font-size:.78rem; font-weight:800; letter-spacing:.7px; text-transform:uppercase; color:var(--teal); margin-bottom:10px; }
+  .kit p{ color:var(--muted); font-size:.95rem; margin-bottom:12px; }
+  .kit p:last-of-type{ margin-bottom:0; }
+  .kit-how{ margin-top:auto; padding-top:14px; border-top:1px solid var(--border); font-size:.87rem; color:#475569; }
+  .kit-how b{ color:#0F172A; }
+  @media (max-width:900px){ .kit-grid{ grid-template-columns:1fr; } }
+
 .skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}.skip-link:focus{position:fixed;top:0;left:0;width:auto;height:auto;padding:8px 16px;background:#0F2B3D;color:#fff;z-index:9999;font-size:14px;text-decoration:none;border-radius:0 0 4px 0;}</style>
 
 <script type="application/ld+json">
@@ -357,12 +387,12 @@
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://numberbender.com/" },
         { "@type": "ListItem", "position": 2, "name": "Teach It Like You Stream It", "item": "https://numberbender.com/teach-it-like-you-stream-it" },
-        { "@type": "ListItem", "position": 3, "name": "How to Use Numberbender Studio", "item": "https://numberbender.com/studio-tutorial" }
+        { "@type": "ListItem", "position": 3, "name": "Inside the Numberbender Studio: Making Thinking Visible with iPad", "item": "https://numberbender.com/studio-tutorial" }
       ]
     },
     {
       "@type": "HowTo",
-      "name": "How to use Numberbender Studio for online teaching",
+      "name": "Making thinking visible with iPad in Numberbender Studio",
       "description": "Set up a free, streaming-style teaching studio in your browser and screen-share it into Zoom, Google Meet, or Microsoft Teams.",
       "totalTime": "PT3M",
       "estimatedCost": { "@type": "MonetaryAmount", "currency": "USD", "value": "0" },
@@ -605,9 +635,9 @@
   <div class="container">
     <div class="hero-grid">
       <div>
-        <span class="eyebrow">🎬 Teach It Like You Stream It</span>
-        <h1>How to use <span class="hl">Numberbender Studio</span></h1>
-        <p class="lede">Five short tutorials that turn any laptop into a broadcast-quality classroom — camera beside your slides, iPad whiteboard, vertical shorts, two apps at once. Free, no login, nothing to install.</p>
+        <span class="eyebrow">🍎 Apple Distinguished Educator · Teach It Like You Stream It</span>
+        <h1>Inside the Numberbender Studio<span class="h1-sub">Making thinking visible with iPad</span></h1>
+        <p class="lede">A finished slide hides the part students actually need — the working out. This is the free setup I use to put my thinking on screen as it happens: iPad and Apple Pencil, Keynote, and a phone for a camera. Five short tutorials, nothing to buy.</p>
         <div class="pill-row">
           <span class="pill">🆓 100% free</span>
           <span class="pill">🔒 No login</span>
@@ -660,12 +690,84 @@
   </div>
 </section>
 
+
+<!-- ========== ADE NOTE ========== -->
+<section class="ade">
+  <div class="container">
+    <div class="ade-inner">
+      <div class="ade-mark" aria-hidden="true">ADE</div>
+      <div class="ade-body">
+        <div class="ade-who">A note from Dr. E</div>
+        <p>The tools on this page are Apple tools because that is what I teach with, and the Apple
+        Distinguished Educator community shaped how I use them. But the point was never the hardware.</p>
+        <p>An iPad does not make anyone a better teacher. What it does is let students watch you
+        <b>think</b> &mdash; the crossing out, the second attempt, the moment you realise the first approach
+        will not work. That is the part a finished slide hides, and it is the part students actually need.
+        Everything below is free, and none of it requires the newest anything.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== MAKING THINKING VISIBLE ========== -->
+<section class="band" id="thinking-visible">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-eyebrow">The idea</div>
+      <h2>Show the working, not the answer</h2>
+      <p>Students rarely struggle because they never saw the finished result. They struggle because they
+      never saw anyone arrive at it. These three tools exist on this page for one reason &mdash; each one
+      puts a different part of your thinking on screen while it is still happening.</p>
+    </div>
+
+    <div class="kit-grid">
+      <article class="kit">
+        <div class="kit-ico" aria-hidden="true">&#9998;</div>
+        <div class="kit-role">The thinking surface</div>
+        <h3>iPad + Apple Pencil</h3>
+        <p>Work the problem by hand, live, while the class watches. Handwriting is slow enough for students
+        to follow and honest enough to show a wrong turn &mdash; which is usually the most useful thing
+        that happens in the lesson.</p>
+        <div class="kit-how"><b>In Studio:</b> mirror the iPad and put it beside your camera with the
+        side-by-side layout. Tutorial&nbsp;3 shows the whole setup.</div>
+      </article>
+
+      <article class="kit">
+        <div class="kit-ico" aria-hidden="true">&#9635;</div>
+        <div class="kit-role">The prepared part</div>
+        <h3>Keynote</h3>
+        <p>Some things should be built ahead of time &mdash; a definition, a diagram, a derivation that is
+        too long to write out live. Build it so it arrives one step at a time rather than appearing
+        finished, and it still reads as thinking rather than as a conclusion.</p>
+        <div class="kit-how"><b>In Studio:</b> add the Keynote window as your second pane, so your face
+        stays at full size next to it instead of shrinking into a corner.</div>
+      </article>
+
+      <article class="kit">
+        <div class="kit-ico" aria-hidden="true">&#128241;</div>
+        <div class="kit-role">Getting it on screen</div>
+        <h3>Continuity Camera &amp; QuickTime</h3>
+        <p>Your phone is a better camera than any laptop webcam, and your iPad screen can be on the call
+        without any extra hardware. This is the plumbing that makes the other two possible.</p>
+        <div class="kit-how"><b>How:</b> Continuity Camera puts your iPhone in the camera list on Mac.
+        For the iPad, mirror it with QuickTime on Mac, or an AirPlay-receiver app on Windows, and capture
+        that window.</div>
+      </article>
+    </div>
+
+    <p style="margin-top:26px;color:var(--muted);font-size:.95rem;">
+      💡 <b>Not on Apple?</b> None of this is required. Any tablet with a stylus, any slide app, and any
+      phone webcam app will do the same job &mdash; Studio does not care which you use. These are simply the
+      ones on my desk.
+    </p>
+  </div>
+</section>
 <!-- ========== QUICK START ========== -->
 <section class="band band-alt" id="quick-start">
   <div class="container">
     <div class="section-head">
       <div class="section-eyebrow">Start here</div>
-      <h2>Up and running in about three minutes</h2>
+      <h2>Now the setup — about three minutes</h2>
       <p>You do not need a capture card, a green screen, or OBS. If you can open a browser tab and share your screen, you already know how to do this.</p>
     </div>
     <div class="steps">
