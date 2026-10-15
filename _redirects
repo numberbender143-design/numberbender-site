@@ -140,6 +140,58 @@ https://www.numberbender.com/*  https://numberbender.com/:splat  301!
 # CCC atlas duplicate → canonical hub
 /ccc-atlas                      /math-ccc                       301!
 
+# ── GSC "Not found (404)" fixes — Oct 2026 ──
+# Truncated link to the AB 1705 page (missing "math")
+/ab1705-corequisite-            /ab1705-corequisite-math        301
+# Old root-level subject hubs → v2 subject pages
+/precalculus                    /subjects/precalculus           301
+/precalculus/                   /subjects/precalculus           301
+/calculus                       /subjects/calculus              301
+/calculus/                      /subjects/calculus              301
+/trigonometry                   /subjects/trigonometry          301
+/trigonometry/                  /subjects/trigonometry          301
+# Old singular /lesson/* URLs (only /lessons/* was covered)
+/lesson/*                       /courses                        301
+# DepEd PDFs that moved into the worksheet library → their HTML worksheet pages
+/deped/02-08-statistics-quartiles-box-and-whisker-plots.pdf  /worksheets/statistics/02-08-statistics-quartiles-box-and-whisker-plots  301
+/deped/01-04-statistics-categorical-vs-quantitative-variables.pdf  /worksheets/statistics/01-04-statistics-categorical-vs-quantitative-variables  301
+/deped/02-02-statistics-analyzing-univariate-data-dot-plots-histograms.pdf  /worksheets/statistics/02-02-statistics-analyzing-univariate-data-dot-plots-histograms  301
+/deped/02-07-statistics-percentile-rank-raw-data-normal-distributions.pdf  /worksheets/statistics/02-07-statistics-percentile-rank-raw-data-normal-distributions  301
+/deped/01-02-algebra-number-properties.pdf  /worksheets/algebra/01-02-algebra-number-properties  301
+/deped/02-03-statistics-stem-and-leaf-plots.pdf  /worksheets/statistics/02-03-statistics-stem-and-leaf-plots  301
+/deped/02-04-statistics-mean-vs-median-measures-of-center.pdf  /worksheets/statistics/02-04-statistics-mean-vs-median-measures-of-center  301
+/deped/numberbender_real_numbers_in_word_problems.pdf  /worksheets/algebra/numberbender-real-numbers-in-word-problems  301
+/deped/numberbender_solving_basic_equations_integer_operations.pdf  /worksheets/algebra/numberbender-solving-basic-equations-integer-operations  301
+/deped/02-06-statistics-percentile-rank-raw-data-and-normal-distributions.pdf  /worksheets/statistics/02-06-statistics-percentile-rank-raw-data-and-normal-distributions  301
+/deped/01-06-statistics-simple-random-sampling-with-table-d.pdf  /worksheets/statistics/01-06-statistics-simple-random-sampling-with-table-d  301
+/deped/numberbender_naming_angles_in_geometry.pdf  /worksheets/geometry/numberbender-naming-angles-in-geometry  301
+/deped/02-03-algebra-evaluating-expressions-3.pdf  /worksheets/algebra/02-03-algebra-evaluating-expressions-3  301
+/deped/01-01-statistics-identifying-population-and-sample.pdf  /worksheets/statistics/01-01-statistics-identifying-population-and-sample  301
+/deped/02-05-statistics-percentile-rank-from-raw-data.pdf  /worksheets/statistics/02-05-statistics-percentile-rank-from-raw-data  301
+/deped/01-02-statistics-population-sample-parameters-statistics.pdf  /worksheets/statistics/01-02-statistics-population-sample-parameters-statistics  301
+/deped/02-01-algebra-evaluating-expressions.pdf  /worksheets/algebra/02-01-algebra-evaluating-expressions  301
+/deped/numberbender_classifying_polygons.pdf  /worksheets/geometry/numberbender-classifying-polygons  301
+/deped/numberbender_angles_of_a_polygon_using_diagonals.pdf  /worksheets/geometry/numberbender-angles-of-a-polygon-using-diagonals  301
+/deped/numberbender_solving_one_step_linear_equations.pdf  /worksheets/algebra/numberbender-solving-one-step-linear-equations  301
+/deped/02-02-algebra-evaluating-expressions-2.pdf  /worksheets/algebra/02-02-algebra-evaluating-expressions-2  301
+/deped/numberbender_points_lines_and_planes.pdf  /worksheets/geometry/numberbender-points-lines-and-planes  301
+/deped/02-01-statistics-dot-plots-univariate-data.pdf  /worksheets/statistics/02-01-statistics-dot-plots-univariate-data  301
+/deped/01-07-statistics-simulating-experiments-random-digit-table.pdf  /worksheets/statistics/01-07-statistics-simulating-experiments-random-digit-table  301
+/deped/01-09-statistics-selection-bias-lurking-confounding-variables.pdf  /worksheets/statistics/01-09-statistics-selection-bias-lurking-confounding-variables  301
+/deped/01-02-statistics-discrete-vs-continuous-variables.pdf  /worksheets/statistics/01-02-statistics-discrete-vs-continuous-variables  301
+# OBS scene files moved from /studio/ to /studio/obs/
+/studio/numberbender-studio-mac.json      /studio/obs/numberbender-studio-mac.json      301
+/studio/numberbender-studio-windows.json  /studio/obs/numberbender-studio-windows.json  301
+# Calculus sibling links resolved one level too high when the page was
+# loaded without a trailing slash (../../x → /courses/x). Links are now
+# root-absolute; these catch URLs Google already discovered.
+/courses/limits-english/worksheets/*       /courses/calculus/limits-english/worksheets       301
+/courses/limits-filipino/worksheets/*      /courses/calculus/limits-filipino/worksheets      301
+/courses/derivatives-english/worksheets/*  /courses/calculus/derivatives-english/worksheets  301
+/courses/derivatives-filipino/worksheets/* /courses/calculus/derivatives-filipino/worksheets 301
+/courses/integrals-english/worksheets/*    /courses/calculus/integrals-english/worksheets    301
+/courses/integrals-filipino/worksheets/*   /courses/calculus/integrals-filipino/worksheets   301
+
 # Catch-all: anything else not found → custom 404 (Netlify does this automatically via 404.html)
 
 # Audit deliverables live in the repo for the PR but are not site content
