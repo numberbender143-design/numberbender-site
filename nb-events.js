@@ -5,7 +5,9 @@
    listener covers the whole site:
      worksheet_download  click on a worksheet file (.pdf / .docx / .xlsx),
                          whether it opens in the viewer or downloads
-                         params: worksheet_name, subject, grade, method
+                         params: worksheet_name, subject, grade, method,
+                         plus file_name and link_url, which nb-search.js
+                         sent for this event from July to October 2026
      youtube_click       click on a link to youtube.com / youtu.be
                          params: video_id, page_path, link_url
    contact_submit is fired by contact.html's own submit handlers, only after
@@ -64,10 +66,14 @@
 
   function onClick(e) {
     if (e.type === "auxclick" && e.button !== 1) return;   // middle-click only
-    var a = e.target && e.target.closest && e.target.closest("a[href]");
+    // Links, plus the DepEd pages' "View" buttons: nbmPdf('/worksheets/….pdf', …)
+    var a = e.target && e.target.closest && e.target.closest("a[href], button.ws-btn.view");
     if (!a) return;
+    var href = a.tagName === "A" ? a.getAttribute("href")
+      : ((a.getAttribute("onclick") || "").match(/'([^']+\.pdf)'/) || [])[1];
+    if (!href) return;
     var u;
-    try { u = new URL(a.getAttribute("href"), location.href); } catch (_) { return; }
+    try { u = new URL(href, location.href); } catch (_) { return; }
 
     if (YT_RE.test(u.hostname)) {
       send("youtube_click", {
@@ -87,7 +93,9 @@
       worksheet_name: file.replace(FILE_RE, ""),
       subject: subjectOf(u.pathname) || subjectOf(location.pathname),
       grade: gradeOf(u.pathname) || gradeOf(location.pathname),
-      method: a.hasAttribute("download") ? "download" : "open"
+      method: a.hasAttribute("download") ? "download" : "open",
+      file_name: file,
+      link_url: u.href
     });
   }
 

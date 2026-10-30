@@ -316,22 +316,16 @@
 
 /* ===== NB conversion tracking (2026-07-01) =====
    Fires GA4 events sitewide (this file loads on 716 pages):
-   - worksheet_download : click on any .pdf link
    - worksheet_view     : click on a "View" worksheet button (nbmPdf)
    - email_signup       : Mailchimp form submit (skipped on / and /contact,
                           which already fire it inline)
+   worksheet_download moved to /nb-events.js (2026-10) with the other
+   GA4 key events — don't fire it here too.
    Mark these as Key events in GA4: Admin > Events. */
 (function(){
   function tg(){ if(typeof gtag==='function'){ gtag.apply(null,arguments); } }
   document.addEventListener('click', function(e){
     if(!e.target || !e.target.closest) return;
-    var a = e.target.closest('a[href*=".pdf"]');
-    if(a){
-      var f=(a.getAttribute('href')||'').split('/').pop();
-      tg('event','worksheet_download',{ file_name:f, link_url:a.href,
-        method:a.hasAttribute('download')?'download':'open' });
-      return;
-    }
     var v = e.target.closest('.ws-btn.view');
     if(v){
       var oc=v.getAttribute('onclick')||'', m=oc.match(/'([^']*\.pdf)'/);
