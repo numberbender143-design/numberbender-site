@@ -9,6 +9,7 @@
   gtag('js', new Date());
   gtag('config', 'G-P1M2WZD840');
 </script>
+<script src="/nb-events.js" defer></script>
 <!-- Microsoft Clarity -->
 <script type="text/javascript">
   (function(c,l,a,r,i,t,y){
@@ -105,6 +106,30 @@ nav .nav-links a:hover{ color: #fff; }
     transition: transform 0.15s, box-shadow 0.15s;
   }
   .error-links a:hover{ transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.12); }
+  .error-sub{
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 28px 0 12px;
+  }
+  .error-grades{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+  .error-grades a{
+    display: block;
+    padding: 14px 8px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .error-grades a:hover{ transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.12); }
   .btn-primary{
     background: var(--teal);
     color: #fff;
@@ -139,6 +164,7 @@ nav .nav-links a:hover{ color: #fff; }
   @media(max-width:600px){
     .error-card{ padding: 40px 24px; }
     .error-number{ font-size: 5rem; }
+    .error-grades{ grid-template-columns: repeat(2, 1fr); }
 }
 .skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}.skip-link:focus{position:fixed;top:0;left:0;width:auto;height:auto;padding:8px 16px;background:#0F2B3D;color:#fff;z-index:9999;font-size:14px;text-decoration:none;border-radius:0 0 4px 0;}
 /* ── standard site nav (ported) ── */
@@ -324,7 +350,7 @@ nav .nav-links a:hover{ color: #fff; }
           <a href="/start-here">🎁 Free Starter Lesson</a>
           <a href="/find-your-course">🧭 Where Do I Start?</a>
           <a href="/courses">📚 Explore Math Lessons</a>
-          <a href="/subjects/test-prep/">🎯 Test Prep Practice</a>
+          <a href="/subjects/test-prep">🎯 Test Prep Practice</a>
           <a href="/math-worksheets">📝 Free Worksheets</a>
           <a href="/for-filipino-students">🇵🇭 Para sa Filipino Students</a>
         </div>
@@ -392,13 +418,28 @@ nav .nav-links a:hover{ color: #fff; }
   <div class="error-card">
     <div class="error-number">404</div>
     <h1>This page doesn't exist (yet)</h1>
-    <p>The page you're looking for may have moved or been removed. But your math journey doesn't have to stop here — here's where you can go next:</p>
+    <p>The page you're looking for may have moved or been removed. But your math journey doesn't have to stop here — here's where you can go next. <span lang="fil">Hindi namin mahanap ang page na ito, pero nandito pa rin ang mga aralin.</span></p>
 
     <div class="error-links">
       <a href="/" class="btn-primary">← Back to Homepage</a>
+    </div>
+
+    <h2 class="error-sub">DepEd Math lessons · Mga aralin sa DepEd Math</h2>
+    <div class="error-grades">
+      <a href="/deped/grade-7" class="btn-outline">Grade 7</a>
+      <a href="/deped/grade-8" class="btn-outline">Grade 8</a>
+      <a href="/deped/grade-9" class="btn-outline">Grade 9</a>
+      <a href="/deped/grade-10" class="btn-outline">Grade 10</a>
+    </div>
+    <div class="error-links">
+      <a href="/deped" class="btn-outline">All DepEd Math, incl. Senior High</a>
+    </div>
+
+    <h2 class="error-sub">Everything else</h2>
+    <div class="error-links">
+      <a href="/math-worksheets" class="btn-outline">Free Printable Worksheets</a>
       <a href="/courses" class="btn-outline">Browse Free Math Lessons</a>
       <a href="/teacher-resources" class="btn-outline">Flipped Classroom Resources</a>
-      <a href="/find-your-course" class="btn-outline">Find Your Course</a>
     </div>
 
     <hr class="divider">

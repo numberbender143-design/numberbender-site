@@ -10,6 +10,7 @@
 
   gtag('config', 'G-P1M2WZD840');
 </script>
+<script src="/nb-events.js" defer></script>
 
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -550,7 +551,7 @@
           <a href="/start-here">🎁 Free Starter Lesson</a>
           <a href="/find-your-course">🧭 Where Do I Start?</a>
           <a href="/courses">📚 Explore Math Lessons</a>
-          <a href="/subjects/test-prep/">🎯 Test Prep Practice</a>
+          <a href="/subjects/test-prep">🎯 Test Prep Practice</a>
           <a href="/math-worksheets">📝 Free Worksheets</a>
           <a href="/for-filipino-students">🇵🇭 Para sa Filipino Students</a>
         </div>
@@ -983,8 +984,11 @@
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: new URLSearchParams(data).toString()
     })
-    .then(() => {
-      window.location.href = 'contact-thanks.html';
+    .then((res) => {
+      if (!res.ok) throw new Error(res.status);
+      const go = () => { window.location.href = 'contact-thanks.html'; };
+      if (window.nbEvent) nbEvent('contact_submit', { form_name: form.getAttribute('name') }, go);
+      else go();
     })
     .catch(() => {
       alert('Something went wrong. Please email peter@numberbender.com directly.');
@@ -1031,8 +1035,9 @@
 
 <script>
   // GA4 event tracking: email signups + outbound clicks
+  // (Netlify contact forms are tracked as contact_submit, on success)
   document.querySelectorAll('form').forEach(function(form) {
-    if (form.querySelector('input[type="email"]')) {
+    if (form.querySelector('input[type="email"]') && !form.hasAttribute('data-netlify')) {
       form.addEventListener('submit', function() {
         gtag('event', 'email_signup', { event_category: 'engagement', event_label: window.location.pathname });
       });
@@ -1136,7 +1141,11 @@ function nbSubmit(){
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams(data).toString()
       })
-      .then(function () { window.location.href = 'contact-thanks.html'; })
+      .then(function (res) {
+        var go = function () { window.location.href = 'contact-thanks.html'; };
+        if (res.ok && window.nbEvent) nbEvent('contact_submit', { form_name: form.getAttribute('name') }, go);
+        else go();
+      })
       .catch(function () {
         // Mailchimp already has them; only the research answers were lost.
         window.location.href = 'contact-thanks.html';
