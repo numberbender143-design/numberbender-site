@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- nb-no-inject -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P1M2WZD840"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P1M2WZD840');
+</script>
+<script src="/nb-events.js" defer></script>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>AP Exam Prep — Free AP Calculus AB &amp; AP Statistics Review | Numberbender</title>
+<meta name="description" content="Free AP Calculus AB and AP Statistics review by Dr. E: video lessons by AP unit in English and Filipino, worksheets, and FRQ practice with solutions."/>
+<link rel="canonical" href="https://numberbender.com/ap"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="AP Exam Prep — AP Calculus AB &amp; AP Statistics | Numberbender"/>
+<meta property="og:description" content="Free AP Calculus AB and AP Statistics review by Dr. E: video lessons by AP unit in English and Filipino, worksheets, and FRQ practice with solutions."/>
+<meta property="og:url" content="https://numberbender.com/ap"/>
+<meta property="og:site_name" content="Numberbender"/>
+<meta property="og:image" content="https://numberbender.com/images/dr-e-hero.jpg"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="AP Exam Prep — AP Calculus AB &amp; AP Statistics | Numberbender"/>
+<meta name="twitter:description" content="Free AP Calculus AB and AP Statistics review by Dr. E: video lessons by AP unit in English and Filipino, worksheets, and FRQ practice with solutions."/>
+<meta name="twitter:image" content="https://numberbender.com/images/dr-e-hero.jpg"/>
+<link rel="icon" type="image/svg+xml" href="/images/exports/numberbender-favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/exports/png/favicon-32.png">
+<link rel="icon" type="image/png" sizes="180x180" href="/images/exports/png/favicon-180.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/exports/png/favicon-180.png">
+<meta name="theme-color" content="#2563EB">
+<style>
+:root{
+  --navy:#0F172A;
+  --blue:#2563EB; --blue-dark:#1d4ed8; --blue-light:#EFF6FF; --blue-mid:#93C5FD; --blue-xlight:#DBEAFE;
+  --red:#DC2626; --red-dark:#b91c1c; --red-light:#FEF2F2; --red-mid:#FCA5A5;
+  --teal:#1F6F6B; --teal-dark:#085041;
+  --bg:#F8FAFC; --surface:#FFFFFF;
+  --muted:#64748B; --border:#E2E8F0;
+  --green:#16a34a; --green-light:#f0fdf4; --green-mid:#86efac;
+  --amber:#92400e; --amber-light:#fef3c7; --amber-mid:#fde68a;
+  --radius:16px; --shadow:0 8px 24px rgba(15,23,42,0.09);
+  --active:#7c3aed; --active-dark:#6d28d9; --active-light:#f5f3ff; --active-mid:#c4b5fd;
+}
+body[data-lang="fil"]{
+  --active:var(--red); --active-dark:var(--red-dark); --active-light:var(--red-light); --active-mid:var(--red-mid);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Inter",Roboto,Arial,sans-serif;color:var(--navy);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;}
+a{color:var(--blue);text-decoration:none;}
+a:hover{text-decoration:underline;}
+img{max-width:100%;display:block;}
+.container{width:min(1000px,92%);margin-inline:auto;}
+
+/* ── NAV ── */
+.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.94);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--border);}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0;}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.1rem;color:var(--navy);text-decoration:none;}
+.logo-lockup{padding:0;}
+.logo-lockup .lockup-img{height:52px;width:auto;display:block;max-width:280px;}
+.menu-toggle{display:none;background:none;border:none;cursor:pointer;font-size:1.4rem;color:var(--navy);}
+.nav-links{display:flex;gap:20px;align-items:center;flex-wrap:nowrap;}
+.nav-links a,.nav-links .dropdown-trigger{white-space:nowrap;}
+.nav-links a{color:var(--navy);font-weight:500;font-size:0.92rem;}
+.nav-links a:hover{color:var(--blue);text-decoration:none;}
+.nav-cta{background:var(--teal-dark);color:white!important;padding:8px 15px;border-radius:9px;font-weight:600;font-size:0.88rem;}
+.nav-cta:hover{background:var(--teal);text-decoration:none!important;}
+.nav-dropdown{position:relative;}
+.nav-dropdown .dropdown-trigger{background:none;border:none;padding:0;margin:0;font:inherit;color:var(--navy);font-weight:500;font-size:0.92rem;cursor:pointer;display:inline-flex;align-items:center;gap:4px;transition:color .15s ease;}
+.nav-dropdown .dropdown-trigger:hover{color:var(--blue);}
+.nav-dropdown .caret{font-size:.75em;display:inline-block;transition:transform .2s ease;}
+.nav-dropdown:hover .caret,.nav-dropdown .dropdown-trigger[aria-expanded="true"] .caret{transform:rotate(180deg);}
+.nav-dropdown .dropdown-menu{position:absolute;top:100%;left:0;margin-top:10px;background:white;border:1px solid var(--border);border-radius:14px;padding:6px;box-shadow:0 20px 50px rgba(15,23,42,.12);min-width:240px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .15s ease,transform .15s ease,visibility .15s ease;z-index:100;}
+.nav-dropdown .dropdown-menu::before{content:'';position:absolute;top:-10px;left:0;right:0;height:10px;}
+.nav-dropdown:hover .dropdown-menu,.nav-dropdown .dropdown-menu.open{opacity:1;visibility:visible;transform:translateY(0);}
+.nav-dropdown .dropdown-menu a{display:block;padding:10px 14px;border-radius:8px;color:var(--navy);font-weight:500;font-size:0.92rem;}
+.nav-dropdown .dropdown-menu a:hover{background:rgba(37,99,235,.08);color:var(--blue);text-decoration:none;}
+@media(max-width:900px){
+  .logo-lockup .lockup-img{height:42px;max-width:220px;}
+  .menu-toggle{display:block;}
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:white;flex-direction:column;padding:18px;border-bottom:1px solid var(--border);gap:14px;}
+  .nav-links.open{display:flex;}
+  .nav-dropdown{width:100%;}
+  .nav-dropdown .dropdown-trigger{width:100%;justify-content:space-between;padding:6px 0;}
+  .nav-dropdown .dropdown-menu{position:static;box-shadow:none;border:none;padding:0 0 4px 14px;margin-top:0;min-width:0;opacity:1;visibility:visible;transform:none;display:none;background:transparent;}
+  .nav-dropdown:hover .dropdown-menu{display:none;}
+  .nav-dropdown .dropdown-menu.open{display:block;}
+}
+
+/* ── HERO ── */
+.subject-hero{background:linear-gradient(135deg,#6d28d9 0%,#7c3aed 60%,#8b5cf6 100%);color:white;padding:44px 0 0;}
+.breadcrumb-nav{font-size:0.82rem;margin-bottom:20px;color:rgba(255,255,255,0.65);}
+.breadcrumb-nav a{color:rgba(255,255,255,0.65);}
+.breadcrumb-nav a:hover{color:white;text-decoration:none;}
+.hero-inner{display:flex;align-items:flex-end;gap:28px;}
+.hero-content{flex:1;display:flex;align-items:flex-start;gap:20px;padding-bottom:48px;}
+.hero-icon{width:80px;height:80px;border-radius:18px;flex-shrink:0;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,0.25);}
+.hero-text h1{font-size:clamp(1.9rem,4vw,2.5rem);font-weight:900;letter-spacing:-0.025em;margin-bottom:10px;line-height:1.1;}
+.hero-text .tagline{font-size:1rem;color:rgba(255,255,255,0.78);max-width:540px;margin-bottom:22px;line-height:1.55;}
+.hero-stats{display:inline-flex;background:rgba(0,0,0,0.22);border:1px solid rgba(255,255,255,0.14);border-radius:12px;overflow:hidden;}
+.hstat{padding:11px 22px;text-align:center;border-right:1px solid rgba(255,255,255,0.1);}
+.hstat:last-child{border-right:none;}
+.hstat .n{display:block;font-size:1.25rem;font-weight:800;line-height:1.2;}
+.hstat .l{font-size:0.7rem;color:rgba(255,255,255,0.65);font-weight:500;text-transform:uppercase;letter-spacing:.05em;}
+.hero-pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px;}
+.hero-pill{font-size:0.75rem;font-weight:600;padding:4px 12px;border-radius:999px;background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.88);}
+
+/* ── LANG BAR ── */
+.lang-bar{background:var(--surface);border-bottom:2px solid var(--border);padding:0;position:sticky;top:71px;z-index:40;transition:border-color .3s;}
+body[data-lang="fil"] .lang-bar{border-bottom-color:var(--red-mid);}
+.lang-bar-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0;height:52px;}
+.lang-note{font-size:0.83rem;color:var(--muted);display:flex;align-items:center;gap:6px;}
+.lang-note strong{color:var(--navy);transition:color .2s;}
+body[data-lang="fil"] .lang-note strong{color:var(--red);}
+.lang-toggle{display:flex;background:var(--bg);border:1.5px solid var(--border);border-radius:9px;padding:3px;gap:2px;}
+.lang-btn{padding:6px 18px;border-radius:6px;font-size:0.85rem;font-weight:700;cursor:pointer;border:none;background:transparent;color:var(--muted);transition:all .18s;display:flex;align-items:center;gap:6px;}
+.lang-btn.active{background:var(--active);color:white;box-shadow:0 2px 6px rgba(124,58,237,0.3);}
+body[data-lang="fil"] .lang-btn.active{background:var(--red);box-shadow:0 2px 6px rgba(220,38,38,0.3);}
+
+/* ── UNITS SECTION ── */
+.units-section{padding:36px 0 64px;}
+.section-heading{font-size:0.78rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:18px;display:flex;align-items:center;gap:10px;}
+.section-heading::after{content:'';flex:1;height:1px;background:var(--border);}
+.unit-list{display:flex;flex-direction:column;gap:10px;}
+
+/* ── UNIT ACCORDION ── */
+.unit-block{background:var(--surface);border:1.5px solid var(--border);border-radius:14px;overflow:hidden;transition:border-color .2s,box-shadow .2s;}
+.unit-block.open{border-color:var(--active-mid);box-shadow:0 4px 16px rgba(124,58,237,0.08);}
+body[data-lang="fil"] .unit-block.open{box-shadow:0 4px 16px rgba(220,38,38,0.08);}
+.unit-header{display:flex;align-items:center;gap:14px;padding:18px 22px;cursor:pointer;user-select:none;transition:background .15s;}
+.unit-header:hover{background:var(--active-light);}
+.unit-num{height:42px;padding:0 16px;border-radius:10px;background:var(--blue-light);color:var(--blue);font-weight:800;font-size:0.8rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .2s;white-space:nowrap;letter-spacing:.01em;border:1.5px solid var(--blue-xlight);}
+.unit-block.open .unit-num{background:var(--active);color:white;border-color:var(--active-dark);}
+.unit-info{flex:1;min-width:0;}
+.unit-title{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:3px;}
+.unit-meta{font-size:0.78rem;color:var(--muted);}
+.unit-complete{color:var(--green);font-weight:700;}
+.unit-complete::before{content:'✓ ';}
+.unit-chevron{color:var(--muted);font-size:1rem;transition:transform .25s;line-height:1;flex-shrink:0;}
+.unit-block.open .unit-chevron{transform:rotate(180deg);}
+
+.unit-lessons{max-height:0;overflow:hidden;transition:max-height .38s cubic-bezier(.4,0,.2,1);}
+.unit-block.open .unit-lessons{max-height:9999px;}
+.lessons-inner{padding:4px 22px 18px;}
+.lessons-divider{height:1px;background:var(--border);margin-bottom:14px;}
+.lesson-list{display:flex;flex-direction:column;gap:6px;}
+
+/* ── TOPIC BLOCKS — Unit 8 nested FRQ sub-groups ── */
+.topic-list{display:flex;flex-direction:column;gap:10px;padding:0 0 8px;}
+.topic-block{border:1.5px solid var(--border);border-radius:12px;overflow:hidden;background:var(--surface);transition:border-color .2s;}
+.topic-block.open{border-color:var(--active-mid);}
+.topic-header{display:flex;align-items:center;gap:12px;padding:13px 16px;cursor:pointer;user-select:none;background:var(--active-light);border-left:4px solid var(--active);transition:filter .15s;}
+.topic-header:hover{filter:brightness(0.96);}
+.topic-icon{font-size:1.05rem;flex-shrink:0;width:24px;text-align:center;}
+.topic-info{flex:1;min-width:0;}
+.topic-title{font-weight:700;font-size:0.88rem;color:var(--navy);line-height:1.3;}
+.topic-count{font-size:0.73rem;color:var(--active);font-weight:600;margin-top:1px;}
+.topic-chevron{color:var(--active);font-size:0.8rem;transition:transform .22s;flex-shrink:0;line-height:1;}
+.topic-block.open .topic-chevron{transform:rotate(180deg);}
+.topic-lessons{max-height:0;overflow:hidden;transition:max-height .32s cubic-bezier(.4,0,.2,1);}
+.topic-block.open .topic-lessons{max-height:2400px;}
+.topic-lessons .lesson-list{padding:10px 14px 12px;gap:6px;}
+
+/* ── LESSON CARD ── */
+.lesson-item{display:flex;align-items:center;gap:12px;padding:11px 14px;border-radius:10px;border:1px solid var(--border);background:var(--bg);transition:all .15s;text-decoration:none;color:inherit;}
+.lesson-item:hover:not(.no-video){border-color:var(--active-mid);background:var(--active-light);text-decoration:none;}
+.lesson-item.no-video{cursor:default;opacity:0.6;}
+.lesson-item.no-video:hover{border-color:var(--border);background:var(--bg);}
+
+.lesson-play{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;flex-shrink:0;font-size:0.72rem;transition:all .2s;}
+.lesson-item:not(.no-video) .lesson-play{background:var(--active);color:white;}
+.lesson-item:not(.no-video):hover .lesson-play{background:var(--active-dark);}
+.lesson-item.no-video .lesson-play{background:var(--border);color:var(--muted);}
+
+.lesson-meta{flex:1;min-width:0;}
+.lesson-title{font-size:0.93rem;font-weight:600;color:var(--navy);line-height:1.35;}
+.lesson-item.no-video .lesson-title{color:var(--muted);}
+.lesson-sub{font-size:0.75rem;color:var(--muted);margin-top:1px;}
+
+.lesson-badge{font-size:0.7rem;font-weight:700;padding:3px 9px;border-radius:999px;border:1px solid var(--border);color:var(--muted);background:white;white-space:nowrap;flex-shrink:0;letter-spacing:.02em;}
+.lesson-badge.both{background:var(--green-light);border-color:var(--green-mid);color:var(--green);}
+.lesson-badge.en{background:var(--blue-light);border-color:var(--blue-mid);color:var(--blue);}
+.lesson-badge.fil{background:var(--amber-light);border-color:var(--amber-mid);color:var(--amber);}
+
+/* ── BOTTOM CARDS ── */
+.bottom-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:48px;}
+.related-card{background:var(--surface);border:1.5px solid var(--border);border-radius:14px;padding:22px;}
+.related-card h4{font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:14px;}
+.subject-chips{display:flex;flex-wrap:wrap;gap:8px;}
+.subject-chip{display:inline-flex;align-items:center;gap:6px;padding:7px 14px;border:1.5px solid var(--border);border-radius:9px;font-weight:600;font-size:0.87rem;color:var(--navy);background:var(--bg);text-decoration:none;transition:all .15s;}
+.subject-chip:hover{border-color:var(--blue);color:var(--blue);background:var(--blue-light);text-decoration:none;}
+.subject-chip.all{border-color:var(--blue-mid);color:var(--blue);background:var(--blue-light);}
+.course-callout{background:linear-gradient(135deg,#085041,#1F6F6B);border-radius:14px;padding:22px 24px;display:flex;flex-direction:column;justify-content:space-between;gap:16px;}
+.course-callout .cal-label{font-size:0.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#9FE1CB;margin-bottom:6px;}
+.course-callout .cal-title{font-size:1rem;font-weight:800;color:white;margin-bottom:4px;}
+.course-callout .cal-sub{font-size:0.82rem;color:rgba(255,255,255,0.72);line-height:1.5;}
+.cal-links{display:flex;flex-direction:column;gap:8px;}
+.cal-link{display:block;text-align:center;padding:9px 16px;border-radius:9px;font-weight:700;font-size:0.85rem;text-decoration:none;transition:all .15s;}
+.cal-link.primary{background:white;color:#085041;}
+.cal-link.primary:hover{background:#f0fdf4;text-decoration:none;}
+.cal-link.secondary{background:rgba(255,255,255,0.14);color:white;border:1px solid rgba(255,255,255,0.25);}
+.cal-link.secondary:hover{background:rgba(255,255,255,0.22);text-decoration:none;}
+
+/* ── FOOTER ── */
+footer{background:var(--navy);color:#94a3b8;padding:56px 0 28px;}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:36px;}
+.foot h3{color:white;font-size:0.92rem;font-weight:700;margin-bottom:12px;}
+.foot a{display:block;color:#94a3b8;font-size:0.88rem;margin-bottom:8px;}
+.foot a:hover{color:white;text-decoration:none;}
+.foot-brand p{font-size:0.88rem;line-height:1.7;margin-top:12px;}
+.foot-bottom{border-top:1px solid #1e293b;padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:0.82rem;}
+.foot-logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.1rem;color:white;}
+.foot-logo-mark{width:42px;height:42px;border-radius:10px;display:grid;place-items:center;overflow:hidden;}
+
+/* ── HERO TRIO ── */
+.hero-trio{display:flex;align-items:stretch;margin-top:22px;background:rgba(0,0,0,0.22);border:1px solid rgba(255,255,255,0.15);border-radius:14px;overflow:hidden;}
+.hero-trio-step{display:flex;align-items:center;gap:13px;padding:15px 20px;flex:1;border-right:1px solid rgba(255,255,255,0.1);}
+.hero-trio-step:last-child{border-right:none;}
+.hero-trio-icon{font-size:1.5rem;line-height:1;flex-shrink:0;}
+.hero-trio-verb{font-size:0.68rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-bottom:3px;}
+.hero-trio-desc{font-size:0.84rem;font-weight:600;color:white;line-height:1.35;}
+
+/* ── HERO ARTWORK ── */
+.hero-text{flex:1;min-width:0;}
+.hero-artwork-wrap{
+  flex-shrink:0;
+  align-self:flex-end;
+  width:240px;
+  background:rgba(255,255,255,0.96);
+  border-radius:20px 20px 0 0;
+  padding:14px 14px 0;
+  overflow:hidden;
+  box-shadow:0 -4px 24px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.8);
+}
+.hero-artwork{width:100%;height:auto;display:block;}
+@media(max-width:760px){.hero-artwork-wrap{display:none;}}
+
+/* ── LESSON WORKSHEET BUTTONS ── */
+.lesson-right{display:flex;flex-direction:column;align-items:flex-end;gap:5px;flex-shrink:0;}
+.lesson-ws-row{display:flex;gap:4px;}
+.lesson-ws-btn{font-size:0.71rem;font-weight:700;padding:4px 10px;border-radius:7px;border:1.5px solid;cursor:pointer;white-space:nowrap;transition:all .15s;user-select:none;line-height:1.5;}
+.lesson-ws-btn.ws-view{background:var(--blue-light);color:var(--blue);border-color:var(--blue-mid);}
+.lesson-ws-btn.ws-view:hover{background:var(--blue);color:white;}
+.lesson-ws-btn.ws-dl{background:var(--green-light);color:var(--green);border-color:var(--green-mid);}
+.lesson-ws-btn.ws-dl:hover{background:var(--green);color:white;}
+
+/* ── VIDEO MODAL ── */
+.modal-overlay{position:fixed;inset:0;z-index:200;background:rgba(0,0,0,0.78);padding:24px 16px;overflow-y:auto;display:flex;align-items:flex-start;justify-content:center;visibility:hidden;opacity:0;transition:opacity .2s,visibility .2s;}
+.modal-overlay.active{visibility:visible;opacity:1;}
+.modal-box{background:var(--surface);border-radius:18px;width:min(820px,100%);margin:auto;overflow:hidden;box-shadow:0 24px 72px rgba(0,0,0,0.35);transform:translateY(8px);transition:transform .2s;}
+.modal-overlay.active .modal-box{transform:translateY(0);}
+.modal-header{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:20px 24px 16px;}
+.modal-lesson-title{font-size:1rem;font-weight:700;color:var(--navy);line-height:1.35;}
+.modal-lesson-sub{font-size:0.8rem;color:var(--muted);margin-top:3px;}
+.modal-close{background:var(--bg);border:1.5px solid var(--border);border-radius:8px;width:34px;height:34px;display:grid;place-items:center;cursor:pointer;font-size:0.9rem;color:var(--muted);flex-shrink:0;transition:all .15s;}
+.modal-close:hover{background:var(--border);color:var(--navy);}
+.modal-video-wrap{position:relative;padding-bottom:56.25%;height:0;background:#000;}
+.modal-video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:none;}
+.modal-footer{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 20px;border-top:1px solid var(--border);flex-wrap:wrap;}
+.ws-block{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.ws-label{font-size:0.8rem;font-weight:600;color:var(--muted);}
+.modal-btn-row{display:flex;gap:8px;flex-wrap:wrap;}
+.modal-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:9px;font-weight:700;font-size:0.85rem;text-decoration:none;border:1.5px solid;transition:all .15s;cursor:pointer;white-space:nowrap;}
+.modal-btn:hover{text-decoration:none;filter:brightness(.93);}
+.modal-btn.view{background:var(--blue-light);color:var(--blue);border-color:var(--blue-mid);}
+.modal-btn.dl{background:var(--green-light);color:var(--green);border-color:var(--green-mid);}
+.modal-btn.yt{background:var(--bg);color:var(--muted);border-color:var(--border);}
+
+/* ── WORKSHEET PREVIEW MODAL ── */
+.ws-iframe-wrap{border-top:1px solid var(--border);}
+.ws-iframe-wrap iframe{width:100%;height:clamp(380px,65vh,680px);border:none;display:block;background:var(--bg);}
+
+/* ── SEARCH BAR ── */
+.search-wrap{position:relative;margin-bottom:20px;}
+.search-icon{position:absolute;left:14px;top:50%;transform:translateY(-50%);font-size:1rem;pointer-events:none;}
+.lesson-search{width:100%;padding:13px 44px 13px 42px;border:2px solid var(--border);border-radius:10px;font-size:0.95rem;background:var(--surface);color:var(--navy);outline:none;transition:border-color .2s,box-shadow .2s;}
+.lesson-search:focus{border-color:var(--active);box-shadow:0 0 0 3px rgba(124,58,237,0.1);}
+.lesson-search::placeholder{color:var(--muted);}
+.search-clear{position:absolute;right:12px;top:50%;transform:translateY(-50%);width:26px;height:26px;border:none;background:var(--border);border-radius:50%;cursor:pointer;display:none;place-items:center;font-size:0.8rem;color:var(--muted);transition:background .2s,color .2s;}
+.search-clear:hover{background:var(--active);color:white;}
+.search-clear.visible{display:grid;}
+.search-count{font-size:0.83rem;color:var(--muted);margin-bottom:12px;min-height:1.2em;}
+.search-count strong{color:var(--active-dark);}
+.search-no-results{display:none;text-align:center;padding:40px 20px;color:var(--muted);}
+.search-no-results.visible{display:block;}
+.unit-block.search-hidden{display:none;}
+.lesson-item.search-hidden{display:none;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:720px){
+  .hero-inner{flex-direction:column;gap:18px;}
+  .hero-icon{width:60px;height:60px;font-size:1.3rem;}
+  .hero-trio{flex-direction:column;}
+  .hero-trio-step{border-right:none;border-bottom:1px solid rgba(255,255,255,0.1);}
+  .hero-trio-step:last-child{border-bottom:none;}
+  .bottom-grid{grid-template-columns:1fr;}
+  .foot-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:560px){
+  .nav-links{display:none;}
+  .foot-grid{grid-template-columns:1fr;}
+  .hstat{padding:9px 14px;}
+  .lang-bar-inner{height:auto;padding:10px 0;}
+  .lesson-ws-row{display:none;}
+}
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}.skip-link:focus{position:fixed;top:0;left:0;width:auto;height:auto;padding:8px 16px;background:#0F2B3D;color:#fff;z-index:9999;font-size:14px;text-decoration:none;border-radius:0 0 4px 0;}</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "AP Exam Prep",
+  "url": "https://numberbender.com/ap",
+  "description": "Free AP Calculus AB and AP Statistics review by Dr. E: video lessons by AP unit in English and Filipino, worksheets, and FRQ practice with solutions.",
+  "hasPart": [
+    {
+      "@type": "Course",
+      "name": "AP Calculus AB — Free Lessons, Worksheets and FRQ Practice",
+      "url": "https://numberbender.com/ap-calculus-ab"
+    },
+    {
+      "@type": "Course",
+      "name": "AP Statistics — Free Lessons, Worksheets and FRQ Practice",
+      "url": "https://numberbender.com/ap-statistics"
+    }
+  ],
+  "provider": {
+    "@type": "Organization",
+    "name": "Numberbender",
+    "url": "https://numberbender.com"
+  }
+}
+</script>
+<style id="nb-studio-nav">
+/* Numberbender Studio nav — pill dropdown + nav overflow fixes */
+.nav-links .nav-dropdown .dropdown-trigger.nav-studio{display:inline-flex;align-items:center;gap:6px;background:#1F6F6B;color:#fff;padding:8px 15px;border-radius:999px;border:none;font-weight:800;font-size:.88rem;line-height:1.25;box-shadow:0 3px 10px rgba(31,111,107,.28);white-space:nowrap;cursor:pointer;}
+.nav-links .nav-dropdown .dropdown-trigger.nav-studio:hover{background:#16544F;color:#fff;}
+.nav-studio-dd .dropdown-menu{min-width:278px;}
+.nav-studio-dd .dropdown-menu a{line-height:1.3;}
+.nav-studio-dd .dropdown-menu .nb-sub{display:block;font-size:.79rem;font-weight:500;color:#64748B;margin-top:3px;}
+.nav-studio-dd .dropdown-menu a:hover .nb-sub{color:#2563EB;}
+/* keep the two right-hand dropdowns inside the viewport */
+.nav-links .nav-dropdown:nth-last-of-type(-n+2) .dropdown-menu{left:auto;right:0;}
+.nbnav-links .nbnav-dd:nth-last-of-type(-n+2) .nbnav-menu{left:auto;right:0;}
+/* the nav is at capacity on desktop: collapse to the hamburger earlier */
+@media (max-width:1080px){
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;padding:18px;border-bottom:1px solid #E2E8F0;gap:14px;}
+  .nav-links.open{display:flex;}
+  .menu-toggle{display:block;}
+  .nav-links .nav-dropdown{width:100%;}
+  .nav-links .nav-dropdown .dropdown-trigger{width:100%;justify-content:space-between;padding:6px 0;}
+  .nav-links .nav-dropdown .dropdown-trigger.nav-studio{width:auto;justify-content:center;padding:8px 15px;}
+  .nav-links .nav-dropdown .dropdown-menu{position:static;box-shadow:none;border:none;padding:0 0 4px 14px;margin-top:0;min-width:0;opacity:1;visibility:visible;transform:none;display:none;background:transparent;left:0;right:auto;}
+  .nav-links .nav-dropdown:hover .dropdown-menu{display:none;}
+  .nav-links .nav-dropdown .dropdown-menu.open{display:block;}
+}
+</style>
+<link rel="stylesheet" href="/nb-print.css" media="print">
+<style id="nb-ap-css">
+.unit-title{font-size:inherit;margin:0;}
+.ap-unit-desc{color:#475569;font-size:.93rem;margin:6px 0 12px;line-height:1.55;}
+.ap-unit-desc a{color:var(--active-dark,#15803d);font-weight:600;text-decoration:underline;}
+.ap-ws{margin-top:14px;padding-top:12px;border-top:1px dashed var(--border);}
+.ap-ws-h{font-size:.74rem;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin:0 0 6px;}
+.ap-ws-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:2px 18px;}
+.ap-ws-list a{display:block;padding:5px 0;color:var(--navy);font-size:.9rem;}
+.ap-ws-list a:hover{color:var(--active-dark,#15803d);}
+.ap-story{padding:56px 0;background:#fff;border-top:1px solid var(--border);}
+.ap-story .container{max-width:860px;}
+.ap-story h2{font-size:1.6rem;font-weight:800;color:var(--navy);margin:0 0 14px;}
+.ap-story p{color:#334155;font-size:1.03rem;line-height:1.7;margin:0 0 14px;}
+.ap-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:22px;}
+.ap-card{display:block;border:1px solid var(--border);border-radius:14px;padding:18px;background:var(--bg);color:var(--navy);text-decoration:none!important;}
+.ap-card:hover{border-color:var(--active-mid,#86efac);box-shadow:0 6px 18px rgba(15,23,42,.06);}
+.ap-card strong{display:block;font-size:1rem;margin-bottom:4px;}
+.ap-card span{color:var(--muted);font-size:.88rem;line-height:1.5;}
+</style>
+<style id="nb-ap-landing-css">
+.apl{padding:40px 0 20px;}
+.apl-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;margin:0 0 34px;}
+.apl-course{display:block;border:1.5px solid var(--border);border-radius:18px;padding:24px;background:#fff;color:var(--navy);text-decoration:none!important;box-shadow:0 6px 20px rgba(15,23,42,.05);}
+.apl-course:hover{border-color:var(--active,#7c3aed);transform:translateY(-2px);}
+.apl-course .k{font-size:.75rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--active,#7c3aed);}
+.apl-course h2{font-size:1.5rem;font-weight:900;margin:6px 0 8px;}
+.apl-course p{color:#475569;margin:0 0 12px;line-height:1.55;}
+.apl-course ul{margin:0 0 14px;padding-left:1.1em;color:#334155;font-size:.93rem;} .apl-course li{margin:3px 0;}
+.apl-course .go{font-weight:800;color:var(--active,#7c3aed);}
+.apl-h{font-size:1.35rem;font-weight:800;margin:0 0 12px;color:var(--navy);}
+.apl-feats{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:0 0 34px;}
+.apl-feat{border:1px solid var(--border);border-radius:14px;padding:16px;background:var(--bg,#F8FAFC);}
+.apl-feat strong{display:block;margin-bottom:4px;} .apl-feat span{color:#64748B;font-size:.9rem;line-height:1.5;}
+.apl-p{max-width:820px;color:#334155;line-height:1.7;margin:0 0 12px;}
+.apl-fil{max-width:820px;background:#FFF7ED;border:1px solid #FED7AA;border-radius:12px;padding:12px 16px;color:#7C2D12;margin:18px 0 30px;}
+</style>
+</head>
+<body data-lang="en">
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+
+<!-- ── NAV ── -->
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="/" class="logo logo-lockup" aria-label="Numberbender — Master the Elements of Math">
+      <img src="/images/numberbender_banner_only.svg" alt="Numberbender" class="lockup-img">
+    </a>
+    <button class="menu-toggle" aria-label="Toggle menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
+    <nav class="nav-links" id="navlinks">
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Learn <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="/start-here">🎁 Free Starter Lesson</a>
+          <a href="/find-your-course">🧭 Where Do I Start?</a>
+          <a href="/courses">📚 Explore Math Lessons</a>
+          <a href="/subjects/test-prep">🎯 Test Prep Practice</a>
+          <a href="/ap">🎓 AP Exam Prep</a>
+          <a href="/math-worksheets">📝 Free Worksheets</a>
+          <a href="/for-filipino-students">🇵🇭 Para sa Filipino Students</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Teach <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="/for-teachers">🏫 For Teachers Hub</a>
+          <a href="/teach-the-math">🎓 Teach the Math</a>
+          <a href="/teach-it-like-you-stream-it">🎬 Teach It Like You Stream It</a>
+          <a href="/studio">🎥 Numberbender Studio (free app)</a>
+          <a href="/studio-tutorial">▶️ Studio Tutorials</a>
+          <a href="/teacher-resources">📦 Teacher Resources</a>
+          <a href="/math-worksheets">📄 Printable Worksheets</a>
+          <a href="/courses">📚 Lesson &amp; Course Library</a>
+        </div>
+      </div>
+      <div class="nav-dropdown nav-studio-dd">
+        <button type="button" class="dropdown-trigger nav-studio" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">🎬 Studio <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="/studio-tutorial">🎓 How to use Studio<span class="nb-sub">5 short video tutorials — start here</span></a>
+          <a href="/studio">🎬 Open Studio<span class="nb-sub">Launch the free app — no login</span></a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger nav-mathccc" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Math CCC <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="/math-ccc">📚 Browse All Courses</a>
+          <a href="/ab1705-corequisite-math">🧭 AB 1705 Corequisite Support</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">DepEd Math <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="/deped">🇵🇭 DepEd Math Home</a>
+          <a href="/deped/teachers">👩‍🏫 For Teachers · Para sa Teachers</a>
+          <a href="/deped/grade-7">7 · Mathematics 7</a>
+          <a href="/deped/grade-8">8 · Mathematics 8</a>
+          <a href="/deped/grade-9">9 · Mathematics 9</a>
+          <a href="/deped/grade-10">10 · Mathematics 10</a>
+          <a href="/deped/shs/general-math">📐 General Mathematics</a>
+          <a href="/deped/shs/statistics-probability">📊 Statistics &amp; Probability</a>
+          <a href="/deped/shs/pre-calculus">∫ Pre-Calculus</a>
+          <a href="/deped/shs/basic-calculus">∂ Basic Calculus</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">About <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="/speaking-archive">📅 Past Engagements</a>
+          <a href="/blog">✍️ Blog</a>
+          <a href="/speaking">🎤 Speaking</a>
+          <a href="/for-institutions">🤝 For Institutions</a>
+          <a href="/nonprofit">🏛️ Mission &amp; Nonprofit</a>
+          <a href="/press">📰 Press &amp; Media</a>
+          <a href="/about">👨‍🏫 About Dr. E</a>
+        </div>
+      </div>
+      <a href="/contact" class="nav-cta">Contact</a>
+    </nav>
+  </div>
+</header>
+<main id="main-content">
+
+<!-- ── HERO ── -->
+<section class="subject-hero">
+  <div class="container">
+    <div class="breadcrumb-nav">
+      <a href="/">Home</a>
+      <span style="margin:0 8px;">›</span>
+      <span style="color:rgba(255,255,255,0.9);font-weight:600;">AP Exam Prep</span>
+    </div>
+    <div class="hero-inner">
+      <div class="hero-content">
+      <div class="hero-text">
+        <h1>AP Exam Prep</h1>
+        <p class="tagline">Free review for AP Calculus AB and AP Statistics from Dr. E — video lessons organized by the official AP units, in English and Filipino, with worksheets and free-response practice.</p>
+        <div class="hero-stats">
+          <div class="hstat"><span class="n">2</span><span class="l">AP courses</span></div>
+          <div class="hstat"><span class="n">110</span><span class="l">lessons by AP unit</span></div>
+          <div class="hstat"><span class="n">61</span><span class="l">FRQ walkthroughs &amp; practice</span></div>
+          <div class="hstat"><span class="n">🆓</span><span class="l">no login</span></div>
+        </div>
+        <!-- v2.0 heart: Watch · Worksheet · Download -->
+        <div class="hero-trio">
+          <div class="hero-trio-step">
+            <div class="hero-trio-icon">🎬</div>
+            <div>
+              <div class="hero-trio-verb">Watch</div>
+              <div class="hero-trio-desc">Bilingual video lessons<br>English &amp; Filipino</div>
+            </div>
+          </div>
+          <div class="hero-trio-step">
+            <div class="hero-trio-icon">📄</div>
+            <div>
+              <div class="hero-trio-verb">Worksheet</div>
+              <div class="hero-trio-desc">Aligned practice problems<br>for every lesson</div>
+            </div>
+          </div>
+          <div class="hero-trio-step">
+            <div class="hero-trio-icon">⬇</div>
+            <div>
+              <div class="hero-trio-verb">Download</div>
+              <div class="hero-trio-desc">Free PDF — print it or<br>solve it digitally</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div><!-- /hero-content -->
+    </div>
+  </div>
+</section>
+
+
+<section class="apl">
+  <div class="container">
+    <div class="section-heading">Choose your course</div>
+    <div class="apl-grid">
+      <a class="apl-course" href="/ap-calculus-ab">
+        <div class="k">AP Calculus AB</div>
+        <h2>Limits to integrals, by AP unit</h2>
+        <p>All 8 units of the AP Calculus AB course, from limits and continuity to applications of integration.</p>
+        <ul><li>46 video lessons, each in English and Filipino</li><li>90 worksheets with answer keys</li><li>46 walkthroughs of released free-response questions</li><li>6 free FRQ Reviewer books on Apple Books</li></ul>
+        <span class="go">Start AP Calculus AB &rarr;</span>
+      </a>
+      <a class="apl-course" href="/ap-statistics">
+        <div class="k">AP Statistics</div>
+        <h2>Data to inference, by AP unit</h2>
+        <p>All 9 units of the AP Statistics course, from exploring one-variable data to inference for slopes.</p>
+        <ul><li>64 video lessons, each in English and Filipino</li><li>Worksheets with answer keys for every unit</li><li>9 original practice FRQs with model solutions</li><li>6 walkthroughs of released free-response questions</li></ul>
+        <span class="go">Start AP Statistics &rarr;</span>
+      </a>
+    </div>
+
+    <h2 class="apl-h">What you get, free</h2>
+    <div class="apl-feats">
+      <div class="apl-feat"><strong>🎬 Short video lessons</strong><span>One concept per video, five to ten minutes, in English and in Filipino.</span></div>
+      <div class="apl-feat"><strong>📄 Worksheets</strong><span>Printable practice for every lesson, with full answer keys.</span></div>
+      <div class="apl-feat"><strong>✍️ Free-response practice</strong><span>Step-by-step walkthroughs of released exam questions, plus original practice FRQs scored the way AP readers score them.</span></div>
+      <div class="apl-feat"><strong>🗓 Built for May</strong><span>AP exams are given each May. One unit a week from February gets you through every unit before exam day.</span></div>
+    </div>
+
+    <h2 class="apl-h">Who made this</h2>
+    <p class="apl-p">Dr. Peter Esperanza taught AP Calculus and AP Statistics at Barstow High School in California, and flipped both classes in 2012. In his first year teaching AP Statistics, exactly one of his students passed the AP exam; after the flip, about ten a year passed. He now teaches math at Barstow Community College, and his lessons have reached students around the world through the Numberbender YouTube channel. <a href="/about">More about Dr. E &rarr;</a></p>
+    <p class="apl-fil">🇵🇭 <b>Kumukuha ng AP sa Pilipinas?</b> Every lesson also comes in Filipino — tap the FIL button on any lesson. Lahat ng aralin ay may Filipino na bersyon.</p>
+
+    <h2 class="apl-h">For AP teachers</h2>
+    <div class="ap-cards" style="margin-bottom:40px;">
+      <a class="ap-card" href="/flipped-classroom-ap-statistics"><strong>Flipping AP Statistics</strong><span>Which units to flip first, and how to use class time for FRQ practice.</span></a>
+      <a class="ap-card" href="/flipped-classroom-math"><strong>How to flip a math class</strong><span>Dr. E's 15-year method, from the first unit to the research.</span></a>
+      <a class="ap-card" href="/ap-calculus-frq-books"><strong>AP Calculus FRQ Reviewer books</strong><span>Six free Apple Books to assign, with video next to every problem.</span></a>
+      <a class="ap-card" href="/speaking"><strong>Bring Dr. E to your school</strong><span>Workshops on flipped and online teaching for math departments.</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- WSDIR:END -->
+
+<!-- ── FOOTER ── -->
+<div class="nbprint-src" data-url="https://numberbender.com/subjects/calculus"></div>
+</main>
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot foot-brand">
+        <div class="foot-logo">
+          <div class="foot-logo-mark">
+            <img src="/images/numberbender-mark-teal-transparent.svg" alt="Numberbender" style="width:100%;height:100%;object-fit:contain;">
+          </div>
+          <span>Numberbender</span>
+        </div>
+        <p>Helping students learn math with confidence and helping educators teach online with energy, clarity, and impact.</p>
+      </div>
+      <div class="foot">
+        <h3>Subjects</h3>
+        <a href="/courses">All Subjects</a>
+        <a href="/subjects/algebra">Algebra</a>
+        <a href="/subjects/precalculus">Precalculus</a>
+        <a href="/subjects/calculus">Calculus</a>
+      </div>
+      <div class="foot">
+        <h3>Full Courses</h3>
+        <a href="/learn/elementary-algebra/">Elementary Algebra</a>
+        <a href="/learn/intermediate-algebra/">Intermediate Algebra</a>
+      </div>
+      <div class="foot">
+        <h3>Connect</h3>
+        <a href="/about">About Dr. E</a>
+        <a href="/math-worksheets">Worksheets</a>
+        <a href="/contact">Contact</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Numberbender · Dr. Peter Esperanza</span>
+      <span>Free bilingual math — English &amp; Filipino 🇵🇭</span>
+    </div>
+  </div>
+<p class="nb-ap-tm" style="text-align:center;font-size:0.78rem;color:#94a3b8;margin:14px auto 0;padding:0 16px 18px;max-width:760px;">AP® is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this site.</p>
+</footer>
+
+<!-- ── VIDEO MODAL ── -->
+<div id="video-modal" class="modal-overlay" onclick="modalBackdropClick(event)" role="dialog" aria-modal="true" aria-labelledby="modal-lesson-title">
+  <div class="modal-box">
+    <div class="modal-header">
+      <div>
+        <div class="modal-lesson-title" id="modal-lesson-title"></div>
+        <div class="modal-lesson-sub" id="modal-lesson-sub"></div>
+      </div>
+      <button class="modal-close" onclick="closeModal()" aria-label="Close video">✕</button>
+    </div>
+    <div class="modal-video-wrap">
+      <iframe id="modal-iframe" src="" allow="autoplay; accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="modal-footer">
+      <div class="ws-block" id="modal-ws-block" style="display:none;">
+        <div class="ws-label">📄 Practice Worksheet</div>
+        <div class="modal-btn-row">
+          <button id="modal-view-btn" onclick="openWsFromVideo()" class="modal-btn view">👁 View PDF</button>
+          <a id="modal-dl-btn" href="#" target="_blank" rel="noopener" class="modal-btn dl">⬇ Download</a>
+        </div>
+      </div>
+      <div class="modal-btn-row" style="margin-left:auto;">
+        <a id="modal-yt-btn" href="#" target="_blank" rel="noopener" class="modal-btn yt">↗ Open on YouTube</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── WORKSHEET PREVIEW MODAL ── -->
+<div id="ws-modal" class="modal-overlay" onclick="wsBackdropClick(event)" role="dialog" aria-modal="true" aria-labelledby="ws-modal-title">
+  <div class="modal-box">
+    <div class="modal-header">
+      <div>
+        <div class="modal-lesson-title" id="ws-modal-title">Practice Worksheet</div>
+        <div class="modal-lesson-sub" id="ws-modal-sub"></div>
+      </div>
+      <div class="modal-btn-row" style="align-items:center;gap:8px;">
+        <a id="ws-dl-link" href="#" target="_blank" rel="noopener" class="modal-btn yt" style="font-size:0.8rem;padding:6px 14px;">↗ Open to Download</a>
+        <button class="modal-close" onclick="closeWsModal()" aria-label="Close worksheet">✕</button>
+      </div>
+    </div>
+    <div class="ws-iframe-wrap">
+      <iframe id="ws-iframe" src="" title="Worksheet preview"></iframe>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ── UNIT ACCORDION ── */
+function toggleUnit(id) {
+  document.getElementById(id).classList.toggle('open');
+}
+
+/* ── TOPIC ACCORDION (Unit 8 sub-groups) ── */
+function toggleTopic(id) {
+  document.getElementById(id).classList.toggle('open');
+}
+
+/* ── SEARCH ── */
+function filterLessons(query) {
+  const q = query.trim().toLowerCase();
+  const clearBtn = document.getElementById('search-clear');
+  const countEl = document.getElementById('search-count');
+  const noResults = document.getElementById('search-no-results');
+  clearBtn.classList.toggle('visible', q.length > 0);
+  if (!q) {
+    document.querySelectorAll('.unit-list .unit-block').forEach(u => {
+      u.classList.remove('search-hidden');
+      u.querySelectorAll('.lesson-item').forEach(l => l.classList.remove('search-hidden'));
+    });
+    countEl.innerHTML = '';
+    noResults.classList.remove('visible');
+    return;
+  }
+  let totalLessons = 0, totalUnits = 0;
+  document.querySelectorAll('.unit-list .unit-block').forEach(unit => {
+    const unitTitle = (unit.querySelector('.unit-title') || unit.querySelector('.unit-name') || {innerText:''}).innerText.toLowerCase();
+    let unitHasMatch = false;
+    unit.querySelectorAll('.lesson-item').forEach(lesson => {
+      const title = (lesson.querySelector('.lesson-title') || {innerText:''}).innerText.toLowerCase();
+      const sub = (lesson.querySelector('.lesson-sub') || {innerText:''}).innerText.toLowerCase();
+      const matches = title.includes(q) || sub.includes(q) || unitTitle.includes(q);
+      lesson.classList.toggle('search-hidden', !matches);
+      if (matches) { unitHasMatch = true; totalLessons++; }
+    });
+    unit.classList.toggle('search-hidden', !unitHasMatch);
+    if (unitHasMatch) { totalUnits++; unit.classList.add('open'); }
+  });
+  countEl.innerHTML = totalLessons > 0
+    ? `Found <strong>${totalLessons} lesson${totalLessons!==1?'s':''}</strong> across <strong>${totalUnits} unit${totalUnits!==1?'s':''}</strong> matching "<strong>${query.trim()}</strong>"`
+    : '';
+  noResults.classList.toggle('visible', totalLessons === 0);
+}
+function clearSearch() {
+  const input = document.getElementById('lesson-search');
+  input.value = '';
+  filterLessons('');
+  input.focus();
+}
+
+/* ── LANGUAGE TOGGLE ── */
+function setLang(lang) {
+  document.body.setAttribute('data-lang', lang);
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-fil').classList.toggle('active', lang === 'fil');
+  document.getElementById('lang-label').textContent = lang === 'en' ? 'English' : 'Filipino 🇵🇭';
+  document.querySelectorAll('.lesson-item').forEach(function(item) {
+    var enId = item.dataset.enId || '';
+    var filId = item.dataset.filId || '';
+    var activeId = lang === 'en' ? enId : filId;
+    if (activeId) {
+      item.href = 'https://www.youtube.com/watch?v=' + activeId;
+      item.classList.remove('no-video');
+    } else {
+      item.href = '#';
+      item.classList.add('no-video');
+    }
+  });
+}
+
+/* ── INJECT WORKSHEET BUTTONS ── */
+document.querySelectorAll('.lesson-item[data-worksheet]').forEach(function(item) {
+  var ws   = item.dataset.worksheet;
+  // All calculus worksheets use full paths starting with '/'
+  var href = ws.startsWith('/') ? ws : '/worksheets/calculus/' + ws;
+  var badge = item.querySelector('.lesson-badge');
+  var right = document.createElement('div');
+  right.className = 'lesson-right';
+  badge.parentNode.insertBefore(right, badge);
+  right.appendChild(badge);
+  var wsRow = document.createElement('div');
+  wsRow.className = 'lesson-ws-row';
+  wsRow.innerHTML =
+    '<span class="lesson-ws-btn ws-view" data-href="' + href + '" data-title="' + item.querySelector('.lesson-title').textContent + '" data-sub="' + item.querySelector('.lesson-sub').textContent + '" role="button" tabindex="0">👁 View</span>' +
+    '<span class="lesson-ws-btn ws-dl"   data-href="' + href + '" role="button" tabindex="0">⬇ Download</span>';
+  right.appendChild(wsRow);
+});
+
+/* ── VIDEO MODAL ── */
+var _wsHref = '';
+
+function openModal(item) {
+  var lang = document.body.dataset.lang || 'en';
+  var enId  = item.dataset.enId  || '';
+  var filId = item.dataset.filId || '';
+  var activeId = lang === 'en' ? enId : filId;
+  if (!activeId) return;
+  var title     = item.querySelector('.lesson-title').textContent;
+  var sub       = item.querySelector('.lesson-sub').textContent;
+  var worksheet = item.dataset.worksheet || '';
+  var ytUrl     = 'https://www.youtube.com/watch?v=' + activeId;
+  document.getElementById('modal-lesson-title').textContent = title;
+  document.getElementById('modal-lesson-sub').textContent   = sub;
+  document.getElementById('modal-iframe').src = 'https://www.youtube-nocookie.com/embed/' + activeId + '?autoplay=1&rel=0';
+  document.getElementById('modal-yt-btn').href = ytUrl;
+  var wsBlock = document.getElementById('modal-ws-block');
+  if (worksheet) {
+    var wsBase = '/worksheets/calculus/';
+    _wsHref = worksheet.startsWith('/') ? worksheet : wsBase + worksheet;
+    document.getElementById('modal-dl-btn').href = _wsHref;
+    wsBlock.style.display = 'block';
+  } else {
+    _wsHref = '';
+    wsBlock.style.display = 'none';
+  }
+  document.getElementById('video-modal').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('modal-iframe').src = '';
+  document.getElementById('video-modal').classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+function modalBackdropClick(e) {
+  if (e.target === document.getElementById('video-modal')) closeModal();
+}
+
+function openWsFromVideo() {
+  if (!_wsHref) return;
+  var title = document.getElementById('modal-lesson-title').textContent;
+  var sub   = document.getElementById('modal-lesson-sub').textContent;
+  closeModal();
+  openWsModal(_wsHref, title, sub);
+}
+
+function openWsModal(href, title, sub) {
+  document.getElementById('ws-modal-title').textContent = title || 'Practice Worksheet';
+  document.getElementById('ws-modal-sub').textContent   = sub ? sub + ' · Worksheet' : 'Practice Worksheet';
+  document.getElementById('ws-iframe').src = href;
+  document.getElementById('ws-dl-link').href = href;
+  document.getElementById('ws-modal').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeWsModal() {
+  document.getElementById('ws-iframe').src = '';
+  document.getElementById('ws-modal').classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+function wsBackdropClick(e) {
+  if (e.target === document.getElementById('ws-modal')) closeWsModal();
+}
+
+/* ── CLICK DELEGATION ── */
+document.addEventListener('click', function(e) {
+  var wsBtn = e.target.closest('.lesson-ws-btn');
+  if (wsBtn) {
+    e.stopPropagation();
+    e.preventDefault();
+    var href  = wsBtn.dataset.href;
+    var title = wsBtn.dataset.title || '';
+    var sub   = wsBtn.dataset.sub   || '';
+    if (wsBtn.classList.contains('ws-dl')) {
+      window.open(href, '_blank', 'noopener noreferrer');
+    } else {
+      openWsModal(href, title, sub);
+    }
+    return;
+  }
+  var item = e.target.closest('.lesson-item');
+  if (!item) return;
+  e.preventDefault();
+  if (item.classList.contains('no-video')) return;
+  openModal(item);
+});
+
+/* ── ESC KEY ── */
+document.addEventListener('keydown', function(e) {
+  if (e.key !== 'Escape') return;
+  if (document.getElementById('ws-modal').classList.contains('active')) closeWsModal();
+  else if (document.getElementById('video-modal').classList.contains('active')) closeModal();
+});
+
+
+/* ── DROPDOWN NAV ── */
+function toggleDD(btn){
+  var menu=btn.nextElementSibling;
+  var willOpen=!menu.classList.contains('open');
+  document.querySelectorAll('.nav-dropdown .dropdown-menu.open').forEach(function(m){
+    m.classList.remove('open');
+    var t=m.previousElementSibling;
+    if(t)t.setAttribute('aria-expanded','false');
+  });
+  if(willOpen){
+    menu.style.transition='none';
+    menu.classList.add('open');
+    menu.getBoundingClientRect();
+    menu.style.transition='';
+    btn.setAttribute('aria-expanded','true');
+  }
+}
+document.addEventListener('click',function(e){
+  if(!e.target.closest('.nav-dropdown')){
+    document.querySelectorAll('.nav-dropdown .dropdown-menu.open').forEach(function(m){
+      m.classList.remove('open');
+      var t=m.previousElementSibling;
+      if(t)t.setAttribute('aria-expanded','false');
+    });
+  }
+});
+
+/* ── AUTO-LANGUAGE FROM URL PARAM (?lang=fil) ── */
+(function(){
+  var p = new URLSearchParams(window.location.search);
+  if (p.get('lang') === 'fil') setLang('fil');
+})();
+</script>
+<script src="/nb-search.js" defer></script>
+</body>
+</html>
