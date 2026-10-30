@@ -271,7 +271,7 @@
   <!-- ── For teachers / flipped classroom ── -->
   <url>
     <loc>https://numberbender.com/for-teachers</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -281,7 +281,7 @@
   </url>
   <url>
     <loc>https://numberbender.com/teach-it-like-you-stream-it</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -411,12 +411,12 @@
   </url>
   <url>
     <loc>https://numberbender.com/speaking</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://numberbender.com/speaking-archive</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -425,9 +425,19 @@
     <priority>0.5</priority>
   </url>
 <url>
-    <loc>https://numberbender.com/speaking-archive</loc>
-    <lastmod>2026-08-25</lastmod>
-    <priority>0.6</priority>
+    <loc>https://numberbender.com/speaking-2027-03-sxsw-edu</loc>
+    <lastmod>2026-10-30</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://numberbender.com/speaking-2026-10-educause</loc>
+    <lastmod>2026-10-30</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://numberbender.com/speaking-2026-09-tiktok-creator-summit</loc>
+    <lastmod>2026-10-30</lastmod>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://numberbender.com/speaking-2026-07-ateneo-salt</loc>
