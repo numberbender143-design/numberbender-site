@@ -199,3 +199,11 @@ https://www.numberbender.com/*  https://numberbender.com/:splat  301!
 
 # Audit deliverables live in the repo for the PR but are not site content
 /audit/*                        /404.html                       404!
+
+# Old Title_Case worksheet folder URLs → their lowercase-slug pages (Oct 2026)
+/worksheets/algebra/Adding_and_Subtracting_Fractions_and_Mixed_Numbers  /worksheets/algebra/adding-and-subtracting-fractions-and-mixed-numbers  301
+/worksheets/algebra/Adding_and_Subtracting_Rational_Expressions_and_Solving_Rational_Equations  /worksheets/algebra/adding-and-subtracting-rational-expressions-and-solving-rational-equations  301
+/worksheets/algebra/Completing_the_Square_the_Quadratic_Formula  /worksheets/algebra/completing-the-square-the-quadratic-formula  301
+/worksheets/algebra/Math_Operations_in_Fractions_Simplifying_Multiplying_and_Dividing  /worksheets/algebra/math-operations-in-fractions-simplifying-multiplying-and-dividing  301
+/worksheets/algebra/Multiplying_and_Dividing_Radicals_Adding_Subtracting_Multiplying_Dividing_and_Rationalizing  /worksheets/algebra/multiplying-and-dividing-radicals-adding-subtracting-multiplying-dividing-and-rationalizing  301
+/worksheets/algebra/Simplifying_Rational_Expressions_Factoring_Multiplying_and_Dividing  /worksheets/algebra/simplifying-rational-expressions-factoring-multiplying-and-dividing  301
