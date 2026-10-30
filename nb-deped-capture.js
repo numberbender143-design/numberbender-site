@@ -213,6 +213,12 @@
 
         block.classList.add('is-done');
         track(already ? 'capture_duplicate' : 'capture_success', currentGrade());
+        // GA4 key event for the handoff: one per new subscriber, not for re-signups.
+        if (!already && typeof window.gtag === 'function') {
+          window.gtag('event', 'newsletter_signup', {
+            method: 'deped_capture', grade: currentGrade(), role: roleIn ? roleIn.value : ''
+          });
+        }
 
         // The answer keys are revealed only when Teacher was the chosen role.
         // A UX gate, not a lock — the hrefs are in the page source either way.
