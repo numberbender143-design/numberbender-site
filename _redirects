@@ -15,40 +15,40 @@
 # Worksheet subject-directory URLs → v2 subject pages
 # Google crawls /worksheets/[subject]/ when it finds PDF links — no index.html exists
 # there so they 404. Redirect to the canonical v2 subject page (live on main).
-/worksheets/algebra             /subjects/algebra/              301
-/worksheets/algebra/            /subjects/algebra/              301
-/worksheets/calculus            /subjects/calculus/             301
-/worksheets/calculus/           /subjects/calculus/             301
-/worksheets/statistics          /subjects/statistics/           301
-/worksheets/statistics/         /subjects/statistics/           301
-/worksheets/precalculus         /subjects/precalculus/          301
-/worksheets/precalculus/        /subjects/precalculus/          301
-/worksheets/geometry            /subjects/geometry/             301
-/worksheets/geometry/           /subjects/geometry/             301
-/worksheets/trigonometry        /subjects/trigonometry/         301
-/worksheets/trigonometry/       /subjects/trigonometry/         301
-/worksheets/linear-algebra      /subjects/linear-algebra/       301
-/worksheets/linear-algebra/     /subjects/linear-algebra/       301
-/worksheets/discrete-math       /subjects/discrete-math/        301
-/worksheets/discrete-math/      /subjects/discrete-math/        301
-/worksheets/pre-algebra         /subjects/pre-algebra/          301
-/worksheets/pre-algebra/        /subjects/pre-algebra/          301
-/worksheets/inferential-statistics   /subjects/statistics/      301
-/worksheets/inferential-statistics/  /subjects/statistics/      301
+/worksheets/algebra             /subjects/algebra              301
+/worksheets/algebra/            /subjects/algebra              301
+/worksheets/calculus            /subjects/calculus             301
+/worksheets/calculus/           /subjects/calculus             301
+/worksheets/statistics          /subjects/statistics           301
+/worksheets/statistics/         /subjects/statistics           301
+/worksheets/precalculus         /subjects/precalculus          301
+/worksheets/precalculus/        /subjects/precalculus          301
+/worksheets/geometry            /subjects/geometry             301
+/worksheets/geometry/           /subjects/geometry             301
+/worksheets/trigonometry        /subjects/trigonometry         301
+/worksheets/trigonometry/       /subjects/trigonometry         301
+/worksheets/linear-algebra      /subjects/linear-algebra       301
+/worksheets/linear-algebra/     /subjects/linear-algebra       301
+/worksheets/discrete-math       /subjects/discrete-math        301
+/worksheets/discrete-math/      /subjects/discrete-math        301
+/worksheets/pre-algebra         /subjects/pre-algebra          301
+/worksheets/pre-algebra/        /subjects/pre-algebra          301
+/worksheets/inferential-statistics   /subjects/statistics      301
+/worksheets/inferential-statistics/  /subjects/statistics      301
 /worksheets/analytic-geometry   /math-worksheets                301
 /worksheets/analytic-geometry/  /math-worksheets                301
 
 # Calculus sub-topic directories (PDFs live inside these — exact rules won't touch .pdf files)
-/worksheets/calculus/derivatives    /subjects/calculus/         301
-/worksheets/calculus/derivatives/   /subjects/calculus/         301
-/worksheets/calculus/integrals      /subjects/calculus/         301
-/worksheets/calculus/integrals/     /subjects/calculus/         301
-/worksheets/calculus/limits         /subjects/calculus/         301
-/worksheets/calculus/limits/        /subjects/calculus/         301
+/worksheets/calculus/derivatives    /subjects/calculus         301
+/worksheets/calculus/derivatives/   /subjects/calculus         301
+/worksheets/calculus/integrals      /subjects/calculus         301
+/worksheets/calculus/integrals/     /subjects/calculus         301
+/worksheets/calculus/limits         /subjects/calculus         301
+/worksheets/calculus/limits/        /subjects/calculus         301
 
 # Archived worksheets → parent subject
-/worksheets/algebra/_archive        /subjects/algebra/          301
-/worksheets/algebra/_archive/       /subjects/algebra/          301
+/worksheets/algebra/_archive        /subjects/algebra          301
+/worksheets/algebra/_archive/       /subjects/algebra          301
 
 # ── Worksheet DETAIL page trailing-slash handling ──
 # NOTE (2026-07-22): Removed the forced "301!" trailing-slash → no-slash rules
@@ -62,7 +62,10 @@
 # Canonicalization is now handled without a forced redirect: every worksheet
 # page carries <link rel="canonical"> to its no-slash URL, the sitemap lists
 # only the no-slash form, and all internal links point to the no-slash form.
-# Both URL forms return 200, so no cycle is possible.
+#
+# UPDATE (2026-10): the slash form now 301s to the no-slash form site-wide via
+# netlify/edge-functions/trailing-slash.js, which sees the raw path and so
+# can't loop the way a rule here did. Don't add slash rules back to this file.
 
 # Old Wix course catalog URLs — with and without spaces/encoded characters
 /subjects/view/*                /courses                        301
