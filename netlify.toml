@@ -221,7 +221,13 @@
 
 [[redirects]]
   from = "/flipped-classroom-research.html"
-  to   = "/flipped-classroom-research"
+  to   = "/flipped-classroom-math#s8"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/flipped-classroom-research"
+  to   = "/flipped-classroom-math#s8"
   status = 301
   force  = true
 
@@ -233,31 +239,61 @@
 
 [[redirects]]
   from = "/flipped-classroom-books.html"
-  to   = "/flipped-classroom-books"
+  to   = "/flipped-classroom-math#apple-book"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/flipped-classroom-books"
+  to   = "/flipped-classroom-math#apple-book"
   status = 301
   force  = true
 
 [[redirects]]
   from = "/flipped-classroom-distance-learning.html"
-  to   = "/flipped-classroom-distance-learning"
+  to   = "/flipped-classroom-math#s7"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/flipped-classroom-distance-learning"
+  to   = "/flipped-classroom-math#s7"
   status = 301
   force  = true
 
 [[redirects]]
   from = "/flipped-classroom-higher-ed.html"
-  to   = "/flipped-classroom-higher-ed"
+  to   = "/flipped-classroom-math#higher-ed"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/flipped-classroom-higher-ed"
+  to   = "/flipped-classroom-math#higher-ed"
   status = 301
   force  = true
 
 [[redirects]]
   from = "/flipped-classroom-mistakes.html"
-  to   = "/flipped-classroom-mistakes"
+  to   = "/flipped-classroom-math#s6"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/flipped-classroom-mistakes"
+  to   = "/flipped-classroom-math#s6"
   status = 301
   force  = true
 
 [[redirects]]
   from = "/flipped-classroom-quickstart.html"
-  to   = "/flipped-classroom-quickstart"
+  to   = "/flipped-classroom-math#s10"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/flipped-classroom-quickstart"
+  to   = "/flipped-classroom-math#s10"
   status = 301
   force  = true
 
@@ -361,13 +397,25 @@
 
 [[redirects]]
   from = "/blog-flipped-first-class.html"
-  to   = "/blog-flipped-first-class"
+  to   = "/flipped-classroom-math#first-try"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/blog-flipped-first-class"
+  to   = "/flipped-classroom-math#first-try"
   status = 301
   force  = true
 
 [[redirects]]
   from = "/blog-flipped-mistakes.html"
-  to   = "/blog-flipped-mistakes"
+  to   = "/flipped-classroom-math#s6"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/blog-flipped-mistakes"
+  to   = "/flipped-classroom-math#s6"
   status = 301
   force  = true
 
