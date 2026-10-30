@@ -334,6 +334,24 @@
   status = 301
   force  = true
 
+[[redirects]]
+  from = "/speaking-2026-09-tiktok-creator-summit.html"
+  to   = "/speaking-2026-09-tiktok-creator-summit"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/speaking-2026-10-educause.html"
+  to   = "/speaking-2026-10-educause"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/speaking-2027-03-sxsw-edu.html"
+  to   = "/speaking-2027-03-sxsw-edu"
+  status = 301
+  force  = true
+
 # Blog pages
 [[redirects]]
   from = "/blog.html"
