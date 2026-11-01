@@ -1204,9 +1204,9 @@ function nbSubmit(){
   if(ctx==='CONFERENCE'||ctx==='WORKSHOP'){
     ok='✅ You\'re in! Welcome to the community — Dr. E will be in touch. Thank you for your support! 🙏';
   } else if(ctx==='PH'){
-    ok='✅ Salamat at sumali ka! Check your inbox for free resources. — Dr. E 🇵🇭';
+    ok='✅ Salamat at sumali ka! Dr. E will email you when new free resources are ready. 🇵🇭';
   } else {
-    ok='✅ Welcome to the community! Check your inbox for free resources. — Dr. E';
+    ok='✅ Welcome to the community! Dr. E will email you when new free resources are ready.';
   }
   bar.innerHTML='<p class="nb-success">'+ok+'</p><button class="nb-close" onclick="nbDismiss()" aria-label="Close">✕</button>';
   localStorage.setItem('nb_bar_dismissed',Date.now()+(7*24*60*60*1000));

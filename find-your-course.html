@@ -1047,9 +1047,9 @@ document.querySelectorAll('#navlinks a').forEach(function(a){
 
 <!-- ── Numberbender Sticky Bar ── -->
 <div id="nb-sticky-bar">
-  <p>🇵🇭 Philippine schools open in June! Get FREE bilingual math worksheets:</p>
+  <p>📚 Get an email from Dr. E when new free lessons and worksheets are ready:</p>
   <input type="email" id="nb-email-input" placeholder="your@email.com" autocomplete="email" aria-label="Email address" />
-  <button class="nb-submit" onclick="nbSubmit()">Get Free Worksheets →</button>
+  <button class="nb-submit" onclick="nbSubmit()">Keep Me Posted →</button>
   <button class="nb-close" onclick="nbDismiss()" aria-label="Close">✕</button>
 </div>
 <script>
@@ -1062,7 +1062,7 @@ function nbSubmit(){
   var email=document.getElementById('nb-email-input').value.trim();
   if(!email||!email.includes('@')){ document.getElementById('nb-email-input').focus(); return; }
   var bar=document.getElementById('nb-sticky-bar');
-  bar.innerHTML='<p class="nb-success">✅ You\'re in! Check your inbox for your free worksheets. — Dr. E 🇵🇭</p><button class="nb-close" onclick="nbDismiss()" aria-label="Close">✕</button>';
+  bar.innerHTML='<p class="nb-success">✅ You\'re on the list! Dr. E will email you when new lessons and worksheets are ready.</p><button class="nb-close" onclick="nbDismiss()" aria-label="Close">✕</button>';
   localStorage.setItem('nb_bar_dismissed',Date.now()+(7*24*60*60*1000));
   window.nbMcCb=function(){};
   var s=document.createElement('script');

@@ -556,8 +556,8 @@
           Most recently that meant an online session at <a href="/speaking-2026-10-educause">EDUCAUSE 2026</a> and an acceptance to <a href="/speaking-2027-03-sxsw-edu">SXSW EDU 2027</a>, after three Philippine universities in eleven days — <a href="/speaking-2026-07-dlsu-bagced">De La Salle</a>, <a href="/speaking-2026-07-olfu">Our Lady of Fatima</a>, and <a href="/speaking-2026-07-ateneo-salt">Ateneo de Manila</a> — working with faculty and the students training to replace them. <a href="/speaking-archive"><strong>Browse the speaking archive →</strong></a>
         </p>
         <div class="why-stats">
-          <div class="why-stat"><div class="num">800+</div><div class="lbl">YouTube video lessons</div></div>
-          <div class="why-stat"><div class="num">16M+</div><div class="lbl">Learners reached</div></div>
+          <div class="why-stat"><div class="num">900+</div><div class="lbl">Video lessons on the site</div></div>
+          <div class="why-stat"><div class="num">16M+</div><div class="lbl">Video views</div></div>
           <div class="why-stat"><div class="num">100+</div><div class="lbl">Educator workshops</div></div>
           <div class="why-stat"><div class="num">20+ yrs</div><div class="lbl">Classroom teaching</div></div>
         </div>
@@ -614,8 +614,8 @@
 
       <div class="res-card">
         <div class="r-icon">📬</div>
-        <h3>Weekly Teaching Tips</h3>
-        <p>One practical tip per week — from flipped classroom strategies to video production, AI tools, and online engagement. Free in your inbox.</p>
+        <h3>Teaching Tips by Email</h3>
+        <p>Practical tips — from flipped classroom strategies to video production, AI tools, and online engagement — whenever Dr. E has something new. Free.</p>
         <a href="#newsletter">Join the newsletter →</a>
       </div>
 
@@ -778,7 +778,7 @@
     <div class="nl-inner">
       <div class="nl-copy">
         <div class="nl-eyebrow">📬 Free resources from Dr. E</div>
-        <h2>Get one teaching tip every week — free</h2>
+        <h2>Get free teaching tips from Dr. E</h2>
         <p>Flipped classroom strategies, video production tips, AI tools for teachers, and math resources. Delivered weekly. Totally free. No spam.</p>
       </div>
       <div class="nl-form-wrap">
@@ -787,7 +787,7 @@
           <div aria-hidden="true" style="position:absolute;left:-5000px;"><input type="text" name="b_65e30fe527dde6fb604f6760a_ad0977e0cc" tabindex="-1" value=""></div>
           <button class="nl-btn" type="submit">Get Tips →</button>
         </form>
-        <p class="nl-note">Join educators getting free math + teaching resources every week.</p>
+        <p class="nl-note">Join educators getting free math + teaching resources from Dr. E.</p>
       </div>
     </div>
   </div>
@@ -822,7 +822,7 @@
         <p>Helping students learn math with confidence and helping educators teach online with energy, clarity, and impact.</p>
         <p class="footer-tagline">Math is hard. So we made it human.</p>
         <div class="foot-signup-block">
-          <label for="foot-email">🎁 Get 10 free math worksheets — join 1,000+ subscribers</label>
+          <label for="foot-email">📬 Get an email from Dr. E when new lessons and worksheets are ready</label>
           <form class="foot-signup-form" action="https://numberbender.us17.list-manage.com/subscribe/post?u=65e30fe527dde6fb604f6760a&amp;id=ad0977e0cc&amp;f_id=003758e0f0" method="post" target="_blank">
             <input id="foot-email" type="email" name="EMAIL" placeholder="your@email.com" required aria-label="Your email address">
             <div style="position:absolute;left:-5000px;" aria-hidden="true"><input type="text" name="b_65e30fe527dde6fb604f6760a_ad0977e0cc" tabindex="-1" value=""></div>
@@ -925,11 +925,11 @@
 </script>
 
 
-<!-- ── Numberbender Sticky Bar — Back to School June 2026 ── -->
+<!-- ── Numberbender Sticky Bar — email sign-up ── -->
 <div id="nb-sticky-bar">
-  <p>🇵🇭 Philippine schools open in June! Get FREE bilingual math worksheets:</p>
+  <p>📚 Get an email from Dr. E when new free lessons and worksheets are ready:</p>
   <input type="email" id="nb-email-input" placeholder="your@email.com" autocomplete="email" aria-label="Email address" />
-  <button class="nb-submit" onclick="nbSubmit()">Get Free Worksheets →</button>
+  <button class="nb-submit" onclick="nbSubmit()">Keep Me Posted →</button>
   <button class="nb-close" onclick="nbDismiss()" aria-label="Close">✕</button>
 </div>
 <script>
@@ -948,7 +948,7 @@ function nbSubmit(){
   if(!email||!email.includes('@')){document.getElementById('nb-email-input').focus();return;}
   // Show success immediately
   var bar=document.getElementById('nb-sticky-bar');
-  bar.innerHTML='<p class="nb-success">✅ You’re in! Check your inbox for your free worksheets. — Dr. E 🇵🇭</p><button class="nb-close" onclick="nbDismiss()" aria-label="Close">✕</button>';
+  bar.innerHTML='<p class="nb-success">✅ You’re on the list! Dr. E will email you when new lessons and worksheets are ready.</p><button class="nb-close" onclick="nbDismiss()" aria-label="Close">✕</button>';
   localStorage.setItem('nb_bar_dismissed',Date.now()+(7*24*60*60*1000));
   // Submit to Mailchimp via JSONP
   window.nbMcCb=function(){};
