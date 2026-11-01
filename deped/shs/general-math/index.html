@@ -242,6 +242,7 @@
 /* WCAG 1.4.1 — inline links in running text need a non-colour cue */
 main p a:not([class]), main li a:not([class]), .qfil a, .subhead a, .qnote a, main .acc-sub a, main .acc-info a { text-decoration: underline; text-underline-offset: 2px; }
 </style>
+<style id="nb-nav-2026-11">#navlinks a.nav-studio,#nbnavlinks a.nav-studio{display:inline-flex;align-items:center;background:#1F6F6B;color:#fff;padding:8px 15px;border-radius:999px;font-weight:800;font-size:.88rem;line-height:1.25;box-shadow:0 3px 10px rgba(31,111,107,.28);white-space:nowrap;text-decoration:none;}#navlinks a.nav-studio:hover,#nbnavlinks a.nav-studio:hover{background:#16544F;color:#fff;}@media(max-width:900px){#navlinks a.nav-studio,#nbnavlinks a.nav-studio{align-self:flex-start;width:auto;margin:4px 0;}}</style>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -251,71 +252,65 @@ main p a:not([class]), main li a:not([class]), .qfil a, .subhead a, .qnote a, ma
     <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" onclick="var exp=this.getAttribute('aria-expanded')==='false';this.setAttribute('aria-expanded',exp?'true':'false');document.getElementById('navlinks').classList.toggle('open')">&#9776;</button>
     <nav class="nav-links" id="navlinks">
       <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Learn <span class="caret" aria-hidden="true">&#9662;</span></button>
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Learn <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
-          <a href="/start-here">&#127873; Free Starter Lesson</a>
-          <a href="/find-your-course">&#129517; Where Do I Start?</a>
-          <a href="/courses">&#128218; Explore Math Lessons</a>
-          <a href="/subjects/test-prep">&#127919; Test Prep Practice</a>
-          <a href="/ap">&#127891; AP Exam Prep</a>
-          <a href="/math-worksheets">&#128221; Free Worksheets</a>
-          <a href="/for-filipino-students">&#127477;&#127469; Para sa Filipino Students</a>
+          <a href="/find-your-course">Where do I start?</a>
+          <a href="/start-here">Try a free lesson</a>
+          <a href="/courses">All courses</a>
+          <a href="/learn/elementary-algebra">Full-semester algebra classes</a>
+          <a href="/math-worksheets">Free worksheets</a>
+          <a href="/ap">AP Exam Prep</a>
+          <a href="/subjects/test-prep">Test prep: LET, UPCAT, SAT</a>
+          <a href="/for-filipino-students">Para sa Filipino students</a>
         </div>
       </div>
       <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Teach <span class="caret" aria-hidden="true">&#9662;</span></button>
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Teach <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
-          <a href="/for-teachers">&#128105;&#8205;&#127979; For Teachers Hub</a>
-          <a href="/teach-the-math">&#127891; Teach the Math</a>
-          <a href="/teach-it-like-you-stream-it">&#127916; Teach It Like You Stream It</a>
-          <a href="/teacher-resources">&#128230; Teacher Resources</a>
-          <a href="/math-worksheets">&#128196; Printable Worksheets</a>
-          <a href="/courses">&#128218; Lesson &amp; Course Library</a>
+          <a href="/for-teachers">Teachers hub</a>
+          <a href="/flipped-classroom-math">Flipped Classroom Guide</a>
+          <a href="/teach-it-like-you-stream-it">Teach It Like You Stream It</a>
+          <a href="/studio">Numberbender Studio</a>
+          <a href="/studio-tutorial">Studio tutorials</a>
+          <a href="/teach-the-math">Teach the Math</a>
+          <a href="/teacher-resources">Teacher resources</a>
         </div>
       </div>
       <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">Math CCC <span class="caret" aria-hidden="true">&#9662;</span></button>
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">DepEd Math <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
-          <a href="/math-ccc">&#128218; Browse All Courses</a>
-          <a href="/ab1705-corequisite-math">&#129517; AB 1705 Corequisite Support</a>
-        </div>
-      </div>
-      <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">DepEd Math <span class="caret" aria-hidden="true">&#9662;</span></button>
-        <div class="dropdown-menu">
-          <a href="/deped">&#127477;&#127469; DepEd Math Home</a>
-          <a href="/deped/teachers">&#128105;&#8205;&#127979; For Teachers &middot; Para sa Teachers</a>
-          <div class="dd-label">MATATAG &middot; Junior High</div>
-          <a href="/deped/grade-7">Mathematics 7 &middot; Matematika 7</a>
-          <a href="/deped/grade-8">Mathematics 8 &middot; Matematika 8</a>
-          <a href="/deped/grade-9">Mathematics 9 &middot; Matematika 9</a>
-          <a href="/deped/grade-10">Mathematics 10 &middot; Matematika 10</a>
-          <div class="dd-label">Strengthened SHS &middot; Senior High</div>
+          <a href="/deped">All grades</a>
+          <a href="/deped/grade-7">Grade 7 Math</a>
+          <a href="/deped/grade-8">Grade 8 Math</a>
+          <a href="/deped/grade-9">Grade 9 Math</a>
+          <a href="/deped/grade-10">Grade 10 Math</a>
           <a href="/deped/shs/general-math">General Mathematics</a>
           <a href="/deped/shs/statistics-probability">Statistics &amp; Probability</a>
           <a href="/deped/shs/pre-calculus">Pre-Calculus</a>
           <a href="/deped/shs/basic-calculus">Basic Calculus</a>
+          <a href="/deped/teachers">For teachers · Para sa teachers</a>
         </div>
       </div>
       <div class="nav-dropdown">
-        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">About <span class="caret" aria-hidden="true">&#9662;</span></button>
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">College Math <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
-          <a href="/speaking-archive">&#128197; Past Engagements</a>
-          <a href="/blog">&#9997;&#65039; Blog</a>
-          <a href="/speaking">&#127908; Speaking</a>
-          <a href="/for-institutions">&#129309; For Institutions</a>
-          <a href="/nonprofit">&#127963;&#65039; Mission &amp; Nonprofit</a>
-          <a href="/press">&#128240; Press &amp; Media</a>
-          <a href="/about">&#128104;&#8205;&#127979; About Dr. E</a>
+          <a href="/math-ccc">California community college courses</a>
+          <a href="/ab1705-corequisite-math">AB 1705 corequisite support</a>
         </div>
       </div>
-      <div class="nav-dropdown nav-studio-dd">
-        <button type="button" class="dropdown-trigger nav-studio" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">🎬 Studio <span class="caret" aria-hidden="true">▾</span></button>
+      <div class="nav-dropdown">
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" onclick="toggleDD(this);return false;">About <span class="caret" aria-hidden="true">▾</span></button>
         <div class="dropdown-menu">
-          <a href="/studio-tutorial">🎓 How to use Studio<span class="nb-sub">5 short video tutorials — start here</span></a>
-          <a href="/studio">🎬 Open Studio<span class="nb-sub">Launch the free app — no login</span></a>
+          <a href="/about">About Dr. E</a>
+          <a href="/nonprofit">Mission &amp; nonprofit</a>
+          <a href="/speaking">Speaking</a>
+          <a href="/speaking-archive">Past engagements</a>
+          <a href="/blog">Blog</a>
+          <a href="/press">Press &amp; media</a>
+          <a href="/for-institutions">For institutions</a>
         </div>
       </div>
+      <a href="/studio" class="nav-studio">Studio</a>
       <a href="/contact" class="nav-cta">Contact</a>
     </nav>
   </div>
