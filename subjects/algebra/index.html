@@ -4,6 +4,8 @@
 <!-- nb-no-inject -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-P1M2WZD840"></script>
 <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-P1M2WZD840');
 </script>
@@ -347,6 +349,37 @@ footer{background:var(--navy);color:#94a3b8;padding:56px 0 28px;}
 </style>
 <link rel="stylesheet" href="/nb-print.css" media="print">
 <style id="nb-nav-2026-11">#navlinks a.nav-studio,#nbnavlinks a.nav-studio{display:inline-flex;align-items:center;background:#1F6F6B;color:#fff;padding:8px 15px;border-radius:999px;font-weight:800;font-size:.88rem;line-height:1.25;box-shadow:0 3px 10px rgba(31,111,107,.28);white-space:nowrap;text-decoration:none;}#navlinks a.nav-studio:hover,#nbnavlinks a.nav-studio:hover{background:#16544F;color:#fff;}@media(max-width:900px){#navlinks a.nav-studio,#nbnavlinks a.nav-studio{align-self:flex-start;width:auto;margin:4px 0;}}</style>
+<style id="nb-look-subject-2026-11">
+/* Deep shade of the subject's own color (Peter's choice), darkened toward
+   the site navy so the amber button and white text stand out */
+.subject-hero{background:linear-gradient(135deg,#53271f 0%,#833216 60%,#c2410c 100%);}
+.breadcrumb-nav,.breadcrumb-nav a{color:#CBD5E1;}
+.breadcrumb-nav a:hover{color:#fff;}
+.hero-text .tagline{color:#CBD5E1;}
+.hero-stats,.hero-trio{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.12);}
+.hero-trio-verb{color:#5EEAD4;}
+/* Main button (same amber CTA as the DepEd Term 2 button) */
+.nb-subj-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px;}
+.nb-subj-cta{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:14px;background:#F4A922;color:#0F172A;
+  font-size:1.06rem;font-weight:800;text-decoration:none;box-shadow:0 8px 24px rgba(244,169,34,.28);transition:background .15s,transform .15s;}
+.nb-subj-cta:hover{background:#FBBF24;color:#0F172A;text-decoration:none;transform:translateY(-1px);}
+/* Bigger worksheet card on laptops; tighter stats so nothing wraps */
+@media(min-width:900px){
+  .hero-artwork-wrap{width:340px;}
+  .hstat{padding:11px 16px;}
+  .hstat .n{white-space:nowrap;}
+  .hero-trio-step{padding:15px 16px;}
+}
+/* Phone fix: the stacked hero kept align-items:flex-end, so the content kept
+   its desktop width and spilled off the left edge (title cut off on AP pages). */
+@media(max-width:720px){
+  .hero-inner{align-items:stretch;}
+  .hero-content,.hero-text{min-width:0;}
+  .hero-stats{display:flex;flex-wrap:wrap;}
+  .hstat{flex:1 1 auto;}
+  .nb-subj-cta{flex:1 1 100%;justify-content:center;}
+}
+</style>
 </head>
 <body data-lang="en">
 <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -470,6 +503,8 @@ footer{background:var(--navy);color:#94a3b8;padding:56px 0 28px;}
             </div>
           </div>
         </div>
+      
+        <div class="nb-subj-ctas"><a class="nb-subj-cta" href="#unit-1">Start Unit 1 →</a></div>
       </div>
       </div><!-- /hero-content -->
       <div class="hero-artwork-wrap">
