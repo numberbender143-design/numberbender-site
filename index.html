@@ -1100,6 +1100,135 @@
   @media (max-width: 600px){
     .logo-lockup .lockup-img{ height: 50px; max-width: 240px; }
   }
+
+  /* ========== NEW HOMEPAGE (2026-11): hero, doors, student & teacher cards ========== */
+  .nh-hero{ padding: 56px 0 56px; background: radial-gradient(1200px 500px at 85% 0%, #E6F2F1 0%, rgba(230,242,241,0) 60%), var(--bg); }
+  .nh-hero-grid{ display:grid; grid-template-columns: 1.15fr .85fr; gap: 56px; align-items:center; }
+  .nh-hero h1{ font-size: clamp(2.1rem, 4.6vw, 3.6rem); line-height: 1.08; letter-spacing: -.02em; font-weight: 800; margin: 18px 0 16px; }
+  .nh-accent{ color: #1F6F6B; }
+  .nh-lead{ font-size: 1.15rem; color: #475569; max-width: 36em; }
+  .nh-fil{ font-style: italic; color: #155753; font-size: .98rem; margin-top: 8px; }
+  .nh-studio-pill{ display:inline-flex; align-items:center; gap:10px; background:#fff; border:1.5px solid #B9DAD7; border-radius:999px; padding:5px 5px 5px 6px; font-size:.88rem; font-weight:600; color: var(--navy); box-shadow: 0 2px 8px rgba(15,23,42,.05); transition: border-color .15s ease; }
+  .nh-studio-pill:hover{ border-color:#1F6F6B; text-decoration:none; }
+  .nh-sp-new{ background:#E6F2F1; color:#155753; font-size:.72rem; font-weight:800; letter-spacing:.06em; text-transform:uppercase; padding:3px 9px; border-radius:999px; }
+  .nh-sp-go{ background:#1F6F6B; color:#fff; font-weight:700; padding:5px 12px; border-radius:999px; white-space:nowrap; }
+  .nh-doors{ display:grid; grid-template-columns: 1fr 1fr; gap:16px; margin-top:28px; }
+  .nh-door{ display:flex; flex-direction:column; gap:6px; padding:20px 22px; border-radius:16px; color:#fff; box-shadow: var(--shadow); transition: transform .15s ease; }
+  .nh-door:hover{ transform: translateY(-2px); text-decoration:none; }
+  .nh-door-student{ background: var(--blue); }
+  .nh-door-teacher{ background: #1F6F6B; }
+  .nh-door-top{ display:flex; align-items:center; gap:10px; }
+  .nh-door-top svg{ flex:none; }
+  .nh-door-title{ display:block; font-size:1.3rem; font-weight:800; line-height:1.2; }
+  .nh-door-sub{ display:block; font-size:.85rem; opacity:.85; font-weight:600; }
+  .nh-door-text{ font-size:.95rem; opacity:.95; line-height:1.45; }
+  .nh-door-go{ margin-top:4px; font-weight:700; }
+  .nh-proof{ display:flex; flex-wrap:wrap; gap:6px 18px; margin-top:22px; font-size:.9rem; color:#475569; font-weight:600; }
+  .nh-proof b{ color: var(--navy); }
+  .nh-photo{ position:relative; max-width:460px; width:100%; justify-self:end; }
+  .nh-photo img{ border-radius:24px; box-shadow: 0 20px 50px rgba(15,23,42,.18); aspect-ratio:1/1; object-fit:cover; object-position: 22% center; width:100%; height:auto; }
+  .nh-badge{ position:absolute; background:#fff; border:1px solid var(--border); border-radius:12px; padding:8px 12px; font-size:.82rem; font-weight:700; box-shadow: var(--shadow); display:flex; gap:8px; align-items:center; }
+  .nh-badge-yt{ right:-14px; top:22px; }
+  .nh-badge-ade{ left:-18px; bottom:28px; }
+  .nh-dot{ width:10px; height:10px; border-radius:50%; background:#EF4444; }
+  .nh-section{ padding: 72px 0; }
+  .nh-students{ background: var(--surface); }
+  .nh-teachers{ background: var(--bg); }
+  .nh-section .section-head{ margin-bottom: 32px; }
+  .nh-teachers .section-eyebrow{ color:#1F6F6B; }
+  .nh-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap:16px; }
+  .nh-card{ display:flex; gap:14px; align-items:flex-start; background:#fff; border:1px solid var(--border); border-radius:16px; padding:20px; color: var(--navy); transition: border-color .15s ease, box-shadow .15s ease, transform .15s ease; }
+  .nh-card:hover{ border-color: var(--blue); box-shadow: var(--shadow); transform: translateY(-2px); text-decoration:none; }
+  .nh-teachers .nh-card:hover{ border-color:#1F6F6B; }
+  .nh-ico{ flex:none; width:44px; height:44px; border-radius:12px; display:grid; place-items:center; background: rgba(37,99,235,.08); color: var(--blue); }
+  .nh-teachers .nh-ico{ background:#E6F2F1; color:#1F6F6B; }
+  .nh-card h3{ font-size:1.05rem; line-height:1.3; margin-bottom:4px; }
+  .nh-card p{ font-size:.92rem; color: var(--muted); line-height:1.5; }
+  .nh-more{ display:flex; justify-content:center; flex-wrap:wrap; gap:8px 28px; margin-top:24px; font-weight:600; }
+  .nh-teachers .nh-more a{ color:#1F6F6B; }
+  @media (max-width: 1000px){ .nh-grid{ grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 900px){
+    .nh-hero{ padding: 22px 0 32px; }
+    .nh-hero-grid{ grid-template-columns: 1fr; gap: 28px; }
+    .nh-hero h1{ margin: 12px 0 10px; }
+    .nh-lead{ font-size: 1rem; }
+    .nh-doors{ grid-template-columns: 1fr; gap: 12px; margin-top: 18px; }
+    .nh-door{ padding: 16px 18px; }
+    .nh-door-text{ display:none; }
+    .nh-door-title{ font-size: 1.15rem; }
+    .nh-proof{ font-size: .82rem; margin-top: 16px; }
+    .nh-photo{ justify-self: center; }
+    .nh-badge-ade{ left: 10px; }
+    .nh-badge-yt{ right: 10px; }
+    .nh-sp-long{ display:none; }
+    .nh-studio-pill{ font-size: .84rem; gap: 8px; }
+  }
+  @media (max-width: 700px){
+    .nh-section{ padding: 52px 0; }
+    .nh-grid{ grid-template-columns: 1fr; gap: 12px; }
+    .nh-card{ padding: 16px; }
+  }
+
+  /* ========== SUPPORT THE MOVEMENT (2026-11) ========== */
+  .nh-support{ background: var(--surface); padding: 72px 0; }
+  .nh-support-grid{ display:grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items:start; max-width: 1040px; }
+  .nh-support .section-eyebrow{ color:#1F6F6B; }
+  .nh-support h2{ font-size: clamp(1.7rem, 3vw, 2.3rem); line-height:1.15; letter-spacing:-.01em; margin-bottom: 14px; }
+  .nh-support-copy p{ color: var(--muted); font-size: 1.02rem; }
+  .nh-support-list{ list-style:none; margin: 18px 0; display:grid; gap:10px; }
+  .nh-support-list li{ position:relative; padding-left: 28px; font-weight:600; }
+  .nh-support-list li::before{ content:"✓"; position:absolute; left:0; top:0; width:20px; height:20px; border-radius:50%; background:#E6F2F1; color:#1F6F6B; font-size:.75rem; display:grid; place-items:center; font-weight:800; }
+  .nh-support-note{ font-size:.92rem !important; }
+  .nh-support-card{ background: var(--bg); border:1px solid var(--border); border-radius: 18px; padding: 24px; box-shadow: var(--shadow); }
+  .nh-row{ display:grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .nh-field{ display:flex; flex-direction:column; gap:4px; margin-bottom: 12px; }
+  .nh-field label{ font-size:.82rem; font-weight:700; color: var(--navy); }
+  .nh-field input, .nh-field select{ padding: 10px 12px; border:1.5px solid var(--border); border-radius:10px; font: inherit; font-size:.95rem; background:#fff; color: var(--navy); width:100%; }
+  .nh-field input:focus, .nh-field select:focus{ outline:none; border-color:#1F6F6B; box-shadow: 0 0 0 4px rgba(31,111,107,.12); }
+  .nh-research{ border:1px dashed #B9DAD7; border-radius:12px; padding: 10px 14px; margin: 2px 0 14px; background:#fff; }
+  .nh-research summary{ cursor:pointer; font-weight:700; color:#155753; font-size:.92rem; }
+  .nh-row-research{ margin-top: 12px; }
+  .nh-consent{ display:flex; gap:8px; align-items:flex-start; font-size:.85rem; color: var(--muted); }
+  .nh-consent input{ margin-top: 4px; }
+  .nh-support-btn{ width:100%; background:#1F6F6B; color:#fff; border:0; border-radius:10px; padding: 13px 18px; font: inherit; font-size:1rem; font-weight:700; cursor:pointer; transition: background .15s ease; }
+  .nh-support-btn:hover{ background:#155753; }
+  .nh-support-btn:disabled{ opacity:.7; cursor:wait; }
+  .nh-support-fine{ font-size:.78rem; color: var(--muted); margin-top: 10px; line-height:1.5; }
+  .nh-support-done{ display:flex; flex-direction:column; gap:8px; }
+  .nh-support-done[hidden], #supportForm[hidden]{ display:none; }
+  .nh-support-done p{ color: var(--muted); }
+  .nh-support-done a{ font-weight:700; color:#1F6F6B; }
+  @media (max-width: 860px){
+    .nh-support{ padding: 52px 0; }
+    .nh-support-grid{ grid-template-columns: 1fr; gap: 24px; }
+  }
+  @media (max-width: 480px){ .nh-row{ grid-template-columns: 1fr; gap: 0; } .nh-support-card{ padding: 18px; } }
+
+  /* ========== WHAT'S NEW (2026-11) ========== */
+  .nh-news{ background: #0F172A; color: #fff; padding: 72px 0; }
+  .nh-news .section-eyebrow{ color: #5EEAD4; }
+  .nh-news .section-head h2{ color: #fff; }
+  .nh-news .section-head p{ color: #CBD5E1; }
+  .nh-news .section-head{ margin-bottom: 32px; }
+  .nh-news-grid{ display:grid; grid-template-columns: 1.25fr 1fr; gap: 20px; align-items: stretch; }
+  .nh-news-feature, .nh-news-item{ display:flex; flex-direction:column; background:#16213A; border:1px solid rgba(255,255,255,.08); border-radius: 18px; color:#fff; overflow:hidden; transition: transform .15s ease, border-color .15s ease; }
+  .nh-news-feature:hover, .nh-news-item:hover{ transform: translateY(-2px); border-color: rgba(94,234,212,.5); text-decoration:none; }
+  .nh-news-feature img{ width:100%; height:auto; aspect-ratio: 950/534; object-fit: cover; }
+  .nh-news-body{ display:flex; flex-direction:column; gap:8px; padding: 22px 24px 24px; }
+  .nh-news-feature h3{ font-size: 1.4rem; line-height: 1.25; }
+  .nh-news-list{ display:grid; gap: 14px; }
+  .nh-news-item{ gap: 6px; padding: 18px 20px; }
+  .nh-news-item h3{ font-size: 1.08rem; line-height: 1.3; }
+  .nh-news p{ color: #CBD5E1; font-size: .93rem; line-height: 1.5; }
+  .nh-chip{ align-self:flex-start; background: rgba(94,234,212,.12); color:#5EEAD4; font-size:.72rem; font-weight:800; letter-spacing:.06em; text-transform:uppercase; padding: 3px 10px; border-radius: 999px; }
+  .nh-chip-hot{ background: rgba(244,169,34,.16); color:#FCD34D; }
+  .nh-news-go{ margin-top: 2px; font-weight: 700; color: #5EEAD4; font-size: .93rem; }
+  .nh-news .nh-more a{ color: #5EEAD4; }
+  @media (max-width: 900px){
+    .nh-news{ padding: 52px 0; }
+    .nh-news-grid{ grid-template-columns: 1fr; }
+    .nh-news-feature h3{ font-size: 1.2rem; }
+  }
 .skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}.skip-link:focus{position:fixed;top:0;left:0;width:auto;height:auto;padding:8px 16px;background:#0F2B3D;color:#fff;z-index:9999;font-size:14px;text-decoration:none;border-radius:0 0 4px 0;}</style>
 
 <script type="application/ld+json">
@@ -1175,7 +1304,7 @@
 #nb-sticky-bar button.nb-close{background:transparent;border:1.5px solid rgba(255,255,255,.4);color:#fff;width:28px;height:28px;border-radius:50%;font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .2s;}
 #nb-sticky-bar button.nb-close:hover{background:rgba(255,255,255,.15);}
 #nb-sticky-bar .nb-success{font-size:15px;font-weight:600;color:#fff;}
-@media(max-width:640px){#nb-sticky-bar{flex-direction:column;gap:8px;padding:14px 16px;text-align:center;}#nb-sticky-bar p{white-space:normal;font-size:13px;}#nb-sticky-bar input[type="email"]{width:100%;}#nb-sticky-bar button.nb-submit{width:100%;}}
+.nb-mobile{display:none;align-items:center;gap:10px;color:#fff;font-size:14px;font-weight:600;}.nb-mobile a{background:#F4A922;color:#0F2B3D;border-radius:6px;padding:7px 14px;font-weight:700;text-decoration:none;white-space:nowrap;}@media(max-width:640px){#nb-sticky-bar{flex-wrap:nowrap;gap:10px;padding:8px 12px;}#nb-sticky-bar p,#nb-sticky-bar input[type="email"],#nb-sticky-bar button.nb-submit{display:none;}#nb-sticky-bar .nb-mobile{display:flex;}#nb-sticky-bar .nb-success{display:block;font-size:13px;}}
 </style>
 <style id="nb-studio-nav">
 /* Numberbender Studio nav — pill dropdown + nav overflow fixes */
@@ -1288,558 +1417,184 @@
 <main id="main-content">
 
 <!-- ========== HERO ========== -->
-<section class="hero">
-  <div class="container">
-    <div class="hero-grid">
-      <!-- Left: Text, CTAs, Stats -->
-      <div class="hero-left">
-        <div class="hero-eyebrow">✨ Math is hard. So we made it human.</div>
-        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:16px;">
-          <span style="display:inline-flex;align-items:center;gap:6px;background:#f1f5f9;border:1px solid #e2e8f0;border-radius:20px;padding:5px 12px;font-size:0.8rem;font-weight:600;color:#0f172a;">▶️ YouTube Silver Play Button</span>
-          <span style="display:inline-flex;align-items:center;gap:6px;background:#f1f5f9;border:1px solid #e2e8f0;border-radius:20px;padding:5px 12px;font-size:0.8rem;font-weight:600;color:#0f172a;"> Apple Distinguished Educator</span>
-          <a href="/studio" title="Open Numberbender Studio — the free teaching studio" style="display:inline-flex;align-items:center;gap:6px;background:#1F6F6B;border:1px solid #1F6F6B;border-radius:20px;padding:6px 16px;font-size:0.85rem;font-weight:800;color:#fff;text-decoration:none;box-shadow:0 3px 10px rgba(31,111,107,.3);" onmouseover="this.style.background='#085041'" onmouseout="this.style.background='#1F6F6B'">🎬 STREAM IT! →</a>
-        </div>
-        <h1>
-          Learn <span class="accent-blue">Math</span>.<br/>
-          Teach <span class="accent-cyan">Online</span>.<br/>
-          Bend the <span class="accent-yellow">Future</span> of Education.
-        </h1>
-        <p style="font-size:0.95rem;color:var(--muted);margin:0 0 20px;display:flex;flex-wrap:wrap;align-items:center;gap:8px;">
-          🇵🇭 Available in English &amp; Filipino (Tagalog) &middot; Free for every learner, everywhere
-          <a href="/for-filipino-students" style="color:var(--blue);font-weight:600;white-space:nowrap;">→ For Filipino Students</a>
-        </p>
-        <p class="lead">
-          The only place to learn real college math in English <em>and</em> Filipino — taught from an
-          actual classroom, with a free worksheet for every lesson. Built for students who want to get
-          good at math, and for educators bringing the
-          <a href="/flipped-classroom-math">flipped classroom</a> and the Teach It Like You Stream It movement to life.
-        </p>
-        <div class="hero-ctas">
-          <a href="#students" class="btn btn-primary btn-lg">I'm a Student →</a>
-          <a href="#educators" class="btn btn-cyan btn-lg">I'm an Educator →</a>
-        </div>
-        <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:14px;">
-          <a href="/math-worksheets" style="display:inline-flex;align-items:center;gap:8px;background:#fff;border:2px solid var(--border);border-radius:10px;padding:10px 18px;font-size:0.9rem;font-weight:700;color:var(--navy);text-decoration:none;transition:border-color 0.2s,box-shadow 0.2s;" onmouseover="this.style.borderColor='var(--blue)';this.style.boxShadow='0 2px 8px rgba(0,0,0,0.08)'" onmouseout="this.style.borderColor='var(--border)';this.style.boxShadow='none'">📄 Free Worksheets</a>
-          <a href="/courses" style="display:inline-flex;align-items:center;gap:8px;background:#fff;border:2px solid var(--border);border-radius:10px;padding:10px 18px;font-size:0.9rem;font-weight:700;color:var(--navy);text-decoration:none;transition:border-color 0.2s,box-shadow 0.2s;" onmouseover="this.style.borderColor='var(--cyan)';this.style.boxShadow='0 2px 8px rgba(0,0,0,0.08)'" onmouseout="this.style.borderColor='var(--border)';this.style.boxShadow='none'">🎓 Free Lessons</a>
-          <a href="/teacher-resources" style="display:inline-flex;align-items:center;gap:8px;background:#fff;border:2px solid var(--border);border-radius:10px;padding:10px 18px;font-size:0.9rem;font-weight:700;color:var(--navy);text-decoration:none;transition:border-color 0.2s,box-shadow 0.2s;" onmouseover="this.style.borderColor='#f59e0b';this.style.boxShadow='0 2px 8px rgba(0,0,0,0.08)'" onmouseout="this.style.borderColor='var(--border)';this.style.boxShadow='none'">👩‍🏫 Teacher Resources</a>
-        </div>
-        <div style="margin:20px 0 24px;">
-          <a href="/math-worksheets#bundles" style="display:inline-flex;align-items:center;gap:10px;background:#1F6F6B;color:white;border-radius:10px;padding:12px 22px;font-size:1rem;font-weight:700;text-decoration:none;transition:background 0.2s,transform 0.2s,box-shadow 0.2s;box-shadow:0 4px 14px rgba(31,111,107,0.25);" onmouseover="this.style.background='#085041';this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 20px rgba(31,111,107,0.35)'" onmouseout="this.style.background='#1F6F6B';this.style.transform='none';this.style.boxShadow='0 4px 14px rgba(31,111,107,0.25)'">📦 Get Free Worksheet Bundles →</a>
-          <p style="font-size:0.8rem;color:var(--muted);margin:8px 0 0;">Full subject bundles — free to download, answer keys included.</p>
-        </div>
-        <div class="hero-stats">
-          <div class="stat">
-            <svg class="stat-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            <span class="stat-num">16M+</span><span class="stat-label">Video views</span>
-          </div>
-          <div class="stat">
-            <svg class="stat-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.66 2.69 3 6 3s6-1.34 6-3v-5"/></svg>
-            <span class="stat-num">20+ yrs</span><span class="stat-label">Classroom Teaching</span>
-          </div>
-          <div class="stat">
-            <svg class="stat-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
-            <span class="stat-num">100+</span><span class="stat-label">Talks &amp; workshops</span>
-          </div>
-          <div class="stat">
-            <svg class="stat-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>
-            <span class="stat-num">50+</span><span class="stat-label">Institutions Served</span>
-          </div>
-          <div class="stat">
-            <svg class="stat-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-            <span class="stat-num">10+</span><span class="stat-label">Countries Presented</span>
-          </div>
-        </div>
-      </div>
-      <!-- Right: Studio card + Illustration -->
-      <div class="hero-characters-wrap">
-        <div class="hero-chars-inner">
+<section class="nh-hero">
+  <div class="container nh-hero-grid">
+    <div>
+      <a class="nh-studio-pill" href="/studio">
+        <span class="nh-sp-new">New</span>
+        <span>Numberbender Studio<span class="nh-sp-long"> — turn Zoom into a real classroom</span></span>
+        <span class="nh-sp-go">Open Studio →</span>
+      </a>
+      <h1>Free math for <span class="nh-accent">everyone</span> — in English and Filipino.</h1>
+      <p class="nh-lead">Video lessons from Dr. E's real classroom, a free worksheet for every lesson, and tools for teachers who flip their class.</p>
+      <p class="nh-fil" lang="fil">Libreng math para sa lahat — sa English at Filipino.</p>
 
-          <!-- Numberbender Studio: make your Zoom class engaging -->
-          <a class="studio-hero-card" href="/studio" title="Open Numberbender Studio — free teaching studio for Zoom, Meet & Teams">
-            <span class="sh-icon">🎬</span>
-            <span class="sh-pill"><span class="sh-dot"></span>New · Free Studio</span>
-            <h3>Turn Zoom into a real classroom.</h3>
-            <div class="sh-slogan">Teach It Like You Stream It</div>
-            <p>Numberbender&nbsp;Studio puts your camera and your slides or whiteboard side&#8209;by&#8209;side, then shares straight into your Zoom&nbsp;meeting — so your online class actually feels like teaching.</p>
-            <div class="sh-tools">🟦 Zoom · 🟩 Google&nbsp;Meet · 🟪 Teams — no install</div>
-            <span class="sh-cta">🎬 Open the Studio — Free →</span>
-          </a>
-
-          <div class="hero-img-wrap">
-            <div class="ws-float-badge">
-              <div class="ws-badge-icon">🌐</div>
-              <div>
-                <div class="ws-badge-title">Bilingual: English + Filipino</div>
-                <div class="ws-badge-sub">Math for every Filipino learner, worldwide</div>
-              </div>
-            </div>
-            <picture><source srcset="images/hero_image_worksheet_teacher.webp" type="image/webp"><img src="images/hero_image_worksheet_teacher.png" alt="Student with bilingual math worksheet and Dr. E with laptop showing Numberbender" loading="eager" fetchpriority="high" width="600" height="500"></picture>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<script>
-/* Align the Studio hero card's top with the "Learn Math" headline (desktop only) */
-(function(){
-  function alignStudioCard(){
-    var card=document.querySelector('.studio-hero-card');
-    var h1=document.querySelector('.hero-left h1');
-    var wrap=document.querySelector('.hero-characters-wrap');
-    if(!card||!h1||!wrap) return;
-    if(window.innerWidth<=900){ card.style.marginTop=''; return; }
-    var delta=Math.round(h1.getBoundingClientRect().top - wrap.getBoundingClientRect().top);
-    card.style.marginTop=Math.max(0, delta)+'px';
-  }
-  window.addEventListener('load', alignStudioCard);
-  window.addEventListener('resize', alignStudioCard);
-  if(document.fonts && document.fonts.ready){ document.fonts.ready.then(alignStudioCard); }
-  if(document.readyState!=='loading'){ alignStudioCard(); }
-  else { document.addEventListener('DOMContentLoaded', alignStudioCard); }
-})();
-</script>
-
-<!-- ========== TEST PREP FEATURE ========== -->
-<section class="tp-feature">
-  <div class="container">
-    <div class="tp-feature-inner">
-
-      <!-- Left: Artwork -->
-      <div class="tp-feature-art">
-        <picture><source srcset="images/numberbender_hero_testPrep.webp" type="image/webp"><img src="images/numberbender_hero_testPrep.png"
-             alt="Gamified test prep — earn badges, track streaks, practice math for LET, UPCAT, SAT and more"
-             width="512" height="512"
-             loading="lazy"></picture>
-      </div>
-
-      <!-- Right: Text -->
-      <div class="tp-feature-text">
-        <div class="section-eyebrow">🎯 Gamified Test Prep</div>
-        <h2>Practice for LET, UPCAT, SAT &amp; more — and earn badges along the way.</h2>
-        <p>
-          69 lessons across 5 units. Algebra, functions, number sense, statistics,
-          geometry, and quick drills — all in English and Filipino.
-          Every practice session you complete moves you forward on the
-          <strong>Numberbender Path</strong>.
-        </p>
-        <ul class="tp-feature-list">
-          <li>📊 Track your progress per unit</li>
-          <li>🔥 Build a daily practice streak</li>
-          <li>🏅 Unlock badges — from <em>The Path of Variables</em> to <em>Elemental Mathematics</em></li>
-          <li>⭐ Reach the <em>Numberbender State</em> with a perfect score</li>
-        </ul>
-        <a href="/subjects/test-prep" class="btn btn-primary">Start Test Prep Practice →</a>
-        <p class="tp-feature-note">Free. No login. Works on any device.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ========== AUDIENCE CARDS ========== -->
-<section class="audience">
-  <div class="container">
-    <div class="section-head">
-      <div class="section-eyebrow">Choose your path</div>
-      <h2>Two clear pathways. One education movement.</h2>
-      <p>Numberbender helps students learn math with confidence and helps educators teach online with energy, clarity, and impact.</p>
-    </div>
-
-    <div class="audience-grid">
-      <!-- STUDENT CARD -->
-      <div class="a-card student" id="students">
-        <div class="a-icon">🎓</div>
-        <h3>For Students</h3>
-        <p class="a-desc">
-          Access clear, curriculum-based math lessons designed to help you understand
-          concepts, practice with confidence, and prepare for success in algebra,
-          statistics, calculus, and beyond.
-        </p>
-        <ul class="a-features">
-          <li>Video-based math lessons</li>
-          <li>Step-by-step explanations</li>
-          <li>Practice-focused learning</li>
-          <li>Confidence-building support</li>
-        </ul>
-        <div style="display:flex;gap:10px;flex-wrap:wrap;">
-          <a href="/courses" class="btn btn-primary">Try a Free Lesson →</a>
-          <a href="/find-your-course" class="btn btn-outline">Where Do I Start?</a>
-        </div>
-      </div>
-
-      <!-- EDUCATOR CARD -->
-      <div class="a-card educator" id="educators">
-        <div class="a-icon">🎥</div>
-        <h3>For Teachers &amp; Educators</h3>
-        <p class="a-desc">
-          Learn how to teach online with energy, presence, and impact using simple
-          video production tools, AI-enhanced workflows, flipped learning, and
-          practical engagement strategies.
-        </p>
-        <ul class="a-features">
-          <li>Teach It Like You Stream It workshops</li>
-          <li>Online teaching presence</li>
-          <li>Video lesson creation</li>
-          <li>AI &amp; educational technology integration</li>
-        </ul>
-        <div style="display:flex;gap:10px;flex-wrap:wrap;">
-          <a href="/for-teachers" class="btn btn-cyan">For Teachers Hub →</a>
-          <a href="/teach-it-like-you-stream-it" class="btn btn-outline">Explore TILYSI</a>
-          <a href="/teacher-resources" class="btn btn-outline">Free Resources</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ========== NUMBERBENDER STUDIO (free tool) ========== -->
-<section id="studio" style="background:linear-gradient(135deg,#0f3a38,#1F6F6B 58%,#24817c);color:#fff;padding:60px 0;">
-  <div class="container" style="display:flex;flex-wrap:wrap;gap:40px;align-items:center;justify-content:center;">
-    <div style="flex:1 1 360px;min-width:300px;">
-      <span class="new-badge">✦ New</span>
-      <div class="section-eyebrow" style="color:#bfe3e1;margin-top:10px;">🎬 Teach It Like You Stream It</div>
-      <h2 style="font-size:2rem;line-height:1.15;margin:8px 0 10px;color:#fff;">Numberbender Studio — a free streaming-style classroom</h2>
-      <p style="font-size:1.05rem;color:rgba(255,255,255,.92);margin:0 0 18px;max-width:560px;">Put your <b>camera</b> next to your <b>slides, iPad whiteboard, or any window</b>, then screen-share it straight into Zoom or Teams. No subscription, no login, nothing to install — and it can add itself to your desktop on Mac or PC.</p>
-      <div style="display:flex;flex-wrap:wrap;gap:9px;margin:0 0 22px;font-size:.85rem;">
-        <span style="background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);padding:6px 12px;border-radius:999px;">🆓 100% free</span>
-        <span style="background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);padding:6px 12px;border-radius:999px;">🔒 No login</span>
-        <span style="background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);padding:6px 12px;border-radius:999px;">💻 Mac &amp; PC</span>
-        <span style="background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);padding:6px 12px;border-radius:999px;">⬇ Installs as an app</span>
-      </div>
-      <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;">
-        <a href="/studio" style="display:inline-flex;align-items:center;gap:8px;background:#fff;color:#16544f;font-weight:800;padding:13px 22px;border-radius:12px;text-decoration:none;box-shadow:0 8px 22px rgba(0,0,0,.2);">Launch Studio →</a>
-        <a href="/studio-tutorial" style="display:inline-flex;align-items:center;gap:8px;background:transparent;color:#fff;border:2px solid rgba(255,255,255,.5);font-weight:700;padding:11px 18px;border-radius:12px;text-decoration:none;">▶ Watch the tutorials</a>
-        <a href="/teach-it-like-you-stream-it#studio" style="color:rgba(255,255,255,.85);font-weight:600;font-size:.92rem;text-decoration:underline;">About the movement</a>
-      </div>
-    </div>
-    <div style="flex:1 1 340px;min-width:300px;">
-      <div style="background:#0b0f14;border:1px solid rgba(255,255,255,.18);border-radius:16px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.4);">
-        <!-- Studio toolbar (mirrors the real app) -->
-        <div style="display:flex;align-items:center;gap:8px;background:#141a21;border-bottom:1px solid #26313c;padding:8px 10px;">
-          <span style="width:20px;height:20px;border-radius:6px;background:linear-gradient(135deg,#2E7D7B,#1F6F6B);flex:0 0 auto;"></span>
-          <span style="line-height:1.15;">
-            <span style="display:block;font-size:11px;font-weight:800;color:#e7edf2;">Numberbender <span style="color:#9fb0bd;font-weight:600;">Studio</span></span>
-            <span style="display:block;font-size:8.5px;font-style:italic;font-weight:600;color:#D17A3E;">Teach It Like You Stream It</span>
+      <div class="nh-doors">
+        <a class="nh-door nh-door-student" href="#students">
+          <span class="nh-door-top">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg>
+            <span><span class="nh-door-title">I'm a Student</span><span class="nh-door-sub" lang="fil">Student ako</span></span>
           </span>
-          <span style="display:flex;gap:3px;margin-left:6px;background:#0b0f14;border:1px solid #26313c;border-radius:8px;padding:3px;">
-            <span style="font-size:8.5px;font-weight:700;color:#fff;background:#2E7D7B;border-radius:5px;padding:3px 7px;white-space:nowrap;">▥ Side&#8209;by&#8209;side</span>
-            <span style="font-size:8.5px;color:#9fb0bd;padding:3px 6px;white-space:nowrap;">▣ Spotlight</span>
-            <span style="font-size:8.5px;color:#9fb0bd;padding:3px 6px;white-space:nowrap;">⊞ Dual</span>
+          <span class="nh-door-text">Lessons, worksheets and test prep — Algebra to AP Calculus, plus DepEd Grades 7–12.</span>
+          <span class="nh-door-go">Start learning →</span>
+        </a>
+        <a class="nh-door nh-door-teacher" href="#educators">
+          <span class="nh-door-top">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M12 16v4M8 20h8"/></svg>
+            <span><span class="nh-door-title">I'm a Teacher</span><span class="nh-door-sub" lang="fil">Teacher ako</span></span>
           </span>
-          <span style="flex:1;"></span>
-          <span style="font-size:8.5px;font-weight:700;color:#fff;background:#D17A3E;border-radius:6px;padding:4px 9px;white-space:nowrap;">◧ Presenter</span>
-        </div>
-        <!-- Stage: camera + live lesson, side by side -->
-        <div style="padding:10px;">
-          <div style="display:flex;gap:8px;height:188px;">
-            <div style="flex:0 0 44%;background:#19232c;border-radius:10px;overflow:hidden;position:relative;">
-              <picture>
-                <source srcset="images/studio-presenter.webp" type="image/webp">
-                <img src="images/studio-presenter.jpg" alt="Dr. E presenting live in Numberbender Studio" loading="lazy" width="360" height="439" style="width:100%;height:100%;object-fit:cover;object-position:center 22%;display:block;">
-              </picture>
-              <span style="position:absolute;top:8px;left:8px;display:inline-flex;align-items:center;gap:5px;background:rgba(0,0,0,.5);color:#fff;font-size:9px;padding:2px 7px;border-radius:5px;"><span style="width:6px;height:6px;border-radius:50%;background:#ff5a5a;display:inline-block;"></span>Camera</span>
-            </div>
-            <div style="flex:1;background:#fff;border-radius:10px;padding:13px 14px;display:flex;flex-direction:column;position:relative;">
-              <span style="position:absolute;top:8px;right:8px;background:#eef2f7;color:#64748b;font-size:9px;padding:2px 7px;border-radius:5px;">Slide</span>
-              <div style="font-size:12px;font-weight:800;color:#0f172a;margin:0 0 6px;">Graphing a Parabola</div>
-              <div style="font-family:Georgia,'Times New Roman',serif;font-size:13px;font-weight:700;color:#1F6F6B;margin:0 0 6px;">y = x² − 4</div>
-              <div style="flex:1;position:relative;min-height:58px;">
-                <svg viewBox="0 0 150 80" style="width:100%;height:100%;display:block;" preserveAspectRatio="none" aria-hidden="true">
-                  <line x1="0" y1="30" x2="150" y2="30" stroke="#e2e8f0" stroke-width="1.5"/>
-                  <line x1="75" y1="4" x2="75" y2="74" stroke="#e2e8f0" stroke-width="1.5"/>
-                  <path d="M24 8 Q75 96 126 8" fill="none" stroke="#D17A3E" stroke-width="3"/>
-                  <circle cx="75" cy="52" r="3.5" fill="#2563EB"/>
-                </svg>
-              </div>
-            </div>
-          </div>
-          <div style="display:flex;justify-content:flex-end;margin-top:8px;">
-            <span style="display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);color:#fff;font-size:11px;padding:4px 10px;border-radius:999px;">Powered by Numberbender</span>
-          </div>
-        </div>
+          <span class="nh-door-text">The flipped-classroom guide, the free Studio app, worksheets with answer keys, and workshops for your school.</span>
+          <span class="nh-door-go">Start teaching →</span>
+        </a>
+      </div>
+
+      <div class="nh-proof">
+        <span><b>340K+</b> YouTube subscribers</span>
+        <span><b>16M+</b> video views</span>
+        <span><b>569</b> free worksheets</span>
+        <span>Listed on <b>MERLOT</b> &amp; <b>OER Commons</b></span>
       </div>
     </div>
-  </div>
 
-  <!-- Studio demo video -->
-  <div class="container" style="max-width:760px;margin:40px auto 0;">
-    <h3 style="text-align:center;color:#fff;font-size:1.2rem;margin:0 0 8px;">▶ See it in action: what your lesson looks like in Numberbender Studio</h3>
-    <p style="text-align:center;color:rgba(255,255,255,.82);font-size:.96rem;max-width:560px;margin:0 auto 16px;">A short look at the camera + content layouts you'll get the moment you launch Studio — the same setup Dr. E uses to teach live every week.</p>
-    <div style="position:relative;width:100%;padding-bottom:56.25%;height:0;border-radius:14px;overflow:hidden;background:#0b0f14;border:1px solid rgba(255,255,255,.18);box-shadow:0 24px 60px rgba(0,0,0,.4);">
-      <iframe style="position:absolute;inset:0;width:100%;height:100%;border:0;"
-              src="https://www.youtube-nocookie.com/embed/hUPfHCBKWDw?rel=0&amp;modestbranding=1"
-              title="What Your Zoom Lesson Looks Like with Numberbender Studio"
-              loading="lazy"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen></iframe>
+    <div class="nh-photo">
+      <picture>
+        <source srcset="images/peter_presenting_in_Berlin_2.webp" type="image/webp">
+        <img src="images/peter_presenting_in_Berlin_2.jpg" alt="Dr. E presenting on stage in Berlin" width="1620" height="1080" fetchpriority="high">
+      </picture>
+      <span class="nh-badge nh-badge-yt"><span class="nh-dot" aria-hidden="true"></span>YouTube Silver Play Button</span>
+      <span class="nh-badge nh-badge-ade">Apple Distinguished Educator</span>
     </div>
-    <p style="text-align:center;color:rgba(255,255,255,.6);font-size:.82rem;margin:12px 0 0;">Prefer YouTube? <a href="https://youtu.be/hUPfHCBKWDw" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline;">Watch on YouTube →</a></p>
   </div>
 </section>
 
-<!-- ========== FEATURED COURSES ========== -->
-<section id="courses" class="courses-dark">
+<!-- ========== FOR STUDENTS ========== -->
+<section class="nh-section nh-students" id="students">
   <div class="container">
     <div class="section-head">
-      <div class="section-eyebrow">📅 Full Semester Courses</div>
-      <h2>Real classroom. Real students. Real math.</h2>
-      <p>Dr. E recorded his actual college algebra courses — 14 weeks each, full sessions, real students in the room. The most authentic math learning experience available online.</p>
+      <div class="section-eyebrow">For students · <span lang="fil">Para sa students</span></div>
+      <h2>Start learning — free, in English and Filipino</h2>
+      <p>Short video lessons, free worksheets with answer keys, and no login, ever.</p>
     </div>
-    <div class="course-cards-grid">
-
-      <!-- Elementary Algebra -->
-      <div class="course-card blue-card">
-        <div class="course-card-top">
-          <div class="course-badge-wrap">
-            <span class="course-badge-pill">📅 14-Week Course</span>
-            <span class="course-badge-pill">🎓 College Level</span>
-          </div>
-          <h3>Elementary Algebra</h3>
-          <p>The foundational semester-length course for students starting their algebra journey. Filmed in Dr. E's real college classroom with real students.</p>
-          <ul class="course-card-features">
-            <li>Real Numbers, Variables &amp; Linear Equations</li>
-            <li>Graphing, Slope &amp; Systems of Equations</li>
-            <li>Exponents, Polynomials &amp; Factoring</li>
-            <li>14 weeks · ~60–75 min per session</li>
-          </ul>
-        </div>
-        <a href="learn/elementary-algebra/" class="course-card-btn blue-btn">Start Elementary Algebra →</a>
-      </div>
-
-      <!-- Intermediate Algebra -->
-      <div class="course-card purple-card">
-        <div class="course-card-top">
-          <div class="course-badge-wrap">
-            <span class="course-badge-pill">📅 14-Week Course</span>
-            <span class="course-badge-pill stem-badge">Bridge to STEM</span>
-          </div>
-          <h3>Intermediate Algebra</h3>
-          <p>Pick up where Elementary Algebra ends. The topics every STEM student needs — quadratics, rational expressions, exponential &amp; logarithmic functions.</p>
-          <ul class="course-card-features">
-            <li>Advanced Factoring &amp; Rational Expressions</li>
-            <li>Quadratic Equations &amp; Functions</li>
-            <li>Exponential &amp; Logarithmic Functions</li>
-            <li>14 weeks · ~60–75 min per session</li>
-          </ul>
-        </div>
-        <a href="learn/intermediate-algebra/" class="course-card-btn purple-btn">Start Intermediate Algebra →</a>
-      </div>
-
+    <div class="nh-grid">
+      <a class="nh-card" href="/find-your-course">
+        <span class="nh-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16.2 7.8-2.1 6.3-6.3 2.1 2.1-6.3z"/></svg></span>
+        <span><h3>Where do I start?</h3><p>Not sure which course fits you? Find your starting point.</p></span>
+      </a>
+      <a class="nh-card" href="/start-here">
+        <span class="nh-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m10 8 6 4-6 4z"/></svg></span>
+        <span><h3>Try a free lesson</h3><p>Watch a short clip, follow a worked example, then solve one yourself.</p></span>
+      </a>
+      <a class="nh-card" href="/deped">
+        <span class="nh-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4h6a4 4 0 0 1 4 4v12a3 3 0 0 0-3-3H2z"/><path d="M22 4h-6a4 4 0 0 0-4 4v12a3 3 0 0 1 3-3h7z"/></svg></span>
+        <span><h3>DepEd Math, Grades 7–12</h3><p>Lessons for every grade, aligned to MATATAG, in English and Filipino.</p></span>
+      </a>
+      <a class="nh-card" href="/ap">
+        <span class="nh-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5"/></svg></span>
+        <span><h3>AP Exam Prep</h3><p>AP Calculus AB and AP Statistics: lessons, worksheets and original FRQ practice.</p></span>
+      </a>
+      <a class="nh-card" href="/math-worksheets">
+        <span class="nh-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg></span>
+        <span><h3>Free worksheets</h3><p>569 printable worksheets with answer keys, each paired with a video lesson.</p></span>
+      </a>
+      <a class="nh-card" href="/subjects/test-prep">
+        <span class="nh-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span>
+        <span><h3>Test prep</h3><p>Practice for LET, UPCAT, SAT and more, and earn badges as you go.</p></span>
+      </a>
     </div>
-    <div style="text-align:center;margin-top:32px;">
-      <p style="color:var(--muted);font-size:0.95rem;margin-bottom:12px;">Statistics and Calculus courses coming 2027 — join the list to be notified.</p>
-      <a href="/courses" class="btn btn-outline">Explore All Subjects →</a>
-    </div>
+    <div class="nh-more"><a href="/courses">Browse all courses →</a><a href="/learn/elementary-algebra">Full-semester algebra classes →</a><a href="/for-filipino-students" lang="fil">Para sa Filipino students →</a></div>
   </div>
 </section>
 
-<!-- ========== FREE WORKSHEETS BAND ========== -->
-<section class="ws-band" style="background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
-  <div class="container">
-    <div class="ws-band-grid" style="display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;">
-      <div>
-        <div class="section-eyebrow" style="text-align:left;">📝 Free printable worksheets</div>
-        <h2 style="font-size:clamp(1.7rem,3vw,2.4rem);line-height:1.15;letter-spacing:-0.02em;margin-bottom:14px;">
-          569 free math worksheets — every one paired with a video lesson.
-        </h2>
-        <p style="color:var(--muted);font-size:1.08rem;margin-bottom:24px;max-width:560px;">
-          Print-ready PDF practice sheets for Algebra through Calculus, lesson-ordered and packaged with a full
-          answer key. No subscription, no paywall, no signup — just download and assign. It's the practice
-          library other worksheet sites charge for, built free for every classroom.
-        </p>
-        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:26px;">
-          <span style="background:rgba(34,197,94,.12);color:#15803d;font-weight:700;font-size:0.85rem;padding:6px 13px;border-radius:999px;">✅ Answer key in every PDF</span>
-          <span style="background:rgba(37,99,235,.1);color:#1d4ed8;font-weight:700;font-size:0.85rem;padding:6px 13px;border-radius:999px;">🎬 Paired with video lessons</span>
-          <span style="background:rgba(6,182,212,.14);color:#0e7490;font-weight:700;font-size:0.85rem;padding:6px 13px;border-radius:999px;">🌐 English &amp; Filipino</span>
-        </div>
-        <div style="display:flex;gap:12px;flex-wrap:wrap;">
-          <a href="/math-worksheets" class="btn btn-primary btn-lg">Browse free worksheets →</a>
-          <a href="/courses" class="btn btn-outline btn-lg">Explore All Subjects</a>
-        </div>
-      </div>
-      <div>
-        <picture><source srcset="images/blog_post_banner/worksheet_download_home.webp" type="image/webp"><img src="images/blog_post_banner/worksheet_download_home.png" alt="Free printable math worksheets with answer keys" style="width:100%;height:auto;border-radius:var(--radius);margin-bottom:14px;display:block;" loading="lazy" width="1200" height="600"></picture>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
-        <div style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:22px 18px;text-align:center;">
-          <div style="font-size:2.2rem;font-weight:800;color:var(--blue);line-height:1;">569</div>
-          <div style="font-size:0.88rem;color:var(--muted);margin-top:6px;">Printable worksheets</div>
-        </div>
-        <div style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:22px 18px;text-align:center;">
-          <div style="font-size:2.2rem;font-weight:800;color:#0891b2;line-height:1;">13</div>
-          <div style="font-size:0.88rem;color:var(--muted);margin-top:6px;">Subjects covered</div>
-        </div>
-        <div style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:22px 18px;text-align:center;">
-          <div style="font-size:2.2rem;font-weight:800;color:#15803d;line-height:1;">100%</div>
-          <div style="font-size:0.88rem;color:var(--muted);margin-top:6px;">Free — no login</div>
-        </div>
-        <div style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:22px 18px;text-align:center;">
-          <div style="font-size:2.2rem;font-weight:800;color:#b45309;line-height:1;">569</div>
-          <div style="font-size:0.88rem;color:var(--muted);margin-top:6px;">Answer keys included</div>
-        </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ========== FLIPPED CLASSROOM ========== -->
-<section class="flipped-section">
-  <div class="container">
-    <div class="flipped-grid">
-
-      <!-- Left: Text -->
-      <div class="flipped-text">
-        <div class="section-eyebrow" style="text-align:left;color:#5DCAA5;margin-bottom:12px;">The Numberbender Difference</div>
-        <h2>Built for the flipped classroom.<br>Designed for global reach.</h2>
-        <p>Dr. E built his flipped math classroom at Barstow High School, starting in 2012 — along with the research behind it and, eventually, the YouTube channel. Students watch the lesson before class, then use class time for deeper problem-solving. After 14 years at the high school, he brought the model to Barstow Community College, and it now reaches learners in 10+ countries who've never set foot in his classroom.</p>
-        <ul class="flipped-list">
-          <li>
-            <span class="flipped-icon">🏠</span>
-            <div>
-              <strong>Watch at home, practice in class</strong>
-              <p>Every video is designed to replace lecture time — concise, complete, and ready to assign before the next session.</p>
-            </div>
-          </li>
-          <li>
-            <span class="flipped-icon">🌐</span>
-            <div>
-              <strong>Bilingual for Filipino STEM students worldwide</strong>
-              <p>Lessons in English and Filipino (Tagalog) — built for students in the Philippines, UAE, Canada, and every corner of the Filipino diaspora.</p>
-            </div>
-          </li>
-          <li>
-            <span class="flipped-icon">📱</span>
-            <div>
-              <strong>Asynchronous by design</strong>
-              <p>Pause, rewind, replay at 2AM before an exam — the flexibility traditional lecture never gave students.</p>
-            </div>
-          </li>
-        </ul>
-        <a href="/flipped-classroom-math" class="btn btn-outline">The Flipped Classroom Guide →</a>
-      </div>
-
-      <!-- Right: Stats -->
-      <div class="flipped-stats-wrap">
-        <div class="flipped-stat-card">
-          <div class="flipped-stat-num">20+</div>
-          <div class="flipped-stat-label">Years of classroom teaching — flipping math classes since 2012</div>
-        </div>
-        <div class="flipped-stat-card">
-          <div class="flipped-stat-num">16M+</div>
-          <div class="flipped-stat-label">Views of Dr. E's video math lessons</div>
-        </div>
-        <div class="flipped-stat-card">
-          <div class="flipped-stat-num">1,600+</div>
-          <div class="flipped-stat-label">Videos on YouTube — each crafted for the flipped classroom model</div>
-        </div>
-        <div class="flipped-stat-card teal-card">
-          <div class="flipped-stat-num" style="color:var(--yellow);">10+</div>
-          <div class="flipped-stat-label" style="color:rgba(255,255,255,0.85);">Countries where Dr. E has presented and taught the flipped classroom model</div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ========== MISSION ========== -->
-<section class="mission">
-  <div class="container">
-    <h2>Math education should be <span>clear, human, and accessible.</span></h2>
-    <p>
-      Numberbender was created to make math less intimidating for students and to help
-      educators bring more personality, clarity, and connection into online learning.
-      Whether you are learning math or teaching it, this platform gives you tools to grow.
-    </p>
-  </div>
-</section>
-
-<!-- ========== FEATURE BLOCKS ========== -->
-<section id="features">
+<!-- ========== FOR TEACHERS ========== -->
+<section class="nh-section nh-teachers" id="educators">
   <div class="container">
     <div class="section-head">
-      <div class="section-eyebrow">What's inside</div>
-      <h2>Three ways Numberbender supports your growth</h2>
-      <p>From self-paced math courses to faculty development — built for real students and real educators.</p>
+      <div class="section-eyebrow">For teachers · <span lang="fil">Para sa teachers</span></div>
+      <h2>Teach with more energy, and less prep</h2>
+      <p>Free tools and training from Dr. E, who has flipped math classes since 2012.</p>
     </div>
-
-    <div class="features-grid">
-      <div class="f-card f1">
-        <div class="f-icon">📚</div>
-        <h3>Math Courses for Students</h3>
-        <p>
-          Curriculum-aligned lessons in algebra, statistics, calculus, and more —
-          taught with clarity, examples, and practice that builds real confidence.
-        </p>
-        <a href="/courses" class="f-link">Browse courses →</a>
-      </div>
-
-      <div class="f-card f2" id="tilysi">
-        <div class="f-icon">🎬</div>
-        <h3>Teach It Like You Stream It</h3>
-        <p>
-          A creator-style training program for educators who want to bring energy,
-          presence, and modern video production into their online classrooms.
-        </p>
-        <a href="/teach-it-like-you-stream-it" class="f-link">Join the movement →</a>
-      </div>
-
-      <div class="f-card f3">
-        <div class="f-icon">🎤</div>
-        <h3>Speaking, Workshops &amp; PD</h3>
-        <p>
-          Keynotes, faculty development sessions, and conference workshops on
-          flipped learning, AI in education, and online engagement strategies.
-        </p>
-        <a href="/speaking" class="f-link">Book Dr. E →</a>
-      </div>
+    <div class="nh-grid">
+      <a class="nh-card" href="/flipped-classroom-math">
+        <span class="nh-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 1l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></span>
+        <span><h3>Flipped Classroom Guide</h3><p>Dr. E's method for flipping a math class, from the first unit to the research.</p></span>
+      </a>
+      <a class="nh-card" href="/teach-it-like-you-stream-it">
+        <span class="nh-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m23 7-7 5 7 5z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></span>
+        <span><h3>Teach It Like You Stream It</h3><p>Bring a creator's energy and simple video tools into your online classroom.</p></span>
+      </a>
+      <a class="nh-card" href="/studio">
+        <span class="nh-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span>
+        <span><h3>Numberbender Studio</h3><p>Your camera and slides side by side, shared straight into Zoom, Meet or Teams. Free, no login.</p></span>
+      </a>
+      <a class="nh-card" href="/teacher-resources">
+        <span class="nh-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><path d="m9 14 2 2 4-4"/></svg></span>
+        <span><h3>Teacher resources</h3><p>Worksheets with answer keys, starter kits and guides, free to download and assign.</p></span>
+      </a>
+      <a class="nh-card" href="/deped/teachers">
+        <span class="nh-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+        <span><h3>DepEd teacher pages</h3><p>Ready-to-assign lessons for Grades 7–12, with answer keys.</p></span>
+      </a>
+      <a class="nh-card" href="/for-institutions">
+        <span class="nh-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M19 10v1a7 7 0 0 1-14 0v-1M12 18v4M8 22h8"/></svg></span>
+        <span><h3>Workshops for your school</h3><p>Workshops, keynotes and ongoing PD from Dr. E for schools, colleges and districts.</p></span>
+      </a>
     </div>
+    <div class="nh-more"><a href="/for-teachers">Teachers hub →</a><a href="/studio-tutorial">Studio tutorials →</a></div>
   </div>
 </section>
 
-<!-- ========== ABOUT DR E ========== -->
+<!-- ========== WHAT'S NEW ========== -->
+<!-- Refresh about every 6 months (next: after SXSW EDU, March 2027).
+     Keep 1 featured story + 3 items. Each item: date chip, title, one
+     sentence, and a link to a page on this site. Update the season in the H2. -->
+<section class="nh-news" id="whats-new">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-eyebrow">What's new · <span lang="fil">Bago sa Numberbender</span></div>
+      <h2>Our latest work — Fall 2026</h2>
+      <p>What Numberbender has been building, and where Dr. E is taking free, bilingual math next.</p>
+    </div>
+    <div class="nh-news-grid">
+      <a class="nh-news-feature" href="/speaking-2027-03-sxsw-edu">
+        <picture>
+          <source srcset="images/SXSW_EDU_2027_Cover.webp" type="image/webp">
+          <img src="images/SXSW_EDU_2027_Cover.jpg" alt="Teach It Like You Stream It: Broadcast Teaching for $0 — SXSW EDU 2027, Austin" width="950" height="534" loading="lazy">
+        </picture>
+        <span class="nh-news-body">
+          <span class="nh-chip nh-chip-hot">Accepted · Oct 2026</span>
+          <h3>Teach It Like You Stream It is going to SXSW EDU 2027</h3>
+          <p>Dr. E's session, <em>Broadcast Teaching for $0</em>, is on the SXSW EDU schedule in Austin, March 13–16, 2027 — taking free, streaming-style teaching to one of education's biggest stages.</p>
+          <span class="nh-news-go">Read the story →</span>
+        </span>
+      </a>
+      <div class="nh-news-list">
+        <a class="nh-news-item" href="/ap">
+          <span class="nh-chip">New · Oct 2026</span>
+          <h3>AP Exam Prep is live</h3>
+          <p>Free AP Calculus AB and AP Statistics review: lessons by AP unit, worksheets, and original FRQ practice with full solutions.</p>
+          <span class="nh-news-go">Start reviewing →</span>
+        </a>
+        <a class="nh-news-item" href="/speaking-2026-10-educause">
+          <span class="nh-chip">Talk · Oct 2026</span>
+          <h3>Presented at EDUCAUSE 2026</h3>
+          <p>An online session on bringing presence and energy to Zoom and Google Meet classes, with the free Numberbender Studio.</p>
+          <span class="nh-news-go">Read the recap →</span>
+        </a>
+        <a class="nh-news-item" href="/deped/grade-9/term-2">
+          <span class="nh-chip">New · Term 2</span>
+          <h3>Math 9, week by week</h3>
+          <p>A page for every week of DepEd Term 2, with lessons in English and Filipino and a worksheet for each one.</p>
+          <span class="nh-news-go">See this week's lesson →</span>
+        </a>
+      </div>
+    </div>
+    <div class="nh-more"><a href="/speaking-archive">All talks and news →</a></div>
+  </div>
+</section>
+
+<!-- ========== MEET THE FOUNDER ========== -->
 <section class="about" id="about">
   <div class="container about-grid">
-    <div class="about-photo" aria-label="Dr. Peter Esperanza">
-      <picture><source srcset="images/dr-e-headshot.webp" type="image/webp"><img src="images/dr-e-headshot.jpg" alt="Dr. Peter Esperanza" class="about-photo-img" onerror="this.style.display='none';this.parentElement.innerHTML='Dr. E';" loading="lazy" width="4068" height="3254"></picture>
-    </div>
-    <div class="about-content">
-      <div class="section-eyebrow" style="text-align:left;">Meet the founder</div>
-      <h2>Dr. Peter Esperanza — Math Professor &amp; Online Educator</h2>
-      <p>
-        Dr. E is a community college math professor, published researcher, online educator, content creator,
-        and conference presenter. He founded Numberbender on a simple belief: that democratizing education
-        means making great math instruction free, accessible, and available to anyone — student or teacher,
-        anywhere in the world.
-      </p>
-      <p>
-        Through social media, he has reached hundreds of thousands of learners and
-        shared best practices in online teaching, flipped learning, AI integration,
-        and educational technology.
-      </p>
-      <div class="about-tags">
-        <span class="tag">Math Professor</span>
-        <span class="tag">Content Creator</span>
-        <span class="tag">Conference Speaker</span>
-        <span class="tag">AI in Education</span>
-        <span class="tag">Flipped Learning</span>
-      </div>
-      <a href="/about" class="btn btn-outline">Learn more about Dr. E →</a>
-    </div>
-  </div>
-</section>
-
-<!-- ========== DR. E IN ACTION (VIDEO) ========== -->
-<section class="video-section">
-  <div class="container">
-    <div class="section-head">
-      <div class="section-eyebrow">Behind the scenes</div>
-      <h2>Dr. E in action</h2>
-      <p>A peek inside the home workstation where math meets streaming energy.</p>
-    </div>
     <div class="video-wrap">
       <div onclick="var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/--dQxo3KwBM?autoplay=1';f.allow='autoplay;encrypted-media;picture-in-picture';f.allowFullscreen=true;f.style.cssText='width:100%;height:100%;border:0;display:block;';this.innerHTML='';this.appendChild(f);" style="cursor:pointer;position:relative;width:100%;height:100%;">
         <picture>
@@ -1850,6 +1605,28 @@
           <svg width="68" height="48" viewBox="0 0 68 48" xmlns="http://www.w3.org/2000/svg"><rect width="68" height="48" rx="12" fill="rgba(0,0,0,0.75)"/><polygon points="27,16 27,32 45,24" fill="white"/></svg>
         </div>
       </div>
+    </div>
+    <div class="about-content">
+      <div class="section-eyebrow">Meet the founder</div>
+      <h2>Dr. Peter Esperanza — Math Professor &amp; Online Educator</h2>
+      <p>
+        Dr. E built his flipped math classroom at Barstow High School, starting in 2012 — along with
+        the research behind it and, eventually, the YouTube channel. After 14 years at the high school,
+        he brought the model to Barstow Community College, where he teaches today.
+      </p>
+      <p>
+        He founded Numberbender on a simple belief: great math instruction should be free and available
+        to anyone — student or teacher, anywhere in the world. His video lessons have been viewed more
+        than 16 million times.
+      </p>
+      <div class="about-tags">
+        <span class="tag">Math Professor</span>
+        <span class="tag">Content Creator</span>
+        <span class="tag">Conference Speaker</span>
+        <span class="tag">AI in Education</span>
+        <span class="tag">Flipped Learning</span>
+      </div>
+      <a href="/about" class="btn btn-outline">Learn more about Dr. E →</a>
     </div>
   </div>
 </section>
@@ -1936,97 +1713,53 @@
   </div>
 </section>
 
-<!-- ========== FINAL CTA ========== -->
-<section class="final-cta" id="contact">
-  <div class="container">
-    <div class="section-eyebrow" style="color: var(--yellow);">Math is hard. So we made it human.</div>
-      <h2>Ready to bend the future of education?</h2>
-    <p>Whether you're learning math or teaching it, there's a place for you here. Pick your path and let's get started.</p>
-    <div class="final-ctas">
-      <a href="#students" class="btn btn-yellow btn-lg">Learn Math with Numberbender</a>
-      <a href="#educators" class="btn btn-cyan btn-lg">Teach Online with More Impact</a>
+<!-- ========== SUPPORT THE MOVEMENT ========== -->
+<section class="nh-support" id="support">
+  <div class="container nh-support-grid">
+    <div class="nh-support-copy">
+      <div class="section-eyebrow">Support the movement · <span lang="fil">Suportahan ang Numberbender</span></div>
+      <h2>Support free math for everyone — add your name.</h2>
+      <p>Numberbender is a nonprofit making math free for every student and teacher, in English and Filipino. Adding your name costs nothing, and it's how we show schools, partners and funders that free, bilingual math matters.</p>
+      <ul class="nh-support-list">
+        <li>Free — no donation needed</li>
+        <li>Dr. E emails you when new lessons and worksheets are ready</li>
+        <li>Your answers show us who is being left out, and where to build next</li>
+      </ul>
+      <p class="nh-support-note">Every worksheet is already free to download, no sign-up needed: <a href="/math-worksheets#bundles">browse the free bundles</a>.</p>
     </div>
-  </div>
-</section>
 
-
-<!-- ========== FOR SCHOOLS, COLLEGES & DISTRICTS ========== -->
-<section id="schools" style="background:var(--surface);">
-  <div class="container">
-    <div class="section-head">
-      <div class="section-eyebrow">For Schools, Colleges &amp; Districts</div>
-      <h2>Three ways to bring Dr. E in</h2>
-      <p>Workshops, keynotes, and ongoing PD — pick the format that fits your audience and goals.</p>
-    </div>
-    <div class="features-grid">
-      <div class="f-card f1">
-        <div class="f-icon">🛠️</div>
-        <h3>Workshops</h3>
-        <p>2–4 hour interactive sessions for teacher teams and faculty cohorts. Participants leave with something they recorded or planned during the session.</p>
-        <a href="/speaking" class="f-link">Workshop details →</a>
-      </div>
-      <div class="f-card f2">
-        <div class="f-icon">🎤</div>
-        <h3>Keynotes &amp; Speaking</h3>
-        <p>30–60 minute talks for conferences, district kickoffs, and college all-faculty events. The opening session that sets the tone for the whole event.</p>
-        <a href="/speaking" class="f-link">Keynote details →</a>
-      </div>
-      <div class="f-card f3">
-        <div class="f-icon">📚</div>
-        <h3>Ongoing PD</h3>
-        <p>4–8 sessions across a semester or year — coaching, deliverables, and ongoing access. Best for institutions ready to invest in sustained change.</p>
-        <a href="/speaking" class="f-link">Faculty development details →</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ========== NEWSLETTER ========== -->
-<section class="newsletter">
-  <div class="container">
-    <div class="newsletter-inner">
-      <div class="newsletter-copy">
-        <div class="nl-eyebrow">📬 Stay in touch with Dr. E</div>
-        <h2>Get new free lessons by email.</h2>
-        <p>Dr. E emails you when new lessons, worksheets, and resources are ready. Every worksheet is already free to download — no sign-up, no paywall: <a href="/math-worksheets#bundles">browse the free bundles</a>. No spam. Unsubscribe anytime.</p>
-      </div>
-      <div class="newsletter-form-wrap">
-        <form class="newsletter-form" id="newsletterForm" action="https://numberbender.us17.list-manage.com/subscribe/post?u=65e30fe527dde6fb604f6760a&amp;id=ad0977e0cc&amp;f_id=003758e0f0" method="post" target="_blank">
-          <div class="nl-row">
-            <input class="nl-input" type="text" name="FNAME" placeholder="First name (optional)" autocomplete="given-name" aria-label="First name">
-            <select class="nl-input" name="ROLE" aria-label="I am a...">
-              <option value="">I am a... (optional)</option>
-              <option value="Student">Student</option>
-              <option value="Teacher">Teacher</option>
-              <option value="Administrator">Administrator</option>
-              <option value="Researcher">Researcher</option>
-              <option value="Other">Other</option>
-            </select>
-          </div>
-          <div class="nl-row">
-            <input class="nl-input" type="text" name="SCHOOL" placeholder="School / Institution (optional)" aria-label="School or institution">
-            <input class="nl-input" type="text" name="COUNTRY" placeholder="Country (optional)" autocomplete="country-name" aria-label="Country">
-          </div>
-          <select class="nl-input" name="GOAL" aria-label="I'm here to...">
-            <option value="">I'm here to... (optional)</option>
-            <option value="Learn math">Learn math</option>
-            <option value="Improve my teaching">Improve my teaching</option>
-            <option value="Find flipped classroom resources">Find flipped classroom resources</option>
-            <option value="Research and professional development">Research &amp; professional development</option>
-            <option value="Just exploring">Just exploring</option>
-          </select>
-          <div class="nl-row">
-            <input class="nl-input" type="email" name="EMAIL" required placeholder="your@email.com" autocomplete="email" aria-label="Email address">
-            <button class="nl-btn" type="submit">Keep Me Posted →</button>
-          </div>
-          <div aria-hidden="true" style="position:absolute;left:-5000px;"><input type="text" name="b_65e30fe527dde6fb604f6760a_ad0977e0cc" tabindex="-1" value=""></div>
-        </form>
-        <div class="nl-success" id="newsletterSuccess" role="status" hidden>
-          <strong>✅ You're on the list!</strong>
-          <p>Dr. E will email you when new lessons and worksheets are ready. Meanwhile, every worksheet is free — answer keys included.</p>
-          <a class="nl-download" href="/math-worksheets#bundles">Browse the free bundles →</a>
+    <div class="nh-support-card">
+      <form name="contact-research" id="supportForm" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact-research">
+        <p hidden><input name="bot-field"></p>
+        <div class="nh-row">
+          <div class="nh-field"><label for="sp-fname">First name *</label><input type="text" id="sp-fname" name="first_name" required autocomplete="given-name"></div>
+          <div class="nh-field"><label for="sp-lname">Last name</label><input type="text" id="sp-lname" name="last_name" autocomplete="family-name"></div>
         </div>
-        <p class="nl-note">All fields optional except email. No spam. Unsubscribe anytime.</p>
+        <div class="nh-field"><label for="sp-email">Email *</label><input type="email" id="sp-email" name="email" required autocomplete="email" placeholder="you@example.com"></div>
+        <div class="nh-row">
+          <div class="nh-field"><label for="sp-role">I am a… *</label><select id="sp-role" name="role" required><option value="">Select</option><option value="student">Student</option><option value="teacher">Teacher / Educator</option><option value="parent">Parent</option><option value="tutor">Tutor</option><option value="self-learner">Self-learner</option></select></div>
+          <div class="nh-field"><label for="sp-country">Country *</label><input type="text" id="sp-country" name="country" required autocomplete="country-name" placeholder="Philippines"></div>
+        </div>
+        <details class="nh-research">
+          <summary>Help our research — 6 quick questions (optional)</summary>
+          <div class="nh-row nh-row-research">
+            <div class="nh-field"><label for="sp-setting">School setting</label><select id="sp-setting" name="school_setting"><option value="">Select</option><option value="public">Public school</option><option value="private">Private school</option><option value="university">University / College</option><option value="homeschool">Homeschool</option><option value="self-study">Self-study / No school</option></select></div>
+            <div class="nh-field"><label for="sp-area">Area type</label><select id="sp-area" name="area_type"><option value="">Select</option><option value="urban">Urban / City</option><option value="suburban">Suburban</option><option value="rural">Rural</option></select></div>
+            <div class="nh-field"><label for="sp-access">Access to paid resources?</label><select id="sp-access" name="paid_resource_access"><option value="">Select</option><option value="yes">Yes, regularly</option><option value="sometimes">Sometimes</option><option value="no">No / Very limited</option></select></div>
+            <div class="nh-field"><label for="sp-internet">Internet access</label><select id="sp-internet" name="internet_access"><option value="">Select</option><option value="reliable">Reliable</option><option value="inconsistent">Inconsistent</option><option value="limited">Very limited</option></select></div>
+            <div class="nh-field"><label for="sp-lang">Language of math instruction</label><select id="sp-lang" name="instruction_language"><option value="">Select</option><option value="english">English</option><option value="filipino">Filipino / Tagalog</option><option value="other">Other</option></select></div>
+            <div class="nh-field"><label for="sp-use">How will you use Numberbender?</label><select id="sp-use" name="usage_intent"><option value="">Select</option><option value="classroom">Classroom instruction</option><option value="homework">Homework / assignments</option><option value="self-study">Personal self-study</option><option value="tutoring">Tutoring sessions</option><option value="exam-prep">Exam preparation</option></select></div>
+          </div>
+          <label class="nh-consent"><input type="checkbox" name="research_consent" value="yes"> <span>I'm willing to take part in <strong>anonymous educational research</strong> to help improve math learning access. My data will never be sold and will only be used for academic publication.</span></label>
+        </details>
+        <button type="submit" class="nh-support-btn">Count me in →</button>
+        <p class="nh-support-fine">Adding your name puts you on the Numberbender email list. Unsubscribe any time. 🔒 Never sold, never shared · <a href="/privacy">Privacy</a><br>Under 13? Ask a parent or teacher before signing up.</p>
+      </form>
+      <div class="nh-support-done" id="supportDone" role="status" hidden>
+        <strong>✅ Thank you for supporting free math<span id="supportName"></span>!</strong>
+        <p>You're counted. Dr. E will email you when new lessons and worksheets are ready.</p>
+        <a href="/math-worksheets#bundles">Browse the free worksheet bundles →</a>
       </div>
     </div>
   </div>
@@ -2184,18 +1917,6 @@
     }
   });
 
-  // Email sign-up form: Mailchimp opens in a new tab and sends no automatic
-  // email, so confirm here once the form submits.
-  var nlForm = document.getElementById('newsletterForm');
-  if (nlForm) {
-    nlForm.addEventListener('submit', function() {
-      setTimeout(function() {
-        nlForm.hidden = true;
-        document.getElementById('newsletterSuccess').hidden = false;
-      }, 0);
-    });
-  }
-
   // 4. newsletter_button_click — fires on CTA button click before form submit
   document.querySelectorAll('.nl-btn, .hero-email-form button[type="submit"]').forEach(function(btn) {
     btn.addEventListener('click', function() {
@@ -2212,6 +1933,7 @@
   <p id="nb-bar-msg"></p>
   <input type="email" id="nb-email-input" placeholder="your@email.com" autocomplete="email" aria-label="Email address" />
   <button class="nb-submit" onclick="nbSubmit()">Join the Community →</button>
+  <span class="nb-mobile">💚 Support free math <a href="#support">Add your name</a></span>
   <button class="nb-close" onclick="nbDismiss()" aria-label="Close">✕</button>
 </div>
 <script>
@@ -2286,6 +2008,60 @@ function nbSubmit(){
   s.src='https://numberbender.us17.list-manage.com/subscribe/post-json?u=65e30fe527dde6fb604f6760a&id=ad0977e0cc&f_id=003758e0f0&EMAIL='+encodeURIComponent(email)+'&b_65e30fe527dde6fb604f6760a_ad0977e0cc=&c=nbMcCb';
   document.body.appendChild(s);
 }
+</script>
+<script>
+  /* Support form: same flow as the Contact page's research form. Mailchimp
+     gets the fields it has merge tags for (so supporters receive Dr. E's
+     emails); Netlify keeps every answer under "contact-research". Supporters
+     are thanked on the page, and GA4 logs supporter_signup. */
+  var NB_SP_ROLE = { teacher: 'Teacher', student: 'Student', parent: 'Parent',
+                     tutor: 'Tutor', 'self-learner': 'Self-learner' };
+
+  function nbSupportSubscribe(fields, done) {
+    var called = false;
+    function finish() { if (!called) { called = true; done(); } }
+    var cb = 'nbSpCb' + Date.now();
+    window[cb] = finish;
+    setTimeout(finish, 4000);
+    var qs = [];
+    for (var k in fields) if (fields[k]) qs.push(encodeURIComponent(k) + '=' + encodeURIComponent(fields[k]));
+    qs.push('u=65e30fe527dde6fb604f6760a', 'id=ad0977e0cc', 'f_id=003758e0f0',
+            'b_65e30fe527dde6fb604f6760a_ad0977e0cc=', 'c=' + cb);
+    var sc = document.createElement('script');
+    sc.src = 'https://numberbender.us17.list-manage.com/subscribe/post-json?' + qs.join('&');
+    sc.onerror = finish;
+    document.body.appendChild(sc);
+  }
+
+  (function () {
+    var form = document.getElementById('supportForm');
+    if (!form) return;
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var btn = form.querySelector('.nh-support-btn');
+      var data = new FormData(form);
+      var val = function (k) { return (data.get(k) || '').toString().trim(); };
+      btn.disabled = true; btn.textContent = 'Adding you…';
+
+      function thank() {
+        if (val('first_name')) document.getElementById('supportName').textContent = ', ' + val('first_name');
+        form.hidden = true;
+        document.getElementById('supportDone').hidden = false;
+        if (window.nbEvent) nbEvent('supporter_signup', { form_location: 'home', role: val('role') || undefined });
+      }
+
+      nbSupportSubscribe({
+        EMAIL: val('email'), FNAME: val('first_name'), LNAME: val('last_name'),
+        ROLE: NB_SP_ROLE[val('role')] || val('role'), COUNTRY: val('country')
+      }, function () {
+        fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams(data).toString()
+        }).then(thank, thank);  // Mailchimp already has them either way
+      });
+    });
+  })();
 </script>
 <script src="/nb-search.js" defer></script>
 <script src="/nb-mirror.js" defer></script>
