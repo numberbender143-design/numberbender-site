@@ -809,6 +809,19 @@
   .nl-note{
     font-size: 0.82rem; color: var(--muted); margin-top: 4px;
   }
+  .nl-success{
+    display:flex; flex-direction: column; align-items: flex-start; gap: 8px;
+    padding: 18px 20px; border: 1.5px solid var(--border); border-radius: 12px;
+    background: var(--surface);
+  }
+  .newsletter-form[hidden], .nl-success[hidden]{ display: none; }
+  .nl-success p{ color: var(--muted); font-size: 0.95rem; }
+  .nl-download{
+    background: var(--blue); color: white;
+    padding: 12px 20px; border-radius: 10px;
+    font-weight: 700; text-decoration: none;
+  }
+  .nl-download:hover{ background: #1d4ed8; text-decoration: none; }
   @media (max-width: 700px){
     .newsletter-inner{ flex-direction: column; }
     .nl-row{ flex-direction: column; }
@@ -1973,9 +1986,9 @@
   <div class="container">
     <div class="newsletter-inner">
       <div class="newsletter-copy">
-        <div class="nl-eyebrow">🎁 Free worksheet bundle — 10 printable PDFs</div>
-        <h2>Get 10 free math worksheets, delivered instantly.</h2>
-        <p>Enter your email and we'll send you a free bundle of 10 printable worksheets — algebra, statistics, calculus, and more. Full answer keys included. Dr. E also sends one short email a week with lesson tips and new resources. No spam. Unsubscribe anytime.</p>
+        <div class="nl-eyebrow">🎁 Free worksheet bundles — answer keys included</div>
+        <h2>Get free math worksheet bundles.</h2>
+        <p>Sign up and your download link appears right here — algebra, statistics, calculus, and more, with full answer keys. Dr. E also emails you when new lessons and resources are ready. No spam. Unsubscribe anytime.</p>
       </div>
       <div class="newsletter-form-wrap">
         <form class="newsletter-form" id="newsletterForm" action="https://numberbender.us17.list-manage.com/subscribe/post?u=65e30fe527dde6fb604f6760a&amp;id=ad0977e0cc&amp;f_id=003758e0f0" method="post" target="_blank">
@@ -2004,10 +2017,15 @@
           </select>
           <div class="nl-row">
             <input class="nl-input" type="email" name="EMAIL" required placeholder="your@email.com" autocomplete="email" aria-label="Email address">
-            <button class="nl-btn" type="submit">Get My 10 Worksheets →</button>
+            <button class="nl-btn" type="submit">Get My Worksheets →</button>
           </div>
           <div aria-hidden="true" style="position:absolute;left:-5000px;"><input type="text" name="b_65e30fe527dde6fb604f6760a_ad0977e0cc" tabindex="-1" value=""></div>
         </form>
+        <div class="nl-success" id="newsletterSuccess" role="status" hidden>
+          <strong>✅ Thanks for signing up!</strong>
+          <p>Your worksheets are ready — pick any subject, answer keys included.</p>
+          <a class="nl-download" href="/math-worksheets#bundles">Download the free bundles →</a>
+        </div>
         <p class="nl-note">All fields optional except email. No spam. Unsubscribe anytime.</p>
       </div>
     </div>
@@ -2166,6 +2184,18 @@
     }
   });
 
+  // Worksheet bundle form: Mailchimp opens in a new tab and sends no automatic
+  // email, so show the download link here once the form submits.
+  var nlForm = document.getElementById('newsletterForm');
+  if (nlForm) {
+    nlForm.addEventListener('submit', function() {
+      setTimeout(function() {
+        nlForm.hidden = true;
+        document.getElementById('newsletterSuccess').hidden = false;
+      }, 0);
+    });
+  }
+
   // 4. newsletter_button_click — fires on CTA button click before form submit
   document.querySelectorAll('.nl-btn, .hero-email-form button[type="submit"]').forEach(function(btn) {
     btn.addEventListener('click', function() {
@@ -2245,9 +2275,9 @@ function nbSubmit(){
   if(ctx==='CONFERENCE'||ctx==='WORKSHOP'){
     ok='✅ You\'re in! Welcome to the community — Dr. E will be in touch. Thank you for your support! 🙏';
   } else if(ctx==='PH'){
-    ok='✅ Salamat at sumali ka! Check your inbox for free resources. — Dr. E 🇵🇭';
+    ok='✅ Salamat at sumali ka! Dr. E will email you when new free resources are ready. 🇵🇭';
   } else {
-    ok='✅ Welcome to the community! Check your inbox for free resources. — Dr. E';
+    ok='✅ Welcome to the community! Dr. E will email you when new free resources are ready.';
   }
   bar.innerHTML='<p class="nb-success">'+ok+'</p><button class="nb-close" onclick="nbDismiss()" aria-label="Close">✕</button>';
   localStorage.setItem('nb_bar_dismissed',Date.now()+(7*24*60*60*1000));
