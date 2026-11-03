@@ -1126,7 +1126,7 @@
   .nh-proof{ display:flex; flex-wrap:wrap; gap:6px 18px; margin-top:22px; font-size:.9rem; color:#475569; font-weight:600; }
   .nh-proof b{ color: var(--navy); }
   .nh-photo{ position:relative; max-width:460px; width:100%; justify-self:end; }
-  .nh-photo img{ border-radius:24px; box-shadow: 0 20px 50px rgba(15,23,42,.18); aspect-ratio:1/1; object-fit:cover; object-position: 22% center; width:100%; height:auto; }
+  .nh-photo img{ border-radius:24px; box-shadow: 0 20px 50px rgba(15,23,42,.18); aspect-ratio:4/3; object-fit:cover; object-position: 60% center; width:100%; height:auto; }
   .nh-badge{ position:absolute; background:#fff; border:1px solid var(--border); border-radius:12px; padding:8px 12px; font-size:.82rem; font-weight:700; box-shadow: var(--shadow); display:flex; gap:8px; align-items:center; }
   .nh-badge-yt{ right:-14px; top:22px; }
   .nh-badge-ade{ left:-18px; bottom:28px; }
@@ -1159,7 +1159,7 @@
     .nh-proof{ font-size: .82rem; margin-top: 16px; }
     .nh-photo{ justify-self: center; }
     .nh-badge-ade{ left: 10px; }
-    .nh-badge-yt{ right: 10px; }
+    .nh-badge-yt{ right: auto; left: 10px; top: 10px; } /* keep it off Dr. E's face on phones */
     .nh-sp-long{ display:none; }
     .nh-studio-pill{ font-size: .84rem; gap: 8px; }
   }
@@ -1203,6 +1203,22 @@
     .nh-support-grid{ grid-template-columns: 1fr; gap: 24px; }
   }
   @media (max-width: 480px){ .nh-row{ grid-template-columns: 1fr; gap: 0; } .nh-support-card{ padding: 18px; } }
+
+  /* ========== FLIPPED CLASSROOM MODEL (2026-11) ========== */
+  .nh-flip{ background: var(--surface); }
+  .nh-flip .section-eyebrow{ color:#1F6F6B; }
+  .nh-flip-steps{ list-style:none; display:grid; grid-template-columns: repeat(3, 1fr); gap:16px; margin:0; padding:0; }
+  .nh-flip-steps li{ background: var(--bg); border:1px solid var(--border); border-radius:16px; padding:22px; }
+  .nh-step{ display:inline-grid; place-items:center; width:36px; height:36px; border-radius:50%; background:#1F6F6B; color:#fff; font-weight:800; margin-bottom:10px; }
+  .nh-flip-steps h3{ font-size:1.1rem; margin-bottom:6px; }
+  .nh-flip-steps p{ color: var(--muted); font-size:.95rem; line-height:1.5; }
+  .nh-flip-research{ margin:22px auto 0; max-width:820px; text-align:center; background:#E6F2F1; border:1px solid #B9DAD7; color:#155753; border-radius:14px; padding:14px 18px; font-size:.95rem; line-height:1.55; }
+  .nh-flip-research strong{ color: var(--navy); }
+  .nh-flip-ctas{ display:flex; justify-content:center; align-items:center; flex-wrap:wrap; gap:12px 24px; margin-top:22px; }
+  .nh-flip-cta{ background:#F4A922; color:#0F172A; padding:14px 24px; border-radius:14px; font-weight:800; font-size:1.06rem; box-shadow:0 8px 24px rgba(244,169,34,.28); }
+  .nh-flip-cta:hover{ background:#FBBF24; color:#0F172A; text-decoration:none; }
+  .nh-flip-link{ color:#1F6F6B; font-weight:700; }
+  @media (max-width: 800px){ .nh-flip-steps{ grid-template-columns: 1fr; } .nh-flip-cta{ width:100%; text-align:center; } }
 
   /* ========== WHAT'S NEW (2026-11) ========== */
   .nh-news{ background: #0F172A; color: #fff; padding: 72px 0; }
@@ -1421,7 +1437,7 @@
         <span class="nh-sp-go">Open Studio →</span>
       </a>
       <h1>Free math for <span class="nh-accent">everyone</span> — in English and Filipino.</h1>
-      <p class="nh-lead">Video lessons from Dr. E's real classroom, a free worksheet for every lesson, and tools for teachers who flip their class.</p>
+      <p class="nh-lead">Built on the flipped classroom: video lessons from Dr. E's real classroom, a free worksheet for every lesson, and a research-tested model teachers can use to flip their own class.</p>
       <p class="nh-fil" lang="fil">Libreng math para sa lahat — sa English at Filipino.</p>
 
       <div class="nh-doors">
@@ -1438,8 +1454,8 @@
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M12 16v4M8 20h8"/></svg>
             <span><span class="nh-door-title">I'm a Teacher</span><span class="nh-door-sub" lang="fil">Teacher ako</span></span>
           </span>
-          <span class="nh-door-text">The flipped-classroom guide, the free Studio app, worksheets with answer keys, and workshops for your school.</span>
-          <span class="nh-door-go">Start teaching →</span>
+          <span class="nh-door-text">Flip your class with Dr. E's model: the flipped-classroom guide, the free Studio app, worksheets with answer keys, and workshops for your school.</span>
+          <span class="nh-door-go">Flip your class →</span>
         </a>
       </div>
 
@@ -1453,8 +1469,8 @@
 
     <div class="nh-photo">
       <picture>
-        <source srcset="images/peter_presenting_in_Berlin_2.webp" type="image/webp">
-        <img src="images/peter_presenting_in_Berlin_2.jpg" alt="Dr. E presenting on stage in Berlin" width="1620" height="1080" fetchpriority="high">
+        <source srcset="images/dr-e-online-teaching-studio.webp" type="image/webp">
+        <img src="images/dr-e-online-teaching-studio.jpg" alt="Dr. E in the Numberbender online teaching studio" width="1100" height="735" fetchpriority="high">
       </picture>
       <span class="nh-badge nh-badge-yt"><span class="nh-dot" aria-hidden="true"></span>YouTube Silver Play Button</span>
       <span class="nh-badge nh-badge-ade">Apple Distinguished Educator</span>
@@ -1505,8 +1521,8 @@
   <div class="container">
     <div class="section-head">
       <div class="section-eyebrow">For teachers · <span lang="fil">Para sa teachers</span></div>
-      <h2>Teach with more energy, and less prep</h2>
-      <p>Free tools and training from Dr. E, who has flipped math classes since 2012.</p>
+      <h2>Flip your class with a model that works</h2>
+      <p>Dr. E has flipped math classes since 2012, from Barstow High School to community college. Start with the free guide, then bring in the tools.</p>
     </div>
     <div class="nh-grid">
       <a class="nh-card" href="/flipped-classroom-math">
@@ -1535,6 +1551,27 @@
       </a>
     </div>
     <div class="nh-more"><a href="/for-teachers">Teachers hub →</a><a href="/studio-tutorial">Studio tutorials →</a></div>
+  </div>
+</section>
+
+<!-- ========== FLIPPED CLASSROOM MODEL ========== -->
+<section class="nh-section nh-flip" id="flipped-classroom">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-eyebrow">The flipped classroom model</div>
+      <h2>How the flipped classroom works</h2>
+      <p>The model Dr. E has taught and tested since 2012 — free for any teacher to use.</p>
+    </div>
+    <ol class="nh-flip-steps">
+      <li><span class="nh-step">1</span><h3>Watch at home</h3><p>Students watch a short video lesson before class — in English or Filipino — pausing and replaying as often as they need.</p></li>
+      <li><span class="nh-step">2</span><h3>Practice in class</h3><p>Class time goes to solving problems together, with the free worksheet for that lesson and the teacher right there to help.</p></li>
+      <li><span class="nh-step">3</span><h3>Check and close gaps</h3><p>Quick checks and answer keys show what students have mastered, so the teacher can spend time where it's needed most.</p></li>
+    </ol>
+    <p class="nh-flip-research"><strong>Tested in a real classroom.</strong> In Dr. E's 2016 randomized controlled trial with 91 high school algebra students, the flipped model produced significant performance gains. Published by Springer and cited 60 times.</p>
+    <div class="nh-flip-ctas">
+      <a class="nh-flip-cta" href="/flipped-classroom-math">Read the Flipped Classroom Guide →</a>
+      <a class="nh-flip-link" href="/flipped-classroom-videos">Watch the flipped classroom videos →</a>
+    </div>
   </div>
 </section>
 
