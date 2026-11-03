@@ -1126,7 +1126,7 @@
   .nh-proof{ display:flex; flex-wrap:wrap; gap:6px 18px; margin-top:22px; font-size:.9rem; color:#475569; font-weight:600; }
   .nh-proof b{ color: var(--navy); }
   .nh-photo{ position:relative; max-width:460px; width:100%; justify-self:end; }
-  .nh-photo img{ border-radius:24px; box-shadow: 0 20px 50px rgba(15,23,42,.18); aspect-ratio:1/1; object-fit:cover; object-position: 22% center; width:100%; height:auto; }
+  .nh-photo img{ border-radius:24px; box-shadow: 0 20px 50px rgba(15,23,42,.18); aspect-ratio:4/3; object-fit:cover; object-position: 60% center; width:100%; height:auto; }
   .nh-badge{ position:absolute; background:#fff; border:1px solid var(--border); border-radius:12px; padding:8px 12px; font-size:.82rem; font-weight:700; box-shadow: var(--shadow); display:flex; gap:8px; align-items:center; }
   .nh-badge-yt{ right:-14px; top:22px; }
   .nh-badge-ade{ left:-18px; bottom:28px; }
@@ -1159,7 +1159,7 @@
     .nh-proof{ font-size: .82rem; margin-top: 16px; }
     .nh-photo{ justify-self: center; }
     .nh-badge-ade{ left: 10px; }
-    .nh-badge-yt{ right: 10px; }
+    .nh-badge-yt{ right: auto; left: 10px; top: 10px; } /* keep it off Dr. E's face on phones */
     .nh-sp-long{ display:none; }
     .nh-studio-pill{ font-size: .84rem; gap: 8px; }
   }
@@ -1453,8 +1453,8 @@
 
     <div class="nh-photo">
       <picture>
-        <source srcset="images/peter_presenting_in_Berlin_2.webp" type="image/webp">
-        <img src="images/peter_presenting_in_Berlin_2.jpg" alt="Dr. E presenting on stage in Berlin" width="1620" height="1080" fetchpriority="high">
+        <source srcset="images/dr-e-online-teaching-studio.webp" type="image/webp">
+        <img src="images/dr-e-online-teaching-studio.jpg" alt="Dr. E in the Numberbender online teaching studio" width="1100" height="735" fetchpriority="high">
       </picture>
       <span class="nh-badge nh-badge-yt"><span class="nh-dot" aria-hidden="true"></span>YouTube Silver Play Button</span>
       <span class="nh-badge nh-badge-ade">Apple Distinguished Educator</span>
