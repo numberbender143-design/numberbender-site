@@ -761,6 +761,10 @@
       <form name="contact-research" id="researchForm" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleResearchSubmit(event)">
         <input type="hidden" name="form-name" value="contact-research">
         <p style="display:none;"><input name="bot-field"></p>
+        <!-- Filled from ?utm_source= / ?src= and ?utm_campaign= on the link someone
+             arrived with (conference QR codes, webinar slides). Empty otherwise. -->
+        <input type="hidden" name="source" id="rf-source" value="">
+        <input type="hidden" name="campaign" id="rf-campaign" value="">
 
         <div class="rf-row">
           <div class="rf-group">
@@ -869,10 +873,28 @@
         </div>
 
         <div class="rf-row">
+          <div class="rf-group full">
+            <label for="rf-heard">How did you hear about Numberbender?</label>
+            <select id="rf-heard" name="heard_from">
+              <option value="">Select one</option>
+              <option value="youtube">YouTube</option>
+              <option value="facebook">Facebook</option>
+              <option value="tiktok">TikTok</option>
+              <option value="google">Google search</option>
+              <option value="ai-assistant">AI assistant (ChatGPT, Gemini, etc.)</option>
+              <option value="teacher-school">A teacher or my school</option>
+              <option value="conference-webinar">A conference, workshop or webinar</option>
+              <option value="friend-family">A friend or family member</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="rf-row">
           <div class="rf-consent">
             <label>
               <input type="checkbox" name="research_consent" value="yes">
-              <span>I'm willing to participate in <strong>anonymous educational research</strong> to help improve math learning access globally. My data will never be sold and will only be used for academic publication. <em>(Optional)</em></span>
+              <span>I'm willing to have my answers used in <strong>confidential educational research</strong> to help improve math learning access globally. My name and email will be removed before any analysis, my data will never be sold, and results will only be published in summary form. <em>(Optional)</em></span>
             </label>
           </div>
         </div>
@@ -1092,6 +1114,25 @@ function nbSubmit(){
      here too. */
   var NB_ROLE = { teacher: 'Teacher', student: 'Student', parent: 'Parent',
                   tutor: 'Tutor', 'self-learner': 'Self-learner' };
+
+  /* Record which link brought someone here, so each conference or webinar
+     can be counted. Use links like
+       https://numberbender.com/contact?utm_source=educause2027#research-form
+     (?src= and ?ref= work too). Only letters, digits, . _ - are kept. */
+  (function () {
+    try {
+      var p = new URLSearchParams(window.location.search);
+      var clean = function (v) {
+        return (v || '').toLowerCase().replace(/[^a-z0-9._-]/g, '').slice(0, 80);
+      };
+      var src  = clean(p.get('utm_source') || p.get('src') || p.get('ref'));
+      var camp = clean(p.get('utm_campaign'));
+      var s = document.getElementById('rf-source');
+      var c = document.getElementById('rf-campaign');
+      if (s && src)  s.value = src;
+      if (c && camp) c.value = camp;
+    } catch (err) { /* old browser: leave the fields empty */ }
+  })();
 
   function nbResearchSubscribe(fields, done) {
     var called = false;
